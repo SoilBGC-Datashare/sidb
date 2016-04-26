@@ -8,7 +8,7 @@ of CO<sub>2</sub> release over incubation time.
 ## Structure
 
 ### Data
-This folder contains both data and metadata. For each incubation study, there is a `yaml` file with metada, and the data is stored in a comma separated file `csv`.
+This folder contains both data and metadata. For each incubation study, there is a [`yaml`](http://yaml.org/) file with metada, and the data is stored in a comma separated file `csv`.
 
 ### Scripts
 This folder contains R code and other scripts necessary to visualize and analyze the data.

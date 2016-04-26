@@ -20,8 +20,8 @@ This folder contains R markdown files with reproducible code to demonstrate spec
 This folder contains tests to guarantee the integrity of the database. Make sure that you can run all tests without errors before contributing to the database.
 
 ## Contribute
-This database is public and everybody is welcome to use for scientific research. Users are also
-encourage to contribute their own data and scripts to the dataset. To contribute please send a pull request.
+This database is public and everybody is welcome to use it for scientific research. Users are also
+encouraged to contribute their own data and scripts to the dataset. To contribute please send a pull request.
 
 ## Copyright
-This database is under the XYZ license.
+This database is open access and use for scientific research is encouraged. 

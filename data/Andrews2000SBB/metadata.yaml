@@ -5,8 +5,8 @@ entryCreationDate: 27/04/2016
 
 siteInfo:
        - studySite: "central Piedmont region of North Carolina, USA"
-       - ecosystemType: Forest
-       - climate: Temperate
+       - ecosystemType: forest
+       - climate: temperate
        - soilType: Alfisol
        - texture: mixed clay mineralogy
 
@@ -17,7 +17,7 @@ incubationInfo:
                   desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius"
                - CO2:
                   name: CO2
-                  desc: "Soils were incubated at cold, ambient and elevated CO2"
+                  desc: "Soils were incubated at ambient and elevated CO2"
        - incubationTime:
                - time: 48
                  units: days

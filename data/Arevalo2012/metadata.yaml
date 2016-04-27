@@ -1,25 +1,29 @@
-citationKey: Andrews2000SBB
-doi: 10.1016/S0038-0717(99)00206-0
+citationKey: Arevalo2012
+doi: 10.2136/sssaj2011.0126
 entryAuthor: Heidi Voelkel
 entryCreationDate: 27/04/2016
 
 siteInfo:
-       - studySite: "central Piedmont region of North Carolina, USA"
-       - ecosystemType: Forest
-       - climate: Temperate
-       - soilType: Alfisol
-       - texture: mixed clay mineralogy
+       - studySite: "parkland region of Alberta, Canada"
+       - ecosystemType: cultivated
+               - four land use systems: agriculture, plantation, grassland, native aspen
+       - climate: temperate
+       - soilType: dark grey Luvisol
+       - texture:
+              percentSand: 10
+              percentClay: 31
+              percentSilt: 59
 
 incubationInfo:
        - Treatments:
                - Temperature:
                   name: T
-                  desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius"
-               - CO2:
-                  name: CO2
-                  desc: "Soils were incubated at cold, ambient and elevated CO2"
+                  desc: "Soils were incubated at three different temperatures: 7, 14, and 21 degrees celcius"
+               - C:
+                  name: C mineralization rate
+                  desc: "carbon mineralization in particle-size fractions"
        - incubationTime:
-               - time: 48
+               - time: 370
                  units: days
 
 variables:
@@ -27,6 +31,6 @@ variables:
           name: time
           units: days
         - V2:
-          name: CO2
-          desc: "CO2 production rate measured daily with a LiCor"
-          units: "mg CO$_2$ g^{-1} soil day^{-1}"
+          name: C
+          desc: "cumulative mineralized"
+          units: "Percent (%)"

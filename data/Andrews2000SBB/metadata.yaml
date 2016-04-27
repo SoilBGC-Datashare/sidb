@@ -1,22 +1,23 @@
 citationKey: Andrews2000SBB
+doi:
 entryAuthor: Carlos A. Sierra
 entryAuthorOrcid: 0000-0002-0046-1160
-entryCreationDate: 16/04/2016 
+entryCreationDate: 16/04/2016
 
 siteInfo:
        - ecosystemType: Forest
-       - climate: 
+       - climate:
                - MAT: 35
                  units: Celcius
                - MAP: 1010
                  units: "mm yr$^{-1}$"
        - soilType: Alfisol
-       - texture: 
+       - texture:
               percentSand: 30
               percentClay: 40
               percentSilt: 30
 
-incubationInfo: 
+incubationInfo:
        - Treatments:
                - Temperature:
                   name: T
@@ -24,15 +25,15 @@ incubationInfo:
                - CO2:
                   name: CO2
                   desc: "Soils were incubated at ambient and elevated CO2"
-       - incubationTime: 
+       - incubationTime:
                - time: 48
                  units: days
 
 variables:
-        - V1: 
+        - V1:
           name: time
           units: days
         - V2:
           name: CO2
           desc: "CO2 production rate measured dialy with a LiCor"
-          units: "mg CO$_2$ g^{-1} soil day^{-1}"                        
+          units: "mg CO$_2$ g^{-1} soil day^{-1}"

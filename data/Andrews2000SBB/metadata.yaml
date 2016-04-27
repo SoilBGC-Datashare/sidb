@@ -1,30 +1,23 @@
 citationKey: Andrews2000SBB
-doi:
-entryAuthor: Carlos A. Sierra
-entryAuthorOrcid: 0000-0002-0046-1160
-entryCreationDate: 16/04/2016
+doi: 10.1016/S0038-0717(99)00206-0
+entryAuthor: Heidi Voelkel
+entryCreationDate: 27/04/2016
 
 siteInfo:
+       - studySite: "central Piedmont region of North Carolina, USA"
        - ecosystemType: Forest
-       - climate:
-               - MAT: 35
-                 units: Celcius
-               - MAP: 1010
-                 units: "mm yr$^{-1}$"
+       - climate: Temperate
        - soilType: Alfisol
-       - texture:
-              percentSand: 30
-              percentClay: 40
-              percentSilt: 30
+       - texture: mixed clay mineralogy
 
 incubationInfo:
        - Treatments:
                - Temperature:
                   name: T
-                  desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degres celcius"
+                  desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius"
                - CO2:
                   name: CO2
-                  desc: "Soils were incubated at ambient and elevated CO2"
+                  desc: "Soils were incubated at cold, ambient and elevated CO2"
        - incubationTime:
                - time: 48
                  units: days
@@ -35,5 +28,5 @@ variables:
           units: days
         - V2:
           name: CO2
-          desc: "CO2 production rate measured dialy with a LiCor"
+          desc: "CO2 production rate measured daily with a LiCor"
           units: "mg CO$_2$ g^{-1} soil day^{-1}"

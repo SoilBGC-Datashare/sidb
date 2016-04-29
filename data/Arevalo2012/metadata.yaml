@@ -19,9 +19,6 @@ incubationInfo:
                - Temperature:
                   name: T
                   desc: "Soils were incubated at three different temperatures: 7, 14, and 21 degrees celcius"
-               - C:
-                  name: C mineralization rate
-                  desc: "carbon mineralization in particle-size fractions"
        - incubationTime:
                - time: 370
                  units: days

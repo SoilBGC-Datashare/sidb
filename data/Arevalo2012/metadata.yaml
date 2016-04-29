@@ -4,7 +4,7 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 27/04/2016
 
 siteInfo:
-       - studySite: "parkland region of Alberta, Canada"
+       - studySite: "Linaria parkland region of Alberta, Canada"
        - ecosystemType: cultivated
                - four land use systems: agriculture, plantation, grassland, native aspen
        - climate: temperate
@@ -31,6 +31,62 @@ variables:
           name: time
           units: days
         - V2:
-          name: C
-          desc: "cumulative mineralized"
+          name: C AG/ 7deg
+          desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system AG/ agriculture"
+          units: "Percent (%)"
+        - V3:
+          name: C AG/ 14deg
+          desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system AG/ agriculture"
+          units: "Percent (%)"
+        - V4:
+          name: C AG/ 21deg
+          desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system AG/ agriculture"
+          units: "Percent (%)"
+        - V5:
+          name: C 2HP/ 7deg
+          desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
+          units: "Percent (%)"
+        - V6:
+          name: C 2HP/ 14deg
+          desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
+          units: "Percent (%)"
+        - V7:
+          name: C 2HP/ 21deg
+          desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
+          units: "Percent (%)"
+        - V8:
+          name: C 9HP/ 7deg
+          desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
+          units: "Percent (%)"
+        - V9:
+          name: C 9HP/ 14deg
+          desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
+          units: "Percent (%)"
+        - V10:
+          name: C 9HP/ 21deg
+          desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
+          units: "Percent (%)"
+        - V11:
+          name: C GRA/ 7deg
+          desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system GRA/ grassland"
+          units: "Percent (%)"
+        - V12:
+          name: C GRA/ 14deg
+          desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system GRA/ grassland"
+          units: "Percent (%)"
+        - V13:
+          name: C GRA/ 21deg
+          desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system GRA/ grassland"
+          units: "Percent (%)"
+        - V14:
+          name: C NAT/ 7deg
+          desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system NAT/ native aspen stand"
+          units: "Percent (%)"
+        - V15:
+          name: C NAT/ 14deg
+          desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system NAT/ native aspen stand"
+          units: "Percent (%)"
+        - V16:
+          name: C NAT/ 21deg
+          desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system NAT/ native aspen stand"
           units: "Percent (%)"

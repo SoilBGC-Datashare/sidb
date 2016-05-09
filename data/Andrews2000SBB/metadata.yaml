@@ -15,6 +15,9 @@ incubationInfo:
                - Temperature:
                   name: T
                   desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius"
+               - CO2:
+                  name: CO2
+                  desc: "Soils were incubated at ambient and elevated CO2"            
        - incubationTime:
                - time: 48
                  units: days

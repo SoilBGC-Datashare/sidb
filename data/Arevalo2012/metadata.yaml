@@ -9,7 +9,7 @@ siteInfo:
                - four land use systems: agriculture, plantation, grassland, native aspen
        - climate: temperate
        - soilType: dark grey Luvisol
-       - coordinates: 
+       - coordinates:
             latitude: 54.2
             longitud: -114.1333
 
@@ -20,11 +20,11 @@ incubationInfo:
                       percentSand: 30
                       percentClay: 29
                       percentSilt: 41
-               - carbonStock: 
+               - carbonStock:
                       value: 75.4
                       standardError: 2.3
                       units: "Mg ha$^{-1}$"
-               - nitrogenStock: 
+               - nitrogenStock:
                       value: 6.5
                       standardError: 0.3
                       units: "Mg ha$^{-1}$"
@@ -33,16 +33,16 @@ incubationInfo:
                       percentSand: 30
                       percentClay: 27
                       percentSilt: 43
-               - carbonStock: 
+               - carbonStock:
                       value: 64.3
                       standardError: 2.3
                       units: "Mg ha$^{-1}$"
-               - nitrogenStock: 
+               - nitrogenStock:
                       value: 5.7
                       standardError: 0.1
                       units: "Mg ha$^{-1}$"
            - 9HP: "9-yr-old poplar plantation"
-                - texture: 
+                - texture:
                       percentSand: 33
                       percentClay: 26
                       percentSilt: 41
@@ -59,7 +59,7 @@ incubationInfo:
                       percentSand: 36
                       percentClay: 26
                       percentSilt: 38
-                 - carbonStock: 
+                 - carbonStock:
                       value: 56.7
                       standardError: 3.4
                       units: "Mg ha$^{-1}$"
@@ -68,11 +68,11 @@ incubationInfo:
                       standardError: 0.2
                       units: "Mg ha$^{-1}$"
            - NAT: "Native aspen stand"
-                 - texture: 
+                 - texture:
                       percentSand: 35
                       percentClay: 31
                       percentSilt: 34
-                 - carbonStock: 
+                 - carbonStock:
                       value: 27.6
                       standardError: 8.8
                       units: "Mg ha$^{-1}$"
@@ -93,91 +93,91 @@ variables:
           name: time
           units: days
         - V2:
-          name: C AG/ 7deg
+          name: C_AG_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system AG/ agriculture"
           units: "Percent (%)"
           Temperature: 7
           Soil: AG
         - V3:
-          name: C AG/ 14deg
+          name: C_AG_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system AG/ agriculture"
           units: "Percent (%)"
           Temperature: 14
           Soil: AG
         - V4:
-          name: C AG/ 21deg
+          name: C_AG_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system AG/ agriculture"
           units: "Percent (%)"
           Temperature: 21
           Soil: AG
         - V5:
-          name: C 2HP/ 7deg
+          name: C_2HP_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
           units: "Percent (%)"
           Temperature: 7
           Soil: 2HP
         - V6:
-          name: C 2HP/ 14deg
+          name: C_2HP_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
           units: "Percent (%)"
           Temperature: 14
           Soil: 2HP
         - V7:
-          name: C 2HP/ 21deg
+          name: C_2HP_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
           units: "Percent (%)"
           Temperature: 21
           Soil: 2HP
         - V8:
-          name: C 9HP/ 7deg
+          name: C_9HP_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
           units: "Percent (%)"
           Temperature: 7
           Soil: 9HP
         - V9:
-          name: C 9HP/ 14deg
+          name: C_9HP_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
           units: "Percent (%)"
           Temperature: 14
           Soil: 9HP
         - V10:
-          name: C 9HP/ 21deg
+          name: C_9HP_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
           units: "Percent (%)"
           Temperature: 21
           Soil: 9HP
         - V11:
-          name: C GRA/ 7deg
+          name: C_GRA_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system GRA/ grassland"
           units: "Percent (%)"
           Temperature: 7
           Soil: GRA
         - V12:
-          name: C GRA/ 14deg
+          name: C_GRA_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system GRA/ grassland"
           units: "Percent (%)"
           Temperature: 14
           Soil: GRA
         - V13:
-          name: C GRA/ 21deg
+          name: C_GRA_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system GRA/ grassland"
           units: "Percent (%)"
           Temperature: 21
           Soil: GRA
         - V14:
-          name: C NAT/ 7deg
+          name: C_NAT_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system NAT/ native aspen stand"
           units: "Percent (%)"
           Temperature: 7
           Soil: NAT
         - V15:
-          name: C NAT/ 14deg
+          name: C_NAT_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system NAT/ native aspen stand"
           units: "Percent (%)"
           Temperature: 14
           Soil: NAT
         - V16:
-          name: C NAT/ 21deg
+          name: C_NAT_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system NAT/ native aspen stand"
           units: "Percent (%)"
           Temperature: 21

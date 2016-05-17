@@ -1,0 +1,45 @@
+citationKey:
+doi:
+entryAuthor:
+entryCreationDate:
+
+siteInfo:
+       - studySite:
+       - ecosystemType:
+       - climate:
+       - soilType:
+       - coordinates:
+            latitude:
+            longitud:
+
+incubationInfo:
+       - Soil:
+             - texture:
+                    percentSand:
+                    percentClay:
+                    percentSilt:
+             - carbonStock:
+                    value:
+                    standardError:
+                    units:
+             - nitrogenStock:
+                    value:
+                    standardError:
+                    units:
+
+       - Treatments:
+               - Temperature:
+                  name:
+                  desc:
+       - incubationTime:
+               - time:
+                 units:
+
+variables:
+        - V1:
+          name:
+          units:
+        - V2:
+          name:
+          desc:
+          units:

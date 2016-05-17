@@ -1,6 +1,6 @@
 
 #Create vector with names of all available files
-dataNames=list.dirs("~/Repos/sidb/data/", full.names=FALSE, recursive=FALSE)
+dataNames=list.dirs("~/sidb/data/", full.names=FALSE, recursive=FALSE)
 
 # extract data from all existing files and marge into one database
 

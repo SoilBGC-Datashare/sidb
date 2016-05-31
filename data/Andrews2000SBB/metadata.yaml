@@ -1,40 +1,43 @@
 citationKey: Andrews2000SBB
 doi: 10.1016/S0038-0717(99)00206-0
 entryAuthor: Heidi Voelkel
-entryCreationDate: 27/04/2016
+entryCreationDate: 2016-04-27
 
 siteInfo:
-       - studySite: "central Piedmont region of North Carolina, USA"
-       - ecosystemType: forest
-       - climate: temperate
-       - soilType: Alfisol
-       - texture: mixed clay mineralogy
+       studySite: central Piedmont region of North Carolina, USA
+       ecosystemType: forest
+       climate: temperate
+       soilType: Alfisol
+       texture: mixed clay mineralogy
 
 incubationInfo:
-       - Treatments:
-               - Temperature:
-                  name: T
-                  desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius"
-               - CO2:
-                  name: CO2
-                  desc: "Soils were incubated at ambient and elevated CO2"            
-       - incubationTime:
-               - time: 48
-                 units: days
+       Treatments:
+          desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius as well as ambient and elevated CO2"
+          Temperature:
+              - 4
+              - 22
+              - 40
+          #        desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius"
+          # CO2:
+          #         name: CO2
+          #         desc: "Soils were incubated at ambient and elevated CO2"
+       incubationTime:
+          time: 48
+          units: days
 
 variables:
-        - V1:
+        V1:
           name: time
           units: days
-        - V2:
+        V2:
           name: CO2_4deg
           desc: "CO2 production rate measured at 4 degrees celsius"
           units: "mg CO$_2$ g^{-1} soil day^{-1}"
-        - V3:
+        V3:
           name: CO2_22deg
           desc: "CO2 production rate measured at 22 degrees celsius"
           units: "mg CO$_2$ g^{-1} soil day^{-1}"
-        - V4:
+        V4:
           name: CO2_40deg
           desc: "CO2 production rate measured at 40 degrees celsius"
           units: "mg CO$_2$ g^{-1} soil day^{-1}"

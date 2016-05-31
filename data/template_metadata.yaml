@@ -1,45 +1,59 @@
-citationKey:
-doi:
-entryAuthor:
-entryCreationDate:
+citationKey: Plante2016SBB
+doi: 10.10.234.45243
+entryAuthor: Carlos Sierra
+entryCreationDate: 2016-05-31
 
 siteInfo:
-       - studySite:
-       - ecosystemType:
-       - climate:
-       - soilType:
-       - coordinates:
-            latitude:
-            longitud:
+        studySite: Andrews Forest
+        country: USA
+        ecosystemType: Forest
+        climate: temperate
+        soilType: Alfisol
+        coordinates:
+          latitude: 75.321
+          longitud: 43.456
 
 incubationInfo:
-       - Soil:
-             - texture:
-                    percentSand:
-                    percentClay:
-                    percentSilt:
-             - carbonStock:
-                    value:
-                    standardError:
-                    units:
-             - nitrogenStock:
-                    value:
-                    standardError:
-                    units:
-
-       - Treatments:
-               - Temperature:
-                  name:
-                  desc:
-       - incubationTime:
-               - time:
-                 units:
+        soil:
+          texture:
+            percentSand: 30
+            percentClay: 30
+            percentSilt: 40
+        carbon:
+            mean: 1.54
+            standardDeviation: 0.21
+            sampleSize:
+            standardError:
+            units: gC/DW soil
+            desc: "Carbon content estimated by a standard method"
+#       nitrogen:
+#           mean:
+#           standardDeviation:
+#           standardError:
+#           units:
+#
+        treatments:
+            desc: Full factorial experiment with two levels of temperature and two levels of moisture
+            temperature:
+              - 15
+              - 15
+              - 35
+              - 35
+            moisture:
+              - 20
+              - 20
+              - 80
+              - 80
+        incubationTime:
+            time: 48
+            units: days
+        replicates: 4
 
 variables:
-        - V1:
-          name:
-          units:
-        - V2:
-          name:
-          desc:
-          units:
+       V1:
+        name: time
+        units: days
+       V2:
+        name: 15_20
+        desc: CO2 evolved
+        units: gC-CO2 g^{-1} soil day^{-1}

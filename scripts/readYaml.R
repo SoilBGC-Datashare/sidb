@@ -1,9 +1,9 @@
 
 library(yaml)
 
-arev=yaml.load_file("~/Repos/sidb/data/Arevalo2012/metadata.yaml")
-and=yaml.load_file("~/Repos/sidb/data/Andrews2000SBB/metadata.yaml")
-tmp=yaml.load_file("~/Repos/sidb/data/template_metadata.yaml")
+arev=yaml.load_file("~/sidb/data/Arevalo2012/metadata.yaml") # Fails
+and=yaml.load_file("~/sidb/data/Andrews2000SBB/metadata.yaml")
+tmp=yaml.load_file("~/sidb/data/template_metadata.yaml")
 
 str(tmp)
 

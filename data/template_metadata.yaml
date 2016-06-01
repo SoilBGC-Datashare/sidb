@@ -41,8 +41,8 @@ incubationInfo:
               - 35
             moisture:
               - 20
-              - 20
               - 80
+              - 20
               - 80
         incubationTime:
             time: 48
@@ -55,5 +55,17 @@ variables:
         units: days
        V2:
         name: 15_20
+        desc: CO2 evolved
+        units: gC-CO2 g^{-1} soil day^{-1}
+       V3:
+        name: 15_80
+        desc: CO2 evolved
+        units: gC-CO2 g^{-1} soil day^{-1}
+       V4:
+        name: 35_20
+        desc: CO2 evolved
+        units: gC-CO2 g^{-1} soil day^{-1}
+       V5:
+        name: 35_80
         desc: CO2 evolved
         units: gC-CO2 g^{-1} soil day^{-1}

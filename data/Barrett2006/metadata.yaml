@@ -4,81 +4,103 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 09/05/2016
 
 siteInfo:
-       - studySite: McMurdo Dry Valleys of Southern Victoria Land, Antarctica
-       - ecosystemType: Polar
-       - climate: Cold
-       - soilType: Gelisols
-           - soil/climate zones: Subxerous, Xerous, Ultraxerous
-               - subxerous zone (Lower Taylor Valley): coastal areas and low elevation areas (<100m), weak soil horizon, shallow profiles with ice-cemented layers within 30cm of the surface
-               - xerous zone: low to mid elevation areas in the inland dry valleys and higher elevation areas near the coast, dry permafrost layers at 30–75cm, more developed soil horizons
-               - ultraxerous zone (Beacon Valley): adjacent to the Polar Plateau or at high elevations (>1000m), very low soil moisture content, high concentrations of soluble salts
-           - texture:
-                  percentSand: >95
+    studySite: "McMurdo Dry Valleys of Southern Victoria Land, Antarctica"
+    ecosystemType: Polar
+    climate: Cold
+    soilType: Gelisols
+          #  - soil/climate zones: Subxerous, Xerous, Ultraxerous
+          #      - subxerous zone (Lower Taylor Valley): coastal areas and low elevation areas (<100m), weak soil horizon, shallow profiles with ice-cemented layers within 30cm of the surface
+          #      - xerous zone: low to mid elevation areas in the inland dry valleys and higher elevation areas near the coast, dry permafrost layers at 30–75cm, more developed soil horizons
+          #      - ultraxerous zone (Beacon Valley): adjacent to the Polar Plateau or at high elevations (>1000m), very low soil moisture content, high concentrations of soluble salts
+          #  - texture:
+          #         percentSand: >95
 
 incubationInfo:
-       - "CO2 accumulation in the headspace of the vessel was measured using a Li-Cor 6200.
-         CO2 concentrations were blank corrected and expressed as soil respiration (mg C g soil^{-1} day^{-1})."
+    desc: "CO2 accumulation in the headspace of the vessel was measured using a Li-Cor 6200. CO2 concentrations were blank corrected and expressed as soil respiration (mg C g soil^{-1} day^{-1})."
 
-       - Treatments:
-               - soil moisture:
-               - name: M
-               - desc: "Soils were incubated at 2 soil moistures: 2% and 5% gravimetric soil water content"
-               - Temperature:
-                  name: T
-                  desc: "Soils were incubated at three different temperatures: 5, 10, and 20 degrees celcius"
-       - incubationTime:
-               - time: 120
-                 units: days
+    Treatments:
+        desc: "Soils were incubated at 2 soil moistures: 2% and 5% gravimetric soil water content, at three different temperatures: 5, 10, and 20 degrees celcius"
+        moisture:
+           - 2
+           - 2
+           - 2
+           - 2
+           - 2
+           - 2
+           - 5
+           - 5
+           - 5
+           - 5
+           - 5
+           - 5
+
+        temperature:
+            - 5
+            - 5
+            - 10
+            - 10
+            - 20
+            - 20
+            - 5
+            - 5
+            - 10
+            - 10
+            - 20
+            - 20
+
+        incubationTime:
+            time: 120
+            units: days
 
 variables:
-        - V1:
+        V1:
           name: time
           units: days
-        - V2:
+        V2:
           name: C_5deg_2_BC
           desc: "soil respiration rate measured at 5 degrees and 2% water content. Location: Beacon Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V3:
+          units: "mg C g soil^{-1} day^{-1}"
+        V3:
           name: C_5deg_2_LTV
           desc: "soil respiration rate measured at 5 degrees and 2% water content. Location: Lower Taylor Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V4:
+          units: "mg C g soil^{-1} day^{-1}"
+        V4:
           name: C_10deg_2_BC
           desc: "soil respiration rate measured at 10 degrees and 2% water content. Location: Beacon Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V5:
+          units: "mg C g soil^{-1} day^{-1}"
+        V5:
           name: C_10deg_2_LTV
           desc: "soil respiration rate measured at 10 degrees and 2% water content. Location: Lower Taylor Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V6:
+          units: "mg C g soil^{-1} day^{-1}"
+        V6:
           name: C_20deg_2_BC
           desc: "soil respiration rate measured at 20 degrees and 2% water content. Location: Beacon Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V7:
+          units: "mg C g soil^{-1} day^{-1}"
+        V7:
           name: C_20deg_2_LTV
           desc: "soil respiration rate measured at 20 degrees and 2% water content. Location: Lower Taylor Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V8:
+          units: "mg C g soil^{-1} day^{-1}"
+        V8:
           name: C_5deg_5_BC
           desc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Beacon Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V9:
+          units: "mg C g soil^{-1} day^{-1}"
+        V9:
           name: C_5deg_5_LTV
           desc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Lower Taylor Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V10:
+          units: "mg C g soil^{-1} day^{-1}"
+        V10:
           name: C_10deg_5_BC
           desc: "soil respiration rate measured at 10 degrees and 5% water content. Location: Beacon Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V11:
+          units: "mg C g soil^{-1} day^{-1}"
+        V11:
           name: C_10deg_5_LTV
           desc: "soil respiration rate measured at 10 degrees and 5% water content. Location: Lower Taylor Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V12:
+          units: "mg C g soil^{-1} day^{-1}"
+        V12:
           name: C_20deg_5_BC
           desc: "soil respiration rate measured at 20 degrees and 5% water content. Location: Beacon Valley"
-          units:"mg C g soil^{-1} day^{-1}"
-        - V13:
+          units: "mg C g soil^{-1} day^{-1}"
+        V13:
           name: C_20deg_5_LTV
           desc: "soil respiration rate measured at 20 degrees and 5% water content. Location: Lower Taylor Valley"
-          units:"mg C g soil^{-1} day^{-1}"
+          units: "mg C g soil^{-1} day^{-1}"

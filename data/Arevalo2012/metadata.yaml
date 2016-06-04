@@ -1,7 +1,7 @@
 citationKey: Arevalo2012
 doi: 10.2136/sssaj2011.0126
 entryAuthor: Heidi Voelkel
-entryCreationDate: 27/04/2016
+entryCreationDate: 2016-04-27
 
 siteInfo:
       studySite: "Linaria parkland region of Alberta, Canada"
@@ -16,7 +16,7 @@ siteInfo:
       soilType: dark grey Luvisol
       coordinates:
           latitude: 54.2
-          longitud: -114.1333
+          longitude: -114.1333
 
 incubationInfo:
        Soil:

@@ -1,7 +1,7 @@
 citationKey: Barrett2006
 doi: 10.1016/j.soilbio.2006.03.025
 entryAuthor: Heidi Voelkel
-entryCreationDate: 09/05/2016
+entryCreationDate: 2016-05-09
 
 siteInfo:
     studySite: "McMurdo Dry Valleys of Southern Victoria Land, Antarctica"
@@ -14,6 +14,17 @@ siteInfo:
           #      - ultraxerous zone (Beacon Valley): adjacent to the Polar Plateau or at high elevations (>1000m), very low soil moisture content, high concentrations of soluble salts
           #  - texture:
           #         percentSand: >95
+    coordinates:
+      latitude:
+         - -77.6166667
+         - -77.7166667
+         - -77.3666667
+         - -77.8333333
+      longitude:
+         - 163.250
+         - 162.30
+         - 162.3166667
+         - 160.6666667
 
 incubationInfo:
     desc: "CO2 accumulation in the headspace of the vessel was measured using a Li-Cor 6200. CO2 concentrations were blank corrected and expressed as soil respiration (mg C g soil^{-1} day^{-1})."

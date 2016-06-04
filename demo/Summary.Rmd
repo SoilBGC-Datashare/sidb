@@ -1,0 +1,29 @@
+---
+title: "Summary of entries in the Soil Incubation Database"
+author: "CA Sierra"
+date: "June 4, 2016"
+output: html_document
+---
+
+```{r, echo=FALSE}
+#entryNames=list.dirs("~/sidb/data/", full.names=FALSE, recursive=FALSE)
+source("~/sidb/scripts/readYaml.R")
+```
+
+This file contains a summary of the data currently available in the soil incubation database **sidb**. Currently, the number of entries in the database is `r length(entryNames)`, and the last entry was added on `r max(entryCreationDate)`.
+
+
+```{r, echo=FALSE}
+entryBaseMetadata=data.frame(citationKey, doi, entryAuthor, entryCreationDate)
+
+library(knitr)
+kable(entryBaseMetadata)
+```
+
+Locations for which data is available are presented in the following map
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(maps)
+map('world', interior = FALSE)
+points(longitude, latitude, pch=20, col=2)
+```

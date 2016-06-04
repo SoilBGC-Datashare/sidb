@@ -9,6 +9,9 @@ siteInfo:
        climate: temperate
        soilType: Alfisol
        texture: mixed clay mineralogy
+       coordinates:
+         latitude: 36.6166667
+         longitude: -79.150
 
 incubationInfo:
        Treatments:

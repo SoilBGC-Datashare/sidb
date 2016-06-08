@@ -8,6 +8,7 @@ output: pdf_document
 ```{r, echo=FALSE}
 #entryNames=list.dirs("~/sidb/data/", full.names=FALSE, recursive=FALSE)
 source("~/sidb/scripts/readYaml.R")
+source("~/sidb/scripts/loadEntries.R")
 ```
 
 This file contains a summary of the data currently available in the soil incubation database **sidb**. Currently, the number of entries in the database is `r length(entryNames)`, and the last entry was added on `r max(entryCreationDate)`.
@@ -27,3 +28,20 @@ library(maps)
 map('world', interior = FALSE)
 points(longitude, latitude, pch=20, col=2)
 ```
+
+## Datasets
+The file `~/scripts/plotEntry.R` can be used to plot individual entries from the database. For example
+
+```{r}
+source("~/sidb/scripts/plotEntry.R")
+plotEntry(entry=Andrews2000SBB)
+```
+
+The plots produced by this function are at the moment not of high quality, so use the function only to visually assess the data. For exmaple,
+
+```{r}
+plotEntry(entry=Arevalo2012)
+```
+
+produces output that is not ideal for publication. You're welcome to modify the function `plotEntry` for output of better quality.
+

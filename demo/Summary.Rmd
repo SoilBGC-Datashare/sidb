@@ -2,7 +2,7 @@
 title: "Summary of entries in the Soil Incubation Database"
 author: "CA Sierra"
 date: "June 4, 2016"
-output: html_document
+output: pdf_document
 ---
 
 ```{r, echo=FALSE}

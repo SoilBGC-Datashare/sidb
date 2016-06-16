@@ -1,6 +1,6 @@
 # How to add entries to the data folder
 
-This folder contains both data and metadata. There is one folder for each incubation study, which contains a `yaml` file with metadata, and the data is stored in a comma separated file `csv`. The name of each folder is follows the following convention: `AuthornameYEARJournalAbbrv`.
+This folder contains all entries in the database. Within each subfolder there are two files containing both data and metadata for each incubation study. The metadata file has the extension `.yaml`, and the data is stored in a comma separated file `.csv`. The name of each subfolder follows the convention: `AuthornameYEARJournalAbbrv`.
 
 ## The metadata file
 The metadata file is simply a text file that includes all relevant information about the incubation study. The yaml format is both human and machine readable, so it is very easy to write all relevant information about a study in these files. You can inspect the available entries for examples on how to write yaml metadata files.
@@ -14,7 +14,7 @@ entryAuthor: John Stewart
 entryCreationDate: 2014-02-19
 ```
 
-In the `yaml` format, each separate field has a name followed by : and a value. The `citationKey` field is simply an ID to cite or identify the name of each entry. It has the same convention as the name of the folder for each particular entry. The `doi` field is the digital object identifier for the publication where the data was originally obtained. This doi can be used to automatically retrieve information for other databases such as Mendeley. The `entryAuthor` field is the name of the person who created the entry. `entryCreationDate` is the data at which the entry was created and uploaded in the database. This date follows the convention YYYY-MM-DD.
+In the `yaml` format, each separate field has a name followed by : and a value. The `citationKey` field is simply an ID to cite or identify the name of each entry. It has the same convention as the name of the folder for each particular entry. The `doi` field is the digital object identifier for the publication where the data was originally obtained. This doi can be used to automatically retrieve information from other databases such as Mendeley. The `entryAuthor` field is the name of the person who created the entry. `entryCreationDate` is the date at which the entry was created and uploaded in the database. This date follows the convention YYYY-MM-DD.
 
 In `yaml` it is possible to create hierarchies with different type of information. This is very useful to store diverse fields related to the research sites where the soils were sampled for the incubation. For each metadata file, it is required to include a `siteInfo` field as follows
 
@@ -24,7 +24,10 @@ siteInfo:
     ecosystemType: forest
     climate: temperate
     soilType: Alfisol
-    texture: mixed clay mineralogy
+    texture:
+         percentClay: 40
+         percentSilt: 20
+         percentSand: 40
     coordinates:
          latitude: 36.6166667
          longitude: -79.150
@@ -71,4 +74,7 @@ variables:
           desc: "CO2 production rate measured at 22 degrees celsius, 10 % vwc, and 800 ppm"
 ```
 
-The number of variables `V` in this field must correspond to the number of variables in the `.csv` file. 
+The number of variables `V` in this field must correspond to the number of variables in the `.csv` file.
+
+## Data
+The `data.csv` file for each entry in the database contains the time series of incubation data in a comma separated values format. The first column of the data file must contain the times at which CO<sub>2</sub> measurements were made. Subsequent columns must contain the respiration measurements. The format of the data is irrelevant (eg. units, order of treatments) as long as the relevant information to identify each respiration column is described in the `variables` field of the metadata file.

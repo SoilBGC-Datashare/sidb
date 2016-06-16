@@ -14,16 +14,10 @@ siteInfo:
          longitude: -79.150
 
 incubationInfo:
-       Treatments:
-          desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius as well as ambient and elevated CO2"
-          Temperature:
-              - 4
-              - 22
-              - 40
-          #        desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius"
-          # CO2:
-          #         name: CO2
-          #         desc: "Soils were incubated at ambient and elevated CO2"
+       desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius as well as ambient and elevated CO2"
+       treatments:
+          - temperature
+          - CO2
        incubationTime:
           time: 48
           units: days
@@ -34,13 +28,19 @@ variables:
           units: days
         V2:
           name: CO2_4deg
-          desc: "CO2 production rate measured at 4 degrees celsius"
+          temperature: 4
+          CO2: ambient
           units: "mg CO$_2$ g^{-1} soil day^{-1}"
+          desc: "CO2 production rate measured at 4 degrees celsius"
         V3:
           name: CO2_22deg
-          desc: "CO2 production rate measured at 22 degrees celsius"
+          temperature: 22
+          CO2: ambient
           units: "mg CO$_2$ g^{-1} soil day^{-1}"
+          desc: "CO2 production rate measured at 22 degrees celsius"
         V4:
           name: CO2_40deg
-          desc: "CO2 production rate measured at 40 degrees celsius"
+          temperature: 40
+          CO2: ambient
           units: "mg CO$_2$ g^{-1} soil day^{-1}"
+          desc: "CO2 production rate measured at 40 degrees celsius"

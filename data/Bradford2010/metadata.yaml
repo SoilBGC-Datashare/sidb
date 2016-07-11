@@ -1,0 +1,39 @@
+citationKey: Bradford2010
+doi: 10.1111/j.1365-2486.2009.02040.x
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-07-11
+
+siteInfo:
+    studySite: "CoweetaLong-Term Ecological Research (LTER), Harvard Forest LTER"
+    ecosystemType: Forest
+    climate: temperate
+    soilType: Coarse (CH)- to fine (CL) -loamy Haplumbrepts, Fine-loamy Dystrochrept (HMC)
+              - organic-rich (CH, HOC, HOH)
+              - organic-poor (CL, HMC, HMH)
+          #      - xerous zone: low to mid elevation areas in the inland dry valleys and higher elevation areas near the coast, dry permafrost layers at 30–75cm, more developed soil horizons
+          #      - ultraxerous zone (Beacon Valley): adjacent to the Polar Plateau or at high elevations (>1000m), very low soil moisture content, high concentrations of soluble salts
+          #  - texture:
+          #         percentSand: >95
+    location:
+      - Coweeta Long-Term Ecological Research (LTER) site at high (CH) and low (CL) elevation
+      - Harvard Forest LTER site in control (HOC, HMC) and heated plots (HOH, HMH), from organic-rich (HOC, HOH) and organic-poor (HMC, HMH) horizons
+    coordinates:
+      latitude:
+         - 35.016667
+         - 35.033333
+         - 42.5
+      longitude:
+         - -83.45
+         - -83.433333
+         - -72.166667
+
+incubationInfo:
+    desc: #"CO2 accumulation in the headspace of the vessel was measured using a Li-Cor 6200. CO2 concentrations were blank corrected and expressed as soil respiration (mg C g soil^{-1} day^{-1})."
+    treatments:
+        #- moisture
+        #- temperature
+    incubationTime:
+        time: 77
+        units: days
+
+variables:

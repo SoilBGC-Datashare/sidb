@@ -1,0 +1,157 @@
+citationKey: Chen2010
+doi: 10.1016/j.soilbio.2010.08.030
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-07-25
+
+siteInfo:
+    studySite: "Six sites across China"
+    ecosystemType: arable, grassland, meadow, forest, rainforest, evergreen broadleaved forest, broadleaved deciduous forest
+    climate: cool temperate, temperate, semi-arid, sub-tropical, tropical
+         - mean annual temperature: 1-20 degrees
+         - mean annual precipitation: 300-2449 mm
+    location:
+      - arable site: Agro-Ecological Experiment Station, Shanxi Province
+    coordinates:
+      latitude:
+         - 35.2
+      longitude:
+         - 107.666667
+      - semi-arid grassland: Xilinguole Steppe, Inner Mongolia Province
+    coordinates:
+      latitude:
+         - 43.283333
+      longitude:
+         - 116.033333
+      - cool temperate meadow: Gahai-Zecha National Nature Reserve, Gansu Province
+    coordinates:
+      latitude:
+         - 34.25
+      longitude:
+         - 102.333333
+      - tropical rainforest: Jianfengling National Forest Park, Hainan Province
+    coordinates:
+      latitude:
+         - 18.666667
+      longitude:
+         - 108.816667
+      - sub-tropical evergreen broadleaved forest: Wuyi mountain, Fujian Province
+    coordinates:
+      latitude:
+         - 27.5
+      longitude:
+         - 117.583333
+      - cool temperate broadleaved deciduous forest: Baekdu mountain Forest Ecosystem Research Station, Jilin Province
+    coordinates:
+      latitude:
+         - 42.383333
+      longitude:
+         - 128.466667
+
+incubationInfo:
+    desc: "Fresh soil samples of 4 replicates, equivalent to 15 g dry weight each, were incubated in 125 mL jars under changing temperature.
+           CO2 concentration in gas samples was measured using a gas chro- matograph (Agilent 6890, Agilent Corp., USA) equipped with a FID detector."
+    treatments:
+        - temperature: Temperature was continuously increased from the lowest to the highest with both intervals of 2 (0-30 degrees) and 7 (0-35 degrees) degrees.
+    incubationTime:
+        time: 24
+        units: hours
+variables:
+        V1:
+          name: time
+          units: hours
+        V2:
+          name:  CO2_ET_SAG_TS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the topsoil (0-20cm) of the semi-arid grassland"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V3:
+          name:  CO2_ET_SAG_SS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the subsoil (30-50cm) of the semi-arid grassland"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V4:
+          name:  CO2_ET_TM_TS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the topsoil (0-20cm) of the temperate meadow"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V5:
+          name:  CO2_ET_TM_SS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the subsoil (30-50cm) of the temperate meadow"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V6:
+          name:  CO2_ET_A_TS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the topsoil (0-20cm) of the arable land"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V7:
+          name:  CO2_ET_A_SS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the subsoil (30-50cm) of the arable land"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V8:
+          name:  CO2_ET_DF_TS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the topsoil (0-20cm) of the deciduous forest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V9:
+          name:  CO2_ET_DF_SS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the subsoil (30-50cm) of the deciduous forest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V10:
+          name:  CO2_ET_EF_TS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the topsoil (0-20cm) of the evergreen forest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V11:
+          name:  CO2_ET_EF_SS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the subsoil (30-50cm) of the evergreen forest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V12:
+          name:  CO2_ET_R_TS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the topsoil (0-20cm) of the rainforest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V13:
+          name:  CO2_ET_R_SS
+          desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature changed (1, 2, 6, 12, and 24 h) measured for the subsoil (30-50cm) of the rainforest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V14:
+          name:  CO2_RT_SAG_TS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the semi-arid grassland"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V15:
+          name:  CO2_RT_SAG_SS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the semi-arid grassland"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V16:
+          name:  CO2_RT_TM_TS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the temperate meadow"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V17:
+          name:  CO2_RT_TM_SS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the temperate meadow"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V18:
+          name:  CO2_RT_A_TS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the arable land"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V19:
+          name:  CO2_RT_A_SS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the arable land"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V20:
+          name:  CO2_RT_DF_TS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the deciduous forest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V21:
+          name:  CO2_RT_DF_SS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the deciduous forest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V22:
+          name:  CO2_RT_EF_TS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the evergreen forest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V23:
+          name:  CO2_RT_EF_SS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the evergreen forest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V24:
+          name:  CO2_RT_R_TS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the rainforest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
+        V25:
+          name:  CO2_RT_R_SS
+          desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the rainforest"
+          units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})

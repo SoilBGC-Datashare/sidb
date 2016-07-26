@@ -1,0 +1,52 @@
+citationKey: Conant2008b
+doi: 10.1111/j.1365-2486.2008.01541.x
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-07-26
+
+siteInfo:
+    studySite: Northern Great Plains Research Laboratory located near Mandan, North Dakota (ND); Waggoner Ranch in northern Texas (TX), south of the town Vernon in Wilbarger County
+    ecosystemType: cultivated grassland, prairie grassland
+    climate: temperate
+    soilType: wheat (ND)
+    texture: Silt: 48.5% Clay: 34.3%
+    soilType: northern mixed-grass prairie (ND)
+    texture: Silt: 49.2% Clay: 29.7%
+    soilType: wheat (TX)
+    texture: Silt: 43.1% Clay: 42.3%
+    soilType: southern mixed-grass prairie (TX)
+    texture: Silt: 52.0% Clay: 30.9%
+    location:
+      - Mandan, North Dakota
+      - Vernon, Texas
+    coordinates:
+      latitude:
+         - 33.833333
+      longitude:
+         - -99.033333
+
+incubationInfo:
+    desc: "Soil respiration rates were determined through periodic analysis of CO2 concentration of headspace gas samples using a LI-COR 6525"
+    treatments:
+        - temperature
+    incubationTime:
+        time: 589
+        units: days
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name:  ND-CU-4
+          temperature: 4
+          desc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 4 degrees"
+          units: "mg CO_2-C/g soil"
+        V3:
+          name:  ND-CU-15
+          temperature: 15
+          desc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 15 degrees"
+          units: "mg CO_2-C/g soil"
+        V4:
+          name:  ND-CU-25
+          temperature: 25
+          desc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 25 degrees"
+          units: "mg CO_2-C/g soil"

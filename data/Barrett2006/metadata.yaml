@@ -15,8 +15,10 @@ siteInfo:
           #  - texture:
           #         percentSand: >95
     location:
-      - Beacon Valley
       - Lower Taylor Valley
+      - Upper Taylor Valley
+      - Victoria Valley
+      - Beacon Valley
     coordinates:
       latitude:
          - -77.6166667

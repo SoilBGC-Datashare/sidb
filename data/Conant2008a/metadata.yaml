@@ -9,18 +9,14 @@ siteInfo:
     climate: temperate
     location:
       - Akron (CO)
-    coordinates:
-      latitude:
-         - 40.25
-      longitude:
-         - -103.25
       - Vernon (TX)
     coordinates:
       latitude:
+         - 40.25
          - 33.15
       longitude:
+         - -103.25
          - -99.066667
-
 incubationInfo:
     desc: "Samples were flushed with compressed air when CO2 concentrations approached 50000 ppm CO2, samples were remoistened to maintain soil moisture above 95% of original moisture."
     treatments:

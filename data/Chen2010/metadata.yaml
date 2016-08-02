@@ -7,8 +7,8 @@ siteInfo:
     studySite: "Six sites across China"
     ecosystemType: "arable, grassland, meadow, forest, rainforest, evergreen broadleaved forest, broadleaved deciduous forest"
     climate: "cool temperate, temperate, semi-arid, sub-tropical, tropical"
-    meanAnnualTemperature: 10
-    meanAnnualPrecipitation: 2449
+    meanAnnualTemperature(degrees): 10.5
+    meanAnnualPrecipitation(mm): 1374.5
     location:
        - "arable site; Agro-Ecological Experiment Station, Shanxi Province"
        - "semi-arid grassland; Xilinguole Steppe, Inner Mongolia Province"

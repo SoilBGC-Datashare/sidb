@@ -1,0 +1,66 @@
+citationKey: CurielYuste2007
+doi: 10.1111/j.1365-2486.2007.01415.x
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-08-02
+
+siteInfo:
+    studySite: northern California
+    ecosystemType: ponderosa pine plantation, oak savanna
+    climate: mediterranean
+    soil texture pine plantation: Sand: 60% Loam: 29%
+    soilType oak savanna: Lithic Haploxerepts (USDA)
+    location:
+      - pine plantation: near University of California Blodgett Forest Research Station
+        altitude: 1315 m
+      - oak savanna field site: Tonzi Ranch
+        altitude: 177 m
+    coordinates:
+      latitudes:
+         - 38.89525
+         - 38.4311
+      longitudes:
+         - -120.63275
+         - -120.966
+incubationInfo:
+    desc: "soil respiration was measured twice a month using a LI-COR (LI6400-09 soil chamber connected to an LI-6400 portablephotosynthesis system)"
+    treatments:
+        - moistening during 24 h until soil matrix reached maximum water-holding capacity values
+    incubationTime:
+        time: 111
+        units: days
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name:  PPT_D
+          desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the dry treatment in soil type ponderosa pine trenched"
+          units: "mmol Cm^{-2}s^{-1}"
+        V3:
+          name:  PPT_W
+          desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the wet treatment in soil type ponderosa pine trenched"
+          units: "mmol Cm^{-2}s^{-1}"
+        V4:
+          name:  PPC_D
+          desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the dry treatment in soil type ponderosa pine control"
+          units: "mmol Cm^{-2}s^{-1}"
+        V5:
+          name:  PPC_W
+          desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the wet treatment in soil type ponderosa pine control"
+          units: "mmol Cm^{-2}s^{-1}"
+        V6:
+          name:  OSO_D
+          desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the dry treatment in soil type oak savanna open"
+          units: "mmol Cm^{-2}s^{-1}"
+        V7:
+          name:  OSO_W
+          desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the wet treatment in soil type oak savanna open"
+          units: "mmol Cm^{-2}s^{-1}"
+        V8:
+          name:  OSU_D
+          desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the dry treatment in soil type oak savanna understorey"
+          units: "mmol Cm^{-2}s^{-1}"
+        V9:
+          name:  OSU_W
+          desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the wet treatment in soil type oak savanna understorey"
+          units: "mmol Cm^{-2}s^{-1}"

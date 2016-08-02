@@ -11,42 +11,27 @@ siteInfo:
          - mean annual precipitation: 300-2449 mm
     location:
       - arable site: Agro-Ecological Experiment Station, Shanxi Province
-    coordinates:
-      latitude:
-         - 35.2
-      longitude:
-         - 107.666667
       - semi-arid grassland: Xilinguole Steppe, Inner Mongolia Province
-    coordinates:
-      latitude:
-         - 43.283333
-      longitude:
-         - 116.033333
       - cool temperate meadow: Gahai-Zecha National Nature Reserve, Gansu Province
-    coordinates:
-      latitude:
-         - 34.25
-      longitude:
-         - 102.333333
       - tropical rainforest: Jianfengling National Forest Park, Hainan Province
-    coordinates:
-      latitude:
-         - 18.666667
-      longitude:
-         - 108.816667
       - sub-tropical evergreen broadleaved forest: Wuyi mountain, Fujian Province
-    coordinates:
-      latitude:
-         - 27.5
-      longitude:
-         - 117.583333
       - cool temperate broadleaved deciduous forest: Baekdu mountain Forest Ecosystem Research Station, Jilin Province
     coordinates:
-      latitude:
+    coordinates:
+      latitudes:
+         - 35.2
+         - 43.283333
+         - 34.25
+         - 18.666667
+         - 27.5
          - 42.383333
-      longitude:
+      longitudes:
+         - 107.666667
+         - 116.033333
+         - 102.333333
+         - 108.816667
+         - 117.583333
          - 128.466667
-
 incubationInfo:
     desc: "Fresh soil samples of 4 replicates, equivalent to 15 g dry weight each, were incubated in 125 mL jars under changing temperature.
            CO2 concentration in gas samples was measured using a gas chro- matograph (Agilent 6890, Agilent Corp., USA) equipped with a FID detector."

@@ -4,24 +4,38 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-07-11
 
 siteInfo:
-    studySite: "CoweetaLong-Term Ecological Research (LTER), Harvard Forest LTER"
-    ecosystemType: Forest
-    climate: temperate
-    soilType: Coarse (CH)- to fine (CL) -loamy Haplumbrepts, Fine-loamy Dystrochrept (HMC)
-              - organic-rich (CH, HOC, HOH)
-              - organic-poor (CL, HMC, HMH)
-    location:
-      - Coweeta Long-Term Ecological Research (LTER) site at high (CH) and low (CL) elevation
-      - Harvard Forest LTER site in control (HOC, HMC) and heated plots (HOH, HMH) from organic-rich (HOC, HOH) and organic-poor (HMC, HMH) horizons
-    coordinates: CH, CL, HMC
-      latitude:
-         - 35.016667
-         - 35.033333
-         - 42.5
-      longitude:
-         - -83.45
-         - -83.433333
-         - -72.166667
+    studySite:
+      sites:
+        - "CoweetaLong-Term Ecological Research (LTER)"
+        - "Harvard Forest LTER"
+      Coweeta:
+        ecosystemType: Forest
+        climate: temperate
+        soilType:
+          - "Coarse (CH)- to fine (CL) -loamy"
+          - "Fine loamy Haplumbrepts, organic-poor (CL)"
+          - "Coarse loamy Haplumbrepts, organic-rich (CH)"
+        location: "Coweeta Long-Term Ecological Research (LTER) site at high (CH) and low (CL) elevation"
+        coordinates:
+          latitude:
+              - 35.016667
+              - 35.033333
+              - 42.5
+          longitude:
+              - -83.45
+              - -83.433333
+              - -72.166667
+          siteNames:
+              - CH
+              - CL
+              - HMC
+      Harvard:
+        ecosystemType: Forest
+        climate: temperate
+        soilType:
+          - "Fine-loamy Dystrochrept (HMC), organic-poor (HMC, HMH)"
+          - "Fine-loamy Dystrochrept (HMC), organic-rich (HOC, HOH)"
+        location: "Harvard Forest LTER site in control (HOC, HMC) and heated plots (HOH, HMH) from organic-rich (HOC, HOH) and organic-poor (HMC, HMH) horizons"
 
 incubationInfo:
     desc: "Microbial biomass was measured using substrate-induced respiration. Values are expressed as raw respiration rates (mg C g soil^{-1} day^{-1})."

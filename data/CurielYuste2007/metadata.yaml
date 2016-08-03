@@ -7,8 +7,8 @@ siteInfo:
     studySite: northern California
     ecosystemType: ponderosa pine plantation, oak savanna
     climate: mediterranean
-    soil texture pine plantation: Sand: 60% Loam: 29%
-    soilType oak savanna: Lithic Haploxerepts (USDA)
+    soil texture pine plantation: "Sand: 60% Loam: 29%"
+    soilType oak savanna: "Lithic Haploxerepts (USDA)"
     location:
       - pine plantation: near University of California Blodgett Forest Research Station
         altitude: 1315 m

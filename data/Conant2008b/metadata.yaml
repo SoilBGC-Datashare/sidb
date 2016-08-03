@@ -4,26 +4,25 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-07-26
 
 siteInfo:
-    studySite: Northern Great Plains Research Laboratory located near Mandan, North Dakota (ND); Waggoner Ranch in northern Texas (TX), south of the town Vernon in Wilbarger County
-    ecosystemType: cultivated grassland, prairie grassland
-    climate: temperate
-    soilType: wheat (ND)
-    texture: Silt: 48.5% Clay: 34.3%
-    soilType: northern mixed-grass prairie (ND)
-    texture: Silt: 49.2% Clay: 29.7%
-    soilType: wheat (TX)
-    texture: Silt: 43.1% Clay: 42.3%
-    soilType: southern mixed-grass prairie (TX)
-    texture: Silt: 52.0% Clay: 30.9%
-    location:
-      - Mandan, North Dakota
-      - Vernon, Texas
-    coordinates:
-      latitude:
-         - 33.833333
-      longitude:
-         - -99.033333
-
+  studySite: "Northern Great Plains Research Laboratory located near Mandan, North Dakota (ND); Waggoner Ranch in northern Texas (TX), south of the town Vernon in Wilbarger County"
+  ecosystemType: "cultivated grassland, prairie grassland"
+  climate: temperate
+  soilType: wheat (ND)
+  texture: "Silt: 48.5% Clay: 34.3%"
+  soilType2: northern mixed-grass prairie (ND)
+  texture2: "Silt: 49.2% Clay: 29.7%"
+  soilType3: wheat (TX)
+  texture3: "Silt: 43.1% Clay: 42.3%"
+  soilType4: southern mixed-grass prairie (TX)
+  texture4: "Silt: 52.0% Clay: 30.9%"
+  location:
+    - Mandan, North Dakota
+    - Vernon, Texas
+  coordinates:
+    latitude:
+       - 33.833333
+    longitude:
+       - -99.033333
 incubationInfo:
     desc: "Soil respiration rates were determined through periodic analysis of CO2 concentration of headspace gas samples using a LI-COR 6525"
     treatments:

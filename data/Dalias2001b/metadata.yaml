@@ -1,0 +1,181 @@
+citationKey: Dalias2001b
+doi: 10.1046/j.1365-2486.2001.00386.x
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-08-10
+
+siteInfo:
+    studySite: western Europe
+    ecosystemType: coniferous forests
+    climate: borean to mediterranean
+    soilTexture: "parent materials for each region below: Sand, Shale, Granite, Sandstone, Hard limestone"
+    soilType: "Ferric podzol, Dystric cambisol, Cambic podzol, Chromic luvisol, Chromic cambisol"
+    location:
+      - Vindeln, Sweden
+      - Haldon, UK
+      - Waldstein, Germany
+      - Thezan, France
+      - La Clape, France
+    coordinates:
+      latitudes:
+         - 64.000000
+         - 50.616667
+         - 50.133333
+         - 43.116667
+         - 43.15
+      longitudes:
+         - 21.083333
+         - -3.666667
+         - 11.866667
+         - 2.75
+         - 3.133333
+incubationInfo:
+    desc: "14C-labelled straw was mixed with soils collected from 7 coniferous forests located on a climatic gradient in Western Europe ranging from boreal to Mediterranean conditions. The soils were incubated in the laboratory at 4, 10, 16, 23 and 30 degrees with constant moisture over 550 days. Measurements of organic-C and14C concentrations in the straw and in the soil samples were determined using dry combustion (Carmograph 12 A carbon analyser). "
+    treatments:
+        - temperature
+    incubationTime:
+        time: 550
+        units: days
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name:  14C_Vin_30
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Vindeln, Sweden at 30 degrees"
+          units: "Percentage of 14C remaining"
+        V3:
+          name:  14C_Vin_4
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Vindeln, Sweden at 4 degrees"
+          units: "Percentage of 14C remaining"
+        V4:
+          name:  14C_Vin_10
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Vindeln, Sweden at 10 degrees"
+          units: "Percentage of 14C remaining"
+        V5:
+          name:  14C_Vin_23
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Vindeln, Sweden at 23 degrees"
+          units: "Percentage of 14C remaining"
+        V6:
+          name:  14C_Vin_16
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Vindeln, Sweden at 16 degrees"
+          units: "Percentage of 14C remaining"
+        V7:
+          name:  14C_Hal_10
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Haldon, UK at 10 degrees"
+          units: "Percentage of 14C remaining"
+        V8:
+          name:  14C_Hal_4
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Haldon, UK at 4 degrees"
+          units: "Percentage of 14C remaining"
+        V9:
+          name:  14C_Hal_16
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Haldon, UK at 16 degrees"
+          units: "Percentage of 14C remaining"
+        V10:
+          name:  14C_Hal_23
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Haldon, UK at 23 degrees"
+          units: "Percentage of 14C remaining"
+        V11:
+          name:  14C_Hal_30
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Haldon, UK at 30 degrees"
+          units: "Percentage of 14C remaining"
+        V12:
+          name:  14C_WalOf_4
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Waldstein, Germany; soil horizon Of at 4 degrees"
+          units: "Percentage of 14C remaining"
+        V13:
+          name:  14C_WalOf_10
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Waldstein, Germany; soil horizon Of at 10 degrees"
+          units: "Percentage of 14C remaining"
+        V14:
+          name:  14C_WalOf_30
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Waldstein, Germany; soil horizon Of at 30 degrees"
+          units: "Percentage of 14C remaining"
+        V15:
+          name:  14C_WalOf_16
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Waldstein, Germany; soil horizon Of at 16 degrees"
+          units: "Percentage of 14C remaining"
+        V16:
+          name:  14C_WalOf_23
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Waldstein, Germany; soil horizon Of at 23 degrees"
+          units: "Percentage of 14C remaining"
+        V17:
+          name:  14C_WalOh_4
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Waldstein, Germany; soil horizon Oh at 4 degrees"
+          units: "Percentage of 14C remaining"
+        V18:
+          name:  14C_WalOh_10
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Waldstein, Germany; soil horizon Oh at 10 degrees"
+          units: "Percentage of 14C remaining"
+        V19:
+          name:  14C_WalOh_30
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Waldstein, Germany; soil horizon Oh at 30 degrees"
+          units: "Percentage of 14C remaining"
+        V20:
+          name:  14C_WalOh_16
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Waldstein, Germany; soil horizon Oh at 16 degrees"
+          units: "Percentage of 14C remaining"
+        V21:
+          name:  14C_WalOh_23
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Waldstein, Germany; soil horizon Oh at 23 degrees"
+          units: "Percentage of 14C remaining"
+        V22:
+          name:  14C_ThOh_4
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Thezan, France; soil horizon Oh at 4 degrees"
+          units: "Percentage of 14C remaining"
+        V23:
+          name:  14C_ThOh_30
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Thezan, France; soil horizon Oh at 30 degrees"
+          units: "Percentage of 14C remaining"
+        V24:
+          name:  14C_ThOh_23
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Thezan, France; soil horizon Oh at 23 degrees"
+          units: "Percentage of 14C remaining"
+        V25:
+          name:  14C_ThOh_16
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Thezan, France; soil horizon Oh at 16 degrees"
+          units: "Percentage of 14C remaining"
+        V26:
+          name:  14C_ThOh_10
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Thezan, France; soil horizon Oh at 10 degrees"
+          units: "Percentage of 14C remaining"
+        V27:
+          name:  14C_ThA1_4
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Thezan, France; soil horizon A1 at 4 degrees"
+          units: "Percentage of 14C remaining"
+        V28:
+          name:  14C_ThA1_10
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Thezan, France; soil horizon A1 at 10 degrees"
+          units: "Percentage of 14C remaining"
+        V29:
+          name:  14C_ThA1_16
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Thezan, France; soil horizon A1 at 16 degrees"
+          units: "Percentage of 14C remaining"
+        V30:
+          name:  14C_ThA1_23
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Thezan, France; soil horizon A1 at 23 degrees"
+          units: "Percentage of 14C remaining"
+        V31:
+          name:  14C_ThA1_30
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Thezan, France; soil horizon A1 at 30 degrees"
+          units: "Percentage of 14C remaining"
+        V32:
+          name:  14C_LaA1_4
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for La Clape, France; soil horizon A1 at 4 degrees"
+          units: "Percentage of 14C remaining"
+        V33:
+          name:  14C_LaA1_10
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for La Clape, France; soil horizon A1 at 10 degrees"
+          units: "Percentage of 14C remaining"
+        V34:
+          name:  14C_LaA1_16
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for La Clape, France; soil horizon A1 at 16 degrees"
+          units: "Percentage of 14C remaining"
+        V35:
+          name:  14C_LaA1_23
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for La Clape, France; soil horizon A1 at 23 degrees"
+          units: "Percentage of 14C remaining"
+        V36:
+          name:  14C_LaA1_30
+          desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for La Clape, France; soil horizon A1 at 30 degrees"
+          units: "Percentage of 14C remaining"

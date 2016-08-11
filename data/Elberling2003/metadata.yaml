@@ -1,0 +1,41 @@
+citationKey: Elberling2003
+doi: 10.1016/S0038-0717(02)00258-4
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-08-11
+
+siteInfo:
+    studySite: NE-Greenland
+    ecosystemType: heath vegetation (Cassiope tetragona, Vaccinium uliginosum)
+    climate:
+      - mean annual air temp. (deg): -10
+      - annual precipitation (mm): 150
+    soilTexture: "non-calcareous sandy fluvial sediments, in places covered by aeolian sand"
+    soilType: "Psammoturbals, relict podzol underneath aeolian sand in well-drained areas"
+    location:
+      - Zackenberg Research Station, Zackenberg Valley
+    coordinates:
+      latitudes:
+         - 74.466667
+      longitudes:
+         - -20.566667
+incubationInfo:
+    desc: "Ecosystem CO2 effluxes were measured by means of LiCor infrared gas analysers (LiCor 6400-09/6262)"
+    incubationTime:
+        time: 365
+        units: days
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name:  scenario_1
+          desc: "Simulation of microbial soil respiration with microbial activity below 0 degrees with the same Q10 as observed for above 0 degrees"
+          units: "g CO2 m^{-2}"
+        V3:
+          name:  scenario_2
+          desc: "Simulation of microbial soil respiration with microbial activity above and below 0 degrees with different, experimentally derived Q10 values"
+          units: "g CO2 m^{-2}"
+        V4:
+          name:  scenario_3
+          desc: "Simulation of microbial soil respiration with and no microbial activity below 0 degrees"
+          units: "g CO2 m^{-2}"

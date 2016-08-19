@@ -1,0 +1,50 @@
+citationKey: Fang2005
+doi: 10.1038/nature03135
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-08-19
+
+siteInfo:
+    studySite: Scotland
+    ecosystemType: "middle-aged plantation of Sitka spruce"
+    coordinates:
+      latitudes:
+         - 56.616667
+      longitudes:
+         - -3.8
+incubationInfo:
+    desc: "Respired CO2 was measured with an infrared gas analyser in differential mode"
+    treatments:
+       - "temperature was changed commonly between 4 and 44 deg"
+       - "soil moisture"
+       - "fresh air"
+    incubationTime:
+        time: 108
+        units: days
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name: a
+          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for Q10 value"
+          units: "Relative properties"
+        V3:
+          name: b
+          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for TOC value"
+          units: "Relative properties"
+        V4:
+          name: c
+          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for DOC value"
+          units: "Relative properties"
+        V5:
+          name: d
+          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for K2SO4-extracted C"
+          units: "Relative properties"
+        V6:
+          name: e
+          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for respiration rate at 20deg"
+          units: "Relative properties"
+        V7:
+          name: f
+          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for microbial biomass C"
+          units: "Relative properties"    

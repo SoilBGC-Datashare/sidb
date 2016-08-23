@@ -1,0 +1,79 @@
+citationKey: Grisi1998
+doi: 10.1016/S0038-0717(98)00016-9
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-08-23
+
+siteInfo:
+       studySites:
+         - Brazil: Mata, Cerrado, Jaiba
+         - England: Silsoe, Fosters, Woburn
+       ecosystemType: Evergreen forest, Maize, Beans and Maize, Cereals, Grassland, Grassland
+       climate: temperate vs. tropical
+       ClayContent (%):
+         - Mata: 22
+         - Cerrado: 82
+         - Jaiba: 15
+         - Silsoe: 68
+         - Fosters: 21
+         - Woburn: 8
+
+incubationInfo:
+       desc: "Sets of jars containing soils for biomass C and CO2 measurements were incubated at 15deg or 35deg for 150 d, in fully randomised blocks. Soils incubated at 35deg required from 1 to 2 ml water after 50 d of incubation"
+       treatments:
+          - temperature
+       incubationTime:
+          time: 150
+          units: days
+
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name: C_15_Jaiba
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Jaiba incubated for 150 d at 15deg"
+        V3:
+          name: C_15_Woburn
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Woburn incubated for 150 d at 15deg"
+        V4:
+          name: C_15_Cerrado
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Cerrado incubated for 150 d at 15deg"
+        V5:
+          name: C_15_Mata
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Mata incubated for 150 d at 15deg"
+        V6:
+          name: C_15_Fosters
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Fosters incubated for 150 d at 15deg"
+        V7:
+          name: C_15_Silsoe
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Silsoe incubated for 150 d at 15deg"
+        V8:
+          name: C_35_Jaiba
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Jaiba incubated for 150 d at 35deg"
+        V9:
+          name: C_35_Woburn
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Woburn incubated for 150 d at 35deg"
+        V10:
+          name: C_35_Cerrado
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Cerrado incubated for 150 d at 35deg"
+        V11:
+          name: C_35_Mata
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Mata incubated for 150 d at 35deg"
+        V12:
+          name: C_35_Fosters
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Fosters incubated for 150 d at 35deg"
+        V13:
+          name: C_35_Silsoe
+          units: "Biomass C (mg C g{^-1} soil)"
+          desc: "Biomass carbon in soils of Silsoe incubated for 150 d at 35deg"

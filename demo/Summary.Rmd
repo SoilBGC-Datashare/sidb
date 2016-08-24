@@ -11,7 +11,8 @@ source("~/sidb/scripts/readYaml.R")
 source("~/sidb/scripts/loadEntries.R")
 ```
 
-This file contains a summary of the data currently available in the soil incubation database **sidb**. Currently, the number of entries in the database is `r length(entryNames)`, and the last entry was added on `r max(entryCreationDate)`.
+This file contains a summary of the data currently available in the soil incubation database **sidb**. Currently, the number of entries in the database is `r length(entryNames)`.
+The last entry was added on `r max(entryCreationDate)`.
 
 
 ```{r, echo=FALSE}

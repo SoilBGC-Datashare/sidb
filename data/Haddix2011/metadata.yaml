@@ -1,0 +1,185 @@
+citationKey: Haddix2011
+doi: 10.2136/sssaj2010.0118
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-08-24
+
+siteInfo:
+       studySites:
+         Indian Head, SK (ARGCN)
+         Mandan, ND (NGPRL)
+         Akron, CO (CGPRS)
+         Vernon, TX (Waggoner Ranch)
+         Alajuela, Costa Rica N/A (Alejula Research Station)
+         Rondonia, Brazil (Nova Vida Ranch)
+       ecosystemType: Native grassland, Cultivated, Native forest, Pasture
+       climate: cold, temperate, tropical
+       soilTypes: Udic Boroll, Typic Argiboroll, Aridic Paleustoll, Typic Paleustoll, Hydric Melanudand, Paleudult & Kandidult
+       coordinates:
+           latitudes:
+             50.533
+             46.767
+             40.150
+             33.939
+             10.168
+           longitude:
+             -103.517
+             -100.917
+             -103.150
+             -99.413
+             -62.824
+incubationInfo:
+       desc: "Four laboratory replicates from composite field samples from each site and treatment combination were incubated at 15, 25, and 35deg for 588 d. Headspace gas samples were analyzed for CO2 concentration using a Li-Cor LI-6252 infrared gas analyzer"
+       treatments:
+          - temperature
+       incubationTime:
+          time: 588
+          units: days
+
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name: C_SasNG_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for Saskatchewan, native grassland"
+        V3:
+          name: C_SasNG_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for Saskatchewan, native grassland"
+        V4:
+          name: C_SasNG_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Saskatchewan, native grassland"
+        V5:
+          name: C_SasCul_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for Saskatchewan, cultivated"
+        V6:
+          name: C_SasCul_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for Saskatchewan, cultivated"
+        V7:
+          name: C_SasCul_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Saskatchewan, cultivated"
+        V8:
+          name: C_NDakNG_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for North Dakota, native grassland"
+        V9:
+          name: C_NDakNG_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for North Dakota, native grassland"
+        V10:
+          name: C_NDakNG_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for North Dakota, native grassland"
+        V11:
+          name: C_NDakCul_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for North Dakota, cultivated"
+        V12:
+          name: C_NDakCul_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for North Dakota, cultivated"
+        V13:
+          name: C_NDakCul_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for North Dakota, cultivated"
+        V14:
+          name: C_ColoNG_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Colorado, native grassland"
+        V15:
+          name: C_ColoNG_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for Colorado, native grassland"
+        V16:
+          name: C_ColoNG_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Colorado, native grassland"
+        V17:
+          name: C_ColoCul_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for Colorado, cultivated"
+        V18:
+          name: C_ColoCul_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for Colorado, cultivated"
+        V19:
+          name: C_ColoCul_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Colorado, cultivated"
+        V20:
+          name: C_TexNG_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for Texas, native grassland"
+        V21:
+          name: C_TexNG_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for Texas, native grassland"
+        V22:
+          name: C_TexNG_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Texas, native grassland"
+        V23:
+          name: C_TexCul_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for Texas, cultivated"
+        V24:
+          name: C_TexCul_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for Texas, cultivated"
+        V25:
+          name: C_TexCul_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Texas, cultivated"
+        V26:
+          name: C_CostaNF_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for Costa Rica, native forest"
+        V27:
+          name: C_CostaNF_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for Costa Rica, native forest"
+        V28:
+          name: C_CostaNF_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Costa Rica, native forest"
+        V29:
+          name: C_CostaPas_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for Costa Rica, Pasture"
+        V30:
+          name: C_CostaPas_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for Costa Rica, Pasture"
+        V31:
+          name: C_CostaPas_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Costa Rica, Pasture"
+        V32:
+          name: C_BrazilNF_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for Brazil, native forest"
+        V33:
+          name: C_BrazilNF_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for Brazil, native forest"
+        V34:
+          name: C_BrazilNF_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Brazil, native forest"
+        V35:
+          name: C_BrazilPas_15
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 15 degrees for Brazil, Pasture"
+        V36:
+          name: C_BrazilPas_25
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 25 degrees for Brazil, Pasture"
+        V37:
+          name: C_BrazilPas_35
+          units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
+          desc: "Decomposition rates over time at 35 degrees for Brazil, Pasture"

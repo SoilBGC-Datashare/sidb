@@ -1,7 +1,7 @@
 ---
 title: "Summary of entries in the Soil Incubation Database"
-author: "CA Sierra"
-date: "June 4, 2016"
+author: "Carlos A. Sierra and Heidi Völkel"
+date: '`r format(Sys.time(), "%d %B, %Y")`'
 output: pdf_document
 ---
 
@@ -9,9 +9,19 @@ output: pdf_document
 #entryNames=list.dirs("~/sidb/data/", full.names=FALSE, recursive=FALSE)
 source("~/sidb/scripts/readYaml.R")
 source("~/sidb/scripts/loadEntries.R")
+
+# Some statistics
+dataPoints=NULL
+nCols=NULL
+for(i in 1:length(entryNames)){
+  mtx=get(entryNames[i])$data
+  nCols[i]=dim(mtx)[2]-1
+  dataPoints[i]=length(as.matrix(mtx))
+  rm(mtx)
+}
 ```
 
-This file contains a summary of the data currently available in the soil incubation database **sidb**. Currently, the number of entries in the database is `r length(entryNames)`.
+This file contains a summary of the data currently available in the soil incubation database **sidb**. Currently, the number of entries in the database is `r length(entryNames)`. Most entries have multiple time-series of CO<sub>2</sub> flux release from incubation experiments. The current total number of time-series  is `r sum(nCols)`, and the total number of datapoints is `r sum(dataPoints)`.
 The last entry was added on `r max(entryCreationDate)`.
 
 
@@ -22,7 +32,7 @@ library(knitr)
 kable(entryBaseMetadata)
 ```
 
-Locations for which data is available are presented in the following map
+Locations for which data are available are presented in the following map
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(maps)

@@ -38,12 +38,4 @@ for(i in 1:length(entryNames)){
   longitude=c(longitude,get(entryNames[i])$siteInfo$coordinates$longitude)
 }
 
-# dataPoints=NULL
-# nCols=NULL
-# for(i in 1:length(entryNames)){
-#   mtx=get(entryNames[i])$data
-#   nCols[i]=dim(mtx)[2]-1
-#   dataPoints[i]=length(as.matrix(mtx))
-#   rm(mtx)
-# }
 

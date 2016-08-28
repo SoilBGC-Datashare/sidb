@@ -38,4 +38,13 @@ for(i in 1:length(entryNames)){
   longitude=c(longitude,get(entryNames[i])$siteInfo$coordinates$longitude)
 }
 
+incubationTime=NULL
+for(i in 1:length(entryNames)){
+  if(get(entryNames[i])$incubationInfo$incubationTime$units=="days"){
+  incubationTime[i]=get(entryNames[i])$incubationInfo$incubationTime$time
+  }
+  if(get(entryNames[i])$incubationInfo$incubationTime$units=="hours"){
+    incubationTime[i]=(get(entryNames[i])$incubationInfo$incubationTime$time)/24 #transforms units to days
+  }
+}
 

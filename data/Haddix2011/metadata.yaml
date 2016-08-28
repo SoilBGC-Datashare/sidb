@@ -5,28 +5,41 @@ entryCreationDate: 2016-08-24
 
 siteInfo:
        studySites:
-         Indian Head, SK (ARGCN)
-         Mandan, ND (NGPRL)
-         Akron, CO (CGPRS)
-         Vernon, TX (Waggoner Ranch)
-         Alajuela, Costa Rica N/A (Alejula Research Station)
-         Rondonia, Brazil (Nova Vida Ranch)
-       ecosystemType: Native grassland, Cultivated, Native forest, Pasture
-       climate: cold, temperate, tropical
-       soilTypes: Udic Boroll, Typic Argiboroll, Aridic Paleustoll, Typic Paleustoll, Hydric Melanudand, Paleudult & Kandidult
+         - "Indian Head, SK (ARGCN)"
+         - "Mandan, ND (NGPRL)"
+         - "Akron, CO (CGPRS)"
+         - "Vernon, TX (Waggoner Ranch)"
+         - "Alajuela, Costa Rica N/A (Alejula Research Station)"
+         - "Rondonia, Brazil (Nova Vida Ranch)"
+       ecosystemType: 
+         - Native grassland
+         - Cultivated
+         - Native forest
+         - Pasture
+       climate: 
+         - cold
+         - temperate
+         - tropical
+       soilTypes: 
+         - "Udic Boroll"
+         - "Typic Argiboroll"
+         - "Aridic Paleustoll"
+         - "Typic Paleustoll"
+         - "Hydric Melanudand"
+         - "Paleudult & Kandidult"
        coordinates:
            latitudes:
-             50.533
-             46.767
-             40.150
-             33.939
-             10.168
+             - 50.533
+             - 46.767
+             - 40.150
+             - 33.939
+             - 10.168
            longitude:
-             -103.517
-             -100.917
-             -103.150
-             -99.413
-             -62.824
+             - -103.517
+             - -100.917
+             - -103.150
+             - -99.413
+             - -62.824
 incubationInfo:
        desc: "Four laboratory replicates from composite field samples from each site and treatment combination were incubated at 15, 25, and 35deg for 588 d. Headspace gas samples were analyzed for CO2 concentration using a Li-Cor LI-6252 infrared gas analyzer"
        treatments:

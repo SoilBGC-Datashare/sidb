@@ -2,15 +2,14 @@
 title: "Summary of entries in the Soil Incubation Database"
 author: "Carlos A. Sierra and Heidi Völkel"
 date: '`r format(Sys.time(), "%d %B, %Y")`'
-output: pdf_document
+output: html_document
 ---
 
 ```{r, echo=FALSE}
-#entryNames=list.dirs("~/sidb/data/", full.names=FALSE, recursive=FALSE)
 source("~/sidb/scripts/readYaml.R")
 source("~/sidb/scripts/loadEntries.R")
 
-# Some statistics
+# Calculate some statistics
 dataPoints=NULL
 nCols=NULL
 for(i in 1:length(entryNames)){
@@ -20,6 +19,8 @@ for(i in 1:length(entryNames)){
   rm(mtx)
 }
 ```
+
+## Database summary and statistics
 
 This file contains a summary of the data currently available in the soil incubation database **sidb**. Currently, the number of entries in the database is `r length(entryNames)`. Most entries have multiple time-series of CO<sub>2</sub> flux release from incubation experiments. The current total number of time-series  is `r sum(nCols)`, and the total number of datapoints is `r sum(dataPoints)`.
 The last entry was added on `r max(entryCreationDate)`.
@@ -40,6 +41,12 @@ map('world', interior = FALSE)
 points(longitude, latitude, pch=20, col=2)
 ```
 
+A histogram of the incubation time for all entries can be obtained as 
+
+```{r}
+hist(incubationTime, xlab="Incubation time (days)", main ="", ylab="Number of studies")
+```
+
 ## Datasets
 The file `~/scripts/plotEntry.R` can be used to plot individual entries from the database. For example
 
@@ -48,11 +55,4 @@ source("~/sidb/scripts/plotEntry.R")
 plotEntry(entry=Andrews2000SBB)
 ```
 
-The plots produced by this function are at the moment not of high quality, so use the function only to visually assess the data. For exmaple,
-
-```{r}
-plotEntry(entry=Arevalo2012)
-```
-
-produces output that is not ideal for publication. You're welcome to modify the function `plotEntry` for output of better quality.
 

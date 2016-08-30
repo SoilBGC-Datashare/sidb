@@ -1,0 +1,41 @@
+citationKey: Hartley2008
+doi: 10.1111/j.1461-0248.2008.01223.x
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-08-30
+
+siteInfo:
+       studySite: Abisko, northern Sweden
+       ecosystemType: Tundra
+       climate: Cold
+       texture: coarse-grained till deposits with some large boulders and intermittent pockets of mineral soil
+       coordinates:
+         latitude: 68.301944
+         longitude: 18.854444
+
+incubationInfo:
+       desc: "16 cores were transferred to an incubator (MIR-153) set at 2 deg. Of these 16 cores, 10 were maintained at 2 deg for 90 days (high–low treatment), and the other 6 cores were returned to the 10 deg incubator after 60 days at 2 deg (high–low–high treatment). Remaining 10 cores were maintained at10 deg for the whole 200-day incubation (constant high treatment)"
+       treatments:
+          - temperature
+       incubationTime:
+          time: 200
+          units: days
+
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name: C_10deg
+          temperature: 10
+          units: "Respiration rate (mgCgC{^-1}h{^-1})"
+          desc: "mean soil respiration rates in a constant high temperature treatment"
+        V3:
+          name: C_10to2deg
+          temperatures: 10, 2
+          units: "Respiration rate (mgCgC{^-1}h{^-1})"
+          desc: "mean soil respiration rates in a high-low temperature treatment"
+        V4:
+          name: C_10to2to10
+          temperatures: 10, 2, 10
+          units: "Respiration rate (mgCgC{^-1}h{^-1})"
+          desc: "mean soil respiration rates in a high-low-high temperature treatment"

@@ -1,0 +1,36 @@
+citationKey: HartleyIneson2008
+doi: 10.1016/j.soilbio.2008.01.007
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-08-30
+
+siteInfo:
+       studySite: University of York, UK
+       ecosystemType: cultivated
+       climate: temperate
+       texture: sandy loam
+
+incubationInfo:
+       desc: "Samples were incubated in a constant temperature room at 15 degrees and maintained at a moisture content of 20 percent with frequent water addition"
+       treatments:
+          - temperature
+          - moisture content
+       incubationTime:
+          time: 8
+          units: years
+
+variables:
+        V1:
+          name: time
+          units: years
+        V2:
+          name: SOM_5
+          units: "Respiration rate in the warmed scenario"
+          desc: "The change in the rate of heterotrophic soil respiration over time in the 3 degrees warming scenario, expressed as a proportion of the respiration rate in the ambient scenario, when the labile SOM pool constituted 5% of total soil C"
+        V3:
+          name: SOM_10
+          units: "Respiration rate in the warmed scenario"
+          desc: "The change in the rate of heterotrophic soil respiration over time in the 3 degrees warming scenario, expressed as a proportion of the respiration rate in the ambient scenario, when the labile SOM pool constituted 10% of total soil C"
+        V4:
+          name: SOM_15
+          units: "Respiration rate in the warmed scenario"
+          desc: "The change in the rate of heterotrophic soil respiration over time in the 3 degrees warming scenario, expressed as a proportion of the respiration rate in the ambient scenario, when the labile SOM pool constituted 15% of total soil C"

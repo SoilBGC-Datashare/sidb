@@ -11,16 +11,28 @@ siteInfo:
          - "Vernon, TX (Waggoner Ranch)"
          - "Alajuela, Costa Rica N/A (Alejula Research Station)"
          - "Rondonia, Brazil (Nova Vida Ranch)"
-       ecosystemType: 
-         - Native grassland
-         - Cultivated
-         - Native forest
-         - Pasture
-       climate: 
-         - cold
-         - temperate
-         - tropical
-       soilTypes: 
+       ecosystemType:
+         - Native grassland and cultivated
+         - Native grassland and cultivated
+         - Native grassland and cultivated
+         - Native grassland and cultivated
+         - Native forest and pasture
+         - Native forest and pasture
+       MAT:
+         - 2
+         - 5
+         - 9.2
+         - 17
+         - 20
+         - 25.6
+      MAP:
+         - 421
+         - 402
+         - 420
+         - 665
+         - .na.real
+         - 2200
+       soilTypes:
          - "Udic Boroll"
          - "Typic Argiboroll"
          - "Aridic Paleustoll"
@@ -28,25 +40,30 @@ siteInfo:
          - "Hydric Melanudand"
          - "Paleudult & Kandidult"
        coordinates:
-           latitudes:
+           latitude:
              - 50.533
              - 46.767
              - 40.150
              - 33.939
+             - .na.real
              - 10.168
            longitude:
              - -103.517
              - -100.917
              - -103.150
              - -99.413
+             - .na.real
              - -62.824
 incubationInfo:
        desc: "Four laboratory replicates from composite field samples from each site and treatment combination were incubated at 15, 25, and 35deg for 588 d. Headspace gas samples were analyzed for CO2 concentration using a Li-Cor LI-6252 infrared gas analyzer"
        treatments:
           - temperature
+          - landUse
+          - site
        incubationTime:
           time: 588
           units: days
+       replicates: 4
 
 variables:
         V1:
@@ -56,143 +73,251 @@ variables:
           name: C_SasNG_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for Saskatchewan, native grassland"
+          temperature: 15
+          landUse: "native grassland"
+          site: "Indian Head"
         V3:
           name: C_SasNG_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for Saskatchewan, native grassland"
+          temperature: 25
+          landUse: "native grassland"
+          site: "Indian Head"
         V4:
           name: C_SasNG_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Saskatchewan, native grassland"
+          temperature: 35
+          landUse: "native grassland"
+          site: "Indian Head"
         V5:
           name: C_SasCul_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for Saskatchewan, cultivated"
+          temperature: 15
+          landUse: "cultivated"
+          site: "Indian Head"
         V6:
           name: C_SasCul_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for Saskatchewan, cultivated"
+          temperature: 25
+          landUse: "cultivated"
+          site: "Indian Head"
         V7:
           name: C_SasCul_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Saskatchewan, cultivated"
+          temperature: 35
+          landUse: "cultivated"
+          site: "Indian Head"
         V8:
           name: C_NDakNG_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for North Dakota, native grassland"
+          temperature: 15
+          landUse: "native grassland"
+          site: Mandan
         V9:
           name: C_NDakNG_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for North Dakota, native grassland"
+          temperature: 25
+          landUse: "native grassland"
+          site: Mandan
         V10:
           name: C_NDakNG_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for North Dakota, native grassland"
+          temperature: 35
+          landUse: "native grassland"
+          site: Mandan
         V11:
           name: C_NDakCul_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for North Dakota, cultivated"
+          temperature: 15
+          landUse: cultivated
+          site: Mandan
         V12:
           name: C_NDakCul_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for North Dakota, cultivated"
+          temperature: 25
+          landUse: cultivated
+          site: Mandan
         V13:
           name: C_NDakCul_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for North Dakota, cultivated"
+          temperature: 35
+          landUse: cultivated
+          site: Mandan
         V14:
           name: C_ColoNG_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Colorado, native grassland"
+          temperature: 15
+          landUse: "native grassland"
+          site: Akron
         V15:
           name: C_ColoNG_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for Colorado, native grassland"
+          temperature: 25
+          landUse: "native grassland"
+          site: Akron
         V16:
           name: C_ColoNG_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Colorado, native grassland"
+          temperature: 35
+          landUse: "native grassland"
+          site: Akron
         V17:
           name: C_ColoCul_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for Colorado, cultivated"
+          temperature: 15
+          landUse: cultivated
+          site: Akron
         V18:
           name: C_ColoCul_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for Colorado, cultivated"
+          temperature: 25
+          landUse: cultivated
+          site: Akron
         V19:
           name: C_ColoCul_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Colorado, cultivated"
+          temperature: 35
+          landUse: cultivated
+          site: Akron
         V20:
           name: C_TexNG_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for Texas, native grassland"
+          temperature: 15
+          landUse: "native grassland"
+          site: Vernon
         V21:
           name: C_TexNG_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for Texas, native grassland"
+          temperature: 25
+          landUse: "native grassland"
+          site: Vernon
         V22:
           name: C_TexNG_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Texas, native grassland"
+          temperature: 35
+          landUse: "native grassland"
+          site: Vernon
         V23:
           name: C_TexCul_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for Texas, cultivated"
+          temperature: 15
+          landUse: cultivated
+          site: Vernon
         V24:
           name: C_TexCul_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for Texas, cultivated"
+          temperature: 25
+          landUse: cultivated
+          site: Vernon
         V25:
           name: C_TexCul_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Texas, cultivated"
+          temperature: 35
+          landUse: cultivated
+          site: Vernon
         V26:
           name: C_CostaNF_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for Costa Rica, native forest"
+          temperature: 15
+          landUse: "native forest"
+          site: Alajuela
         V27:
           name: C_CostaNF_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for Costa Rica, native forest"
+          temperature: 25
+          landUse: "native forest"
+          site: Alajuela
         V28:
           name: C_CostaNF_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Costa Rica, native forest"
+          temperature: 35
+          landUse: "native forest"
+          site: Alajuela
         V29:
           name: C_CostaPas_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for Costa Rica, Pasture"
+          temperature: 15
+          landUse: Pasture
+          site: Alajuela
         V30:
           name: C_CostaPas_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for Costa Rica, Pasture"
+          temperature: 25
+          landUse: Pasture
+          site: Alajuela
         V31:
           name: C_CostaPas_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Costa Rica, Pasture"
+          temperature: 35
+          landUse: Pasture
+          site: Alajuela
         V32:
           name: C_BrazilNF_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for Brazil, native forest"
+          temperature: 15
+          landUse: "native forest"
+          site: Rondonia
         V33:
           name: C_BrazilNF_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for Brazil, native forest"
+          temperature: 25
+          landUse: "native forest"
+          site: Rondonia
         V34:
           name: C_BrazilNF_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Brazil, native forest"
+          temperature: 35
+          landUse: "native forest"
+          site: Rondonia
         V35:
           name: C_BrazilPas_15
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 15 degrees for Brazil, Pasture"
+          temperature: 15
+          landUse: Pasture
+          site: Rondonia
         V36:
           name: C_BrazilPas_25
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 25 degrees for Brazil, Pasture"
+          temperature: 15
+          landUse: Pasture
+          site: Rondonia
         V37:
           name: C_BrazilPas_35
           units: "Soil respiration rate (mg C g{^-1} soil day{^-1})"
           desc: "Decomposition rates over time at 35 degrees for Brazil, Pasture"
+          temperature: 35
+          landUse: Pasture
+          site: Rondonia

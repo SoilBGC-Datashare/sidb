@@ -45,96 +45,156 @@ variables:
         V2:
           name: CO2_ET_SAG_TS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the topsoil (0-20cm) of the semi-arid grassland"
+          temperature: 19
+          landUse: semi-arid grassland
+          site: Xilinguole Steppe
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V3:
           name: CO2_ET_SAG_SS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the subsoil (30-50cm) of the semi-arid grassland"
+          temperature: 19
+          landUse: semi-arid grassland
+          site: Xilinguole Steppe
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V4:
           name: CO2_ET_TM_TS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the topsoil (0-20cm) of the temperate meadow"
+          temperature: 19
+          landUse: temperate meadow
+          site: Gahai-Zecha National Nature Reserve
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V5:
           name: CO2_ET_TM_SS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the subsoil (30-50cm) of the temperate meadow"
+          temperature: 19
+          landUse: temperate meadow
+          site: Gahai-Zecha National Nature Reserve
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V6:
           name: CO2_ET_A_TS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the topsoil (0-20cm) of the arable land"
+          temperature: 19
+          landUse: arable land
+          site: Agro-Ecological Experiment Station
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V7:
           name: CO2_ET_A_SS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the subsoil (30-50cm) of the arable land"
+          temperature: 19
+          landUse: arable land
+          site: Agro-Ecological Experiment Station
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V8:
           name: CO2_ET_DF_TS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the topsoil (0-20cm) of the deciduous forest"
+          temperature: 19
+          landUse: deciduous forest
+          site: Baekdu Mountain Forest Ecosystem Research Station
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V9:
           name: CO2_ET_DF_SS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the subsoil (30-50cm) of the deciduous forest"
+          temperature: 19
+          landUse: deciduous forest
+          site: Baekdu Mountain Forest Ecosystem Research Station
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V10:
           name: CO2_ET_EF_TS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the topsoil (0-20cm) of the evergreen forest"
+          temperature: 19
+          landUse: evergreen forest
+          site: Wuyi mountain
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V11:
           name: CO2_ET_EF_SS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the subsoil (30-50cm) of the evergreen forest"
+          temperature: 19
+          landUse: evergreen forest
+          site: Wuyi mountain
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V12:
           name: CO2_ET_R_TS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the topsoil (0-20cm) of the rainforest"
+          temperature: 19
+          landUse: rainforest
+          site: Jianfengling National Forest Park
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V13:
           name: CO2_ET_R_SS
           desc: "Respiration rates (at 19 deg) with different duration of equilibration after temperature has changed (1, 2, 6, 12, 24h) measured for the subsoil (30-50cm) of the rainforest"
+          temperature: 19
+          landUse: rainforest
+          site: Jianfengling National Forest Park
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V14:
           name: CO2_RT_SAG_TS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the semi-arid grassland"
+          landUse: semi-arid grassland
+          site: Xilinguole Steppe
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V15:
           name: CO2_RT_SAG_SS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the semi-arid grassland"
+          landUse: semi-arid grassland
+          site: Xilinguole Steppe
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V16:
           name: CO2_RT_TM_TS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the temperate meadow"
+          landUse: temperate meadow
+          site: Gahai-Zecha National Nature Reserve
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V17:
           name: CO2_RT_TM_SS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the temperate meadow"
+          landUse: temperate meadow
+          site: Gahai-Zecha National Nature Reserve
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V18:
           name: CO2_RT_A_TS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the arable land"
+          landUse: arable land
+          site: Agro-Ecological Experiment Station
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V19:
           name: CO2_RT_A_SS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the arable land"
+          landUse: arable land
+          site: Agro-Ecological Experiment Station
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V20:
           name: CO2_RT_DF_TS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the deciduous forest"
+          landUse: deciduous forest
+          site: Baekdu Mountain Forest Ecosystem Research Station
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V21:
           name: CO2_RT_DF_SS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the deciduous forest"
+          landUse: deciduous forest
+          site: Baekdu Mountain Forest Ecosystem Research Station
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V22:
           name: CO2_RT_EF_TS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the evergreen forest"
+          landUse: evergreen forest
+          site: Wuyi mountain
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V23:
           name: CO2_RT_EF_SS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the evergreen forest"
+          landUse: evergreen forest
+          site: Wuyi mountain
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V24:
           name: CO2_RT_R_TS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the topsoil (0-20cm) of the rainforest"
+          landUse: rainforest
+          site: Jianfengling National Forest Park
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})
         V25:
           name: CO2_RT_R_SS
           desc: "chamber closure (respiration times) (1, 2, 6 and 12 h) for the subsoil (30-50cm) of the rainforest"
+          landUse: rainforest
+          site: Jianfengling National Forest Park
           units: CO_2 flux (mg CO_2-C g^{-1} soil h^{-1})

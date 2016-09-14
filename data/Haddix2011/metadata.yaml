@@ -2,7 +2,6 @@ citationKey: Haddix2011
 doi: 10.2136/sssaj2010.0118
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-24
-
 siteInfo:
        studySites:
          - "Indian Head, SK (ARGCN)"
@@ -25,7 +24,7 @@ siteInfo:
          - 17
          - 20
          - 25.6
-      MAP:
+       MAP:
          - 421
          - 402
          - 420
@@ -64,7 +63,6 @@ incubationInfo:
           time: 588
           units: days
        replicates: 4
-
 variables:
         V1:
           name: time

@@ -35,6 +35,8 @@ incubationInfo:
   desc: "fresh soil samples of 4 replicates - equivalent to 15g dry weight each, were incubated in 125ml jars under changing temperature. CO2 concentration in gas samples was measured using a gas chromatograph (Agilent 6890, Agilent Corp., USA) equipped with a FID detector. Temperature was continuously increased from the lowest to the highest with both intervals of 2 (0-30 deg) and 7 (0-35 deg) degrees"
   treatments:
     - temperature
+    - landUse
+    - site
   incubationTime:
     time: 24
     units: hours

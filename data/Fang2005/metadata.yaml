@@ -14,9 +14,9 @@ siteInfo:
 incubationInfo:
     desc: "Respired CO2 was measured with an infrared gas analyser in differential mode"
     treatments:
-       - "temperature was changed commonly between 4 and 44 deg"
-       - "soil moisture"
-       - "fresh air"
+       - temperature
+       - soil moisture
+       - fresh air
     incubationTime:
         time: 108
         units: days
@@ -27,24 +27,30 @@ variables:
         V2:
           name: a
           desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for Q10 value"
+          initial value: Q10
           units: "Relative properties"
         V3:
           name: b
           desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for TOC value"
+          initial value: TOC (total organic carbon)
           units: "Relative properties"
         V4:
           name: c
           desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for DOC value"
+          initial value: DOC (water-dissolved organic carbon)
           units: "Relative properties"
         V5:
           name: d
           desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for K2SO4-extracted C"
+          initial value: K2SO4-extracted carbon
           units: "Relative properties"
         V6:
           name: e
           desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for respiration rate at 20deg"
+          temperature: 20
           units: "Relative properties"
         V7:
           name: f
           desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for microbial biomass C"
-          units: "Relative properties"    
+          initial value: microbial biomass carbon
+          units: "Relative properties"

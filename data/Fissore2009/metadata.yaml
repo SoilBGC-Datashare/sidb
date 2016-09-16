@@ -33,6 +33,11 @@ siteInfo:
          - sandstone, shale, siltstone, sandy loam
          - marine Sediments, loamy sand, sandy marine sediments, clayey sediments
          - high-grade metamorphic and igneous
+       coordinates:
+         latitude:
+           - .na.real
+         longitude:
+           - .na.real
 incubationInfo:
        desc: "Samples in the sealed jars were incubated at the predefined LIT10 or LIT30 for 24 hours and head space gas was sampled a second time for Gas Chromatograph"
        treatments:

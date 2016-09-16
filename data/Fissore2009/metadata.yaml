@@ -4,36 +4,35 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-19
 
 siteInfo:
-       studySite:
+       studySites:
          - "Colorado (Fraser Experimental Forest, Routt National Forest)"
          - "Minnesota (Marcel and Cutfood Experimental Forest)"
          - "Michigan (industrial lands, Technological University's Alberta Forestry Center)"
          - "Kentucky (Daniel Boone National Forest, University of Kentucky Robinson Forest)"
          - "South Carolina (Santee Experimental Forest, Francis Marion National Forest)"
          - "Georgia (University of Georgia Agricultural Experiment Station)"
-       ecosystemType: "Pine, Hardwood"
+       ecosystemTypes:
+         - Pine, Hardwood
+         - Pine, Hardwood
+         - Pine, Hardwood
+         - Pine, Hardwood
+         - Pine, Hardwood
+         - Pine, Hardwood
        climate: temperate
-       soilType1: Haplocryods
-       texture1: Slope wash, gneiss and schist, Sandy loam
-       soilType2: Cryochrepts
-       texture2: Outwash, gneiss and schist, Sandy loam
-       soilType3: Udipsamment
-       texture3,4,5: Glacial outwash plains, loamy sand
-       soilType4: Haplorthods
-       soilType5: Fragiorthods
-       soilType6: Hapludults
-       texture6,7: Sandstone, Shale, Siltstone, Sandy loam
-       soilType7: Dystrochrepts
-       soilType8: Hapludalfs
-       texture8,10: Marine Sediments, loamy sand
-       soilType9: Quartzipsamment
-       texture9,12: Sandy marine sediments, Sand
-       soilType10: Endoaquults
-       soilType11: Paleaquults
-       texture11: Clayey sediments, Sandy loam
-       soilType12: Alaquods
-       soilType13: Kanhapludults
-       texture13: High-grade metamorphic and igneous, Sandy loam
+       soilTypes:
+         - Haplocryods, Cryochrepts
+         - Udipsamment
+         - Haplorthods, Fragiorthods
+         - Hapludults, Dystrochrepts
+         - Hapludalfs, Quartzipsamment, Endoaquults, Paleaquults, Alaquods
+         - Kanhapludults
+       textures:
+         - slope wash/ outwash, gneiss and schist, sandy loam
+         - glacial outwash plains, loamy sand
+         - glacial outwash plains, loamy sand
+         - sandstone, shale, siltstone, sandy loam
+         - marine Sediments, loamy sand, sandy marine sediments, clayey sediments
+         - high-grade metamorphic and igneous
 incubationInfo:
        desc: "Samples in the sealed jars were incubated at the predefined LIT10 or LIT30 for 24 hours and head space gas was sampled a second time for Gas Chromatograph"
        treatments:
@@ -41,7 +40,6 @@ incubationInfo:
        incubationTime:
           time: 525
           units: days
-
 variables:
         V1:
           name: time
@@ -54,7 +52,9 @@ variables:
           name: LIT10deg
           units: "mg C g{^-1} soil C day{^-1}"
           desc: "Carbon efflux rates and temperature sensitivity values (Q10) from soils incubated at 10deg"
+          temperature: 10
         V4:
           name: LIT30deg
           units: "mg C g{^-1} soil C day{^-1}"
           desc: "Carbon efflux rates and temperature sensitivity values (Q10) from soils incubated at 30deg"
+          temperature: 30

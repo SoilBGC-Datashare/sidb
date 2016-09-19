@@ -31,11 +31,14 @@ variables:
           desc: "mean soil respiration rates in a constant high temperature treatment"
         V3:
           name: C_10to2deg
-          temperatures: 10, 2
+          temperature: 10
+          temperature2: 2
           units: "Respiration rate (mgCgC{^-1}h{^-1})"
           desc: "mean soil respiration rates in a high-low temperature treatment"
         V4:
           name: C_10to2to10
-          temperatures: 10, 2, 10
+          temperature: 10
+          temperature2: 2
+          temperature3: 10
           units: "Respiration rate (mgCgC{^-1}h{^-1})"
           desc: "mean soil respiration rates in a high-low-high temperature treatment"

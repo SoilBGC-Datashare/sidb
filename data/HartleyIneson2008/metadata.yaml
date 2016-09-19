@@ -23,14 +23,14 @@ variables:
           name: SOM_5
           units: "Respiration rate in the warmed scenario"
           desc: "The change in the rate of heterotrophic soil respiration over time in the 3 degrees warming scenario, expressed as a proportion of the respiration rate in the ambient scenario, when the labile SOM pool constituted 5% of total soil C"
-          total soil C (%): 5
+          totalSoilC(%): 5
         V3:
           name: SOM_10
           units: "Respiration rate in the warmed scenario"
           desc: "The change in the rate of heterotrophic soil respiration over time in the 3 degrees warming scenario, expressed as a proportion of the respiration rate in the ambient scenario, when the labile SOM pool constituted 10% of total soil C"
-          total soil C (%): 10
+          totalSoilC(%): 10
         V4:
           name: SOM_15
           units: "Respiration rate in the warmed scenario"
           desc: "The change in the rate of heterotrophic soil respiration over time in the 3 degrees warming scenario, expressed as a proportion of the respiration rate in the ambient scenario, when the labile SOM pool constituted 15% of total soil C"
-          total soil C (%): 15
+          totalSoilC(%): 15

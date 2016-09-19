@@ -11,7 +11,7 @@ incubationInfo:
        desc: "Samples were incubated in a constant temperature room at 15 degrees and maintained at a moisture content of 20 percent with frequent water addition"
        treatments:
           - temperature
-          - moisture content
+          - total soil C (%)
        incubationTime:
           time: 8
           units: years

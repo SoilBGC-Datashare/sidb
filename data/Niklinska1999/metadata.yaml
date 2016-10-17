@@ -1,0 +1,320 @@
+citationKey: Niklinska1999
+doi: 10.1023/A:1006049204600
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2016-10-17
+siteInfo:
+       studySites:
+         - "Harads, northern Sweden"
+         - "Jaedraas, central Sweden"
+         - "Brandstorp, southern Sweden"
+         - "Czerlonka, north-eastern Poland"
+         - "Otobok, western Poland"
+         - "LaViale, southern France"
+         - "Biescas, northern Spain"
+       ecosystemType:
+         - Scots pine monocultures
+         - Scots pine monocultures
+         - Scots pine monocultures
+         - Scots pine monocultures
+         - Scots pine monocultures
+         - Scots pine monocultures
+         - Scots pine monocultures
+       MAT:
+         - 0.6
+         - 3.8
+         - 6.2
+         - 5.7
+         - 8.1
+         - 8.2
+         - 10.6
+       MAP:
+         - 470
+         - 609
+         - 930
+         - 594
+         - 604
+         - 793
+         - 793
+       soilTypes:
+         - "mor-type humus layer"
+         - "mor-type humus layer"
+         - "mor-type humus layer"
+         - "mor-type humus layer"
+         - "mor-type humus layer"
+         - "mor-type humus layer"
+         - "mor-type humus layer"
+       coordinates:
+           latitude:
+             - 66.133333
+             - 60.816667
+             - 58.05
+             - 52.683333
+             - 52.366667
+             - 44.183333
+             - 42.666667
+           longitude:
+             - 20.883333
+             - 16.016667
+             - 14.133333
+             - 23.783333
+             - 14.6
+             - 3.4
+             - 3.333333
+incubationInfo:
+       desc: "Five samples of 5 g DWT humus from each site were incubated at 50 percent WHC at 5, 10, 15, 20 and 25 degrees. Respiration rates were measured every second week for 14 weeks."
+       treatments:
+          - temperature
+          - site
+       incubationTime:
+          time: 14
+          units: weeks
+       replicates: 5
+variables:
+        V1:
+          name: time
+          units: weeks
+        V2:
+          name: CO2_HarNS_5
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Harads, northern Sweden, incubated at 5 degrees"
+          temperature: 5
+          landUse: "Scots pine monocultures"
+          site: "Harads, northern Sweden"
+        V3:
+          name: CO2_HarNS_10
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Harads, northern Sweden, incubated at 10 degrees"
+          temperature: 10
+          landUse: "Scots pine monocultures"
+          site: "Harads, northern Sweden"
+        V4:
+          name: CO2_HarNS_15
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Harads, northern Sweden, incubated at 15 degrees"
+          temperature: 15
+          landUse: "Scots pine monocultures"
+          site: "Harads, northern Sweden"
+        V5:
+          name: CO2_HarNS_20
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Harads, northern Sweden, incubated at 20 degrees"
+          temperature: 20
+          landUse: "Scots pine monocultures"
+          site: "Harads, northern Sweden"
+        V6:
+          name: CO2_HarNS_25
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Harads, northern Sweden, incubated at 25 degrees"
+          temperature: 25
+          landUse: "Scots pine monocultures"
+          site: "Harads, northern Sweden"
+        V7:
+          name: CO2_JaedCS_5
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Jaedraas, central Sweden, incubated at 5 degrees"
+          temperature: 5
+          landUse: "Scots pine monocultures"
+          site: "Jaedraas, central Sweden"
+        V8:
+          name: CO2_JaedCS_10
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Jaedraas, central Sweden, incubated at 10 degrees"
+          temperature: 10
+          landUse: "Scots pine monocultures"
+          site: "Jaedraas, central Sweden"
+        V9:
+          name: CO2_JaedCS_15
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Jaedraas, central Sweden, incubated at 15 degrees"
+          temperature: 15
+          landUse: "Scots pine monocultures"
+          site: "Jaedraas, central Sweden"
+        V10:
+          name: CO2_JaedCS_20
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Jaedraas, central Sweden, incubated at 20 degrees"
+          temperature: 20
+          landUse: "Scots pine monocultures"
+          site: "Jaedraas, central Sweden"
+        V11:
+          name: CO2_JaedCS_25
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Jaedraas, central Sweden, incubated at 25 degrees"
+          temperature: 25
+          landUse: "Scots pine monocultures"
+          site: "Jaedraas, central Sweden"
+        V12:
+          name: CO2_BrandSS_5
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Brandstorp, southern Sweden, incubated at 5 degrees"
+          temperature: 5
+          landUse: "Scots pine monocultures"
+          site: "Brandstorp, southern Sweden"
+        V13:
+          name: CO2_BrandSS_10
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Brandstorp, southern Sweden, incubated at 10 degrees"
+          temperature: 10
+          landUse: "Scots pine monocultures"
+          site: "Brandstorp, southern Sweden"
+        V14:
+          name: CO2_BrandSS_15
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Brandstorp, southern Sweden, incubated at 15 degrees"
+          temperature: 15
+          landUse: "Scots pine monocultures"
+          site: "Brandstorp, southern Sweden"
+        V15:
+          name: CO2_BrandSS_20
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Brandstorp, southern Sweden, incubated at 20 degrees"
+          temperature: 20
+          landUse: "Scots pine monocultures"
+          site: "Brandstorp, southern Sweden"
+        V16:
+          name: CO2_BrandSS_25
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Brandstorp, southern Sweden, incubated at 25 degrees"
+          temperature: 25
+          landUse: "Scots pine monocultures"
+          site: "Brandstorp, southern Sweden"
+        V17:
+          name: CO2_CzerNP_5
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Czerlonka, north-eastern Poland, incubated at 5 degrees"
+          temperature: 5
+          landUse: "Scots pine monocultures"
+          site: "Czerlonka, north-eastern Poland"
+        V18:
+          name: CO2_CzerNP_10
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Czerlonka, north-eastern Poland, incubated at 10 degrees"
+          temperature: 10
+          landUse: "Scots pine monocultures"
+          site: "Czerlonka, north-eastern Poland"
+        V19:
+          name: CO2_CzerNP_15
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Czerlonka, north-eastern Poland, incubated at 15 degrees"
+          temperature: 15
+          landUse: "Scots pine monocultures"
+          site: "Czerlonka, north-eastern Poland"
+        V20:
+          name: CO2_CzerNP_20
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Czerlonka, north-eastern Poland, incubated at 20 degrees"
+          temperature: 20
+          landUse: "Scots pine monocultures"
+          site: "Czerlonka, north-eastern Poland"
+        V21:
+          name: CO2_CzerNP_25
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Czerlonka, north-eastern Poland, incubated at 25 degrees"
+          temperature: 25
+          landUse: "Scots pine monocultures"
+          site: "Czerlonka, north-eastern Poland"
+        V22:
+          name: CO2_OloWP_5
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Otobok, western Poland, incubated at 5 degrees"
+          temperature: 5
+          landUse: "Scots pine monocultures"
+          site: "Otobok, western Poland"
+        V23:
+          name: CO2_OloWP_10
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Otobok, western Poland, incubated at 10 degrees"
+          temperature: 10
+          landUse: "Scots pine monocultures"
+          site: "Otobok, western Poland"
+        V24:
+          name: CO2_OloWP_15
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Otobok, western Poland, incubated at 15 degrees"
+          temperature: 15
+          landUse: "Scots pine monocultures"
+          site: "Otobok, western Poland"
+        V25:
+          name: CO2_OloWP_20
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Otobok, western Poland, incubated at 20 degrees"
+          temperature: 20
+          landUse: "Scots pine monocultures"
+          site: "Otobok, western Poland"
+        V26:
+          name: CO2_OloWP_25
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Otobok, western Poland, incubated at 25 degrees"
+          temperature: 25
+          landUse: "Scots pine monocultures"
+          site: "Otobok, western Poland"
+        V27:
+          name: CO2_LaViSF_5
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from LaViale, southern France, incubated at 5 degrees"
+          temperature: 5
+          landUse: "Scots pine monocultures"
+          site: "LaViale, southern France"
+        V28:
+          name: CO2_LaViSF_10
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from LaViale, southern France, incubated at 10 degrees"
+          temperature: 10
+          landUse: "Scots pine monocultures"
+          site: "LaViale, southern France"
+        V29:
+          name: CO2_LaViSF_15
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from LaViale, southern France, incubated at 15 degrees"
+          temperature: 15
+          landUse: "Scots pine monocultures"
+          site: "LaViale, southern France"
+        V30:
+          name: CO2_LaViSF_20
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from LaViale, southern France, incubated at 20 degrees"
+          temperature: 20
+          landUse: "Scots pine monocultures"
+          site: "LaViale, southern France"
+        V31:
+          name: CO2_LaViSF_25
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from LaViale, southern France, incubated at 25 degrees"
+          temperature: 25
+          landUse: "Scots pine monocultures"
+          site: "LaViale, southern France"
+        V32:
+          name: CO2_BiesNS_5
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Biescas, northern Spain, incubated at 5 degrees"
+          temperature: 5
+          landUse: "Scots pine monocultures"
+          site: "Biescas, northern Spain"
+        V33:
+          name: CO2_BiesNS_10
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Biescas, northern Spain, incubated at 10 degrees"
+          temperature: 10
+          landUse: "Scots pine monocultures"
+          site: "Biescas, northern Spain"
+        V34:
+          name: CO2_BiesNS_15
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Biescas, northern Spain, incubated at 15 degrees"
+          temperature: 15
+          landUse: "Scots pine monocultures"
+          site: "Biescas, northern Spain"
+        V35:
+          name: CO2_BiesNS_20
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Biescas, northern Spain, incubated at 20 degrees"
+          temperature: 20
+          landUse: "Scots pine monocultures"
+          site: "Biescas, northern Spain"
+        V36:
+          name: CO2_BiesNS_25
+          units: "Soil respiration rate (mMols CO2 / d)"
+          desc: "Dynamics of the respiration rates of humus samples originating from Biescas, northern Spain, incubated at 25 degrees"
+          temperature: 25
+          landUse: "Scots pine monocultures"
+          site: "Biescas, northern Spain"

@@ -2,7 +2,7 @@
 title: "Summary of entries in the Soil Incubation Database"
 author: "Carlos A. Sierra and Heidi Völkel"
 date: '`r format(Sys.time(), "%d %B, %Y")`'
-output: html_document
+output: pdf_document
 ---
 
 ```{r, echo=FALSE}

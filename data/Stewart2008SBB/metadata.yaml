@@ -1,0 +1,158 @@
+citationKey: Stewart2008SBB
+doi: 10.1016/j.soilbio.2008.02.014
+entryAuthor: Maddie Tilyou
+entryCreationDate: 2016-10-4
+
+siteInfo:
+        studySite:
+          - "Sioux City, IA (IA)"
+          - "Kellog Biological Station, MI (MI)"
+          - "Saginaw, MI (MIS)"
+          - "Lamberton, MN (MN)"
+          - "Mead, NE (NE)"
+          - "Wauseon, OH (OH)"
+          - "Melfort, Sk (SK)"
+        climate:
+          MAT:
+            - 10.6
+            - 9.7
+            - 8.5
+            - 8.9
+            - 6.2
+            - 9.7
+            - 0.8
+          MAP:
+            - 541
+            - 890
+            - 788
+            - 660
+            - 632
+            - 887
+            - 411
+        soilType:
+          - Oxyaquic Hapludalf
+          - Tyipc Hapludalf
+          - Aeric Haplaquept
+          - Mollic Udifluvent
+          - Aquic Haplustoll
+          - Typic Argiudoll
+          - Orthic Black Chernozem
+        coordinates:
+          latitude:
+            - 41.5
+            - 42.24
+            - 42.5
+            - 42.24
+            - 44.2
+            - 41.1
+            - 52.52
+          longitude:
+            - -84.1
+            - -85.24
+            - -85.5
+            - -96.23
+            - -95.2
+            - -96.2
+            - -104.36
+
+incubationInfo:
+        treatments:
+            desc:
+            horizon:
+              - A
+              - C
+            temperature:
+              - 25
+        incubationTime:
+            time: 544
+            units: days
+        replicates:
+
+variables:
+       V1:
+        name: time
+        units: days
+       V2:
+        name: Cumresp_A_IA
+        desc: cumulative respiration of horizon A from Sioux City
+        horizon: A
+        site: Sioux City
+        units: "mg CO$_2$ g^{-1} soil"
+       V3:
+        name: Cumresp_A_KBS
+        desc: cumulative respiration of horizon A from Kellog Biological Station
+        horizon: A
+        site: Kellog Biological Station
+        units: "mg CO$_2$ g^{-1} soil"
+       V4:
+        name: Cumresp_A_MIS
+        desc: cumulative respiration of horizon A from Saginaw
+        horizon: A
+        site: Saginaw
+        units: "mg CO$_2$ g^{-1} soil"
+       V5:
+        name: Cumresp_A_MN
+        desc: cumulative respiration of horizon A from Lamberton
+        horizon: A
+        site: Lamberton
+        units: "mg CO$_2$ g^{-1} soil"
+       V6:
+        name: Cumresp_A_NE
+        desc: cumulative respiration of horizon A from Mead
+        horizon: A
+        site: Mead
+        units: "mg CO$_2$ g^{-1} soil"
+       V7:
+        name: Cumresp_A_OH
+        desc: cumulative respiration of horizon A from Wauseon
+        horizon: A
+        site: Wauseon
+        units: "mg CO$_2$ g^{-1} soil"
+       V8:
+        name: Cumresp_A_SK
+        desc: cumulative respiration of horizon A from Melfort
+        horizon: A
+        site: Melfort
+        units: "mg CO$_2$ g^{-1} soil"
+       V9:
+        name: Cumresp_C_IA
+        desc: cumulative respiration of horizon B from Sioux City
+        horizon: B
+        site: Sioux City
+        units: "mg CO$_2$ g^{-1} soil"
+       V10:
+        name: Cumresp_C_KBS
+        desc: cumulative respiration of horizon B from Kellog Biological Station
+        horizon: B
+        site: Kellog Biological Station
+        units: "mg CO$_2$ g^{-1} soil"
+       V11:
+        name: Cumresp_C_MIS
+        desc: cumulative respiration of horizon B from Saginaw
+        horizon: B
+        site: Saginaw
+        units: "mg CO$_2$ g^{-1} soil"
+       V12:
+        name: Cumresp_C_MN
+        desc: cumulative respiration of horizon B from Lamberton
+        horizon: B
+        site: Lamberton
+        units: "mg CO$_2$ g^{-1} soil"
+       V13:
+        name: Cumresp_C_NE
+        desc: cumulative respiration of horizon B from Mead
+        horizon: B
+        site: Mead
+        units: "mg CO$_2$ g^{-1} soil"
+       V14:
+        name: Cumresp_C_OH
+        desc: cumulative respiration of horizon B from Wauseon
+        horizon: B
+        site: Wauseon
+        units: "mg CO$_2$ g^{-1} soil"
+       V15:
+        name: Cumresp_C_SK
+        desc: cumulative respiration of horizon B from Melfort
+        horizon: B
+        site: Melfort
+        units: "mg CO$_2$ g^{-1} soil"

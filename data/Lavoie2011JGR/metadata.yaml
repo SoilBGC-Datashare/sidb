@@ -1,0 +1,162 @@
+citationKey: Lavoie2011JGR
+doi: 10.1029/2010JG001629
+entryAuthor: Maddie Tilyou
+entryCreationDate: 2016-10-13
+
+siteInfo:
+        studySite:
+          - interior alaska
+          - northen alaska
+        ecosystemType:
+          - boreal forest
+          - tundra
+        coordinates:
+          latitude:
+            - 63.91
+            - 68.63
+          longitude:
+            - -145.73
+            - -149.71
+incubationInfo:
+        soil:
+          - tundra moist acidic organic "TAO"
+          - tundra moist acidic mineral  "TAM"
+          - tundra moist nonacidic organic "TNAO"
+          - tundra moist nonacidic mineral "TNAM"
+          - boreal forest unburned organic "BFUO"
+          - boreal forest unburned mineral "BFUM"
+          - boreal forest burned mineral "BFM"
+          carbon:
+            mean:
+              - 41.07
+              - 5.77
+              - 38.15
+              - 3.49
+              - 40.16
+              - 2.93
+              - 2.92
+            standardDeviation:
+              - 0.48
+              - 1.18
+              - 2.18
+              - 0.65
+              - 0.28
+              - 0.08
+              - 0.28
+            units: percent
+        nitrogen:
+            mean:
+              - 0.95
+              - 0.29
+              - 1.33
+              - 0.23
+              - 1.20
+              - 0.13
+              - 0.15
+            standardDeviation:
+              - 0.12
+              - 0.07
+              - 0.8
+              - 0.04
+              - 0.25
+              - 0.02
+              - 0.01
+            units: percent
+        treatments:
+            desc: " a 924 day incubation of soils at temperatire 5 degrees celcius and 15 degrees celcius and two nitrogen treatments (with and without)"
+            temperature:
+              - 5
+              - 15
+        incubationTime:
+            time: 924
+            units: days
+        replicates: 3
+
+variables:
+       V1:
+        name: time
+        units: days
+       V2:
+        name: TAO_5
+        desc: "Cumulative respiration moist acidic organic tundra 5 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: moist acidic organic tundra
+        temperature: 5
+       V3:
+        name: TAO_15
+        desc: "Cumulative respiration moist acidic organic tundra 15 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: moist acidic organic tundra
+        temperature: 15
+       V4:
+        name: TAM_5
+        desc: "Cumulative respiration moist acidic mineral tundra 5 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: moist acidic mineral tundra
+        temperature: 5
+       V5:
+        name: TAM_15
+        desc: "Cumulative respiration moist acidic mineral tundra 15 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: moist acidic mineral tundra
+        temperature: 15
+       V6:
+        name: TNAO_5
+        desc: "Cumulative respiration moist nonacidic organic tundra 5 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: moist nonacidic organic tundra
+        temperature: 5
+       V7:
+        name: TNAO_15
+        desc: "Cumulative respiration moist nonacidic organic tundra 15 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: moist nonacidic organic tundra
+        temperature: 15
+       V8:
+        name: TNAM_5
+        desc: "Cumulative respiration moist nonacidic mineral tundra 5 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: moist nonacidic mineral tundra
+        temperature: 5
+       V9:
+        name: TNAM_15
+        desc: "Cumulative respiration moist nonacidic mineral tundra 15 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: moist nonacidic mineral tundra
+        temperature: 15
+       V10:
+        name: BFUO_5
+        desc: "Cumulative respiration unburned organic boreal forest 5 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: unburned organic boreal forest
+        temperature: 5
+       V11:
+        name: BFUO_15
+        desc: "Cumulative respiration unburned organic boreal forest 15 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: unburned organic boreal forest
+        temperature: 15
+       V12:
+        name: BFUM_5
+        desc: "Cumulative respiration unburned mineral boreal forest 5 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: unburned mineral boreal forest
+        temperature: 5
+       V13:
+        name: BFUM_15
+        desc: "Cumulative respiration unburned mineral boreal forest 15 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: unburned mineral boreal forest
+        temperature: 15
+       V14:
+        name: BFM_5
+        desc: "Cumulative respiration burned mineral boreal forest 5 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: burned mineral boreal forest
+        temperature: 5
+       V15:
+        name: BFM_15
+        desc: "Cumulative respiration burned mineral boreal forest 15 degrees"
+        units: "mg CO$_2$ g^{-1} soil"
+        site: burned mineral boreal forest
+        temperature: 15

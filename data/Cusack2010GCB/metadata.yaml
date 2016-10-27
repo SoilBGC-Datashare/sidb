@@ -5,31 +5,31 @@ entryCreationDate: 2016-06-21
 
 siteInfo:
         studySite: Luquillo Experimental Forest (LEF)
-          -lower (L)
-          -upper (U)
+          - lower (L)
+          - upper (U)
         country: USA
         ecosystemType:
           - wet tropical rainforest
           - lower montane forest
         MAP:
-          -3537
-          -4300
+          - 3537
+          - 4300
         MAT:
-          -23
-          -21
+          - 23
+          - 21
         soilType:
-          -"Utisol with higher background N concentration than upper level soil"
-          -"Utisol with less soil redox potential and poorer drainage and higher C, N, and P levels"
+          - "Utisol with higher background N concentration than upper level soil"
+          - "Utisol with less soil redox potential and poorer drainage and higher C, N, and P levels"
         vegitation:
           - Dacryodes excelsa
           - Cyrilla racemiflora, Micropholis chrysophylloides, Micropholis garciniifolia, Clusia krugiana
         canopy hiehgt:
-          -21
-          -10
+          - 21
+          - 10
         coordinates:
           latitude:
-            -18.30
-            -18.30
+            - 18.30
+            - 18.30
           longitude:
             - -65.80
             - -65.80

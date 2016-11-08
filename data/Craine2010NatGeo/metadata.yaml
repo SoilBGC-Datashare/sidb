@@ -1,0 +1,536 @@
+citationKey: Craine2010NatGeo
+doi: 10.1038/NGEO1009
+entryAuthor: Maddie Tilyou
+entryCreationDate: 2016-07-25
+
+siteInfo:
+    studySite:
+      - "HJ Andrew (AND)"
+      - "American Prairie (AP)"
+      - "Toolik (ARC)"
+      - "Baltimore Ecosystem Study (BES)"
+      - "Bonanza Creek (BNZ)"
+      - "Cedar Creek, (CDR)"
+      - "Florida Coastal Everglades (FCE)"
+      - "Harvard Forest (HFR)"
+      - "Jorndada Basin (JRN)"
+      - "Kellog Biological Station (KBS)"
+      - "Olympic National Park (OLY)"
+      - "Sedgwick (SDG)"
+      - "Walker Branch (WB)"
+      - "Wind River (WR)"
+      - "Coweeta (COW)"
+      - "Georgia Coastal Ecosystems (GCE)"
+      - "Guanica (GUA)"
+      - "Itasca State Park (ITA)"
+      - "Konza Prarie (KNZ)"
+      - "Luquillo (LUQ)"
+      - "Niwot Range (NIW)"
+      - "San Joaquin Exper. Range (SJQ)"
+      - "Santa Rita Exper. Range (SRE)"
+      - "Hubbard Brook (HB)"
+      - "Jepson Prairie (JEP)"
+      - "Kankankee Sands (KAN)"
+      - "Ordway-Swisher (ORD)"
+      - "Short Grass Steppe (SGS)"
+    ecosystem type:
+    MAT:
+      - 7.8
+      - 6.2
+      - -10.3
+      - 13.6
+      - -3.7
+      - 5.9
+      - 23.6
+      - 8.1
+      - 14.5
+      - 9.2
+      - 5.0
+      - 13.7
+      - 13.1
+      - 7.7
+      - 11.1
+      - 19.4
+      - 24.2
+      - 3.0
+      - 12.5
+      - 25.7
+      - 3.9
+      - 14.9
+      - 19.1
+      - 5.5
+      - 15.7
+      - 9.9
+      - 20.5
+      - 7.9
+    MAP:
+      - 147.0
+      - 27.2
+      - 17.3
+      - 89.4
+      - 24.4
+      - 60.7
+      - 119.0
+      - 94.1
+      - 22.9
+      - 76.2
+      - 300.0
+      - 35.9
+      - 117.4
+      - 179.4
+      - 164.2
+      - 106.0
+      - 162.6
+      - 65.0
+      - 72.4
+      - 157.5
+      - 39.0
+      - 59.7
+      - 27.4
+      - 87.0
+      - 49.7
+      - 77.2
+      - 110.6
+      - 32.3
+    coordinates:
+      latitiude:
+        - 44.2
+        - 47.80
+        - 68.63
+        - 39.61
+        - 64.77
+        - 45.40
+        - 25.56
+        - 42.30
+        - 32.49
+        - 42.40
+        - 47.86
+        - 34.67
+        - 35.97
+        - 45.82
+        - 35.03
+        - 31.40
+        - 17.97
+        - 47.27
+        - 39.08
+        - 18.31
+        - 40.09
+        - 37.09
+        - 31.83
+        - 43.96
+        - 38.35
+        - 41.05
+        - 29.68
+        - 40.81
+      longitude:
+        - -122.20
+        - -107.95
+        - -149.60
+        - -76.74
+        - -148.27
+        - -93.20
+        - -80.39
+        - -72.10
+        - -106.78
+        - -85.40
+        - -124.04
+        - -120.00
+        - -84.28
+        - -121.95
+        - -83.43
+        - -81.20
+        - -65.50
+        - -95.33
+        - -96.57
+        - -65.76
+        - -105.66
+        - -119.7
+        - -110.85
+        - -71.72
+        - -121.82
+        - -87.46
+        - -82.00
+        - -104.19
+    soilTypes: utisol
+    texture:
+      percentSand:
+        - 82.5
+        - 47.5
+        - 40
+        - 77.5
+        - 50
+        - 87.5
+        - 85
+        - 82.5
+        - 80
+        - 70
+        - 80
+        - 52.5
+        - 47.5
+        - 82.5
+        - 77.5
+        - 95
+        - 65
+        - 75
+        - 42.5
+        - 37.5
+        - 60
+        - 82.5
+        - 80
+        - 77.5
+        - 45
+        - 57.5
+        - 95
+        - 65
+      percentClay:
+        - 2.5
+        - 27.5
+        - 25
+        - 7.5
+        - 7.5
+        - 2.5
+        - 5
+        - 5
+        - 7.5
+        - 2.5
+        - 5
+        - 22.5
+        - 15
+        - 7.5
+        - 12.5
+        - 2.5
+        - 15
+        - 7.5
+        - 17.5
+        - 20
+        - 15
+        - 5
+        - 5
+        - 7.5
+        - 15
+        - 10
+        - 2.5
+        - 12.5
+      percentSilt:
+        - 15
+        - 25
+        - 35
+        - 15
+        - 42.5
+        - 10
+        - 10
+        - 12.5
+        - 12.5
+        - 27.5
+        - 15
+        - 25
+        - 37.5
+        - 10
+        - 10
+        - 2.5
+        - 20
+        - 17.5
+        - 40
+        - 42.5
+        - 25
+        - 12.5
+        - 15
+        - 15
+        - 40
+        - 32.5
+        - 2.5
+        - 22.5
+    carbon:
+        - 42.1
+        - 22
+        - 22.9
+        - 84.9
+        - 28.9
+        - 9.9
+        - 1.8
+        - 35.2
+        - 65.1
+        - 26.8
+        - 65.1
+        - 26.8
+        - 37.8
+        - 32.7
+        - 59.1
+        - 29.9
+        - 68.6
+        - 59.3
+        - 42.8
+        - 29.1
+        - 41.4
+        - 10.7
+        - 2.8
+        - 61.8
+        - 13.9
+        - 14.5
+        - 6.2
+        - 9.1
+    nitrogen:
+        - 2
+        - 2.1
+        - 1.5
+        - 4
+        - 1.7
+        - 1.3
+        - 0.7
+        - 3.7
+        - "n/a"
+        - 2.8
+        - 2.8
+        - 2.5
+        - 1.9
+        - 1.6
+        - 1.6
+        - 1.4
+        - 6.9
+        - 4.7
+        - 3.5
+        - 2.3
+        - 1.4
+        - 0.7
+        - 0.1
+        - 3.8
+        - 1
+        - 1.1
+        - 0.4
+        - 0.8
+incubationInfo:
+  treatments:
+    temperature:
+      - 20
+    moisture:
+      - 35 percent
+    incubationTime:
+      time: 360
+      units: days
+    replicates: 5
+variables:
+       V1:
+        name: Time_AND
+        units: days
+       V2:
+        name: Cumresp_AND
+        desc: cumulative respiration of HJ andrews
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "HJ Andrew"
+       V3:
+        name: Time_AP
+        units: days
+       V4:
+        name: Cumresp_AP
+        desc: cumulative respiration of American Prarie
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "American Prarie"
+       V5:
+        name: Time_ARC
+        units: days
+       V6:
+        name: Cumresp_ARC
+        desc: cumulative respiration of Toolik
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Toolik"
+       V7:
+        name: Time_BES
+        units: days
+       V8:
+        name: Cumresp_BES
+        desc: cumulative respiration of Baltimore Ecosystem Study
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Baltimore Ecosystem Study"
+       V9:
+        name: Time_BNZ
+        units: days
+       V10:
+        name: Cumresp_BNZ
+        desc: cumulative respiration of Bonaza Creek
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Bonaza Creek"
+       V11:
+        name: Time_CDR
+        units: days
+       V12:
+        name: Cumresp_CDR
+        desc: cumulative respiration of Cedar Creek
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Cedar Creek"
+       V13:
+        name: Time_FCE
+        units: days
+       V14:
+        name: Cumresp_FCE
+        desc: cumulative respiration of Florida Coastal Everglades
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Florida Coastal Everglades"
+       V15:
+        name: Time_HFR
+        units: days
+       V16:
+        name: Cumresp_HFR
+        desc: cumulative respiration of Harvard Forest
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Harvard Forest"
+       V17:
+        name: Time_JRN
+        units: days
+       V18:
+        name: Cumresp_JRN
+        desc: cumulative respiration of Jornada Basin
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Jornada Basin"
+       V19:
+        name: Time_KBS
+        units: days
+       V20:
+        name: Cumresp_KBS
+        desc: cumulative respiration of Kellog Biological Station
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Kellog Biological Station
+       V21:
+        name: Time_OLY
+        units: days
+       V22:
+        name: Cumresp_OLY
+        desc: cumulative respiration of Olympic National Park
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Olympic National Park"
+       V23:
+        name: Time_SDG
+        units: days
+       V24:
+        name: Cumresp_SDG
+        desc: cumulative respiration of Sedgwick
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Sedgwick"
+       V25:
+        name: Time_WB
+        units: days
+       V26:
+        name: Cumresp_WB
+        desc: cumulative respiration of Walker Branch
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Walker Branch"
+       V27:
+        name: Time_WR
+        units: days
+       V28:
+        name: Cumresp_WR
+        desc: cumulative respiration of Wind River
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Wind River"
+       V29:
+        name: Time_COW
+        units: days
+       V30:
+        name: Cumresp_COW
+        desc: cumulative respiration of Coweeta
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Coweeta"
+       V31:
+        name: Time_GCE
+        units: days
+       V32:
+        name: Cumresp_GCE
+        desc: cumulative respiration of Georgia Coastal Ecosystem
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Georgia Coastal Ecosystem"
+       V33:
+        name: Time_GUA
+        units: days
+       V34:
+        name: Cumresp_GUA
+        desc: cumulative respiration of Guanica
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Guanica"
+       V35:
+        name: Time_ITA
+        units: days
+       V36:
+        name: Cumresp_ITA
+        desc: cumulative respiration of Itasca State Park
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Itasca State Park"
+       V37:
+        name: Time_KNZ
+        units: days
+       V38:
+        name: Cumresp_KNZ
+        desc: cumulative respiration of Konza Prarie
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Konza Prarie"
+       V39:
+        name: Time_LUQ
+        units: days
+       V40:
+        name: Cumresp_LUQ
+        desc: cumulative respiration of Luquillo
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Luquillo"
+       V41:
+        name: Time_NIW
+        units: days
+       V42:
+        name: Cumresp_NIW
+        desc: cumulative respiration of Niwot Range
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Niwot Range"
+       V43:
+        name: Time_SJQ
+        units: days
+       V44:
+        name: Cumresp_SJQ
+        desc: cumulative respiration of San Joaquin Exper. Range
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "San Joaquin Exper. Range"
+       V45:
+        name: Time_SRE
+        units: days
+       V46:
+        name: Cumresp_SRE
+        desc: cumulative respiration of Santa Rita Exper. Range
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Santa Rita Exper. Range"
+       V47:
+        name: Time_HB
+        units: days
+       V48:
+        name: Cumresp_HB
+        desc: cumulative respiration of Hubbard Brook
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Hubbard Brook"
+       V49:
+        name: Time_JEP
+        units: days
+       V50:
+        name: Cumresp_JEP
+        desc: cumulative respiration of Jepson Prairie
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Jepson Prairie"
+       V51:
+        name: Time_KAN
+        units: days
+       V52:
+        name: Cumresp_KAN
+        desc: cumulative respiration of Kankankee Sands
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Kankankee Sands"
+       V53:
+        name: Time_ORD
+        units: days
+       V54:
+        name: Cumresp_ORD
+        desc: cumulative respiration of Ordway-Swisher
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Ordway-Swisher"
+       V55:
+        name: Time_SGS
+        units: days
+       V56:
+        name: Cumresp_SGS
+        desc: cumulative respiration of Short Grass Steppe
+        units: "mg CO$_2$ g^{-1} soil"
+        site: "Short Grass Steppe"
+       

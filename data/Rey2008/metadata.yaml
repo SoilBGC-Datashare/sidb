@@ -1,7 +1,7 @@
-citationKey: ReyJarvis2006
-doi: 10.1111/j.1365-2486.2006.01230.x
+citationKey: Rey2008
+doi: 10.1111/j.1365-2389.2008.01065.x
 entryAuthor: Heidi Voelkel
-entryCreationDate: 2016-10-27
+entryCreationDate: 2016-11-29
 siteInfo:
        studySites:
          - "Hainich"
@@ -38,10 +38,10 @@ siteInfo:
          - 820
          - 950
          - 1000
-         - 986
+         - 786
        soilTypes:
          - "Cambisol"
-         - .na.real
+         - "Humic anfisol"
          - "Gleyic luvisol"
          - "Luvisol"
          - "Dystric cambisol"
@@ -77,10 +77,11 @@ siteInfo:
              - 11.4575
              - 5.743889
 incubationInfo:
-       desc: "three laboratory replicates were incubated at 4, 10, 20 and 30deg for ca. 270 d."
+       desc: "three laboratory replicates of broadleaf (a) and conifer (b) forest samples were incubated at 3 different depth levels (0-5, 5-10, 10-20 cm) for ca. 270 d."
        treatments:
-          - temperature
+          - soilDepth
           - site
+          - forest
        incubationTime:
           time: 270
           units: days
@@ -90,194 +91,170 @@ variables:
           name: time
           units: days
         V2:
-          name: CMin_Hain_4
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Hainich soil measured at 4 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 4
+          name: CMin_Hain_0-5
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 0–5 cm layer of the Hainich soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 0-5
           site: "Hainich"
+          forest: a
         V3:
-          name: CMin_Hain_10
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Hainich soil measured at 10 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 10
+          name: CMin_Hain_5-10
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 5-10 cm layer of the Hainich soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 5-10
           site: "Hainich"
+          forest: a
         V4:
-          name: CMin_Hain_20
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Hainich soil measured at 20 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 20
+          name: CMin_Hain_10-20
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 10-20 cm layer of the Hainich soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 10-20
           site: "Hainich"
+          forest: a
         V5:
-          name: CMin_Hain_30
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Hainich soil measured at 30 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 30
-          site: "Hainich"
+          name: CMin_Coll_0-5
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 0-5 cm layer of the Collelongo soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 0-5
+          site: "Collelongo"
+          forest: a
         V6:
-          name: CMin_Coll_4
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Collelongo soil measured at 4 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 4
+          name: CMin_Coll_5-10
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 5-10 cm layer of the Collelongo soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 5-10
           site: "Collelongo"
+          forest: a
         V7:
-          name: CMin_Coll_10
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Collelongo soil measured at 10 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 10
+          name: CMin_Coll_10-20
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 10-20 cm layer of the Collelongo soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 10-20
           site: "Collelongo"
+          forest: a
         V8:
-          name: CMin_Coll_20
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Collelongo soil measured at 20 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 20
-          site: "Collelongo"
+          name: CMin_Hess_0-5
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 0-5 cm layer of the Hesse soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 0-5
+          site: "Hesse"
+          forest: a
         V9:
-          name: CMin_Coll_30
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Collelongo soil measured at 30 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 30
-          site: "Collelongo"
+          name: CMin_Hess_5-10
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 5-10 cm layer of the Hesse soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 5-10
+          site: "Hesse"
+          forest: a
         V10:
-          name: CMin_Hess_4
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Hesse soil measured at 4 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 4
+          name: CMin_Hess_10-20
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 10-20 cm layer of the Hesse soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 10-20
           site: "Hesse"
+          forest: a
         V11:
-          name: CMin_Hess_10
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Hesse soil measured at 10 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 10
-          site: "Hesse"
+          name: CMin_Rocc_0-5
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 0-5 cm layer of the Roccarespampani soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 0-5
+          site: "Roccarespampani"
+          forest: a
         V12:
-          name: CMin_Hess_20
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Hesse soil measured at 20 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 20
-          site: "Hesse"
+          name: CMin_Rocc_5-10
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 5-10 cm layer of the Roccarespampani soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 5-10
+          site: "Roccarespampani"
+          forest: a
         V13:
-          name: CMin_Hess_30
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Hesse soil measured at 30 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 30
-          site: "Hesse"
+          name: CMin_Rocc_10-20
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 10-20 cm layer of the Roccarespampani soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 10-20
+          site: "Roccarespampani"
+          forest: a
         V14:
-          name: CMin_Rocc_4
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Roccarespampani soil measured at 4 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 4
-          site: "Roccarespampani"
+          name: CMin_Thar_0-5
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 0-5 cm layer of the Tharandt soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 0-5
+          site: "Tharandt"
+          forest: b
         V15:
-          name: CMin_Rocc_10
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Roccarespampani soil measured at 10 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 10
-          site: "Roccarespampani"
+          name: CMin_Thar_5-10
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 5-10 cm layer of the Tharandt soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 5-10
+          site: "Tharandt"
+          forest: b
         V16:
-          name: CMin_Rocc_20
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Roccarespampani soil measured at 20 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 20
-          site: "Roccarespampani"
+          name: CMin_Thar_10-20
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 10-20 cm layer of the Tharandt soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 10-20
+          site: "Tharandt"
+          forest: b
         V17:
-          name: CMin_Rocc_30
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Roccarespampani soil measured at 30 degrees over the incubation period (270 days) for the broadleaf forest soils"
-          temperature: 30
-          site: "Roccarespampani"
+          name: CMin_Harw_0-5
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 0-5 cm layer of the Harwood soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 0-5
+          site: "Harwood"
+          forest: b
         V18:
-          name: CMin_Thar_4
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Tharandt soil measured at 4 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 4
-          site: "Tharandt"
+          name: CMin_Harw_5-10
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 5-10 cm layer of the Harwood soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 5-10
+          site: "Harwood"
+          forest: b
         V19:
-          name: CMin_Thar_10
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Tharandt soil measured at 10 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 10
-          site: "Tharandt"
+          name: CMin_Harw_10-20
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 10-20 cm layer of the Harwood soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 10-20
+          site: "Harwood"
+          forest: b
         V20:
-          name: CMin_Thar_20
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Tharandt soil measured at 20 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 20
-          site: "Tharandt"
+          name: CMin_Wetz_0-5
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 0-5 cm layer of the Wetztsein soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 0-5
+          site: "Wetztsein"
+          forest: b
         V21:
-          name: CMin_Thar_30
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Tharandt soil measured at 30 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 30
-          site: "Tharandt"
+          name: CMin_Wetz_5-10
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 5-10 cm layer of the Wetztsein soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 5-10
+          site: "Wetztsein"
+          forest: b
         V22:
-          name: CMin_Harw_4
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Harwood soil measured at 4 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 4
-          site: "Harwood"
+          name: CMin_Wetz_10-20
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 10-20 cm layer of the Wetztsein soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 10-20
+          site: "Wetztsein"
+          forest: b
         V23:
-          name: CMin_Harw_10
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Harwood soil measured at 10 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 10
-          site: "Harwood"
+          name: CMin_Loob_0-5
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 0-5 cm layer of the Loobos soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 0-5
+          site: "Loobos"
+          forest: b
         V24:
-          name: CMin_Harw_20
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Harwood soil measured at 20 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 20
-          site: "Harwood"
+          name: CMin_Loob_5-10
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 5-10 cm layer of the Loobos soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 5-10
+          site: "Loobos"
+          forest: b
         V25:
-          name: CMin_Harw_30
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Harwood soil measured at 30 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 30
-          site: "Harwood"
-        V26:
-          name: CMin_Wetz_4
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Wetztsein soil measured at 4 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 4
-          site: "Wetztsein"
-        V27:
-          name: CMin_Wetz_10
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Wetztsein soil measured at 10 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 10
-          site: "Wetztsein"
-        V28:
-          name: CMin_Wetz_20
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Wetztsein soil measured at 20 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 20
-          site: "Wetztsein"
-        V29:
-          name: CMin_Wetz_30
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Wetztsein soil measured at 30 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 30
-          site: "Wetztsein"
-        V30:
-          name: CMin_Loo_4
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Loobos soil measured at 4 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 4
+          name: CMin_Loob_10-20
+          units: "mg CO2-C g^{-1} dry mass day ^{-1}"
+          desc: "Carbon mineralization rates at the 10-20 cm layer of the Loobos soil measured over the incubation period (270 days) for the broadleaf forest soils"
+          soilDepth: 10-20
           site: "Loobos"
-        V31:
-          name: CMin_Loo_10
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Loobos soil measured at 10 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 10
-          site: "Loobos"
-        V32:
-          name: CMin_Loo_20
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Loobos soil measured at 20 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 20
-          site: "Loobos"
-        V33:
-          name: CMin_Loo_20
-          units: "mg CO2-C g^{-1} initial C"
-          desc: "Cumulative carbon mineralization rates at the top 0–5 cm layer of the Loobos soil measured at 30 degrees over the incubation period (270 days) for the conifer forest soils"
-          temperature: 30
-          site: "Loobos"
+          forest: b

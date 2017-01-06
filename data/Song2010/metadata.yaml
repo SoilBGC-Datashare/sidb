@@ -1,0 +1,125 @@
+citationKey: Song2010
+doi: doi:10.1016/j.ejsobi.2010.09.003
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2017-01-06
+siteInfo:
+       studySites:
+         - "Haibei Alpine Meadow Ecosystem Experimental Station, Qinghai-Tibet Plateau, China"
+       elevation (m):
+         - 3240
+       MAT:
+         - -1.7
+       MAP:
+         - 618
+       soilTypes:
+         - "Gelic Cambisol"
+       vegetation:
+         - "perennial grass (Cyperaeae)"
+       coordinates:
+           latitude:
+             - 37.533333
+           longitude:
+             - 105.25
+incubationInfo:
+       desc: "five laboratory replicates were incubated at 5, 15, and 25 for 28 d. Two 2-way designs were performed (temperature x N and temperature x C)."
+       treatments:
+          - temperature
+          - external glucose inputs
+       incubationTime:
+          time: 28
+          units: days
+       replicates: 5
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name: CO2_Cr_5
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under control treatments incubated at 5deg"
+          temperature: 5
+          treatment: "control"
+        V3:
+          name: CO2_N1_5
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (N1= 0.005 mg N g^{-1} dry soil) incubated at 5deg"
+          temperature: 5
+          treatment: "N1= 0.005 mg N g^{-1} dry soil"
+        V4:
+          name: CO2_N2_5
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (N2= 0.025 mg N g^{-1} dry soil) incubated at 5deg"
+          temperature: 5
+          treatment: "N2= 0.025 mg N g^{-1} dry soil"
+        V5:
+          name: CO2_C1_5
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (C1= 2 mg C g^{-1} dry soil) incubated at 5deg"
+          temperature: 5
+          treatment: "C1= 2 mg C g^{-1} dry soil"
+        V6:
+          name: CO2_C2_5
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (C2= 10 mg C g^{-1} dry soil) incubated at 5deg"
+          temperature: 5
+          treatment: "C2= 10 mg C g^{-1} dry soil"
+        V7:
+          name: CO2_Cr_15
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under control treatments incubated at 15deg"
+          temperature: 15
+          treatment: "control"
+        V8:
+          name: CO2_N1_15
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (N1= 0.005 mg N g^{-1} dry soil) incubated at 15deg"
+          temperature: 15
+          treatment: "N1= 0.005 mg N g^{-1} dry soil"
+        V9:
+          name: CO2_N2_15
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (N2= 0.025 mg N g^{-1} dry soil) incubated at 15deg"
+          temperature: 15
+          treatment: "N2= 0.025 mg N g^{-1} dry soil"
+        V10:
+          name: CO2_C1_15
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (C1= 2 mg C g^{-1} dry soil) incubated at 15deg"
+          temperature: 15
+          treatment: "C1= 2 mg C g^{-1} dry soil"
+        V11:
+          name: CO2_C2_15
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (C2= 10 mg C g^{-1} dry soil) incubated at 15deg"
+          temperature: 15
+          treatment: "C2= 10 mg C g^{-1} dry soil"
+        V12:
+          name: CO2_Cr_25
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under control treatments incubated at 25deg"
+          temperature: 25
+          treatment: "control"
+        V13:
+          name: CO2_N1_25
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (N1= 0.005 mg N g^{-1} dry soil) incubated at 25deg"
+          temperature: 25
+          treatment: "N1= 0.005 mg N g^{-1} dry soil"
+        V14:
+          name: CO2_N2_25
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (N2= 0.025 mg N g^{-1} dry soil) incubated at 25deg"
+          temperature: 25
+          treatment: "N2= 0.025 mg N g^{-1} dry soil"
+        V15:
+          name: CO2_C1_25
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (C1= 2 mg C g^{-1} dry soil) incubated at 25deg"
+          temperature: 25
+          treatment: "C1= 2 mg C g^{-1} dry soil"
+        V16:
+          name: CO2_C2_25
+          units: "carbon mineralization rate: mg CO2 -C g^{-1} dry soil day^{-1}"
+          desc: "Carbon mineralization rates under external glucose inputs (C2= 10 mg C g^{-1} dry soil) incubated at 25deg"
+          temperature: 25
+          treatment: "C2= 10 mg C g^{-1} dry soil"

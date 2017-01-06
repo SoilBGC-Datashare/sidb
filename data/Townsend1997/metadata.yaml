@@ -1,0 +1,142 @@
+citationKey: Townsend1997
+doi: 10.1023/A:1017942918708
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2017-01-06
+siteInfo:
+  - "Mauna Kea volcano, Laupa-hoehoe Forest Reserve, Hawaii"
+       studySites:
+         - "Pasture 100 m"
+         - "Pasture 800 m"
+         - "Pasture 1700 m"
+         - "Forest 900 m"
+         - "Forest 1500 m"
+       elevation:
+         - 100
+         - 800
+         - 1700
+         - 900
+         - 1500
+       MAT:
+         - 21
+         - .na.real
+         - 12
+         - .na.real
+         - .na.real
+       MAP:
+         - 2500
+         - 2500
+         - 2500
+         - 2500
+         - 2500
+       soilTypes:
+         - "andisols"
+         - "andisols"
+       vegetation:
+         - Pennisetum clandestinum
+         - Pennisetum clandestinum
+         - Pennisetum clandestinum
+         - Metrosideros polymorpha
+         - Metrosideros polymorpha
+incubationInfo:
+       desc: "eight 10g laboratory replicates were incubated at 20, 30 and 40deg for ca. 225 d."
+       treatments:
+          - temperature
+          - site
+       incubationTime:
+          time: 225
+          units: days
+       replicates: 8
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name: CO2_Pas100_20
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 20deg"
+          temperature: 20
+          site: "Pasture100"
+        V3:
+          name: CO2_Pas100_30
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 30deg"
+          temperature: 30
+          site: "Pasture100"
+        V4:
+          name: CO2_Pas100_40
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 40deg"
+          temperature: 40
+          site: "Pasture100"
+        V5:
+          name: CO2_Pas800_20
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 20deg"
+          temperature: 20
+          site: "Pasture800"
+        V6:
+          name: CO2_Pas800_30
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 30deg"
+          temperature: 30
+          site: "Pasture800"
+        V7:
+          name: CO2_Pas800_40
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 40deg"
+          temperature: 40
+          site: "Pasture800"
+        V8:
+          name: CO2_Pas1700_20
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 20deg"
+          temperature: 20
+          site: "Pasture1700"
+        V9:
+          name: CO2_Pas1700_30
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 30deg"
+          temperature: 30
+          site: "Pasture1700"
+        V10:
+          name: CO2_Pas1700_40
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 40deg"
+          temperature: 40
+          site: "Pasture1700"
+        V11:
+          name: CO2_For900_20
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 20deg"
+          temperature: 20
+          site: "Forest900"
+        V12:
+          name: CO2_For900_30
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 30deg"
+          temperature: 30
+          site: "Forest900"
+        V13:
+          name: CO2_For900_40
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 40deg"
+          temperature: 40
+          site: "Forest900"
+        V14:
+          name: CO2_For1500_20
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 20deg"
+          temperature: 20
+          site: "Forest1500"
+        V15:
+          name: CO2_For1500_30
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 30deg"
+          temperature: 30
+          site: "Forest1500"
+        V16:
+          name: CO2_For1500_40
+          units: "Carbon respired: ugC/gsoil/day"
+          desc: "Respired carbon over time in ugC/g soil/day incubated at 40deg"
+          temperature: 40
+          site: "Forest1500"

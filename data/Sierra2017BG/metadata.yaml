@@ -1,0 +1,147 @@
+citationKey: Sierra2017BG
+doi: 10.5194/bg-2016-474 
+entryAuthor: Carlos A. Sierra
+entryCreationDate: 2017-01-24
+
+siteInfo:
+  studySite: "Caribou Poker Creeks Research Watershed"
+  ecosystem type: "Boreal forest"
+  climate: "Boreal"
+  meanAnnualTemperature: -3.5
+  meanAnnualPrecipitation: 400
+  coordinates:
+    latitudes:
+      - 65.155935 
+    longitudes:
+      - 147.491317
+incubationInfo:
+  desc: "Full factorial incubation experiment with the manipulated treatments being temperature (25, 35 C), soil water content (15, 30, 60 90% water-filled pore space), and oxygen concentration in the pore space (1 and 20%), with soils enclosed in PVC cylinders (10 cm diameter and 20 cm height) containing in about half of their volume 450 g of homogenized soil. The approximate bulk density within each cylinder was 0.6 g cm-3. Organic soil was collected from the A horizon of a boreal forest dominated by black spruce at the Caribou Poker watershed in central Alaska, USA"
+  treatments:
+    - temperature
+    - moisture
+    - oxygen
+  incubationTime:
+    time: 35
+    units: days
+  carbon:
+    mean: 46.9
+    standardDeviation: 0.1
+    units: mgC g$^{-1}$ soil
+    desc: "Carbon content in a subsample of soil"
+
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name: 25-15-20
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 15
+          oxygen: 20
+          units: (mg CO_2-C day^{-1})
+        V3:
+          name: 25-15-1
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 15
+          oxygen: 1
+          units: (mg CO_2-C day^{-1})
+        V4:
+          name: 25-30-20
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 30
+          oxygen: 20
+          units: (mg CO_2-C day^{-1})
+        V5:
+          name: 25-30-1
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 30
+          oxygen: 1
+          units: (mg CO_2-C day^{-1})
+        V6:
+          name: 25-60-20
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 60
+          oxygen: 20
+          units: (mg CO_2-C day^{-1})
+        V7:
+          name: 25-60-1
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 60
+          oxygen: 1
+          units: (mg CO_2-C day^{-1})
+        V8:
+          name: 25-90-20
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 90
+          oxygen: 20
+          units: (mg CO_2-C day^{-1})
+        V9:
+          name: 25-90-1
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 90
+          oxygen: 1
+          units: (mg CO_2-C day^{-1})
+        V10:
+          name: 35-15-20
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 15
+          oxygen: 20
+          units: (mg CO_2-C day^{-1})
+        V11:
+          name: 35-15-1
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 15
+          oxygen: 1
+          units: (mg CO_2-C day^{-1})
+        V12:
+          name: 35-30-20
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 30
+          oxygen: 20
+          units: (mg CO_2-C day^{-1})
+        V13:
+          name: 35-30-1
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 30
+          oxygen: 1
+          units: (mg CO_2-C day^{-1})
+        V14:
+          name: 35-60-20
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 60
+          oxygen: 20
+          units: (mg CO_2-C day^{-1})
+        V15:
+          name: 35-60-1
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 60
+          oxygen: 1
+          units: (mg CO_2-C day^{-1})
+        V16:
+          name: 35-90-20
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 90
+          oxygen: 20
+          units: (mg CO_2-C day^{-1})
+        V17:
+          name: 35-90-1
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 90
+          oxygen: 1
+          units: (mg CO_2-C day^{-1})

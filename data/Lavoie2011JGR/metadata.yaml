@@ -19,14 +19,14 @@ siteInfo:
             - -149.71
 incubationInfo:
         soil:
-          - tundra moist acidic organic "TAO"
-          - tundra moist acidic mineral  "TAM"
-          - tundra moist nonacidic organic "TNAO"
-          - tundra moist nonacidic mineral "TNAM"
-          - boreal forest unburned organic "BFUO"
-          - boreal forest unburned mineral "BFUM"
-          - boreal forest burned mineral "BFM"
-          carbon:
+          - "tundra moist acidic organic TAO"
+          - "tundra moist acidic mineral  TAM"
+          - "tundra moist nonacidic organic TNAO"
+          - "tundra moist nonacidic mineral TNAM"
+          - "boreal forest unburned organic BFUO"
+          - "boreal forest unburned mineral BFUM"
+          - "boreal forest burned mineral BFM"
+        carbon:
             mean:
               - 41.07
               - 5.77

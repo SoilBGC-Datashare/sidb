@@ -3,7 +3,8 @@ doi: 10.1016/S1001-0742(09)60217-5
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2017-01-10
 
-siteInfo: "Great Hing’an Mountains, Northeastern China"
+siteInfo:
+      descr:  "Great Hing’an Mountains, Northeastern China"
       studySite:
         - "Beijicun1"
         - "Beijicun2"
@@ -88,155 +89,155 @@ incubationInfo:
        replicates: 3
 variables:
        V1:
-          name: time
-          units: days
+         name: time
+         units: days
        V2:
          name: CO2_5_10-20_0
          units: "CO2 emission rate (mg/g)"
          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content"
          temperature: 5
          moistureContent: 0
-        V3:
-          name: CO2_5_10-20_30
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 30 percent water content"
-          temperature: 5
-          moistureContent: 30
-        V4:
-          name: CO2_5_10-20_60
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 60 percent water content"
-          temperature: 5
-          moistureContent: 60
-        V5:
-          name: CO2_5_10-20_100
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 100 percent water content"
-          temperature: 5
-          moistureContent: 100
-        V6:
-          name: CO2_5_10-20_CS
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees under completely water saturated conditions."
-          temperature: 5
-          moistureContent: CS
-        V7:
-          name: CO2_5_20-30_0
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 5 degrees with 0 percent water content."
-          temperature: 5
-          moistureContent: 0
-        V8:
-          name: CO2_5_20-30_30
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 5 degrees with 30 percent water content."
-          temperature: 5
-          moistureContent: 30
-        V9:
-          name: CO2_5_20-30_60
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 5 degrees with 60 percent water content."
-          temperature: 5
-          moistureContent: 60
-        V10:
-          name: CO2_5_20-30_100
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 5 degrees with 100 percent water content."
-          temperature: 5
-          moistureContent: 100
-        V11:
-          name: CO2_5_20-30_CS
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 5 degrees under completely water saturated conditions."
-          temperature: 5
-          moistureContent: CS
-        V12:
-          name: CO2_10_10-20_0
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 10 degrees with 0 percent water content."
-          temperature: 10
-          moistureContent: 0
-        V13:
-          name: CO2_10_10-20_30
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 10 degrees with 30 percent water content."
-          temperature: 10
-          moistureContent: 30
-        V14:
-          name: CO2_10_10-20_60
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 10 degrees with 60 percent water content."
-          temperature: 10
-          moistureContent: 60
-        V15:
-          name: CO2_10_10-20_100
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 10 degrees with 100 percent water content."
-          temperature: 10
-          moistureContent: 100
-        V16:
-          name: CO2_10_10-20_CS
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 10 degrees under completely water saturated conditions."
-          temperature: 10
-          moistureContent: CS
-        V17:
-          name: CO2_10_20-30_0
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 10 degrees with 0 percent water content."
-          temperature: 10
-          moistureContent: 0
-        V18:
-          name: CO2_10_20-30_30
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 10 degrees with 30 percent water content."
-          temperature: 10
-          moistureContent: 30
-        V19:
-          name: CO2_10_20-30_60
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 10 degrees with 60 percent water content."
-          temperature: 10
-          moistureContent: 60
-        V20:
-          name: CO2_10_20-30_100
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 10 degrees with 100 percent water content."
-          temperature: 10
-          moistureContent: 100
-        V21:
-          name: CO2_10_20-30_CS
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 10 degrees under completely water saturated conditions."
-          temperature: 10
-          moistureContent: CS
-        V22:
-          name: CO2_15_10-20_0
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 15 degrees with 0 percent water content."
-          temperature: 15
-          moistureContent: 0
-        V23:
-          name: CO2_15_10-20_30
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 15 degrees with 30 percent water content."
-          temperature: 15
-          moistureContent: 30
-        V24:
-          name: CO2_15_10-20_60
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 15 degrees with 60 percent water content."
-          temperature: 15
-          moistureContent: 60
-        V25:
-          name: CO2_15_10-20_100
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 15 degrees with 100 percent water content."
-          temperature: 15
-          moistureContent: 100
-        V26:
-          name: CO2_15_10-20_CS
-          units: "CO2 emission rate (mg/g)"
-          desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 15 degrees under completely water saturated conditions."
-          temperature: 15
-          moistureContent: CS
+       V3:
+         name: CO2_5_10-20_30
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 30 percent water content"
+         temperature: 5
+         moistureContent: 30
+       V4:
+         name: CO2_5_10-20_60
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 60 percent water content"
+         temperature: 5
+         moistureContent: 60
+       V5:
+         name: CO2_5_10-20_100
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 100 percent water content"
+         temperature: 5
+         moistureContent: 100
+       V6:
+         name: CO2_5_10-20_CS
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees under completely water saturated conditions."
+         temperature: 5
+         moistureContent: CS
+       V7:
+         name: CO2_5_20-30_0
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 5 degrees with 0 percent water content."
+         temperature: 5
+         moistureContent: 0
+       V8:
+         name: CO2_5_20-30_30
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 5 degrees with 30 percent water content."
+         temperature: 5
+         moistureContent: 30
+       V9:
+         name: CO2_5_20-30_60
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 5 degrees with 60 percent water content."
+         temperature: 5
+         moistureContent: 60
+       V10:
+         name: CO2_5_20-30_100
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 5 degrees with 100 percent water content."
+         temperature: 5
+         moistureContent: 100
+       V11:
+         name: CO2_5_20-30_CS
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 5 degrees under completely water saturated conditions."
+         temperature: 5
+         moistureContent: CS
+       V12:
+         name: CO2_10_10-20_0
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 10 degrees with 0 percent water content."
+         temperature: 10
+         moistureContent: 0
+       V13:
+         name: CO2_10_10-20_30
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 10 degrees with 30 percent water content."
+         temperature: 10
+         moistureContent: 30
+       V14:
+         name: CO2_10_10-20_60
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 10 degrees with 60 percent water content."
+         temperature: 10
+         moistureContent: 60
+       V15:
+         name: CO2_10_10-20_100
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 10 degrees with 100 percent water content."
+         temperature: 10
+         moistureContent: 100
+       V16:
+         name: CO2_10_10-20_CS
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 10 degrees under completely water saturated conditions."
+         temperature: 10
+         moistureContent: CS
+       V17:
+         name: CO2_10_20-30_0
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 10 degrees with 0 percent water content."
+         temperature: 10
+         moistureContent: 0
+       V18:
+         name: CO2_10_20-30_30
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 10 degrees with 30 percent water content."
+         temperature: 10
+         moistureContent: 30
+       V19:
+         name: CO2_10_20-30_60
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 10 degrees with 60 percent water content."
+         temperature: 10
+         moistureContent: 60
+       V20:
+         name: CO2_10_20-30_100
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 10 degrees with 100 percent water content."
+         temperature: 10
+         moistureContent: 100
+       V21:
+         name: CO2_10_20-30_CS
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 20-30 cm) incubated at 10 degrees under completely water saturated conditions."
+         temperature: 10
+         moistureContent: CS
+       V22:
+         name: CO2_15_10-20_0
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 15 degrees with 0 percent water content."
+         temperature: 15
+         moistureContent: 0
+       V23:
+         name: CO2_15_10-20_30
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 15 degrees with 30 percent water content."
+         temperature: 15
+         moistureContent: 30
+       V24:
+         name: CO2_15_10-20_60
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 15 degrees with 60 percent water content."
+         temperature: 15
+         moistureContent: 60
+       V25:
+         name: CO2_15_10-20_100
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 15 degrees with 100 percent water content."
+         temperature: 15
+         moistureContent: 100
+       V26:
+         name: CO2_15_10-20_CS
+         units: "CO2 emission rate (mg/g)"
+         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 15 degrees under completely water saturated conditions."
+         temperature: 15
+         moistureContent: CS

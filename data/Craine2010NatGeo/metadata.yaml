@@ -33,7 +33,6 @@ siteInfo:
       - "Kankankee Sands (KAN)"
       - "Ordway-Swisher (ORD)"
       - "Short Grass Steppe (SGS)"
-    ecosystem type:
     MAT:
       - 7.8
       - 6.2
@@ -303,11 +302,11 @@ incubationInfo:
     temperature:
       - 20
     moisture:
-      - 35 percent
-    incubationTime:
-      time: 360
-      units: days
-    replicates: 5
+      - 35 
+  incubationTime:
+    time: 360
+    units: days
+  replicates: 5
 variables:
        V1:
         name: Time_AND
@@ -388,7 +387,7 @@ variables:
         name: Cumresp_KBS
         desc: cumulative respiration of Kellog Biological Station
         units: "mg CO$_2$ g^{-1} soil"
-        site: "Kellog Biological Station
+        site: "Kellog Biological Station"
        V21:
         name: Time_OLY
         units: days

@@ -1,0 +1,219 @@
+citationKey: WicklandNeff2008
+doi: 10.1007/s10533-007-9166-3
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2017-01-26
+siteInfo:
+       studySites:
+         - "Well drained site, Delta Junction, central Alaska"
+         - "Moderately well drained site, Delta Junction, central Alaska"
+         - "Poorly Drained site, Fairbanks, Alaska"
+       soilTypes:
+         - "inceptisol cryept"
+         - "gelisol orthel"
+         - "gelisol histel"
+       vegetation:
+         - "mature black spruce forest"
+         - "mature black spruce forest"
+         - "mature black spruce stand"
+       coordinates:
+           latitude:
+             - 63.883333
+             - 63.883333
+             - 64.7
+           longitude:
+             - -145.733333
+             - -145.733333
+             - -148.316667
+incubationInfo:
+       desc: "five laboratory replicates were incubated at five different moisture contents (2, 25, 50, 75, and 100 percent saturation) and two different temperatures (10 and 20 deg) in a full factorial design for 57 days."
+       treatments:
+          - temperature
+          - moisture content
+       incubationTime:
+          time: 57
+          units: days
+       replicates: 5
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name: C_WD_10_2
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 2 percent"
+          temperature: 10
+          moisture content: 2
+        V3:
+          name: C_WD_10_25
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 25 percent"
+          temperature: 10
+          moisture content: 25
+        V4:
+          name: C_WD_10_50
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 50 percent"
+          temperature: 10
+          moisture content: 50
+        V5:
+          name: C_WD_10_75
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 75 percent"
+          temperature: 10
+          moisture content: 75
+        V6:
+          name: C_WD_10_100
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 100 percent"
+          temperature: 10
+          moisture content: 100
+        V7:
+          name: C_WD_20_2
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 2 percent"
+          temperature: 20
+          moisture content: 2
+        V8:
+          name: C_WD_20_25
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 25 percent"
+          temperature: 20
+          moisture content: 25
+        V9:
+          name: C_WD_20_50
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 50 percent"
+          temperature: 20
+          moisture content: 50
+        V10:
+          name: C_WD_20_75
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 75 percent"
+          temperature: 20
+          moisture content: 75
+        V11:
+          name: C_WD_20_100
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 100 percent"
+          temperature: 20
+          moisture content: 100
+        V12:
+          name: C_MWD_10_2
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 2 percent"
+          temperature: 10
+          moisture content: 2
+        V13:
+          name: C_MWD_10_25
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 25 percent"
+          temperature: 10
+          moisture content: 25
+        V14:
+          name: C_MWD_10_50
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 50 percent"
+          temperature: 10
+          moisture content: 50
+        V15:
+          name: C_MWD_10_75
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 75 percent"
+          temperature: 10
+          moisture content: 75
+        V16:
+          name: C_MWD_10_100
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 100 percent"
+          temperature: 10
+          moisture content: 100
+        V17:
+          name: C_MWD_20_2
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 2 percent"
+          temperature: 20
+          moisture content: 2
+        V18:
+          name: C_MWD_20_25
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 25 percent"
+          temperature: 20
+          moisture content: 25
+        V19:
+          name: C_MWD_20_50
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 50 percent"
+          temperature: 20
+          moisture content: 50
+        V20:
+          name: C_MWD_20_75
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 75 percent"
+          temperature: 20
+          moisture content: 75
+        V21:
+          name: C_MWD_20_100
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 100 percent"
+          temperature: 20
+          moisture content: 100
+        V22:
+          name: C_PD_10_2
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 2 percent"
+          temperature: 10
+          moisture content: 2
+        V23:
+          name: C_PD_10_25
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 25 percent"
+          temperature: 10
+          moisture content: 25
+        V24:
+          name: C_PD_10_50
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 50 percent"
+          temperature: 10
+          moisture content: 50
+        V25:
+          name: C_PD_10_75
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 75 percent"
+          temperature: 10
+          moisture content: 75
+        V26:
+          name: C_PD_10_100
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 100 percent"
+          temperature: 10
+          moisture content: 100
+        V27:
+          name: C_PD_20_2
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 2 percent"
+          temperature: 20
+          moisture content: 2
+        V28:
+          name: C_PD_20_25
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 25 percent"
+          temperature: 20
+          moisture content: 25
+        V29:
+          name: C_PD_20_50
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 50 percent"
+          temperature: 20
+          moisture content: 50
+        V30:
+          name: C_PD_20_75
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 75 percent"
+          temperature: 20
+          moisture content: 75
+        V31:
+          name: C_PD_20_100
+          units: "Percent of initial C mineralized"
+          desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 100 percent"
+          temperature: 20
+          moisture content: 100   

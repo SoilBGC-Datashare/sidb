@@ -1,0 +1,96 @@
+citationKey: Winkler1996
+doi: 10.1016/0038-0717(96)00076-4
+entryAuthor: Heidi Voelkel
+entryCreationDate: 2017-01-30
+siteInfo:
+       studySites:
+         - "Duke forest: Durham, NC, USA"
+       soilTypes:
+         - "Helena series, Ultisol"
+       vegetation:
+         - "deciduous and coniferous forest, dominated by loblolly pine (Pinus taeda)"
+incubationInfo:
+       desc: "Ten A-, eight E-, and ten B-horizon samples were incubated at 4, 15 and 22deg for 120 d and at 38deg for 50 d."
+       treatments:
+          - temperature
+          - soil horizon
+       incubationTime:
+          time: 120
+          units: days
+          replicates: 10
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name: CO2_38_A
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for A-horizon soils at 38 degrees during the incubation."
+          temperature: 38
+          soilHorizon: A
+        V3:
+          name: CO2_38_B
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for B-horizon soils at 38 degrees during the incubation."
+          temperature: 38
+          soilHorizon: B
+        V4:
+          name: CO2_38_E
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for E-horizon soils at 38 degrees during the incubation."
+          temperature: 38
+          soilHorizon: E
+        V5:
+          name: CO2_22_A
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for A-horizon soils at 22 degrees during the incubation."
+          temperature: 22
+          soilHorizon: A
+        V6:
+          name: CO2_22_B
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for B-horizon soils at 22 degrees during the incubation."
+          temperature: 22
+          soilHorizon: B
+        V7:
+          name: CO2_22_E
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for E-horizon soils at 22 degrees during the incubation."
+          temperature: 22
+          soilHorizon: E
+        V8:
+          name: CO2_15_A
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for A-horizon soils at 15 degrees during the incubation."
+          temperature: 15
+          soilHorizon: A
+        V9:
+          name: CO2_15_B
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for B-horizon soils at 15 degrees during the incubation."
+          temperature: 15
+          soilHorizon: B
+        V10:
+          name: CO2_15_E
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for E-horizon soils at 15 degrees during the incubation."
+          temperature: 15
+          soilHorizon: E
+        V11:
+          name: CO2_4_A
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for A-horizon soils at 4 degrees during the incubation."
+          temperature: 4
+          soilHorizon: A
+        V12:
+          name: CO2_4_B
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for B-horizon soils at 4 degrees during the incubation."
+          temperature: 4
+          soilHorizon: B
+        V13:
+          name: CO2_4_E
+          units: "CO2 Evolution: mmol g^{-1} d^{-1}"
+          desc: "Mean rate of CO2 evolution for E-horizon soils at 4 degrees during the incubation."
+          temperature: 4
+          soilHorizon: E

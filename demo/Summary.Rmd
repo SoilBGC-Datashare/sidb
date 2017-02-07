@@ -1,8 +1,8 @@
 ---
 title: "Summary of entries in the Soil Incubation Database"
-author: "Carlos A. Sierra and Heidi Völkel"
+author: "Carlos A. Sierra and Heidi V\u00f6lkel"
 date: '`r format(Sys.time(), "%d %B, %Y")`'
-output: html_document
+output: pdf_document
 ---
 
 ```{r, echo=FALSE}
@@ -22,7 +22,7 @@ for(i in 1:length(entryNames)){
 
 ## Database summary and statistics
 
-This file contains a summary of the data currently available in the soil incubation database **sidb**. Currently, the number of entries in the database is `r length(entryNames)`. Most entries have multiple time-series of CO<sub>2</sub> flux release from incubation experiments. The current total number of time-series  is `r sum(nCols)`, and the total number of datapoints is `r sum(dataPoints)`.
+This file contains a summary of the data currently available in the soil incubation database **sidb**. Currently, the number of entries in the database is `r length(entryNames)`. Most entries have multiple time-series of CO~2~ flux release from incubation experiments. The current total number of time-series  is `r sum(nCols)`, and the total number of datapoints is `r sum(dataPoints)`.
 The last entry was added on `r max(entryCreationDate)`.
 
 

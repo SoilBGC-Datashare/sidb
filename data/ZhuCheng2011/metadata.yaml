@@ -32,29 +32,23 @@ variables:
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a constant low soil temperature treatment on farm soil"
           temperature: constant low
           soilType: farm soil
-        V3:
+        V4:
           name: C_FS_VH
           units: "mg C g soil C^{-1} day^{-1}"
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a varying high soil temperature treatment on farm soil"
           temperature: varying high
           soilType: farm soil
-        V4:
+        V5:
           name: C_FS_VL
           units: "mg C g soil C^{-1} day^{-1}"
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a varying low soil temperature treatment on farm soil"
           temperature: varying low
           soilType: farm soil
-        V5:
+        V6:
           name: C_GS_CH
           units: "mg C g soil C^{-1} day^{-1}"
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a constant high soil temperature treatment on grassland soil"
           temperature: constant high
-          soilType: grassland soil
-        V6:
-          name: C_GS_CL
-          units: "mg C g soil C^{-1} day^{-1}"
-          desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a constant low soil temperature treatment on grassland soil"
-          temperature: constant low
           soilType: grassland soil
         V7:
           name: C_GS_CL
@@ -73,4 +67,4 @@ variables:
           units: "mg C g soil C^{-1} day^{-1}"
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a varying low soil temperature treatment on grassland soil"
           temperature: varying low
-          soilType: grassland soil      
+          soilType: grassland soil

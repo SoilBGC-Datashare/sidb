@@ -15,8 +15,10 @@ siteInfo:
       climate: temperate
       soilType: dark grey Luvisol
       coordinates:
-          latitude: 54.2
-          longitude: -114.1333
+          latitude:
+            - 54.2
+          longitude:
+            - -114.1333
 
 incubationInfo:
        desc: "Soils were incubated at three different temperatures: 7, 14, and 21 degrees celcius"

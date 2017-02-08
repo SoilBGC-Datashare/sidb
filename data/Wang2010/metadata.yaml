@@ -4,17 +4,18 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2017-01-10
 
 siteInfo:
+      desc: "Great Hing’an Mountains, Northeastern China"
       studySite:
-        - "Beijicun1, Great Hing’an Mountains, Northeastern China"
-        - "Beijicun2, Great Hing’an Mountains, Northeastern China"
-        - "Tuqiang1, Great Hing’an Mountains, Northeastern China"
-        - "Tuqiang2, Great Hing’an Mountains, Northeastern China"
-        - "Zhuanglin1, Great Hing’an Mountains, Northeastern China"
-        - "Zhuanglin2, Great Hing’an Mountains, Northeastern China"
-        - "Huzhong1, Great Hing’an Mountains, Northeastern China"
-        - "Huzhong2, Great Hing’an Mountains, Northeastern China"
-        - "Feihushan1, Great Hing’an Mountains, Northeastern China"
-        - "Feihushan2, Great Hing’an Mountains, Northeastern China"
+        - "Beijicun1"
+        - "Beijicun2"
+        - "Tuqiang1"
+        - "Tuqiang2"
+        - "Zhuanglin1"
+        - "Zhuanglin2"
+        - "Huzhong1"
+        - "Huzhong2"
+        - "Feihushan1"
+        - "Feihushan2"
       elevation (m):
         - 546
         - 546

@@ -38,7 +38,7 @@ Locations for which data are available are presented in the following map
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 library(maps)
 map('world', interior = FALSE)
-#points(longitude, latitude, pch=20, col=2)
+points(longitude, latitude, pch=20, col=2)
 ```
 
 A histogram of the incubation time for all entries can be obtained as 

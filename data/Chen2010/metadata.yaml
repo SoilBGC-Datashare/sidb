@@ -4,18 +4,27 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-07-25
 
 siteInfo:
-  studySite: "Six sites across China"
-  ecosystem type: "arable, grassland, meadow, forest, rainforest, evergreen broadleaved forest, broadleaved deciduous forest"
-  climate: "cool temperate, temperate, semi-arid, sub-tropical, tropical"
-  meanAnnualTemperature (degrees): 10.5
-  meanAnnualPrecipitation (mm): 1374.5
-  location:
+  studySite: 
     - "arable site; Agro-Ecological Experiment Station, Shanxi Province"
     - "semi-arid grassland; Xilinguole Steppe, Inner Mongolia Province"
     - "cool temperate meadow; Gahai-Zecha National Nature Reserve, Gansu Province"
     - "tropical rainforest; Jianfengling National Forest Park, Hainan Province"
     - "sub-tropical evergreen broadleaved forest; Wuyi mountain, Fujian Province"
     - "cool temperate broadleaved deciduous forest; Baekdu Mountain Forest Ecosystem Research Station, Jilin Province"
+  ecosystem type: 
+    - Arable
+    - Semi-arid grassland
+    - Temperate meadow 
+    - Deciduous forest 
+    - Evergreen forest
+    - Tropical rainforest
+  climate: 
+    - Temperate
+    - Semi-arid
+    - Cool temperate
+    - Tropical
+    - Sub-tropical
+    - Cool-temperate
   coordinates:
     latitudes:
       - 35.2
@@ -31,6 +40,7 @@ siteInfo:
       - 108.816667
       - 117.583333
       - 128.466667
+
 incubationInfo:
   desc: "fresh soil samples of 4 replicates - equivalent to 15g dry weight each, were incubated in 125ml jars under changing temperature. CO2 concentration in gas samples was measured using a gas chromatograph (Agilent 6890, Agilent Corp., USA) equipped with a FID detector. Temperature was continuously increased from the lowest to the highest with both intervals of 2 (0-30 deg) and 7 (0-35 deg) degrees"
   treatments:

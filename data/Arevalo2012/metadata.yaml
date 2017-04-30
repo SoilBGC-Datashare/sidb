@@ -5,15 +5,15 @@ entryCreationDate: 2016-04-27
 
 siteInfo:
       studySite: "Linaria parkland region of Alberta, Canada"
-      ecosystemType: cultivated
+      ecosystemType: Cropland
       landUse:
         - agriculture
         - plantation
         - grassland
         - native
         - aspen
-      climate: temperate
-      soilType: dark grey Luvisol
+      climate: Temperate
+      soilType: Dark grey Luvisol
       coordinates:
           latitude:
             - 54.2

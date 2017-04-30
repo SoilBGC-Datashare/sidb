@@ -48,3 +48,22 @@ for(i in 1:length(entryNames)){
   }
 }
 
+climate=NULL
+for(i in 1:length(entryNames)){
+  climate=c(climate,get(entryNames[i])$siteInfo$climate)
+}
+
+ecosystemType=NULL
+for(i in 1:length(entryNames)){
+  ecosystemType=c(ecosystemType,get(entryNames[i])$siteInfo$ecosystemType)
+}
+
+studySite=NULL
+for(i in 1:length(entryNames)){
+  studySite=c(studySite,get(entryNames[i])$siteInfo$studySite)
+}
+
+treatments=NULL
+for(i in 1:length(entryNames)){
+  treatments=c(treatments,get(entryNames[i])$incubationInfo$treatments)
+}

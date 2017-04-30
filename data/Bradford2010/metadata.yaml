@@ -5,38 +5,38 @@ entryCreationDate: 2016-07-11
 
 siteInfo:
     studySite:
-      sites:
         - "CoweetaLong-Term Ecological Research (LTER)"
         - "Harvard Forest (LTER)"
-      Coweeta:
-        ecosystemType: Forest
-        climate: temperate
-        location: "Coweeta Long-Term Ecological Research (LTER) site at high (CH) and low (CL) elevation"
-        soilType:
-          - "Coarse- to fine loamy"
-          - "Fine loamy Haplumbrepts, organic-poor (CL)"
-          - "Coarse loamy Haplumbrepts, organic-rich (CH)"
-      Harvard:
-        ecosystemType: Forest
-        climate: temperate
-        location: "Harvard Forest LTER site in control (HOC, HMC) and heated plots (HOH, HMH) from organic-rich (HOC, HOH) and organic-poor (HMC, HMH) horizons"
-        soilType:
-          - "Fine-loamy Dystrochrept (HMC)"
-          - "organic-poor (HMC, HMH)"
-          - "organic-rich (HOC, HOH)"
-        coordinates:
-          latitude:
+    ecosystemType: 
+        - Forest
+        - Forest
+    climate: 
+        - Temperate
+        - Temperate
+    location: 
+        - "Coweeta Long-Term Ecological Research (LTER) site at high (CH) and low (CL) elevation"
+        - "Harvard Forest LTER site in control (HOC, HMC) and heated plots (HOH, HMH) from organic-rich (HOC, HOH) and organic-poor (HMC, HMH) horizons"
+    soilType:
+        - "Coarse- to fine loamy"
+        - "Fine loamy Haplumbrepts, organic-poor (CL)"
+        - "Coarse loamy Haplumbrepts, organic-rich (CH)"
+        - "Fine-loamy Dystrochrept (HMC)"
+        - "organic-poor (HMC, HMH)"
+        - "organic-rich (HOC, HOH)"
+    coordinates:
+        latitude:
               - 35.016667
               - 35.033333
               - 42.5
-          longitude:
+        longitude:
               - -83.45
               - -83.433333
               - -72.166667
-          siteNames:
+        siteNames:
               - CH
               - CL
               - HMC  
+
 incubationInfo:
     desc: "Microbial biomass was measured using substrate-induced respiration. Values are expressed as raw respiration rates (mg C g soil^{-1} day^{-1})."
     treatments:

@@ -4,16 +4,18 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-04-27
 
 siteInfo:
-       studySite: central Piedmont region of North Carolina, USA
-       ecosystemType: forest
-       climate: temperate
+       studySite: Central Piedmont region of North Carolina, USA
+       ecosystemType: Forest
+       climate: Temperate
        soilType: Alfisol
-       texture: mixed clay mineralogy
+       texture: 
+          desc: Mixed clay mineralogy
        coordinates:
          latitude:
            - 36.6166667
          longitude:
            - -79.150
+
 incubationInfo:
        desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius as well as ambient and elevated CO2"
        treatments:

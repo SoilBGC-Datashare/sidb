@@ -1,16 +1,17 @@
 citationKey: Fang2005
-doi: 10.1038/nature03135
+doi: 10.1038/nature03138
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-19
 
 siteInfo:
     studySite: Scotland
-    ecosystemType: "middle-aged plantation of Sitka spruce"
+    ecosystemType: Sitka spruce plantation
     coordinates:
       latitudes:
          - 56.616667
       longitudes:
          - -3.8
+
 incubationInfo:
     desc: "Respired CO2 was measured with an infrared gas analyser in differential mode"
     treatments:

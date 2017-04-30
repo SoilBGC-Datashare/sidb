@@ -4,19 +4,8 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2017-01-10
 
 siteInfo:
-      desc: "Great Hing’an Mountains, Northeastern China"
-      studySite:
-        - "Beijicun1"
-        - "Beijicun2"
-        - "Tuqiang1"
-        - "Tuqiang2"
-        - "Zhuanglin1"
-        - "Zhuanglin2"
-        - "Huzhong1"
-        - "Huzhong2"
-        - "Feihushan1"
-        - "Feihushan2"
-      elevation (m):
+      studySite: "Great Hing’an Mountains, Northeastern China"
+      altitude:
         - 546
         - 546
         - 467
@@ -53,8 +42,8 @@ siteInfo:
         - "Permafrost"
       vegetation:
         - "Ledum palustre, Vaccinium uliginosum, Sphagnum spp., and Larix gmelini Rupr."
-      ecosystemType: peatland
-      climate: cold
+      ecosystemType: Peatland
+      climate: Cold
       coordinates:
           latitude:
             - 53.202222
@@ -78,6 +67,7 @@ siteInfo:
             - 123.042778
             - 122.955
             - 122.955
+
 incubationInfo:
        desc: "three laboratory replicates were incubated for 40 days at 5, 10, 15 and 20 degrees and under different moisture contents (0, 30, 60, 100 percent, CS- completely water saturated)."
        treatments:

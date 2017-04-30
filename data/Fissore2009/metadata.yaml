@@ -5,12 +5,12 @@ entryCreationDate: 2016-08-19
 
 siteInfo:
        studySites:
-         - "Colorado (Fraser Experimental Forest, Routt National Forest)"
-         - "Minnesota (Marcel and Cutfood Experimental Forest)"
-         - "Michigan (industrial lands, Technological University's Alberta Forestry Center)"
-         - "Kentucky (Daniel Boone National Forest, University of Kentucky Robinson Forest)"
-         - "South Carolina (Santee Experimental Forest, Francis Marion National Forest)"
-         - "Georgia (University of Georgia Agricultural Experiment Station)"
+         - "Fraser Experimental Forest, Routt National Forest, Colorado"
+         - "Marcel and Cutfood Experimental Forest, Minnesota"
+         - "Technological University's Alberta Forestry Center, Michigan"
+         - "Daniel Boone National Forest, University of Kentucky Robinson Forest, Kentucky"
+         - "Santee Experimental Forest, Francis Marion National Forest, South Caroline"
+         - "University of Georgia Agricultural Experiment Station, Georgia"
        ecosystemTypes:
          - Pine, Hardwood
          - Pine, Hardwood
@@ -18,7 +18,7 @@ siteInfo:
          - Pine, Hardwood
          - Pine, Hardwood
          - Pine, Hardwood
-       climate: temperate
+       climate: Temperate
        soilTypes:
          - Haplocryods, Cryochrepts
          - Udipsamment
@@ -26,18 +26,12 @@ siteInfo:
          - Hapludults, Dystrochrepts
          - Hapludalfs, Quartzipsamment, Endoaquults, Paleaquults, Alaquods
          - Kanhapludults
-       textures:
-         - slope wash/ outwash, gneiss and schist, sandy loam
-         - glacial outwash plains, loamy sand
-         - glacial outwash plains, loamy sand
-         - sandstone, shale, siltstone, sandy loam
-         - marine Sediments, loamy sand, sandy marine sediments, clayey sediments
-         - high-grade metamorphic and igneous
        coordinates:
          latitude:
            - .na.real
          longitude:
            - .na.real
+
 incubationInfo:
        desc: "Samples in the sealed jars were incubated at the predefined LIT10 or LIT30 for 24 hours and head space gas was sampled a second time for Gas Chromatograph"
        treatments:

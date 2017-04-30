@@ -2,15 +2,16 @@ citationKey: WicklandNeff2008
 doi: 10.1007/s10533-007-9166-3
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2017-01-26
+
 siteInfo:
-       studySites:
+       studySite:
          - "Well drained site, Delta Junction, central Alaska"
          - "Moderately well drained site, Delta Junction, central Alaska"
          - "Poorly Drained site, Fairbanks, Alaska"
-       soilTypes:
-         - "inceptisol cryept"
-         - "gelisol orthel"
-         - "gelisol histel"
+       soilType:
+         - "Inceptisol cryept"
+         - "Gelisol orthel"
+         - "Gelisol histel"
        vegetation:
          - "mature black spruce forest"
          - "mature black spruce forest"
@@ -24,6 +25,7 @@ siteInfo:
              - -145.733333
              - -145.733333
              - -148.316667
+
 incubationInfo:
        desc: "five laboratory replicates were incubated at five different moisture contents (2, 25, 50, 75, and 100 percent saturation) and two different temperatures (10 and 20 deg) in a full factorial design for 57 days."
        treatments:

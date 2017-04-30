@@ -150,7 +150,7 @@ siteInfo:
         - -87.46
         - -82.00
         - -104.19
-    soilTypes: utisol
+    soilTypes: Ulttisol
     texture:
       percentSand:
         - 82.5
@@ -297,6 +297,7 @@ siteInfo:
         - 1.1
         - 0.4
         - 0.8
+
 incubationInfo:
   treatments:
     temperature:
@@ -307,6 +308,7 @@ incubationInfo:
     time: 360
     units: days
   replicates: 5
+
 variables:
        V1:
         name: Time_AND

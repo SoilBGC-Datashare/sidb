@@ -4,23 +4,24 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-02
 
 siteInfo:
-    studySite: northern California
-    ecosystemType: ponderosa pine plantation, oak savanna
-    climate: mediterranean
-    soil texture pine plantation: "Sand: 60% Loam: 29%"
-    soilType oak savanna: "Lithic Haploxerepts (USDA)"
-    location:
-      - pine plantation: near University of California Blodgett Forest Research Station
-        altitude: 1315 m
-      - oak savanna field site: Tonzi Ranch
-        altitude: 177 m
+    studySite: 
+      - Blodgett Forest Research Station
+      - Tonzi Ranch
+    ecosystemType: 
+      - Ponderosa pine plantation
+      - Oak savanna
+    climate: Mediterranean
+    altitude: 
+      - 1315
+      - 177 
     coordinates:
-      latitudes:
+      latitude:
          - 38.89525
          - 38.4311
-      longitudes:
+      longitude:
          - -120.63275
          - -120.966
+
 incubationInfo:
     desc: "soil respiration was measured twice a month using a LI-COR (LI6400-09 soil chamber connected to an LI-6400 portablephotosynthesis system)"
     treatments:

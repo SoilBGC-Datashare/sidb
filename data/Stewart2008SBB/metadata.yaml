@@ -12,23 +12,22 @@ siteInfo:
           - "Mead, NE (NE)"
           - "Wauseon, OH (OH)"
           - "Melfort, Sk (SK)"
-        climate:
-          MAT:
-            - 10.6
-            - 9.7
-            - 8.5
-            - 8.9
-            - 6.2
-            - 9.7
-            - 0.8
-          MAP:
-            - 541
-            - 890
-            - 788
-            - 660
-            - 632
-            - 887
-            - 411
+        MAT:
+          - 10.6
+          - 9.7
+          - 8.5
+          - 8.9
+          - 6.2
+          - 9.7
+          - 0.8
+        MAP:
+          - 541
+          - 890
+          - 788
+          - 660
+          - 632
+          - 887
+          - 411
         soilType:
           - Oxyaquic Hapludalf
           - Tyipc Hapludalf

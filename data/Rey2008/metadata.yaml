@@ -2,6 +2,7 @@ citationKey: Rey2008
 doi: 10.1111/j.1365-2389.2008.01065.x
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-11-29
+
 siteInfo:
        studySites:
          - "Hainich"
@@ -12,7 +13,7 @@ siteInfo:
          - "Harwood"
          - "Wetztsein"
          - "Loobos"
-       elevation:
+       altitude:
          - 445
          - 1560
          - 300
@@ -76,6 +77,7 @@ siteInfo:
              - 2.0375
              - 11.4575
              - 5.743889
+
 incubationInfo:
        desc: "three laboratory replicates of broadleaf (a) and conifer (b) forest samples were incubated at 3 different depth levels (0-5, 5-10, 10-20 cm) for ca. 270 d."
        treatments:

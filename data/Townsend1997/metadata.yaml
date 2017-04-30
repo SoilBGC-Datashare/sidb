@@ -2,15 +2,16 @@ citationKey: Townsend1997
 doi: 10.1023/A:1017942918708
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2017-01-06
+
 siteInfo:
-       descr:  "Mauna Kea volcano, Laupa-hoehoe Forest Reserve, Hawaii"
-       studySites:
-         - "Pasture 100 m"
-         - "Pasture 800 m"
-         - "Pasture 1700 m"
-         - "Forest 900 m"
-         - "Forest 1500 m"
-       elevation:
+       studySite:  "Mauna Kea volcano, Laupa-hoehoe Forest Reserve, Hawaii"
+       ecosystemType:
+         - "Pasture"
+         - "Pasture"
+         - "Pasture"
+         - "Forest"
+         - "Forest"
+       altitude:
          - 100
          - 800
          - 1700
@@ -28,15 +29,14 @@ siteInfo:
          - 2500
          - 2500
          - 2500
-       soilTypes:
-         - "andisols"
-         - "andisols"
+       soilType: Andisol
        vegetation:
          - Pennisetum clandestinum
          - Pennisetum clandestinum
          - Pennisetum clandestinum
          - Metrosideros polymorpha
          - Metrosideros polymorpha
+
 incubationInfo:
        desc: "eight 10g laboratory replicates were incubated at 20, 30 and 40deg for ca. 225 d."
        treatments:

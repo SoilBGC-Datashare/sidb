@@ -2,8 +2,9 @@ citationKey: Niklinska1999
 doi: 10.1023/A:1006049204600
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-10-17
+
 siteInfo:
-       studySites:
+       studySite:
          - "Harads, northern Sweden"
          - "Jaedraas, central Sweden"
          - "Brandstorp, southern Sweden"
@@ -11,6 +12,7 @@ siteInfo:
          - "Otobok, western Poland"
          - "LaViale, southern France"
          - "Biescas, northern Spain"
+
        ecosystemType:
          - Scots pine monocultures
          - Scots pine monocultures
@@ -35,7 +37,7 @@ siteInfo:
          - 604
          - 793
          - 793
-       soilTypes:
+       soilType:
          - "mor-type humus layer"
          - "mor-type humus layer"
          - "mor-type humus layer"
@@ -60,6 +62,7 @@ siteInfo:
              - 14.6
              - 3.4
              - 3.333333
+
 incubationInfo:
        desc: "Five samples of 5 g DWT humus from each site were incubated at 50 percent WHC at 5, 10, 15, 20 and 25 degrees. Respiration rates were measured every second week for 14 weeks."
        treatments:

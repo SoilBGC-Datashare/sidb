@@ -2,6 +2,7 @@ citationKey: Haddix2011
 doi: 10.2136/sssaj2010.0118
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-24
+
 siteInfo:
        studySites:
          - "Indian Head, SK (ARGCN)"
@@ -53,6 +54,7 @@ siteInfo:
              - -99.413
              - .na.real
              - -62.824
+
 incubationInfo:
        desc: "Four laboratory replicates from composite field samples from each site and treatment combination were incubated at 15, 25, and 35deg for 588 d. Headspace gas samples were analyzed for CO2 concentration using a Li-Cor LI-6252 infrared gas analyzer"
        treatments:

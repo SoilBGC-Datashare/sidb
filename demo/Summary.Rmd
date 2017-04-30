@@ -46,10 +46,9 @@ points(longitude, latitude, pch=20, col=2)
 A list of all ecosystem types in the database:
 
 ```{r}
-kable(unique(ecosystemType))
-kable(unique(studySite))
-kable(unique(climate))
-#kable(data.frame(Site=studySite,Ecosystem=ecosystemType))
+kable(summary(as.factor(ecosystemType)))
+#kable(unique(studySite))
+kable(summary(as.factor(climate)))
 ```
 
 A histogram of the incubation time for all entries can be obtained as 

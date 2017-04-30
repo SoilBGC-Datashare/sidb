@@ -2,11 +2,14 @@ citationKey: HartleyIneson2008
 doi: 10.1016/j.soilbio.2008.01.007
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-30
+
 siteInfo:
        studySite: University of York, UK
-       ecosystemType: cultivated
-       climate: temperate
-       texture: sandy loam
+       ecosystemType: Cropland
+       climate: Temperate
+       texture: 
+         desc: sandy loam
+
 incubationInfo:
        desc: "Samples were incubated in a constant temperature room at 15 degrees and maintained at a moisture content of 20 percent with frequent water addition"
        treatments:

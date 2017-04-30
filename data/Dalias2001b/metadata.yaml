@@ -4,17 +4,37 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-10
 
 siteInfo:
-    studySite: western Europe
-    ecosystemType: coniferous forests
-    climate: borean to mediterranean
-    soilTexture: "parent materials for each region below: Sand, Shale, Granite, Sandstone, Hard limestone"
-    soilType: "Ferric podzol, Dystric cambisol, Cambic podzol, Chromic luvisol, Chromic cambisol"
-    location:
+    studySite: 
       - Vindeln, Sweden
       - Haldon, UK
       - Waldstein, Germany
       - Thezan, France
       - La Clape, France
+    ecosystemType: Coniferous forest
+    climate:
+      - Boreal
+      - Temperate Atlantic
+      - Temperate continental
+      - Wet Mediterranean
+      - Wet Mediterranean
+    soilType: 
+      - Ferric podzol
+      - Dystric cambisol
+      - Cambic podzol
+      - Chromic luvisol
+      - Chromic cambisol
+    MAT:
+      - 0.2
+      - 11.0
+      - 5.5
+      - 14.4
+      - 14.8
+    MAP: 
+      - 604
+      - 1096
+      - 890
+      - 579
+      - 587
     coordinates:
       latitudes:
          - 64.000000
@@ -28,6 +48,7 @@ siteInfo:
          - 11.866667
          - 2.75
          - 3.133333
+
 incubationInfo:
     desc: "14C-labelled straw was mixed with soils collected from 7 coniferous forests located on a climatic gradient in Western Europe ranging from boreal to Mediterranean conditions. The soils were incubated in the laboratory at 4, 10, 16, 23 and 30 degrees with constant moisture over 550 days. Measurements of organic-C and14C concentrations in the straw and in the soil samples were determined using dry combustion (Carmograph 12 A carbon analyser). "
     treatments:

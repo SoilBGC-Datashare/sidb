@@ -4,10 +4,11 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-30
 
 siteInfo:
-       studySite: Abisko, northern Sweden
+       studySite: Abisko
        ecosystemType: Tundra
        climate: Cold
-       texture: coarse-grained till deposits with some large boulders and intermittent pockets of mineral soil
+       texture: 
+         desc: coarse-grained till deposits with some large boulders and intermittent pockets of mineral soil
        coordinates:
          latitude: 68.301944
          longitude: 18.854444

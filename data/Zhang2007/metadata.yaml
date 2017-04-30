@@ -2,12 +2,13 @@ citationKey: Zhang2007
 doi: 10.1016/S1001-0742(07)60052-7
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2017-01-31
+
 siteInfo:
-       studySites:
+       studySite:
          - "PP, Beipei, Chongqing"
          - "RP, Jinxian, Jiangxi"
          - "EP, Xiantao, Hubei"
-       soilTypes:
+       soilType:
          - "Typical Haplaquept"
          - "Typical Hapludult"
          - "Typical Fluvaquent"
@@ -24,6 +25,7 @@ siteInfo:
              - 106.578889
              - 116.319722
              - 113.354767
+
 incubationInfo:
        desc: "three laboratory replicates were incubated at 20 and 25 degrees for 114 d using PVC cylinders"
        treatments:

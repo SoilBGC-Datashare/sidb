@@ -2,14 +2,15 @@ citationKey: Grisi1998
 doi: 10.1016/S0038-0717(98)00016-9
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-23
+
 siteInfo:
        studySites:
-         - Mata (Brazil)
-         - Cerrado (Brazil)
-         - Jaiba (Brazil)
-         - Silsoe (England)
-         - Fosters (England)
-         - Woburn (England)
+         - Mata, Brazil
+         - Cerrado, Brazil
+         - Jaiba, Brazil
+         - Silsoe, England
+         - Fosters, England
+         - Woburn, England
        ecosystemType:
          - Evergreen forest
          - Maize
@@ -17,14 +18,22 @@ siteInfo:
          - Cereals
          - Grassland
          - Grassland
-       climate: tropical vs. temperate
-       ClayContent (%):
-         - Mata: 22
-         - Cerrado: 82
-         - Jaiba: 15
-         - Silsoe: 68
-         - Fosters: 21
-         - Woburn: 8
+       climate:
+         - Tropical
+         - Tropical
+         - Tropical
+         - Temperate
+         - Temperate
+         - Temperate
+       texture: 
+         percentClay:
+           - 22
+           - 82
+           - 15
+           - 68
+           - 21
+           - 8
+
 incubationInfo:
        desc: "Sets of jars containing soils for biomass C and CO2 measurements were incubated at 15deg or 35deg for 150 d, in fully randomised blocks. Soils incubated at 35deg required from 1 to 2 ml water after 50 d of incubation"
        treatments:

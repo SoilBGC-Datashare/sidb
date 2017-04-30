@@ -2,16 +2,18 @@ citationKey: Hopkins2006
 doi: 10.1016/j.soilbio.2006.01.012
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-09-20
+
 siteInfo:
        studySite:
          - Garwood Valley, southern Victoria Land (Ross Sea region), Antarctica
        ecosystemType:
-         - glacial dry land
+         - Glacial dry land
        coordinates:
            latitude:
              - -78.016667
            longitude:
              - 163.883333
+
 incubationInfo:
        desc: "Five laboratory replicates from composite field samples were incubated at 10deg for 48 d and CO2 production was measured using a Respicond IV respirometer."
        treatments:

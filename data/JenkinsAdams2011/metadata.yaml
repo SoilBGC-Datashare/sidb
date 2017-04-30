@@ -2,6 +2,7 @@ citationKey: JenkinsAdams2011
 doi: 10.1016/j.soilbio.2011.02.017
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-09-22
+
 siteInfo:
        studySite:
          - Snowy Mountains, NSW Australia
@@ -14,17 +15,17 @@ siteInfo:
        MAP:
          - 1600
        soilType:
-         - alpine humus soil (Chernic tenosol)
-       texture (%):
-         OM: 10
-         Sand: 47
-         Silt: 12
-         Clay: 31
+         - Chernic tenosol
+       texture:
+         percentSand: 47
+         percentSilt: 12
+         percentClay: 31
        coordinates:
            latitude:
              - -36.166667
            longitude:
              - 148.9
+
 incubationInfo:
        desc: "Before respiration measurements, soils packed in incubation cylinders were equilibrated overnight at 20deg in a laboratory incubator. Over the course of a 120-day incubation RCO2 and R_O2 were measured at 0, 30, 90, 120 days after initial incubation."
        treatments:

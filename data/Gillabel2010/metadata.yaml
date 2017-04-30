@@ -4,17 +4,23 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-23
 siteInfo:
        studySite: Termunck, Belgium
-       ecosystemType: agricultural site planted with winter barley
-       climate: temperate
+       ecosystemType: Winter barley cropland
+       climate: Temperate
        soilType: silt loam haplic Luvisol
        texture:
-         - Topsoil Silt (g100g{^-1}soil): 76.8
-         - Topsoil Clay (g100g{^-1}soil): 10.0
-         - Subsoil Silt (g100g{^-1}soil): 74.8
-         - Subsoil Clay (g100g{^-1}soil): 14.8
+         percentSand:
+           - 13.2
+           - 10.4
+         percentSilt:
+           - 76.8
+           - 74.8
+         percentClay:
+           - 10.0
+           - 14.8
        coordinates:
          latitude: 50.878333
          longitude: 4.656667
+
 incubationInfo:
        desc: "Soil was collected from 2 depth intervals: 5 to 15 cm and 95 to 105 cm. Samples of each layer were incubated at 25deg and at 35deg for 176 days"
        treatments:

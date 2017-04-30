@@ -2,24 +2,26 @@ citationKey: LeifeldFuhrer2005
 doi: 10.1007/s10533-005-2237-4
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-09-30
+
 siteInfo:
        studySites:
          - Oensingen, Switzerland
        ecosystemType:
-         - arable rotation
-         - permanent grassland
+         - Arable rotation
+         - Permanent grassland
        MAT:
          - 9
        MAP:
          - 1109
        soilTypes:
-         - stagnic Cambisol
-         - stagnic Gleysol
+         - Stagnic Cambisol
+         - Stagnic Gleysol
        coordinates:
            latitude:
              - 47.283333
            longitude:
              - 7.733333
+
 incubationInfo:
        desc: "Samples were incubated at 25deg for 707 d. CO2 emission was measured in an automatic static incubation chamber of 1500 cm^-3 volume"
        treatments:

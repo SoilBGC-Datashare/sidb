@@ -5,11 +5,11 @@ entryCreationDate: 2016-10-13
 
 siteInfo:
         studySite:
-          - interior alaska
-          - northen alaska
+          - Interior Alaska
+          - Northern Alaska
         ecosystemType:
-          - boreal forest
-          - tundra
+          - Boreal forest
+          - Tundra
         coordinates:
           latitude:
             - 63.91
@@ -17,6 +17,7 @@ siteInfo:
           longitude:
             - -145.73
             - -149.71
+
 incubationInfo:
         soil:
           - "tundra moist acidic organic TAO"

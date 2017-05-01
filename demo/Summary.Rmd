@@ -1,8 +1,10 @@
 ---
 title: "Summary of entries in the Soil Incubation Database"
-author: "Carlos A. Sierra and Heidi V\u00f6lkel"
+author: "Carlos A. Sierra and Heidi Völkel"
 date: '`r format(Sys.time(), "%d %B, %Y")`'
-output: pdf_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r, echo=FALSE}
@@ -43,17 +45,29 @@ map('world', interior = FALSE)
 points(longitude, latitude, pch=20, col=2)
 ```
 
-A list of all ecosystem types in the database:
+### Ecosystem types
+A list of all ecosystem types in the database, with their number of occurrences
 
-```{r}
+```{r, echo=FALSE}
 kable(summary(as.factor(ecosystemType)))
-#kable(unique(studySite))
+```
+
+### Climate
+Climate types with their number of occurrences
+```{r, echo=FALSE}
 kable(summary(as.factor(climate)))
 ```
 
-A histogram of the incubation time for all entries can be obtained as 
+### Soil Type
+Soil types with their number of occurences
+```{r, echo=FALSE}
+kable(summary(as.factor(as.character(soilType))))
+```
 
-```{r}
+### Incubation time
+A histogram of the incubation time for all entries
+
+```{r, echo=FALSE}
 hist(incubationTime, xlab="Incubation time (days)", main ="", ylab="Number of studies")
 ```
 

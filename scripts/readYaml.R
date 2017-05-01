@@ -67,3 +67,8 @@ treatments=NULL
 for(i in 1:length(entryNames)){
   treatments=c(treatments,get(entryNames[i])$incubationInfo$treatments)
 }
+
+soilType=NULL
+for(i in 1:length(entryNames)){
+  soilType=c(soilType,get(entryNames[i])$siteInfo$soilType)
+}

@@ -319,217 +319,136 @@ variables:
         units: "mg CO$_2$ g^{-1} soil"
         site: "HJ Andrew"
        V3:
-        name: Time_AP
-        units: days
-       V4:
         name: Cumresp_AP
         desc: cumulative respiration of American Prarie
         units: "mg CO$_2$ g^{-1} soil"
         site: "American Prarie"
-       V5:
-        name: Time_ARC
-        units: days
-       V6:
+       V4:
         name: Cumresp_ARC
         desc: cumulative respiration of Toolik
         units: "mg CO$_2$ g^{-1} soil"
         site: "Toolik"
-       V7:
-        name: Time_BES
-        units: days
-       V8:
+       V5:
         name: Cumresp_BES
         desc: cumulative respiration of Baltimore Ecosystem Study
         units: "mg CO$_2$ g^{-1} soil"
         site: "Baltimore Ecosystem Study"
-       V9:
-        name: Time_BNZ
-        units: days
-       V10:
+       V6:
         name: Cumresp_BNZ
         desc: cumulative respiration of Bonaza Creek
         units: "mg CO$_2$ g^{-1} soil"
         site: "Bonaza Creek"
-       V11:
-        name: Time_CDR
-        units: days
-       V12:
+       V7:
         name: Cumresp_CDR
         desc: cumulative respiration of Cedar Creek
         units: "mg CO$_2$ g^{-1} soil"
         site: "Cedar Creek"
-       V13:
-        name: Time_FCE
-        units: days
-       V14:
+       V8:
         name: Cumresp_FCE
         desc: cumulative respiration of Florida Coastal Everglades
         units: "mg CO$_2$ g^{-1} soil"
         site: "Florida Coastal Everglades"
-       V15:
-        name: Time_HFR
-        units: days
-       V16:
+       V9:
         name: Cumresp_HFR
         desc: cumulative respiration of Harvard Forest
         units: "mg CO$_2$ g^{-1} soil"
         site: "Harvard Forest"
-       V17:
-        name: Time_JRN
-        units: days
-       V18:
+       V10:
         name: Cumresp_JRN
         desc: cumulative respiration of Jornada Basin
         units: "mg CO$_2$ g^{-1} soil"
         site: "Jornada Basin"
-       V19:
-        name: Time_KBS
-        units: days
-       V20:
+       V11:
         name: Cumresp_KBS
         desc: cumulative respiration of Kellog Biological Station
         units: "mg CO$_2$ g^{-1} soil"
         site: "Kellog Biological Station"
-       V21:
-        name: Time_OLY
-        units: days
-       V22:
+       V12:
         name: Cumresp_OLY
         desc: cumulative respiration of Olympic National Park
         units: "mg CO$_2$ g^{-1} soil"
         site: "Olympic National Park"
-       V23:
-        name: Time_SDG
-        units: days
-       V24:
+       V13:
         name: Cumresp_SDG
         desc: cumulative respiration of Sedgwick
         units: "mg CO$_2$ g^{-1} soil"
         site: "Sedgwick"
-       V25:
-        name: Time_WB
-        units: days
-       V26:
+       V14:
         name: Cumresp_WB
         desc: cumulative respiration of Walker Branch
         units: "mg CO$_2$ g^{-1} soil"
         site: "Walker Branch"
-       V27:
-        name: Time_WR
-        units: days
-       V28:
+       V15:
         name: Cumresp_WR
         desc: cumulative respiration of Wind River
         units: "mg CO$_2$ g^{-1} soil"
         site: "Wind River"
-       V29:
-        name: Time_COW
-        units: days
-       V30:
+       V16:
         name: Cumresp_COW
         desc: cumulative respiration of Coweeta
         units: "mg CO$_2$ g^{-1} soil"
         site: "Coweeta"
-       V31:
-        name: Time_GCE
-        units: days
-       V32:
+       V17:
         name: Cumresp_GCE
         desc: cumulative respiration of Georgia Coastal Ecosystem
         units: "mg CO$_2$ g^{-1} soil"
         site: "Georgia Coastal Ecosystem"
-       V33:
-        name: Time_GUA
-        units: days
-       V34:
+       V18:
         name: Cumresp_GUA
         desc: cumulative respiration of Guanica
         units: "mg CO$_2$ g^{-1} soil"
         site: "Guanica"
-       V35:
-        name: Time_ITA
-        units: days
-       V36:
+       V19:
         name: Cumresp_ITA
         desc: cumulative respiration of Itasca State Park
         units: "mg CO$_2$ g^{-1} soil"
         site: "Itasca State Park"
-       V37:
-        name: Time_KNZ
-        units: days
-       V38:
+       V20:
         name: Cumresp_KNZ
         desc: cumulative respiration of Konza Prarie
         units: "mg CO$_2$ g^{-1} soil"
         site: "Konza Prarie"
-       V39:
-        name: Time_LUQ
-        units: days
-       V40:
+       V21:
         name: Cumresp_LUQ
         desc: cumulative respiration of Luquillo
         units: "mg CO$_2$ g^{-1} soil"
         site: "Luquillo"
-       V41:
-        name: Time_NIW
-        units: days
-       V42:
+       V22:
         name: Cumresp_NIW
         desc: cumulative respiration of Niwot Range
         units: "mg CO$_2$ g^{-1} soil"
         site: "Niwot Range"
-       V43:
-        name: Time_SJQ
-        units: days
-       V44:
+       V23:
         name: Cumresp_SJQ
         desc: cumulative respiration of San Joaquin Exper. Range
         units: "mg CO$_2$ g^{-1} soil"
         site: "San Joaquin Exper. Range"
-       V45:
-        name: Time_SRE
-        units: days
-       V46:
+       V24:
         name: Cumresp_SRE
         desc: cumulative respiration of Santa Rita Exper. Range
         units: "mg CO$_2$ g^{-1} soil"
         site: "Santa Rita Exper. Range"
-       V47:
-        name: Time_HB
-        units: days
-       V48:
+       V25:
         name: Cumresp_HB
         desc: cumulative respiration of Hubbard Brook
         units: "mg CO$_2$ g^{-1} soil"
         site: "Hubbard Brook"
-       V49:
-        name: Time_JEP
-        units: days
-       V50:
+       V26:
         name: Cumresp_JEP
         desc: cumulative respiration of Jepson Prairie
         units: "mg CO$_2$ g^{-1} soil"
         site: "Jepson Prairie"
-       V51:
-        name: Time_KAN
-        units: days
-       V52:
+       V27:
         name: Cumresp_KAN
         desc: cumulative respiration of Kankankee Sands
         units: "mg CO$_2$ g^{-1} soil"
         site: "Kankankee Sands"
-       V53:
-        name: Time_ORD
-        units: days
-       V54:
+       V28:
         name: Cumresp_ORD
         desc: cumulative respiration of Ordway-Swisher
         units: "mg CO$_2$ g^{-1} soil"
         site: "Ordway-Swisher"
-       V55:
-        name: Time_SGS
-        units: days
-       V56:
+       V29:
         name: Cumresp_SGS
         desc: cumulative respiration of Short Grass Steppe
         units: "mg CO$_2$ g^{-1} soil"

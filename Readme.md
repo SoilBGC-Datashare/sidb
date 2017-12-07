@@ -13,6 +13,9 @@ This folder contains both data and metadata. For each incubation study, there is
 ### Scripts
 This folder contains R code and other scripts necessary to visualize and analyze the data.
 
+### Out
+This folder contains specific reports of the database generated from scripts in the Scripts folder
+
 ### Demo
 This folder contains R markdown files with reproducible code to demonstrate specific data analyses.
 

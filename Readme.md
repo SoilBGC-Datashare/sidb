@@ -21,6 +21,9 @@ devtools::install_github('SoilBGC-Datashare/sidb/Rpkg/')
 ### Scripts
 This folder contains R code and other scripts necessary to visualize and analyze the data.
 
+### docs
+Website of the project
+
 ### Out
 This folder contains specific reports of the database generated from scripts in the Scripts folder
 

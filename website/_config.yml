@@ -1,0 +1,14 @@
+# Site settings
+title: Soil Incubation Database
+name: SIDB
+email: csierra@bgc-jena.mpg.de
+description: > # this means to ignore newlines until "baseurl:"
+  Database of soil incubation studies represented as time series 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://locahost:4000" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+github_username:  crlsierra
+github_repo: "https://github.com/SoilBGC-Datashare/sidb" 
+
+# Build settings
+markdown: kramdown

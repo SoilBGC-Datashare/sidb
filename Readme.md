@@ -10,6 +10,14 @@ of CO<sub>2</sub> release over incubation time.
 ### Data
 This folder contains both data and metadata. For each incubation study, there is a [`yaml`](http://yaml.org/) file with metada, and the data is stored in a comma separated file `csv`.
 
+### Rpkg
+This folder contains an R package that can load entries from the database. To install, open R and run
+
+```R
+install.packages("devtools")
+devtools::install_github('SoilBGC-Datashare/sidb/Rpkg/')
+```
+
 ### Scripts
 This folder contains R code and other scripts necessary to visualize and analyze the data.
 
@@ -26,5 +34,3 @@ This folder contains tests to guarantee the integrity of the database. Make sure
 This database is public and everybody is welcome to use it for scientific research. Users are also
 encouraged to contribute their own data and scripts to the dataset. To contribute please send a pull request.
 
-## Copyright
-This database is open access and use for scientific research is encouraged. 

@@ -24,9 +24,7 @@ for(i in 1:length(entryNames)){
 
 # Database summary and statistics
 
-This file contains a summary of the data currently available in the soil incubation database **sidb**. Currently, the number of entries in the database is `r length(entryNames)`. Most entries have multiple time-series of CO~2~ flux release from incubation experiments. The current total number of time-series  is `r sum(nCols)`, and the total number of datapoints is `r sum(dataPoints)`.
-The last entry was added on `r max(entryCreationDate)`.
-
+The number of entries in the database is `r length(entryNames)`. Most entries have multiple time-series of CO~2~ flux release from incubation experiments. The current total number of time series  is `r sum(nCols)`, and the total number of data points is `r sum(dataPoints)`.
 
 ```{r, echo=FALSE}
 entryBaseMetadata=data.frame(citationKey, doi, entryAuthor, entryCreationDate)
@@ -65,7 +63,8 @@ kable(summary(as.factor(as.character(soilType))))
 ```
 
 ### Incubation time
-A histogram of the incubation time for all entries
+The database contains studies with a wide range of incubation times from `r min(incubationTime, na.rm=TRUE)` to `r max(incubationTime, na.rm=TRUE)` days.
+A histogram of the incubation time for all entries is presented in Figure
 
 ```{r, echo=FALSE}
 hist(incubationTime, xlab="Incubation time (days)", main ="", ylab="Number of studies")

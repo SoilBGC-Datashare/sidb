@@ -1,14 +1,18 @@
-citationKey: Plante2016SBB
-doi: 10.10.234.45243
-entryAuthor: Carlos Sierra
-entryCreationDate: 2016-05-31
+citationKey:   # Unique identifier in the format: LastnameYearJOURNAL
+doi:   # DOI of the publication where data is published
+entryAuthor:   # First and Last name of the person who enters the data in this file
+entryCreationDate:  # Date when the data is entered in this file. Format: YYYY-MM-DD
+contactName:  # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
+contactEmail:  # Email of the contact person
+entryNote: # Any notes or comments related to this entry.
 
 siteInfo:
-        studySite: Andrews Forest
-        country: USA
-        ecosystemType: Forest
-        climate: temperate
-        soilType: Alfisol
+        studySite:  # Name of the study site where study was conducted
+        country: # Country where the study was conducted
+        landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+        soilTaxonomy:
+          soilOrder: # 
+          soilSeries:
         coordinates:
           latitude: 75.321
           longitud: 43.456

@@ -24,10 +24,7 @@ incubationInfo:
        incubationTime:
           time: 48
           units: days
-      incubationTemperature:
-             - 4
-             - 22
-             - 40
+          
 variables:
         V1:
           name: time

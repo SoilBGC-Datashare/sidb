@@ -276,6 +276,9 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
 }
@@ -305,12 +308,11 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Summary of entries in the Soil Incubation Database</h1>
 <h4 class="author"><em>Carlos A. Sierra and Heidi Völkel</em></h4>
-<h4 class="date"><em>01 October, 2018</em></h4>
+<h4 class="date"><em>05 October, 2018</em></h4>
 
 </div>
 
 
-<pre><code>## Warning: package 'yaml' was built under R version 3.4.4</code></pre>
 <div id="database-summary-and-statistics" class="section level1">
 <h1>Database summary and statistics</h1>
 <p>The number of entries in the database is 36. Most entries have multiple time-series of CO<sub>2</sub> flux release from incubation experiments. The current total number of time series is 561, and the total number of data points is 10951.</p>
@@ -614,68 +616,68 @@ $(document).ready(function () {
 <td align="right">1</td>
 </tr>
 <tr class="odd">
-<td>lower montane forest</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
 <td>Maize</td>
 <td align="right">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Native forest and pasture</td>
 <td align="right">2</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Native grassland and cultivated</td>
 <td align="right">4</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Northern mixed-grass praire</td>
 <td align="right">1</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Oak savanna</td>
 <td align="right">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Pasture</td>
 <td align="right">3</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Peatland</td>
 <td align="right">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Permanent grassland</td>
 <td align="right">1</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Pine, Hardwood</td>
 <td align="right">6</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Polar</td>
 <td align="right">1</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Ponderosa pine plantation</td>
 <td align="right">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Scots pine monocultures</td>
 <td align="right">7</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Sitka spruce plantation</td>
 <td align="right">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Southern mixed-grass praire</td>
 <td align="right">1</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Tundra</td>
 <td align="right">2</td>
+</tr>
+<tr class="even">
+<td>Tundra (Tussock)</td>
+<td align="right">1</td>
 </tr>
 <tr class="odd">
 <td>Tundra (Tussock, Shrub)</td>
@@ -687,14 +689,6 @@ $(document).ready(function () {
 </tr>
 <tr class="odd">
 <td>Tundra (Tussock, Wet sedge)</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
-<td>Tundra (Tussock)</td>
-<td align="right">1</td>
-</tr>
-<tr class="odd">
-<td>wet tropical rainforest</td>
 <td align="right">1</td>
 </tr>
 <tr class="even">
@@ -711,6 +705,14 @@ $(document).ready(function () {
 </tr>
 <tr class="odd">
 <td>Woodland with Shrub understorey (WS)</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td>lower montane forest</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td>wet tropical rainforest</td>
 <td align="right">1</td>
 </tr>
 </tbody>
@@ -922,43 +924,27 @@ $(document).ready(function () {
 <td align="right">1</td>
 </tr>
 <tr class="even">
-<td>mor-type humus layer</td>
-<td align="right">7</td>
-</tr>
-<tr class="odd">
 <td>NA</td>
 <td align="right">5</td>
 </tr>
-<tr class="even">
-<td>organic-poor (HMC, HMH)</td>
-<td align="right">1</td>
-</tr>
 <tr class="odd">
-<td>organic-rich (HOC, HOH)</td>
-<td align="right">1</td>
-</tr>
-<tr class="even">
 <td>Orthic Black Chernozem</td>
 <td align="right">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Oxyaquic Hapludalf</td>
 <td align="right">1</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Paleudult &amp; Kandidult</td>
 <td align="right">1</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Peaty gley</td>
 <td align="right">2</td>
 </tr>
-<tr class="even">
-<td>Permafrost</td>
-<td align="right">1</td>
-</tr>
 <tr class="odd">
-<td>silt loam haplic Luvisol</td>
+<td>Permafrost</td>
 <td align="right">1</td>
 </tr>
 <tr class="even">
@@ -1011,6 +997,22 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td>Ulttisol</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td>mor-type humus layer</td>
+<td align="right">7</td>
+</tr>
+<tr class="even">
+<td>organic-poor (HMC, HMH)</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td>organic-rich (HOC, HOH)</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td>silt loam haplic Luvisol</td>
 <td align="right">1</td>
 </tr>
 </tbody>

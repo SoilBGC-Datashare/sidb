@@ -12,3 +12,5 @@ loadEntries <- function(path="~/sidb/data/") {
 
  return(sidbList)
 }
+
+

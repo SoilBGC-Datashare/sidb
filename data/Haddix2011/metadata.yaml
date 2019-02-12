@@ -58,9 +58,12 @@ siteInfo:
 incubationInfo:
        desc: "Four laboratory replicates from composite field samples from each site and treatment combination were incubated at 15, 25, and 35deg for 588 d. Headspace gas samples were analyzed for CO2 concentration using a Li-Cor LI-6252 infrared gas analyzer"
        treatments:
-          - temperature
-          - landUse
-          - site
+          temperature:
+            - 15
+            - 25
+            - 35
+          landUse:
+          site:
        incubationTime:
           time: 588
           units: days

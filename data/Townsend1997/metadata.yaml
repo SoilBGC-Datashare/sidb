@@ -40,8 +40,12 @@ siteInfo:
 incubationInfo:
        desc: "eight 10g laboratory replicates were incubated at 20, 30 and 40deg for ca. 225 d."
        treatments:
-          - temperature
-          - site
+          temperature:
+            - 20
+            - 30
+            - 40
+
+          site:
        incubationTime:
           time: 225
           units: days

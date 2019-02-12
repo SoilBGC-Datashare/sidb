@@ -4,28 +4,28 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-07-26
 
 siteInfo:
-  studySite: 
+  studySite:
      - Northern Great Plains Research Laboratory,Mandan, North Dakota
      - Northern Great Plains Research Laboratory,Mandan, North Dakota
      - Waggoner Ranch, Vernon, Texas
      - Waggoner Ranch, Vernon, Texas
-  ecosystemType: 
+  ecosystemType:
      - Wheat cropland
      - Northern mixed-grass praire
      - Wheat cropland
      - Southern mixed-grass praire
-  climate: 
+  climate:
      - Temperate
      - Temperate
      - Temperate
      - Temperate
-  texture: 
-     - percentSilt: 
+  texture:
+     - percentSilt:
         - 48.5
         - 49.2
         - 43.1
         - 52.0
-     - percentClay: 
+     - percentClay:
         - 34.3
         - 29.7
         - 42.3
@@ -39,10 +39,15 @@ siteInfo:
 incubationInfo:
     desc: "Soil respiration rates were determined through periodic analysis of CO2 concentration of headspace gas samples using a LI-COR 6525"
     treatments:
-        - temperature
+      temperature:
+            - 4
+            - 15
+            - 25
+
     incubationTime:
         time: 589
         units: days
+
 variables:
         V1:
           name: time

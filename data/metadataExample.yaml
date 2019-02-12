@@ -7,7 +7,7 @@ contactEmail: csierra@bgc-jena.mpg.de # Email of the contact person
 entryNote: # Any notes or comments related to this entry.
 
 siteInfo:
-      studySite: "Linaria parkland region of Alberta, Canada"  # 
+      studySite: "Linaria parkland region of Alberta, Canada"  #
       ecosystemType: Cropland
       landUse:
         - agriculture
@@ -97,10 +97,17 @@ incubationInfo:
                 standardError: 0.5
                 units: "Mg ha$^{-1}$"
        treatments:
-          - temperature
+          treatments:
+              temperature:
+                - 7
+                - 14
+                - 21
+
        incubationTime:
           time: 370
           units: days
+         
+
 
 variables:
        V1:

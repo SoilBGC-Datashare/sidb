@@ -25,8 +25,11 @@ siteInfo:
 incubationInfo:
        desc: "five laboratory replicates were incubated at 5, 15, and 25 for 28 d. Two 2-way designs were performed (temperature x N and temperature x C)."
        treatments:
-          - temperature
-          - external glucose inputs
+          temperature:
+             - 5
+             - 15
+             - 25
+          external glucose inputs:
        incubationTime:
           time: 28
           units: days

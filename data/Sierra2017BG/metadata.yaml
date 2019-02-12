@@ -1,5 +1,5 @@
 citationKey: Sierra2017BG
-doi: 10.5194/bg-2016-474 
+doi: 10.5194/bg-2016-474
 entryAuthor: Carlos A. Sierra
 entryCreationDate: 2017-01-24
 
@@ -11,16 +11,24 @@ siteInfo:
   MAP: 400
   coordinates:
     latitude:
-      - 65.155935 
+      - 65.155935
     longitude:
       - 147.491317
 
 incubationInfo:
   desc: "Full factorial incubation experiment with the manipulated treatments being temperature (25, 35 C), soil water content (15, 30, 60 90% water-filled pore space), and oxygen concentration in the pore space (1 and 20%), with soils enclosed in PVC cylinders (10 cm diameter and 20 cm height) containing in about half of their volume 450 g of homogenized soil. The approximate bulk density within each cylinder was 0.6 g cm-3. Organic soil was collected from the A horizon of a boreal forest dominated by black spruce at the Caribou Poker watershed in central Alaska, USA"
   treatments:
-    - temperature
-    - moisture
-    - oxygen
+    temperature:
+       - 25
+       - 35
+    moisture:
+      - 15
+      - 30
+      - 60
+      - 90
+    oxygen:
+      - 1
+      - 20
   incubationTime:
     time: 35
     units: days

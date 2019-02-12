@@ -19,12 +19,15 @@ siteInfo:
 incubationInfo:
        desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius as well as ambient and elevated CO2"
        treatments:
-          - temperature
-          - CO2
+          temperature:
+                - 4
+                - 15
+                - 25
+          CO2:
        incubationTime:
           time: 48
           units: days
-          
+
 variables:
         V1:
           name: time

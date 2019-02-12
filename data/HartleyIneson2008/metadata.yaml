@@ -7,14 +7,17 @@ siteInfo:
        studySite: University of York, UK
        ecosystemType: Cropland
        climate: Temperate
-       texture: 
+       texture:
          desc: sandy loam
 
 incubationInfo:
        desc: "Samples were incubated in a constant temperature room at 15 degrees and maintained at a moisture content of 20 percent with frequent water addition"
        treatments:
-          - temperature
-          - total soil C (%)
+          temperature:
+            - 15
+          moisture:
+            - 20
+          total soil C (%):
        incubationTime:
           time: 8
           units: years

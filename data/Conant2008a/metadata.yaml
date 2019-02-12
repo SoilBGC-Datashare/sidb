@@ -4,11 +4,11 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-07-26
 
 siteInfo:
-    studySite:  
-      - Akron, Colorado 
+    studySite:
+      - Akron, Colorado
       - Vernon, Texas
-    ecosystemType: 
-      - Cultivated 
+    ecosystemType:
+      - Cultivated
       - Grassland
     climate:
       - Temperate
@@ -24,10 +24,14 @@ siteInfo:
 incubationInfo:
     desc: "Samples were flushed with compressed air when CO2 concentrations approached 50000 ppm CO2, samples were remoistened to maintain soil moisture above 95% of original moisture."
     treatments:
-        - temperature
+          temperature:
+              - 25
+              - 35
+
     incubationTime:
         time: 336
         units: days
+
 variables:
         V1:
           name: time

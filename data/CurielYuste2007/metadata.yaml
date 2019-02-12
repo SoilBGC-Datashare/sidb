@@ -4,16 +4,16 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-02
 
 siteInfo:
-    studySite: 
+    studySite:
       - Blodgett Forest Research Station
       - Tonzi Ranch
-    ecosystemType: 
+    ecosystemType:
       - Ponderosa pine plantation
       - Oak savanna
     climate: Mediterranean
-    altitude: 
+    altitude:
       - 1315
-      - 177 
+      - 177
     coordinates:
       latitude:
          - 38.89525
@@ -25,13 +25,16 @@ siteInfo:
 incubationInfo:
     desc: "soil respiration was measured twice a month using a LI-COR (LI6400-09 soil chamber connected to an LI-6400 portablephotosynthesis system)"
     treatments:
-        - moistening (h): 24
-        - drying at 75deg (h): 48
-        - landUse
-        - site
+        temperature:
+           - 20
+        moistening (h): 24
+        drying at 75deg (h): 48
+        landUse:
+        site:
     incubationTime:
         time: 111
         units: days
+
 variables:
         V1:
           name: time

@@ -81,8 +81,12 @@ siteInfo:
 incubationInfo:
        desc: "three laboratory replicates were incubated at 4, 10, 20 and 30deg for ca. 270 d."
        treatments:
-          - temperature
-          - site
+          temperature:
+             - 4
+             - 10
+             - 20
+             - 30
+          site:
        incubationTime:
           time: 270
           units: days

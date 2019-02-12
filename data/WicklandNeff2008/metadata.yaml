@@ -29,8 +29,15 @@ siteInfo:
 incubationInfo:
        desc: "five laboratory replicates were incubated at five different moisture contents (2, 25, 50, 75, and 100 percent saturation) and two different temperatures (10 and 20 deg) in a full factorial design for 57 days."
        treatments:
-          - temperature
-          - moisture content
+          temperature:
+             - 10
+             - 20
+          moisture:
+            - 2
+            - 25
+            - 50
+            - 75
+            - 100
        incubationTime:
           time: 57
           units: days
@@ -218,4 +225,4 @@ variables:
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 100 percent"
           temperature: 20
-          moisture content: 100   
+          moisture content: 100

@@ -66,8 +66,8 @@ incubationInfo:
         treatments:
             desc: " a 924 day incubation of soils at temperatire 5 degrees celcius and 15 degrees celcius and two nitrogen treatments (with and without)"
             temperature:
-              - 5
-              - 15
+               - 5
+               - 15
         incubationTime:
             time: 924
             units: days

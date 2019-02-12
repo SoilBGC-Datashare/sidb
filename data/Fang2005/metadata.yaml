@@ -15,9 +15,10 @@ siteInfo:
 incubationInfo:
     desc: "Respired CO2 was measured with an infrared gas analyser in differential mode"
     treatments:
-       - temperature
-       - soil moisture
-       - fresh air
+       temperature:
+            - 20
+       soil moisture:
+       fresh air:
     incubationTime:
         time: 108
         units: days

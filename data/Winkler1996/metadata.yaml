@@ -14,12 +14,20 @@ siteInfo:
 incubationInfo:
        desc: "Ten A-, eight E-, and ten B-horizon samples were incubated at 4, 15 and 22deg for 120 d and at 38deg for 50 d."
        treatments:
-          - temperature
-          - soil horizon
+          temperature:
+             - 38
+             - 22
+             - 15
+             - 4
+          soil horizon:
+            - A
+            - B
+            - E
+          replicates: 10
        incubationTime:
           time: 120
           units: days
-          replicates: 10
+
 variables:
         V1:
           name: time

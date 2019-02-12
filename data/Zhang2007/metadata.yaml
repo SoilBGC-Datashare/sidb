@@ -29,8 +29,10 @@ siteInfo:
 incubationInfo:
        desc: "three laboratory replicates were incubated at 20 and 25 degrees for 114 d using PVC cylinders"
        treatments:
-          - temperature
-          - SoilType
+          temperature:
+               - 20
+               - 25
+          studySite:
        incubationTime:
           time: 114
           units: days
@@ -44,34 +46,34 @@ variables:
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation under 20 degrees for soil sample PP"
           temperature: 20
-          SoilType: "PP, Beipei, Chongqing"
+          studySite: "PP, Beipei, Chongqing"
         V3:
           name: CO2_u20_RP
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation under 20 degrees for soil sample RP"
           temperature: 20
-          SoilType: "RP, Jinxian, Jiangxi"
+          studySite: "RP, Jinxian, Jiangxi"
         V4:
           name: CO2_u20_EP
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation under 20 degrees for soil sample EP"
           temperature: 20
-          SoilType: "EP, Xiantao, Hubei"
+          studySite: "EP, Xiantao, Hubei"
         V5:
           name: CO2_25_PP
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation at 25 degrees for soil sample PP"
           temperature: 25
-          SoilType: "PP, Beipei, Chongqing"
+          studySite: "PP, Beipei, Chongqing"
         V6:
           name: CO2_25_RP
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation at 25 degrees for soil sample RP"
           temperature: 25
-          SoilType: "RP, Jinxian, Jiangxi"
+          studySite: "RP, Jinxian, Jiangxi"
         V7:
           name: CO2_25_EP
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation at 25 degrees for soil sample EP"
           temperature: 25
-          SoilType: "EP, Xiantao, Hubei"
+          studySite: "EP, Xiantao, Hubei"

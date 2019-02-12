@@ -61,7 +61,7 @@ incubationInfo:
               - A
               - C
             temperature:
-              - 25
+               - 25
         incubationTime:
             time: 544
             units: days

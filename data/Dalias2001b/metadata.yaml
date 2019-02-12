@@ -4,7 +4,7 @@ entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-10
 
 siteInfo:
-    studySite: 
+    studySite:
       - Vindeln, Sweden
       - Haldon, UK
       - Waldstein, Germany
@@ -17,7 +17,7 @@ siteInfo:
       - Temperate continental
       - Wet Mediterranean
       - Wet Mediterranean
-    soilType: 
+    soilType:
       - Ferric podzol
       - Dystric cambisol
       - Cambic podzol
@@ -29,7 +29,7 @@ siteInfo:
       - 5.5
       - 14.4
       - 14.8
-    MAP: 
+    MAP:
       - 604
       - 1096
       - 890
@@ -52,9 +52,15 @@ siteInfo:
 incubationInfo:
     desc: "14C-labelled straw was mixed with soils collected from 7 coniferous forests located on a climatic gradient in Western Europe ranging from boreal to Mediterranean conditions. The soils were incubated in the laboratory at 4, 10, 16, 23 and 30 degrees with constant moisture over 550 days. Measurements of organic-C and14C concentrations in the straw and in the soil samples were determined using dry combustion (Carmograph 12 A carbon analyser). "
     treatments:
-        - temperature
-        - site
-        - soilHorizon
+      temperature:
+              - 4
+              - 10
+              - 16
+              - 23
+              - 30
+      moisture:
+      site:
+      soilHorizon:
     incubationTime:
         time: 550
         units: days

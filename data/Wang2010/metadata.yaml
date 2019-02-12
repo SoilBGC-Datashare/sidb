@@ -71,8 +71,16 @@ siteInfo:
 incubationInfo:
        desc: "three laboratory replicates were incubated for 40 days at 5, 10, 15 and 20 degrees and under different moisture contents (0, 30, 60, 100 percent, CS- completely water saturated)."
        treatments:
-          - temperature
-          - moisture content
+          temperature:
+             - 5
+             - 10
+             - 15
+             - 20
+          moisture:
+            - 0
+            - 30
+            - 60
+            - 100
        incubationTime:
           time: 40
           units: days

@@ -24,8 +24,10 @@ siteInfo:
 incubationInfo:
        desc: "Soil was collected from 2 depth intervals: 5 to 15 cm and 95 to 105 cm. Samples of each layer were incubated at 25deg and at 35deg for 176 days"
        treatments:
-          - temperature
-          - soilHorizon
+          temperature:
+            - 25
+            - 35
+          soilHorizon:
        incubationTime:
           time: 176
           units: days

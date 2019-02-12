@@ -94,10 +94,16 @@ incubationInfo:
                 standardError: 0.5
                 units: "Mg ha$^{-1}$"
        treatments:
-          - temperature
+          temperature:
+                - 7
+                - 14
+                - 21
        incubationTime:
           time: 370
           units: days
+
+
+
 
 variables:
        V1:

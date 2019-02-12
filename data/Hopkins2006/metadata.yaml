@@ -17,11 +17,12 @@ siteInfo:
 incubationInfo:
        desc: "Five laboratory replicates from composite field samples were incubated at 10deg for 48 d and CO2 production was measured using a Respicond IV respirometer."
        treatments:
-          - temperature
-          - soil
-          - glucose
-          - glycine
-          - NH4Cl
+          temperature:
+            - 10
+          soil:
+          glucose:
+          glycine:
+          NH4Cl:
        incubationTime:
           time: 48
           units: days

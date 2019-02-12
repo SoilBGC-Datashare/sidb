@@ -35,7 +35,9 @@ siteInfo:
 incubationInfo:
        desc: "Samples in the sealed jars were incubated at the predefined LIT10 or LIT30 for 24 hours and head space gas was sampled a second time for Gas Chromatograph"
        treatments:
-          - temperature
+          temperature:
+            - 10
+            - 30
        incubationTime:
           time: 525
           units: days

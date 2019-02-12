@@ -28,11 +28,18 @@ siteInfo:
 incubationInfo:
     desc: "CO2 accumulation in the headspace of the vessel was measured using a Li-Cor 6200. CO2 concentrations were blank corrected and expressed as soil respiration (mg C g soil^{-1} day^{-1})."
     treatments:
-        - moisture
-        - temperature
+        temperature:
+          - 5
+          - 10
+          - 20
+        moisture:
+          - 2
+          - 5
     incubationTime:
         time: 120
         units: days
+
+
 
 variables:
         V1:

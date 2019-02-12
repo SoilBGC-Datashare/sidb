@@ -66,8 +66,14 @@ siteInfo:
 incubationInfo:
        desc: "Five samples of 5 g DWT humus from each site were incubated at 50 percent WHC at 5, 10, 15, 20 and 25 degrees. Respiration rates were measured every second week for 14 weeks."
        treatments:
-          - temperature
-          - site
+          temperature:
+             - 5
+             - 10
+             - 15
+             - 20
+             - 25
+
+          site:
        incubationTime:
           time: 14
           units: weeks

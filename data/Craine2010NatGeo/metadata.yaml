@@ -301,9 +301,9 @@ siteInfo:
 incubationInfo:
   treatments:
     temperature:
-      - 20
+       -  20
     moisture:
-      - 35 
+      - 35
   incubationTime:
     time: 360
     units: days
@@ -453,4 +453,3 @@ variables:
         desc: cumulative respiration of Short Grass Steppe
         units: "mg CO$_2$ g^{-1} soil"
         site: "Short Grass Steppe"
-       

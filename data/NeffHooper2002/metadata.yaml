@@ -34,9 +34,11 @@ siteInfo:
 incubationInfo:
        desc: "Five laboratory replicates from composite field samples from each site and treatment combination were incubated at 10 and 30deg for 352 d. Air samples were taken at time 0 and at 24 h by syringe through a septum in the Mason jar lid, and injected into a sealed jar attached to the LI-COR 6200 Infrared gas analyser"
        treatments:
-          - temperature
-          - landUse
-          - site
+          temperature:
+             - 10
+             - 30
+          landUse:
+          site:
        incubationTime:
           time: 352
           units: days

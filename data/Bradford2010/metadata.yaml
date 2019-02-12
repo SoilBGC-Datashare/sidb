@@ -7,13 +7,13 @@ siteInfo:
     studySite:
         - "CoweetaLong-Term Ecological Research (LTER)"
         - "Harvard Forest (LTER)"
-    ecosystemType: 
+    ecosystemType:
         - Forest
         - Forest
-    climate: 
+    climate:
         - Temperate
         - Temperate
-    location: 
+    location:
         - "Coweeta Long-Term Ecological Research (LTER) site at high (CH) and low (CL) elevation"
         - "Harvard Forest LTER site in control (HOC, HMC) and heated plots (HOH, HMH) from organic-rich (HOC, HOH) and organic-poor (HMC, HMH) horizons"
     soilType:
@@ -35,15 +35,20 @@ siteInfo:
         siteNames:
               - CH
               - CL
-              - HMC  
+              - HMC
 
 incubationInfo:
     desc: "Microbial biomass was measured using substrate-induced respiration. Values are expressed as raw respiration rates (mg C g soil^{-1} day^{-1})."
     treatments:
-        - temperature
+          temperature:
+              - 10
+              - 20
+              - 30
+
     incubationTime:
         time: 77
         units: days
+
 variables:
         V1:
           name: time

@@ -25,7 +25,7 @@ siteInfo:
          - Temperate
          - Temperate
          - Temperate
-       texture: 
+       texture:
          percentClay:
            - 22
            - 82
@@ -37,9 +37,17 @@ siteInfo:
 incubationInfo:
        desc: "Sets of jars containing soils for biomass C and CO2 measurements were incubated at 15deg or 35deg for 150 d, in fully randomised blocks. Soils incubated at 35deg required from 1 to 2 ml water after 50 d of incubation"
        treatments:
-          - temperature
-          - landUse
-          - site
+          temperature:
+            - 15
+            - 35
+          landUse:
+            - Grassland
+            - Beans
+            - Maize
+            - Evergreen forest
+            - Cereals
+
+          site:
        incubationTime:
           time: 150
           units: days

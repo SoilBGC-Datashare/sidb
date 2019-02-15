@@ -2,98 +2,89 @@ citationKey: Arevalo2012
 doi: 10.2136/sssaj2011.0126
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-04-27
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
-      studySite: "Linaria parkland region of Alberta, Canada"
-      ecosystemType: Cropland
-      landUse:
-        - agriculture
-        - plantation
+      studySite: "Linaria parkland region of Alberta"
+      country: Canada
+      landCover:
+        - cultivated
+        - forest
+        - forest
         - grassland
-        - native
-        - aspen
-      climate: Temperate
-      soilType: Dark grey Luvisol
+        - forest
+      soilTaxonomy: 
+          soilOrder: Luvisol
+          classificationSystem: FAO
       coordinates:
           latitude:
             - 54.2
           longitude:
             - -114.1333
+      experimentalTreatments:
+          landUse:
+            AG: 
+              description: "Agriculture, planted with canola"
+            2HP: 
+              description: "2-year-old hybrid poplar plantation"
+            9HP: 
+              description: "9-year-old hybrid poplar plantation"
+            GRA: 
+              description: "Non-native grassland"
+            NAT: 
+              description: "Native vegetation with trembling aspen"
 
 incubationInfo:
-       desc: "Soils were incubated at three different temperatures: 7, 14, and 21 degrees celcius"
-       soil:
-          AG:
-            desc: "Agriculture, planted with canola"
-            texture:
-                percentSand: 30
-                percentClay: 29
-                percentSilt: 41
-            carbonStock:
-                mean: 75.4
-                standardError: 2.3
-                units: "Mg ha$^{-1}$"
-            nitrogenStock:
-                mean: 6.5
-                standardError: 0.3
-                units: "Mg ha$^{-1}$"
-          2HP:
-            desc: "2-yr-old poplar plantation"
-            texture:
-                percentSand: 30
-                percentClay: 27
-                percentSilt: 43
-            carbonStock:
-                mean: 64.3
-                standardError: 2.3
-                units: "Mg ha$^{-1}$"
-            nitrogenStock:
-                mean: 5.7
-                standardError: 0.1
-                units: "Mg ha$^{-1}$"
-          9HP:
-            desc: "9-yr-old poplar plantation"
-            texture:
-                percentSand: 33
-                percentClay: 26
-                percentSilt: 41
-            carbonStock:
-                mean: 78.2
-                standardError: 8.8
-                units: "Mg ha$^{-1}$"
-            nitrogenStock:
-                mean: 7.0
-                standardError: 0.9
-                units: "Mg ha$^{-1}$"
-          GRA:
-            desc: "Grassland"
-            texture:
-                percentSand: 36
-                percentClay: 26
-                percentSilt: 38
-            carbonStock:
-                mean: 56.7
-                standardError: 3.4
-                units: "Mg ha$^{-1}$"
-            nitrogenStock:
-                mean: 5.0
-                standardError: 0.2
-                units: "Mg ha$^{-1}$"
-          NAT:
-            desc: "Native aspen stand"
-            texture:
-                percentSand: 35
-                percentClay: 31
-                percentSilt: 34
-            carbonStock:
-                mean: 27.6
-                standardError: 8.8
-                units: "Mg ha$^{-1}$"
-            nitrogenStock:
-                value: 2.1
-                standardError: 0.5
-                units: "Mg ha$^{-1}$"
-       treatments:
+       description: "Soils from 5 different land use were incubated at three different temperatures: 7, 14, and 21 degrees celcius"
+       texture:
+            percentSand: 
+                - 30
+                - 30
+                - 33
+                - 36
+                - 35
+            percentClay: 
+                - 29
+                - 27
+                - 26
+                - 26
+                - 31
+            percentSilt: 
+                - 41
+                - 43
+                - 41
+                - 38
+                - 34
+       carbon:
+            mean: 
+                - 75.4
+                - 64.3
+                - 78.2
+                - 56.7
+                - 27.6
+            standardError: 
+                - 2.3
+                - 2.3
+                - 8.8
+                - 3.4
+                - 8.8
+            units: "Mg ha$^{-1}$"
+       nitrogen:
+            mean: 
+                - 6.5
+                - 5.7
+                - 7.0
+                - 5.0
+                - 2.1
+            standardError: 
+                - 0.3
+                - 0.1
+                - 0.9
+                - 0.2
+                - 0.5
+            units: "Mg ha$^{-1}$"
+       laboratoryTreatment:
           temperature:
                 - 7
                 - 14
@@ -101,9 +92,6 @@ incubationInfo:
        incubationTime:
           time: 370
           units: days
-
-
-
 
 variables:
        V1:
@@ -114,88 +102,88 @@ variables:
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system AG/ agriculture"
           units: "Percent (%)"
           temperature: 7
-          soil: AG
+          landUse: AG
        V3:
           name: C_AG_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system AG/ agriculture"
           units: "Percent (%)"
           temperature: 14
-          soil: AG
+          landUse: AG
        V4:
           name: C_AG_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system AG/ agriculture"
           units: "Percent (%)"
           temperature: 21
-          soil: AG
+          landUSe: AG
        V5:
           name: C_2HP_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
           units: "Percent (%)"
           temperature: 7
-          soil: 2HP
+          landUSe: 2HP
        V6:
           name: C_2HP_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
           units: "Percent (%)"
           temperature: 14
-          soil: 2HP
+          landUse: 2HP
        V7:
           name: C_2HP_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
           units: "Percent (%)"
           temperature: 21
-          soil: 2HP
+          landUse: 2HP
        V8:
           name: C_9HP_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
           units: "Percent (%)"
           temperature: 7
-          soil: 9HP
+          landUse: 9HP
        V9:
           name: C_9HP_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
           units: "Percent (%)"
           temperature: 14
-          soil: 9HP
+          landUse: 9HP
        V10:
           name: C_9HP_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
           units: "Percent (%)"
           temperature: 21
-          soil: 9HP
+          landUse: 9HP
        V11:
           name: C_GRA_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system GRA/ grassland"
           units: "Percent (%)"
           temperature: 7
-          soil: GRA
+          landUse: GRA
        V12:
           name: C_GRA_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system GRA/ grassland"
           units: "Percent (%)"
           temperature: 14
-          soil: GRA
+          landUse: GRA
        V13:
           name: C_GRA_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system GRA/ grassland"
           units: "Percent (%)"
           temperature: 21
-          soil: GRA
+          landUse: GRA
        V14:
           name: C_NAT_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system NAT/ native aspen stand"
           units: "Percent (%)"
           temperature: 7
-          soil: NAT
+          landUse: NAT
        V15:
           name: C_NAT_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system NAT/ native aspen stand"
           units: "Percent (%)"
           temperature: 14
-          soil: NAT
+          landUse: NAT
        V16:
           name: C_NAT_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system NAT/ native aspen stand"
           units: "Percent (%)"
           temperature: 21
-          soil: NAT
+          landUse: NAT

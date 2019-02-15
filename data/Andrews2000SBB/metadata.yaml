@@ -2,14 +2,16 @@ citationKey: Andrews2000SBB
 doi: 10.1016/S0038-0717(99)00206-0
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-04-27
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
-       studySite: Central Piedmont region of North Carolina, USA
-       ecosystemType: Forest
-       climate: Temperate
-       soilType: Alfisol
-       texture:
-          desc: Mixed clay mineralogy
+       studySite: Central Piedmont region of North Carolina
+       country: USA
+       landCover: Forest
+       soilTaxonomy: 
+          soilOrder: Alfisol
+          classificationSystem: USDA
        coordinates:
          latitude:
            - 36.6166667
@@ -17,8 +19,8 @@ siteInfo:
            - -79.150
 
 incubationInfo:
-       desc: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius as well as ambient and elevated CO2"
-       treatments:
+       description: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius as well as ambient and elevated CO2"
+       laboratoryTreatment:
           temperature:
                 - 4
                 - 15

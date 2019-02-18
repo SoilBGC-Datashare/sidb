@@ -37,7 +37,7 @@ siteInfo:
          - 1100
 
 incubationInfo:
-    desc: "CO2 accumulation in the headspace of the vessel was measured using a Li-Cor 6200. CO2 concentrations were blank corrected and expressed as soil respiration (mg C g soil^{-1} day^{-1})."
+    description: "CO2 accumulation in the headspace of the vessel was measured using a Li-Cor 6200. CO2 concentrations were blank corrected and expressed as soil respiration (mg C g soil^{-1} day^{-1})."
     treatments:
         temperature:
           - 5

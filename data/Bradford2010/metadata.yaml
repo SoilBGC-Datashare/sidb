@@ -2,43 +2,57 @@ citationKey: Bradford2010
 doi: 10.1111/j.1365-2486.2009.02040.x
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-07-11
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
     studySite:
-        - "CoweetaLong-Term Ecological Research (LTER)"
-        - "Harvard Forest (LTER)"
-    ecosystemType:
-        - Forest
-        - Forest
-    climate:
-        - Temperate
-        - Temperate
-    location:
-        - "Coweeta Long-Term Ecological Research (LTER) site at high (CH) and low (CL) elevation"
-        - "Harvard Forest LTER site in control (HOC, HMC) and heated plots (HOH, HMH) from organic-rich (HOC, HOH) and organic-poor (HMC, HMH) horizons"
-    soilType:
-        - "Coarse- to fine loamy"
-        - "Fine loamy Haplumbrepts, organic-poor (CL)"
-        - "Coarse loamy Haplumbrepts, organic-rich (CH)"
-        - "Fine-loamy Dystrochrept (HMC)"
-        - "organic-poor (HMC, HMH)"
-        - "organic-rich (HOC, HOH)"
+        - "Coweeta Long-Term Ecological Research LTER"
+        - "Harvard Forest LTER"
+    country: USA
+    landCover: Forest
+    soilTaxonomy:
+        soilOrder: Inceptisol
+        soilFamily:
+          - "Coarse‐loamy, mixed, mesic Typic Haplumbrepts"
+          - "Fine‐loamy, mixed, mesic Typic Haplumbrepts"
+          - "Fine‐loamy, mixed, mesic Typic Dystrochrept"
+          - "Fine‐loamy, mixed, mesic Typic Dystrochrept"
+          - "Fine‐loamy, mixed, mesic Typic Dystrochrept"
+          - "Fine‐loamy, mixed, mesic Typic Dystrochrept"
     coordinates:
         latitude:
               - 35.016667
               - 35.033333
               - 42.5
+              - 42.5
+              - 42.5
+              - 42.5
         longitude:
               - -83.45
               - -83.433333
               - -72.166667
-        siteNames:
-              - CH
-              - CL
-              - HMC
+              - -72.166667
+              - -72.166667
+              - -72.166667
+    MAP:
+        - 1900
+        - 1900
+        - 1080
+        - 1080
+        - 1080
+        - 1080
+    experimentalTreatment: 
+        site: 
+          - CH
+          - CL
+          - HOC
+          - HOH
+          - HMC
+          - HMH
 
 incubationInfo:
-    desc: "Microbial biomass was measured using substrate-induced respiration. Values are expressed as raw respiration rates (mg C g soil^{-1} day^{-1})."
+    description: "Microbial biomass was measured using substrate-induced respiration. Values are expressed as raw respiration rates (mg C g soil^{-1} day^{-1})."
     treatments:
           temperature:
               - 10
@@ -56,90 +70,108 @@ variables:
         V2:
           name:  C_10deg_CH
           temperature: 10
+          site: CH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for CH"
           units: "mg C g soil^{-1} day^{-1}"
         V3:
           name:  C_20deg_CH
           temperature: 20
+          site: CH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for CH"
           units: "mg C g soil^{-1} day^{-1}"
         V4:
           name:  C_30deg_CH
           temperature: 30
+          site: CH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for CH"
           units: "mg C g soil^{-1} day^{-1}"
         V5:
           name:  C_10deg_CL
           temperature: 10
+          site: CL
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for CL"
           units: "mg C g soil^{-1} day^{-1}"
         V6:
           name:  C_20deg_CL
           temperature: 20
+          site: CL
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for CL"
           units: "mg C g soil^{-1} day^{-1}"
         V7:
           name:  C_30deg_CL
           temperature: 30
+          site: CL
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for CL"
           units: "mg C g soil^{-1} day^{-1}"
         V8:
           name:  C_10deg_HOC
           temperature: 10
+          site: HOC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HOC"
           units: "mg C g soil^{-1} day^{-1}"
         V9:
           name:  C_20deg_HOC
           temperature: 20
+          site: HOC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HOC"
           units: "mg C g soil^{-1} day^{-1}"
         V10:
           name:  C_30deg_HOC
           temperature: 30
+          site: HOC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HOC"
           units: "mg C g soil^{-1} day^{-1}"
         V11:
           name:  C_10deg_HMC
           temperature: 10
+          site: HMC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HMC"
           units: "mg C g soil^{-1} day^{-1}"
         V12:
           name:  C_20deg_HMC
           temperature: 20
+          site: HMC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HMC"
           units: "mg C g soil^{-1} day^{-1}"
         V13:
           name:  C_30deg_HMC
           temperature: 30
+          site: HMC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HMC"
           units: "mg C g soil^{-1} day^{-1}"
         V14:
           name:  C_10deg_HOH
           temperature: 10
+          site: HOH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HOH"
           units: "mg C g soil^{-1} day^{-1}"
         V15:
           name:  C_20deg_HOH
           temperature: 20
+          site: HOH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HOH"
           units: "mg C g soil^{-1} day^{-1}"
         V16:
           name:  C_30deg_HOH
           temperature: 30
+          site: HOH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HOH"
           units: "mg C g soil^{-1} day^{-1}"
         V17:
           name:  C_10deg_HMH
           temperature: 10
+          site: HMH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HMH"
           units: "mg C g soil^{-1} day^{-1}"
         V18:
           name:  C_20deg_HMH
           temperature: 20
+          site: HMH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HMH"
           units: "mg C g soil^{-1} day^{-1}"
         V19:
           name:  C_30deg_HMH
           temperature: 30
+          site: HMH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HMH"
           units: "mg C g soil^{-1} day^{-1}"

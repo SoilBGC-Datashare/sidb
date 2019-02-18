@@ -2,6 +2,8 @@ citationKey: Craine2010NatGeo
 doi: 10.1038/NGEO1009
 entryAuthor: Maddie Tilyou
 entryCreationDate: 2016-07-25
+contactName: Alain Plante
+contactEmail: aplante@sas.upenn.edu
 
 siteInfo:
     studySite:
@@ -33,6 +35,7 @@ siteInfo:
       - "Kankankee Sands (KAN)"
       - "Ordway-Swisher (ORD)"
       - "Short Grass Steppe (SGS)"
+    country: USA
     MAT:
       - 7.8
       - 6.2
@@ -150,8 +153,47 @@ siteInfo:
         - -87.46
         - -82.00
         - -104.19
-    soilTypes: Ulttisol
-    texture:
+    experimentalTreatment:
+        site: 
+          - HJ Andrews
+          - American Prarie
+          - Toolik
+          - Baltimore Ecosystem Study
+          - Bonanza Creek
+          - Florida Coastal Everglades
+          - Harvard Forest
+          - Jornada Basin
+          - Kellog Biological Station
+          - Olympic National Park
+          - Sedgwick
+          - Walker Branch
+          - Wind River
+          - Coweeta
+          - Georgia Coastal Ecosystem
+          - Guanica
+          - Itasca State Park
+          - Konza Prarie
+          - Luquillo
+          - Niwot Range
+          - San Joaquin Exper. Range
+          - Santa Rita Exper. Range
+          - Hubbard Brook
+          - Jepson Prairie
+          - Kankankee Sands
+          - Ordway-Swisher
+          - Short Grass Steppe  
+
+incubationInfo:
+  laboratoryTreatment:
+    temperature:
+       -  20
+    moisture:
+      - 35
+  incubationTime:
+    time: 360
+    units: days
+  replicates: 5
+  texture:
       percentSand:
         - 82.5
         - 47.5
@@ -239,7 +281,8 @@ siteInfo:
         - 32.5
         - 2.5
         - 22.5
-    carbon:
+  carbon:
+    mean:
         - 42.1
         - 22
         - 22.9
@@ -268,7 +311,9 @@ siteInfo:
         - 14.5
         - 6.2
         - 9.1
-    nitrogen:
+    units: percent
+  nitrogen:
+    mean:
         - 2
         - 2.1
         - 1.5
@@ -297,17 +342,7 @@ siteInfo:
         - 1.1
         - 0.4
         - 0.8
-
-incubationInfo:
-  treatments:
-    temperature:
-       -  20
-    moisture:
-      - 35
-  incubationTime:
-    time: 360
-    units: days
-  replicates: 5
+   units: percent
 
 variables:
        V1:
@@ -317,7 +352,7 @@ variables:
         name: Cumresp_AND
         desc: cumulative respiration of HJ andrews
         units: "mg CO$_2$ g^{-1} soil"
-        site: "HJ Andrew"
+        site: "HJ Andrews"
        V3:
         name: Cumresp_AP
         desc: cumulative respiration of American Prarie

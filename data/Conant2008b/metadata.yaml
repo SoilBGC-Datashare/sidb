@@ -2,43 +2,28 @@ citationKey: Conant2008b
 doi: 10.1890/08-0137.1
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-07-26
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
-  studySite:
-     - Northern Great Plains Research Laboratory,Mandan, North Dakota
-     - Northern Great Plains Research Laboratory,Mandan, North Dakota
-     - Waggoner Ranch, Vernon, Texas
-     - Waggoner Ranch, Vernon, Texas
-  ecosystemType:
-     - Wheat cropland
-     - Northern mixed-grass praire
-     - Wheat cropland
-     - Southern mixed-grass praire
-  climate:
-     - Temperate
-     - Temperate
-     - Temperate
-     - Temperate
-  texture:
-     - percentSilt:
-        - 48.5
-        - 49.2
-        - 43.1
-        - 52.0
-     - percentClay:
-        - 34.3
-        - 29.7
-        - 42.3
-        - 30.9
+  studySite: Northern Great Plains Research Laboratory, Mandan, North Dakota
+  country: USA
+  landCover: cultivated
   coordinates:
     latitude:
        - 33.833333
     longitude:
        - -99.033333
+  MAT: 5
+  MAP: 400
+  experimentalTreatment:
+    landUse: 
+       - Cultivated
+       - Grassland
 
 incubationInfo:
-    desc: "Soil respiration rates were determined through periodic analysis of CO2 concentration of headspace gas samples using a LI-COR 6525"
-    treatments:
+    description: "Soil respiration rates were determined through periodic analysis of CO2 concentration of headspace gas samples using a LI-COR 6525"
+    laboratoryTreatment:
       temperature:
             - 4
             - 15
@@ -47,6 +32,13 @@ incubationInfo:
     incubationTime:
         time: 589
         units: days
+    carbon:
+        mean: 2.8
+        standardError: 0.24
+        units: "g C / 100 g soil"
+    texture:
+        percentSilt: 48.5
+        percentClay: 34.3
 
 variables:
         V1:
@@ -55,15 +47,18 @@ variables:
         V2:
           name:  ND-CU-4
           temperature: 4
+          landUse: Cultivated
           desc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 4 degrees"
           units: "mg CO_2-C/g soil"
         V3:
           name:  ND-CU-15
           temperature: 15
+          landUse: Cultivated
           desc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 15 degrees"
           units: "mg CO_2-C/g soil"
         V4:
           name:  ND-CU-25
           temperature: 25
+          landUse: Cultivated
           desc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 25 degrees"
           units: "mg CO_2-C/g soil"

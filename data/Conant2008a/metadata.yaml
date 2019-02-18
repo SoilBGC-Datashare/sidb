@@ -2,17 +2,18 @@ citationKey: Conant2008a
 doi: 10.1111/j.1365-2486.2008.01541.x
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-07-26
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
+entryNote: "It is unclear from the manuscript whether the data reported in Fig 1 correspond to the Akron or the Vernon site. Data is reported in decay and commulative form."
 
 siteInfo:
     studySite:
       - Akron, Colorado
       - Vernon, Texas
-    ecosystemType:
-      - Cultivated
-      - Grassland
-    climate:
-      - Temperate
-      - Temperate
+    country: USA
+    landCover:   
+      - cultivated
+      - grassland
     coordinates:
       latitude:
          - 40.25
@@ -20,10 +21,14 @@ siteInfo:
       longitude:
          - -103.25
          - -99.066667
+    experimentalTreatment:
+      site:
+         - Akron
+         - Vernon
 
 incubationInfo:
-    desc: "Samples were flushed with compressed air when CO2 concentrations approached 50000 ppm CO2, samples were remoistened to maintain soil moisture above 95% of original moisture."
-    treatments:
+    description: "Samples were flushed with compressed air when CO2 concentrations approached 50000 ppm CO2, samples were remoistened to maintain soil moisture above 95% of original moisture."
+    laboratoryTreatment:
           temperature:
               - 25
               - 35

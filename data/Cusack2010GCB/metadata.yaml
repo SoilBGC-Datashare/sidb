@@ -2,10 +2,16 @@ citationKey: Cusack2010GCB
 doi: 10.1111/j.1365-2486.2009.02131.x
 entryAuthor: Maddie Tilyou
 entryCreationDate: 2016-06-21
+contactName: Alain Plante
+contactEmail: aplante@sas.upenn.edu
+entryNote: "This entry is missing the N treatments reported in the manuscript"
 
 siteInfo:
         studySite: Luquillo Experimental Forest (LEF)
         country: USA
+        landCover: 
+          - forest
+          - forest
         ecosystemType:
           - wet tropical rainforest
           - lower montane forest
@@ -15,18 +21,14 @@ siteInfo:
         MAT:
           - 23
           - 21
-        altitude:
+        elevation:
           - 260
           - 640
-        soilType:
-          - Ultisol
-          - Ultisol
-        vegetation:
-          - Dacryodes excelsa
-          - Cyrilla racemiflora, Micropholis chrysophylloides, Micropholis garciniifolia, Clusia krugiana
-        canopy height:
-          - 21
-          - 10
+        soilTaxonomy:
+          soilOrder:
+              - Ultisol
+              - Ultisol
+          classificationSystem: USDA
         coordinates:
           latitude:
             - 18.30
@@ -34,17 +36,17 @@ siteInfo:
           longitude:
             - -65.80
             - -65.80
-
+        experimentalTreatment:
+            elevation:
+               - upper
+               - lower
 incubationInfo:
-        soil:
-          depth: 0-10cm
-        treatments:
-            desc: "three sets of paired cores from each site were seperated and incubated at 21 and 31deg for 245 days. gas samples were measured using a thermal conductivity detector on a Shimadzu GC14 gas chro- matograph"
+        description: "three sets of paired cores from each site were seperated and incubated at 21 and 31deg for 245 days. gas samples were measured using a thermal conductivity detector on a Shimadzu GC14 gas chromatograph"
+        depth: 0-10
+        laboratoryTreatment:
             temperature:
               - 21
               - 31
-            moisture:
-              - FC
         incubationTime:
             time: 245
             units: days
@@ -60,22 +62,22 @@ variables:
         desc: "Decomposition rates over time at 21 degrees at lower elevation"
         units: "mg CO$_2$ g^{-1} soil"
         temperature: 21
-        site: Luquillo experimental forest, lower elevation
+        elevation: lower
        V3:
         name: L_31_Cumresp
         desc: "Decomposition rates over time at 31 degrees at lower elevation"
         units: "mg CO$_2$ g^{-1} soil"
         temperature: 31
-        site: Luquillo experimental forest, lower elvation
+        elevation: lower 
        V4:
         name: U_21_Cumresp
         desc: "Decomposition rates over time at 21 degrees at upper elevation"
         units: "mg CO$_2$ g^{-1} soil"
         temperature: 21
-        site: Luquillo experimental forest, upper elevation
+        elevation: upper
        V5:
         name: U_31_Cumresp
         desc: "Decomposition rates over time at 31 degrees at upper elevation"
         units: "mg CO$_2$ g^{-1} soil"
         temperature: 31
-        site: Luquillo experimental forest, upper elevation
+        elevation: upper

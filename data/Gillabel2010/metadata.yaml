@@ -2,11 +2,34 @@ citationKey: Gillabel2010
 doi: 10.1111/j.1365-2486.2009.02132.x
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-23
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
+
 siteInfo:
        studySite: Termunck, Belgium
+       country: Belgium
+       landCover: cropland
        ecosystemType: Winter barley cropland
-       climate: Temperate
-       soilType: silt loam haplic Luvisol
+       soilTaxonomy: 
+         soilSeries: silt loam haplic Luvisol
+         classificationSystem: WRB
+       coordinates:
+         latitude: 50.878333
+         longitude: 4.656667
+       experimentalTreatment:
+         soilHorizon:
+             - topsoil
+             - subsoil
+
+incubationInfo:
+       description: "Soil was collected from 2 depth intervals: 5 to 15 cm and 95 to 105 cm. Samples of each layer were incubated at 25deg and at 35deg for 176 days"
+       laboratoryTreatment:
+          temperature:
+            - 25
+            - 35
+       incubationTime:
+          time: 176
+          units: days
        texture:
          percentSand:
            - 13.2
@@ -17,20 +40,6 @@ siteInfo:
          percentClay:
            - 10.0
            - 14.8
-       coordinates:
-         latitude: 50.878333
-         longitude: 4.656667
-
-incubationInfo:
-       desc: "Soil was collected from 2 depth intervals: 5 to 15 cm and 95 to 105 cm. Samples of each layer were incubated at 25deg and at 35deg for 176 days"
-       treatments:
-          temperature:
-            - 25
-            - 35
-          soilHorizon:
-       incubationTime:
-          time: 176
-          units: days
 variables:
         V1:
           name: time

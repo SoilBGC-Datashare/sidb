@@ -2,9 +2,12 @@ citationKey: Fang2005
 doi: 10.1038/nature03138
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-19
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
-    studySite: Scotland
+    studySite: middle-aged plantation of Sitka spruce
+    country: Scotland
     ecosystemType: Sitka spruce plantation
     coordinates:
       latitudes:
@@ -13,46 +16,17 @@ siteInfo:
          - -3.8
 
 incubationInfo:
-    desc: "Respired CO2 was measured with an infrared gas analyser in differential mode"
-    treatments:
-       temperature:
-            - 20
-       soil moisture:
-       fresh air:
+    description: "Respired CO2 was measured with an infrared gas analyser in differential mode"
+    temperature: 20
     incubationTime:
         time: 108
         units: days
+
 variables:
         V1:
           name: time
           units: days
         V2:
-          name: a
-          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for Q10 value"
-          initial value: Q10
-          units: "Relative properties"
-        V3:
-          name: b
-          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for TOC value"
-          initial value: TOC (total organic carbon)
-          units: "Relative properties"
-        V4:
-          name: c
-          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for DOC value"
-          initial value: DOC (water-dissolved organic carbon)
-          units: "Relative properties"
-        V5:
-          name: d
-          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for K2SO4-extracted C"
-          initial value: K2SO4-extracted carbon
-          units: "Relative properties"
-        V6:
           name: e
           desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for respiration rate at 20deg"
-          temperature: 20
-          units: "Relative properties"
-        V7:
-          name: f
-          desc: "Variations in respiration rate and soil carbon pools with increasing incubation time for microbial biomass C"
-          initial value: microbial biomass carbon
           units: "Relative properties"

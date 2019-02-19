@@ -2,6 +2,8 @@ citationKey: Haddix2011
 doi: 10.2136/sssaj2010.0118
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-08-24
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
        studySites:
@@ -11,13 +13,20 @@ siteInfo:
          - "Vernon, TX (Waggoner Ranch)"
          - "Alajuela, Costa Rica N/A (Alejula Research Station)"
          - "Rondonia, Brazil (Nova Vida Ranch)"
-       ecosystemType:
-         - Native grassland and cultivated
-         - Native grassland and cultivated
-         - Native grassland and cultivated
-         - Native grassland and cultivated
-         - Native forest and pasture
-         - Native forest and pasture
+       country:
+         - USA
+         - USA
+         - USA
+         - USA
+         - Costa Rica
+         - Brazil
+       landCover:
+         - grassland
+         - grassland
+         - grassland
+         - grassland
+         - forest
+         - forest
        MAT:
          - 2
          - 5
@@ -32,13 +41,15 @@ siteInfo:
          - 665
          - .na.real
          - 2200
-       soilTypes:
-         - "Udic Boroll"
-         - "Typic Argiboroll"
-         - "Aridic Paleustoll"
-         - "Typic Paleustoll"
-         - "Hydric Melanudand"
-         - "Paleudult & Kandidult"
+       soilTaxonomy:
+         soilFamily:
+           - "Udic Boroll"
+           - "Typic Argiboroll"
+           - "Aridic Paleustoll"
+           - "Typic Paleustoll"
+           - "Hydric Melanudand"
+           - "Paleudult & Kandidult"
+         classificationSystem: USDA
        coordinates:
            latitude:
              - 50.533
@@ -54,20 +65,75 @@ siteInfo:
              - -99.413
              - .na.real
              - -62.824
-
+       experimentalTreatment:
+           landUse:
+              - native grassland
+              - cultivated
+              - native forest
+              - pasture
+           site:
+              - Indian Head
+              - Mandan
+              - Akron
+              - Vernon
+              - Alajuela
+              - Rondonia
 incubationInfo:
-       desc: "Four laboratory replicates from composite field samples from each site and treatment combination were incubated at 15, 25, and 35deg for 588 d. Headspace gas samples were analyzed for CO2 concentration using a Li-Cor LI-6252 infrared gas analyzer"
-       treatments:
+       description: "Four laboratory replicates from composite field samples from each site and treatment combination were incubated at 15, 25, and 35deg for 588 d. Headspace gas samples were analyzed for CO2 concentration using a Li-Cor LI-6252 infrared gas analyzer"
+       laboratoryTreatment:
           temperature:
             - 15
             - 25
             - 35
-          landUse:
-          site:
        incubationTime:
           time: 588
           units: days
        replicates: 4
+       texture:
+          percentClay:
+             - 50
+             - 61 
+             - 28
+             - 33
+             - 23
+             - 28
+             - 31
+             - 44
+             - 9
+             - 12
+             - 30
+             - 25
+       carbon: 
+          mean: 
+             - 37.1
+             - 22.9
+             - 32.4
+             - 28.0
+             - 11.6
+             - 6.9
+             - 11.2
+             - 10.2
+             - 200.2
+             - 141.6
+             - 10.6
+             - 14.1
+         units: "g kg$^{-1}$"
+       nitrogen:
+         mean:
+             - 3.58
+             - 2.04
+             - 2.93
+             - 2.40
+             - 1.35
+             - 1.00
+             - 1.29
+             - 1.25
+             - 16.60
+             - 10.45
+             - 1.09
+             - 1.33
+         units: "g kg$^{-1}$"
+
 variables:
         V1:
           name: time

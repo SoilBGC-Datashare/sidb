@@ -2,14 +2,15 @@ citationKey: Reichstein2000
 doi: 10.1016/S0038-0717(00)00002-X
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-10-27
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
        studySite:
          - "Davos, Switzerland; ridge"
          - "Davos, Switzerland; gully"
-       ecosystemType:
-         - Forest-Tundra
-         - Forest-Tundra
+       country: Switzerland
+       landCover: forest
        Altitude:
          - 2200
          - 2000
@@ -19,12 +20,6 @@ siteInfo:
        MAP:
          - 1047
          - 1047
-       Horizons:
-         - Oe/ Oa, A
-         - Oe/ Oa, A
-       vegetation:
-         - Vaccinium-dwarf-shrub heath (ridges)
-         - Calamagrostis villosa L. (gullies)
        coordinates:
            latitude:
              - 46.783333
@@ -32,19 +27,23 @@ siteInfo:
            longitude:
              - 9.866667
              - 9.866667
+       experimentalTreatment:
+           site:
+              - Ridge
+              - Gully
 
 incubationInfo:
        desc: "Three ridge and three gully soils were incubated at 5, 15, and 25deg for 104 d. A closed gas-cycle apparatus including an IRGA was used to measure CO2-flux"
-       treatments:
+       laboratoryTreatments:
           temperature:
              - 5
              - 15
              - 25
-          site:
        incubationTime:
           time: 104
           units: days
        replicates: 3
+
 variables:
         V1:
           name: time

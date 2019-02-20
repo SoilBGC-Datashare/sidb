@@ -8,10 +8,14 @@ siteInfo:
          - "Well drained site, Delta Junction, central Alaska"
          - "Moderately well drained site, Delta Junction, central Alaska"
          - "Poorly Drained site, Fairbanks, Alaska"
-       soilType:
-         - "Inceptisol cryept"
-         - "Gelisol orthel"
-         - "Gelisol histel"
+       country: USA
+       landCover: forest
+       soilTaxonomy:
+         soilFamily:
+            - "Inceptisol cryept"
+            - "Gelisol orthel"
+            - "Gelisol histel"
+         classificationSystem: USDA
        vegetation:
          - "mature black spruce forest"
          - "mature black spruce forest"
@@ -25,10 +29,15 @@ siteInfo:
              - -145.733333
              - -145.733333
              - -148.316667
+       experimentalTreatment:
+           drainage:
+             - Well drained
+             - Moderately well drained
+             - Poorly drained
 
 incubationInfo:
-       desc: "five laboratory replicates were incubated at five different moisture contents (2, 25, 50, 75, and 100 percent saturation) and two different temperatures (10 and 20 deg) in a full factorial design for 57 days."
-       treatments:
+       description: "five laboratory replicates were incubated at five different moisture contents (2, 25, 50, 75, and 100 percent saturation) and two different temperatures (10 and 20 deg) in a full factorial design for 57 days."
+       laboratoryTreatments:
           temperature:
              - 10
              - 20
@@ -42,6 +51,7 @@ incubationInfo:
           time: 57
           units: days
        replicates: 5
+
 variables:
         V1:
           name: time
@@ -51,178 +61,208 @@ variables:
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 2 percent"
           temperature: 10
-          moisture content: 2
+          moisture: 2
+          drainage: Well drained
         V3:
           name: C_WD_10_25
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 25 percent"
           temperature: 10
-          moisture content: 25
+          moisture: 25
+          drainage: Well drained
         V4:
           name: C_WD_10_50
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 50 percent"
           temperature: 10
-          moisture content: 50
+          moisture: 50
+          drainage: Well drained
         V5:
           name: C_WD_10_75
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 75 percent"
           temperature: 10
-          moisture content: 75
+          moisture: 75
+          drainage: Well drained
         V6:
           name: C_WD_10_100
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 100 percent"
           temperature: 10
-          moisture content: 100
+          moisture: 100
+          drainage: Well drained
         V7:
           name: C_WD_20_2
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 2 percent"
           temperature: 20
-          moisture content: 2
+          moisture: 2
+          drainage: Well drained
         V8:
           name: C_WD_20_25
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 25 percent"
           temperature: 20
-          moisture content: 25
+          moisture: 25
+          drainage: Well drained
         V9:
           name: C_WD_20_50
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 50 percent"
           temperature: 20
-          moisture content: 50
+          moisture: 50
+          drainage: Well drained
         V10:
           name: C_WD_20_75
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 75 percent"
           temperature: 20
-          moisture content: 75
+          moisture: 75
+          drainage: Well drained
         V11:
           name: C_WD_20_100
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 100 percent"
           temperature: 20
-          moisture content: 100
+          moisture: 100
+          drainage: Well drained
         V12:
           name: C_MWD_10_2
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 2 percent"
           temperature: 10
-          moisture content: 2
+          moisture: 2
+          drainage: Moderately well drained
         V13:
           name: C_MWD_10_25
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 25 percent"
           temperature: 10
-          moisture content: 25
+          moisture: 25
+          drainage: Moderately well drained
         V14:
           name: C_MWD_10_50
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 50 percent"
           temperature: 10
-          moisture content: 50
+          moisture: 50
+          drainage: Moderately well drained
         V15:
           name: C_MWD_10_75
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 75 percent"
           temperature: 10
-          moisture content: 75
+          moisture: 75
+          drainage: Moderately well drained
         V16:
           name: C_MWD_10_100
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 100 percent"
           temperature: 10
-          moisture content: 100
+          moisture: 100
+          drainage: Moderately well drained
         V17:
           name: C_MWD_20_2
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 2 percent"
           temperature: 20
-          moisture content: 2
+          moisture: 2
+          drainage: Moderately well drained
         V18:
           name: C_MWD_20_25
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 25 percent"
           temperature: 20
-          moisture content: 25
+          moisture: 25
+          drainage: Moderately well drained
         V19:
           name: C_MWD_20_50
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 50 percent"
           temperature: 20
-          moisture content: 50
+          moisture: 50
+          drainage: Moderately well drained
         V20:
           name: C_MWD_20_75
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 75 percent"
           temperature: 20
-          moisture content: 75
+          moisture: 75
+          drainage: Moderately well drained
         V21:
           name: C_MWD_20_100
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 100 percent"
           temperature: 20
-          moisture content: 100
+          moisture: 100
+          drainage: Moderately well drained
         V22:
           name: C_PD_10_2
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 2 percent"
           temperature: 10
-          moisture content: 2
+          moisture: 2
+          drainage: Poorly drained
         V23:
           name: C_PD_10_25
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 25 percent"
           temperature: 10
-          moisture content: 25
+          moisture: 25
+          drainage: Poorly drained
         V24:
           name: C_PD_10_50
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 50 percent"
           temperature: 10
-          moisture content: 50
+          moisture: 50
+          drainage: Poorly drained
         V25:
           name: C_PD_10_75
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 75 percent"
           temperature: 10
-          moisture content: 75
+          moisture: 75
+          drainage: Poorly drained
         V26:
           name: C_PD_10_100
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 100 percent"
           temperature: 10
-          moisture content: 100
+          moisture: 100
+          drainage: Poorly drained
         V27:
           name: C_PD_20_2
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 2 percent"
           temperature: 20
-          moisture content: 2
+          moisture: 2
+          drainage: Poorly drained
         V28:
           name: C_PD_20_25
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 25 percent"
           temperature: 20
-          moisture content: 25
+          moisture: 25
+          drainage: Poorly drained
         V29:
           name: C_PD_20_50
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 50 percent"
           temperature: 20
-          moisture content: 50
+          moisture: 50
+          drainage: Poorly drained
         V30:
           name: C_PD_20_75
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 75 percent"
           temperature: 20
-          moisture content: 75
+          moisture: 75
+          drainage: Poorly drained
         V31:
           name: C_PD_20_100
           units: "Percent of initial C mineralized"
           desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 100 percent"
           temperature: 20
-          moisture content: 100
+          moisture: 100
+          drainage: Poorly drained

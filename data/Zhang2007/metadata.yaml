@@ -2,16 +2,22 @@ citationKey: Zhang2007
 doi: 10.1016/S1001-0742(07)60052-7
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2017-01-31
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
-       studySite:
+       site:
          - "PP, Beipei, Chongqing"
          - "RP, Jinxian, Jiangxi"
          - "EP, Xiantao, Hubei"
-       soilType:
-         - "Typical Haplaquept"
-         - "Typical Hapludult"
-         - "Typical Fluvaquent"
+       country: China
+       landCover: cultivated
+       soilTaxonomy:
+         soilFamily:
+            - "Typical Haplaquept"
+            - "Typical Hapludult"
+            - "Typical Fluvaquent"
+         classificationSystem: USDA
        vegetation:
          - "rice field"
          - "rice field"
@@ -25,18 +31,23 @@ siteInfo:
              - 106.578889
              - 116.319722
              - 113.354767
+       experimentalTreatment:
+           site:
+             - "PP, Beipei, Chongqing"
+             - "RP, Jinxian, Jiangxi"
+             - "EP, Xiantao, Hubei"
 
 incubationInfo:
-       desc: "three laboratory replicates were incubated at 20 and 25 degrees for 114 d using PVC cylinders"
-       treatments:
+       description: "three laboratory replicates were incubated at 20 and 25 degrees for 114 d using PVC cylinders"
+       laboratoryTreatment:
           temperature:
                - 20
                - 25
-          studySite:
        incubationTime:
           time: 114
           units: days
        replicates: 3
+
 variables:
         V1:
           name: time
@@ -46,34 +57,34 @@ variables:
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation under 20 degrees for soil sample PP"
           temperature: 20
-          studySite: "PP, Beipei, Chongqing"
+          site: "PP, Beipei, Chongqing"
         V3:
           name: CO2_u20_RP
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation under 20 degrees for soil sample RP"
           temperature: 20
-          studySite: "RP, Jinxian, Jiangxi"
+          site: "RP, Jinxian, Jiangxi"
         V4:
           name: CO2_u20_EP
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation under 20 degrees for soil sample EP"
           temperature: 20
-          studySite: "EP, Xiantao, Hubei"
+          site: "EP, Xiantao, Hubei"
         V5:
           name: CO2_25_PP
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation at 25 degrees for soil sample PP"
           temperature: 25
-          studySite: "PP, Beipei, Chongqing"
+          site: "PP, Beipei, Chongqing"
         V6:
           name: CO2_25_RP
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation at 25 degrees for soil sample RP"
           temperature: 25
-          studySite: "RP, Jinxian, Jiangxi"
+          site: "RP, Jinxian, Jiangxi"
         V7:
           name: CO2_25_EP
           units: "C mineralization rate: mg CO2 -C/ (g OC x d)"
           desc: "Dynamics of C mineralization as CO2 evolution during the incubation at 25 degrees for soil sample EP"
           temperature: 25
-          studySite: "EP, Xiantao, Hubei"
+          site: "EP, Xiantao, Hubei"

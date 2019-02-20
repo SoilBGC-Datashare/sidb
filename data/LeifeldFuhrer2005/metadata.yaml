@@ -2,31 +2,25 @@ citationKey: LeifeldFuhrer2005
 doi: 10.1007/s10533-005-2237-4
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-09-30
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
-       studySites:
-         - Oensingen, Switzerland
-       ecosystemType:
-         - Arable rotation
-         - Permanent grassland
-       MAT:
-         - 9
-       MAP:
-         - 1109
-       soilTypes:
-         - Stagnic Cambisol
-         - Stagnic Gleysol
+       studySite: Oensingen, Switzerland
+       country: Switzerland
+       landCover: cultivated
+       MAT: 9
+       MAP: 1109
+       soilTaxonomy:
+         soilSeries: Stagnic Cambisol
+         classificationSystem: WRB
        coordinates:
-           latitude:
-             - 47.283333
-           longitude:
-             - 7.733333
+           latitude: 47.283333
+           longitude: 7.733333
 
 incubationInfo:
-       desc: "Samples were incubated at 25deg for 707 d. CO2 emission was measured in an automatic static incubation chamber of 1500 cm^-3 volume"
-       treatments:
-          temperature:
-             - 25
+       description: "Samples were incubated at 25deg for 707 d. CO2 emission was measured in an automatic static incubation chamber of 1500 cm^-3 volume"
+       temperature: 25
        incubationTime:
           time: 707
           units: days
@@ -38,4 +32,3 @@ variables:
           name: CO2_25
           units: "mg CO2-C kg^-1 SOC day^-1"
           desc: "CO2 production rates during a 707 days long-term incubation at 25deg"
-          temperature: 25

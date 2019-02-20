@@ -2,10 +2,16 @@ citationKey: JenkinsAdams2011
 doi: 10.1016/j.soilbio.2011.02.017
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-09-22
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
-       studySite:
-         - Snowy Mountains, NSW Australia
+       studySite: Snowy Mountains, NSW Australia
+       country: Australia
+       landCover:
+         - grassland
+         - grassland
+         - shrubland
        ecosystemType:
          - Grassland (G)
          - Woodland with Grass understorey (WG)
@@ -14,101 +20,52 @@ siteInfo:
          - 7.75
        MAP:
          - 1600
-       soilType:
-         - Chernic tenosol
-       texture:
-         percentSand: 47
-         percentSilt: 12
-         percentClay: 31
+       soilTaxonomy:
+         soilSeries: Chernic tenosol
+         classificationSystem: Australian soil classification
        coordinates:
            latitude:
              - -36.166667
            longitude:
              - 148.9
+       experimentalTreatment:
+           landUse:
+              - "Woodland with Shrub"
+              - "Woodland with Grass"
+              - "Grassland"
 
 incubationInfo:
-       desc: "Before respiration measurements, soils packed in incubation cylinders were equilibrated overnight at 20deg in a laboratory incubator. Over the course of a 120-day incubation RCO2 and R_O2 were measured at 0, 30, 90, 120 days after initial incubation."
-       treatments:
-          temperature:
-             - 20
-          landUse:
+       description: "Before respiration measurements, soils packed in incubation cylinders were equilibrated overnight at 20deg in a laboratory incubator. Over the course of a 120-day incubation RCO2 and R_O2 were measured at 0, 30, 90, 120 days after initial incubation."
+       laboratoryTreatment:
+          temperature: 20
        incubationTime:
           time: 120
           units: days
        replicates: 10
+       texture:
+         percentSand: 47
+         percentSilt: 12
+         percentClay: 31
+
 variables:
         V1:
           name: time
           units: days
         V2:
-          name: Q10Arr_WS
-          units: "Relative Properties"
-          desc: "Changes in Q10 (Arrhenius) of CO2 efflux over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Woodland with Shrub"
-          temperature: 20
-          landUse: "Woodland with Shrub"
-        V3:
-          name: Q10Exp_WS
-          units: "Relative Properties"
-          desc: "Changes in Q10 (exponential) of CO2 efflux over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Woodland with Shrub"
-          temperature: 20
-          landUse: "Woodland with Shrub"
-        V4:
           name: CO2Eff_WS
           units: "Relative Properties"
           desc: "Changes of CO2 efflux over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Woodland with Shrub"
           temperature: 20
           landUse: "Woodland with Shrub"
-        V5:
-          name: O2Upt_WS
-          units: "Relative Properties"
-          desc: "Changes of O2 uptake over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Woodland with Shrub"
-          temperature: 20
-          landUse: "Woodland with Shrub"
-        V6:
-          name: Q10Arr_WG
-          units: "Relative Properties"
-          desc: "Changes in Q10 (Arrhenius) of CO2 efflux over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Woodland with Grass"
-          temperature: 20
-          landUse: "Woodland with Grass"
-        V7:
-          name: Q10Exp_WG
-          units: "Relative Properties"
-          desc: "Changes in Q10 (exponential) of CO2 efflux over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Woodland with Grass"
-          temperature: 20
-          landUse: "Woodland with Grass"
-        V8:
+        V3:
           name: CO2Eff_WG
           units: "Relative Properties"
           desc: "Changes of CO2 efflux over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Woodland with Grass"
           temperature: 20
           landUse: "Woodland with Grass"
-        V9:
-          name: O2Upt_WG
-          units: "Relative Properties"
-          desc: "Changes of O2 uptake over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Woodland with Grass"
-          temperature: 20
-          landUse: "Woodland with Grass"
-        V10:
-          name: Q10Arr_G
-          units: "Relative Properties"
-          desc: "Changes in Q10 (Arrhenius) of CO2 efflux over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Grassland"
-          temperature: 20
-          landUse: "Grassland"
-        V11:
-          name: Q10Exp_G
-          units: "Relative Properties"
-          desc: "Changes in Q10 (exponential) of CO2 efflux over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Grassland"
-          temperature: 20
-          landUse: "Grassland"
-        V12:
+        V4:
           name: CO2Eff_G
           units: "Relative Properties"
           desc: "Changes of CO2 efflux over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Grassland"
-          temperature: 20
-          landUse: "Grassland"
-        V13:
-          name: O2Upt_G
-          units: "Relative Properties"
-          desc: "Changes of O2 uptake over time, relative to initial rates for surface soil (0-10 cm) from the sub-alpine vegetation type Grassland"
           temperature: 20
           landUse: "Grassland"

@@ -2,28 +2,30 @@ citationKey: ZhuCheng2011
 doi: 10.1016/j.soilbio.2010.12.021
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2017-02-07
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
        studySite:
          - "University of California at Santa Cruz campus"
          - "University of California at Santa Cruz campus"
-       ecosystemType:
-         - Farmland
-         - Grassland
-       texture:
-         desc:  "sandy loam"
+       country: USA
+       landCover:
+         - cultivated
+         - drassland
+       experimentalTreatment:
+         soilType:
+             - farm soil
+             - grassland soil
 
 incubationInfo:
-       desc: "Two soils were incubated for 122 days under two temperature regimes (constant vs. diurnally-varying) using 16 bottom-capped PVC pots."
-       treatments:
+       description: "Two soils were incubated for 122 days under two temperature regimes (constant vs. diurnally-varying) using 16 bottom-capped PVC pots."
+       laboratoryTreatment:
           temperature:
                   - 25
                   - 20
                   - 24
                   - 19
-          soilType:
-            - farm
-            - garssland
        incubationTime:
           time: 122
           units: days

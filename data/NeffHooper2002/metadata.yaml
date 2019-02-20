@@ -2,6 +2,8 @@ citationKey: NeffHooper2002
 doi: 10.1046/j.1365-2486.2002.00517.x
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2016-10-07
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
        studySite:
@@ -9,6 +11,8 @@ siteInfo:
          - "Chandalar"
          - "Toolik Lake"
          - "Sagwon"
+       country: USA
+       landCover: tundra
        ecosystemType:
          - Tundra (Tussock, Spruce)
          - Tundra (Tussock)
@@ -30,15 +34,19 @@ siteInfo:
              - -149.718167
              - -149.069167
              - -148.4955
+       experimentalTreatment:
+           site: 
+             - Fairbanks
+             - Chandalar
+             - Toolik Lake
+             - Sagwon
 
 incubationInfo:
-       desc: "Five laboratory replicates from composite field samples from each site and treatment combination were incubated at 10 and 30deg for 352 d. Air samples were taken at time 0 and at 24 h by syringe through a septum in the Mason jar lid, and injected into a sealed jar attached to the LI-COR 6200 Infrared gas analyser"
-       treatments:
+       description: "Five laboratory replicates from composite field samples from each site and treatment combination were incubated at 10 and 30deg for 352 d. Air samples were taken at time 0 and at 24 h by syringe through a septum in the Mason jar lid, and injected into a sealed jar attached to the LI-COR 6200 Infrared gas analyser"
+       laboratoryTreatment:
           temperature:
              - 10
              - 30
-          landUse:
-          site:
        incubationTime:
           time: 352
           units: days
@@ -48,275 +56,93 @@ variables:
           name: time
           units: days
         V2:
-          name: DOC_Fair_30
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Fairbanks soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock, Spruce)"
-          site: Fairbanks
-        V3:
-          name: DOC_Chan_30
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Chandalar soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock)"
-          site: Chandalar
-        V4:
-          name: DOC_Too_30
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Toolik Lake soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock, Shrub)"
-          site: Toolik Lake
-        V5:
-          name: DOC_Sag_30
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Sagwon soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock, Wet sedge)"
-          site: Sagwon
-        V6:
           name: CO2_Fair_30
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Fairbanks soils incubated at 30deg"
           temperature: 30
           landUse: "Tundra (Tussock, Spruce)"
           site: Fairbanks
-        V7:
+        V3:
           name: CO2_Chan_30
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Chandalar soils incubated at 30deg"
           temperature: 30
           landUse: "Tundra (Tussock)"
           site: Chandalar
-        V8:
+        V4:
           name: CO2_Too_30
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Toolik Lake soils incubated at 30deg"
           temperature: 30
           landUse: "Tundra (Tussock, Shrub)"
           site: Toolik Lake
-        V9:
+        V5:
           name: CO2_Sag_30
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Sagwon soils incubated at 30deg"
           temperature: 30
           landUse: "Tundra (Tussock, Wet sedge)"
           site: Sagwon
-        V10:
-          name: CO2/DOC_Fair_30
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Fairbanks soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock, Spruce)"
-          site: Fairbanks
-        V11:
-          name: CO2/DOC_Chan_30
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Chandalar soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock)"
-          site: Chandalar
-        V12:
-          name: CO2/DOC_Too_30
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Toolik Lake soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock, Shrub)"
-          site: Toolik Lake
-        V13:
-          name: CO2/DOC_Sag_30
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Sagwon soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock, Wet sedge)"
-          site: Sagwon
-        V14:
-          name: DOC_Fair_10
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Fairbanks soils incubated at 10deg"
-          temperature: 10
-          landUse: "Tundra (Tussock, Spruce)"
-          site: Fairbanks
-        V15:
-          name: DOC_Chan_10
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Chandalar soils incubated at 10deg"
-          temperature: 10
-          landUse: "Tundra (Tussock)"
-          site: Chandalar
-        V16:
-          name: DOC_Too_10
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Toolik Lake soils incubated at 10deg"
-          temperature: 10
-          landUse: "Tundra (Tussock, Shrub)"
-          site: Toolik Lake
-        V17:
-          name: DOC_Sag_10
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Sagwon soils incubated at 10deg"
-          temperature: 10
-          landUse: "Tundra (Tussock, Wet sedge)"
-          site: Sagwon
-        V18:
+        V6:
           name: CO2_Fair_10
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Fairbanks soils incubated at 10deg"
           temperature: 10
           landUse: "Tundra (Tussock, Spruce)"
           site: Fairbanks
-        V19:
+        V7:
           name: CO2_Chan_10
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Chandalar soils incubated at 10deg"
           temperature: 10
           landUse: "Tundra (Tussock)"
           site: Chandalar
-        V20:
+        V8:
           name: CO2_Too_10
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Toolik Lake soils incubated at 10deg"
           temperature: 10
           landUse: "Tundra (Tussock, Shrub)"
           site: Toolik Lake
-        V21:
+        V9:
           name: CO2_Sag_10
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Sagwon soils incubated at 10deg"
           temperature: 10
           landUse: "Tundra (Tussock, Wet sedge)"
           site: Sagwon
-        V22:
-          name: CO2/DOC_Fair_10
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Fairbanks soils incubated at 10deg"
-          temperature: 10
-          landUse: "Tundra (Tussock, Spruce)"
-          site: Fairbanks
-        V23:
-          name: CO2/DOC_Chan_10
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Chandalar soils incubated at 10deg"
-          temperature: 10
-          landUse: "Tundra (Tussock)"
-          site: Chandalar
-        V24:
-          name: CO2/DOC_Too_10
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Chandalar soils incubated at 10deg"
-          temperature: 10
-          landUse: "Tundra (Tussock, Shrub)"
-          site: Toolik Lake
-        V25:
-          name: CO2/DOC_Sag_10
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Sagwon soils incubated at 10deg"
-          temperature: 10
-          landUse: "Tundra (Tussock, Wet sedge)"
-          site: Sagwon
-        V26:
-          name: DOC_FairTuss_30
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Fairbanks tussock soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock)"
-          site: Fairbanks
-        V27:
-          name: DOC_FairSpru_30
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Fairbanks spruce soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Spruce)"
-          site: Fairbanks
-        V28:
-          name: DOC_TooTuss_30
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Toolik tussock soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock)"
-          site: Toolik Lake
-        V29:
-          name: DOC_TooWet_30
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Toolik wet sedge soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (wet sedge)"
-          site: Toolik Lake
-        V30:
-          name: DOC_TooShru_30
-          units: "DOC concentrations (mg DOC-C x g soil C^{-1})"
-          desc: "DOC Concentration of Toolik shrub soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (shrub)"
-          site: Toolik Lake
-        V31:
+        V10:
           name: CO2_FairTuss_30
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Fairbanks tussock soils incubated at 30deg"
           temperature: 30
           landUse: "Tundra (Tussock)"
           site: Fairbanks
-        V32:
-          name: DOC_FairSpru_30
+        V11:
+          name: CO2_FairSpru_30
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
-          desc: "CO2 Flux of Fairbanks spruce soils incubated at 30deg"
+          desc: "CO2 Flux of Fairbanks tussock spruce soils incubated at 30deg"
           temperature: 30
-          landUse: "Tundra (Spruce)"
+          landUse: "Tundra (Tussock, Spruce)"
           site: Fairbanks
-        V33:
+        V12:
           name: CO2_TooTuss_30
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Toolik tussock soils incubated at 30deg"
           temperature: 30
           landUse: "Tundra (Tussock)"
           site: Toolik Lake
-        V34:
+        V13:
           name: CO2_TooWet_30
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Toolik wet sedge soils incubated at 30deg"
           temperature: 30
           landUse: "Tundra (wet sedge)"
           site: Toolik Lake
-        V35:
+        V14:
           name: CO2_TooShru_30
           units: "CO2flux (mg CO2-C x g soil C^{-1} day^{-1})"
           desc: "CO2 Flux of Toolik shrub soils incubated at 30deg"
           temperature: 30
           landUse: "Tundra (shrub)"
-          site: Toolik Lake
-        V36:
-          name: CO2/DOC_FairTuss_30
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Fairbanks tussock soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock)"
-          site: Fairbanks
-        V37:
-          name: CO2/DOC_FairSpru_30
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Fairbanks spruce soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Spruce)"
-          site: Fairbanks
-        V38:
-          name: CO2/DOC_TooTuss_30
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Toolik tussock soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Tussock)"
-          site: Toolik Lake
-        V39:
-          name: CO2/DOC_TooWet_30
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Toolik wet sedge soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (wet sedge)"
-          site: Toolik Lake
-        V40:
-          name: CO2/DOC_TooShru_30
-          units: "CO2 Flux:DOC Concentration"
-          desc: "CO2 to DOC ratio of Toolik shrub soils incubated at 30deg"
-          temperature: 30
-          landUse: "Tundra (Shrub)"
           site: Toolik Lake

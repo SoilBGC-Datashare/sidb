@@ -2,24 +2,25 @@ citationKey: Winkler1996
 doi: 10.1016/0038-0717(96)00076-4
 entryAuthor: Heidi Voelkel
 entryCreationDate: 2017-01-30
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
-       studySite:
-         - "Duke forest, Durham, NC, USA"
-       soilType:
-         - "Helena series, Ultisol"
-       vegetation:
-         - "deciduous and coniferous forest, dominated by loblolly pine (Pinus taeda)"
+       studySite: "Duke forest, Durham, NC, USA"
+       soilTaxonomy:
+         soilSeries: "Helena series, Ultisol"
+         classificationSystem: USDA
+       vegetation: "deciduous and coniferous forest, dominated by loblolly pine (Pinus taeda)"
 
 incubationInfo:
-       desc: "Ten A-, eight E-, and ten B-horizon samples were incubated at 4, 15 and 22deg for 120 d and at 38deg for 50 d."
-       treatments:
+       description: "Ten A-, eight E-, and ten B-horizon samples were incubated at 4, 15 and 22deg for 120 d and at 38deg for 50 d."
+       laboratoryTreatment:
           temperature:
              - 38
              - 22
              - 15
              - 4
-          soil horizon:
+          soilHorizon:
             - A
             - B
             - E

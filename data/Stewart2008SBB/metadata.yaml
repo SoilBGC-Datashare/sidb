@@ -2,6 +2,8 @@ citationKey: Stewart2008SBB
 doi: 10.1016/j.soilbio.2008.02.014
 entryAuthor: Maddie Tilyou
 entryCreationDate: 2016-10-4
+contactName: Alain Plante
+contactEmail: aplante@sas.upenn.edu
 
 siteInfo:
         studySite:
@@ -12,6 +14,8 @@ siteInfo:
           - "Mead, NE (NE)"
           - "Wauseon, OH (OH)"
           - "Melfort, Sk (SK)"
+        country: USA
+        landCover: cultivated
         MAT:
           - 10.6
           - 9.7
@@ -28,14 +32,16 @@ siteInfo:
           - 632
           - 887
           - 411
-        soilType:
-          - Oxyaquic Hapludalf
-          - Tyipc Hapludalf
-          - Aeric Haplaquept
-          - Mollic Udifluvent
-          - Aquic Haplustoll
-          - Typic Argiudoll
-          - Orthic Black Chernozem
+        soilTaxonomy:
+          soilFamily:
+             - Oxyaquic Hapludalf
+             - Tyipc Hapludalf
+             - Aeric Haplaquept
+             - Mollic Udifluvent
+             - Aquic Haplustoll
+             - Typic Argiudoll
+             - Orthic Black Chernozem
+          classificationSystem: USDA
         coordinates:
           latitude:
             - 41.5
@@ -53,10 +59,18 @@ siteInfo:
             - -95.2
             - -96.2
             - -104.36
+        experimentalTreatment:
+          site: 
+            - Sioux City
+            - Kellog Biological Station
+            - Saginaw
+            - Lamberton
+            - Mead
+            - Wauseon
+            - Melfort
 
 incubationInfo:
-        treatments:
-            desc:
+        laboratoryTreatment:
             horizon:
               - A
               - C
@@ -65,7 +79,6 @@ incubationInfo:
         incubationTime:
             time: 544
             units: days
-        replicates:
 
 variables:
        V1:

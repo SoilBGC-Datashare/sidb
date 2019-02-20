@@ -2,11 +2,17 @@ citationKey: Lavoie2011JGR
 doi: 10.1029/2010JG001629
 entryAuthor: Maddie Tilyou
 entryCreationDate: 2016-10-13
+contactName: Alain Plante
+contactEmail: aplante@sas.upenn.edu
 
 siteInfo:
         studySite:
           - Interior Alaska
           - Northern Alaska
+        country: USA
+        landCover:
+          - forest
+          - tundra
         ecosystemType:
           - Boreal forest
           - Tundra
@@ -17,16 +23,18 @@ siteInfo:
           longitude:
             - -145.73
             - -149.71
-
+        experimentalTreatment:
+          site:
+            - moist acidic organic tundra
+            - moist acidic mineral tundra
+            - moist nonacidic organic tundra
+            - moist nonacidic mineral tundra
+            - unburned organic boreal forest
+            - unburned mineral boreal forest 
+            - burned mineral boreal forest
+ 
 incubationInfo:
-        soil:
-          - "tundra moist acidic organic TAO"
-          - "tundra moist acidic mineral  TAM"
-          - "tundra moist nonacidic organic TNAO"
-          - "tundra moist nonacidic mineral TNAM"
-          - "boreal forest unburned organic BFUO"
-          - "boreal forest unburned mineral BFUM"
-          - "boreal forest burned mineral BFM"
+        description: " a 924 day incubation of soils at temperatire 5 degrees celcius and 15 degrees celcius and two nitrogen treatments (with and without)"
         carbon:
             mean:
               - 41.07
@@ -63,8 +71,7 @@ incubationInfo:
               - 0.02
               - 0.01
             units: percent
-        treatments:
-            desc: " a 924 day incubation of soils at temperatire 5 degrees celcius and 15 degrees celcius and two nitrogen treatments (with and without)"
+        laboratoryTreatment:
             temperature:
                - 5
                - 15

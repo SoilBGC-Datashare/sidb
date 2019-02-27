@@ -20,7 +20,8 @@ siteInfo:
 
 incubationInfo:
        description: "Samples were incubated at 25deg for 707 d. CO2 emission was measured in an automatic static incubation chamber of 1500 cm^-3 volume"
-       temperature: 25
+       laboratoryTreatment:
+          temperature: 25
        incubationTime:
           time: 707
           units: days

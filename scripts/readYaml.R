@@ -3,7 +3,7 @@
 
 library(yaml)
 entryNames=list.dirs("~/sidb/data/", full.names=FALSE, recursive=FALSE)
-  
+
 for(i in 1:length(entryNames)){
     assign(entryNames[i], yaml.load_file(input=paste("~/sidb/data/",entryNames[i],"/metadata.yaml",sep="")))
   }
@@ -65,7 +65,7 @@ for(i in 1:length(entryNames)){
 
 treatments=NULL
 for(i in 1:length(entryNames)){
-  treatments=c(treatments,get(entryNames[i])$incubationInfo$treatments)
+  treatments=c(treatments,get(entryNames[i])$incubationInfo$laboratoryTreatment)
 }
 
 soilType=NULL

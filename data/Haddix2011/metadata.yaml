@@ -92,7 +92,7 @@ incubationInfo:
        texture:
           percentClay:
              - 50
-             - 61 
+             - 61
              - 28
              - 33
              - 23
@@ -103,8 +103,8 @@ incubationInfo:
              - 12
              - 30
              - 25
-       carbon: 
-          mean: 
+       carbon:
+          mean:
              - 37.1
              - 22.9
              - 32.4
@@ -117,7 +117,7 @@ incubationInfo:
              - 141.6
              - 10.6
              - 14.1
-         units: "g kg$^{-1}$"
+          units: "g kg$^{-1}$"
        nitrogen:
          mean:
              - 3.58

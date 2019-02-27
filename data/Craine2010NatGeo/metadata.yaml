@@ -154,7 +154,7 @@ siteInfo:
         - -82.00
         - -104.19
     experimentalTreatment:
-        site: 
+        site:
           - HJ Andrews
           - American Prarie
           - Toolik
@@ -181,19 +181,19 @@ siteInfo:
           - Jepson Prairie
           - Kankankee Sands
           - Ordway-Swisher
-          - Short Grass Steppe  
+          - Short Grass Steppe
 
 incubationInfo:
   laboratoryTreatment:
     temperature:
-       -  20
+       - 20
     moisture:
-      - 35
-  incubationTime:
+       - 35
+incubationTime:
     time: 360
     units: days
-  replicates: 5
-  texture:
+replicates: 5
+texture:
       percentSand:
         - 82.5
         - 47.5
@@ -281,7 +281,7 @@ incubationInfo:
         - 32.5
         - 2.5
         - 22.5
-  carbon:
+carbon:
     mean:
         - 42.1
         - 22
@@ -312,7 +312,7 @@ incubationInfo:
         - 6.2
         - 9.1
     units: percent
-  nitrogen:
+nitrogen:
     mean:
         - 2
         - 2.1
@@ -342,7 +342,7 @@ incubationInfo:
         - 1.1
         - 0.4
         - 0.8
-   units: percent
+    units: percent
 
 variables:
        V1:

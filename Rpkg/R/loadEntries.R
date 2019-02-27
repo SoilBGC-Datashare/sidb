@@ -9,6 +9,7 @@ loadEntries <- function(path="~/sidb/data/") {
   entryNames=list.dirs(path, full.names=FALSE, recursive=FALSE)
 
   sidbList=lapply(entryNames, FUN=readEntry, path=path)
+  names(sidbList)<-entryNames
 
  return(sidbList)
 }

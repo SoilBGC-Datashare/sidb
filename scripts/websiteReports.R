@@ -1,32 +1,36 @@
 # This scripts creates summary statistics from the database and outputs it in yaml format
 
 library(yaml)
+library(sidb)
+library(maps)
 
-source("~/sidb/scripts/readYaml.R")
-source("~/sidb/scripts/loadEntries.R")
+#Load database
+database=loadEntries()
 
 # Calculate some statistics
-dataPoints=NULL
-nCols=NULL
-for(i in 1:length(entryNames)){
-  mtx=get(entryNames[i])$data
-  nCols[i]=dim(mtx)[2]-1
-  dataPoints[i]=length(as.matrix(mtx))
-  rm(mtx)
-}
+timeseries=lapply(database, FUN=function(x){ncol(x$data)-1})
+dataPoints=lapply(database, FUN=function(x){length(as.matrix(x$data))})
 
-smr=list(entries=length(entryNames),timeseries=as.integer(sum(nCols)), datapoints=sum(dataPoints))
+smr=list(entries=length(database),timeseries=sum(unlist(timeseries)), datapoints=sum(unlist(dataPoints)))
 as.yaml(smr)
 
+# Print yaml data for website
 write_yaml(smr, file="~/sidb/docs/_data/summary.yml")
 
-library(maps)
+# Compute coordinate
+coor=coordinates(database)
 
 png("~/sidb/docs/assets/map.png", bg=NA)
 map('world', interior = FALSE)
-points(longitude, latitude, pch=20, col=2)
+points(coor, pch=20, col=2)
 dev.off()
 
+# Compute incubation times
+it=incubationTime(database)
+
+daysfromweeks=it[it$units=="weeks",1]*30
+it[it$units=="weeks",]<-c(daysfromweeks, "days")
+
 png("~/sidb/docs/assets/incubationTime.png", bg=NA)
-hist(incubationTime, xlab="Incubation time (days)", main ="", ylab="Number of studies")
+hist(as.numeric(it$time), xlab="Incubation time (days)", main ="", ylab="Number of studies")
 dev.off()

@@ -28,7 +28,7 @@ dev.off()
 # Compute incubation times
 it=incubationTime(database)
 
-daysfromweeks=it[it$units=="weeks",1]*30
+daysfromweeks=it[it$units=="weeks",1]*30/4
 it[it$units=="weeks",]<-c(daysfromweeks, "days")
 
 png("~/sidb/docs/assets/incubationTime.png", bg=NA)

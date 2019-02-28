@@ -90,6 +90,13 @@ siteInfo:
              - 10-20
 incubationInfo:
        description: "three laboratory replicates of broadleaf (a) and conifer (b) forest samples were incubated at 3 different depth levels (0-5, 5-10, 10-20 cm) for ca. 270 d."
+       laboratoryTreatment:
+         temperature:
+           - 4
+           - 10
+           - 20
+           - 30
+
        incubationTime:
           time: 270
           units: days

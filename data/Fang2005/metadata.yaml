@@ -17,7 +17,8 @@ siteInfo:
 
 incubationInfo:
     description: "Respired CO2 was measured with an infrared gas analyser in differential mode"
-    temperature: 20
+    laboratoryTreatment:
+        temperature: 20
     incubationTime:
         time: 108
         units: days

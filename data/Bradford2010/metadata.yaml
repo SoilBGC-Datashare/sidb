@@ -42,8 +42,8 @@ siteInfo:
         - 1080
         - 1080
         - 1080
-    experimentalTreatment: 
-        site: 
+    experimentalTreatment:
+        site:
           - CH
           - CL
           - HOC
@@ -53,7 +53,7 @@ siteInfo:
 
 incubationInfo:
     description: "Microbial biomass was measured using substrate-induced respiration. Values are expressed as raw respiration rates (mg C g soil^{-1} day^{-1})."
-    treatments:
+    laboratoryTreatment:
           temperature:
               - 10
               - 20

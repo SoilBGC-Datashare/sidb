@@ -10,7 +10,7 @@ siteInfo:
     studySite: "McMurdo Dry Valleys of Southern Victoria Land, Antarctica"
     country: Antartica
     landCover: bare
-    soilTaxonomy: 
+    soilTaxonomy:
       soilOrder: Gelisol
       classificationSystem: USDA
     experimentalTreatment:
@@ -38,7 +38,7 @@ siteInfo:
 
 incubationInfo:
     description: "CO2 accumulation in the headspace of the vessel was measured using a Li-Cor 6200. CO2 concentrations were blank corrected and expressed as soil respiration (mg C g soil^{-1} day^{-1})."
-    treatments:
+    laboratoryTreatment:
         temperature:
           - 5
           - 10

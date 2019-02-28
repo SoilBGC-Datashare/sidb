@@ -32,9 +32,10 @@ siteInfo:
 
 incubationInfo:
     description: "soil respiration was measured twice a month using a LI-COR (LI6400-09 soil chamber connected to an LI-6400 portablephotosynthesis system)"
-    temperature: 20
     laboratoryTreatment:
-        moisture: 
+        temperature:
+          - 20
+        moisture:
            - wet
            - dry
     incubationTime:
@@ -54,7 +55,7 @@ incubationInfo:
            - 0.2
            - 0.3
         units: percent
- 
+
 variables:
         V1:
           name: time

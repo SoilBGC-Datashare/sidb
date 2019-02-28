@@ -12,7 +12,7 @@ laboratoryTreatment <- function(database, treatment) {
   li[[as.character(treatment)]]
   }
 
-  a=lapply(si, FUN=treatfunc)
+  a=lapply(database, FUN=treatfunc)
  return(unlist(a))
 }
 

@@ -35,9 +35,11 @@ incubationInfo:
     laboratoryTreatment:
         temperature:
           - 20
+          - 35
         moisture:
            - wet
            - dry
+
     incubationTime:
         time: 111
         units: days
@@ -63,48 +65,48 @@ variables:
         V2:
           name:  PPT_D
           desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the dry treatment in soil type ponderosa pine trenched"
-          moisture: dry
+          moisture: 10
           site: "ponderosa pine trenched"
           units: "mmol Cm^{-2}s^{-1}"
         V3:
           name:  PPT_W
           desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the wet treatment in soil type ponderosa pine trenched"
-          moisture: wet
+          moisture: 24.3
           site: "ponderosa pine trenched"
           units: "mmol Cm^{-2}s^{-1}"
         V4:
           name:  PPC_D
           desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the dry treatment in soil type ponderosa pine control"
-          moisture: dry
+          moisture: 14.5
           site: "ponderosa pine control"
           units: "mmol Cm^{-2}s^{-1}"
         V5:
           name:  PPC_W
           desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the wet treatment in soil type ponderosa pine control"
-          moisture: wet
+          moisture: 28.9
           site: "ponderosa pine control"
           units: "mmol Cm^{-2}s^{-1}"
         V6:
           name:  OSO_D
           desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the dry treatment in soil type oak savanna open"
-          moisture: dry
+          moisture: 2.4
           site: "oak savanna open"
           units: "mmol Cm^{-2}s^{-1}"
         V7:
           name:  OSO_W
           desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the wet treatment in soil type oak savanna open"
-          moisture: wet
+          moisture: 18.9
           site: "oak savanna open"
           units: "mmol Cm^{-2}s^{-1}"
         V8:
           name:  OSU_D
           desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the dry treatment in soil type oak savanna understorey"
-          moisture: dry
+          moisture: 4.2
           site: "oak savanna understorey"
           units: "mmol Cm^{-2}s^{-1}"
         V9:
           name:  OSU_W
           desc: "Temporal evolution of decomposition-derived soil CO2 fluxes (mmol Cm^{-2}s^{-1}) in the wet treatment in soil type oak savanna understorey"
-          moisture: wet
+          moisture: 22.1
           site: "oak savanna understorey"
           units: "mmol Cm^{-2}s^{-1}"

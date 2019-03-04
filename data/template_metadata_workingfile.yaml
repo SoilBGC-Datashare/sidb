@@ -8,7 +8,6 @@ entryNote: # Any notes or comments related to this entry.
 
 siteInfo:
         studySite:  # Name of the study site where study was conducted
-        #country: # Country where the study was conducted 
         coordinates:
           latitude: # Latitude in decimal units (check for negative that denotes southern hemisphere)
           longitude: # Longitude in decimal units (check for negative that denotes west)
@@ -26,7 +25,6 @@ siteInfo:
           permafrostExist: #Yes or No (if yes, permafrost must exist at the site)
           #zonation: # Describe permafrost zonation
           activeLayer: # Depth of the active layer in meters
-        #landscapePosition: # Location of the study site in the landscape (e.g. )
 
 incubationInfo:
         description: # Short description of the incubation setup and main treatments
@@ -49,28 +47,29 @@ incubationInfo:
         carbon:
           mean: # Mean carbon concentration at the begining of the incubation
           standardDeviation: # standard deviation of carbon concentration at the begining of the incubation
-          #standardError:
-          #numberReplicates:
+          standardError:
+          numberReplicates:
           units: # Units of the mean and standard deviation of the carbon concentration
-       nitrogen:
+        nitrogen:
           mean:
           standardDeviation:
+          standardError:
+          numberReplicates:
           units:
-#
-       bulkDensity: # Soil bulk density in g/cm3
+        bulkDensity: # Soil bulk density in g/cm3
           mean: # Mean bulk density
           standardDeviation: # standard deviation of bulk density
-       depth: # Soil depth if only one depth listed, enter as top and bottom, 0 is organic/mineral interface
+        depth: # Soil depth if only one depth listed, enter as top and bottom, 0 is organic/mineral interface
           top: # in cm
           bottom: #in cm
           surfaceAtm: #blank if zero is organic/mineral interface, yes if surface is atmospheric interface
-       pH: # Soil pH
-       texture:
-         percentClay: # Percent clay of the incubated soil
-         percentSand: # Percent sand of the incubated soil
-         percentSilt: # Percent silt of the incubated soil
-       microbialBiomass: # Microbial biomass measured at the beginning of the incubation
-       gasAnalyzer: # Gas analysis equipment for CO2 measurements
+        pH: # Soil pH
+        texture:
+          percentClay: # Percent clay of the incubated soil
+          percentSand: # Percent sand of the incubated soil
+          percentSilt: # Percent silt of the incubated soil
+        microbialBiomass: # Microbial biomass measured at the beginning of the incubation
+        gasAnalyzer: # Gas analysis equipment for CO2 measurements
 
 variables: #These describe the columns of your .csv file
        V1: #column 1
@@ -79,7 +78,7 @@ variables: #These describe the columns of your .csv file
        V2: #column 2
         name: # Name of second variable in accompanying file.
         desc: # Description of the variable
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this word by any of the listed variables or sites in environmentalTreatment above.
+        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         gasMeasured: #This line is not required if CO2, please specify here if other gas
         laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           level: # Level of the treatment. For example, '15' if the treatment is temperature at 15 degrees Celsius

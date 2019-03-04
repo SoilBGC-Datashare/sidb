@@ -2,7 +2,7 @@
 % Please edit documentation in R/isCumulative.R
 \name{isCumulative}
 \alias{isCumulative}
-\title{Test whether a time series of CO2 release is cummulative}
+\title{Test whether a time series of CO2 release is cumulative}
 \usage{
 isCumulative(x)
 }
@@ -13,9 +13,9 @@ isCumulative(x)
 logical
 }
 \description{
-Test whether a time series of CO2 release is cummulative
+Test whether a time series of CO2 release is cumulative
 }
 \examples{
 series=data.frame(time=seq(1,10), CO2=cumsum(rep(0.1, 10)))
-isCummulative(x=series)
+isCumulative(x=series)
 }

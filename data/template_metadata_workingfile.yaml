@@ -20,24 +20,31 @@ siteInfo:
           soilOrder: # Soil order according to the classification system described below
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-        experimentalTreatment: # Site names or list of experimental treatments applied at the site level 
+        depth: # Overall soil depth if soils all from same depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface.
+          top: # in cm
+          bottom: # in cm
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+        experimentalTreatment: # Site names, multiple depths, or list of experimental treatments applied at the site level 
         permafrost:
-          permafrostExist: #Yes or No (if yes, permafrost must exist at the site)
+          permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
           #zonation: # Describe permafrost zonation
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
         description: # Short description of the incubation setup and main treatments
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
-        moisture: #Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
-          units: #Valid fields are: GWC or percent field capacity
-        anaerobic: #Yes if headspace flushed with N2 or He, blank if aerobic 
-          redox: #redox potential of incubated soils in mV (-300 to 800)
+        moisture: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
+          units: # Valid fields are: GWC or percent field capacity
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
+          redox: # redox potential of incubated soils in mV (-300 to 800)
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4
         laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          treatment: # Replace with name of treatment
+            value: # Numerical or factor
+            units: # Units of treatment value if numerical, if a %, write percentage
         numberReplicates: # Number of replicates per treatments
-          type: #Valid fields are: field or lab 
-        incubationTime: #length of incubation in days
+          type: # Valid fields are: field or lab 
+        incubationTime: # length of incubation in days
         preincubationTime: # Pre-incubation time in days
         samplePreparation:
           intactCore: # yes or no
@@ -59,10 +66,6 @@ incubationInfo:
         bulkDensity: # Soil bulk density in g/cm3
           mean: # Mean bulk density
           standardDeviation: # standard deviation of bulk density
-        depth: # Soil depth if only one depth listed, enter as top and bottom, 0 is organic/mineral interface
-          top: # in cm
-          bottom: #in cm
-          surfaceAtm: #blank if zero is organic/mineral interface, yes if surface is atmospheric interface
         pH: # Soil pH
         texture:
           percentClay: # Percent clay of the incubated soil
@@ -71,15 +74,15 @@ incubationInfo:
         microbialBiomass: # Microbial biomass measured at the beginning of the incubation
         gasAnalyzer: # Gas analysis equipment for CO2 measurements
 
-variables: #These describe the columns of your .csv file
-       V1: #column 1
+variables: # These describe the columns of your .csv file
+       V1: # column 1
         name: # Name of first variable in the accompanying csv data file. First variable should be time.
         units: # Units of first variable in accompanying file.
-       V2: #column 2
+       V2: # column 2
         name: # Name of second variable in accompanying file.
         desc: # Description of the variable
         experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        gasMeasured: #This line is not required if CO2, please specify here if other gas
+        gasMeasured: # This line is not required if CO2, please specify here if other gas
         laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           level: # Level of the treatment. For example, '15' if the treatment is temperature at 15 degrees Celsius
         units: # Units in which this variable is provided 

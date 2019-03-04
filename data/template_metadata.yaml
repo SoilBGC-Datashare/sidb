@@ -47,15 +47,15 @@ incubationInfo:
 #         standardError:
 #         units:
 #
-       bulkDensity: # Soil bulk density in g/cm3
-       depth: # Soil depth
-       pH: # Soil pH
-       texture:
-         percentClay: # Percent clay of the incubated soil
-         percentSand: # Percent sand of the incubated soil
-         percentSilt: # Percent silt of the incubated soil
-       microbialBiomass: # Microbial biomass measured at the beginning of the incubation
-       gasAnalyzer: # Gas analysis equipment for CO2 measurements
+        bulkDensity: # Soil bulk density in g/cm3
+        depth: # Soil depth
+        pH: # Soil pH
+        texture:
+          percentClay: # Percent clay of the incubated soil
+          percentSand: # Percent sand of the incubated soil
+          percentSilt: # Percent silt of the incubated soil
+        microbialBiomass: # Microbial biomass measured at the beginning of the incubation
+        gasAnalyzer: # Gas analysis equipment for CO2 measurements
 
 variables:
        V1:

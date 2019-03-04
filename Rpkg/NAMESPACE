@@ -2,7 +2,7 @@
 
 export(coordinates)
 export(incubationTime)
-export(isCummulative)
+export(isCumulative)
 export(laboratoryTreatment)
 export(loadEntries)
 export(nitrogen)

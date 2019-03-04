@@ -1,9 +1,10 @@
 ---
 title: "Summary of entries in the Soil Incubation Database"
-author: "Carlos A. Sierra and Heidi Völkel"
-date: '`r format(Sys.time(), "%d %B, %Y")`'
+author: "Carlos A. Sierra and Heidi V??lkel"
+date: "`r format(Sys.time(), "%d %B, %Y")`"
 output:
   html_document: default
+  word_document: default
   pdf_document: default
 ---
 
@@ -20,6 +21,8 @@ for(i in 1:length(entryNames)){
   dataPoints[i]=length(as.matrix(mtx))
   rm(mtx)
 }
+
+  
 ```
 
 # Database summary and statistics

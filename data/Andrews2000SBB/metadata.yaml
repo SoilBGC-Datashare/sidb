@@ -9,7 +9,7 @@ siteInfo:
        studySite: Central Piedmont region of North Carolina
        country: USA
        landCover: Forest
-       soilTaxonomy: 
+       soilTaxonomy:
           soilOrder: Alfisol
           classificationSystem: USDA
        coordinates:
@@ -23,8 +23,8 @@ incubationInfo:
        laboratoryTreatment:
           temperature:
                 - 4
-                - 15
-                - 25
+                - 22
+                - 40
           CO2:
        incubationTime:
           time: 48

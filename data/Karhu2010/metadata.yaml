@@ -33,6 +33,7 @@ incubationInfo:
         description: 495 day aerobic incubation at 25 degrees C, 50% air humidity with weekly control for soil moisture loss. Subsamples taken every 3 months and incubated at 5, 12, 19, 26 degrees C for 24 hours, then CO2 measured. # Short description of the incubation setup and main treatments
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture: field capacity? #Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
+          value:
           units: #Valid fields are: GWC or percent field capacity
         anaerobic: #Yes if headspace flushed with N2 or He, blank if aerobic
           redox: #redox potential of incubated soils in mV (-300 to 800)
@@ -95,9 +96,7 @@ variables: #These describe the columns of your .csv file
           desc: Respiration rate from Organic layer from pine forest, incubated for 24 hours at 26 degrees C # Description of the variable
           experimentalTreatment: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           gasMeasured: #This line is not required if CO2, please specify here if other gas
-          laboratoryTreatment: temperature # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
-            level: 26  # Level of the treatment. For example, '15' if the treatment is temperature at 15 degrees Celsius
-              units: degrees C # Units in which this variable is provided
+          temperature: 26 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
@@ -108,9 +107,7 @@ variables: #These describe the columns of your .csv file
          name: Spruce_O_26 # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
          desc: Respiration rate from Organic layer from spruce forest, incubated for 24 hours at 26 degrees C
          experimentalTreatment: Spruce
-         laboratoryTreatment: temperature
-            level: 26
-              units: degrees C
+         temperature: 26
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 0
@@ -120,9 +117,7 @@ variables: #These describe the columns of your .csv file
           name: Spruce_0-15_26
           desc: Respiration rate from 0-15 cm soil from spruce forest, incubated for 24 hours at 26 degrees C
           experimentalTreatment: Spruce
-          laboratoryTreatment: temperature
-            level: 26
-              units: degrees C
+          temperature: 26
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 0
@@ -131,9 +126,7 @@ variables: #These describe the columns of your .csv file
           name: Pine_0-15_26
           desc: Respiration rate from 0-15 cm soil from pine forest, incubated for 24 hours at 26 degrees C
           experimentalTreatment: Pine
-          laboratoryTreatment: temperature
-            level: 26
-              units: degrees C
+          temperature: 26
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 0
@@ -142,9 +135,7 @@ variables: #These describe the columns of your .csv file
           name: Pine_15-30_26
           desc: Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 26 degrees C
           experimentalTreatment:
-          laboratoryTreatment:
-            level: 26
-              units: degrees C
+          laboratoryTreatment: 26
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 15
@@ -153,9 +144,7 @@ variables: #These describe the columns of your .csv file
           name: Spruce_15-30_26
           desc: Respiration rate from 15-30 cm soil from spruce forest, incubated for 24 hours at 26 degrees C
           experimentalTreatment: Spruce
-          laboratoryTreatment: temperature
-            level: 26
-              units: degrees C
+          temperature: 26
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 15
@@ -164,9 +153,7 @@ variables: #These describe the columns of your .csv file
           name: Spruce_O_05
           desc: Respiration rate from Organic layer from spruce forest, incubated for 24 hours at 5 degrees C
           experimentalTreatment: Spruce
-          laboratoryTreatment: temperature
-            level: 5
-              units: degrees C
+          temperature: 5
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 0
@@ -176,9 +163,7 @@ variables: #These describe the columns of your .csv file
           name: Pine_15-30_05
           desc: Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 5 degrees C
           experimentalTreatment: Pine
-          laboratoryTreatment: temperature
-            level: 5
-              units: degrees C
+          temperature: 5
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 15
@@ -187,9 +172,7 @@ variables: #These describe the columns of your .csv file
           name: Spruce_O_12
           desc: Respiration rate from Organic layer from spruce forest, incubated for 24 hours at 12 degrees C
           experimentalTreatment: Spruce
-          laboratoryTreatment: temperature
-            level: 12
-              units: degrees C
+          temperature: 12
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 0
@@ -199,9 +182,7 @@ variables: #These describe the columns of your .csv file
           name: Pine_15-30_12
           desc: Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 12 degrees C
           experimentalTreatment: Pine
-          laboratoryTreatment: temperature
-            level: 12
-              units: degrees C
+          temperature: 12
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 15
@@ -210,9 +191,7 @@ variables: #These describe the columns of your .csv file
           name: Spruce_O_19
           desc: Respiration rate from Organic layer from spruce forest, incubated for 24 hours at 19 degrees C
           experimentalTreatment: Spruce
-          laboratoryTreatment: temperature
-            level: 19
-              units: degrees C
+          temperature: 19
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 0
@@ -222,9 +201,7 @@ variables: #These describe the columns of your .csv file
           name: Pine_15-30_19
           desc: Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 19 degrees C
           experimentalTreatment: Pine
-          laboratoryTreatment: temperature
-            level: 19
-              units: degrees C
+          temperature: 19
           units: mu g CO2 gOM^{-1} h^{-1}
           depth:
             top: 15

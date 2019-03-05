@@ -19,6 +19,7 @@ siteInfo:
         vegNote: #Additional details about land cover such as species or functional type composition
         soilTaxonomy:
           soilOrder: # Soil order according to the classification system described below
+          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
         depth: # Overall soil depth if soils all from same depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. 
@@ -29,22 +30,23 @@ siteInfo:
         experimentalTreatment: # Site names, multiple depths, or list of experimental treatments applied at the site level 
         permafrost:
           permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
-          #zonation: # Describe permafrost zonation
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
         description: # Short description of the incubation setup and main treatments
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
-        moisture: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
+        moisture: 
+          value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: # Valid fields are: GWC or percent field capacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
-          redox: # redox potential of incubated soils in mV (-300 to 800)
+        redox: # redox potential of incubated soils in mV (-300 to 800)
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4
         laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
           treatment: # Replace with name of treatment
             value: # Numerical or factor
             units: # Units of treatment value if numerical, if a %, write percentage
-        numberReplicates: # Number of replicates per treatments
+        Replicates: 
+          number: # Number of replicates per treatments
           type: # Valid fields are: field or lab 
         incubationTime: # length of incubation in days
         preincubationTime: # Pre-incubation time in days

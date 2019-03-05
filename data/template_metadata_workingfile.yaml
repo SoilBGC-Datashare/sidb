@@ -8,6 +8,7 @@ entryNote: # Any notes or comments related to this entry.
 
 siteInfo:
         studySite:  # Name of the study site where study was conducted
+        country: # Name of country where site was conducted
         coordinates:
           latitude: # Latitude in decimal units (check for negative that denotes southern hemisphere)
           longitude: # Longitude in decimal units (check for negative that denotes west)
@@ -20,10 +21,11 @@ siteInfo:
           soilOrder: # Soil order according to the classification system described below
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-        depth: # Overall soil depth if soils all from same depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface.
+        depth: # Overall soil depth if soils all from same depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. 
           top: # in cm
           bottom: # in cm
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+        horizon: # soil horizon designation
         experimentalTreatment: # Site names, multiple depths, or list of experimental treatments applied at the site level 
         permafrost:
           permafrostExist: # Yes or No (if yes, permafrost must exist at the site)

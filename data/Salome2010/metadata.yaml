@@ -38,7 +38,7 @@ incubationInfo:
         temperature: 20
         moisture: 
           value: 19
-          units: GWC
+          units: percent GWC
         anaerobic: 
           redox: 
         gasMeasured: 
@@ -50,7 +50,7 @@ incubationInfo:
             value:
               - 19
               - 5 
-            units: percentage 
+            units: percent
         Replicates: 
           number: 3
           type: field 

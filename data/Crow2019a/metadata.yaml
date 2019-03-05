@@ -151,7 +151,7 @@ siteInfo:
             - 21.15255
             - 21.13774
             - 21.14320
-          longitud: # Longitud in decimal units
+          longitude: # Longitud in decimal units
             - -158.105
             - -158.109
             - -158.117

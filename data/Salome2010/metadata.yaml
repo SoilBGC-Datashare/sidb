@@ -50,7 +50,7 @@ incubationInfo:
             value:
               - 19
               - 5 
-            units: percentage 
+            units: percent
         Replicates: 
           number: 3
           type: field 

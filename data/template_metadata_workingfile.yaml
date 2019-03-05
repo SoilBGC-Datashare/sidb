@@ -37,7 +37,7 @@ incubationInfo:
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture: 
           value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
-          units: # Valid fields are: GWC or percent field capacity
+          units: # Valid fields are: percent GWC or percent field capacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
         redox: # redox potential of incubated soils in mV (-300 to 800)
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4

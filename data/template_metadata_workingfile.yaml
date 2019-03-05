@@ -85,8 +85,7 @@ variables: # These describe the columns of your .csv file
         desc: # Description of the variable
         experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         gasMeasured: # This line is not required if CO2, please specify here if other gas
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
-          level: # Level of the treatment. For example, '15' if the treatment is temperature at 15 degrees Celsius
+        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and then add the level after the colon.
         units: # Units in which this variable is provided 
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error

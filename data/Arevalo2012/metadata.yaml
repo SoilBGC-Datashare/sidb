@@ -1,189 +1,178 @@
 citationKey: Arevalo2012
 doi: 10.2136/sssaj2011.0126
-entryAuthor: Heidi Voelkel
-entryCreationDate: 2016-04-27
+entryAuthor: Jeff Beem-Miller
+entryCreationDate: 2019-03-06
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
 
 siteInfo:
-      studySite: "Linaria parkland region of Alberta"
-      country: Canada
-      landCover:
-        - cultivated
-        - forest
-        - forest
-        - grassland
-        - forest
-      soilTaxonomy: 
-          soilOrder: Luvisol
-          classificationSystem: FAO
-      coordinates:
+        study:  "Linaria parkland region of Alberta"
+        site: Linaria
+        coordinates:
           latitude:
             - 54.2
           longitude:
             - -114.1333
-      experimentalTreatments:
+        country: Canada
+        MAT: # Mean annual temperature in degrees Celsius
+        MAP: # Mean annual precipitation in mm
+        elevation: # Elevation of study site in meters above sea levels
+        landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+        vegNote: #Additional details about land cover such as species or functional type composition
+        soilTaxonomy:
+          soilOrder: Luvisol
+          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
+          soilSeries: # Soil series according to the classification system described below
+          classificationSystem: FAO
+#These do not have to be arrays of equal length to site array
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
+          top: 0
+          bottom: 10
+          midDepth: 5
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          horizon: # soil horizon designation
+        permafrost:
+          permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+        experimentalTreatment:
           landUse:
-            AG: 
-              description: "Agriculture, planted with canola"
-            2HP: 
-              description: "2-year-old hybrid poplar plantation"
-            9HP: 
-              description: "9-year-old hybrid poplar plantation"
-            GRA: 
-              description: "Non-native grassland"
-            NAT: 
-              description: "Native vegetation with trembling aspen"
+            - AG
+            - 2HP
+            - 9HP
+            - GRA
+            - NAT
 
 incubationInfo:
-       description: "Soils from 5 different land use were incubated at three different temperatures: 7, 14, and 21 degrees celcius"
-       texture:
-            percentSand: 
-                - 30
-                - 30
-                - 33
-                - 36
-                - 35
-            percentClay: 
-                - 29
-                - 27
-                - 26
-                - 26
-                - 31
-            percentSilt: 
-                - 41
-                - 43
-                - 41
-                - 38
-                - 34
-       carbon:
-            mean: 
-                - 75.4
-                - 64.3
-                - 78.2
-                - 56.7
-                - 27.6
-            standardError: 
-                - 2.3
-                - 2.3
-                - 8.8
-                - 3.4
-                - 8.8
-            units: "Mg ha$^{-1}$"
-       nitrogen:
-            mean: 
-                - 6.5
-                - 5.7
-                - 7.0
-                - 5.0
-                - 2.1
-            standardError: 
-                - 0.3
-                - 0.1
-                - 0.9
-                - 0.2
-                - 0.5
-            units: "Mg ha$^{-1}$"
-       laboratoryTreatment:
-          temperature:
-                - 7
-                - 14
-                - 21
-       incubationTime:
-          time: 370
-          units: days
+        description: # Short description of the incubation setup and main treatments
+        temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+        moisture:
+          value: 60
+          units: percentFieldCapacity
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
+        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
+          temperature: # Replace with name of treatment
+            value:
+              - 7
+              - 14
+              - 21
+            units: Celsius
+        replicates:
+          number: 3
+          type: lab
+        incubationTime: 370
+        preincubationTime: # Pre-incubation time in days
+        samplePreparation:
+          intactCore: No
+          sieving: 2
+          rootPicking: # yes or no
+          rockPicking: # yes or no
+        gasAnalyzer: Li-Cor
 
-variables:
-       V1:
+variables: # These describe the columns of your timeSeries.csv file
+        V1:
           name: time
           units: days
-       V2:
+        V2:
           name: C_AG_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system AG/ agriculture"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 7
           landUse: AG
-       V3:
+        V3:
           name: C_AG_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system AG/ agriculture"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 14
           landUse: AG
-       V4:
+        V4:
           name: C_AG_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system AG/ agriculture"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 21
           landUSe: AG
-       V5:
+        V5:
           name: C_2HP_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 7
           landUSe: 2HP
-       V6:
+        V6:
           name: C_2HP_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
-          units: "Percent (%)"
+          units: percent
           temperature: 14
           landUse: 2HP
-       V7:
+        V7:
           name: C_2HP_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 21
           landUse: 2HP
-       V8:
+        V8:
           name: C_9HP_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 7
           landUse: 9HP
-       V9:
+        V9:
           name: C_9HP_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 14
           landUse: 9HP
-       V10:
+        V10:
           name: C_9HP_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 21
           landUse: 9HP
-       V11:
+        V11:
           name: C_GRA_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system GRA/ grassland"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 7
           landUse: GRA
-       V12:
+        V12:
           name: C_GRA_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system GRA/ grassland"
-          units: "Percent (%)"
+          units: percent
           temperature: 14
           landUse: GRA
-       V13:
+        V13:
           name: C_GRA_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system GRA/ grassland"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 21
           landUse: GRA
-       V14:
+        V14:
           name: C_NAT_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system NAT/ native aspen stand"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 7
           landUse: NAT
-       V15:
+        V15:
           name: C_NAT_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system NAT/ native aspen stand"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 14
           landUse: NAT
-       V16:
+        V16:
           name: C_NAT_21deg
           desc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system NAT/ native aspen stand"
-          units: "Percent (%)"
+          site: Linaria
+          units: percent
           temperature: 21
           landUse: NAT

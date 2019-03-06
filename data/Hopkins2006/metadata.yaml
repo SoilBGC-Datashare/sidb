@@ -1,22 +1,41 @@
 citationKey: Hopkins2006
 doi: 10.1016/j.soilbio.2006.01.012
-entryAuthor: Heidi Voelkel
-entryCreationDate: 2016-09-20
+entryAuthor: Caitlin Pries
+entryCreationDate: 2019-03-06
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
+entryNote: # Any notes or comments related to this entry.
 
-siteInfo:
-       studySite: Garwood Valley, southern Victoria Land (Ross Sea region), Antarctica
-       country: Antartica
-       landCover: bare
-       ecosystemType: Glacial dry land
-       coordinates:
-           latitude:
-             - -78.016667
-           longitude:
-             - 163.883333
-       experimentalTreatment:
-           soil:
+siteInfo: 
+        study:  "Garwood Valley, southern Victoria Land (Ross Sea region), Antarctica"
+        site: Garwood Valley
+#These fields should be arrays of equal length to site array       
+        coordinates:
+          latitude: -78.016667
+          longitude: 163.883333
+        country: Antarctica
+        MAT: # Mean annual temperature in degrees Celsius
+        MAP: # Mean annual precipitation in mm
+        elevation: # Elevation of study site in meters above sea levels
+        landCover: bare
+        vegNote: glacial dry land
+        soilTaxonomy:
+          soilOrder: # Soil order according to the classification system described below
+          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
+          soilSeries: # Soil series according to the classification system described below
+          classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
+#These do not have to be arrays of equal length to site array        
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array. 
+          top: 0
+          bottom: 1
+          midDepth: 0.5
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          horizon: # soil horizon designation
+        permafrost:
+          permafrostExist: no
+          activeLayer: # Depth of the active layer in meters
+        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
+          soil:
               - delta soil
               - dune soil
               - hillslope soil
@@ -25,118 +44,132 @@ siteInfo:
               - lake margin soil
 
 incubationInfo:
-       description: "Five laboratory replicates from composite field samples were incubated at 10deg for 48 d and CO2 production was measured using a Respicond IV respirometer."
-       laboratoryTreatment:
-          temperature: 10
+        description: "Five laboratory replicates from composite field samples were incubated at 10deg for 48 d and CO2 production was measured using a Respicond IV respirometer."
+        temperature: 10
+        moisture: 
+          value: 20
+          units: percentGWC
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
+        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
           ammendment:
+            - detritus
             - glucose
             - glycine
             - NH4Cl
             - unamended
-       incubationTime:
-          time: 48
-          units: days
-       replicates: 5
-
-variables:
+        replicates: 
+          number: 5
+          type: field 
+        incubationTime: 48
+        preincubationTime: 42
+        samplePreparation:
+          intactCore: no
+          sieving: 4
+          rootPicking: no
+          rockPicking: no
+        gasAnalyzer: Respicond IV respirometer
+        
+variables: # These describe the columns of your timeSeries.csv file
         V1:
           name: time
-          units: days
+          units: d
         V2:
           name: CO2C_DeMin_DeS
-          units: "CO2-C production (mg C g^{-1} soil)"
-          desc: "Cumulative CO2-C production by the Garwood Valley delta soil amended with detritus mineralization relative to the unamended controls"
+          units: mgDetritusC/gSoil
+          desc: "Cumulative detritus-derived CO2-C production by the Garwood Valley delta soil amended with 0.64 mgC/gSoil detritus  relative to the unamended controls"
           temperature: 10
           soil: "delta soil"
-          ammendment: unamended
+          ammendment: detritus
         V3:
           name: CO2C_DeMin_DuS
-          units: "CO2-C production (mg C g^{-1} soil)"
-          desc: "Cumulative CO2-C production by the Garwood Valley dune soil amended with detritus mineralization relative to the unamended controls"
+          units: mgDetritusC/gSoil
+          desc: "Cumulative detritus-derived CO2-C production by the Garwood Valley dune soil amended with 0.64 mgC/gSoil detritus relative to the unamended controls"
           temperature: 10
           soil: "dune soil"
-          ammendment: unamended
+          ammendment: detritus
         V4:
           name: CO2C_DeMin_HS
-          units: "CO2-C production (mg C g^{-1} soil)"
-          desc: "Cumulative CO2-C production by the Garwood Valley hillslope soil amended with detritus mineralization relative to the unamended controls"
+          units: mgDetritusC/gSoil
+          desc: "Cumulative detritus-derived CO2-C production by the Garwood Valley hillslope soil amended with 0.64 mgC/gSoil detritus relative to the unamended controls"
           temperature: 10
           soil: "hillslope soil"
-          ammendment: unamended
+          ammendment: detritus
         V5:
           name: CO2C_DeMin_PS
-          units: "CO2-C production (mg C g^{-1} soil)"
-          desc: "Cumulative CO2-C production by the Garwood Valley polygon soil amended with detritus mineralization relative to the unamended controls"
+          units: mgDetritusC/gSoil
+          desc: "Cumulative detritus-derived CO2-C production by the Garwood Valley polygon soil amended with 0.64 mgC/gSoil detritus relative to the unamended controls"
           temperature: 10
           soil: "polygon soil"
-          ammendment: unamended
+          ammendment: detritus
         V6:
           name: CO2C_DeMin_LowMS
-          units: "CO2-C production (mg C g^{-1} soil)"
-          desc: "Cumulative CO2-C production by the Garwood Valley lower moraine soil amended with detritus mineralization relative to the unamended controls"
+          units: mgDetritusC/gSoil
+          desc: "Cumulative detritus-derived CO2-C production by the Garwood Valley lower moraine soil amended with 0.64 mgC/gSoil detritus relative to the unamended controls"
           temperature: 10
           soil: "lower moraine soil"
-          ammendment: unamended
+          ammendment: detritus
         V7:
           name: CO2C_DeMin_LMS
-          units: "CO2-C production (mg C g^{-1} soil)"
-          desc: "Cumulative CO2-C production by the Garwood Valley lake margin soil amended with detritus mineralization relative to the unamended controls"
+          units: mgDetritusC/gSoil
+          desc: "Cumulative detritus-derived CO2-C production by the Garwood Valley lake margin soil amended with 0.64 mgC/gSoil detritus relative to the unamended controls"
           temperature: 10
           soil: "lake margin soil"
-          ammendment: unamended
+          ammendment: detritus
         V8:
           name: CO2C_HS_glu
-          units: "CO2-C production (mg C g^{-1} soil)"
-          desc: "Cumulative CO2-C production by the Garwood Valley hillslope soil amended with 10 mg glucose"
+          units: mgC/gSoil
+          desc: "Cumulative CO2-C production by the Garwood Valley hillslope soil amended with 10 mg glucose (0.64 mg C/gSoil)"
           temperature: 10
           soil: "hillslope soil"
           ammendment: glucose
         V9:
           name: CO2C_HS_NH4Cl
-          units: "CO2-C production (mg C g^{-1} soil)"
+          units: mgC/gSoil
           desc: "Cumulative CO2-C production by the Garwood Valley hillslope soil amended with 10 mg NH4Cl"
           temperature: 10
           soil: "hillslope soil"
           ammendment: NH4Cl
         V10:
           name: CO2C_HS_una
-          units: "CO2-C production (mg C g^{-1} soil)"
+          units: mgC/gSoil
           desc: "Cumulative CO2-C production by the unamended Garwood Valley hillslope soil"
           temperature: 10
           soil: "hillslope soil"
           ammendment: unamended
         V11:
           name: CO2C_HS_gly
-          units: "CO2-C production (mg C g^{-1} soil)"
-          desc: "Cumulative CO2-C production by the Garwood Valley hillslope soil amended with 10 mg glycine"
+          units: mgC/gSoil
+          desc: "Cumulative CO2-C production by the Garwood Valley hillslope soil amended with 10 mg glycine (0.64 mg C/gSoil)"
           temperature: 10
           soil: "hillslope soil"
           ammendment: glycine
         V12:
           name: CO2C_LMS_glu
-          units: "CO2-C production (mg C g^{-1} soil)"
-          desc: "Cumulative CO2-C production by the Garwood Valley lake margin soil amended with 10 mg glucose"
+          units: mgC/gSoil
+          desc: "Cumulative CO2-C production by the Garwood Valley lake margin soil amended with 10 mg glucose (0.64 mg C/gSoil)"
           temperature: 10
           soil: "lake margin soil"
           ammendment: glucose
         V13:
           name: CO2C_LMS_gly
-          units: "CO2-C production (mg C g^{-1} soil)"
-          desc: "Cumulative CO2-C production by the Garwood Valley lake margin soil amended with 10 mg glycine"
+          units: mgC/gSoil
+          desc: "Cumulative CO2-C production by the Garwood Valley lake margin soil amended with 10 mg glycine (0.64 mg C/gSoil)"
           temperature: 10
           soil: "lake margin soil"
           ammendment: glycine
         V14:
           name: CO2C_LMS_NH4Cl
-          units: "CO2-C production (mg C g^{-1} soil)"
+          units: mgC/gSoil
           desc: "Cumulative CO2-C production by the Garwood Valley lake margin soil amended with 10 mg NH4Cl"
           temperature: 10
           soil: "lake margin soil"
           ammendment: NH4Cl
         V15:
           name: CO2C_HS_una
-          units: "CO2-C production (mg C g^{-1} soil)"
+          units: mgC/gSoil
           desc: "Cumulative CO2-C production by the unamended Garwood Valley lake margin soil"
           temperature: 10
           soil: "lake margin soil"
           ammendment: unamended
+

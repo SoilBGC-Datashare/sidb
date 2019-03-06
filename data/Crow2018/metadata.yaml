@@ -1,0 +1,187 @@
+citationKey: Crow2018  # Unique identifier in the format: LastnameYearJOURNAL (journal is abbreviated)
+doi:   # DOI of the publication where data is published
+  - 10.3389/fenvs.2018.00018
+  - 10.2134/jeq2017.07.0280
+entryAuthor: Susan Crow   # First and Last name of the person who enters the data in this file
+entryCreationDate: 2019-03-06 # Date when the data is entered in this file. Format: YYYY-MM-DD
+contactName: Susan Crow # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
+contactEmail: crows@hawaii.edu # Email of the contact person
+entryNote: "dataset was collected at one time, but split between two publications" # Any notes or comments related to this entry.
+
+siteInfo:
+        study:  "Field trial that examined pre-cultivation grassland state and 2-yr post cultivation planted plots and bare plots where no plant inputs were allowed" # Overall study description
+        site: Waimanalo # Names of individual sites, if one site, keep on this line, if multiple, use array format
+#These fields should be arrays of equal length to site array
+        coordinates:
+          latitude: 21.336389 # Latitude in decimal units (check for negative that denotes southern hemisphere)
+          longitude: -157.71278 # Longitude in decimal units (check for negative that denotes west)
+        country: USA # Name of country where site was conducted
+        MAT: 24.6 # Mean annual temperature in degrees Celsius
+        MAP: 938 # Mean annual precipitation in mm
+        elevation: 24 # Elevation of study site in meters above sea levels
+        landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+          - rangeland/grassland
+          - cultivated
+          - bare
+        vegNote: #Additional details about land cover such as species or functional type composition
+          - undisturbed grassland
+          - zero tillage cultivation
+          - no plant inputs since preparation for cultivation
+        soilTaxonomy:
+          soilOrder: Mollisol # Soil order according to the classification system described below
+          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
+          soilSeries: Waialua # Soil series according to the classification system described below
+          classificationSystem: USDA # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
+#These do not have to be arrays of equal length to site array
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+          top: # in cm
+          bottom: # in cm
+          midDepth: 7.5 #average depth
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          horizon: # soil horizon designation
+        permafrost:
+          permafrostExist: no # yes or no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
+          landuse:
+            - grassland
+            - cultivated
+            - bare
+incubationInfo:
+        description: "The amount of active C, readily accessed by microbial metabolism, was determined by 191-day laboratory incubation"# Short description of the incubation setup and main treatments"        description: # Short description of the incubation setup and main treatments
+        temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+        moisture:
+          value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
+          units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
+        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
+          temperature: # Replace with name of treatment
+            value: # Numerical or factor
+            - 21
+            - 26
+            units: Celsius # Units of treatment value if numerical, if a %, write percent
+        replicates:
+          number: 4 # Number of replicates per treatments
+          type: field # Valid fields are: field or lab
+        incubationTime: 191 # length of incubation in days
+        preincubationTime: 2 # Pre-incubation time in days
+        samplePreparation:
+          intactCore: No # yes or no
+          sieving: 20 # no, or mesh size in mm
+          rootPicking: Yes # yes or no
+          rockPicking: Yes # yes or no
+        gasAnalyzer: "Clarus 580 Gas Chromatograph, Perkin Elmer Inc." # Gas analysis equipment for measurements
+
+variables: # These describe the columns of your timeSeries.csv file
+       V1: # column 1
+          name: Day # Name of first variable in the accompanying csv data file. First variable should be time.
+          units: d # Units of first variable in accompanying file.
+       V2: # column 2
+          name: grassland21_mean # Name of second variable in accompanying file.
+          desc: "mean CO2 production at grassland site 21 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: grassland # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 21 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V3:
+          name: grassland21_stdev # Name of second variable in accompanying file.
+          desc: "stdev CO2 production at grassland site 21 degrees celsius stderr" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: grassland # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 21 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V4:
+          name: grassland26_mean # Name of second variable in accompanying file.
+          desc: "mean CO2 production at grassland site 26 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: grassland # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 26 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V5:
+          name: grassland26_stdev # Name of second variable in accompanying file.
+          desc: "stdev CO2 production at grassland site 26 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: grassland # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 26 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V6:
+          name: cultivated21_mean # Name of second variable in accompanying file.
+          desc: "mean CO2 production at cultivated site 21 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: cultivated # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 21 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V7:
+          name: cultivated21_stdev # Name of second variable in accompanying file.
+          desc: "stdev CO2 production at cultivated site 21 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: cultivated # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 21 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V8:
+          name: cultivated26_mean # Name of second variable in accompanying file.
+          desc: "mean CO2 production at cultivated site 26 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: cultivated # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V9:
+          name: cultivated26_stdev # Name of second variable in accompanying file.
+          desc: "stdev CO2 production at cultivated site 26 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: cultivated # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 26 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V10:
+          name: bare21_mean # Name of second variable in accompanying file.
+          desc: "mean CO2 production at bare site 21 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: bare # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 21 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V11:
+          name: bare21_stdev # Name of second variable in accompanying file.
+          desc: "stdev CO2 production at bare site 21 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: bare # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 21 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V12:
+          name: bare26_mean # Name of second variable in accompanying file.
+          desc: "mean CO2 production at bare site 26 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: bare # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 26 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+       V13:
+          name: bare26_stdev # Name of second variable in accompanying file.
+          desc: "stdev CO2 production at bare site 26 degrees celsius" # Description of the variable
+          site: Waimanalo #site where the incubated sample comes from.
+          landuse: bare # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 26 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).

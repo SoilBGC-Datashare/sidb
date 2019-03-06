@@ -488,7 +488,7 @@ variables: # These describe the columns of your timeSeries.csv file
         temperature:
           value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         moisture:
-          value: 75# 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          value: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).

@@ -45,12 +45,11 @@ incubationInfo:
         gasMeasured:
           - 13CO2
         laboratoryTreatment:
-          - temperature
-          treatment: temperature
+          temperature:
             value:
-              - 4
-              - 22
-              - 40
+               - 4
+               - 22
+               - 40
             units: Celsius
         replicates:
           number:
@@ -67,7 +66,7 @@ incubationInfo:
 variables:
        V1:
         name: time
-        units: days
+        units: d
        V2:
         name: CO2_4deg
         desc: "CO2 production rate measured at 4 degrees celsius" #
@@ -75,9 +74,10 @@ variables:
         experimentalTreatment:
         laboratoryTreatment: temperature
         gasMeasured:
+          - CO2
           - 13CO2
         units:
-          - mgCO2/gSoil/day
+          - mgCO2/gSoil/d
           - permil
         statistic:
        V3:
@@ -86,47 +86,61 @@ variables:
         site: Central Piedmont region of North Carolina
         experimentalTreatment:
         laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
         units:
-         - mgCO2/gSoil/day
-         - permil
+          - mgCO2/gSoil/d
+          - permil
         statistic:
-       V4: Central Piedmont region of North Carolina
+       V4:
         name: CO2_40deg
         desc: "CO2 production rate measured at 40 degrees celsius"
-        site:
+        site: Central Piedmont region of North Carolina
         experimentalTreatment:
         laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
         units:
-         - mgCO2/gSoil/day
-         - 13CO2
+          - mgCO2/gSoil/d
+          - 13CO2
         statistic:
-       V5: Central Piedmont region of North Carolina
-        name: 13C_4deg
+       V5:
         desc: "13C-CO2 production rate measured at 4 degrees celsius"
         site: Central Piedmont region of North Carolina
         experimentalTreatment:
         laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
         units:
-         - mgCO2/gSoil/day
-         - 13CO2
+          - mgCO2/gSoil/d
+          - 13CO2
         statistic:
-       V6: Central Piedmont region of North Carolina
+       V6:
         name: 13C_22deg
         desc: "13C-CO2 production rate measured at 22 degrees celsius"
         site: Central Piedmont region of North Carolina
         experimentalTreatment:
         laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
         units:
-         - mgCO2/gSoil/day
-         - 13CO2
+          - mgCO2/gSoil/d
+          - 13CO2
         statistic:
-       V7: Central Piedmont region of North Carolina
+       V7: 
         name: 13C_40deg
         desc: "13C-CO2 production rate measured at 40 degrees celsius"
         site: Central Piedmont region of North Carolina
         experimentalTreatment:
         laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
         units:
-         - mgCO2/gSoil/day
-         - 13CO2
+          - mgCO2/gSoil/d
+          - 13CO2
         statistic:

@@ -29,7 +29,7 @@ siteInfo:
           top: # in cm
           bottom: # in cm
           midDepth: #average depth
-          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
         permafrost:
           permafrostExist: # yes or no (if yes, permafrost must exist at the site)
@@ -58,7 +58,7 @@ incubationInfo:
           sieving: # no, or mesh size in mm
           rootPicking: # yes or no
           rockPicking: # yes or no
-        gasAnalyzer: # Gas analysis equipment for CO2 measurements
+        gasAnalyzer: # Gas analysis equipment for measurements
         
 variables: # These describe the columns of your timeSeries.csv file
        V1: # column 1

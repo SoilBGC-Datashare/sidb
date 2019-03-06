@@ -25,14 +25,14 @@ siteInfo:
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
 #These do not have to be arrays of equal length to site array        
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array. 
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array. 
           top: # in cm
           bottom: # in cm
           midDepth: #average depth
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
           horizon: # soil horizon designation
         permafrost:
-          permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
+          permafrostExist: # yes or no (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
         experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
 
@@ -41,7 +41,7 @@ incubationInfo:
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture: 
           value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
-          units: # Valid fields are: percentGWC or percentFieldCapacity
+          units: # Valid fields are: percentGWC, percentFieldCapacity, or waterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)

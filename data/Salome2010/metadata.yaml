@@ -25,9 +25,9 @@ siteInfo:
           depth: 
             top: 
               - 5
-              - 10
-            bottom: 
               - 80
+            bottom: 
+              - 10
               - 100
           surfaceAtm: 
         permafrostExist: No

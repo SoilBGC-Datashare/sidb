@@ -1,6 +1,6 @@
 citationKey:   Andrews2000SBB
 doi:   "10.1016/S0038-0717(99)00206-0"
-entryAuthor:   Heidi Voelkel/Mina AziziRad
+entryAuthor:   Mina Azizi Rad
 entryCreationDate:  2019-03-06
 contactName:  Carlos Sierra
 contactEmail:  csierra@bgc-jena.mpg.de
@@ -25,8 +25,8 @@ siteInfo:
           classificationSystem: USDA
 
         depthInfo:
-          top: 10 cm
-          bottom:
+          top: 0 cm
+          bottom: 10 cm
           midDepth:
           surfaceAtm:
           horizon:
@@ -131,7 +131,7 @@ variables:
           - mgCO2/gSoil/d
           - 13CO2
         statistic:
-       V7: 
+       V7:
         name: 13C_40deg
         desc: "13C-CO2 production rate measured at 40 degrees celsius"
         site: Central Piedmont region of North Carolina

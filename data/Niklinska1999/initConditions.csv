@@ -1,0 +1,8 @@
+site,carbonMean,carbonSD,carbonSE,carbonUnits,nitrogenMean,nitrogenSD,nitrogenSE,nitrogenUnits,bulkDensityMean,bulkDensitySD,bulkDensitySE,replicates,pH,redox,percentClay,percentSand,percentSilt,microbialBiomass,microbialBiomassUnits
+"Harads, northern Sweden",46.55,,,percent,0.71,,,mg/gSoil,,,,,5.6,,,,,,
+"Jaedraas, central Sweden",46.3,,,percent,1.16,,,mg/gSoil,,,,,5.8,,,,,,
+"Brandstorp, southern Sweden",47.55,,,percent,1.05,,,mg/gSoil,,,,,5.9,,,,,,
+"Czerlonka, north-eastern Poland",23.1,,,percent,0.85,,,mg/gSoil,,,,,6.1,,,,,,
+"Otobok, western Poland",41.55,,,percent,1.67,,,mg/gSoil,,,,,5.9,,,,,,
+"LaViale, southern France",42.45,,,percent,0.91,,,mg/gSoil,,,,,6.1,,,,,,
+"Biescas, northern Spain",37.5,,,percent,0.93,,,mg/gSoil,,,,,6.3,,,,,,

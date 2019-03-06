@@ -10,7 +10,7 @@ siteInfo:
         study:  # Overall study description
         site: # Names of individual sites, if one site, keep on this line, if multiple, use array format
 #These fields should be arrays of equal length to site array       
-       coordinates:
+        coordinates:
           latitude: # Latitude in decimal units (check for negative that denotes southern hemisphere)
           longitude: # Longitude in decimal units (check for negative that denotes west)
         country: # Name of country where site was conducted

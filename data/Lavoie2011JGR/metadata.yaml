@@ -108,7 +108,7 @@ incubationInfo:
 
 variables:
        V1:
-        name: time_d
+        name: time
         units: d
        V2:
         name: TAO_5

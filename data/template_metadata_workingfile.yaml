@@ -1,4 +1,4 @@
-citationKey:   # Unique identifier in the format: LastnameYearJOURNAL
+citationKey:   # Unique identifier in the format: LastnameYearJOURNAL (journal is abbreviated)
 doi:   # DOI of the publication where data is published
 entryAuthor:   # First and Last name of the person who enters the data in this file
 entryCreationDate:  # Date when the data is entered in this file. Format: YYYY-MM-DD
@@ -6,12 +6,13 @@ contactName:  # First and last name of contact person, who might be the principa
 contactEmail:  # Email of the contact person
 entryNote: # Any notes or comments related to this entry.
 
-siteInfo:
-        studySite:  # Name of the study site where study was conducted
-        country: # Name of country where site was conducted
+siteInfo: 
+        study:  # Overall study description
+        site: # Names of individual sites, if one site, keep on this line, if multiple, use array format
         coordinates:
           latitude: # Latitude in decimal units (check for negative that denotes southern hemisphere)
           longitude: # Longitude in decimal units (check for negative that denotes west)
+        country: # Name of country where site was conducted
         MAT: # Mean annual temperature in degrees Celsius
         MAP: # Mean annual precipitation in mm
         elevation: # Elevation of study site in meters above sea levels
@@ -22,30 +23,31 @@ siteInfo:
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-        depth: # Overall soil depth if soils all from same depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. 
+        
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array. 
           top: # in cm
           bottom: # in cm
+          midDepth: #average depth
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
-        horizon: # soil horizon designation
-        experimentalTreatment: # Site names, multiple depths, or list of experimental treatments applied at the site level 
+          horizon: # soil horizon designation
         permafrost:
           permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
+        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
 
 incubationInfo:
         description: # Short description of the incubation setup and main treatments
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture: 
           value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
-          units: # Valid fields are: percent GWC or percent field capacity
+          units: # Valid fields are: GWC or percent field capacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
-        redox: # redox potential of incubated soils in mV (-300 to 800)
-        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
           treatment: # Replace with name of treatment
             value: # Numerical or factor
-            units: # Units of treatment value if numerical, if a %, write percentage
-        Replicates: 
+            units: # Units of treatment value if numerical, if a %, write percent
+        replicates: 
           number: # Number of replicates per treatments
           type: # Valid fields are: field or lab 
         incubationTime: # length of incubation in days
@@ -55,39 +57,19 @@ incubationInfo:
           sieving: # no, or mesh size in mm
           rootPicking: # yes or no
           rockPicking: # yes or no
-        carbon:
-          mean: # Mean carbon concentration at the begining of the incubation
-          standardDeviation: # standard deviation of carbon concentration at the begining of the incubation
-          standardError:
-          numberReplicates:
-          units: # Units of the mean and standard deviation of the carbon concentration
-        nitrogen:
-          mean:
-          standardDeviation:
-          standardError:
-          numberReplicates:
-          units:
-        bulkDensity: # Soil bulk density in g/cm3
-          mean: # Mean bulk density
-          standardDeviation: # standard deviation of bulk density
-        pH: # Soil pH
-        texture:
-          percentClay: # Percent clay of the incubated soil
-          percentSand: # Percent sand of the incubated soil
-          percentSilt: # Percent silt of the incubated soil
-        microbialBiomass: # Microbial biomass measured at the beginning of the incubation
         gasAnalyzer: # Gas analysis equipment for CO2 measurements
-
-variables: # These describe the columns of your .csv file
+        
+variables: # These describe the columns of your timeSeries.csv file
        V1: # column 1
         name: # Name of first variable in the accompanying csv data file. First variable should be time.
         units: # Units of first variable in accompanying file.
        V2: # column 2
         name: # Name of second variable in accompanying file.
         desc: # Description of the variable
+        site: #site where the incubated sample comes from.
         experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        gasMeasured: # This line is not required if CO2, please specify here if other gas
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and then add the level after the colon.
-        units: # Units in which this variable is provided 
+        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        units: # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error

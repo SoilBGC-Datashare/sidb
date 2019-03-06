@@ -1,54 +1,146 @@
-citationKey: Andrews2000SBB
-doi: 10.1016/S0038-0717(99)00206-0
-entryAuthor: Heidi Voelkel
-entryCreationDate: 2016-04-27
-contactName: Carlos Sierra
-contactEmail: csierra@bgc-jena.mpg.de
+citationKey:   Andrews2000SBB
+doi:   "10.1016/S0038-0717(99)00206-0"
+entryAuthor:   Heidi Voelkel/Mina AziziRad
+entryCreationDate:  2019-03-06
+contactName:  Carlos Sierra
+contactEmail:  csierra@bgc-jena.mpg.de
+entryNote: .
 
 siteInfo:
-       studySite: Central Piedmont region of North Carolina
-       country: USA
-       landCover: Forest
-       soilTaxonomy:
+        study:  Measuring the respiration rates, δ13C of respired CO2, and microbial community composition in root-free bulk soils incubated at 4, 22 and 40°C.
+        site: Central Piedmont region of North Carolina
+        coordinates:
+          latitude: 36.6166667
+          longitude: -79.150
+        country: USA
+        MAT:
+        MAP:
+        elevation:
+        landCover: Forest
+        vegNote: loblolly pine (Pinus taeda L.)
+        soilTaxonomy:
           soilOrder: Alfisol
+          soilFamily:
+          soilSeries:
           classificationSystem: USDA
-       coordinates:
-         latitude:
-           - 36.6166667
-         longitude:
-           - -79.150
+
+        depthInfo:
+          top: 10 cm
+          bottom:
+          midDepth:
+          surfaceAtm:
+          horizon:
+        permafrost:
+          permafrostExist:
+          activeLayer:
+        experimentalTreatment:
 
 incubationInfo:
-       description: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celcius as well as ambient and elevated CO2"
-       laboratoryTreatment:
+        description: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celsius as well as ambient and elevated CO2"
+        temperature:
+        moisture:
+          value: 240
+          units: gWater/KgSoil
+        anaerobic:
+        gasMeasured:
+          - 13CO2
+        laboratoryTreatment:
           temperature:
-                - 4
-                - 22
-                - 40
-          CO2:
-       incubationTime:
-          time: 48
-          units: days
+            value:
+               - 4
+               - 22
+               - 40
+            units: Celsius
+        replicates:
+          number:
+          type:
+        incubationTime: 48
+        preincubationTime:
+        samplePreparation:
+          intactCore: Yes
+          sieving:
+          rootPicking: Yes
+          rockPicking:
+        gasAnalyzer: VG ISOGAS series 2
 
 variables:
-        V1:
-          name: time
-          units: days
-        V2:
-          name: CO2_4deg
-          temperature: 4
-          CO2: ambient
-          units: "mg CO$_2$ g^{-1} soil day^{-1}"
-          desc: "CO2 production rate measured at 4 degrees celsius"
-        V3:
-          name: CO2_22deg
-          temperature: 22
-          CO2: ambient
-          units: "mg CO$_2$ g^{-1} soil day^{-1}"
-          desc: "CO2 production rate measured at 22 degrees celsius"
-        V4:
-          name: CO2_40deg
-          temperature: 40
-          CO2: ambient
-          units: "mg CO$_2$ g^{-1} soil day^{-1}"
-          desc: "CO2 production rate measured at 40 degrees celsius"
+       V1:
+        name: time
+        units: d
+       V2:
+        name: CO2_4deg
+        desc: "CO2 production rate measured at 4 degrees celsius" #
+        site: Central Piedmont region of North Carolina
+        experimentalTreatment:
+        laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
+        units:
+          - mgCO2/gSoil/d
+          - permil
+        statistic:
+       V3:
+        name: CO2_22deg
+        desc: "CO2 production rate measured at 22 degrees celsius" #
+        site: Central Piedmont region of North Carolina
+        experimentalTreatment:
+        laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
+        units:
+          - mgCO2/gSoil/d
+          - permil
+        statistic:
+       V4:
+        name: CO2_40deg
+        desc: "CO2 production rate measured at 40 degrees celsius"
+        site: Central Piedmont region of North Carolina
+        experimentalTreatment:
+        laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
+        units:
+          - mgCO2/gSoil/d
+          - 13CO2
+        statistic:
+       V5:
+        desc: "13C-CO2 production rate measured at 4 degrees celsius"
+        site: Central Piedmont region of North Carolina
+        experimentalTreatment:
+        laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
+        units:
+          - mgCO2/gSoil/d
+          - 13CO2
+        statistic:
+       V6:
+        name: 13C_22deg
+        desc: "13C-CO2 production rate measured at 22 degrees celsius"
+        site: Central Piedmont region of North Carolina
+        experimentalTreatment:
+        laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
+        units:
+          - mgCO2/gSoil/d
+          - 13CO2
+        statistic:
+       V7: 
+        name: 13C_40deg
+        desc: "13C-CO2 production rate measured at 40 degrees celsius"
+        site: Central Piedmont region of North Carolina
+        experimentalTreatment:
+        laboratoryTreatment: temperature
+        gasMeasured:
+          - CO2
+          - 13CO2
+        units:
+          - mgCO2/gSoil/d
+          - 13CO2
+        statistic:

@@ -1,0 +1,209 @@
+citationKey:  Karhu2010JSOILBIO # Unique identifier in the format: LastnameYearJOURNAL
+doi: 10.1016/j.soilbio.2009.10.002  # DOI of the publication where data is published
+entryAuthor:  Kristiina Karhu # First and Last name of the person who enters the data in this file
+entryCreationDate: 2019-03-04 # Date when the data is entered in this file. Format: YYYY-MM-DD
+contactName: Shane Stoner # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
+contactEmail: sstoner@bgc-jena.mpg.de # Email of the contact person
+entryNote: # Any notes or comments related to this entry.
+
+siteInfo:
+        studySite: FinlandKarhu # Name of the study site where study was conducted
+        country: Finland
+        coordinates:
+          latitude: 61.48 # Latitude in decimal units (check for negative that denotes southern hemisphere)
+          longitude: 24.19 # Longitude in decimal units (check for negative that denotes west)
+        MAT: 2.9 # Mean annual temperature in degrees Celsius
+        MAP: 709 # Mean annual precipitation in mm
+        elevation: 150 # Elevation of study site in meters above sea levels
+        landCover: forest # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+        vegNote: Picea abies, Pinus sylvestris #Additional details about land cover such as species or functional type composition
+        soilTaxonomy:
+          soilOrder:  # Soil order according to the classification system described below
+          soilSeries: # Soil series according to the classification system described below
+          classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
+        experimentalTreatment: # Site names or list of experimental treatments applied at the site level
+          - Spruce
+          - Pine
+        permafrost:
+          permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
+          #zonation: # Describe permafrost zonation
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        description: 495 day aerobic incubation at 25 degrees C, 50% air humidity with weekly control for soil moisture loss. Subsamples taken every 3 months and incubated at 5, 12, 19, 26 degrees C for 24 hours, then CO2 measured. # Short description of the incubation setup and main treatments
+        temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+        moisture: #Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
+          value: 100
+          units: percent field capacity #Valid fields are: GWC or percent field capacity
+        anaerobic: #Yes if headspace flushed with N2 or He, blank if aerobic
+          redox: #redox potential of incubated soils in mV (-300 to 800)
+        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          temperature:
+            - 5
+            - 12
+            - 19
+            - 26
+        numberReplicates:  # Number of replicates per treatments
+          number: 3
+          type: lab #Valid fields are: field or lab
+        incubationTime: 495 #length of incubation in days
+        preincubationTime: # Pre-incubation time in days
+        samplePreparation:
+          intactCore: no # yes or no
+          sieving: 2.8 # no, or mesh size in mm
+          rootPicking: yes # yes or no
+          rockPicking: yes # yes or no
+        carbon:
+          mean: # Mean carbon concentration at the begining of the incubation
+          standardDeviation: # standard deviation of carbon concentration at the begining of the incubation
+          standardError:
+          numberReplicates:
+          units: # Units of the mean and standard deviation of the carbon concentration
+        nitrogen:
+          mean:
+          standardDeviation:
+          standardError:
+          numberReplicates:
+          units:
+        bulkDensity: # Soil bulk density in g/cm3
+          mean: # Mean bulk density
+          standardDeviation: # standard deviation of bulk density
+        depth: # Soil depth if only one depth listed, enter as top and bottom, 0 is organic/mineral interface
+          top: # in cm
+            - 0
+            - 15
+          bottom: #in cm
+            - 0
+            - 15
+            - 30
+          surfaceAtm: #blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+        horizon:
+          - O
+        pH: # Soil pH
+        texture:
+          percentClay: # Percent clay of the incubated soil
+          percentSand: # Percent sand of the incubated soil
+          percentSilt: # Percent silt of the incubated soil
+        microbialBiomass: # Microbial biomass measured at the beginning of the incubation
+        gasAnalyzer: GC # Gas analysis equipment for CO2 measurements
+
+variables: #These describe the columns of your .csv file
+       V1: #column 1
+          name: time # Name of first variable in the accompanying csv data file. First variable should be time.
+          units: days # Units of first variable in accompanying file.
+       V2: #column 2
+          name: Pine_O_26 # Name of second variable in accompanying file.
+          desc: Respiration rate from Organic layer from pine forest, incubated for 24 hours at 26 degrees C # Description of the variable
+          experimentalTreatment: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          gasMeasured: #This line is not required if CO2, please specify here if other gas
+          temperature: 26 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 0
+            bottom: 0
+          horizon: O
+       V3:
+         name: Spruce_O_26 # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
+         desc: Respiration rate from Organic layer from spruce forest, incubated for 24 hours at 26 degrees C
+         experimentalTreatment: Spruce
+         temperature: 26
+         units: mu g CO2 gOM^{-1} h^{-1}
+         depth:
+            top: 0
+            bottom: 0
+         horizon: O
+       V4:
+          name: Spruce_0-15_26
+          desc: Respiration rate from 0-15 cm soil from spruce forest, incubated for 24 hours at 26 degrees C
+          experimentalTreatment: Spruce
+          temperature: 26
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 0
+            bottom: 15
+       V5:
+          name: Pine_0-15_26
+          desc: Respiration rate from 0-15 cm soil from pine forest, incubated for 24 hours at 26 degrees C
+          experimentalTreatment: Pine
+          temperature: 26
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 0
+            bottom: 15
+       V6:
+          name: Pine_15-30_26
+          desc: Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 26 degrees C
+          experimentalTreatment:
+          laboratoryTreatment: 26
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 15
+            bottom: 30
+       V7:
+          name: Spruce_15-30_26
+          desc: Respiration rate from 15-30 cm soil from spruce forest, incubated for 24 hours at 26 degrees C
+          experimentalTreatment: Spruce
+          temperature: 26
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 15
+            bottom: 30
+       V8:
+          name: Spruce_O_05
+          desc: Respiration rate from Organic layer from spruce forest, incubated for 24 hours at 5 degrees C
+          experimentalTreatment: Spruce
+          temperature: 5
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 0
+            bottom: 0
+          horizon: O
+       V9:
+          name: Pine_15-30_05
+          desc: Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 5 degrees C
+          experimentalTreatment: Pine
+          temperature: 5
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 15
+            bottom: 30
+       V10:
+          name: Spruce_O_12
+          desc: Respiration rate from Organic layer from spruce forest, incubated for 24 hours at 12 degrees C
+          experimentalTreatment: Spruce
+          temperature: 12
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 0
+            bottom: 0
+          horizon: O
+       V11:
+          name: Pine_15-30_12
+          desc: Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 12 degrees C
+          experimentalTreatment: Pine
+          temperature: 12
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 15
+            bottom: 30
+       V12:
+          name: Spruce_O_19
+          desc: Respiration rate from Organic layer from spruce forest, incubated for 24 hours at 19 degrees C
+          experimentalTreatment: Spruce
+          temperature: 19
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 0
+            bottom: 0
+          horizon: O
+       V13:
+          name: Pine_15-30_19
+          desc: Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 19 degrees C
+          experimentalTreatment: Pine
+          temperature: 19
+          units: mu g CO2 gOM^{-1} h^{-1}
+          depth:
+            top: 15
+            bottom: 30

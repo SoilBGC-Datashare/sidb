@@ -85,24 +85,24 @@ variables:
        V2:
         name: L_21_Cumresp
         desc: "Decomposition rates over time at 21 degrees at lower elevation"
-        units: "mg CO$_2$ g^{-1} soil"
+        units: mgC-CO2/gSoil
         temperature: 21
         site: lower montane forest
        V3:
         name: L_31_Cumresp
         desc: "Decomposition rates over time at 31 degrees at lower elevation"
-        units: "mg CO$_2$ g^{-1} soil"
+        units: mgC-CO2/gSoil
         temperature: 31
         site: lower montane forest
        V4:
         name: U_21_Cumresp
         desc: "Decomposition rates over time at 21 degrees at upper elevation"
-        units: "mg CO$_2$ g^{-1} soil"
+        units: mgC-CO2/gSoil
         temperature: 21
         site: wet tropical rainforest
        V5:
         name: U_31_Cumresp
         desc: "Decomposition rates over time at 31 degrees at upper elevation"
-        units: "mg CO$_2$ g^{-1} soil"
+        units: mgC-CO2/gSoil
         temperature: 31
         site: wet tropical rainforest

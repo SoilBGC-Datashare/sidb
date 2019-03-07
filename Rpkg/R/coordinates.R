@@ -1,7 +1,7 @@
 #' Creates a data frame with the coordinates of the sites
 #'
 #' @param database A list with the sidb
-#' @return A data.frame with the latitude and longitude of sites from the database
+#' @return A data.frame with the longitude and latitude of sites from the database
 #' @export
 #' @examples
 #' coor=coordinates(database=sidb)

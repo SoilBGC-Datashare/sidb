@@ -53,9 +53,7 @@ incubationInfo:
     replicates:
       number: 4 # Number of replicates per treatments
       type: lab # Valid fields are: field or lab
-    incubationTime:
-        time: 589
-        units: d
+    incubationTime: 589
     preincubationTime: # Pre-incubation time in days
     samplePreparation:
         intactCore: no # yes or no

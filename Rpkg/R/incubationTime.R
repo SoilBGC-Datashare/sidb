@@ -6,9 +6,8 @@
 #' @examples
 #' incubTimes=incubationTime(database=sidb)
 incubationTime <- function(database) {
-  time=lapply(database, FUN=function(x){x$incubationInfo$incubationTime$time})
-  units=lapply(database, FUN=function(x){x$incubationInfo$incubationTime$units})
-  return(data.frame(time=unlist(time), units=unlist(units)))
+  time=lapply(database, FUN=function(x){x$incubationInfo$incubationTime})
+  return(unlist(time))
 }
 
 

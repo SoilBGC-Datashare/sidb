@@ -55,7 +55,7 @@ siteInfo:
             - 21.15255
             - 21.13774
             - 21.14320
-        longitude: # Longitude in decimal units (check for negative that denotes west)
+          longitude: # Longitude in decimal units (check for negative that denotes west)
             - -158.105
             - -158.109
             - -158.117

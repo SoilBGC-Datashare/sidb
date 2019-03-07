@@ -9,7 +9,7 @@
 laboratoryTreatment <- function(database, treatment) {
   treatfunc=function(x){
   li=x$incubationInfo$laboratoryTreatment
-  li[[as.character(treatment)]]
+  li[[as.character(treatment)]]$value
   }
 
   a=lapply(database, FUN=treatfunc)

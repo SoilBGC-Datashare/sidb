@@ -1,84 +1,129 @@
-citationKey: ZhuCheng2011
+citationKey: ZhuCheng2011SBB
 doi: 10.1016/j.soilbio.2010.12.021
-entryAuthor: Heidi Voelkel
-entryCreationDate: 2017-02-07
+entryAuthor: Caitlin Pries
+entryCreationDate: 2019-03-07
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
+entryNote: # Any notes or comments related to this entry.
 
-siteInfo:
-       studySite:
-         - "University of California at Santa Cruz campus"
-         - "University of California at Santa Cruz campus"
-       country: USA
-       landCover:
-         - cultivated
-         - drassland
-       experimentalTreatment:
-         soilType:
-             - farm soil
-             - grassland soil
+siteInfo: 
+        study: "Constant versus diurnal-varying temperature lead to different temp sensitivity"
+        site: UC Santa Cruz
+#These fields should be arrays of equal length to site array       
+        coordinates:
+          latitude: 36.983626
+          longitude: -122.055460
+        country: USA
+        MAT: # Mean annual temperature in degrees Celsius
+        MAP: # Mean annual precipitation in mm
+        elevation: # Elevation of study site in meters above sea levels
+        landCover: grassland/rangeland
+        vegNote: organic farm converted from grassland in 1974 and annual grassland
+        soilTaxonomy:
+          soilOrder: # Soil order according to the classification system described below
+          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
+          soilSeries: # Soil series according to the classification system described below
+          classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
+#These do not have to be arrays of equal length to site array        
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array. 
+          top: 0
+          bottom: 30
+          midDepth: 15
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          horizon: # soil horizon designation
+        permafrost:
+          permafrostExist: no
+          activeLayer: # Depth of the active layer in meters
+        experimentalTreatment: 
+          landUse:
+            - organic farm
+            - grassland
 
 incubationInfo:
-       description: "Two soils were incubated for 122 days under two temperature regimes (constant vs. diurnally-varying) using 16 bottom-capped PVC pots."
-       laboratoryTreatment:
+        description: "Two soils were incubated for 122 days under two temperature regimes (constant vs. diurnally-varying) using 16 bottom-capped PVC pots."
+        temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+        moisture: 
+          value: 25
+          units: percentGWC
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
+        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
           temperature:
-                  - 25
-                  - 20
-                  - 24
-                  - 19
-       incubationTime:
-          time: 122
-          units: days
-
+            - 25
+            - 20
+            - 24.5
+          temperatureType:
+            - constant
+            - varying
+          units: Celsius
+        replicates: 
+          number: 8
+          type: lab
+        incubationTime: 122
+        preincubationTime: 30
+        samplePreparation:
+          intactCore: no
+          sieving: sizeNotReported
+          rootPicking: # yes or no
+          rockPicking: # yes or no
+        gasAnalyzer: "NaOH solution analyzed on Shimadzu TOC-5050A Total Organic Carbon Analyzer"
+        
 variables:
         V1:
           name: time
-          units: days
+          units: d
         V2:
           name: C_FS_CH
-          units: "mg C g soil C^{-1} day^{-1}"
+          units: mgC/gSoil/d
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a constant high soil temperature treatment on farm soil"
           temperature: 25
-          soilType: farm soil
+          temperatureType: constant
+          soilType: organic farm
         V3:
           name: C_FS_CL
-          units: "mg C g soil C^{-1} day^{-1}"
+          units: mgC/gSoil/d
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a constant low soil temperature treatment on farm soil"
           temperature: 20
-          soilType: farm soil
+          temperatureType: constant
+          soilType: organic farm
         V4:
           name: C_FS_VH
-          units: "mg C g soil C^{-1} day^{-1}"
+          units: mgC/gSoil/d
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a varying high soil temperature treatment on farm soil"
           temperature: 24.5
-          soilType: farm soil
+          temperatureType: varying
         V5:
           name: C_FS_VL
-          units: "mg C g soil C^{-1} day^{-1}"
+          units: mgC/gSoil/d
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a varying low soil temperature treatment on farm soil"
-          temperature: 19.9
-          soilType: farm soil
+          temperature: 20
+          temperatureType: varying
+          soilType: organic farm
         V6:
           name: C_GS_CH
-          units: "mg C g soil C^{-1} day^{-1}"
+          units: mgC/gSoil/d
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a constant high soil temperature treatment on grassland soil"
           temperature: 25
-          soilType: grassland soil
+          temperatureType: constant
+          soilType: grassland
         V7:
           name: C_GS_CL
-          units: "mg C g soil C^{-1} day^{-1}"
+          units: mgC/gSoil/d
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a constant low soil temperature treatment on grassland soil"
           temperature: 20
-          soilType: grassland soil
+          temperatureType: constant
+          soilType: grassland
         V8:
           name: C_GS_VH
-          units: "mg C g soil C^{-1} day^{-1}"
+          units: mgC/gSoil/d
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a varying high soil temperature treatment on grassland soil"
           temperature: 24.5
-          soilType: grassland soil
+          temperatureType: varying
+          soilType: grassland
         V9:
           name: C_GS_VL
-          units: "mg C g soil C^{-1} day^{-1}"
+          units: mgC/gSoil/d
           desc: "Changes in instantaneous soil respiration rate during the 122-day incubation period in a varying low soil temperature treatment on grassland soil"
-          temperature: 19.9
-          soilType: grassland soil
+          temperature: 20
+          temperatureType: varying
+          soilType: grassland

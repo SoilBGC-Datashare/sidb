@@ -121,7 +121,7 @@ incubationInfo:
 variables: # These describe the columns of your timeSeries.csv file
        V1: # column 1
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
-        units: day s# Units of first variable in accompanying file.
+        units: d # Units of first variable in accompanying file.
        V2:
         name: 14C_Vin_30 # Name of second variable in accompanying file.
         desc: "Percentage of initially applied 14C remaining over time of incubation and temperature for Vindeln, Sweden at 30 degrees"

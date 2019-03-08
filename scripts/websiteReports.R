@@ -5,11 +5,11 @@ library(sidb)
 library(maps)
 
 #Load database
-database=loadEntries()
+database=loadEntries(path='~/sidb/clean/')
 
 # Calculate some statistics
-timeseries=lapply(database, FUN=function(x){ncol(x$data)-1})
-dataPoints=lapply(database, FUN=function(x){length(as.matrix(x$data))})
+timeseries=lapply(database, FUN=function(x){ncol(x$timeSeries)-1})
+dataPoints=lapply(database, FUN=function(x){length(as.matrix(x$timeSeries))})
 
 smr=list(entries=length(database),timeseries=sum(unlist(timeseries)), datapoints=sum(unlist(dataPoints)))
 as.yaml(smr)
@@ -27,9 +27,6 @@ dev.off()
 
 # Compute incubation times
 it=incubationTime(database)
-
-daysfromweeks=it[it$units=="weeks",1]*30/4
-it[it$units=="weeks",]<-c(daysfromweeks, "days")
 
 png("~/sidb/docs/assets/incubationTime.png", bg=NA)
 hist(as.numeric(it$time), xlab="Incubation time (days)", main ="", ylab="Number of studies")

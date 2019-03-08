@@ -67,20 +67,22 @@ siteInfo:
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: USDA
 #These do not have to be arrays of equal length to site array
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+        depthInfo:
           top: # in cm
           bottom: # in cm
           midDepth: #average depth
-          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
-          horizon: # soil horizon designation
+          surfaceAtm:
+          horizon:
+            - A
+            - C
         permafrost:
-          permafrostExist: # yes or no (if yes, permafrost must exist at the site)
-          activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
+          permafrostExist:
+          activeLayer:
+        experimentalTreatment:
 
 incubationInfo:
         description: # Short description of the incubation setup and main treatments
-        temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+        temperature: 25
         moisture:
           value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace

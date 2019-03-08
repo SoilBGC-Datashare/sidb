@@ -1,6 +1,6 @@
 citationKey: Stewart2008SBB
 doi: 10.1016/j.soilbio.2008.02.014
-entryAuthor: Maddie Tilyou
+entryAuthor: Mina Azizi Rad
 entryCreationDate: 2016-10-4
 contactName: Alain Plante
 contactEmail: aplante@sas.upenn.edu
@@ -60,7 +60,7 @@ siteInfo:
             - -96.2
             - -104.36
         experimentalTreatment:
-          site: 
+          site:
             - Sioux City
             - Kellog Biological Station
             - Saginaw

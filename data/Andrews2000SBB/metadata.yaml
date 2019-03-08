@@ -1,13 +1,13 @@
-citationKey:   Andrews2000SBB
-doi:   "10.1016/S0038-0717(99)00206-0"
-entryAuthor:   Mina Azizi Rad
-entryCreationDate:  2019-03-06
-contactName:  Carlos Sierra
-contactEmail:  csierra@bgc-jena.mpg.de
-entryNote: .
+citationKey: Andrews2000SBB
+doi: 10.1016/S0038-0717(99)00206-0
+entryAuthor: Mina Azizi Rad
+entryCreationDate: 2019-03-06
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
+entryNote:
 
 siteInfo:
-        study:  Measuring the respiration rates, δ13C of respired CO2, and microbial community composition in root-free bulk soils incubated at 4, 22 and 40°C.
+        study: Measuring the respiration rates, δ13C of respired CO2, and microbial community composition in root-free bulk soils incubated at 4, 22 and 40°C.
         site: Central Piedmont region of North Carolina
         coordinates:
           latitude: 36.6166667

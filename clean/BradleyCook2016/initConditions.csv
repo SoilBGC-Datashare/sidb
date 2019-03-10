@@ -1,0 +1,6 @@
+site,vegetation,midDepth,carbonMean,carbonSD,carbonSE,carbonUnits,nitrogenMean,nitrogenSD,nitrogenSE,nitrogenUnits,bulkDensityMean,bulkDensitySD,bulkDensitySE,replicates,pH,redox,percentClay,percentSand,percentSilt,microbialBiomass,microbialBiomassUnits
+Kangerlussuaq,graminoid,10,6.4,,0.2,percent,0.453,,,percent,,,,5,,,,,,,
+Kangerlussuaq,shrub,30,5.45,,0.35,percent,0.357,,,percent,,,,5,,,,,,,
+Kangerlussuaq,graminoid,10,5,,0.75,percent,0.318,,,percent,,,,5,,,,,,,
+Kangerlussuaq,shrub,30,4.05,,0.65,percent,0.243,,,percent,,,,5,,,,,,,
+

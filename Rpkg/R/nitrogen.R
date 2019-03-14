@@ -6,9 +6,9 @@
 #' @examples
 #' N=nitrogen(database=sidb)
 nitrogen = function(database) {
-  mean=lapply(database, FUN=function(x){x$incubationInfo$nitrogen$mean})
-  units=lapply(database, FUN=function(x){x$incubationInfo$nitrogen$units})
+  mean=lapply(database, FUN=function(x){x$initConditions$nitrogenMean})
+  units=lapply(database, FUN=function(x){
+  as.character(x$initConditions$nitrogenUnits)})
   return(data.frame(nitrogen=unlist(mean), units=unlist(units)
   ))
 }
-

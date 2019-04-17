@@ -1,4 +1,4 @@
-#' Fits a two pool model with feedback structure to a time-series
+#' Fits a three pool model with parallel structure to a time-series
 #'
 #' @param timeSeries A time series of respiration values over time
 #' @param initialCarbon The initial amount of carbon in units that correspond to the time series data
@@ -8,32 +8,31 @@
 #' @import SoilR
 #' @examples
 #' db=loadEntries(path="~/sidb/clean/")
-#' b=twopfFit(timeSeries = db[[20]]$timeSeries[,1:2], initialCarbon=db[[20]]$initConditions[1,"carbonMean"]*10)
-twopfFit=function(timeSeries, initialCarbon){
+#' a=threeppFit(timeSeries = db[["Crow2019a"]]$timeSeries[,c(1,5)], initialCarbon=db[["Crow2019a"]]$initConditions[4,"carbonMean"]*10000)
+threeppFit=function(timeSeries, initialCarbon){
   complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=cumsum(timeSeries[complete.cases(timeSeries),2]))
   n=nrow(complete)
   if(n < 6) stop("Time series is too short. No degrees of freedom")
   tt=seq(from=0, to=tail(complete[,1],1), length.out = 500)
-
+  
   Func=function(pars){
-    mod=TwopFeedbackModel(t=tt,ks=pars[1:2], a21=pars[1]*pars[3], a12=pars[2]*pars[4],C0=initialCarbon*c(pars[5], 1-pars[5]), In=0)
+    mod=ThreepParallelModel(t=tt,ks=pars[1:3], C0=initialCarbon*c(pars[4], pars[4]*pars[5], 1-sum(pars[4:5])), In=0, gam1=0, gam2=0)
     Rt=getAccumulatedRelease(mod)
     return(data.frame(time=tt, Rt=rowSums(Rt)))
   }
-
+  
   costFunc=function(pars){
     output=Func(pars)
     return(modCost(model=output, obs=complete))
   }
-  inipars=c(-1,-0.5, 0.5, 0.5, 0.3)
-  Fit=modFit(f=costFunc, p=inipars, method="Marq", lower=c(-Inf,-Inf,0,0,0), upper=c(0, 0, 1, 1,1))
+  inipars=c(-1,-0.5, -0.5, 0.5, 0.5)
+  Fit=modFit(f=costFunc, p=inipars, method="Marq", lower=c(-Inf,-Inf,-Inf,0,0), upper=c(0, 0, 0, 1, 1))
   bestMod=Func(pars=Fit$par)
-  print(paste(c("k1=", "k2=", "a21=", "a12=", "Proportion of C0 in pool 1="),Fit$par))
+  print(paste(c("k1=", "k2=", "k3=","proportion of C0 in pool 1=", "Proportion of C0 in pool 2="),c(Fit$par[1:4], Fit$par[4]*Fit$par[5])))
   plot(complete, ylim=c(0,1.2*max(complete[,2])))
   lines(bestMod)
   AIC=(2*5)-2*log(Fit$ms)
   print(paste("AIC = ",AIC))
-  SoilRmodel=TwopFeedbackModel(t=tt,ks=Fit$par[1:2], a21=Fit$par[1]*Fit$par[3], a12=Fit$par[2]*Fit$par[4],
-                               C0=initialCarbon*c(Fit$par[5], 1-Fit$par[5]), In=0)
+  SoilRmodel=ThreepParallelModel(t=tt,ks=Fit$par[1:3], C0=initialCarbon*c(Fit$par[4], Fit$par[4]*Fit$par[5], 1-sum(Fit$par[4:5])), In=0, gam1=0, gam2=0)
   return(list(FMEmodel=Fit, SoilRmodel=SoilRmodel, AIC=AIC))
 }

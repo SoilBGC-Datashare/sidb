@@ -10,8 +10,7 @@
 #' db=loadEntries(path="~/sidb/clean/")
 #' a=onepFit(timeSeries = db[[20]]$timeSeries[,1:2], initialCarbon=db[[20]]$initConditions[1,"carbonMean"]*10)
 onepFit=function(timeSeries, initialCarbon){
-  complete=cumsum(timeSeries[complete.cases(timeSeries),])
-  names(complete)<-c("time", "Rt")
+  complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=cumsum(timeSeries[complete.cases(timeSeries),2]))
   n=nrow(complete)
   if(n < 3) stop("Time series is too short. No degrees of freedom")
   tt=seq(from=0, to=tail(complete[,1],1), length.out = 500)

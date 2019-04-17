@@ -10,18 +10,17 @@
 #' db=loadEntries(path="~/sidb/clean/")
 #' a=twoppFit(timeSeries = db[[20]]$timeSeries[,1:2], initialCarbon=db[[20]]$initConditions[1,"carbonMean"]*10)
 twoppFit=function(timeSeries, initialCarbon){
-  complete=cumsum(timeSeries[complete.cases(timeSeries),])
-  names(complete)<-c("time", "Rt")
+  complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=cumsum(timeSeries[complete.cases(timeSeries),2]))
   n=nrow(complete)
   if(n < 5) stop("Time series is too short. No degrees of freedom")
   tt=seq(from=0, to=tail(complete[,1],1), length.out = 500)
-  
+
   Func=function(pars){
     mod=TwopParallelModel(t=tt,ks=pars[1:2], C0=initialCarbon*c(pars[3], 1-pars[3]), In=0, gam=0)
     Rt=getAccumulatedRelease(mod)
     return(data.frame(time=tt, Rt=rowSums(Rt)))
   }
-  
+
   costFunc=function(pars){
     output=Func(pars)
     return(modCost(model=output, obs=complete))

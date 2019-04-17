@@ -4,12 +4,14 @@
 \alias{twoppFit}
 \title{Fits a two pool model with parallel structure to a time-series}
 \usage{
-twoppFit(timeSeries, initialCarbon)
+twoppFit(timeSeries, initialCarbon, inipars = c(-1, -0.5, 0.5))
 }
 \arguments{
 \item{timeSeries}{A time series of respiration values over time}
 
 \item{initialCarbon}{The initial amount of carbon in units that correspond to the time series data}
+
+\item{inipars}{vector of parameter values for the initial search of the optimization algorithm}
 }
 \value{
 R list with an FME model object, a SoilR model object, and the AIC value

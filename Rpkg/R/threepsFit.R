@@ -2,6 +2,7 @@
 #'
 #' @param timeSeries A time series of respiration values over time
 #' @param initialCarbon The initial amount of carbon in units that correspond to the time series data
+#' @param inipars vector of parameter values for the initial search of the optimization algorithm
 #' @return R list with an FME model object, a SoilR model object, and the AIC value
 #' @export
 #' @import FME
@@ -9,23 +10,23 @@
 #' @examples
 #' db=loadEntries(path="~/sidb/clean/")
 #' a=threepsFit(timeSeries = db[["Crow2019a"]]$timeSeries[,c(1,5)], initialCarbon=db[["Crow2019a"]]$initConditions[4,"carbonMean"]*10000)
-threepsFit=function(timeSeries, initialCarbon){
+threepsFit=function(timeSeries, initialCarbon, inipars=c(-1,-0.5, -0.5, 0.5, 0.5, 0.5, 0.5)){
   complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=cumsum(timeSeries[complete.cases(timeSeries),2]))
   n=nrow(complete)
   if(n < 8) stop("Time series is too short. No degrees of freedom")
   tt=seq(from=0, to=tail(complete[,1],1), length.out = 1000)
-  
+
   Func=function(pars){
     mod=ThreepSeriesModel(t=tt,ks=pars[1:3], a21=pars[1]*pars[4], a32=pars[2]*pars[5], C0=initialCarbon*c(pars[6], pars[6]*pars[7], 1-sum(pars[6:7])), In=0)
     Rt=getAccumulatedRelease(mod)
     return(data.frame(time=tt, Rt=rowSums(Rt)))
   }
-  
+
   costFunc=function(pars){
     output=Func(pars)
     return(modCost(model=output, obs=complete))
   }
-  inipars=c(-1,-0.5, -0.5, 0.5, 0.5, 0.5, 0.5)
+  #inipars=c(-1,-0.5, -0.5, 0.5, 0.5, 0.5, 0.5)
   Fit=modFit(f=costFunc, p=inipars, method="Marq", lower=c(-Inf,-Inf,-Inf,0,0, 0, 0), upper=c(0, 0, 0, 1, 1, 1,1))
   bestMod=Func(pars=Fit$par)
   print(paste(c("k1=", "k2=", "k3=","alpha21", "alpha32","proportion of C0 in pool 1=", "Proportion of C0 in pool 2="),c(Fit$par[1:6], Fit$par[6]*Fit$par[7])))

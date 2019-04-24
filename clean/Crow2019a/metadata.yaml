@@ -488,7 +488,7 @@ siteInfo:
             - 20.80217
             - 20.80224
             - 20.80221
-          longitud: # Longitud in decimal units
+          longitude: # Longitud in decimal units
             - -158.105
             - -158.105
             - -158.105

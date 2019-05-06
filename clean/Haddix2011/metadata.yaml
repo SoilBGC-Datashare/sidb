@@ -123,19 +123,6 @@ incubationInfo:
         gasAnalyzer: "Li-Cor LI-6252 infra red gas analyzer"
 
 variables: # These describe the columns of your timeSeries.csv file
-       V1: # column 1
-        name: # Name of first variable in the accompanying csv data file. First variable should be time.
-        units: # Units of first variable in accompanying file.
-       V2: # column 2
-        name: # Name of second variable in accompanying file.
-        desc: # Description of the variable
-        site: #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: # Units in which this variable is provided if not a factor
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         V1:
           name: time
           units: d

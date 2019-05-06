@@ -10,7 +10,7 @@ coordinates(database)
 \item{database}{A list with the sidb}
 }
 \value{
-A data.frame with the latitude and longitude of sites from the database
+A data.frame with the longitude and latitude of sites from the database
 }
 \description{
 Creates a data frame with the coordinates of the sites

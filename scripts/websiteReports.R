@@ -29,5 +29,5 @@ dev.off()
 it=incubationTime(database)
 
 png("~/sidb/docs/assets/incubationTime.png", bg=NA)
-hist(as.numeric(it$time), xlab="Incubation time (days)", main ="", ylab="Number of studies")
+hist(it, xlab="Incubation time (days)", main ="", ylab="Number of studies")
 dev.off()

@@ -1,9 +1,9 @@
 citationKey: Crow2019b  # Unique identifier in the format: LastnameYearJOURNAL (journal is abbreviated)
 doi:   # DOI of the publication where data is published
-entryAuthor:   # First and Last name of the person who enters the data in this file
-entryCreationDate:  # Date when the data is entered in this file. Format: YYYY-MM-DD
-contactName:  # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
-contactEmail:  # Email of the contact person
+entryAuthor: Susan Crow  # First and Last name of the person who enters the data in this file
+entryCreationDate: 2019-04-16 # Date when the data is entered in this file. Format: YYYY-MM-DD
+contactName: Susan Crow  # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
+contactEmail: crows@hawii.edu  # Email of the contact person
 entryNote: "unpublished dataset, but associated with Giardina et al 2014 NCC" # Any notes or comments related to this entry.
 
 siteInfo:

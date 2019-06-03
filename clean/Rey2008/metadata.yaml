@@ -1,6 +1,6 @@
 citationKey: Rey2008EJSS # Unique identifier in the format: LastnameYearJOURNAL (journal is abbreviated)
 doi: 10.1111/j.1365-2389.2008.01065.x # DOI of the publication where data is published
-entryAuthor: J. Beem-Miller # First and Last name of the person who enters the data in this file
+entryAuthor: Jeff Beem-Miller # First and Last name of the person who enters the data in this file
 entryCreationDate: 2018-04-18 # Date when the data is entered in this file. Format: YYYY-MM-DD
 contactName: Carlos Sierra # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: csierra@bgc-jena.mpg.de # Email of the contact person

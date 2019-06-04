@@ -1240,136 +1240,11 @@ variables:
         name: time # Name of first variable in the accompanying csv data file. First variable is usually time.
         units: days # Units of first variable in accompanying file.
        V2:
-<<<<<<< HEAD
-        name: Site1_mean # Name of second variable in accompanying file.
-        desc: "mean CO2 production rate " # Description of the variable
-=======
         name: Site01 # Name of second variable in accompanying file.
         desc: "CO2 production rate " # Description of the variable
->>>>>>> 23e79f5530adf29d28b1e1e79ebbfeb74e5a5cbc
         site: 1_Organic Cropland Mollisol
         units: microgC/gSoil/Day # Units in which this variable is provided
        V3: # Continue the structure for V2 in case of additional variables.
-<<<<<<< HEAD
-        name: Site1_stderr # Name of second variable in accompanying file.
-        desc: "one standard error " # Description of the variable
-        site: 1_Organic Cropland Mollisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: SE # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V4:
-        name: Site2_mean # Name of second variable in accompanying file.
-        desc: "mean CO2 production rate " # Description of the variable
-        site: 2_Conventional Cropland_Mollisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V5: # Continue the structure for V2 in case of additional variables.
-        name: Site2_stderr # Name of second variable in accompanying file.
-        desc: "one standard error " # Description of the variable
-        site: 2_Conventional Cropland_Mollisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: SE # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V6:
-        name: Site3_mean # Name of second variable in accompanying file.
-        desc: "mean CO2 production rate " # Description of the variable
-        site: 3_Unmanaged Previous Intensive Ag Land_Oxisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V7: # Continue the structure for V2 in case of additional variables.
-        name: Site3_stderr # Name of second variable in accompanying file.
-        desc: "one standard error " # Description of the variable
-        site: 3_Unmanaged Previous Intensive Ag Land_Oxisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: SE # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V8:
-        name: Site4_mean # Name of second variable in accompanying file.
-        desc: "mean CO2 production rate " # Description of the variable
-        site: 4_Organic Cropland_Oxisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V9: # Continue the structure for V2 in case of additional variables.
-        name: Site4_stderr # Name of second variable in accompanying file.
-        desc: "one standard error " # Description of the variable
-        site: 4_Organic Cropland_Oxisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: SE # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V10:
-        name: Site5_mean # Name of second variable in accompanying file.
-        desc: "mean CO2 production rate " # Description of the variable
-        site: 5_Conventional Cropland_Oxisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V11: # Continue the structure for V2 in case of additional variables.
-        name: Site5_stderr # Name of second variable in accompanying file.
-        desc: "one standard error " # Description of the variable
-        site: 5_Conventional Cropland_Oxisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: SE # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V12:
-        name: Site6_mean # Name of second variable in accompanying file.
-        desc: "mean CO2 production rate " # Description of the variable
-        site: 6_Unmanaged Previous Intensive Ag Land_Mollisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V13: # Continue the structure for V2 in case of additional variables.
-        name: Site6_stderr # Name of second variable in accompanying file.
-        desc: "one standard error " # Description of the variable
-        site: 6_Unmanaged Previous Intensive Ag Land_Mollisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: SE # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V14:
-        name: Site7_mean # Name of second variable in accompanying file.
-        desc: "mean CO2 production rate " # Description of the variable
-        site: 7_Unmanaged Previous Intensive Ag Land_Oxisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V15: # Continue the structure for V2 in case of additional variables.
-        name: Site7_stderr # Name of second variable in accompanying file.
-        desc: "one standard error " # Description of the variable
-        site: 7_Unmanaged Previous Intensive Ag Land_Oxisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: SE # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V16:
-        name: Site8_mean # Name of second variable in accompanying file.
-        desc: "mean CO2 production rate " # Description of the variable
-        site: 8_Conventional Cropland_Oxisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V17: # Continue the structure for V2 in case of additional variables.
-        name: Site8_stderr # Name of second variable in accompanying file.
-        desc: "one standard error " # Description of the variable
-        site: 8_Conventional Cropland_Oxisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: SE # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V18:
-        name: Site9_mean # Name of second variable in accompanying file.
-        desc: "mean CO2 production rate " # Description of the variable
-        site: 9_Organic Cropland_Vertisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V19: # Continue the structure for V2 in case of additional variables.
-        name: Site9_stderr # Name of second variable in accompanying file.
-        desc: "one standard error " # Description of the variable
-        site: 9_Organic Cropland_Vertisol
-        units: microgCO2/gSoil # Units in which this variable is provided
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        statistic: SE # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-=======
         name: Site02 # Name of second variable in accompanying file.
         desc: "CO2 production rate " # Description of the variable
         site: 2_Organic Cropland_Mollisol
@@ -1454,7 +1329,6 @@ variables:
         desc: "CO2 production rate " # Description of the variable
         site: 18_Unmanaged Previous Intensive Ag Land_Mollisol
         units: microgC/gSoil/Day # Units in which this variable is provided
->>>>>>> 23e79f5530adf29d28b1e1e79ebbfeb74e5a5cbc
        V20:
         name: Site19 # Name of second variable in accompanying file.
         desc: "CO2 production rate " # Description of the variable

@@ -4,7 +4,7 @@ entryAuthor: Christina Schaedel  # First and Last name of the person who enters 
 entryCreationDate: 2019-03-06 # Date when the data is entered in this file. Format: YYYY-MM-DD
 contactName:  Rosvel Bracho # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: rbracho@ufl.edu # Email of the contact person
-entryNote: 'raw data entered as flux over time and not as cumulative as in Fig. S1 of the paper # Any notes or comments related to this entry. # Any notes or comments related to this entry.'
+entryNote:  raw data entered as flux over time and not as cumulative as in Fig. S1 of the paper # Any notes or comments related to this entry. # Any notes or comments related to this entry.
 
 siteInfo:
         study:  CiPEHR # Overall study description
@@ -84,7 +84,7 @@ variables: # These describe the columns of your timeSeries.csv file
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
         units: days # Units of first variable in accompanying file.
        V2: # column 2
-        name: control_7.5_15C_mean # Name of second variable in accompanying file.
+        name: control_7.5_15_mean # Name of second variable in accompanying file.
         desc: Field control, midDepth of 7.5, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -94,7 +94,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
-        name: control_7.5_15C_sd # Name of second variable in accompanying file.
+        name: control_7.5_15_sd # Name of second variable in accompanying file.
         desc: Field control, midDepth of 7.5, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -104,7 +104,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        v4:
-        name: control_20_15C_mean # Name of second variable in accompanying file.
+        name: control_20_15_mean # Name of second variable in accompanying file.
         desc: Field control, midDepth of 20, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -114,7 +114,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        v5:
-        name: control_20_15C_sd # Name of second variable in accompanying file.
+        name: control_20_15_sd # Name of second variable in accompanying file.
         desc: Field control, midDepth of 20, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -124,7 +124,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        v6:
-        name: control_50_15C_mean # Name of second variable in accompanying file.
+        name: control_50_15_mean # Name of second variable in accompanying file.
         desc: Field control, midDepth of 50, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -134,7 +134,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        v7:
-        name: control_50_15C_sd # Name of second variable in accompanying file.
+        name: control_50_15_sd # Name of second variable in accompanying file.
         desc: Field control, midDepth of 50, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -144,7 +144,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        v8:
-        name: Warming_7.5_15C_mean # Name of second variable in accompanying file.
+        name: warming_7.5_15_mean # Name of second variable in accompanying file.
         desc: Field warming, midDepth of 7.5, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -154,7 +154,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        v9:
-        name: Warming_7.5_15C_mean # Name of second variable in accompanying file.
+        name: warming_7.5_15_mean # Name of second variable in accompanying file.
         desc: Field warming, midDepth of 7.5, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -164,7 +164,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        v10:
-        name: Warming_20_15C_mean # Name of second variable in accompanying file.
+        name: warming_20_15_mean # Name of second variable in accompanying file.
         desc: Field warming, midDepth of 20, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -174,7 +174,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        v11:
-        name: Warming_20_15C_sd # Name of second variable in accompanying file.
+        name: warming_20_15_sd # Name of second variable in accompanying file.
         desc: Field warming, midDepth of 20, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -184,7 +184,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        v12:
-        name: Warming_50_15C_mean # Name of second variable in accompanying file.
+        name: warming_50_15_mean # Name of second variable in accompanying file.
         desc: Field warming, midDepth of 50, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -194,7 +194,7 @@ variables: # These describe the columns of your timeSeries.csv file
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        v13:
-        name: Warming_50_15C_sd # Name of second variable in accompanying file.
+        name: warming_50_15_sd # Name of second variable in accompanying file.
         desc: Field warming, midDepth of 50, incubation temperature of 15 Celsius # Description of the variable
         site: CiPEHR #site where the incubated sample comes from.
         fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -203,123 +203,3 @@ variables: # These describe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v14:
-        name: control_7.5_25C_mean # Name of second variable in accompanying file.
-        desc: Field control, midDepth of 7.5, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 7.5
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v15: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
-        name: control_7.5_25C_sd # Name of second variable in accompanying file.
-        desc: Field control, midDepth of 7.5, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 7.5
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v16:
-        name: control_20_25C_mean # Name of second variable in accompanying file.
-        desc: Field control, midDepth of 20, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 20
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v17:
-        name: control_20_25C_sd # Name of second variable in accompanying file.
-        desc: Field control, midDepth of 20, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 20
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v18:
-        name: control_50_25C_mean # Name of second variable in accompanying file.
-        desc: Field control, midDepth of 50, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 50
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v19:
-        name: control_50_25C_sd # Name of second variable in accompanying file.
-        desc: Field control, midDepth of 50, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: control # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 50
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v20:
-        name: Warming_7.5_25C_mean # Name of second variable in accompanying file.
-        desc: Field warming, midDepth of 7.5, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 7.5
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v21:
-        name: Warming_7.5_25C_mean # Name of second variable in accompanying file.
-        desc: Field warming, midDepth of 7.5, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 7.5
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v22:
-        name: Warming_20_25C_mean # Name of second variable in accompanying file.
-        desc: Field warming, midDepth of 20, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 20
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v23:
-        name: Warming_20_25C_sd # Name of second variable in accompanying file.
-        desc: Field warming, midDepth of 20, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 20
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v24:
-        name: Warming_50_25C_mean # Name of second variable in accompanying file.
-        desc: Field warming, midDepth of 50, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 50
-        temperture: 12 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       v25:
-        name: Warming_50_25C_sd # Name of second variable in accompanying file.
-        desc: Field warming, midDepth of 50, incubation temperature of 25 Celsius # Description of the variable
-        site: CiPEHR #site where the incubated sample comes from.
-        fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        midDepth: 50
-        temperture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
-        statistic: SD

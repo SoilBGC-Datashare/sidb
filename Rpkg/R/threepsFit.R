@@ -15,7 +15,7 @@ threepsFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.5, 0.5, 
   complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=timeSeries[complete.cases(timeSeries),2])
   n=nrow(complete)
   if(n < 8) stop("Time series is too short. No degrees of freedom")
-  tt=seq(from=0, to=tail(complete[,1],1), length.out = 1000)
+  tt=seq(from=0, to=tail(complete[,1],1), length.out = 500)
 
   Func=function(pars){
     mod=ThreepSeriesModel(t=tt,ks=pars[1:3], a21=pars[1]*pars[4], a32=pars[2]*pars[5], C0=initialCarbon*c(pars[6], pars[7], 1-sum(pars[6:7])), In=0)

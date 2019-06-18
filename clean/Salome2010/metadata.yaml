@@ -6,7 +6,7 @@ contactName: Caitlin Pries
 contactEmail: caitlin.pries@dartmouth.edu
 entryNote: # Any notes or comments related to this entry.
 
-siteInfo: 
+siteInfo:
         study: Closeaux field experiment at INRA Versailles France
         site: Closeaux
         coordinates:
@@ -16,20 +16,20 @@ siteInfo:
         MAP: # Mean annual precipitation in mm
         elevation: # Elevation of study site in meters above sea levels
         landCover: cultivated
-        vegNote: wheat and maize 
+        vegNote: wheat and maize
         soilTaxonomy:
           soilOrder: Cambisol
           soilfamily: Eutric
           classificationSystem: FAO
-        
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array. 
-          top: 
+
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
+          top:
             - 5
             - 80
-          bottom: 
+          bottom:
             - 10
             - 100
-          midDepth: 
+          midDepth:
             - 7.5
             - 90
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
@@ -38,17 +38,17 @@ siteInfo:
           permafrostExist: No
           activeLayer: # Depth of the active layer in meters
         experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-          midDepth: 
+          midDepth:
             - 7.5
             - 90
 
 incubationInfo:
         description: # Short description of the incubation setup and main treatments
         temperature: 20
-        moisture: 
+        moisture:
           value: 19
           units: percentGWC
-        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
           Disturbance:
@@ -57,9 +57,9 @@ incubationInfo:
           Oxygen:
             value:
               - 19
-              - 5 
+              - 5
             units: percent
-        replicates: 
+        replicates:
           number: 3
           type: field
         incubationTime: 51
@@ -70,7 +70,7 @@ incubationInfo:
           rootPicking: no
           rockPicking: no
         gasAnalyzer: # Gas analysis equipment for CO2 measurements
-        
+
 variables: #These describe the columns of your .csv file
        V1: #column 1
         name: time
@@ -79,54 +79,53 @@ variables: #These describe the columns of your .csv file
         name: surf_undisturbed
         desc: Cumulative C flux of 5-10 cm surface soils that were not sieved
         midDepth: 7.5
-        gasMeasured: 
+        gasMeasured:
         Disturbance: undisturbed
-        Oxygen: 
-          value: 19  
-          units: mgC/gSoil
-        statistic: 
+        Oxygen: 19
+        units: mgC/gSoil
+        statistic:
        V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: surf_disturbed
         desc: Cumulative C flux of 5-10 cm surface soils that were sieved <1mm
         midDepth: 7.5
-        gasMeasured: 
+        gasMeasured:
         Disturbance: sieved
-        Oxygen: 19 
+        Oxygen: 19
         units: mgC/gSoil
-        statistic: 
+        statistic:
        V4:
         name: sub_undisturbed
         desc: Cumulative C flux of 80-100 cm subsoils that were not sieved
         midDepth: 90
-        gasMeasured: 
+        gasMeasured:
         Disturbance: undisturbed
         Oxygen: 19
         units: mgC/gSoil
-        statistic: 
+        statistic:
        V5:
         name: sub_disturbed
         desc: Cumulative C flux of 80-100 cm subsoils that were sieved <1mm
         midDepth: 90
-        gasMeasured: 
+        gasMeasured:
         Disturbance: sieved
-        Oxygen: 19 
+        Oxygen: 19
         units: mgC/gSoil
-        statistic: 
+        statistic:
        V6:
         name: sub_undisturbed_lowO2
         desc: Cumulative C flux of 80-100 cm subsoils that were not sieved and had a 5% O2 headspace
         midDepth: 90
-        gasMeasured: 
+        gasMeasured:
         Disturbance: undisturbed
-        Oxygen: 5 
+        Oxygen: 5
         units: mgC/gSoil
-        statistic: 
+        statistic:
        V7:
         name: sub_disturbed_lowO2
         desc: Cumulative C flux of 80-100 cm subsoils that were sieved <1mm and had a 5% O2 headspace
         midDepth: 90
-        gasMeasured: 
+        gasMeasured:
         Disturbance: sieved
-        Oxygen: 5 
+        Oxygen: 5
         units: mgC/gSoil
-        statistic: 
+        statistic:

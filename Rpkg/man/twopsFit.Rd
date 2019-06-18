@@ -4,7 +4,7 @@
 \alias{twopsFit}
 \title{Fits a two pool model with series structure to a time-series}
 \usage{
-twopsFit(timeSeries, initialCarbon, inipars = c(-1, -0.5, 0.5, 0.3))
+twopsFit(timeSeries, initialCarbon, inipars = c(1, 0.5, 0.5, 0.3))
 }
 \arguments{
 \item{timeSeries}{A time series of respiration values over time}

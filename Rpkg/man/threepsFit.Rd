@@ -4,8 +4,8 @@
 \alias{threepsFit}
 \title{Fits a three pool model with series structure to a time-series}
 \usage{
-threepsFit(timeSeries, initialCarbon, inipars = c(-1, -0.5, -0.5, 0.5,
-  0.5, 0.5, 0.5))
+threepsFit(timeSeries, initialCarbon, inipars = c(1, 0.5, 0.5, 0.5, 0.5,
+  0.5, 0.5))
 }
 \arguments{
 \item{timeSeries}{A time series of respiration values over time}

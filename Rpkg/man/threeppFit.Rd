@@ -4,8 +4,7 @@
 \alias{threeppFit}
 \title{Fits a three pool model with parallel structure to a time-series}
 \usage{
-threeppFit(timeSeries, initialCarbon, inipars = c(-1, -0.5, -0.5, 0.5,
-  0.5))
+threeppFit(timeSeries, initialCarbon, inipars = c(1, 0.5, 0.5, 0.5, 0.5))
 }
 \arguments{
 \item{timeSeries}{A time series of respiration values over time}

@@ -741,7 +741,9 @@ incubationInfo:
           at a controlled temperature. Soils were sampled on different days depending on the amount of CO2 acumulating to avoid concentration over 7K ppm.
           After sampling, headspace was purged, caps resealed, intitial concentration taken, then left to accumulate. A subset (sites 67-78) were never air-dried and correspond to sites 34-36, 46-54."
         temperature: 25 # Overall temperature at which incubations were performed. If temperature is an experimental treatment, leave blank.
-        moisture: 60 #percent water holding capacity
+        moisture:
+          value: 60
+          units: percentFieldCapacity
         laboratoryTreatment: # List of laboratory treatments applied to the incubations.
         numberReplicates: 1 # Number of replicates per treatments
         preincubationTime: 4 # Pre-incubation time in days

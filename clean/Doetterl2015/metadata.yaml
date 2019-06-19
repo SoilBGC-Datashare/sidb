@@ -308,6 +308,7 @@ incubationInfo:
           units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment:
         replicates:
           number: 3 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab

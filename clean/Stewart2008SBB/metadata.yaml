@@ -89,7 +89,7 @@ incubationInfo:
         anaerobic:
         gasMeasured:
         laboratoryTreatment:
-          Horizon:
+          horizon:
             value:
               - A
               - B
@@ -118,7 +118,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Sioux City
         site: Sioux City
         experimentalTreatment:
-        Horizon: A
+        horizon: A
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -128,7 +128,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Kellog Biological Station
         site: Kellog Biological Station
         experimentalTreatment:
-        Horizon: A
+        horizon: A
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -138,7 +138,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Saginaw
         site: Saginaw
         experimentalTreatment:
-        Horizon: A
+        horizon: A
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -148,7 +148,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Lamberton
         site: Lamberton
         experimentalTreatment:
-        Horizon: A
+        horizon: A
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -158,17 +158,17 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Mead
         site: Mead
         experimentalTreatment:
-        Horizon: A
+        horizon: A
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
-        Statistic:
+        statistic:
        V7:
         name: Cumresp_A_OH
         desc: cumulative respiration of horizon A from Wauseon
         site: Wauseon
         experimentalTreatment:
-        Horizon: A
+        horizon: A
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -178,7 +178,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Melfort
         site: Melfort
         experimentalTreatment:
-        Horizon: A
+        horizon: A
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -188,7 +188,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: ccumulative respiration of horizon B from Sioux City
         site: Sioux City
         experimentalTreatment:
-        Horizon: C
+        horizon: C
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -198,7 +198,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Kellog Biological Station
         site: Kellog Biological Station
         experimentalTreatment:
-        Horizon: C
+        horizon: C
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -208,7 +208,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Saginaw
         site: Saginaw
         experimentalTreatment:
-        Horizon: C
+        horizon: C
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -218,7 +218,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Lamberton
         site: Lamberton
         experimentalTreatment:
-        Horizon: C
+        horizon: C
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -228,7 +228,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Mead
         site: Mead
         experimentalTreatment:
-        Horizon: C
+        horizon: C
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -238,7 +238,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Wauseon
         site: Wauseon
         experimentalTreatment:
-        Horizon: C
+        horizon: C
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil
@@ -248,7 +248,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Melfort
         site: Melfort
         experimentalTreatment:
-        Horizon: C
+        horizon: C
         13-labeled C inputL: 0.26
         gasMeasured:
         units: mgCo2/gSoil

@@ -7,88 +7,405 @@ contactEmail:  crows@hawii.edu # Email of the contact person
 entryNote: This study is ongoing and not yet published, also incubations continue to run  # Any notes or comments related to this entry.
 
 siteInfo:
-        studySite:  Soil health, Hawaii # Name of the study site where study was conducted
+        study:  Soil health, Hawaii
+        site: # Name of the study sites where study was conducted
+          - 1_Organic Cropland Mollisol
+          - 2_Organic Cropland_Mollisol
+          - 3_Organic Cropland_Mollisol
+          - 4_Conventional Cropland_Mollisol
+          - 5_Conventional Cropland_Mollisol
+          - 6_Conventional Cropland_Mollisol
+          - 7_Unmanaged Previous Intensive Ag Land_Oxisol
+          - 8_Unmanaged Previous Intensive Ag Land_Oxisol
+          - 9_Unmanaged Previous Intensive Ag Land_Oxisol
+          - 10_Organic Cropland_Oxisol
+          - 11_Organic Cropland_Oxisol
+          - 12_Organic Cropland_Oxisol
+          - 13_Conventional Cropland_Oxisol
+          - 14_Conventional Cropland_Oxisol
+          - 15_Conventional Cropland_Oxisol
+          - 16_Unmanaged Previous Intensive Ag Land_Mollisol
+          - 17_Unmanaged Previous Intensive Ag Land_Mollisol
+          - 18_Unmanaged Previous Intensive Ag Land_Mollisol
+          - 19_Unmanaged Previous Intensive Ag Land_Oxisol
+          - 20_Unmanaged Previous Intensive Ag Land_Oxisol
+          - 21_Unmanaged Previous Intensive Ag Land_Oxisol
+          - 22_Conventional Cropland_Oxisol
+          - 23_Conventional Cropland_Oxisol
+          - 24_Conventional Cropland_Oxisol
+          - 25_Organic Cropland_Vertisol
+          - 26_Organic Cropland_Vertisol
+          - 27_Organic Cropland_Vertisol
+          - 28_Conventional Cropland_Vertisol
+          - 29_Conventional Cropland_Vertisol
+          - 30_Conventional Cropland_Vertisol
+          - 31_Unmanaged Previous Intensive Ag Land_Vertisol
+          - 32_Unmanaged Previous Intensive Ag Land_Vertisol
+          - 33_Unmanaged Previous Intensive Ag Land_Vertisol
+          - 34_Conventional Cropland_Andisol
+          - 35_Conventional Cropland_Andisol
+          - 36_Conventional Cropland_Andisol
+          - 37_Conventional Cropland_Inceptisol
+          - 38_Conventional Cropland_Inceptisol
+          - 39_Conventional Cropland_Inceptisol
+          - 40_Pasture_Inceptisol
+          - 41_Pasture_Inceptisol
+          - 42_Pasture_Inceptisol
+          - 43_Unmanaged Previous Intensive Ag Land_Inceptisol
+          - 44_Unmanaged Previous Intensive Ag Land_Inceptisol
+          - 45_Unmanaged Previous Intensive Ag Land_Inceptisol
+          - 46_Protected Non-native Forest_Andisol
+          - 47_Protected Non-native Forest_Andisol
+          - 48_Protected Non-native Forest_Andisol
+          - 49_Pasture_Andisol
+          - 50_Pasture_Andisol
+          - 51_Pasture_Andisol
+          - 52_Protected Native Forest_Inceptisol
+          - 53_Protected Native Forest_Inceptisol
+          - 54_Protected Native Forest_Inceptisol
+          - 55_Pasture_Inceptisol
+          - 56_Pasture_Inceptisol
+          - 57_Pasture_Inceptisol
+          - 58_Protected Non-native Forest_Ultisol
+          - 59_Protected Non-native Forest_Ultisol
+          - 60_Protected Non-native Forest_Ultisol
+          - 61_Pasture_Ultisol
+          - 62_Pasture_Ultisol
+          - 63_Pasture_Ultisol
+          - 64_Organic Cropland_Ultisol
+          - 65_Organic Cropland_Ultisol
+          - 66_Organic Cropland_Ultisol
+          - 67_Conventional Cropland_Andisol
+          - 68_Conventional Cropland_Andisol
+          - 69_Conventional Cropland_Andisol
+          - 70_Protected Non-native Forest_Andisol
+          - 71_Protected Non-native Forest_Andisol
+          - 72_Protected Non-native Forest_Andisol
+          - 73_Pasture_Andisol
+          - 74_Pasture_Andisol
+          - 75_Pasture_Andisol
+          - 76_Protected Native Forest_Inceptisol
+          - 77_Protected Native Forest_Inceptisol
+          - 78_Protected Native Forest_Inceptisol
+        coordinates:
+          latitude: # Latitude in decimal units
+            - 21.58397
+            - 21.58381
+            - 21.58372
+            - 21.58423
+            - 21.58416
+            - 21.58406
+            - 21.55381
+            - 21.55388
+            - 21.55401
+            - 21.55416
+            - 21.55423
+            - 21.55426
+            - 21.56661
+            - 21.56656
+            - 21.56652
+            - 21.56003
+            - 21.56009
+            - 21.56003
+            - 21.54432
+            - 21.54426
+            - 21.54426
+            - 21.5378
+            - 21.53766
+            - 21.53752
+            - 21.45077
+            - 21.45081
+            - 21.45084
+            - 21.40554
+            - 21.40554
+            - 21.40547
+            - 21.41635
+            - 21.41628
+            - 21.4163
+            - 20.76311
+            - 20.76298
+            - 20.76273
+            - 20.86005
+            - 20.86044
+            - 20.86356
+            - 20.91012
+            - 20.91
+            - 20.91004
+            - 20.88252
+            - 20.88168
+            - 20.88161
+            - 20.77149
+            - 20.77161
+            - 20.77159
+            - 20.77189
+            - 20.77195
+            - 20.77201
+            - 20.80217
+            - 20.80224
+            - 20.80221
+            - 20.83038
+            - 20.83047
+            - 20.83037
+            - 21.15251
+            - 21.15258
+            - 21.15256
+            - 21.13774
+            - 21.13776
+            - 21.13771
+            - 21.1433
+            - 21.1432
+            - 21.14309
+            - 20.76311
+            - 20.76298
+            - 20.76273
+            - 20.77149
+            - 20.77161
+            - 20.77159
+            - 20.77189
+            - 20.77195
+            - 20.77201
+            - 20.80217
+            - 20.80224
+            - 20.80221
+          longitude: # Longitud in decimal units
+            - -158.105
+            - -158.105
+            - -158.105
+            - -158.109
+            - -158.109
+            - -158.109
+            - -158.117
+            - -158.117
+            - -158.117
+            - -158.117
+            - -158.117
+            - -158.117
+            - -158.107
+            - -158.107
+            - -158.107
+            - -158.139
+            - -158.139
+            - -158.139
+            - -158.089
+            - -158.089
+            - -158.089
+            - -158.089
+            - -158.089
+            - -158.089
+            - -158.156
+            - -158.156
+            - -158.156
+            - -158.146
+            - -158.146
+            - -158.146
+            - -158.138
+            - -158.138
+            - -158.138
+            - -156.3
+            - -156.3
+            - -156.3
+            - -156.335
+            - -156.335
+            - -156.337
+            - -156.341
+            - -156.341
+            - -156.341
+            - -156.326
+            - -156.326
+            - -156.326
+            - -156.288
+            - -156.288
+            - -156.288
+            - -156.289
+            - -156.289
+            - -156.289
+            - -156.254
+            - -156.254
+            - -156.254
+            - -156.308
+            - -156.308
+            - -156.308
+            - -156.729
+            - -156.729
+            - -156.728
+            - -156.735
+            - -156.735
+            - -156.735
+            - -156.735
+            - -156.735
+            - -156.735
+            - -156.3
+            - -156.3
+            - -156.3
+            - -156.288
+            - -156.288
+            - -156.288
+            - -156.289
+            - -156.289
+            - -156.289
+            - -156.254
+            - -156.254
+            - -156.254
         country: USA # Country where the study was conducted
-        experimentalTreatment:
-          site: # List of experimental treatments applied at the site level
-            - 1_Organic Cropland Mollisol
-            - 2_Organic Cropland_Mollisol
-            - 3_Organic Cropland_Mollisol
-            - 4_Conventional Cropland_Mollisol
-            - 5_Conventional Cropland_Mollisol
-            - 6_Conventional Cropland_Mollisol
-            - 7_Unmanaged Previous Intensive Ag Land_Oxisol
-            - 8_Unmanaged Previous Intensive Ag Land_Oxisol
-            - 9_Unmanaged Previous Intensive Ag Land_Oxisol
-            - 10_Organic Cropland_Oxisol
-            - 11_Organic Cropland_Oxisol
-            - 12_Organic Cropland_Oxisol
-            - 13_Conventional Cropland_Oxisol
-            - 14_Conventional Cropland_Oxisol
-            - 15_Conventional Cropland_Oxisol
-            - 16_Unmanaged Previous Intensive Ag Land_Mollisol
-            - 17_Unmanaged Previous Intensive Ag Land_Mollisol
-            - 18_Unmanaged Previous Intensive Ag Land_Mollisol
-            - 19_Unmanaged Previous Intensive Ag Land_Oxisol
-            - 20_Unmanaged Previous Intensive Ag Land_Oxisol
-            - 21_Unmanaged Previous Intensive Ag Land_Oxisol
-            - 22_Conventional Cropland_Oxisol
-            - 23_Conventional Cropland_Oxisol
-            - 24_Conventional Cropland_Oxisol
-            - 25_Organic Cropland_Vertisol
-            - 26_Organic Cropland_Vertisol
-            - 27_Organic Cropland_Vertisol
-            - 28_Conventional Cropland_Vertisol
-            - 29_Conventional Cropland_Vertisol
-            - 30_Conventional Cropland_Vertisol
-            - 31_Unmanaged Previous Intensive Ag Land_Vertisol
-            - 32_Unmanaged Previous Intensive Ag Land_Vertisol
-            - 33_Unmanaged Previous Intensive Ag Land_Vertisol
-            - 34_Conventional Cropland_Andisol
-            - 35_Conventional Cropland_Andisol
-            - 36_Conventional Cropland_Andisol
-            - 37_Conventional Cropland_Inceptisol
-            - 38_Conventional Cropland_Inceptisol
-            - 39_Conventional Cropland_Inceptisol
-            - 40_Pasture_Inceptisol
-            - 41_Pasture_Inceptisol
-            - 42_Pasture_Inceptisol
-            - 43_Unmanaged Previous Intensive Ag Land_Inceptisol
-            - 44_Unmanaged Previous Intensive Ag Land_Inceptisol
-            - 45_Unmanaged Previous Intensive Ag Land_Inceptisol
-            - 46_Protected Non-native Forest_Andisol
-            - 47_Protected Non-native Forest_Andisol
-            - 48_Protected Non-native Forest_Andisol
-            - 49_Pasture_Andisol
-            - 50_Pasture_Andisol
-            - 51_Pasture_Andisol
-            - 52_Protected Native Forest_Inceptisol
-            - 53_Protected Native Forest_Inceptisol
-            - 54_Protected Native Forest_Inceptisol
-            - 55_Pasture_Inceptisol
-            - 56_Pasture_Inceptisol
-            - 57_Pasture_Inceptisol
-            - 58_Protected Non-native Forest_Ultisol
-            - 59_Protected Non-native Forest_Ultisol
-            - 60_Protected Non-native Forest_Ultisol
-            - 61_Pasture_Ultisol
-            - 62_Pasture_Ultisol
-            - 63_Pasture_Ultisol
-            - 64_Organic Cropland_Ultisol
-            - 65_Organic Cropland_Ultisol
-            - 66_Organic Cropland_Ultisol
-            - 67_Conventional Cropland_Andisol
-            - 68_Conventional Cropland_Andisol
-            - 69_Conventional Cropland_Andisol
-            - 70_Protected Non-native Forest_Andisol
-            - 71_Protected Non-native Forest_Andisol
-            - 72_Protected Non-native Forest_Andisol
-            - 73_Pasture_Andisol
-            - 74_Pasture_Andisol
-            - 75_Pasture_Andisol
-            - 76_Protected Native Forest_Inceptisol
-            - 77_Protected Native Forest_Inceptisol
-            - 78_Protected Native Forest_Inceptisol
+        MAT: # Mean annual temperature in degrees celcius
+          - 23.6393
+          - 23.6384
+          - 23.6379
+          - 23.6637
+          - 23.6635
+          - 23.6633
+          - 23.4823
+          - 23.4798
+          - 23.4752
+          - 23.47
+          - 23.4675
+          - 23.4665
+          - 23.4938
+          - 23.4953
+          - 23.4966
+          - 23.3826
+          - 23.3842
+          - 23.3826
+          - 22.4221
+          - 22.4184
+          - 22.4184
+          - 22.1694
+          - 22.1785
+          - 22.1953
+          - 23.6335
+          - 23.6335
+          - 23.6334
+          - 23.6892
+          - 23.6892
+          - 23.6897
+          - 23.5952
+          - 23.5959
+          - 23.5957
+          - 15.8973
+          - 15.8915
+          - 15.8805
+          - 21.0541
+          - 21.0591
+          - 21.1853
+          - 22.5798
+          - 22.5773
+          - 22.5781
+          - 21.4122
+          - 21.5105
+          - 21.5186
+          - 15.131
+          - 15.1314
+          - 15.1313
+          - 15.2264
+          - 15.2257
+          - 15.225
+          - 14.0672
+          - 14.077
+          - 14.0728
+          - 19.2614
+          - 19.2638
+          - 19.2612
+          - 22.2559
+          - 22.2479
+          - 22.2722
+          - 22.3396
+          - 22.3395
+          - 22.3399
+          - 22.3541
+          - 22.3596
+          - 22.3657
+          - 15.8973
+          - 15.8915
+          - 15.8805
+          - 15.131
+          - 15.1314
+          - 15.1313
+          - 15.2264
+          - 15.2257
+          - 15.225
+          - 14.0672
+          - 14.077
+          - 14.0728
+        MAP: # Mean annual precipitation in mm
+          - 798.51
+          - 798.2204
+          - 798.0553
+          - 792.7162
+          - 792.5994
+          - 792.4292
+          - 847.6717
+          - 847.2373
+          - 846.4296
+          - 845.4974
+          - 845.0631
+          - 844.8777
+          - 789.5793
+          - 789.6428
+          - 789.6911
+          - 887.9764
+          - 887.5192
+          - 887.9764
+          - 889.7366
+          - 890.0389
+          - 890.0389
+          - 923.1757
+          - 923.8894
+          - 924.6032
+          - 648.9268
+          - 649.1732
+          - 649.3586
+          - 665.3555
+          - 665.3555
+          - 665.3886
+          - 723.1685
+          - 723.3209
+          - 723.2777
+          - 760.8189
+          - 760.3058
+          - 759.3178
+          - 1227.712
+          - 1230.798
+          - 1233.394
+          - 1359.634
+          - 1360.678
+          - 1360.33
+          - 1533.749
+          - 1527.741
+          - 1527.241
+          - 921.8295
+          - 923.384
+          - 923.1249
+          - 919.5156
+          - 920.2877
+          - 921.0573
+          - 2624.785
+          - 2630.653
+          - 2628.138
+          - 1592.753
+          - 1593.497
+          - 1592.669
+          - 1069.797
+          - 1069.764
+          - 1073.648
+          - 1245.484
+          - 1245.215
+          - 1245.89
+          - 1159.934
+          - 1161.72
+          - 1163.686
+          - 760.8189
+          - 760.3058
+          - 759.3178
+          - 921.8295
+          - 923.384
+          - 923.1249
+          - 919.5156
+          - 920.2877
+          - 921.0573
+          - 2624.785
+          - 2630.653
+          - 2628.138
+        elevation:
         landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
           - Cultivated
           - Cultivated
@@ -406,330 +723,18 @@ siteInfo:
             - Honomanu
             - Honomanu
             - Honomanu
-          classificationSystem: # Name of classification system used above
-            USDA
-        coordinates:
-          latitude: # Latitude in decimal units
-            - 21.58397
-            - 21.58381
-            - 21.58372
-            - 21.58423
-            - 21.58416
-            - 21.58406
-            - 21.55381
-            - 21.55388
-            - 21.55401
-            - 21.55416
-            - 21.55423
-            - 21.55426
-            - 21.56661
-            - 21.56656
-            - 21.56652
-            - 21.56003
-            - 21.56009
-            - 21.56003
-            - 21.54432
-            - 21.54426
-            - 21.54426
-            - 21.5378
-            - 21.53766
-            - 21.53752
-            - 21.45077
-            - 21.45081
-            - 21.45084
-            - 21.40554
-            - 21.40554
-            - 21.40547
-            - 21.41635
-            - 21.41628
-            - 21.4163
-            - 20.76311
-            - 20.76298
-            - 20.76273
-            - 20.86005
-            - 20.86044
-            - 20.86356
-            - 20.91012
-            - 20.91
-            - 20.91004
-            - 20.88252
-            - 20.88168
-            - 20.88161
-            - 20.77149
-            - 20.77161
-            - 20.77159
-            - 20.77189
-            - 20.77195
-            - 20.77201
-            - 20.80217
-            - 20.80224
-            - 20.80221
-            - 20.83038
-            - 20.83047
-            - 20.83037
-            - 21.15251
-            - 21.15258
-            - 21.15256
-            - 21.13774
-            - 21.13776
-            - 21.13771
-            - 21.1433
-            - 21.1432
-            - 21.14309
-            - 20.76311
-            - 20.76298
-            - 20.76273
-            - 20.77149
-            - 20.77161
-            - 20.77159
-            - 20.77189
-            - 20.77195
-            - 20.77201
-            - 20.80217
-            - 20.80224
-            - 20.80221
-          longitude: # Longitud in decimal units
-            - -158.105
-            - -158.105
-            - -158.105
-            - -158.109
-            - -158.109
-            - -158.109
-            - -158.117
-            - -158.117
-            - -158.117
-            - -158.117
-            - -158.117
-            - -158.117
-            - -158.107
-            - -158.107
-            - -158.107
-            - -158.139
-            - -158.139
-            - -158.139
-            - -158.089
-            - -158.089
-            - -158.089
-            - -158.089
-            - -158.089
-            - -158.089
-            - -158.156
-            - -158.156
-            - -158.156
-            - -158.146
-            - -158.146
-            - -158.146
-            - -158.138
-            - -158.138
-            - -158.138
-            - -156.3
-            - -156.3
-            - -156.3
-            - -156.335
-            - -156.335
-            - -156.337
-            - -156.341
-            - -156.341
-            - -156.341
-            - -156.326
-            - -156.326
-            - -156.326
-            - -156.288
-            - -156.288
-            - -156.288
-            - -156.289
-            - -156.289
-            - -156.289
-            - -156.254
-            - -156.254
-            - -156.254
-            - -156.308
-            - -156.308
-            - -156.308
-            - -156.729
-            - -156.729
-            - -156.728
-            - -156.735
-            - -156.735
-            - -156.735
-            - -156.735
-            - -156.735
-            - -156.735
-            - -156.3
-            - -156.3
-            - -156.3
-            - -156.288
-            - -156.288
-            - -156.288
-            - -156.289
-            - -156.289
-            - -156.289
-            - -156.254
-            - -156.254
-            - -156.254
-        MAT: # Mean annual temperature in degrees celcius
-          - 23.6393
-          - 23.6384
-          - 23.6379
-          - 23.6637
-          - 23.6635
-          - 23.6633
-          - 23.4823
-          - 23.4798
-          - 23.4752
-          - 23.47
-          - 23.4675
-          - 23.4665
-          - 23.4938
-          - 23.4953
-          - 23.4966
-          - 23.3826
-          - 23.3842
-          - 23.3826
-          - 22.4221
-          - 22.4184
-          - 22.4184
-          - 22.1694
-          - 22.1785
-          - 22.1953
-          - 23.6335
-          - 23.6335
-          - 23.6334
-          - 23.6892
-          - 23.6892
-          - 23.6897
-          - 23.5952
-          - 23.5959
-          - 23.5957
-          - 15.8973
-          - 15.8915
-          - 15.8805
-          - 21.0541
-          - 21.0591
-          - 21.1853
-          - 22.5798
-          - 22.5773
-          - 22.5781
-          - 21.4122
-          - 21.5105
-          - 21.5186
-          - 15.131
-          - 15.1314
-          - 15.1313
-          - 15.2264
-          - 15.2257
-          - 15.225
-          - 14.0672
-          - 14.077
-          - 14.0728
-          - 19.2614
-          - 19.2638
-          - 19.2612
-          - 22.2559
-          - 22.2479
-          - 22.2722
-          - 22.3396
-          - 22.3395
-          - 22.3399
-          - 22.3541
-          - 22.3596
-          - 22.3657
-          - 15.8973
-          - 15.8915
-          - 15.8805
-          - 15.131
-          - 15.1314
-          - 15.1313
-          - 15.2264
-          - 15.2257
-          - 15.225
-          - 14.0672
-          - 14.077
-          - 14.0728
-        MAP: # Mean annual precipitation in mm
-          - 798.51
-          - 798.2204
-          - 798.0553
-          - 792.7162
-          - 792.5994
-          - 792.4292
-          - 847.6717
-          - 847.2373
-          - 846.4296
-          - 845.4974
-          - 845.0631
-          - 844.8777
-          - 789.5793
-          - 789.6428
-          - 789.6911
-          - 887.9764
-          - 887.5192
-          - 887.9764
-          - 889.7366
-          - 890.0389
-          - 890.0389
-          - 923.1757
-          - 923.8894
-          - 924.6032
-          - 648.9268
-          - 649.1732
-          - 649.3586
-          - 665.3555
-          - 665.3555
-          - 665.3886
-          - 723.1685
-          - 723.3209
-          - 723.2777
-          - 760.8189
-          - 760.3058
-          - 759.3178
-          - 1227.712
-          - 1230.798
-          - 1233.394
-          - 1359.634
-          - 1360.678
-          - 1360.33
-          - 1533.749
-          - 1527.741
-          - 1527.241
-          - 921.8295
-          - 923.384
-          - 923.1249
-          - 919.5156
-          - 920.2877
-          - 921.0573
-          - 2624.785
-          - 2630.653
-          - 2628.138
-          - 1592.753
-          - 1593.497
-          - 1592.669
-          - 1069.797
-          - 1069.764
-          - 1073.648
-          - 1245.484
-          - 1245.215
-          - 1245.89
-          - 1159.934
-          - 1161.72
-          - 1163.686
-          - 760.8189
-          - 760.3058
-          - 759.3178
-          - 921.8295
-          - 923.384
-          - 923.1249
-          - 919.5156
-          - 920.2877
-          - 921.0573
-          - 2624.785
-          - 2630.653
-          - 2628.138
-        Permafrost:
+          classificationSystem: USDA # Name of classification system used above
+        depthInfo:
+          top: 0 # in cm
+          bottom: 15 # in cm
+          midDepth: 7.5 #average depth
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          horizon: # soil horizon designation
+        permafrost:
           zonation: # Describe permafrost zonation
           activelLayer: # Depth of the active layer in meters
-        elevation: # Elevation of study site in meters above sea levels
-        landscapePosition: # Location of the study site in the landscape (e.g. )
+        experimentalTreatment:
+
 incubationInfo:
         description: # Short description of the incubation setup and main treatments
           "25g oven-dry equivalent sample of air-dried soil was rewetted to 60% water holding capacity, placed into a 610 mL airtight container

@@ -94,14 +94,14 @@ variables: # These describe the columns of your timeSeries.csv file
           site: Linaria
           units: percent
           temperature: 21
-          landUSe: AG
+          landUse: AG
         V5:
           name: C_2HP_7deg
           desc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
           site: Linaria
           units: percent
           temperature: 7
-          landUSe: 2HP
+          landUse: 2HP
         V6:
           name: C_2HP_14deg
           desc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"

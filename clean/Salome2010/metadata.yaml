@@ -51,10 +51,10 @@ incubationInfo:
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          Disturbance:
+          disturbance:
             - sieved
             - undisturbed
-          Oxygen:
+          oxygen:
             value:
               - 19
               - 5
@@ -71,26 +71,26 @@ incubationInfo:
           rockPicking: no
         gasAnalyzer: # Gas analysis equipment for CO2 measurements
 
-variables: #These describe the columns of your .csv file
-       V1: #column 1
+variables:
+       V1:
         name: time
         units: d
-       V2: #column 2
+       V2:
         name: surf_undisturbed
         desc: Cumulative C flux of 5-10 cm surface soils that were not sieved
         midDepth: 7.5
         gasMeasured:
-        Disturbance: undisturbed
-        Oxygen: 19
+        disturbance: undisturbed
+        oxygen: 19
         units: mgC/gSoil
         statistic:
-       V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
+       V3:
         name: surf_disturbed
         desc: Cumulative C flux of 5-10 cm surface soils that were sieved <1mm
         midDepth: 7.5
         gasMeasured:
-        Disturbance: sieved
-        Oxygen: 19
+        disturbance: sieved
+        oxygen: 19
         units: mgC/gSoil
         statistic:
        V4:
@@ -98,8 +98,8 @@ variables: #These describe the columns of your .csv file
         desc: Cumulative C flux of 80-100 cm subsoils that were not sieved
         midDepth: 90
         gasMeasured:
-        Disturbance: undisturbed
-        Oxygen: 19
+        disturbance: undisturbed
+        oxygen: 19
         units: mgC/gSoil
         statistic:
        V5:
@@ -107,8 +107,8 @@ variables: #These describe the columns of your .csv file
         desc: Cumulative C flux of 80-100 cm subsoils that were sieved <1mm
         midDepth: 90
         gasMeasured:
-        Disturbance: sieved
-        Oxygen: 19
+        disturbance: sieved
+        oxygen: 19
         units: mgC/gSoil
         statistic:
        V6:
@@ -116,8 +116,8 @@ variables: #These describe the columns of your .csv file
         desc: Cumulative C flux of 80-100 cm subsoils that were not sieved and had a 5% O2 headspace
         midDepth: 90
         gasMeasured:
-        Disturbance: undisturbed
-        Oxygen: 5
+        disturbance: undisturbed
+        oxygen: 5
         units: mgC/gSoil
         statistic:
        V7:
@@ -125,7 +125,7 @@ variables: #These describe the columns of your .csv file
         desc: Cumulative C flux of 80-100 cm subsoils that were sieved <1mm and had a 5% O2 headspace
         midDepth: 90
         gasMeasured:
-        Disturbance: sieved
-        Oxygen: 5
+        disturbance: sieved
+        oxygen: 5
         units: mgC/gSoil
         statistic:

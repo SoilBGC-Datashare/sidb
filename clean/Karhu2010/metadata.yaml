@@ -86,8 +86,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
-         temperature:
-           value: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -98,8 +97,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
-         temperature:
-           value: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -110,8 +108,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 7.5
-         temperature:
-           value: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -121,8 +118,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 7.5
-         temperature:
-           value: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
        V6:
          name: Pine_15-30_26 # Name of second variable in accompanying file.
@@ -130,8 +126,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 22.5
-         temperature:
-           value: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
        V7:
          name: Spruce_15-30_26 # Name of second variable in accompanying file.
@@ -139,8 +134,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 22.5
-         temperature:
-           value: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
        V8:
          name: Spruce_O_05 # Name of second variable in accompanying file.
@@ -148,8 +142,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
-         temperature:
-           value: 5  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 5  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -160,8 +153,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 7.5
-         temperature:
-           value: 5  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 5  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -171,8 +163,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
-         temperature:
-           value: 12  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 12  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
          horizon: O
        V11:
@@ -181,8 +172,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 22.5
-         temperature:
-           value: 12  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 12  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
          horizon: O
        V12:
@@ -191,8 +181,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
-         temperature:
-           value: 19  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 19  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
          horizon: O
        V13:
@@ -201,7 +190,6 @@ variables: # These describe the columns of your timeSeries.csv file
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 22.5
-         temperature:
-           value: 19  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+         temperature: 19  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
          horizon: O

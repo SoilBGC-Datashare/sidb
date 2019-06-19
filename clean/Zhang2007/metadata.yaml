@@ -71,7 +71,7 @@ incubationInfo:
         laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
           temperature: # Replace with name of treatment
             value: 20 # Numerical or factor
-            units: 25 # Units of treatment value if numerical, if a %, write percent
+            value: 25 # Units of treatment value if numerical, if a %, write percent
         replicates:
           number: 3 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab

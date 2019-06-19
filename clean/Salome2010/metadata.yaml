@@ -12,6 +12,7 @@ siteInfo:
         coordinates:
           latitude: 48.807174
           longitude: 2.086611
+        country: France
         MAT: # Mean annual temperature in degrees Celsius
         MAP: # Mean annual precipitation in mm
         elevation: # Elevation of study site in meters above sea levels

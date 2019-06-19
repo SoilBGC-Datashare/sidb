@@ -26,21 +26,26 @@ lines(days, rowSums(Rt), lwd=2)
 Mlist=list(M1,M2,M3,M4,M5)
 Rs=sapply(Mlist, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
 
-modelNames=c("Two pool parallel", "Two pool series", "Two pool feedback", "Three pool parallel", "Three pool series")
+modelNames=c("Two-pool parallel", "Two-pool series", "Two-pool feedback", "Three-pool parallel", "Three-pool series")
 
 plot(incubation$timeSeries[,c(1,79)], ylab="Respiration flux")
 matlines(days, Rs, col=2:6, lty=1)
 legend("topright", modelNames, lty=1, col=2:6, bty="n")
 
 statistics=data.frame(npar=sapply(Mlist, function(x){length(x$FMEmodel$par)}), SSR=sapply(Mlist, function(x){x$FMEmodel$ssr}), MSR=sapply(Mlist, function(x){x$FMEmodel$ms}), AIC=sapply(Mlist, function(x){x$AIC}))
-
+row.names(statistics)<-modelNames
 ###
 Rt=sapply(Mlist, function(x){getReleaseFlux(x$SoilRmodel)})
 
-par(mfrow=c(2,2))
+pdf("~/sidb/manuscript/modelsFit.pdf")
+par(mfrow=c(2,2), mar=c(4,4.5,1,0.5))
 for(i in c(1,2,4,5)){
-matplot(days,Rt[[i]], type="l",lty=1, col=4:2, ylab="Respiration flux",main=modelNames[i], ylim=c(0,500))
-points(incubation$timeSeries[,c(1,79)])}
-legend("topright", c("Pool 1", "Pool 2", "Pool 3"), lty=1, col=4:2, bty="n")
+  matplot(days,Rt[[i]], type="l",lty=1, col=4:2, ylab=expression(paste("Respiration (",mu, "gC g soi", l^-1, "da", y^-1, ")")),
+          main=modelNames[i], ylim=c(0,500), bty="n", font.main=1)
+  points(incubation$timeSeries[,c(1,79)], pch=19, cex=0.5)
+  lines(days, Rs[,i])
+}
+legend("topright", c("Total","Fast", "Intermediate", "Slow"), lty=1, col=c(1,4:2), bty="n")
 par(mfrow=c(1,1))
+dev.off()
 

@@ -84,8 +84,8 @@ incubationInfo:
         description: soil incubation study that each treatment consisted of four 200 g replicates of A- and C- horizen soils mixed with 0.26 g 13C wheat straw for 2.5 years
         temperature: 25
         moisture:
-          value: FC
-          units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+          value: 100
+          units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic:
         gasMeasured:
         laboratoryTreatment:

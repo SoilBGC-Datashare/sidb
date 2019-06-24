@@ -53,18 +53,19 @@ siteInfo:
 incubationInfo:
         description: "495 day aerobic incubation at 25 degrees C, 50% air humidity with weekly control for soil moisture loss. Subsamples taken every 3 months and incubated at 5, 12, 19, 26 degrees C for 24 hours, then CO2 measured." # Short description of the incubation setup and main treatments
         temperature: # Replace with name of treatment
-            value: # Numerical or factor
-              - 5
-              - 12
-              - 19
-              - 26
-            units: Celsius # Units of treatment value if numerical, if a %, write percent
         moisture:
           value: 100 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: percentFieldCapacity # Valid fields are: GWC or percent field capacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         laboratoryTreatment:
+          temperature:
+            value:
+               - 5
+               - 12
+               - 19
+               - 26
+            units: Celsius
         replicates:
           number: 3 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab

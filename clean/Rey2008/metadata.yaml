@@ -146,9 +146,6 @@ incubationInfo:
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          treatment: # Replace with name of treatment; NOTE: temperature studied for Q10 but only 30 deg C curves reported
-            value: # Numerical or factor
-            units: # Units of treatment value if numerical, if a %, write percent
         replicates:
           number: 3 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab

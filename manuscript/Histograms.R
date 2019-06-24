@@ -3,7 +3,7 @@ devtools::install_github('SoilBGC-Datashare/sidb/Rpkg', force=TRUE)
 library(sidb)
 
 #the database 
-database = loadEntries("~/sidb/clean/") #change to the data
+database = loadEntries("~/sidb/data/") 
 
 #Hist1: The incubation time
 incubTimes=incubationTime(database=database)

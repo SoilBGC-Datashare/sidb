@@ -4,7 +4,5 @@ language: R
 sudo: false
 cache: packages
 
-script:
-- R CMD build ./Rpkg/
-- R CMD check ./Rpkg/*tar.gz
-
+before_install:
+  - cd Rpkg/

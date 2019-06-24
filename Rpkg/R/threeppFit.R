@@ -8,7 +8,7 @@
 #' @import FME
 #' @import SoilR
 #' @examples
-#' db=loadEntries(path="~/sidb/clean/")
+#' db=loadEntries(path="~/sidb/data/")
 #' a=threeppFit(timeSeries = db[["Crow2019a"]]$timeSeries[,c(1,5)], initialCarbon=db[["Crow2019a"]]$initConditions[4,"carbonMean"]*10000)
 threeppFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.5, 0.5)){
 #  complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=cumsum(timeSeries[complete.cases(timeSeries),2]))

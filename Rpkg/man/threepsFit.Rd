@@ -21,6 +21,6 @@ R list with an FME model object, a SoilR model object, and the AIC value
 Fits a three pool model with series structure to a time-series
 }
 \examples{
-db=loadEntries(path="~/sidb/clean/")
+db=loadEntries(path="~/sidb/data/")
 a=threepsFit(timeSeries = db[["Crow2019a"]]$timeSeries[,c(1,5)], initialCarbon=db[["Crow2019a"]]$initConditions[4,"carbonMean"]*10000)
 }

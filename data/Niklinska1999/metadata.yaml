@@ -6,7 +6,7 @@ contactName:  M. Niklinska # First and last name of contact person, who might be
 contactEmail: ahoyt@bgc-jena.mpg.de # Email of the contact person
 entryNote: "multiplied organic matter content by 0.5 to get %C; assume they meant 50% field capacity when they said 50% water holding capacity" # Any notes or comments related to this entry.
 
-siteInfo: 
+siteInfo:
   study:  "Scots pines across Europe, humus respiration and N mineralization"
   site: # Names of individual sites, if one site, keep on this line, if multiple, use array format
      - "Harads, northern Sweden"
@@ -58,36 +58,36 @@ siteInfo:
      - 793
      - 793
   elevation: # Elevation of study site in meters above sea levels
-     -58
-     -185
-     -155
-     -165
-     -60
-     -920
-     -800
+     - 58
+     - 185
+     - 155
+     - 165
+     - 60
+     - 920
+     - 800
   landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
-     -forest
-     -forest
-     -forest
-     -forest
-     -forest
-     -forest
-     -forest
+     - forest
+     - forest
+     - forest
+     - forest
+     - forest
+     - forest
+     - forest
   vegNote: #Additional details about land cover such as species or functional type composition
-     -Scots pine monoculture
-     -Scots pine monoculture
-     -Scots pine monoculture
-     -Scots pine monoculture
-     -Scots pine monoculture
-     -Scots pine monoculture
-     -Scots pine monoculture
+     - Scots pine monoculture
+     - Scots pine monoculture
+     - Scots pine monoculture
+     - Scots pine monoculture
+     - Scots pine monoculture
+     - Scots pine monoculture
+     - Scots pine monoculture
   soilTaxonomy:
      soilOrder: # Soil order according to the classification system described below
      soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
      soilSeries: # Soil series according to the classification system described below
      classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-        
-  depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array. 
+
+  depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
      top: 0
      bottom: 0
      midDepth: 0
@@ -101,23 +101,23 @@ siteInfo:
 incubationInfo:
   description: "Five samples of 5 g DWT humus from each site were incubated at 50 percent WHC at 5, 10, 15, 20 and 25 degrees. Respiration rates were measured every second week for 14 weeks."
   temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
-  moisture: 
+  moisture:
      value: 50 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
      units: percentFieldCapacity # Valid fields are: percentGWC or percentFieldCapacity
-  anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
+  anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
   gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
   laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
      temperature:
-       value: 
-         -5
-         -10
-         -15
-         -20
-         -25
+       value:
+         - 5
+         - 10
+         - 15
+         - 20
+         - 25
        units: Celsius
-  replicates: 
+  replicates:
          number: # Number of replicates per treatments
-         type: # Valid fields are: field or lab 
+         type: # Valid fields are: field or lab
   incubationTime: # length of incubation in days
   preincubationTime: # Pre-incubation time in days
   samplePreparation:
@@ -126,7 +126,7 @@ incubationInfo:
      rootPicking: no # yes or no
      rockPicking: no # yes or no
   gasAnalyzer: "by CO2 absorption in NaOH"
-        
+
 variables:
         V1:
           name: time
@@ -340,4 +340,4 @@ variables:
           units: "mmolCO2/d"
           desc: "Dynamics of the respiration rates of humus samples originating from Biescas, northern Spain, incubated at 25 degrees"
           temperature: 25
-          site: "Biescas, northern Spain"   
+          site: "Biescas, northern Spain"

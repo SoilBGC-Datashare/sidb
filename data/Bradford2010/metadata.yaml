@@ -117,186 +117,186 @@ incubationInfo:
         gasAnalyzer: LI‐7000 LI‐COR
 
 variables: # These describe the columns of your timeSeries.csv file
-       V1: # column 1
-        name: time
-        units: d
-       V2:
-        name: C_10deg_CH
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for CH in glucose addition assay"
-        site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 10
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V3:
-        name: C_20deg_CH
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for CH in glucose addition assay"
-        site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 20
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V4:
-        name: C_30deg_CH
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for CH in glucose addition assay"
-        site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 30
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V5:
-        name: C_10deg_CL
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for CL in glucose addition assay"
-        site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 10
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V6:
-        name: C_20deg_CL
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for CL in glucose addition assay"
-        site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 20
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V7:
-        name: C_30deg_CL
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for CL in glucose addition assay"
-        site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 30
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V8:
-        name: C_10deg_HOC
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HOC in glucose addition assay"
-        site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 10
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V9:
-        name: C_20deg_HOC
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HOC in glucose addition assay"
-        site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 20
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V10:
-        name: C_30deg_HOC
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HOC in glucose addition assay"
-        site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 30
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V11:
-        name: C_10deg_HMC
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HMC in glucose addition assay"
-        site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 10
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V12:
-        name: C_20deg_HMC
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HMC in glucose addition assay"
-        site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 20
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V13:
-        name: C_30deg_HMC
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HMC in glucose addition assay"
-        site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 30
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V14:
-        name: C_10deg_HOH
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HOH in glucose addition assay"
-        site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 10
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V15:
-        name: C_20deg_HOH
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HOH in glucose addition assay"
-        site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 20
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V16:
-        name: C_30deg_HOH
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HOH in glucose addition assay"
-        site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 30
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V17:
-        name: C_10deg_HMH
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HMH in glucose addition assay"
-        site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 10
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V18:
-        name: C_20deg_HMH
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HMH in glucose addition assay"
-        site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 20
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
-       V19:
-        name: C_30deg_HMH
-        desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HMH in glucose addition assay"
-        site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        temperature: 30
-        glucose: 0.84
-        gasMeasured:
-        units: mg/gSoil/d
-        statistic:
+        V1: # column 1
+          name: time
+          units: d
+        V2:
+          name: C_10deg_CH
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for CH in glucose addition assay"
+          site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 10
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V3:
+          name: C_20deg_CH
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for CH in glucose addition assay"
+          site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 20
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V4:
+          name: C_30deg_CH
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for CH in glucose addition assay"
+          site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 30
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V5:
+          name: C_10deg_CL
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for CL in glucose addition assay"
+          site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 10
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V6:
+          name: C_20deg_CL
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for CL in glucose addition assay"
+          site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 20
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V7:
+          name: C_30deg_CL
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for CL in glucose addition assay"
+          site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 30
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V8:
+          name: C_10deg_HOC
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HOC in glucose addition assay"
+          site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 10
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V9:
+          name: C_20deg_HOC
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HOC in glucose addition assay"
+          site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 20
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V10:
+          name: C_30deg_HOC
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HOC in glucose addition assay"
+          site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 30
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V11:
+          name: C_10deg_HMC
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HMC in glucose addition assay"
+          site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 10
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V12:
+          name: C_20deg_HMC
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HMC in glucose addition assay"
+          site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 20
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V13:
+          name: C_30deg_HMC
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HMC in glucose addition assay"
+          site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 30
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V14:
+          name: C_10deg_HOH
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HOH in glucose addition assay"
+          site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 10
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V15:
+          name: C_20deg_HOH
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HOH in glucose addition assay"
+          site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 20
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V16:
+          name: C_30deg_HOH
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HOH in glucose addition assay"
+          site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 30
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V17:
+          name: C_10deg_HMH
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HMH in glucose addition assay"
+          site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 10
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V18:
+          name: C_20deg_HMH
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HMH in glucose addition assay"
+          site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 20
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:
+        V19:
+          name: C_30deg_HMH
+          desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HMH in glucose addition assay"
+          site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          temperature: 30
+          glucose: 0.84
+          gasMeasured:
+          units: mg/gSoil/d
+          statistic:

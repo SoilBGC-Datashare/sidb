@@ -4,6 +4,7 @@ entryAuthor: Carlos A. Sierra
 entryCreationDate: 2017-01-24
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
+entryNote: # Any notes or comments related to this entry.
 
 siteInfo:
   study:
@@ -63,9 +64,7 @@ incubationInfo:
   replicates:
     number: 4 # Number of replicates per treatments
     type: lab # Valid fields are: field or lab
-  incubationTime:
-    time: 35
-    units: d
+  incubationTime: 35
   preincubationTime: # Pre-incubation time in days
   samplePreparation:
     intactCore: no # yes or no

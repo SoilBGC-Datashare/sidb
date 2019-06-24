@@ -5,7 +5,7 @@ library(sidb)
 library(maps)
 
 #Load database
-database=loadEntries(path='~/sidb/clean/')
+database=loadEntries(path='~/sidb/data/')
 
 # Calculate some statistics
 timeseries=lapply(database, FUN=function(x){ncol(x$timeSeries)-1})

@@ -2,7 +2,7 @@
 library(SoilR)
 library(sidb)
 
-db=loadEntries(path="~/sidb/clean/")
+db=loadEntries(path="~/sidb/data/")
 incubation=db[["Crow2019a"]]
 
 M1=twoppFit(timeSeries = incubation$timeSeries[,c(1,79)], initialCarbon=incubation$initConditions[78,"carbonMean"]*10000, inipars=c(0.01, 0.001, 0.1))

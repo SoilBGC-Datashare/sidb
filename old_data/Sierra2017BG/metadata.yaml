@@ -1,0 +1,192 @@
+citationKey: Sierra2017BG
+doi: 10.5194/bg-2016-474
+entryAuthor: Carlos A. Sierra
+entryCreationDate: 2017-01-24
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
+
+siteInfo:
+  study:
+  site: "Caribou Poker Creeks Research Watershed"
+  coordinates:
+    latitude: 65.155935
+    longitude: 147.491317
+  country: USA
+  MAT: -3.5
+  MAP: 400
+  elevation:
+  landCover: forest
+  vegNote: "Boreal forest"
+  soilTaxonomy:
+        soilOrder: Inceptisol # Soil order according to the classification system described below
+        soilFamily:   Histic  Pergelic  Cryaquep # Soil family description (e.g., Eutric of Eutric Cambisol)
+        soilSeries: Gilmore silt loam # Soil series according to the classification system described below
+        classificationSystem: USDA # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
+
+  depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
+          top: 0 # in cm
+          bottom: 20 # in cm
+          midDepth: 10 #average depth
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          horizon: A # soil horizon designation
+  permafrost:
+          permafrostExist: Yes # Yes or No (if yes, permafrost must exist at the site)
+          activeLayer: 0.2 # Depth of the active layer in meters
+  experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
+
+incubationInfo:
+  description: "Full factorial incubation experiment with the manipulated treatments being temperature (25, 35 C), soil water content (15, 30, 60 90% water-filled pore space), and oxygen concentration in the pore space (1 and 20%), with soils enclosed in PVC cylinders (10 cm diameter and 20 cm height) containing in about half of their volume 450 g of homogenized soil. The approximate bulk density within each cylinder was 0.6 g cm-3. Organic soil was collected from the A horizon of a boreal forest dominated by black spruce at the Caribou Poker watershed in central Alaska, USA"
+  temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+  moisture:
+    value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
+    units: # Valid fields are: percentGWC or percentFieldCapacity
+  anaerobic: Yes # Yes if headspace flushed with N2 or He, blank if aerobic
+  gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+  laboratoryTreatment:
+    temperature:
+      value:
+        - 25
+        - 35
+      units: Celcius
+    moisture:
+      value:
+       - 15
+       - 30
+       - 60
+       - 90
+      units: percent
+    oxygen:
+      value:
+       - 1
+       - 20
+      units: percent
+  replicates:
+    number: 4 # Number of replicates per treatments
+    type: lab # Valid fields are: field or lab
+  incubationTime:
+    time: 35
+    units: d
+  preincubationTime: # Pre-incubation time in days
+  samplePreparation:
+    intactCore: no # yes or no
+    sieving: yes # no, or mesh size in mm
+    rootPicking: yes # yes or no
+    rockPicking: yes # yes or no
+  gasAnalyzer: LI-6262 # Gas analysis equipment for CO2 measurements
+
+variables:
+        V1:
+          name: time
+          units: days
+        V2:
+          name: 25-15-20
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 15
+          oxygen: 20
+          units: mgC/day
+        V3:
+          name: 25-15-1
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 15
+          oxygen: 1
+          units: mgC/day
+        V4:
+          name: 25-30-20
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 30
+          oxygen: 20
+          units: mgC/day
+        V5:
+          name: 25-30-1
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 30
+          oxygen: 1
+          units: mgC/day
+        V6:
+          name: 25-60-20
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 60
+          oxygen: 20
+          units: mgC/day
+        V7:
+          name: 25-60-1
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 60
+          oxygen: 1
+          units: mgC/day
+        V8:
+          name: 25-90-20
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 90
+          oxygen: 20
+          units: mgC/day
+        V9:
+          name: 25-90-1
+          desc: "Respiration rates"
+          temperature: 25
+          moisture: 90
+          oxygen: 1
+          units: mgC/day
+        V10:
+          name: 35-15-20
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 15
+          oxygen: 20
+          units: mgC/day
+        V11:
+          name: 35-15-1
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 15
+          oxygen: 1
+          units: mgC/day
+        V12:
+          name: 35-30-20
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 30
+          oxygen: 20
+          units: mgC/day
+        V13:
+          name: 35-30-1
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 30
+          oxygen: 1
+          units: mgC/day
+        V14:
+          name: 35-60-20
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 60
+          oxygen: 20
+          units: mgC/day
+        V15:
+          name: 35-60-1
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 60
+          oxygen: 1
+          units: mgC/day
+        V16:
+          name: 35-90-20
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 90
+          oxygen: 20
+          units: mgC/day
+        V17:
+          name: 35-90-1
+          desc: "Respiration rates"
+          temperature: 35
+          moisture: 90
+          oxygen: 1
+          units: mgC/day

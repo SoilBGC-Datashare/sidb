@@ -48,8 +48,8 @@ incubationInfo:
         description: "eight 10g laboratory replicates were incubated at 20, 30 and 40deg for ca. 225 d." # Short description of the incubation setup and main treatments
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
-          value: 100 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
-          units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+          value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
+          units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)

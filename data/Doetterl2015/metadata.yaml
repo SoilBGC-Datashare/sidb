@@ -35,7 +35,7 @@ siteInfo:
           - SDA5
 #These fields should be arrays of equal length to site array
         coordinates:
-          latitude: # Latitude in decimal units (check for negative that denotes southern hemisphere)
+          longitude: # longitude in decimal units (check for negative that denotes southern hemisphere)
             - -71.2507053288
             - -71.5000805329
             - -70.5216234434
@@ -60,7 +60,7 @@ siteInfo:
             - -70.3610585755
             - -58.9605556
             - -56.9961111
-          longitude: # Longitude in decimal units (check for negative that denotes west)
+          latitude: #Latitude in decimal units (check for negative that denotes southern hemisphere)
             - -30.201572874
             - -31.8128438198
             - -32.8760935922
@@ -308,6 +308,7 @@ incubationInfo:
           units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment:
         replicates:
           number: 3 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab

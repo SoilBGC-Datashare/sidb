@@ -39,67 +39,67 @@ siteInfo:
           - Jepson Prairie (JEP)
 # Names of individual sites, if one site, keep on this line, if multiple, use array format
 #These fields should be arrays of equal length to site array
-       coordinates:
-          latitude:
-            - 45.4
-            - 42.4
-            - 45.82
-            - 44.2
-            - 68.63
-            - 35.97
-            - 32.49
-            - 34.67
-            - 25.56
-            - 47.86
-            - 42.3
-            - 64.77
-            - 37.09
-            - 18.31
-            - 17.97
-            - 39.61
-            - 31.4
-            - 39.08
-            - 39.08
-            - 47.27
-            - 35.03
-            - 40.09
-            - 43.96
-            - 29.68
-            - 40.81
-            - 47.8
-            - 41.05
-            - 38.35
-            # Latitude in decimal units (check for negative that denotes southern hemisphere)
-          longitude:
-            - -93.2
-            - -85.4
-            - -121.95
-            - -122.2
-            - -149.6
-            - -84.28
-            - -106.78
-            - -120
-            - -80.39
-            - -124.04
-            - -72.1
-            - -148.27
-            - -119.7
-            - -65.76
-            - -65.5
-            - -76.74
-            - -81.3
-            - -110.85
-            - -96.57
-            - -95.33
-            - -83.43
-            - -105.66
-            - -71.72
-            - -82
-            - -104.19
-            - -107.95
-            - -87.46
-            - -121.82
-             # Longitude in decimal units (check for negative that denotes west)
+        coordinates:
+            latitude:
+              - 45.4
+              - 42.4
+              - 45.82
+              - 44.2
+              - 68.63
+              - 35.97
+              - 32.49
+              - 34.67
+              - 25.56
+              - 47.86
+              - 42.3
+              - 64.77
+              - 37.09
+              - 18.31
+              - 17.97
+              - 39.61
+              - 31.4
+              - 39.08
+              - 39.08
+              - 47.27
+              - 35.03
+              - 40.09
+              - 43.96
+              - 29.68
+              - 40.81
+              - 47.8
+              - 41.05
+              - 38.35
+              # Latitude in decimal units (check for negative that denotes southern hemisphere)
+            longitude:
+              - -93.2
+              - -85.4
+              - -121.95
+              - -122.2
+              - -149.6
+              - -84.28
+              - -106.78
+              - -120
+              - -80.39
+              - -124.04
+              - -72.1
+              - -148.27
+              - -119.7
+              - -65.76
+              - -65.5
+              - -76.74
+              - -81.3
+              - -110.85
+              - -96.57
+              - -95.33
+              - -83.43
+              - -105.66
+              - -71.72
+              - -82
+              - -104.19
+              - -107.95
+              - -87.46
+              - -121.82
+               # Longitude in decimal units (check for negative that denotes west)
         country:
           - USA
           - USA
@@ -218,9 +218,6 @@ incubationInfo:
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          treatment: # Replace with name of treatment
-            value: # Numerical or factor
-            units: # Units of treatment value if numerical, if a %, write percent
         replicates:
           number: 5 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab
@@ -234,258 +231,258 @@ incubationInfo:
         gasAnalyzer: Licor 6252 infrared gas analyser # Gas analysis equipment for measurements
 
 variables: # These describe the columns of your timeSeries.csv file
-       V1: # column 1
-        name: time # Name of first variable in the accompanying csv data file. First variable should be time.
-        units: day # Units of first variable in accompanying file.
-       V2: # column 2
-        name: Cumresp_CDR # Name of second variable in accompanying file.
-        desc: cumulative respiration at CDR # Description of the variable
-        site: Cedar Creek (CDR) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V3: # column 3
-        name: Cumresp_KBS # Name of second variable in accompanying file.
-        desc: cumulative respiration at KBS # Description of the variable
-        site: Kellogg Biological Station (KBS) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V4: # column 4
-        name: Cumresp_WR # Name of second variable in accompanying file.
-        desc: cumulative respiration at WR # Description of the variable
-        site: Wind River (WR) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V5: # column 5
-        name: Cumresp_AND # Name of second variable in accompanying file.
-        desc: cumulative respiration at AND # Description of the variable
-        site: HJ Andrew (AND) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V6: # column 6
-        name: Cumresp_ARC # Name of second variable in accompanying file.
-        desc: cumulative respiration at ARC # Description of the variable
-        site: Toolik (ARC) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V7: # column 7
-        name: Cumresp_WB # Name of second variable in accompanying file.
-        desc: cumulative respiration at WB # Description of the variable
-        site: Walker Branch (WB) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V8: # column 8
-        name: Cumresp_JRN # Name of second variable in accompanying file.
-        desc: cumulative respiration at JRN # Description of the variable
-        site: Jornada Basin (JRN) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V9: # column 9
-        name: Cumresp_SDG # Name of second variable in accompanying file.
-        desc: cumulative respiration at SDG # Description of the variable
-        site: Sedgwick (SDG) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V10: # column 10
-        name: Cumresp_FCE # Name of second variable in accompanying file.
-        desc: cumulative respiration at FCE # Description of the variable
-        site: Florida Coastal Everglades (FCE) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V11: # column 11
-        name: Cumresp_OLY # Name of second variable in accompanying file.
-        desc: cumulative respiration at OLY # Description of the variable
-        site: Olympic National Park (OLY) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V12: # column 12
-        name: Cumresp_HFR # Name of second variable in accompanying file.
-        desc: cumulative respiration at HFR # Description of the variable
-        site: Harvard Forest (HFR) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V13: # column 13
-        name: Cumresp_BNZ # Name of second variable in accompanying file.
-        desc: cumulative respiration at BNZ # Description of the variable
-        site: Bonanza Creek (BNZ) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V14: # column 14
-        name: Cumresp_SJQ # Name of second variable in accompanying file.
-        desc: cumulative respiration at SJQ # Description of the variable
-        site: San Joaquin Exper. Range (SJQ) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V15: # column 15
-        name: Cumresp_LUQ # Name of second variable in accompanying file.
-        desc: cumulative respiration at LUQ # Description of the variable
-        site: Luquillo #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V16: # column 16
-        name: Cumresp_GUA # Name of second variable in accompanying file.
-        desc: cumulative respiration at GUA # Description of the variable
-        site: Guanica (GUA) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V17: # column 17
-        name: Cumresp_BES # Name of second variable in accompanying file.
-        desc: cumulative respiration at BES # Description of the variable
-        site: Baltimore Ecosystem Study (BES) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V18: # column 18
-        name: Cumresp_GCE # Name of second variable in accompanying file.
-        desc: cumulative respiration at GCE # Description of the variable
-        site: Georgia Coastal Ecosystem (GCE) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V19: # column 19
-        name: Cumresp_SRE # Name of second variable in accompanying file.
-        desc: cumulative respiration at SRE # Description of the variable
-        site: Santa Rita Exper. Range (SRE) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V20: # column 20
-        name: Cumresp_KNZ # Name of second variable in accompanying file.
-        desc: cumulative respiration at KNZ # Description of the variable
-        site: Konza Prairie #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V21: # column 21
-        name: Cumresp_ITA # Name of second variable in accompanying file.
-        desc: cumulative respiration at ITA # Description of the variable
-        site: Itasca State Park (ITA) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V22: # column 22
-        name: Cumresp_COW # Name of second variable in accompanying file.
-        desc: cumulative respiration at COW # Description of the variable
-        site: Coweeta (COW) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V23: # column 23
-        name: Cumresp_NIW # Name of second variable in accompanying file.
-        desc: cumulative respiration at NIW # Description of the variable
-        site: Niwot Range (NIW) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V24: # column 24
-        name: Cumresp_HB # Name of second variable in accompanying file.
-        desc: cumulative respiration at HB # Description of the variable
-        site: Hubbard Brook (HB) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V25: # column 25
-        name: Cumresp_ORD # Name of second variable in accompanying file.
-        desc: cumulative respiration at ORD # Description of the variable
-        site: Ordway Swisher (ORD) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V26: # column 26
-        name: Cumresp_SGS # Name of second variable in accompanying file.
-        desc: cumulative respiration at SGS # Description of the variable
-        site: Short Grass Steppe #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V27: # column 27
-        name: Cumresp_AP # Name of second variable in accompanying file.
-        desc: cumulative respiration at AP # Description of the variable
-        site: American Prairie (AP) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-       V28: # column 28
-        name: Cumresp_KAN # Name of second variable in accompanying file.
-        desc: cumulative respiration at KAN # Description of the variable
-        site: Kankankee Sands (KAN) #site where the incubated sample comes from.
-        experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-      V29: # column 29
-       name: Cumresp_JEP # Name of second variable in accompanying file.
-       desc: cumulative respiration at JEP # Description of the variable
-       site: Jepson Prairie (JEP) #site where the incubated sample comes from.
-       experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-       laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-       gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-       units: mgCO2/gSoil # Units in which this variable is provided if not a factor
-       statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V1: # column 1
+          name: time # Name of first variable in the accompanying csv data file. First variable should be time.
+          units: day # Units of first variable in accompanying file.
+        V2: # column 2
+          name: Cumresp_CDR # Name of second variable in accompanying file.
+          desc: cumulative respiration at CDR # Description of the variable
+          site: Cedar Creek (CDR) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V3: # column 3
+          name: Cumresp_KBS # Name of second variable in accompanying file.
+          desc: cumulative respiration at KBS # Description of the variable
+          site: Kellogg Biological Station (KBS) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V4: # column 4
+          name: Cumresp_WR # Name of second variable in accompanying file.
+          desc: cumulative respiration at WR # Description of the variable
+          site: Wind River (WR) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V5: # column 5
+          name: Cumresp_AND # Name of second variable in accompanying file.
+          desc: cumulative respiration at AND # Description of the variable
+          site: HJ Andrew (AND) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V6: # column 6
+          name: Cumresp_ARC # Name of second variable in accompanying file.
+          desc: cumulative respiration at ARC # Description of the variable
+          site: Toolik (ARC) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V7: # column 7
+          name: Cumresp_WB # Name of second variable in accompanying file.
+          desc: cumulative respiration at WB # Description of the variable
+          site: Walker Branch (WB) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V8: # column 8
+          name: Cumresp_JRN # Name of second variable in accompanying file.
+          desc: cumulative respiration at JRN # Description of the variable
+          site: Jornada Basin (JRN) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V9: # column 9
+          name: Cumresp_SDG # Name of second variable in accompanying file.
+          desc: cumulative respiration at SDG # Description of the variable
+          site: Sedgwick (SDG) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V10: # column 10
+          name: Cumresp_FCE # Name of second variable in accompanying file.
+          desc: cumulative respiration at FCE # Description of the variable
+          site: Florida Coastal Everglades (FCE) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V11: # column 11
+          name: Cumresp_OLY # Name of second variable in accompanying file.
+          desc: cumulative respiration at OLY # Description of the variable
+          site: Olympic National Park (OLY) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V12: # column 12
+          name: Cumresp_HFR # Name of second variable in accompanying file.
+          desc: cumulative respiration at HFR # Description of the variable
+          site: Harvard Forest (HFR) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V13: # column 13
+          name: Cumresp_BNZ # Name of second variable in accompanying file.
+          desc: cumulative respiration at BNZ # Description of the variable
+          site: Bonanza Creek (BNZ) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V14: # column 14
+          name: Cumresp_SJQ # Name of second variable in accompanying file.
+          desc: cumulative respiration at SJQ # Description of the variable
+          site: San Joaquin Exper. Range (SJQ) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V15: # column 15
+          name: Cumresp_LUQ # Name of second variable in accompanying file.
+          desc: cumulative respiration at LUQ # Description of the variable
+          site: Luquillo #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V16: # column 16
+          name: Cumresp_GUA # Name of second variable in accompanying file.
+          desc: cumulative respiration at GUA # Description of the variable
+          site: Guanica (GUA) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V17: # column 17
+          name: Cumresp_BES # Name of second variable in accompanying file.
+          desc: cumulative respiration at BES # Description of the variable
+          site: Baltimore Ecosystem Study (BES) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V18: # column 18
+          name: Cumresp_GCE # Name of second variable in accompanying file.
+          desc: cumulative respiration at GCE # Description of the variable
+          site: Georgia Coastal Ecosystem (GCE) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V19: # column 19
+          name: Cumresp_SRE # Name of second variable in accompanying file.
+          desc: cumulative respiration at SRE # Description of the variable
+          site: Santa Rita Exper. Range (SRE) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V20: # column 20
+          name: Cumresp_KNZ # Name of second variable in accompanying file.
+          desc: cumulative respiration at KNZ # Description of the variable
+          site: Konza Prairie #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V21: # column 21
+          name: Cumresp_ITA # Name of second variable in accompanying file.
+          desc: cumulative respiration at ITA # Description of the variable
+          site: Itasca State Park (ITA) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V22: # column 22
+          name: Cumresp_COW # Name of second variable in accompanying file.
+          desc: cumulative respiration at COW # Description of the variable
+          site: Coweeta (COW) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V23: # column 23
+          name: Cumresp_NIW # Name of second variable in accompanying file.
+          desc: cumulative respiration at NIW # Description of the variable
+          site: Niwot Range (NIW) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V24: # column 24
+          name: Cumresp_HB # Name of second variable in accompanying file.
+          desc: cumulative respiration at HB # Description of the variable
+          site: Hubbard Brook (HB) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V25: # column 25
+          name: Cumresp_ORD # Name of second variable in accompanying file.
+          desc: cumulative respiration at ORD # Description of the variable
+          site: Ordway Swisher (ORD) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V26: # column 26
+          name: Cumresp_SGS # Name of second variable in accompanying file.
+          desc: cumulative respiration at SGS # Description of the variable
+          site: Short Grass Steppe #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V27: # column 27
+          name: Cumresp_AP # Name of second variable in accompanying file.
+          desc: cumulative respiration at AP # Description of the variable
+          site: American Prairie (AP) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V28: # column 28
+          name: Cumresp_KAN # Name of second variable in accompanying file.
+          desc: cumulative respiration at KAN # Description of the variable
+          site: Kankankee Sands (KAN) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V29: # column 29
+          name: Cumresp_JEP # Name of second variable in accompanying file.
+          desc: cumulative respiration at JEP # Description of the variable
+          site: Jepson Prairie (JEP) #site where the incubated sample comes from.
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+          laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).

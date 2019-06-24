@@ -1,0 +1,255 @@
+citationKey: Stewart2008SBB
+doi: 10.1016/j.soilbio.2008.02.014
+entryAuthor: Mina Azizi Rad
+entryCreationDate: 2016-10-4
+contactName: Alain Plante
+contactEmail: aplante@sas.upenn.edu
+entryNote: # Any notes or comments related to this entry.
+
+siteInfo:
+        study: Long term soil incubation (2.5 years) study to evaluate soil carbon input saturation
+
+        site:
+          - "Sioux City, IA (IA)"
+          - "Kellog Biological Station, MI (MI)"
+          - "Saginaw, MI (MIS)"
+          - "Lamberton, MN (MN)"
+          - "Mead, NE (NE)"
+          - "Wauseon, OH (OH)"
+          - "Melfort, Sk (SK)"
+        coordinates:
+          latitude:
+            - 41.5
+            - 42.24
+            - 42.5
+            - 42.24
+            - 44.2
+            - 41.1
+            - 52.52
+          longitude:
+            - -84.1
+            - -85.24
+            - -85.5
+            - -96.23
+            - -95.2
+            - -96.2
+            - -104.36
+        country: USA
+        MAT:
+          - 10.6
+          - 9.7
+          - 8.5
+          - 8.9
+          - 6.2
+          - 9.7
+          - 0.8
+        MAP:
+          - 541
+          - 890
+          - 788
+          - 660
+          - 632
+          - 887
+          - 411
+        elevation: # Elevation of study site in meters above sea levels
+        landCover: cultivated
+        vegNote: corn
+        soilTaxonomy:
+          soilOrder: # Soil order according to the classification system described below
+          soilFamily:
+            - Oxyaquic Hapludalf
+            - Tyipc Hapludalf
+            - Aeric Haplaquept
+            - Mollic Udifluvent
+            - Aquic Haplustoll
+            - Typic Argiudoll
+            - Orthic Black Chernozem
+          soilSeries: # Soil series according to the classification system described below
+          classificationSystem: USDA
+#These do not have to be arrays of equal length to site array
+        depthInfo:
+          top: # in cm
+          bottom: # in cm
+          midDepth: #average depth
+          surfaceAtm:
+          horizon:
+            - A
+            - C
+        permafrost:
+          permafrostExist:
+          activeLayer:
+        experimentalTreatment:
+
+incubationInfo:
+        description: soil incubation study that each treatment consisted of four 200 g replicates of A- and C- horizen soils mixed with 0.26 g 13C wheat straw for 2.5 years
+        temperature: 25
+        moisture:
+          value: FC
+          units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+        anaerobic:
+        gasMeasured:
+        laboratoryTreatment:
+          Horizon:
+            value:
+              - A
+              - B
+            units:
+          13-labeled C input: # Replace with name of treatment
+            value: 0.26
+            units: g13CWheatStraw/200gSoil
+        replicates:
+          number: 4
+          type: lab
+        incubationTime: 544
+        preincubationTime: 1
+        samplePreparation:
+          intactCore: # yes or no
+          sieving: # no, or mesh size in mm
+          rootPicking: # yes or no
+          rockPicking: # yes or no
+        gasAnalyzer: LICOR Model LI6252
+
+variables: # These describe the columns of your timeSeries.csv file
+       V1:
+        name: 544
+        units: d
+       V2:
+        name: Cumresp_A_IA
+        desc: cumulative respiration of horizon A from Sioux City
+        site: Sioux City
+        experimentalTreatment:
+        Horizon: A
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V3:
+        name: Cumresp_A_KBS
+        desc: cumulative respiration of horizon A from Kellog Biological Station
+        site: Kellog Biological Station
+        experimentalTreatment:
+        Horizon: A
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V4:
+        name: Cumresp_A_MIS
+        desc: cumulative respiration of horizon A from Saginaw
+        site: Saginaw
+        experimentalTreatment:
+        Horizon: A
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V5:
+        name: Cumresp_A_MN
+        desc: cumulative respiration of horizon A from Lamberton
+        site: Lamberton
+        experimentalTreatment:
+        Horizon: A
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V6:
+        name: Cumresp_A_NE
+        desc: cumulative respiration of horizon A from Mead
+        site: Mead
+        experimentalTreatment:
+        Horizon: A
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        Statistic:
+       V7:
+        name: Cumresp_A_OH
+        desc: cumulative respiration of horizon A from Wauseon
+        site: Wauseon
+        experimentalTreatment:
+        Horizon: A
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V8:
+        name: Cumresp_A_SK
+        desc: cumulative respiration of horizon A from Melfort
+        site: Melfort
+        experimentalTreatment:
+        Horizon: A
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V9:
+        name: Cumresp_C_IA
+        desc: ccumulative respiration of horizon B from Sioux City
+        site: Sioux City
+        experimentalTreatment:
+        Horizon: C
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V10:
+        name: Cumresp_C_KBS
+        desc: cumulative respiration of horizon B from Kellog Biological Station
+        site: Kellog Biological Station
+        experimentalTreatment:
+        Horizon: C
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V11:
+        name: Cumresp_C_MIS
+        desc: cumulative respiration of horizon B from Saginaw
+        site: Saginaw
+        experimentalTreatment:
+        Horizon: C
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V12:
+        name: Cumresp_C_MN
+        desc: cumulative respiration of horizon B from Lamberton
+        site: Lamberton
+        experimentalTreatment:
+        Horizon: C
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V13:
+        name: Cumresp_C_NE
+        desc: cumulative respiration of horizon B from Mead
+        site: Mead
+        experimentalTreatment:
+        Horizon: C
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V14:
+        name: Cumresp_C_OH
+        desc: cumulative respiration of horizon B from Wauseon
+        site: Wauseon
+        experimentalTreatment:
+        Horizon: C
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:
+       V15:
+        name: Cumresp_C_SK
+        desc: cumulative respiration of horizon B from Melfort
+        site: Melfort
+        experimentalTreatment:
+        Horizon: C
+        13-labeled C inputL: 0.26
+        gasMeasured:
+        units: mgCo2/gSoil
+        statistic:

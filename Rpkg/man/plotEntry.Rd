@@ -16,5 +16,6 @@ A plot
 Plot individual entries of the soil incubation database
 }
 \examples{
+database=loadEntries(path="~/sidb/data/")
 plotEntry(entry=database[["Andrews2000SBB"]])
 }

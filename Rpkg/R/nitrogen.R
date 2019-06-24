@@ -4,6 +4,7 @@
 #' @return A data.frame with the nitrogen content and the units of the soil samples from the database
 #' @export
 #' @examples
+#' sidb=loadEntries(path="~/sidb/data/")
 #' N=nitrogen(database=sidb)
 nitrogen = function(database) {
   mean=lapply(database, FUN=function(x){x$initConditions$nitrogenMean})

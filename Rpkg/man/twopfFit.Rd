@@ -21,5 +21,8 @@ Fits a two pool model with feedback structure to a time-series
 }
 \examples{
 db=loadEntries(path="~/sidb/data/")
-b=twopfFit(timeSeries = db[[20]]$timeSeries[,1:2], initialCarbon=db[[20]]$initConditions[1,"carbonMean"]*10)
+incubation=db[["Crow2019a"]]
+b=twopfFit(timeSeries = incubation$timeSeries[,c(1,79)],
+initialCarbon=incubation$initConditions[78,"carbonMean"]*10000,
+inipars=c(0.005, 0.00001, 0.1, 0.01, 0.01))
 }

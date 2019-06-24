@@ -19,6 +19,6 @@ Reports what fields are missing from an entry in relation to a template
 }
 \examples{
 database=loadEntries()
-template=yaml::yaml.load_file(input="~/sidb/data/template_metadata_workingfile.yaml")
+template=yaml::yaml.load_file(input="~/sidb/data/template_metadata.yaml")
 missingFields(entry=database[[1]], template = template)
 }

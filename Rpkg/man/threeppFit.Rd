@@ -21,5 +21,8 @@ Fits a three pool model with parallel structure to a time-series
 }
 \examples{
 db=loadEntries(path="~/sidb/data/")
-a=threeppFit(timeSeries = db[["Crow2019a"]]$timeSeries[,c(1,5)], initialCarbon=db[["Crow2019a"]]$initConditions[4,"carbonMean"]*10000)
+incubation=db[["Crow2019a"]]
+a=threeppFit(timeSeries = incubation$timeSeries[,c(1,79)],
+initialCarbon=incubation$initConditions[78,"carbonMean"]*10000,
+inipars = c(0.05, 0.01, 0.001, 0.1, 0.1))
 }

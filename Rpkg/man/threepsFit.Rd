@@ -22,5 +22,8 @@ Fits a three pool model with series structure to a time-series
 }
 \examples{
 db=loadEntries(path="~/sidb/data/")
-a=threepsFit(timeSeries = db[["Crow2019a"]]$timeSeries[,c(1,5)], initialCarbon=db[["Crow2019a"]]$initConditions[4,"carbonMean"]*10000)
+incubation=db[["Crow2019a"]]
+a=threepsFit(timeSeries = incubation$timeSeries[,c(1,79)],
+initialCarbon=incubation$initConditions[78,"carbonMean"]*10000,
+inipars=c(0.9,0.01, 0.000001, 0.01, 0.01, 0.01, 0.1))
 }

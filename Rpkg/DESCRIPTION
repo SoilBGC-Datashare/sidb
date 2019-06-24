@@ -1,11 +1,14 @@
 Package: sidb
 Title: Soil incubation database
 Version: 0.0.0.1
-Authors@R: person("Carlos", "Sierra", email = "csierra@bgc-jena.mpg.de", role = c("aut", "cre"))
+Authors@R: person("Carlos", "Sierra", email = "csierra@bgc-jena.mpg.de", role = c("aut", "cre", "cph"))
+Author: Carlos A. Sierra [aut, cre]
+Maintainer: Carlos A. Sierra <csierra@bgc-jena.mpg.de>
 Description: This package provides functions to load and analyse the soil incubation database.
 Depends: R (>= 3.4.3)
-License: What license is it under?
+License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true
-Imports: yaml
+Imports: yaml, FME, SoilR
 RoxygenNote: 6.1.1
+Suggests: testthat

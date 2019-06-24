@@ -16,5 +16,6 @@ A data.frame of incubation times and their units
 Returns the incubation time of the entries in the database
 }
 \examples{
+sidb=loadEntries(path="~/sidb/data/")
 incubTimes=incubationTime(database=sidb)
 }

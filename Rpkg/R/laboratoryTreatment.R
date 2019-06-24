@@ -5,6 +5,7 @@
 #' @return A vector with all values of the treatment from the database
 #' @export
 #' @examples
+#' sidb=loadEntries(path="~/sidb/data/")
 #' temperature=laboratoryTreatment(database=sidb, treatment="temperature")
 laboratoryTreatment <- function(database, treatment) {
   treatfunc=function(x){

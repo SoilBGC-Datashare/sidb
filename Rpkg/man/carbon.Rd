@@ -16,5 +16,6 @@ A data.frame with the carbon content and the units of the soil samples from the 
 Creates a data frame with the carbon content in soil samples
 }
 \examples{
+sidb=loadEntries(path="~/sidb/data/")
 C=carbon(database=sidb)
 }

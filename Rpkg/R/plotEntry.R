@@ -4,6 +4,7 @@
 #' @return A plot
 #' @export
 #' @examples
+#' database=loadEntries(path="~/sidb/data/")
 #' plotEntry(entry=database[["Andrews2000SBB"]])
 plotEntry=function(entry){
   x=entry$timeSeries$time

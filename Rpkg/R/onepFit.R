@@ -6,9 +6,13 @@
 #' @export
 #' @import FME
 #' @import SoilR
+#' @import graphics
+#' @importFrom utils tail
+#' @importFrom stats complete.cases
 #' @examples
 #' db=loadEntries(path="~/sidb/data/")
-#' a=onepFit(timeSeries = db[[20]]$timeSeries[,1:2], initialCarbon=db[[20]]$initConditions[1,"carbonMean"]*10)
+#' a=onepFit(timeSeries = db[[20]]$timeSeries[,1:2],
+#' initialCarbon=db[[20]]$initConditions[1,"carbonMean"]*10)
 onepFit=function(timeSeries, initialCarbon){
   complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=cumsum(timeSeries[complete.cases(timeSeries),2]))
   n=nrow(complete)

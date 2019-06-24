@@ -3,6 +3,7 @@
 #' @param x A data.frame with only two columns, first column for time and second column for CO2 release. Test is performed on the second column.
 #' @return logical
 #' @export
+#' @importFrom utils head read.csv
 #' @examples
 #' series=data.frame(time=seq(1,10), CO2=cumsum(rep(0.1, 10)))
 #' isCumulative(x=series)

@@ -16,5 +16,6 @@ A data.frame with the longitude and latitude of sites from the database
 Creates a data frame with the coordinates of the sites
 }
 \examples{
+sidb=loadEntries(path="~/sidb/data/")
 coor=coordinates(database=sidb)
 }

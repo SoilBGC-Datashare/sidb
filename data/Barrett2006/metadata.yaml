@@ -203,14 +203,14 @@ variables: # These describe the columns of your timeSeries.csv file
           desc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Upper Taylor Valley"
           units: microgC/gSoil/d
         V16:
-          name: C_10deg_5gwc_B
+          name: C_5deg_5gwc_B
           temperature: 5
           moisture: 5
           site: Beacon
           desc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Beacon"
           units: microgC/gSoil/d
         V17:
-          name: C_10deg_5gwc_V
+          name: C_5deg_5gwc_V
           temperature: 5
           moisture: 5
           site: Victoria

@@ -1,4 +1,4 @@
-"time","CO2C_DeMin_DeS","CO2C_DeMin_DuS","CO2C_DeMin_HS","CO2C_DeMin_PS","CO2C_DeMin_LowMS","CO2C_DeMin_LMS","CO2C_HS_glu","CO2C_HS_NH4Cl","CO2C_HS_una","CO2C_HS_gly","CO2C_LMS_glu","CO2C_LMS_gly","CO2C_LMS_NH4Cl","CO2C_LMS_una"
+"time","CO2C_DeMin_DeS","CO2C_DeMin_DuS","CO2C_DeMin_HS","CO2C_DeMin_PS","CO2C_DeMin_LowMS","CO2C_DeMin_LMS","CO2C_HS_glu","CO2C_HS_NH4Cl","CO2C_HS_una","CO2C_HS_gly","CO2C_LMS_glu","CO2C_LMS_gly","CO2C_LMS_NH4Cl","CO2C_HS_una"
 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 2,0.01,0.01,0.01,0.01,-0.03,0.06,0.05,0.06,0.03,0.03,0.01,0.01,0.01,0.01
 5,0.1,0.04,0.06,0.05,0.06,0.16,0.06,0.09,0.02,0.04,0.06,0.02,0.01,0.01

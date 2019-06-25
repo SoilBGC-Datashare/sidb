@@ -153,7 +153,7 @@ variables: # These describe the columns of your timeSeries.csv file
           units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V9:
-          name: warming_7.5_15_mean # Name of second variable in accompanying file.
+          name: warming_7.5_15_sd # Name of second variable in accompanying file.
           desc: Field warming, midDepth of 7.5, incubation temperature of 15 Celsius # Description of the variable
           site: CiPEHR #site where the incubated sample comes from.
           fieldWarming: warming # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.

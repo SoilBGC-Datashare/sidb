@@ -111,7 +111,7 @@ incubationInfo:
 
 variables: # These describe the columns of your timeSeries.csv file
        V1:
-        name: 544
+        name: time
         units: d
        V2:
         name: Cumresp_A_IA

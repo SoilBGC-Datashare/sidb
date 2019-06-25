@@ -166,7 +166,7 @@ variables: # These describe the columns of your timeSeries.csv file
           soil: "lake margin soil"
           ammendment: NH4Cl
         V15:
-          name: CO2C_HS_una
+          name: CO2C_LMS_una
           units: mgC/gSoil
           desc: "Cumulative CO2-C production by the unamended Garwood Valley lake margin soil"
           temperature: 10

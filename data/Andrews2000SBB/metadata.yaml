@@ -119,19 +119,19 @@ variables:
          gasMeasured: CO2
          units: mgCO2/gSoil/d
        V8:
-          name: C13_40_elev
-          desc: "13CO2 production rate measured at 40 degrees celsius from elevated CO2 site" #
+          name: C13_4_elev
+          desc: "13CO2 production rate measured at 4 degrees celsius from elevated CO2 site" #
           site: Duke Forest FACE
           elevatedCO2: elevated
-          temperature: 40
+          temperature: 4
           gasMeasured: 13CO2
           units: permille
        V9:
-          name: C13_40_con
-          desc: "13CO2 production rate measured at 40 degrees celsius from CO2 control site" #
+          name: C13_4_con
+          desc: "13CO2 production rate measured at 4 degrees celsius from CO2 control site" #
           site: Duke Forest FACE
           elevatedCO2: control
-          temperature: 40
+          temperature: 4
           gasMeasured: 13CO2
           units: permille
        V10:
@@ -151,18 +151,18 @@ variables:
           gasMeasured: 13CO2
           units: permille
        V12:
-          name: C13_4_elev
-          desc: "13CO2 production rate measured at 4 degrees celsius from elevated CO2 site" #
+          name: C13_40_elev
+          desc: "13CO2 production rate measured at 40 degrees celsius from elevated CO2 site" #
           site: Duke Forest FACE
           elevatedCO2: elevated
-          temperature: 4
+          temperature: 40
           gasMeasured: 13CO2
           units: permille
        V13:
-         name: C13_4_con
-         desc: "13CO2 production rate measured at 4 degrees celsius from CO2 control site" #
+         name: C13_40_con
+         desc: "13CO2 production rate measured at 40 degrees celsius from CO2 control site" #
          site: Duke Forest FACE
          elevatedCO2: control
-         temperature: 4
+         temperature: 40
          gasMeasured: 13CO2
          units: permille

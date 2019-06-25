@@ -67,12 +67,12 @@ variables: # These describe the columns of your timeSeries.csv file
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
         units: d # Units of first variable in accompanying file.
        V2: # column 2
-        name: Massif_cellulose # Name of second variable in accompanying file.
+        name: cellulose # Name of second variable in accompanying file.
         desc: Subsoil incubated with dual 13C-14C labelled cellulose for 161 days at -100 kPa water content # Description of the variable
         cellulose: cellulose_amended # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: mg soilC/kg soilC
        V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
-        name: Massif_control # Name of second variable in accompanying file.
+        name: control # Name of second variable in accompanying file.
         desc: Subsoil incubated without dual 13C-14C labelled cellulose for 161 days at -100 kPa water content # Description of the variable
         cellulose: control # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: mg soilC/kg soilC

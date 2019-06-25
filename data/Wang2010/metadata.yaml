@@ -360,5 +360,5 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
         midDepth: 25
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        moisture: CS
+        moisture: 150
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor

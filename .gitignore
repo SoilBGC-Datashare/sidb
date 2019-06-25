@@ -7,3 +7,9 @@
 # Directories
 docs/_site/
 .Rproj.user
+tests/sidb.Rcheck
+
+
+# Files
+tests/*tar.gz
+

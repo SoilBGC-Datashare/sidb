@@ -1,0 +1,151 @@
+citationKey: Reichstein2000
+doi: 10.1016/S0038-0717(00)00002-X
+entryAuthor: Shane Stoner
+entryCreationDate: 2019-04-24
+contactName: Shane Stoner
+contactEmail: sstoner@bgc-jena.mpg.de
+entryNote: # Any notes or comments related to this entry.
+
+siteInfo:
+        study:  "Temperature dependence of carbon mineralisation: conclusions from a long-term incubation of subalpine soil samples" # Overall study description
+        site:  # Names of individual sites, if one site, keep on this line, if multiple, use array format
+          - Davos_Ridge
+          - Davos_Gully
+#These fields should be arrays of equal length to site array
+        coordinates:
+          latitude: 46.78333 # Latitude in decimal units (check for negative that denotes southern hemisphere)
+          longitude: 9.86667 # Longitude in decimal units (check for negative that denotes west)
+        country: Switzerland # Name of country where site was conducted
+        MAT: 1.4 # Mean annual temperature in degrees Celsius
+        MAP: 1047 # Mean annual precipitation in mm
+        elevation: # Elevation of study site in meters above sea levels
+          - 2200
+          - 2000
+        landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+          - shrubland
+          - rangeland/grassland
+        vegNote: #Additional details about land cover such as species or functional type composition
+          - Vaccinium spp.
+          - Calamagrostis villosa
+        soilTaxonomy:
+          soilOrder: # Soil order according to the classification system described below
+          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
+          soilSeries: # Soil series according to the classification system described below
+          classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
+#These do not have to be arrays of equal length to site array
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+          top: 0 # in cm
+          bottom:  5 # in cm
+          midDepth: 2.5 #average depth
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          horizon: # soil horizon designation
+            - Oe/Oa
+            - A
+        permafrost:
+          permafrostExist: no # yes or no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
+
+incubationInfo:
+        description: "Three ridge and three gully soils were incubated at 5, 15, and 25deg for 104 d. A closed gas-cycle apparatus including an IRGA was used to measure CO2-flux" # Short description of the incubation setup and main treatments
+        temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+        moisture:
+          value: 60 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
+          units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
+        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
+          temperature: # Replace with name of treatment
+            value: # Numerical or factor
+              - 5
+              - 15
+              - 25
+            units: degreesC # Units of treatment value if numerical, if a %, write percent
+        replicates:
+          number: 3 # Number of replicates per treatments
+          type: lab # Valid fields are: field or lab
+        incubationTime: 104 # length of incubation in days
+        preincubationTime: # Pre-incubation time in days
+        samplePreparation:
+          intactCore: no # yes or no
+          sieving: 2 # no, or mesh size in mm
+          rootPicking: # yes or no
+          rockPicking: # yes or no
+        gasAnalyzer: NaOH titration # Gas analysis equipment for measurements
+
+variables: # These describe the columns of your timeSeries.csv file
+        V1: # column 1
+          name: time # Name of first variable in the accompanying csv data file. First variable should be time.
+          units: d # Units of first variable in accompanying file.
+        V2:
+          name: CMin_Ridge_5
+          units: mgCCO2/gC
+          desc: "Carbon mineralisation over time at 5 degrees for ridge-organic-layer samples"
+          temperature: 5
+          site: Davos_Ridge
+        V3:
+          name: CMin_Ridge_15
+          units: mgCCO2/gC
+          desc: "Carbon mineralisation over time at 15 degrees for ridge-organic-layer samples"
+          temperature: 15
+          site: Davos_Ridge
+        V4:
+          name: CMin_Ridge_25
+          units: mgCCO2/gC
+          desc: "Carbon mineralisation over time at 25 degrees for ridge-organic-layer samples"
+          temperature: 25
+          site: Davos_Ridge
+        V5:
+          name: CMin_Gully_5
+          units: mgCCO2/gC
+          desc: "Carbon mineralisation over time at 5 degrees for gully-Ah samples"
+          temperature: 5
+          site: Davos_Gully
+        V6:
+          name: CMin_Gully_15
+          units: mgCCO2/gC
+          desc: "Carbon mineralisation over time at 15 degrees for gully-Ah samples"
+          temperature: 15
+          site: Davos_Gully
+        V7:
+          name: CMin_Gully_25
+          units: mgCCO2/gC
+          desc: "Carbon mineralisation over time at 25 degrees for gully-Ah samples"
+          temperature: 25
+          site: Davos_Gully
+        V8:
+          name: RR_Ridge_5
+          units: mgCCO2/gC
+          desc: "Respiration rates over time at 5 degrees for ridge-organic-layer samples"
+          temperature: 5
+          site: Davos_Ridge
+        V9:
+          name: RR_Ridge_15
+          units: mgCCO2/gC
+          desc: "Respiration rates over time at 15 degrees for ridge-organic-layer samples"
+          temperature: 15
+          site: Davos_Ridge
+        V10:
+          name: RR_Ridge_25
+          units: mgCCO2/gC
+          desc: "Respiration rates over time at 25 degrees for ridge-organic-layer samples"
+          temperature: 25
+          site: Davos_Ridge
+        V11:
+          name: RR_Gully_5
+          units: mgCCO2/gC
+          desc: "Respiration rates over time at 5 degrees for gully-Ah samples"
+          temperature: 5
+          site: Davos_Gully
+        V12:
+          name: RR_Gully_15
+          units: mgCCO2/gC
+          desc: "Respiration rates over time at 15 degrees for gully-Ah samples"
+          temperature: 15
+          site: Davos_Gully
+        V13:
+          name: RR_Gully_25
+          units: mgCCO2/gC
+          desc: "Respiration rates over time at 25 degrees for gully-Ah samples"
+          temperature: 25
+          site: Davos_Gully

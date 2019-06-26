@@ -10,6 +10,10 @@ url: "https://soilbgc-datashare.github.io" # the base hostname & protocol for yo
 github_username:  crlsierra
 github_repo: "https://github.com/SoilBGC-Datashare/sidb" 
 
+collections:
+   guidances:
+      output: true
+
 # Build settings
 markdown: kramdown
 

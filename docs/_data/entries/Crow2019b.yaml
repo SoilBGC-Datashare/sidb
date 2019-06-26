@@ -1,0 +1,384 @@
+citationKey: Crow2019b  # Unique identifier in the format: LastnameYearJOURNAL (journal is abbreviated)
+doi:   # DOI of the publication where data is published
+entryAuthor: Susan Crow  # First and Last name of the person who enters the data in this file
+entryCreationDate: 2019-04-16 # Date when the data is entered in this file. Format: YYYY-MM-DD
+contactName: Susan Crow  # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
+contactEmail: crows@hawii.edu  # Email of the contact person
+entryNote: "unpublished dataset, but associated with Giardina et al 2014 NCC" # Any notes or comments related to this entry.
+
+siteInfo:
+        study: "Soil samples collected from a mean annual temperature transect of undisturbed forested sites on Mauna Kea, Hawaii" # Overall study description
+        site: # Names of individual sites, if one site, keep on this line, if multiple, use array format
+          - SPE800
+          - SPE934
+          - SPE1024
+          - SPE1116
+          - WPL1116
+          - WPL1204
+          - WPL1274
+          - HAK1468
+          - HAK1600
+#These fields should be arrays of equal length to site array
+        coordinates:
+          latitude: # Latitude in decimal units (check for negative that denotes southern hemisphere)
+            - 19.94479978
+            - 19.93756847
+            - 19.93302262
+            - 19.9287564
+            - 19.93949563
+            - 19.93548682
+            - 19.93134943
+            - 19.84590481
+            - 19.84201611
+          longitude: # Longitude in decimal units (check for negative that denotes west)
+            - -155.2622601
+            - -155.2673818
+            - -155.2736616
+            - -155.2788248
+            - -155.2944257
+            - -155.3003934
+            - -155.3038101
+            - -155.2773819
+            - -155.2930892
+        country: # Name of country where site was conducted
+          - USA
+          - USA
+          - USA
+          - USA
+          - USA
+          - USA
+          - USA
+          - USA
+          - USA
+        MAT: # Mean annual temperature in degrees Celsius
+          - 18.2
+          - 17.3
+          - 16.7
+          - 16.1
+          - 16.1
+          - 15.5
+          - 15.1
+          - 13.8
+          - 13.0
+        MAP: # Mean annual precipitation in mm
+          - 4204
+          - 4133
+          - 4043
+          - 3988
+          - 3714
+          - 3521
+          - 3448
+          - 3488
+          - 3195
+        elevation: # Elevation of study site in meters above sea levels
+          - 800
+          - 934
+          - 1024
+          - 1116
+          - 1116
+          - 1204
+          - 1274
+          - 1468
+          - 1600
+        landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+          - forest
+          - forest
+          - forest
+          - forest
+          - forest
+          - forest
+          - forest
+          - forest
+          - forest
+        vegNote: #Additional details about land cover such as species or functional type composition
+        soilTaxonomy:
+          soilOrder: # Soil order according to the classification system described below
+            - Andisol
+            - Andisol
+            - Andisol
+            - Andisol
+            - Andisol
+            - Andisol
+            - Andisol
+            - Andisol
+            - Andisol
+          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
+          soilSeries: # Soil series according to the classification system described below
+            - Akaka
+            - Akaka
+            - Akaka
+            - Akaka
+            - Honokaa
+            - Honokaa
+            - Maile
+            - Akaka
+            - Piihonua
+          classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
+            - USDA
+            - USDA
+            - USDA
+            - USDA
+            - USDA
+            - USDA
+            - USDA
+            - USDA
+            - USDA
+#These do not have to be arrays of equal length to site array
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
+          top: # in cm
+          bottom: # in cm
+          midDepth: 7.5 #average depth
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          horizon: # soil horizon designation
+        permafrost:
+          permafrostExist: No # Yes or No (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
+
+incubationInfo:
+        description: "Sub-samples of the 0-15 cm depth section of the mineral transition layer from each plot were incubated at 16, 21, and 26°C, to determine the apparent temperature sensitivity" # Short description of the incubation setup and main treatments
+        temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+        moisture:
+          value: 100 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
+          units: percentFieldCapacity # Valid fields are: percentGWC or percentFieldCapacity
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
+        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
+          temperature: # Replace with name of treatment
+            value: # Numerical or factor
+              - 16
+              - 21
+              - 26
+            units: # Units of treatment value if numerical, if a %, write percent
+        replicates:
+          number: 3 # Number of replicates per treatments
+          type: field # Valid fields are: field or lab
+        incubationTime: 283 # length of incubation in days
+        preincubationTime: 2 # Pre-incubation time in days
+        samplePreparation:
+          intactCore: No # yes or no
+          sieving: 20 # no, or mesh size in mm
+          rootPicking: Yes # yes or no
+          rockPicking: No # yes or no
+        gasAnalyzer: "Clarus 580 gas chromatograph with a PAL combi-XL autosampler (PerkinElmer, Waltham, Ma, USA)" # Gas analysis equipment for CO2 measurements
+
+variables: # These describe the columns of your timeSeries.csv file
+        V1: # column 1
+          name: time # Name of first variable in the accompanying csv data file. First variable should be time.
+          units: d # Units of first variable in accompanying file.
+        V2:
+          name: SPE800_16C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 16 degrees celsius for site SPE800" # Description of the variable
+          site: SPE800
+          temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V3: # Continue the structure for V2 in case of additional variables.
+          name: SPE800_21C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 21 degrees celsius for site SPE800" # Description of the variable
+          site: SPE800
+          temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V4: # Continue the structure for V2 in case of additional variables.
+          name: SPE800_26C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 26 degrees celsius for site SPE800" # Description of the variable
+          site: SPE800
+          temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V5:
+          name: SPE934_16C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 16 degrees celsius for site SPE934" # Description of the variable
+          site: SPE934
+          temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V6: # Continue the structure for V2 in case of additional variables.
+          name: SPE934_21C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 21 degrees celsius for site SPE934" # Description of the variable
+          site: SPE934
+          temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V7: # Continue the structure for V2 in case of additional variables.
+          name: SPE934_26C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 26 degrees celsius for site SPE934" # Description of the variable
+          site: SPE934
+          temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V8:
+          name: SPE1024_16C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 16 degrees celsius for site SPE1024" # Description of the variable
+          site: SPE1024
+          temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V9: # Continue the structure for V2 in case of additional variables.
+          name: SPE1024_21C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 21 degrees celsius for site SPE1024" # Description of the variable
+          site: SPE1024
+          temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V10: # Continue the structure for V2 in case of additional variables.
+          name: SPE1024_26C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 26 degrees celsius for site SPE1024" # Description of the variable
+          site: SPE1024
+          temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V11:
+          name: SPE1116_16C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 16 degrees celsius for site SPE1116" # Description of the variable
+          site: SPE1116
+          temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V12: # Continue the structure for V2 in case of additional variables.
+          name: SPE1116_21C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 21 degrees celsius for site SPE1116" # Description of the variable
+          site: SPE1116
+          temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V13: # Continue the structure for V2 in case of additional variables.
+          name: SPE1116_26C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 26 degrees celsius for site SPE1116" # Description of the variable
+          site: SPE1116
+          temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V14:
+          name: WPL1116_16C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 16 degrees celsius for site WPL1116" # Description of the variable
+          site: WPL1116
+          temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V15: # Continue the structure for V2 in case of additional variables.
+          name: WPL1116_21C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 21 degrees celsius for site WPL1116" # Description of the variable
+          site: WPL1116
+          temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V16: # Continue the structure for V2 in case of additional variables.
+          name: WPL1116_26C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 26 degrees celsius for site WPL1116" # Description of the variable
+          site: WPL1116
+          temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V17:
+          name: WPL1204_16C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 16 degrees celsius for site WPL1204" # Description of the variable
+          site: WPL1204
+          temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V18: # Continue the structure for V2 in case of additional variables.
+          name: WPL1204_21C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 21 degrees celsius for site WPL1204" # Description of the variable
+          site: WPL1204
+          temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V19: # Continue the structure for V2 in case of additional variables.
+          name: WPL1204_26C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 26 degrees celsius for site WPL1204" # Description of the variable
+          site: WPL1204
+          temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V20:
+          name: WPL1274_16C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 16 degrees celsius for site WPL1274" # Description of the variable
+          site: WPL1274
+          temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V21: # Continue the structure for V2 in case of additional variables.
+          name: WPL1274_21C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 21 degrees celsius for site WPL1274" # Description of the variable
+          site: WPL1274
+          temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V22: # Continue the structure for V2 in case of additional variables.
+          name: WPL1274_26C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 26 degrees celsius for site WPL1274" # Description of the variable
+          site: WPL1274
+          temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V23:
+          name: HAK1468_16C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 16 degrees celsius for site HAK1468" # Description of the variable
+          site: HAK1468
+          temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V24: # Continue the structure for V2 in case of additional variables.
+          name: HAK1468_21C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 21 degrees celsius for site HAK1468" # Description of the variable
+          site: HAK1468
+          temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V25: # Continue the structure for V2 in case of additional variables.
+          name: HAK1468_26C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 26 degrees celsius for site HAK1468" # Description of the variable
+          site: HAK1468
+          temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V26:
+          name: HAK1600_16C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 16 degrees celsius for site HAK1600" # Description of the variable
+          site: HAK1600
+          temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V27: # Continue the structure for V2 in case of additional variables.
+          name: HAK1600_21C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 21 degrees celsius for site HAK1600" # Description of the variable
+          site: HAK1600
+          temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        V28: # Continue the structure for V2 in case of additional variables.
+          name: HAK1600_26C # Name of second variable in accompanying file.
+          desc: "CO2 production rate measured at 26 degrees celsius for site HAK1600" # Description of the variable
+          site: HAK1600
+          temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
+          units: microgCO2/gSoil # Units in which this variable is provided
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).

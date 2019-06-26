@@ -1,0 +1,380 @@
+citationKey: Haddix2011SSSJA
+doi: "10.2136/sssaj2010.0118"
+entryAuthor: Caitlin Pries
+entryCreationDate: 2019-03-06
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
+entryNote: # Any notes or comments related to this entry.
+
+siteInfo:
+        study: Soil characteristics and temperature sensitivity of organic matter
+        site:
+          - Indian Head
+          - Mandan
+          - Akron
+          - Vernon
+          - Alajuela
+          - Rondonia
+#These fields should be arrays of equal length to site array
+        coordinates:
+          latitude: # Latitude in decimal units (check for negative that denotes southern hemisphere)
+            - 50.533
+            - 46.767
+            - 40.150
+            - 33.939
+            -
+            - 10.168
+          longitude: # Longitude in decimal units (check for negative that denotes west)
+            - -103.517
+            - -100.917
+            - -103.150
+            - -99.413
+            -
+            - -62.824
+        country: # Name of country where site was conducted
+          - Canada
+          - USA
+          - USA
+          - USA
+          - Costa Rica
+          - Brazil
+        MAT: # Mean annual temperature in degrees Celsius
+          - 2
+          - 5
+          - 9.2
+          - 17
+          - 20
+          - 25.6
+        MAP: # Mean annual precipitation in mm
+          - 421
+          - 402
+          - 420
+          - 665
+          - NA
+          - 2200
+        elevation: # Elevation of study site in meters above sea levels
+        landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+          - rangeland/grassland
+          - rangeland/grassland
+          - rangeland/grassland
+          - rangeland/grassland
+          - forest
+          - forest
+        vegNote: #Additional details about land cover such as species or functional type composition
+        soilTaxonomy:
+          soilOrder: # Soil order according to the classification system described below
+            - Mollisol
+            - Mollisol
+            - Mollisol
+            - Mollisol
+            - Andisol
+            - Ultisol
+          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
+            - Udic Boroll
+            - Typic Argiboroll
+            - Aridic Paleustoll
+            - Typic Paleustoll
+            - Hydric Melanudand
+            - Paleudult and Kandidult
+          soilSeries: # Soil series according to the classification system described below
+          classificationSystem: USDA
+#These do not have to be arrays of equal length to site array
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+          top: 0
+          bottom: 20
+          midDepth: 10
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          horizon: # soil horizon designation
+        permafrost:
+          permafrostExist: No
+          activeLayer: # Depth of the active layer in meters
+        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
+          landUse:
+            - native grassland
+            - cultivated
+            - native forest
+            - pasture
+
+incubationInfo:
+        description: # Short description of the incubation setup and main treatments
+        temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+        moisture:
+          value: 60
+          units: waterFilledPoreSpace
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
+        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
+          temperature:
+            value: # Numerical or factor
+              - 15
+              - 25
+              - 30
+            units: Celsius
+        replicates:
+          number: 4
+          type: lab
+        incubationTime: 588
+        preincubationTime: # Pre-incubation time in days
+        samplePreparation:
+          intactCore: no
+          sieving: 2
+          rootPicking: no
+          rockPicking: no
+        gasAnalyzer: "Li-Cor LI-6252 infra red gas analyzer"
+
+variables: # These describe the columns of your timeSeries.csv file
+        V1:
+          name: time
+          units: d
+        V2:
+          name: C_SasNG_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for Saskatchewan, native grassland"
+          temperature: 15
+          landUse: native grassland
+          site: Indian Head
+        V3:
+          name: C_SasNG_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for Saskatchewan, native grassland"
+          temperature: 25
+          landUse: native grassland
+          site: Indian Head
+        V4:
+          name: C_SasNG_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Saskatchewan, native grassland"
+          temperature: 35
+          landUse: native grassland
+          site: Indian Head
+        V5:
+          name: C_SasCul_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for Saskatchewan, cultivated"
+          temperature: 15
+          landUse: cultivated
+          site: Indian Head
+        V6:
+          name: C_SasCul_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for Saskatchewan, cultivated"
+          temperature: 25
+          landUse: cultivated
+          site: Indian Head
+        V7:
+          name: C_SasCul_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Saskatchewan, cultivated"
+          temperature: 35
+          landUse: cultivated
+          site: Indian Head
+        V8:
+          name: C_NDakNG_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for North Dakota, native grassland"
+          temperature: 15
+          landUse: native grassland
+          site: Mandan
+        V9:
+          name: C_NDakNG_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for North Dakota, native grassland"
+          temperature: 25
+          landUse: native grassland
+          site: Mandan
+        V10:
+          name: C_NDakNG_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for North Dakota, native grassland"
+          temperature: 35
+          landUse: native grassland
+          site: Mandan
+        V11:
+          name: C_NDakCul_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for North Dakota, cultivated"
+          temperature: 15
+          landUse: cultivated
+          site: Mandan
+        V12:
+          name: C_NDakCul_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for North Dakota, cultivated"
+          temperature: 25
+          landUse: cultivated
+          site: Mandan
+        V13:
+          name: C_NDakCul_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for North Dakota, cultivated"
+          temperature: 35
+          landUse: cultivated
+          site: Mandan
+        V14:
+          name: C_ColoNG_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Colorado, native grassland"
+          temperature: 15
+          landUse: native grassland
+          site: Akron
+        V15:
+          name: C_ColoNG_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for Colorado, native grassland"
+          temperature: 25
+          landUse: native grassland
+          site: Akron
+        V16:
+          name: C_ColoNG_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Colorado, native grassland"
+          temperature: 35
+          landUse: native grassland
+          site: Akron
+        V17:
+          name: C_ColoCul_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for Colorado, cultivated"
+          temperature: 15
+          landUse: cultivated
+          site: Akron
+        V18:
+          name: C_ColoCul_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for Colorado, cultivated"
+          temperature: 25
+          landUse: cultivated
+          site: Akron
+        V19:
+          name: C_ColoCul_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Colorado, cultivated"
+          temperature: 35
+          landUse: cultivated
+          site: Akron
+        V20:
+          name: C_TexNG_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for Texas, native grassland"
+          temperature: 15
+          landUse: native grassland
+          site: Vernon
+        V21:
+          name: C_TexNG_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for Texas, native grassland"
+          temperature: 25
+          landUse: native grassland
+          site: Vernon
+        V22:
+          name: C_TexNG_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Texas, native grassland"
+          temperature: 35
+          landUse: native grassland
+          site: Vernon
+        V23:
+          name: C_TexCul_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for Texas, cultivated"
+          temperature: 15
+          landUse: cultivated
+          site: Vernon
+        V24:
+          name: C_TexCul_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for Texas, cultivated"
+          temperature: 25
+          landUse: cultivated
+          site: Vernon
+        V25:
+          name: C_TexCul_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Texas, cultivated"
+          temperature: 35
+          landUse: cultivated
+          site: Vernon
+        V26:
+          name: C_CostaNF_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for Costa Rica, native forest"
+          temperature: 15
+          landUse: native forest
+          site: Alajuela
+        V27:
+          name: C_CostaNF_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for Costa Rica, native forest"
+          temperature: 25
+          landUse: native forest
+          site: Alajuela
+        V28:
+          name: C_CostaNF_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Costa Rica, native forest"
+          temperature: 35
+          landUse: native forest
+          site: Alajuela
+        V29:
+          name: C_CostaPas_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for Costa Rica, Pasture"
+          temperature: 15
+          landUse: Pasture
+          site: Alajuela
+        V30:
+          name: C_CostaPas_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for Costa Rica, Pasture"
+          temperature: 25
+          landUse: Pasture
+          site: Alajuela
+        V31:
+          name: C_CostaPas_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Costa Rica, Pasture"
+          temperature: 35
+          landUse: Pasture
+          site: Alajuela
+        V32:
+          name: C_BrazilNF_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for Brazil, native forest"
+          temperature: 15
+          landUse: native forest
+          site: Rondonia
+        V33:
+          name: C_BrazilNF_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for Brazil, native forest"
+          temperature: 25
+          landUse: native forest
+          site: Rondonia
+        V34:
+          name: C_BrazilNF_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Brazil, native forest"
+          temperature: 35
+          landUse: native forest
+          site: Rondonia
+        V35:
+          name: C_BrazilPas_15
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 15 degrees for Brazil, Pasture"
+          temperature: 15
+          landUse: Pasture
+          site: Rondonia
+        V36:
+          name: C_BrazilPas_25
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 25 degrees for Brazil, Pasture"
+          temperature: 15
+          landUse: Pasture
+          site: Rondonia
+        V37:
+          name: C_BrazilPas_35
+          units: mgC-CO2/gSoil/d
+          desc: "Decomposition rates over time at 35 degrees for Brazil, Pasture"
+          temperature: 35
+          landUse: Pasture
+          site: Rondonia

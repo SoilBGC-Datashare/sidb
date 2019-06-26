@@ -107,7 +107,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Sioux City
         site: Sioux City
         horizon: A
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -116,7 +115,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Kellog Biological Station
         site: Kellog Biological Station
         horizon: A
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -125,7 +123,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Saginaw
         site: Saginaw
         horizon: A
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -134,7 +131,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Lamberton
         site: Lamberton
         horizon: A
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -143,7 +139,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Mead
         site: Mead
         horizon: A
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -152,7 +147,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Wauseon
         site: Wauseon
         horizon: A
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -161,7 +155,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon A from Melfort
         site: Melfort
         horizon: A
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -170,7 +163,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: ccumulative respiration of horizon B from Sioux City
         site: Sioux City
         horizon: C
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -179,7 +171,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Kellog Biological Station
         site: Kellog Biological Station
         horizon: C
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -188,7 +179,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Saginaw
         site: Saginaw
         horizon: C
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -197,7 +187,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Lamberton
         site: Lamberton
         horizon: C
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -206,7 +195,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Mead
         site: Mead
         horizon: C
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -215,7 +203,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Wauseon
         site: Wauseon
         horizon: C
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -224,7 +211,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: cumulative respiration of horizon B from Melfort
         site: Melfort
         horizon: C
-        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:

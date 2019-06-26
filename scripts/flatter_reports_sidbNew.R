@@ -49,7 +49,7 @@ vars.dfl <- lapply(idb, function(x) {
   }))
 })
 
-# define helper fx to collapse lists present in some dataframes
+# define helper fx to collapse lists present in some dataframes (some yaml files read in differently despite visually identical structure)
 collapse.df <- function(df) {
   nms = names(df)
   df = data.frame(matrix(unlist(lapply(df, function(x) { # replace NULL with NA
@@ -183,6 +183,11 @@ for(i in seq_along(vars.dfl[ix])) {
 
 # add siteInfo to vars.dfl
 siteInfo <- lapply(siteInfo, function(x) as.data.frame(x))
+# remove NA columns from siteInfo
+siteInfo <- lapply(siteInfo, function(x) x[ ,!apply(is.na(x),2,all)])
 for(i in seq_along(vars.dfl)) {
   vars.dfl[[i]] <- dplyr::right_join(as.data.frame(lapply(vars.dfl[[i]], as.character), stringsAsFactors=F), as.data.frame(lapply(siteInfo[[i]], as.character), stringsAsFactors=F), by="site")
 }
+sort(unique(unlist(lapply(vars.dfl, function(x) names(x)))))
+
+

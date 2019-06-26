@@ -115,7 +115,7 @@ for(i in seq_along(vars.dfl)) {
 # siteInfo
 siteInfo <- lapply(idb, "[[", "siteInfo")
 
-# flatten soilTax and coords
+# flatten soilTax, coords, permafrost
 siteInfo <- lapply(siteInfo, function(x) {
   latitude <- data.frame(latitude=unlist(x$coordinates$latitude))
   longitude <- data.frame(longitude=unlist(x$coordinates$longitude))
@@ -123,31 +123,37 @@ siteInfo <- lapply(siteInfo, function(x) {
   soilFamily <- data.frame(soilFamily=unlist(x$soilTaxonomy$soilFamily))
   soilSeries <- data.frame(soilSeries=unlist(x$soilTaxonomy$soilSeries))
   classificationSystem <- data.frame(classificationSystem=unlist(x$soilTaxonomy$classificationSystem))
-  ix <- which(names(x)=="coordinates" | names(x)=="soilTaxonomy")
+  permafrostExist <- data.frame(permafrostExist=unlist(lapply(x$permafrost$permafrostExist, function(y) ifelse(is.null(y), FALSE, y))))
+  activeLayer <- data.frame(activeLayer=unlist(x$permafrost$activeLayer))
+  ix <- which(names(x)=="coordinates" | names(x)=="soilTaxonomy" | names(x)=="permafrost")
   x <- x[-ix]
-  x <- c(x,latitude,longitude,soilOrder,soilFamily,soilSeries,classificationSystem)
+  x <- c(x,latitude,longitude,soilOrder,soilFamily,soilSeries,classificationSystem,permafrostExist,activeLayer)
   return(x)
 })
 
 # unlist nested lists (works for some templates but not others, unclear why)
 siteInfo <- lapply(siteInfo, function(x) {
-  d1 <- match(names(unlist(lapply(x, function(y) which(is.list(y))))),names(x))
-  ix.1d <- x[-d1]
-  ix.2d <- x[d1]
-  ix.2d <- lapply(ix.2d, function(y) {
-    y[sapply(y, is.null)] <- NA
-    return(y)
-  })
-  ix.2d <- lapply(ix.2d, function(y) {
-    if(length(y[[1]])==1 && !is.na(y[[1]])) {
-      y <- unlist(y)
-    }
-    return(y)
-  })
-  ix <- which(unlist(lapply(ix.2d, function(y) is.list(y))))
-  ix.2d.1d <- ix.2d[-ix]
-  ix.2d <- ix.2d[ix]
-  ls <- c(unlist(ix.2d, recursive=F), ix.2d.1d, ix.1d)
+  d1 <- match(names(unlist(lapply(x, function(y) which(is.list(y))))),names(and))
+  if(!length(d1)==0) {
+    ix.1d <- x[-d1]
+    ix.2d <- x[d1]
+    ix.2d <- lapply(ix.2d, function(y) {
+      y[sapply(y, is.null)] <- NA
+      return(y)
+    })
+    ix.2d <- lapply(ix.2d, function(y) {
+      if(length(y[[1]])==1 && !is.na(y[[1]])) {
+        y <- unlist(y)
+      }
+      return(y)
+    })
+    ix <- which(unlist(lapply(ix.2d, function(y) is.list(y))))
+    ix.2d.1d <- ix.2d[-ix]
+    ix.2d <- ix.2d[ix]
+    ls <- c(unlist(ix.2d, recursive=F), ix.2d.1d, ix.1d)
+  } else {
+    ls<-x
+  }
   return(ls)
 })
 
@@ -188,6 +194,5 @@ siteInfo <- lapply(siteInfo, function(x) x[ ,!apply(is.na(x),2,all)])
 for(i in seq_along(vars.dfl)) {
   vars.dfl[[i]] <- dplyr::right_join(as.data.frame(lapply(vars.dfl[[i]], as.character), stringsAsFactors=F), as.data.frame(lapply(siteInfo[[i]], as.character), stringsAsFactors=F), by="site")
 }
-sort(unique(unlist(lapply(vars.dfl, function(x) names(x)))))
 
 

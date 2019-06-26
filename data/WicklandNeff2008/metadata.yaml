@@ -47,8 +47,8 @@ siteInfo:
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: USDA # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
         permafrost:
-          permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
-            - no
+          permafrostExist: # Yes or blank if no (if yes, permafrost must exist at the site)
+            -
             - yes
             - yes
           activeLayer:

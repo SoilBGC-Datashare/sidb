@@ -24,19 +24,18 @@ siteInfo:
           soilFamily: Gelic
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: WRB
-#These do not have to be arrays of equal length to site array
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
-          top: 0
-          bottom: 10
-          midDepth: 5
-          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
-          horizon: # soil horizon designation
         permafrost:
           permafrostExist: yes
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
         description: "Soil incubated at 5, 15, and 25 for 28 d. Two 2-way designs were performed (temperature x N (NH4) and temperature x C (glucose))."
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+          top: 0
+          bottom: 10
+          midDepth: 5
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          horizon: # soil horizon designation
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 30

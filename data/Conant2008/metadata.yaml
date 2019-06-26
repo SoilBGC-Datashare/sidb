@@ -5,9 +5,9 @@ entryCreationDate: 2016-07-26
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
 entryNote: "Paper report results for two sites, but time series only for one site. This entry contains information about only one of the sites." # Any notes or comments related to this entry.
+study:
 
 siteInfo:
-  study:
   site: "Northern Great Plains Research Laboratory, Mandan, North Dakota"
   coordinates:
     latitude: 33.833333

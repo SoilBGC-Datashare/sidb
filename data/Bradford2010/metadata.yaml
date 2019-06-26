@@ -5,9 +5,9 @@ entryCreationDate:  2019-03-06
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
 entryNote: The original data was provided in the units of microgramC/gMicrobialBiomass/d and we converted that to the mgC/gsoil/d.
+study:  Thermal adaptation of heterotrophic soil respiration in laboratory microcosms
 
 siteInfo:
-        study:  Thermal adaptation of heterotrophic soil respiration in laboratory microcosms
         site:
           - "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
           - "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
@@ -61,7 +61,13 @@ siteInfo:
           - Quercus veluntina, Acer rubrum, Betula papyrifera, Acer pensylvanicum
           -
         soilTaxonomy:
-          soilOrder: Inceptisol
+          soilOrder:
+            - Inceptisol
+            - Inceptisol
+            - Inceptisol
+            - Inceptisol
+            - Inceptisol
+            - Inceptisol
           soilFamily:
             - "Coarse‐loamy, mixed, mesic Typic Haplumbrepts"
             - "Fine‐loamy, mixed, mesic Typic Haplumbrepts"
@@ -71,39 +77,30 @@ siteInfo:
             - "Fine‐loamy, mixed, mesic Typic Dystrochrept"
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-#These do not have to be arrays of equal length to site array
+        permafrost:
+          permafrostExist: # yes or blank if no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        description: "Microbial biomass was measured using substrate-induced respiration. Values are expressed as raw respiration rates (mgC/gSoil/d)."
+        fieldWarming:
+          value:
+          units:
         depthInfo:
           top: 0 cm
           bottom: 10 cm
           midDepth: #average depth
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
           horizon: surface mineral horizons
-        permafrost:
-          permafrostExist: # yes or no (if yes, permafrost must exist at the site)
-          activeLayer: # Depth of the active layer in meters
-        experimentalTreatment:
-          heated experiment at Harvard Forest LTER
-
-incubationInfo:
-        description: "Microbial biomass was measured using substrate-induced respiration. Values are expressed as raw respiration rates (mgC/gSoil/d)."
         temperature:
         moisture:
           value: 50
           units: percentWHC
         anaerobic:
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment:
-          temperature:
-            value:
-              - 10
-              - 20
-              - 30
-            units: Celsius
-          glucose:
-            value:
-              - 0.0
-              - 0.84
-            units: mgC/gDrysoil
+        glucose:
+          value:
+          units: mgC/gDrysoil
         replicates:
           number: 2
           type: lab

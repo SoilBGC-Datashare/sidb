@@ -5,9 +5,10 @@ entryCreationDate: 2018-04-18 # Date when the data is entered in this file. Form
 contactName: Carlos Sierra # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: csierra@bgc-jena.mpg.de # Email of the contact person
 entryNote: # Any notes or comments related to this entry.
+study:  "Temperature sensitivity of soil respiration in conifer and deciduous broadleaf forests across a European climate gradient"
+
 
 siteInfo:
-        study:  "Temperature sensitivity of soil respiration in conifer and deciduous broadleaf forests across a European climate gradient"
         site:
           - Hainich
           - Collelongo
@@ -112,40 +113,24 @@ siteInfo:
             - NA
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: WRB # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-#These do not have to be arrays of equal length to site array
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
-          top: # in cm
-            - 0
-            - 5
-            - 10
-          bottom: # in cm
-            - 5
-            - 10
-            - 20
-          midDepth: #average depth
-            - 2.5
-            - 7.5
-            - 15
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
         permafrost:
           permafrostExist: # yes or no (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
-        experimentalTreatment:
-          midDepth:
-            - 2.5
-            - 7.5
-            - 15
 
 incubationInfo:
         description: "three laboratory replicates of broadleaf (a) and conifer (b) forest samples were incubated at 3 different depth levels (0-5, 5-10, 10-20 cm) for ca. 270 d." # Short description of the incubation setup and main treatments
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+          top: # in cm
+          bottom: # in cm
+          midDepth: #average depth
         temperature: 30 # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 60 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: percent field capacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
         replicates:
           number: 3 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab
@@ -166,8 +151,7 @@ variables: # These describe the columns of your timeSeries.csv file
         name: CMin_Hain_0_5 # Name of second variable in accompanying file.
         desc: "Carbon mineralization rates for the 0–5 cm soil layer at the Hainich site" # Description of the variable
         site: Hainich #site where the incubated sample comes from.
-        midDepth: 2.5
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        midDepth: 2.5        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -176,7 +160,6 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: "Carbon mineralization rates for the 5–10 cm soil layer at the Hainich site" # Description of the variable
         site: Hainich #site where the incubated sample comes from.
         midDepth: 7.5
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).

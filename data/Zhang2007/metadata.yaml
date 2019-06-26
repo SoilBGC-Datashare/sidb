@@ -5,9 +5,10 @@ entryCreationDate: 2019-03-08  # Date when the data is entered in this file. For
 contactName: Shane Stoner # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: sstoner@bgc-jena.mpg.de # Email of the contact person
 entryNote: # Any notes or comments related to this entry.
+study: Topsoil organic carbon mineralization and CO2 evolution of three paddy soils from South China and the temperature dependence # Overall study description
+
 
 siteInfo:
-        study: Topsoil organic carbon mineralization and CO2 evolution of three paddy soils from South China and the temperature dependence # Overall study description
         site:  # Names of individual sites, if one site, keep on this line, if multiple, use array format
           - PP
           - RP
@@ -48,31 +49,24 @@ siteInfo:
             - "Typical Fluvaquent"
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: USDA # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-#These do not have to be arrays of equal length to site array
+        permafrost:
+          permafrostExist: # yes or no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        description: "three laboratory replicates were incubated at 20 and 25 degrees for 114 d using PVC cylinders" # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: 0 # in cm
           bottom: 15 # in cm
           midDepth: 7.5 #average depth
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
-        permafrost:
-          permafrostExist: # yes or no (if yes, permafrost must exist at the site)
-          activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-
-incubationInfo:
-        description: "three laboratory replicates were incubated at 20 and 25 degrees for 114 d using PVC cylinders" # Short description of the incubation setup and main treatments
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 100 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          temperature: # Replace with name of treatment
-            value:
-              - 20 # Numerical or factor
-              - 25
         replicates:
           number: 3 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab

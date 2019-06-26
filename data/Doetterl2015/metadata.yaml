@@ -5,9 +5,10 @@ entryCreationDate: 2019-04-24 # Date when the data is entered in this file. Form
 contactName: Shane Stoner # First and last name of contact person, who might be the principal investigator supervising the entryAuthor
 contactEmail: sstoner@bgc-jena.mpg.de # Email of the contact person
 entryNote: # Any notes or comments related to this entry.
+study: Soil carbon storage controlled by interactions between geochemistry and climate # Overall study description
+
 
 siteInfo:
-        study: Soil carbon storage controlled by interactions between geochemistry and climate # Overall study description
         site: # Names of individual sites, if one site, keep on this line, if multiple, use array format
           - SDC1
           - SDC2
@@ -288,20 +289,18 @@ siteInfo:
             - King George Island
             - Livingston Island
           classificationSystem: USDA # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-#These do not have to be arrays of equal length to site array
+        permafrost:
+          permafrostExist: # yes or blank if no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        description: # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: 0 # in cm
           bottom: 10 # in cm
           midDepth: 5 #average depth
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
-        permafrost:
-          permafrostExist: # yes or no (if yes, permafrost must exist at the site)
-          activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-
-incubationInfo:
-        description: # Short description of the incubation setup and main treatments
         temperature: 20 # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 60 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.

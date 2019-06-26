@@ -5,9 +5,9 @@ entryCreationDate: 2019-03-06
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
 entryNote:
+study: Measuring the respiration rates, δ13C of respired CO2, and microbial community composition in root-free bulk soils incubated at 4, 22 and 40°C.
 
 siteInfo:
-        study: Measuring the respiration rates, δ13C of respired CO2, and microbial community composition in root-free bulk soils incubated at 4, 22 and 40°C.
         site: Duke Forest FACE
         coordinates:
           latitude: 36.6166667
@@ -23,37 +23,27 @@ siteInfo:
           soilFamily: Ultic Alfisols
           soilSeries:
           classificationSystem: USDA
+        permafrost:
+          permafrostExist:
+          activeLayer:
 
+incubationInfo:
+        description: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celsius as well as ambient and elevated CO2"
+        elevatedCO2:
+          value:
+          units:
         depthInfo:
           top: 0
           bottom: 10
           midDepth: 5
           surfaceAtm:
           horizon:
-        permafrost:
-          permafrostExist:
-          activeLayer:
-        experimentalTreatment:
-          elevatedCO2:
-            - control
-            - elevated
-incubationInfo:
-        description: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celsius as well as ambient and elevated CO2"
         temperature:
         moisture:
           value: 240
           units: gWater/kgSoil
         anaerobic:
         gasMeasured:
-          - CO2
-          - 13CO2
-        laboratoryTreatment:
-          temperature:
-            value:
-               - 4
-               - 22
-               - 40
-            units: Celsius
         replicates:
           number: 3
           type: laboratory

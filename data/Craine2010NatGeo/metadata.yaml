@@ -5,9 +5,9 @@ entryCreationDate: 2019-03-06 # Date when the data is entered in this file. Form
 contactName: Alain Plante # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: aplante@sas.upenn.edu # Email of the contact person
 entryNote: 'original data obtained by Alain Plante, cumulative fluxes not available in manuscript. Original data probably only available for the 20°C incubation temperature, in total 5 replicates were incubated at five different temperatures. May want to check back with Alain Plante if this interpretation is correct' # Any notes or comments related to this entry.
+study: North America Gradient # Overall study description
 
 siteInfo:
-        study: North America Gradient # Overall study description
         site:
           - Cedar Creek, (CDR)
           - Kellogg Biological Station (KBS)
@@ -40,67 +40,65 @@ siteInfo:
 # Names of individual sites, if one site, keep on this line, if multiple, use array format
 #These fields should be arrays of equal length to site array
         coordinates:
-            latitude:
-              - 45.4
-              - 42.4
-              - 45.82
-              - 44.2
-              - 68.63
-              - 35.97
-              - 32.49
-              - 34.67
-              - 25.56
-              - 47.86
-              - 42.3
-              - 64.77
-              - 37.09
-              - 18.31
-              - 17.97
-              - 39.61
-              - 31.4
-              - 39.08
-              - 39.08
-              - 47.27
-              - 35.03
-              - 40.09
-              - 43.96
-              - 29.68
-              - 40.81
-              - 47.8
-              - 41.05
-              - 38.35
-              # Latitude in decimal units (check for negative that denotes southern hemisphere)
-            longitude:
-              - -93.2
-              - -85.4
-              - -121.95
-              - -122.2
-              - -149.6
-              - -84.28
-              - -106.78
-              - -120
-              - -80.39
-              - -124.04
-              - -72.1
-              - -148.27
-              - -119.7
-              - -65.76
-              - -65.5
-              - -76.74
-              - -81.3
-              - -110.85
-              - -96.57
-              - -95.33
-              - -83.43
-              - -105.66
-              - -71.72
-              - -82
-              - -104.19
-              - -107.95
-              - -87.46
-              - -121.82
-               # Longitude in decimal units (check for negative that denotes west)
-        country:
+          latitude:            # Latitude in decimal units (check for negative that denotes southern hemisphere)
+            - 45.4
+            - 42.4
+            - 45.82
+            - 44.2
+            - 68.63
+            - 35.97
+            - 32.49
+            - 34.67
+            - 25.56
+            - 47.86
+            - 42.3
+            - 64.77
+            - 37.09
+            - 18.31
+            - 17.97
+            - 39.61
+            - 31.4
+            - 39.08
+            - 39.08
+            - 47.27
+            - 35.03
+            - 40.09
+            - 43.96
+            - 29.68
+            - 40.81
+            - 47.8
+            - 41.05
+            - 38.35
+          longitude:               # Longitude in decimal units (check for negative that denotes west)
+            - -93.2
+            - -85.4
+            - -121.95
+            - -122.2
+            - -149.6
+            - -84.28
+            - -106.78
+            - -120
+            - -80.39
+            - -124.04
+            - -72.1
+            - -148.27
+            - -119.7
+            - -65.76
+            - -65.5
+            - -76.74
+            - -81.3
+            - -110.85
+            - -96.57
+            - -95.33
+            - -83.43
+            - -105.66
+            - -71.72
+            - -82
+            - -104.19
+            - -107.95
+            - -87.46
+            - -121.82
+        country: # Name of country where site was conducted
           - USA
           - USA
           - USA
@@ -129,8 +127,7 @@ siteInfo:
           - USA
           - USA
           - USA
-          # Name of country where site was conducted
-        MAT:
+        MAT: # Mean annual temperature in degrees Celsius
           - 5.9
           - 9.2
           - 7.7
@@ -158,37 +155,36 @@ siteInfo:
           - 7.9
           - 6.2
           - 9.9
-          - 15.7 # Mean annual temperature in degrees Celsius
-        MAP:
-        - 60.7
-        - 76.2
-        - 179.4
-        - 147
-        - 17.3
-        - 117.4
-        - 22.9
-        - 35.9
-        - 119
-        - 300
-        - 94.1
-        - 24.4
-        - 59.7
-        - 157.5
-        - 162.6
-        - 89.4
-        - 106
-        - 27.4
-        - 72.4
-        - 65
-        - 164.2
-        - 39
-        - 87
-        - 110.6
-        - 32.3
-        - 27.2
-        - 77.2
-        - 49.7
-# Mean annual precipitation in mm
+          - 15.7
+        MAP: # Mean annual precipitation in mm
+          - 60.7
+          - 76.2
+          - 179.4
+          - 147
+          - 17.3
+          - 117.4
+          - 22.9
+          - 35.9
+          - 119
+          - 300
+          - 94.1
+          - 24.4
+          - 59.7
+          - 157.5
+          - 162.6
+          - 89.4
+          - 106
+          - 27.4
+          - 72.4
+          - 65
+          - 164.2
+          - 39
+          - 87
+          - 110.6
+          - 32.3
+          - 27.2
+          - 77.2
+          - 49.7
         elevation: # Elevation of study site in meters above sea levels
         landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
         vegNote: #Additional details about land cover such as species or functional type composition
@@ -197,32 +193,29 @@ siteInfo:
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-#These do not have to be arrays of equal length to site array
+        permafrost:
+          permafrostExist: # yes or blank if no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        description: 'We adjusted seven replicates of 20 g dry-equivalent soil to 35% water-holding capacity and placed them in 50 ml polyethylene centrifuge tubes. Replicates were then incubated at 20 _C. Periodically, the five replicates for each soil were sealed with a cap containing a rubber septum, and then distributed over five temperatures (10, 15, 20, 25 and 30 _C). Two additional replicates were maintained at 20 _C. These soils were incubated for 18_72 h and then respiration rates for each determined by removing 4 ml of gas. They were then injected in-line into a N2 gas stream and the peak heights measured with a Licor 6252 infrared gas analyser. Using a set of calibrations, peak heights were converted to CO2 concentrations in the tubes and then to respiration rates that were scaled relative to soil organic C; preincubationTime varied between 10 and 60 days' # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: 0 # in cm
           bottom: 10 # in cm
           midDepth: 5 #average depth
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: A  # soil horizon designation
-        permafrost:
-          permafrostExist: no # yes or no (if yes, permafrost must exist at the site)
-          activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-
-incubationInfo:
-        description: 'We adjusted seven replicates of 20 g dry-equivalent soil to 35% water-holding capacity and placed them in 50 ml polyethylene centrifuge tubes. Replicates were then incubated at 20 _C. Periodically, the five replicates for each soil were sealed with a cap containing a rubber septum, and then distributed over five temperatures (10, 15, 20, 25 and 30 _C). Two additional replicates were maintained at 20 _C. These soils were incubated for 18_72 h and then respiration rates for each determined by removing 4 ml of gas. They were then injected in-line into a N2 gas stream and the peak heights measured with a Licor 6252 infrared gas analyser. Using a set of calibrations, peak heights were converted to CO2 concentrations in the tubes and then to respiration rates that were scaled relative to soil organic C' # Short description of the incubation setup and main treatments
         temperature: 20 # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 35 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: percent percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
         replicates:
           number: 5 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab
         incubationTime: 365 # length of incubation in days
-        preincubationTime: 10-60 # Pre-incubation time in days
+        preincubationTime: 35 # Pre-incubation time in days
         samplePreparation:
           intactCore: no # yes or no
           sieving: 2 # no, or mesh size in mm

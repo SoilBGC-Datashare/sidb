@@ -5,11 +5,11 @@ entryCreationDate: 2019-03-06
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
 entryNote: # Any notes or comments related to this entry.
+study:  "Haibei Alpine Meadow Ecosystem Experimental Station, Qinghai-Tibet Plateau, China"
 
-siteInfo: 
-        study:  "Haibei Alpine Meadow Ecosystem Experimental Station, Qinghai-Tibet Plateau, China"
+siteInfo:
         site: Haibei Alpine Meadow
-#These fields should be arrays of equal length to site array       
+#These fields should be arrays of equal length to site array
         coordinates:
           latitude: 37.533333
           longitude: 105.25
@@ -24,8 +24,8 @@ siteInfo:
           soilFamily: Gelic
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: WRB
-#These do not have to be arrays of equal length to site array        
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array. 
+#These do not have to be arrays of equal length to site array
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: 0
           bottom: 10
           midDepth: 5
@@ -34,32 +34,20 @@ siteInfo:
         permafrost:
           permafrostExist: yes
           activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
 
 incubationInfo:
         description: "Soil incubated at 5, 15, and 25 for 28 d. Two 2-way designs were performed (temperature x N (NH4) and temperature x C (glucose))."
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
-        moisture: 
+        moisture:
           value: 30
           units: percentGWC
-        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          temperature:
-            value: 
-              - 5
-              - 15
-              - 25
-            units: Celsius
-          ammendment:
-              - Cr
-              - N1
-              - N2
-              - C1
-              - C2
-        replicates: 
+        ammendment:
+        replicates:
           number: 4
-          type: lab 
+          type: lab
         incubationTime: 28
         preincubationTime: 0
         samplePreparation:
@@ -68,14 +56,14 @@ incubationInfo:
           rootPicking: no
           rockPicking: no
         gasAnalyzer: "titration of NaOH solution against 0.1 N HCl after the addition of BaC12"
-        
+
 variables:
         V1:
           name: time
           units: d
         V2:
           name: CO2_Cr_5
-          units: mgC-CO2/gSoil/d 
+          units: mgC-CO2/gSoil/d
           desc: "Carbon mineralization rates under control treatments incubated at 5deg"
           temperature: 5
           ammendment: Cr
@@ -163,5 +151,3 @@ variables:
           desc: "Carbon mineralization rates under external glucose inputs (C2= 10 mgC/gSoil) incubated at 25deg"
           temperature: 25
           ammendment: C2
-
-          

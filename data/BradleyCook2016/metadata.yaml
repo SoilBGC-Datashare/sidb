@@ -5,9 +5,9 @@ entryCreationDate: 2019-03-08
 contactName: Caitlin Pries
 contactEmail: caitlin.pries@dartmouth.edu
 entryNote: "reported %organic matter, multiplied by 0.5 to estimate %C"
+study:  "Greenland soil temperature and moisture sensitivity"
 
 siteInfo:
-        study:  "Greenland soil temperature and moisture sensitivity"
         site: Kangerlussuaq
         coordinates:
           latitude: 67.103
@@ -23,52 +23,27 @@ siteInfo:
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: USDA
-#These do not have to be arrays of equal length to site array
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
-          top:
-            - 0
-            - 20
-          bottom:
-            - 20
-            - 40
-          midDepth:
-            - 10
-            - 30
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
         permafrost:
           permafrostExist: yes
           activeLayer: # Depth of the active layer in meters
-        experimentalTreatment:
-          vegetation:
-            - shrub
-            - graminoid
-          midDepth:
-            - 10
-            - 30
 
 incubationInfo:
         description: "Respiration of soils from graminoid and shrub tundra in response to 2 soil moistures and 5 temperatures over 49 days"
+        vegetation:
+          value:
+          units:
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+          top:
+          bottom:
+          midDepth:
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
-          units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+          units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          temperature: # Replace with name of treatment
-            value:
-              - 4.5
-              - 8.5
-              - 13
-              - 17
-              - 24.5
-            units: Celsius
-          moisture:
-            value:
-              - 40
-              - 60
-            units: percentFieldCapacity
         replicates:
           number: 4
           type: lab

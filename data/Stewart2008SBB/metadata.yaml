@@ -5,10 +5,9 @@ entryCreationDate: 2016-10-4
 contactName: Alain Plante
 contactEmail: aplante@sas.upenn.edu
 entryNote: # Any notes or comments related to this entry.
+study: Long term soil incubation (2.5 years) study to evaluate soil carbon input saturation
 
 siteInfo:
-        study: Long term soil incubation (2.5 years) study to evaluate soil carbon input saturation
-
         site:
           - "Sioux City, IA (IA)"
           - "Kellog Biological Station, MI (MI)"
@@ -66,37 +65,27 @@ siteInfo:
             - Orthic Black Chernozem
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: USDA
-#These do not have to be arrays of equal length to site array
+        permafrost:
+          permafrostExist:
+          activeLayer:
+
+incubationInfo:
+        description: soil incubation study that each treatment consisted of four 200 g replicates of A- and C- horizen soils mixed with 0.26 g 13C wheat straw for 2.5 years
         depthInfo:
           top: # in cm
           bottom: # in cm
           midDepth: #average depth
           surfaceAtm:
           horizon:
-            - A
-            - C
-        permafrost:
-          permafrostExist:
-          activeLayer:
-        experimentalTreatment:
-
-incubationInfo:
-        description: soil incubation study that each treatment consisted of four 200 g replicates of A- and C- horizen soils mixed with 0.26 g 13C wheat straw for 2.5 years
         temperature: 25
         moisture:
           value: 100
           units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic:
         gasMeasured:
-        laboratoryTreatment:
-          horizon:
-            value:
-              - A
-              - B
-            units:
-          13-labeled C input: # Replace with name of treatment
-            value: 0.26
-            units: g13CWheatStraw/200gSoil
+        g13CWheatStraw: # Replace with name of treatment
+          value: 0.26
+          units: g13CWheatStraw/200gSoil
         replicates:
           number: 4
           type: lab
@@ -117,9 +106,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_A_IA
         desc: cumulative respiration of horizon A from Sioux City
         site: Sioux City
-        experimentalTreatment:
         horizon: A
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -127,9 +115,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_A_KBS
         desc: cumulative respiration of horizon A from Kellog Biological Station
         site: Kellog Biological Station
-        experimentalTreatment:
         horizon: A
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -137,9 +124,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_A_MIS
         desc: cumulative respiration of horizon A from Saginaw
         site: Saginaw
-        experimentalTreatment:
         horizon: A
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -147,9 +133,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_A_MN
         desc: cumulative respiration of horizon A from Lamberton
         site: Lamberton
-        experimentalTreatment:
         horizon: A
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -157,9 +142,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_A_NE
         desc: cumulative respiration of horizon A from Mead
         site: Mead
-        experimentalTreatment:
         horizon: A
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -167,9 +151,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_A_OH
         desc: cumulative respiration of horizon A from Wauseon
         site: Wauseon
-        experimentalTreatment:
         horizon: A
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -177,9 +160,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_A_SK
         desc: cumulative respiration of horizon A from Melfort
         site: Melfort
-        experimentalTreatment:
         horizon: A
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -187,9 +169,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_C_IA
         desc: ccumulative respiration of horizon B from Sioux City
         site: Sioux City
-        experimentalTreatment:
         horizon: C
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -197,9 +178,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_C_KBS
         desc: cumulative respiration of horizon B from Kellog Biological Station
         site: Kellog Biological Station
-        experimentalTreatment:
         horizon: C
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -207,9 +187,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_C_MIS
         desc: cumulative respiration of horizon B from Saginaw
         site: Saginaw
-        experimentalTreatment:
         horizon: C
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -217,9 +196,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_C_MN
         desc: cumulative respiration of horizon B from Lamberton
         site: Lamberton
-        experimentalTreatment:
         horizon: C
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -227,9 +205,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_C_NE
         desc: cumulative respiration of horizon B from Mead
         site: Mead
-        experimentalTreatment:
         horizon: C
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -237,9 +214,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_C_OH
         desc: cumulative respiration of horizon B from Wauseon
         site: Wauseon
-        experimentalTreatment:
         horizon: C
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:
@@ -247,9 +223,8 @@ variables: # These describe the columns of your timeSeries.csv file
         name: Cumresp_C_SK
         desc: cumulative respiration of horizon B from Melfort
         site: Melfort
-        experimentalTreatment:
         horizon: C
-        13-labeled C inputL: 0.26
+        g13CWheatStraw: 0.26
         gasMeasured:
         units: mgCo2/gSoil
         statistic:

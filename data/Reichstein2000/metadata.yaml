@@ -5,9 +5,9 @@ entryCreationDate: 2019-04-24
 contactName: Shane Stoner
 contactEmail: sstoner@bgc-jena.mpg.de
 entryNote: # Any notes or comments related to this entry.
+study:  "Temperature dependence of carbon mineralisation: conclusions from a long-term incubation of subalpine soil samples" # Overall study description
 
 siteInfo:
-        study:  "Temperature dependence of carbon mineralisation: conclusions from a long-term incubation of subalpine soil samples" # Overall study description
         site:  # Names of individual sites, if one site, keep on this line, if multiple, use array format
           - Davos_Ridge
           - Davos_Gully
@@ -33,34 +33,24 @@ siteInfo:
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
 #These do not have to be arrays of equal length to site array
+        permafrost:
+          permafrostExist: # yes or blank if no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        description: "Three ridge and three gully soils were incubated at 5, 15, and 25deg for 104 d. A closed gas-cycle apparatus including an IRGA was used to measure CO2-flux" # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: 0 # in cm
           bottom:  5 # in cm
           midDepth: 2.5 #average depth
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
-          horizon: # soil horizon designation
-            - Oe/Oa
-            - A
-        permafrost:
-          permafrostExist: no # yes or no (if yes, permafrost must exist at the site)
-          activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-
-incubationInfo:
-        description: "Three ridge and three gully soils were incubated at 5, 15, and 25deg for 104 d. A closed gas-cycle apparatus including an IRGA was used to measure CO2-flux" # Short description of the incubation setup and main treatments
+          horizon: O/Oe/A
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 60 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          temperature: # Replace with name of treatment
-            value: # Numerical or factor
-              - 5
-              - 15
-              - 25
-            units: degreesC # Units of treatment value if numerical, if a %, write percent
         replicates:
           number: 3 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab

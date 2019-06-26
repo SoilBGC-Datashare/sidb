@@ -5,9 +5,9 @@ entryCreationDate: 2019-03-05
 contactName: Caitlin Pries
 contactEmail: caitlin.pries@dartmouth.edu
 entryNote: # Any notes or comments related to this entry.
+study: Closeaux field experiment at INRA Versailles France
 
 siteInfo:
-        study: Closeaux field experiment at INRA Versailles France
         site: Closeaux
         coordinates:
           latitude: 48.807174
@@ -22,44 +22,30 @@ siteInfo:
           soilOrder: Cambisol
           soilfamily: Eutric
           classificationSystem: FAO
-
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
-          top:
-            - 5
-            - 80
-          bottom:
-            - 10
-            - 100
-          midDepth:
-            - 7.5
-            - 90
-          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
-          horizon: # soil horizon designation
         permafrost:
           permafrostExist: No
           activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-          midDepth:
-            - 7.5
-            - 90
 
 incubationInfo:
         description: # Short description of the incubation setup and main treatments
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
+          top:
+          bottom:
+          midDepth:
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          horizon: # soil horizon designation
         temperature: 20
         moisture:
           value: 19
           units: percentGWC
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          disturbance:
+        disturbance:
             - sieved
             - undisturbed
-          oxygen:
-            value:
-              - 19
-              - 5
-            units: percent
+        oxygen:
+          value:
+          units: percent
         replicates:
           number: 3
           type: field

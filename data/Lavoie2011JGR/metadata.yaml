@@ -5,9 +5,9 @@ entryCreationDate: 2019-03-06
 contactName: Alain Plante
 contactEmail: aplante@sas.upenn.edu
 entryNote:
+study:
 
 siteInfo:
-        study:
         site:
           - Boreal forest
           - Tundra
@@ -39,62 +39,27 @@ siteInfo:
           classificationSystem:
             - USDA
             - USDA
-
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
-          top:
-            - 0
-            - 5
-            - 2
-            - 0
-            - 23
-            - 0
-            - 15
-          bottom:
-            - 15
-            - 15
-            - 12
-            - 15
-            - 33
-            - 15
-            - 33
-          midDepth:
-            - 7.5
-            - 10
-            - 7
-            - 7.5
-            - 28
-            - 7.5
-            - 28
-          surfaceAtm: Yes
-          horizon: # soil horizon designation
         permafrost:
           permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
-        experimentalTreatment:
-          burn:
-            - unburned
-            - burned
-          acidic:
-            - nonacidic
-            - acidic
-          minOrg:
-            - mineral
-            - organic
 
 incubationInfo:
         description: # Short description of the incubation setup and main treatments
+        burn:
+        acidic:
+        minOrg:
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
+          top:
+          bottom:
+          midDepth:
+          surfaceAtm: Yes
+          horizon: # soil horizon designation
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: # Valid fields are: GWC or percent field capacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          temperature:
-            value:
-              - 5
-              - 15
-            units: Celsius
         replicates:
           number: 3
           type: field

@@ -5,9 +5,9 @@ entryCreationDate:  2019-04-16 # Date when the data is entered in this file. For
 contactName:  Susan Crow # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail:  crows@hawii.edu # Email of the contact person
 entryNote: This study is ongoing and not yet published, also incubations continue to run  # Any notes or comments related to this entry.
+study:  Soil health, Hawaii
 
 siteInfo:
-        study:  Soil health, Hawaii
         site: # Name of the study sites where study was conducted
           - 1_Organic Cropland Mollisol
           - 2_Organic Cropland_Mollisol
@@ -724,28 +724,27 @@ siteInfo:
             - Honomanu
             - Honomanu
           classificationSystem: USDA # Name of classification system used above
-        depthInfo:
-          top: 0 # in cm
-          bottom: 15 # in cm
-          midDepth: 7.5 #average depth
-          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
-          horizon: # soil horizon designation
         permafrost:
-          zonation: # Describe permafrost zonation
+          permafrostExist: # yes or blank if no (if yes, permafrost must exist at the site)
           activelLayer: # Depth of the active layer in meters
-        experimentalTreatment:
 
 incubationInfo:
         description: # Short description of the incubation setup and main treatments
           "25g oven-dry equivalent sample of air-dried soil was rewetted to 60% water holding capacity, placed into a 610 mL airtight container
           at a controlled temperature. Soils were sampled on different days depending on the amount of CO2 acumulating to avoid concentration over 7K ppm.
           After sampling, headspace was purged, caps resealed, intitial concentration taken, then left to accumulate. A subset (sites 67-78) were never air-dried and correspond to sites 34-36, 46-54."
+        depthInfo:
+          top: 0 # in cm
+          bottom: 15 # in cm
+          midDepth: 7.5 #average depth
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          horizon: # soil horizon designation
         temperature: 25 # Overall temperature at which incubations were performed. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 60
           units: percentFieldCapacity
         anaerobic:
-        gasMeasured: 
+        gasMeasured:
         laboratoryTreatment: # List of laboratory treatments applied to the incubations.
         replicates:
           number: 1 # Number of replicates per treatments

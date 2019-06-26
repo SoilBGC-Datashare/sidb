@@ -5,9 +5,10 @@ entryCreationDate: 2019-03-04 # Date when the data is entered in this file. Form
 contactName: Shane Stoner # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: sstoner@bgc-jena.mpg.de # Email of the contact person
 entryNote:  # Any notes or comments related to this entry.
+study: "Karhu 2010: Temperature sensitivity of organic matter decomposition in two boreal forest soil profile" # Overall study description
+
 
 siteInfo:
-        study: "Karhu 2010: Temperature sensitivity of organic matter decomposition in two boreal forest soil profile" # Overall study description
         site: FinlandKarhu # Names of individual sites, if one site, keep on this line, if multiple, use array format
         coordinates:
           latitude: 61.48 # Latitude in decimal units (check for negative that denotes southern hemisphere)
@@ -23,49 +24,25 @@ siteInfo:
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
-          top: # in cm
-            - 0
-            - 0
-            - 15
-          bottom: # in cm
-            - 0
-            - 15
-            - 30
-          midDepth: #average depth
-            - 0
-            - 7.5
-            - 22.5
-          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
-          horizon: # soil horizon designation
         permafrost:
-          permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
+          permafrostExist: # Yes or blank if no (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-          forest:
-            - Spruce
-            - Pine
-          midDepth:
-            - 0
-            - 7.5
-            - 22.5
+
 incubationInfo:
         description: "495 day aerobic incubation at 25 degrees C, 50% air humidity with weekly control for soil moisture loss. Subsamples taken every 3 months and incubated at 5, 12, 19, 26 degrees C for 24 hours, then CO2 measured." # Short description of the incubation setup and main treatments
+        vegetation:
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
+          top: # in cm
+          bottom: # in cm
+          midDepth: #average depth
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          horizon: # soil horizon designation
         temperature: # Replace with name of treatment
         moisture:
           value: 100 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: percentFieldCapacity # Valid fields are: GWC or percent field capacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment:
-          temperature:
-            value:
-               - 5
-               - 12
-               - 19
-               - 26
-            units: Celsius
         replicates:
           number: 3 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab

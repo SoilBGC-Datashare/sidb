@@ -5,9 +5,10 @@ entryCreationDate: 2019-04-23 # Date when the data is entered in this file. Form
 contactName: Shane Stoner # First and last name of contact person, who might be the principal investigator supervising the entryAuthor
 contactEmail: sstoner@bgc-jena.mpg.de # Email of the contact person
 entryNote: Unknown number of replicates or exact location of research station # Any notes or comments related to this entry.
+study: 'Stability of organic carbon in deep soil layers controlled by fresh carbon supply' # Overall study description
+
 
 siteInfo:
-        study: 'Stability of organic carbon in deep soil layers controlled by fresh carbon supply' # Overall study description
         site: Massif # Names of individual sites, if one site, keep on this line, if multiple, use array format
 #These fields should be arrays of equal length to site array
         coordinates:
@@ -24,32 +25,28 @@ siteInfo:
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: WRB # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-#These do not have to be arrays of equal length to site array
+        permafrost:
+          permafrostExist: # yes or blank if no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        description: 160 day incubation of subsoil comparing control and soil amended with cellulose while under incubation # Short description of the incubation setup and main treatments
+        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: 60 # in cm
           bottom: 80 # in cm
           midDepth: 70 #average depth
           surfaceAtm:  # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
-        permafrost:
-          permafrostExist: no # yes or no (if yes, permafrost must exist at the site)
-          activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-
-incubationInfo:
-        description: 160 day incubation of subsoil comparing control and soil amended with cellulose while under incubation # Short description of the incubation setup and main treatments
         temperature: 20 # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          cellulose: # Replace with name of treatment
-            value:  # Numerical or factor
-              - cellulose_amended
-              - control
-            units: # Units of treatment value if numerical, if a %, write percent
+        cellulose:
+          value:
+          units: 
         replicates:
           number:  # Number of replicates per treatments
           type:  # Valid fields are: field or lab
@@ -76,4 +73,3 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: Subsoil incubated without dual 13C-14C labelled cellulose for 161 days at -100 kPa water content # Description of the variable
         cellulose: control # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: mg soilC/kg soilC
-        

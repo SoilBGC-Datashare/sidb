@@ -5,11 +5,11 @@ entryCreationDate: 2019-03-06
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
 entryNote: # Any notes or comments related to this entry.
+study:  "Garwood Valley, southern Victoria Land (Ross Sea region), Antarctica"
 
-siteInfo: 
-        study:  "Garwood Valley, southern Victoria Land (Ross Sea region), Antarctica"
+siteInfo:
         site: Garwood Valley
-#These fields should be arrays of equal length to site array       
+#These fields should be arrays of equal length to site array
         coordinates:
           latitude: -78.016667
           longitude: 163.883333
@@ -24,43 +24,29 @@ siteInfo:
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-#These do not have to be arrays of equal length to site array        
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array. 
+        permafrost:
+          permafrostExist:
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        description: "Five laboratory replicates from composite field samples were incubated at 10deg for 48 d and CO2 production was measured using a Respicond IV respirometer."
+        soil:
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: 0
           bottom: 1
           midDepth: 0.5
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
-        permafrost:
-          permafrostExist: no
-          activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-          soil:
-              - delta soil
-              - dune soil
-              - hillslope soil
-              - polygon soil
-              - lower moraine soil
-              - lake margin soil
-
-incubationInfo:
-        description: "Five laboratory replicates from composite field samples were incubated at 10deg for 48 d and CO2 production was measured using a Respicond IV respirometer."
         temperature: 10
-        moisture: 
+        moisture:
           value: 20
           units: percentGWC
-        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          ammendment:
-            - detritus
-            - glucose
-            - glycine
-            - NH4Cl
-            - unamended
-        replicates: 
+        ammendment:
+        replicates:
           number: 5
-          type: field 
+          type: field
         incubationTime: 48
         preincubationTime: 42
         samplePreparation:
@@ -69,7 +55,7 @@ incubationInfo:
           rootPicking: no
           rockPicking: no
         gasAnalyzer: Respicond IV respirometer
-        
+
 variables: # These describe the columns of your timeSeries.csv file
         V1:
           name: time
@@ -172,4 +158,3 @@ variables: # These describe the columns of your timeSeries.csv file
           temperature: 10
           soil: "lake margin soil"
           ammendment: unamended
-

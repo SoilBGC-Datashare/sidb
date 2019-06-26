@@ -23,33 +23,24 @@ siteInfo:
     soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
     soilSeries: # Soil series according to the classification system described below
     classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-#These do not have to be arrays of equal length to site array
-  depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
-    top: # in cm
-    bottom: # in cm
-    midDepth: #average depth
-    surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
-    horizon: # soil horizon designation
   permafrost:
     permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
     activeLayer: # Depth of the active layer in meters
-  experimentalTreatment:
 
 incubationInfo:
     description: "Soil respiration rates were determined through periodic analysis of CO2 concentration of headspace gas samples using a LI-COR 6525"
+    depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
+      top: # in cm
+      bottom: # in cm
+      midDepth: #average depth
+      surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+      horizon: # soil horizon designation
     temperature:
     moisture:
       value: 60 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
       units: percentWaterFilledPoreSpace # Valid fields are: percentGWC or percentFieldCapacity
     anaerobic:  # Yes if headspace flushed with N2 or He, blank if aerobic
     gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-    laboratoryTreatment:
-      temperature:
-        value:
-            - 4
-            - 15
-            - 25
-        units: Celsius
     replicates:
       number: 4 # Number of replicates per treatments
       type: lab # Valid fields are: field or lab

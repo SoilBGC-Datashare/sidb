@@ -5,9 +5,10 @@ entryCreationDate: 2019-03-06 # Date when the data is entered in this file. Form
 contactName: Shane Stoner # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: sstoner@bgc-jena.mpg.de # Email of the contact person
 entryNote: # Any notes or comments related to this entry.
+study: Vegetation and climate controls on potential CO2, DOC and DON production in northern latitude soils # Overall study description
+
 
 siteInfo:
-        study: Vegetation and climate controls on potential CO2, DOC and DON production in northern latitude soils # Overall study description
         site: # Names of individual sites, if one site, keep on this line, if multiple, use array format
           - Fairbanks
           - Chandalar
@@ -53,16 +54,6 @@ siteInfo:
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
 #These do not have to be arrays of equal length to site array
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
-          top: # in cm
-            - 0
-          bottom: # in cm
-            - 10
-          midDepth: #average depth
-            - 5
-          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
-          horizon: # soil horizon designation
-            - Oe
         permafrost:
           permafrostExist: yes # yes or no (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
@@ -70,27 +61,22 @@ siteInfo:
            - 0.3
            - 0.3
            - 0.3
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-          vegetationType:
-              - Tussock
-              - Spruce
-              - Tussock
-              - WetSedge
-              - Shrub
+
 incubationInfo:
         description: "Five laboratory replicates from composite field samples from each site and treatment combination were incubated at 10 and 30deg for 352 d. Air samples were taken at time 0 and at 24 h by syringe through a septum in the Mason jar lid, and injected into a sealed jar attached to the LI-COR 6200 Infrared gas analyser"
+        vegetation:
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+          top: 0
+          bottom: 10
+          midDepth: 5
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          horizon: # soil horizon designation
         temperature:  # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 100 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
           units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          temperature: # Replace with name of treatment
-            value: # Numerical or factor
-              - 10
-              - 30
-            units: Celsius # Units of treatment value if numerical, if a %, write percent
         replicates:
           number: 5 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab
@@ -114,7 +100,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Tussock
+         vegetation: Tussock
          midDepth: 5
 
        V3:
@@ -123,7 +109,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: Chandalar #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Tussock
+         vegetation: Tussock
          midDepth: 5
 
        V4:
@@ -132,7 +118,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Tussock
+         vegetation: Tussock
          midDepth: 5
 
        V5:
@@ -141,7 +127,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: Sagwon #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Tussock
+         vegetation: Tussock
          midDepth: 5
 
        V6:
@@ -150,7 +136,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Tussock
+         vegetation: Tussock
          midDepth: 5
 
        V7:
@@ -159,7 +145,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: Chandalar #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Tussock
+         vegetation: Tussock
          midDepth: 5
 
        V8:
@@ -168,7 +154,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Tussock
+         vegetation: Tussock
          midDepth: 5
 
        V9:
@@ -177,7 +163,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: Sagwon #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Tussock
+         vegetation: Tussock
          midDepth: 5
 
        V10:
@@ -186,7 +172,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Tussock
+         vegetation: Tussock
          midDepth: 5
 
        V11:
@@ -195,7 +181,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Spruce
+         vegetation: Spruce
          midDepth: 5
 
        V12:
@@ -204,7 +190,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Tussock
+         vegetation: Tussock
          midDepth: 5
 
        V13:
@@ -213,7 +199,7 @@ variables: # These describe the columns of your timeSeries.csv file
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: WetSedge
+         vegetation: WetSedge
          midDepth: 5
 
        V14:
@@ -222,5 +208,5 @@ variables: # These describe the columns of your timeSeries.csv file
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: mgC-CO2/gSoilC/d
-         vegetationType: Shrub
+         vegetation: Shrub
          midDepth: 5

@@ -5,11 +5,11 @@ entryCreationDate: 2018-03-06
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
 entryNote: # Any notes or comments related to this entry.
+study:  "SOM protection and temperature sensitivity"
 
-siteInfo: 
-        study:  "SOM protection and temperature sensitivity"
+siteInfo:
         site: "Termunck, Leuven, Belgium"
-#These fields should be arrays of equal length to site array       
+#These fields should be arrays of equal length to site array
         coordinates:
           latitude: 50.878333
           longitude: 4.656667
@@ -24,45 +24,28 @@ siteInfo:
           soilFamily: silt loam haplic Luvisol
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: WRB
-#These do not have to be arrays of equal length to site array        
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array. 
-          top: 
-            - 5
-            - 95 
-          bottom: 
-            - 15
-            - 105
-          midDepth: 
-            - 10
-            - 100
-          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
-          horizon: 
-            - A
-            - B
         permafrost:
-          permafrostExist: no
+          permafrostExist:
           activeLayer: # Depth of the active layer in meters
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-          midDepth:
-            - 10
-            - 100
+
 incubationInfo:
         description: "Soil was collected from 2 depth intervals: 5 to 15 cm and 95 to 105 cm. Samples of each layer were incubated at 25deg and at 35deg for 176 days."
+        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+          top:
+          bottom:
+          midDepth:
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          horizon:
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
-        moisture: 
+        moisture:
           value: 100
           units: percentFieldCapacity
-        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          temperature: # Replace with name of treatment
-            value: 
-              - 25
-              - 35
-            units: Celsius
-        replicates: 
+        replicates:
           number: 3
-          type: lab 
+          type: lab
         incubationTime: 176
         preincubationTime: 0
         samplePreparation:
@@ -71,7 +54,7 @@ incubationInfo:
           rootPicking: no
           rockPicking: no
         gasAnalyzer: # Gas analysis equipment for CO2 measurements
-        
+
 variables:
         V1:
           name: time

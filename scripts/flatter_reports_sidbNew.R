@@ -133,7 +133,7 @@ siteInfo <- lapply(siteInfo, function(x) {
 
 # unlist nested lists (works for some templates but not others, unclear why)
 siteInfo <- lapply(siteInfo, function(x) {
-  d1 <- match(names(unlist(lapply(x, function(y) which(is.list(y))))),names(and))
+  d1 <- match(names(unlist(lapply(x, function(y) which(is.list(y))))),names(x))
   if(!length(d1)==0) {
     ix.1d <- x[-d1]
     ix.2d <- x[d1]
@@ -189,10 +189,9 @@ for(i in seq_along(vars.dfl[ix])) {
 
 # add siteInfo to vars.dfl
 siteInfo <- lapply(siteInfo, function(x) as.data.frame(x))
+
 # remove NA columns from siteInfo
 siteInfo <- lapply(siteInfo, function(x) x[ ,!apply(is.na(x),2,all)])
 for(i in seq_along(vars.dfl)) {
   vars.dfl[[i]] <- dplyr::right_join(as.data.frame(lapply(vars.dfl[[i]], as.character), stringsAsFactors=F), as.data.frame(lapply(siteInfo[[i]], as.character), stringsAsFactors=F), by="site")
 }
-
-

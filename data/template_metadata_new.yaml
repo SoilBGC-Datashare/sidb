@@ -42,11 +42,11 @@ incubationInfo:
           value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment with multiple levels, leave blank
           units: # Valid fields are: GWC or percent field capacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
-        ammendment: # Use if ammendments added other than H2O
-          value: # type of ammendment, e.g. glucose, cellulose, N, etc. If ammendment is an experimental treatment with multiple levels, leave blank
-          units: # units of ammendment addition
-        experimentalTreatment: # placeholder for custom treatments, e.g. "fieldWarming", "ammendment", etc.
-          value: # Categorical treatment name; if multiple levels leave blank and specify in variables section
+        ammendment: # Use if ammendments added other than H2O, e.g. glucose, cellulose, etc.
+          value: # Quantitative or categorical value of ammendment added. If ammendment is an experimental treatment with multiple levels, leave blank and specify in variables section
+          units: # Units of ammendment addition; if categorical, leave blank
+        experimentalTreatment: # placeholder for custom treatments, e.g. "fieldWarming", "oxygen", etc.
+          value: # Quantitative or categorical value of treatment; if multiple levels leave blank and specify in variables section
           units: # Units for continuous treatments
         gasMeasured: # Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured
         replicates:

@@ -66,10 +66,7 @@ variables: # These describe the columns of your timeSeries.csv file
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
          temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
-         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-         horizon: O
        V3:
          name: Spruce_O_26 # Name of second variable in accompanying file.
          desc: "Respiration rate from organic layer from spruce forest, incubated for 24 hours at 26 degrees C"
@@ -77,10 +74,7 @@ variables: # These describe the columns of your timeSeries.csv file
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
          temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
-         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-         horizon: O
        V4:
          name: Spruce_0_15_26 # Name of second variable in accompanying file.
          desc: "Respiration rate from 0-15 cm soil from spruce forest, incubated for 24 hours at 26 degrees C"
@@ -88,9 +82,7 @@ variables: # These describe the columns of your timeSeries.csv file
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 7.5
          temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
-         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        V5:
          name: Pine_0_15_26 # Name of second variable in accompanying file.
          desc: "Respiration rate from 0-15 cm soil from pine forest, incubated for 24 hours at 26 degrees C"
@@ -122,10 +114,7 @@ variables: # These describe the columns of your timeSeries.csv file
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
          temperature: 5  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
-         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-         horizon: O
        V9:
          name: Pine_15_30_05 # Name of second variable in accompanying file.
          desc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 5 degrees C"
@@ -133,9 +122,7 @@ variables: # These describe the columns of your timeSeries.csv file
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 7.5
          temperature: 5  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
-         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
        V10:
          name: Spruce_O_12 # Name of second variable in accompanying file.
          desc: "Respiration rate from organic layer from spruce forest, incubated for 24 hours at 12 degrees C"
@@ -144,7 +131,6 @@ variables: # These describe the columns of your timeSeries.csv file
          midDepth: 0
          temperature: 12  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
-         horizon: O
        V11:
          name: Pine_15_30_12 # Name of second variable in accompanying file.
          desc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 12 degrees C"
@@ -153,7 +139,6 @@ variables: # These describe the columns of your timeSeries.csv file
          midDepth: 22.5
          temperature: 12  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
-         horizon: O
        V12:
          name: Spruce_O_19 # Name of second variable in accompanying file.
          desc: "espiration rate from organic layer from spruce forest, incubated for 24 hours at 19 degrees C"
@@ -162,7 +147,6 @@ variables: # These describe the columns of your timeSeries.csv file
          midDepth: 0
          temperature: 19  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
-         horizon: O
        V13:
          name: Pine_15_30_19 # Name of second variable in accompanying file.
          desc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 19 degrees C"
@@ -171,4 +155,3 @@ variables: # These describe the columns of your timeSeries.csv file
          midDepth: 22.5
          temperature: 19  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
-         horizon: O

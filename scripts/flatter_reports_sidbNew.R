@@ -217,6 +217,9 @@ ts.df <- do.call("rbind", ts.l)
 
 #####
 # Example of query, report, plotting workflow
+library(ggplot2)
+library(tidyr)
+
 # 1) Filter vars.dfl to exclude SD and SE timeseries
 
 # add statistic column to entries missing it
@@ -245,6 +248,14 @@ t.10.20.df <- plyr::rbind.fill(lapply(seq_along(vars.dfl.mean), function(i) vars
 
 # join your subset of the variables dataframes with the corresponding timeseries
 t.10.20.df <- dplyr::left_join(t.10.20.df, ts.df, by="ID")
+
+# plot sites >60N, with moisture as color, first 100 days of incubation
+dplyr::filter(t.10.20.df, latitude >= 60) %>%
+  ggplot(., aes(time, y, color=moisture)) +
+  geom_path() +
+  scale_x_continuous(limits=c(0,100)) +
+  theme_bw() +
+  theme(panel.grid = element_blank())
 
 # plot first 300 days, with latitude as color
 ggplot(t.10.20.df, aes(time, y, color=abs(latitude))) +

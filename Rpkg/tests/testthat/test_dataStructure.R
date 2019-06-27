@@ -3,6 +3,28 @@ library(sidb)
 
 database<-loadEntries()
 
+test_that("entry names correspond to new metadata template", {
+  template=yaml::yaml.load_file(input="~/sidb/data/template_metadata_new.yaml")
+  for(i in 1:length(database)){
+    entry=database[[i]]
+    expect_equal(names(entry)[-(12:13)],names(template))
+  }
+
+  for(i in 1:length(database)){
+    entry=database[[i]]
+    expect_equal(names(entry$siteInfo),names(template$siteInfo))
+  }
+
+  # allows new fields to be added, but none to be removed
+  for(i in 1:length(database)){
+    entry=database[[i]]
+    if(length(match(names(template$incubationInfo),names(entry$incubationInfo)))!=length(names(template$incubationInfo)))
+      {cat(names(database[i]),"\n")}
+    expect_equal(length(match(names(template$incubationInfo),names(entry$incubationInfo))),
+                 length(names(template$incubationInfo)))
+  }
+})
+
 testthat::test_that("check that each table in variables list has the same number of fields",{
   n.fields <- lapply(database, function(x) {
     len <- length(unique(unlist(lapply(x$variables[-1], function(y) length(y)))))

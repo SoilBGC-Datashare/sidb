@@ -111,6 +111,7 @@ variables: # These describe the columns of your timeSeries.csv file
           temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          statistic:
         V7:
           name: control_50_15_sd # Name of second variable in accompanying file.
           desc: Field control, midDepth of 50, incubation temperature of 15 Celsius # Description of the variable

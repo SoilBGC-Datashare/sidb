@@ -37,9 +37,9 @@ incubationInfo:
           midDepth:
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
-        temperature: # Temperature at which incubations were performed in Celsius. If temperature is an experimental treatment with multiple levels, leave blank
+        temperature: # Temperature at which incubations were performed in Celsius. If temperature is an experimental treatment with multiple levels, leave blank and specify in variables section
         moisture:
-          value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment with multiple levels, leave blank
+          value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment with multiple levels, leave blank and specify in variables section
           units: # Valid fields are: GWC or percent field capacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         ammendment: # Use if ammendments added other than H2O, e.g. glucose, cellulose, etc.
@@ -48,7 +48,7 @@ incubationInfo:
         experimentalTreatment: # placeholder for custom treatments, e.g. "fieldWarming", "oxygen", etc.
           value: # Quantitative or categorical value of treatment; if multiple levels leave blank and specify in variables section
           units: # Units for continuous treatments
-        gasMeasured: # Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured
+        gasMeasured: # Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured and specify in variables section
         replicates:
           number: # Number of replicates per treatments
           type: # Valid fields are: field or lab

@@ -443,6 +443,7 @@ variables: # These describe the columns of your timeSeries.csv file
         desc: Site 19, rep 2 incuabation CO2 evolved # Description of the variable
         site: SDC19 #site where the incubated sample comes from.
         units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
+        statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V22: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC19_TO_3 # Name of second variable in accompanying file.
         desc: Site 19, rep 3 incuabation CO2 evolved # Description of the variable

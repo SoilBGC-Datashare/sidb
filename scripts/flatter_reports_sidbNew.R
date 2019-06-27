@@ -13,7 +13,7 @@
 devtools::install_github("SoilBGC-Datashare/sidb/Rpkg", ref="dev")
 library(sidb)
 
-idb <- loadEntries("/Users/jeff/sidb/data/")
+idb <- loadEntries("~/sidb/data/")
 
 # Work from bottom: extract list of timeSeries data
 #####

@@ -131,7 +131,7 @@ siteInfo <- lapply(siteInfo, function(x) {
   return(x)
 })
 
-# unlist nested lists (works for some templates but not others, unclear why)
+# unlist nested lists
 siteInfo <- lapply(siteInfo, function(x) {
   d1 <- match(names(unlist(lapply(x, function(y) which(is.list(y))))),names(x))
   if(!length(d1)==0) {
@@ -187,11 +187,75 @@ for(i in seq_along(vars.dfl[ix])) {
   vars.dfl[ix][[i]]["site"] <- sites[[i]]
 }
 
-# add siteInfo to vars.dfl
+# Convert siteInfo elmenents to df
 siteInfo <- lapply(siteInfo, function(x) as.data.frame(x))
 
-# remove NA columns from siteInfo
+# remove NA columns from siteInfo and join to vars.dfl
 siteInfo <- lapply(siteInfo, function(x) x[ ,!apply(is.na(x),2,all)])
 for(i in seq_along(vars.dfl)) {
-  vars.dfl[[i]] <- dplyr::right_join(as.data.frame(lapply(vars.dfl[[i]], as.character), stringsAsFactors=F), as.data.frame(lapply(siteInfo[[i]], as.character), stringsAsFactors=F), by="site")
+  vars.dfl[[i]] <- dplyr::left_join(as.data.frame(lapply(vars.dfl[[i]], as.character), stringsAsFactors=F), as.data.frame(lapply(siteInfo[[i]], as.character), stringsAsFactors=F), by="site")
 }
+
+# Convert all numeric data from factor or chr to numeric type
+vars.dfl<-lapply(vars.dfl, function(x) lapply(x, as.character))
+vars.dfl<-lapply(vars.dfl, function(x) lapply(x, utils::type.convert))
+vars.dfl<-lapply(vars.dfl, as.data.frame)
+
+#####
+# Add IDs from list of variable dataframes (vars.dfl) to timeSeries list (ts.l)
+names(ts.l) <- unlist(lapply(vars.dfl, function(x) x$ID), use.names=F)
+ts.l <- lapply(ts.l, function(x) {
+  x = as.data.frame(x)
+  colnames(x) = c("time","y")
+  x$ID = NA
+  return(x)
+})
+for(i in seq_along(ts.l)) {
+  ts.l[[i]]["ID"] = names(ts.l)[i]
+}
+ts.df <- do.call("rbind", ts.l)
+
+#####
+# Example of query, report, plotting workflow
+# 1) Filter vars.dfl to exclude SD and SE timeseries
+
+# add statistic column to entries missing it
+vars.dfl.mean <- lapply(vars.dfl, function(x) {
+  if(is.null(x$statistic)) {
+    x$statistic = NA
+  } else {
+    x$statistic = x$statistic
+  }
+  return(x)
+})
+vars.dfl.mean <- lapply(vars.dfl.mean, function(x) {
+  x = x[which(x$statistic == "none" | is.na(x$statistic)),]
+  return(x)
+})
+
+# 2) Extract all timeseries with temperature between 10 and 20 degrees
+
+# list variables in vars.dfl by calling 'names' on each element of list and filtering to unique values
+sort(unique(unlist(lapply(vars.dfl.mean, function(x) names(x)))))
+
+# first extract indices of studies with timeseries that match conditions
+ix.ls <- lapply(vars.dfl.mean, function(x) which(x$temperature >= 10 & x$temperature <= 20))
+# then subset list with list of indices, and convert to dataframe
+t.10.20.df <- plyr::rbind.fill(lapply(seq_along(vars.dfl.mean), function(i) vars.dfl[[i]][ix.ls[[i]],]))
+
+# join your subset of the variables dataframes with the corresponding timeseries
+t.10.20.df <- dplyr::left_join(t.10.20.df, ts.df, by="ID")
+
+# plot first 300 days, with latitude as color
+ggplot(t.10.20.df, aes(time, y, color=abs(latitude))) +
+  geom_path() +
+  scale_x_continuous(limits=c(0,300)) +
+  theme_bw() +
+  theme(panel.grid = element_blank())
+
+# plot first 30 days, with moisture as color
+ggplot(t.10.20.df, aes(time, y, color=moisture)) +
+  geom_path() +
+  scale_x_continuous(limits=c(0,30)) +
+  theme_bw() +
+  theme(panel.grid = element_blank())

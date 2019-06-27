@@ -121,7 +121,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_10deg_CH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for CH in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 10
           glucose: 0.84
           gasMeasured:
@@ -131,7 +130,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_20deg_CH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for CH in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 20
           glucose: 0.84
           gasMeasured:
@@ -141,7 +139,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_30deg_CH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for CH in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 30
           glucose: 0.84
           gasMeasured:
@@ -151,7 +148,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_10deg_CL
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for CL in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 10
           glucose: 0.84
           gasMeasured:
@@ -161,7 +157,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_20deg_CL
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for CL in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 20
           glucose: 0.84
           gasMeasured:
@@ -171,7 +166,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_30deg_CL
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for CL in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 30
           glucose: 0.84
           gasMeasured:
@@ -181,7 +175,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_10deg_HOC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HOC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 10
           glucose: 0.84
           gasMeasured:
@@ -191,7 +184,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_20deg_HOC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HOC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 20
           glucose: 0.84
           gasMeasured:
@@ -201,7 +193,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_30deg_HOC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HOC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 30
           glucose: 0.84
           gasMeasured:
@@ -211,7 +202,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_10deg_HMC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HMC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 10
           glucose: 0.84
           gasMeasured:
@@ -221,7 +211,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_20deg_HMC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HMC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 20
           glucose: 0.84
           gasMeasured:
@@ -231,7 +220,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_30deg_HMC
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HMC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 30
           glucose: 0.84
           gasMeasured:
@@ -241,7 +229,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_10deg_HOH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HOH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 10
           glucose: 0.84
           gasMeasured:
@@ -251,7 +238,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_20deg_HOH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HOH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 20
           glucose: 0.84
           gasMeasured:
@@ -261,7 +247,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_30deg_HOH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HOH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 30
           glucose: 0.84
           gasMeasured:
@@ -271,7 +256,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_10deg_HMH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HMH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 10
           glucose: 0.84
           gasMeasured:
@@ -281,7 +265,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_20deg_HMH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HMH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 20
           glucose: 0.84
           gasMeasured:
@@ -291,7 +274,6 @@ variables: # These describe the columns of your timeSeries.csv file
           name: C_30deg_HMH
           desc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HMH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           temperature: 30
           glucose: 0.84
           gasMeasured:

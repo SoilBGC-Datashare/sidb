@@ -1,9 +1,9 @@
 #' Flattens sidb database object for easier querying
 #'
 #' @param database A database with the sidb structure
-#' @return R list with two elements, linked by shared column "ID":
+#' @return R list with two elements, linked by shared column "ID":\
 #' 1) timeseries, a list of unique timeseries, each a 2-column dataframe (time, response)
-#' 2) vars, a list of all site, incubation and variables fields flattened into a dataframe for each entry
+#' \2) vars, a list of all site, incubation and variables fields flattened into a dataframe for each entry
 #' @export
 #' @import dplyr
 #' @import rlang

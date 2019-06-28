@@ -189,16 +189,16 @@ siteInfo:
         landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
         vegNote: #Additional details about land cover such as species or functional type composition
         soilTaxonomy:
-          soilOrder: # Soil order according to the classification system described below
+          soilOrder: # Soil order according to the classification system varDescribed below
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
         permafrost:
           permafrostExist: # yes or blank if no (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: 'We adjusted seven replicates of 20 g dry-equivalent soil to 35% water-holding capacity and placed them in 50 ml polyethylene centrifuge tubes. Replicates were then incubated at 20 _C. Periodically, the five replicates for each soil were sealed with a cap containing a rubber septum, and then distributed over five temperatures (10, 15, 20, 25 and 30 _C). Two additional replicates were maintained at 20 _C. These soils were incubated for 18_72 h and then respiration rates for each determined by removing 4 ml of gas. They were then injected in-line into a N2 gas stream and the peak heights measured with a Licor 6252 infrared gas analyser. Using a set of calibrations, peak heights were converted to CO2 concentrations in the tubes and then to respiration rates that were scaled relative to soil organic C; preincubationTime varied between 10 and 60 days' # Short description of the incubation setup and main treatments
+        incDesc: 'We adjusted seven replicates of 20 g dry-equivalent soil to 35% water-holding capacity and placed them in 50 ml polyethylene centrifuge tubes. Replicates were then incubated at 20 _C. Periodically, the five replicates for each soil were sealed with a cap containing a rubber septum, and then distributed over five temperatures (10, 15, 20, 25 and 30 _C). Two additional replicates were maintained at 20 _C. These soils were incubated for 18_72 h and then respiration rates for each determined by removing 4 ml of gas. They were then injected in-line into a N2 gas stream and the peak heights measured with a Licor 6252 infrared gas analyser. Using a set of calibrations, peak heights were converted to CO2 concentrations in the tubes and then to respiration rates that were scaled relative to soil organic C; preincubationTime varied between 10 and 60 days' # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: 0 # in cm
           bottom: 10 # in cm
@@ -223,13 +223,13 @@ incubationInfo:
           rockPicking: # yes or no
         gasAnalyzer: Licor 6252 infrared gas analyser # Gas analysis equipment for measurements
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
         V1: # column 1
           name: time # Name of first variable in the accompanying csv data file. First variable should be time.
           units: day # Units of first variable in accompanying file.
         V2: # column 2
           name: Cumresp_CDR # Name of second variable in accompanying file.
-          desc: cumulative respiration at CDR # Description of the variable
+          varDesc: cumulative respiration at CDR # description of the variable
           site: Cedar Creek (CDR) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -238,7 +238,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V3: # column 3
           name: Cumresp_KBS # Name of second variable in accompanying file.
-          desc: cumulative respiration at KBS # Description of the variable
+          varDesc: cumulative respiration at KBS # description of the variable
           site: Kellogg Biological Station (KBS) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -247,7 +247,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V4: # column 4
           name: Cumresp_WR # Name of second variable in accompanying file.
-          desc: cumulative respiration at WR # Description of the variable
+          varDesc: cumulative respiration at WR # description of the variable
           site: Wind River (WR) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -256,7 +256,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V5: # column 5
           name: Cumresp_AND # Name of second variable in accompanying file.
-          desc: cumulative respiration at AND # Description of the variable
+          varDesc: cumulative respiration at AND # description of the variable
           site: HJ Andrew (AND) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -265,7 +265,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V6: # column 6
           name: Cumresp_ARC # Name of second variable in accompanying file.
-          desc: cumulative respiration at ARC # Description of the variable
+          varDesc: cumulative respiration at ARC # description of the variable
           site: Toolik (ARC) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -274,7 +274,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V7: # column 7
           name: Cumresp_WB # Name of second variable in accompanying file.
-          desc: cumulative respiration at WB # Description of the variable
+          varDesc: cumulative respiration at WB # description of the variable
           site: Walker Branch (WB) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -283,7 +283,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V8: # column 8
           name: Cumresp_JRN # Name of second variable in accompanying file.
-          desc: cumulative respiration at JRN # Description of the variable
+          varDesc: cumulative respiration at JRN # description of the variable
           site: Jornada Basin (JRN) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -292,7 +292,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V9: # column 9
           name: Cumresp_SDG # Name of second variable in accompanying file.
-          desc: cumulative respiration at SDG # Description of the variable
+          varDesc: cumulative respiration at SDG # description of the variable
           site: Sedgwick (SDG) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -301,7 +301,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V10: # column 10
           name: Cumresp_FCE # Name of second variable in accompanying file.
-          desc: cumulative respiration at FCE # Description of the variable
+          varDesc: cumulative respiration at FCE # description of the variable
           site: Florida Coastal Everglades (FCE) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -310,7 +310,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V11: # column 11
           name: Cumresp_OLY # Name of second variable in accompanying file.
-          desc: cumulative respiration at OLY # Description of the variable
+          varDesc: cumulative respiration at OLY # description of the variable
           site: Olympic National Park (OLY) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -319,7 +319,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V12: # column 12
           name: Cumresp_HFR # Name of second variable in accompanying file.
-          desc: cumulative respiration at HFR # Description of the variable
+          varDesc: cumulative respiration at HFR # description of the variable
           site: Harvard Forest (HFR) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -328,7 +328,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V13: # column 13
           name: Cumresp_BNZ # Name of second variable in accompanying file.
-          desc: cumulative respiration at BNZ # Description of the variable
+          varDesc: cumulative respiration at BNZ # description of the variable
           site: Bonanza Creek (BNZ) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -337,7 +337,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V14: # column 14
           name: Cumresp_SJQ # Name of second variable in accompanying file.
-          desc: cumulative respiration at SJQ # Description of the variable
+          varDesc: cumulative respiration at SJQ # description of the variable
           site: San Joaquin Exper. Range (SJQ) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -346,7 +346,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V15: # column 15
           name: Cumresp_LUQ # Name of second variable in accompanying file.
-          desc: cumulative respiration at LUQ # Description of the variable
+          varDesc: cumulative respiration at LUQ # description of the variable
           site: Luquillo #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -355,7 +355,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V16: # column 16
           name: Cumresp_GUA # Name of second variable in accompanying file.
-          desc: cumulative respiration at GUA # Description of the variable
+          varDesc: cumulative respiration at GUA # description of the variable
           site: Guanica (GUA) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -364,7 +364,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V17: # column 17
           name: Cumresp_BES # Name of second variable in accompanying file.
-          desc: cumulative respiration at BES # Description of the variable
+          varDesc: cumulative respiration at BES # description of the variable
           site: Baltimore Ecosystem Study (BES) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -373,7 +373,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V18: # column 18
           name: Cumresp_GCE # Name of second variable in accompanying file.
-          desc: cumulative respiration at GCE # Description of the variable
+          varDesc: cumulative respiration at GCE # description of the variable
           site: Georgia Coastal Ecosystem (GCE) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -382,7 +382,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V19: # column 19
           name: Cumresp_SRE # Name of second variable in accompanying file.
-          desc: cumulative respiration at SRE # Description of the variable
+          varDesc: cumulative respiration at SRE # description of the variable
           site: Santa Rita Exper. Range (SRE) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -391,7 +391,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V20: # column 20
           name: Cumresp_KNZ # Name of second variable in accompanying file.
-          desc: cumulative respiration at KNZ # Description of the variable
+          varDesc: cumulative respiration at KNZ # description of the variable
           site: Konza Prairie #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -400,7 +400,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V21: # column 21
           name: Cumresp_ITA # Name of second variable in accompanying file.
-          desc: cumulative respiration at ITA # Description of the variable
+          varDesc: cumulative respiration at ITA # description of the variable
           site: Itasca State Park (ITA) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -409,7 +409,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V22: # column 22
           name: Cumresp_COW # Name of second variable in accompanying file.
-          desc: cumulative respiration at COW # Description of the variable
+          varDesc: cumulative respiration at COW # description of the variable
           site: Coweeta (COW) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -418,7 +418,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V23: # column 23
           name: Cumresp_NIW # Name of second variable in accompanying file.
-          desc: cumulative respiration at NIW # Description of the variable
+          varDesc: cumulative respiration at NIW # description of the variable
           site: Niwot Range (NIW) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -427,7 +427,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V24: # column 24
           name: Cumresp_HB # Name of second variable in accompanying file.
-          desc: cumulative respiration at HB # Description of the variable
+          varDesc: cumulative respiration at HB # description of the variable
           site: Hubbard Brook (HB) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -436,7 +436,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V25: # column 25
           name: Cumresp_ORD # Name of second variable in accompanying file.
-          desc: cumulative respiration at ORD # Description of the variable
+          varDesc: cumulative respiration at ORD # description of the variable
           site: Ordway Swisher (ORD) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -445,7 +445,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V26: # column 26
           name: Cumresp_SGS # Name of second variable in accompanying file.
-          desc: cumulative respiration at SGS # Description of the variable
+          varDesc: cumulative respiration at SGS # description of the variable
           site: Short Grass Steppe #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -454,7 +454,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V27: # column 27
           name: Cumresp_AP # Name of second variable in accompanying file.
-          desc: cumulative respiration at AP # Description of the variable
+          varDesc: cumulative respiration at AP # description of the variable
           site: American Prairie (AP) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -463,7 +463,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V28: # column 28
           name: Cumresp_KAN # Name of second variable in accompanying file.
-          desc: cumulative respiration at KAN # Description of the variable
+          varDesc: cumulative respiration at KAN # description of the variable
           site: Kankankee Sands (KAN) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
@@ -472,7 +472,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V29: # column 29
           name: Cumresp_JEP # Name of second variable in accompanying file.
-          desc: cumulative respiration at JEP # Description of the variable
+          varDesc: cumulative respiration at JEP # description of the variable
           site: Jepson Prairie (JEP) #site where the incubated sample comes from.
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.

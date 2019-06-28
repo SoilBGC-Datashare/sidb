@@ -21,9 +21,9 @@ siteInfo:
         landCover: tundra # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
         vegNote: "Ledum palustre, Vaccinium uliginosum, Sphagnum spp., and Larix gmelini Rupr." #Additional details about land cover such as species or functional type composition
         soilTaxonomy:
-          soilOrder: Gelisol # Soil order according to the classification system described below
+          soilOrder: Gelisol # Soil order according to the classification system varDescribed below
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem: USDA # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
           surfaceAtm: yes # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
@@ -32,7 +32,7 @@ siteInfo:
           activeLayer: 0.5 # Depth of the active layer in meters
 
 incubationInfo:
-        description: "three laboratory replicates were incubated for 40 days at 5, 10, 15 and 20 degrees and under different moisture contents (0, 30, 60, 100 percent, CS- completely water saturated)." # Short description of the incubation setup and main treatments
+        incDesc: "three laboratory replicates were incubated for 40 days at 5, 10, 15 and 20 degrees and under different moisture contents (0, 30, 60, 100 percent, CS- completely water saturated)." # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: # in cm
           bottom: # in cm
@@ -55,286 +55,286 @@ incubationInfo:
           rockPicking: no # yes or no
         gasAnalyzer: NaOH titration # Gas analysis equipment for measurements
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
        V1:  # column 1
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
         units: d # Units of first variable in accompanying file.
        V2: # column 2
         name: CO2_5_10_20_0 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 5 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 0
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V3:
         name: CO2_5_10_20_30 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 5 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 30
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V4:
         name: CO2_5_10_20_60 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 5 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 60
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V5:
         name: CO2_5_10_20_100 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 5 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 100
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V6:
         name: CO2_5_10_20_CS # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 5 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 150
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V7:
         name: CO2_5_20_30_0 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 5 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 0
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V8:
         name: CO2_5_20_30_30 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 5 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 30
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V9:
         name: CO2_5_20_30_60 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 5 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 60
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V10:
         name: CO2_5_20_30_100 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 5 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 100
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V11:
         name: CO2_5_20_30_CS # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 5 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 150
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V12:
         name: CO2_10_10_20_0 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 0
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V13:
         name: CO2_10_10_20_30 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 30
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V14:
         name: CO2_10_10_20_60 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 60
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V15:
         name: CO2_10_10_20_100 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 100
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V16:
         name: CO2_10_10_20_CS # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 150
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V17:
         name: CO2_10_20_30_0 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 0
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V18:
         name: CO2_10_20_30_30 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 30
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V19:
         name: CO2_10_20_30_60 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 60
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V20:
         name: CO2_10_20_30_100 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 100
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V21:
         name: CO2_10_20_30_CS # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 150
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V22:
         name: CO2_15_10_20_0 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 0
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V23:
         name: CO2_15_10_20_30 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 30
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V24:
         name: CO2_15_10_20_60 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 60
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V25:
         name: CO2_15_10_20_100 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 100
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V26:
         name: CO2_15_10_20_CS # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 150
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V27:
         name: CO2_15_20_30_0 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 0
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V28:
         name: CO2_15_20_30_30 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 30
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V29:
         name: CO2_15_20_30_60 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 60
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V30:
         name: CO2_15_20_30_100 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 100
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V31:
         name: CO2_15_20_30_CS # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 150
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V32:
         name: CO2_20_10_20_0 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 0
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V33:
         name: CO2_20_10_20_30 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 30
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V34:
         name: CO2_20_10_20_60 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 60
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V35:
         name: CO2_20_10_20_100 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 100
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V36:
         name: CO2_20_10_20_CS # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 15
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 150
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V37:
         name: CO2_20_20_30_0 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 0
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V38:
         name: CO2_20_20_30_30 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 30
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V39:
         name: CO2_20_20_30_60 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 60
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V40:
         name: CO2_20_20_30_100 # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 100
         units: mgC-CO2/gSoil # Units in which this variable is provided if not a factor
        V41:
         name: CO2_20_20_30_CS # Name of second variable in accompanying file.
-        desc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # Description of the variable
+        varDesc: "Change in peat C mineralization rates of permafrost peatlands in Tuqiang site (soil depth interval 10-20 cm) incubated at 5 degrees with 0 percent water content" # description of the variable
         midDepth: 25
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         moisture: 150

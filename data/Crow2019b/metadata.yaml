@@ -93,7 +93,7 @@ siteInfo:
           - forest
         vegNote: #Additional details about land cover such as species or functional type composition
         soilTaxonomy:
-          soilOrder: # Soil order according to the classification system described below
+          soilOrder: # Soil order according to the classification system varDescribed below
             - Andisol
             - Andisol
             - Andisol
@@ -104,7 +104,7 @@ siteInfo:
             - Andisol
             - Andisol
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
             - Akaka
             - Akaka
             - Akaka
@@ -129,7 +129,7 @@ siteInfo:
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: "Sub-samples of the 0-15 cm depth section of the mineral transition layer from each plot were incubated at 16, 21, and 26°C, to determine the apparent temperature sensitivity" # Short description of the incubation setup and main treatments
+        incDesc: "Sub-samples of the 0-15 cm depth section of the mineral transition layer from each plot were incubated at 16, 21, and 26°C, to determine the apparent temperature sensitivity" # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
           top: # in cm
           bottom: # in cm
@@ -154,13 +154,13 @@ incubationInfo:
           rockPicking: No # yes or no
         gasAnalyzer: "Clarus 580 gas chromatograph with a PAL combi-XL autosampler (PerkinElmer, Waltham, Ma, USA)" # Gas analysis equipment for CO2 measurements
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
         V1: # column 1
           name: time # Name of first variable in the accompanying csv data file. First variable should be time.
           units: d # Units of first variable in accompanying file.
         V2:
           name: SPE800_16C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 16 degrees celsius for site SPE800" # Description of the variable
+          varDesc: "CO2 production rate measured at 16 degrees celsius for site SPE800" # description of the variable
           site: SPE800
           temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -168,7 +168,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V3: # Continue the structure for V2 in case of additional variables.
           name: SPE800_21C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 21 degrees celsius for site SPE800" # Description of the variable
+          varDesc: "CO2 production rate measured at 21 degrees celsius for site SPE800" # description of the variable
           site: SPE800
           temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -176,7 +176,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V4: # Continue the structure for V2 in case of additional variables.
           name: SPE800_26C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 26 degrees celsius for site SPE800" # Description of the variable
+          varDesc: "CO2 production rate measured at 26 degrees celsius for site SPE800" # description of the variable
           site: SPE800
           temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -184,7 +184,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V5:
           name: SPE934_16C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 16 degrees celsius for site SPE934" # Description of the variable
+          varDesc: "CO2 production rate measured at 16 degrees celsius for site SPE934" # description of the variable
           site: SPE934
           temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -192,7 +192,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V6: # Continue the structure for V2 in case of additional variables.
           name: SPE934_21C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 21 degrees celsius for site SPE934" # Description of the variable
+          varDesc: "CO2 production rate measured at 21 degrees celsius for site SPE934" # description of the variable
           site: SPE934
           temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -200,7 +200,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V7: # Continue the structure for V2 in case of additional variables.
           name: SPE934_26C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 26 degrees celsius for site SPE934" # Description of the variable
+          varDesc: "CO2 production rate measured at 26 degrees celsius for site SPE934" # description of the variable
           site: SPE934
           temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -208,7 +208,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V8:
           name: SPE1024_16C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 16 degrees celsius for site SPE1024" # Description of the variable
+          varDesc: "CO2 production rate measured at 16 degrees celsius for site SPE1024" # description of the variable
           site: SPE1024
           temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -216,7 +216,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V9: # Continue the structure for V2 in case of additional variables.
           name: SPE1024_21C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 21 degrees celsius for site SPE1024" # Description of the variable
+          varDesc: "CO2 production rate measured at 21 degrees celsius for site SPE1024" # description of the variable
           site: SPE1024
           temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -224,7 +224,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V10: # Continue the structure for V2 in case of additional variables.
           name: SPE1024_26C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 26 degrees celsius for site SPE1024" # Description of the variable
+          varDesc: "CO2 production rate measured at 26 degrees celsius for site SPE1024" # description of the variable
           site: SPE1024
           temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -232,7 +232,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V11:
           name: SPE1116_16C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 16 degrees celsius for site SPE1116" # Description of the variable
+          varDesc: "CO2 production rate measured at 16 degrees celsius for site SPE1116" # description of the variable
           site: SPE1116
           temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -240,7 +240,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V12: # Continue the structure for V2 in case of additional variables.
           name: SPE1116_21C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 21 degrees celsius for site SPE1116" # Description of the variable
+          varDesc: "CO2 production rate measured at 21 degrees celsius for site SPE1116" # description of the variable
           site: SPE1116
           temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -248,7 +248,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V13: # Continue the structure for V2 in case of additional variables.
           name: SPE1116_26C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 26 degrees celsius for site SPE1116" # Description of the variable
+          varDesc: "CO2 production rate measured at 26 degrees celsius for site SPE1116" # description of the variable
           site: SPE1116
           temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -256,7 +256,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V14:
           name: WPL1116_16C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 16 degrees celsius for site WPL1116" # Description of the variable
+          varDesc: "CO2 production rate measured at 16 degrees celsius for site WPL1116" # description of the variable
           site: WPL1116
           temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -264,7 +264,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V15: # Continue the structure for V2 in case of additional variables.
           name: WPL1116_21C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 21 degrees celsius for site WPL1116" # Description of the variable
+          varDesc: "CO2 production rate measured at 21 degrees celsius for site WPL1116" # description of the variable
           site: WPL1116
           temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -272,7 +272,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V16: # Continue the structure for V2 in case of additional variables.
           name: WPL1116_26C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 26 degrees celsius for site WPL1116" # Description of the variable
+          varDesc: "CO2 production rate measured at 26 degrees celsius for site WPL1116" # description of the variable
           site: WPL1116
           temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -280,7 +280,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V17:
           name: WPL1204_16C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 16 degrees celsius for site WPL1204" # Description of the variable
+          varDesc: "CO2 production rate measured at 16 degrees celsius for site WPL1204" # description of the variable
           site: WPL1204
           temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -288,7 +288,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V18: # Continue the structure for V2 in case of additional variables.
           name: WPL1204_21C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 21 degrees celsius for site WPL1204" # Description of the variable
+          varDesc: "CO2 production rate measured at 21 degrees celsius for site WPL1204" # description of the variable
           site: WPL1204
           temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -296,7 +296,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V19: # Continue the structure for V2 in case of additional variables.
           name: WPL1204_26C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 26 degrees celsius for site WPL1204" # Description of the variable
+          varDesc: "CO2 production rate measured at 26 degrees celsius for site WPL1204" # description of the variable
           site: WPL1204
           temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -304,7 +304,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V20:
           name: WPL1274_16C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 16 degrees celsius for site WPL1274" # Description of the variable
+          varDesc: "CO2 production rate measured at 16 degrees celsius for site WPL1274" # description of the variable
           site: WPL1274
           temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -312,7 +312,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V21: # Continue the structure for V2 in case of additional variables.
           name: WPL1274_21C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 21 degrees celsius for site WPL1274" # Description of the variable
+          varDesc: "CO2 production rate measured at 21 degrees celsius for site WPL1274" # description of the variable
           site: WPL1274
           temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -320,7 +320,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V22: # Continue the structure for V2 in case of additional variables.
           name: WPL1274_26C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 26 degrees celsius for site WPL1274" # Description of the variable
+          varDesc: "CO2 production rate measured at 26 degrees celsius for site WPL1274" # description of the variable
           site: WPL1274
           temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -328,7 +328,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V23:
           name: HAK1468_16C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 16 degrees celsius for site HAK1468" # Description of the variable
+          varDesc: "CO2 production rate measured at 16 degrees celsius for site HAK1468" # description of the variable
           site: HAK1468
           temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -336,7 +336,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V24: # Continue the structure for V2 in case of additional variables.
           name: HAK1468_21C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 21 degrees celsius for site HAK1468" # Description of the variable
+          varDesc: "CO2 production rate measured at 21 degrees celsius for site HAK1468" # description of the variable
           site: HAK1468
           temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -344,7 +344,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V25: # Continue the structure for V2 in case of additional variables.
           name: HAK1468_26C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 26 degrees celsius for site HAK1468" # Description of the variable
+          varDesc: "CO2 production rate measured at 26 degrees celsius for site HAK1468" # description of the variable
           site: HAK1468
           temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -352,7 +352,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V26:
           name: HAK1600_16C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 16 degrees celsius for site HAK1600" # Description of the variable
+          varDesc: "CO2 production rate measured at 16 degrees celsius for site HAK1600" # description of the variable
           site: HAK1600
           temperature: 16 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -360,7 +360,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V27: # Continue the structure for V2 in case of additional variables.
           name: HAK1600_21C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 21 degrees celsius for site HAK1600" # Description of the variable
+          varDesc: "CO2 production rate measured at 21 degrees celsius for site HAK1600" # description of the variable
           site: HAK1600
           temperature: 21 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided
@@ -368,7 +368,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V28: # Continue the structure for V2 in case of additional variables.
           name: HAK1600_26C # Name of second variable in accompanying file.
-          desc: "CO2 production rate measured at 26 degrees celsius for site HAK1600" # Description of the variable
+          varDesc: "CO2 production rate measured at 26 degrees celsius for site HAK1600" # description of the variable
           site: HAK1600
           temperature: 26 # 'treatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above.
           units: microgCO2/gSoil # Units in which this variable is provided

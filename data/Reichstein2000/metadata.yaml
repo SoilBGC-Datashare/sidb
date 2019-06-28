@@ -28,9 +28,9 @@ siteInfo:
           - Vaccinium spp.
           - Calamagrostis villosa
         soilTaxonomy:
-          soilOrder: # Soil order according to the classification system described below
+          soilOrder: # Soil order according to the classification system varDescribed below
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
 #These do not have to be arrays of equal length to site array
         permafrost:
@@ -38,7 +38,7 @@ siteInfo:
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: "Three ridge and three gully soils were incubated at 5, 15, and 25deg for 104 d. A closed gas-cycle apparatus including an IRGA was used to measure CO2-flux" # Short description of the incubation setup and main treatments
+        incDesc: "Three ridge and three gully soils were incubated at 5, 15, and 25deg for 104 d. A closed gas-cycle apparatus including an IRGA was used to measure CO2-flux" # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: 0 # in cm
           bottom:  5 # in cm
@@ -63,79 +63,79 @@ incubationInfo:
           rockPicking: # yes or no
         gasAnalyzer: NaOH titration # Gas analysis equipment for measurements
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
         V1: # column 1
           name: time # Name of first variable in the accompanying csv data file. First variable should be time.
           units: d # Units of first variable in accompanying file.
         V2:
           name: CMin_Ridge_5
           units: mgCCO2/gC
-          desc: "Carbon mineralisation over time at 5 degrees for ridge-organic-layer samples"
+          varDesc: "Carbon mineralisation over time at 5 degrees for ridge-organic-layer samples"
           temperature: 5
           site: Davos_Ridge
         V3:
           name: CMin_Ridge_15
           units: mgCCO2/gC
-          desc: "Carbon mineralisation over time at 15 degrees for ridge-organic-layer samples"
+          varDesc: "Carbon mineralisation over time at 15 degrees for ridge-organic-layer samples"
           temperature: 15
           site: Davos_Ridge
         V4:
           name: CMin_Ridge_25
           units: mgCCO2/gC
-          desc: "Carbon mineralisation over time at 25 degrees for ridge-organic-layer samples"
+          varDesc: "Carbon mineralisation over time at 25 degrees for ridge-organic-layer samples"
           temperature: 25
           site: Davos_Ridge
         V5:
           name: CMin_Gully_5
           units: mgCCO2/gC
-          desc: "Carbon mineralisation over time at 5 degrees for gully-Ah samples"
+          varDesc: "Carbon mineralisation over time at 5 degrees for gully-Ah samples"
           temperature: 5
           site: Davos_Gully
         V6:
           name: CMin_Gully_15
           units: mgCCO2/gC
-          desc: "Carbon mineralisation over time at 15 degrees for gully-Ah samples"
+          varDesc: "Carbon mineralisation over time at 15 degrees for gully-Ah samples"
           temperature: 15
           site: Davos_Gully
         V7:
           name: CMin_Gully_25
           units: mgCCO2/gC
-          desc: "Carbon mineralisation over time at 25 degrees for gully-Ah samples"
+          varDesc: "Carbon mineralisation over time at 25 degrees for gully-Ah samples"
           temperature: 25
           site: Davos_Gully
         V8:
           name: RR_Ridge_5
           units: mgCCO2/gC
-          desc: "Respiration rates over time at 5 degrees for ridge-organic-layer samples"
+          varDesc: "Respiration rates over time at 5 degrees for ridge-organic-layer samples"
           temperature: 5
           site: Davos_Ridge
         V9:
           name: RR_Ridge_15
           units: mgCCO2/gC
-          desc: "Respiration rates over time at 15 degrees for ridge-organic-layer samples"
+          varDesc: "Respiration rates over time at 15 degrees for ridge-organic-layer samples"
           temperature: 15
           site: Davos_Ridge
         V10:
           name: RR_Ridge_25
           units: mgCCO2/gC
-          desc: "Respiration rates over time at 25 degrees for ridge-organic-layer samples"
+          varDesc: "Respiration rates over time at 25 degrees for ridge-organic-layer samples"
           temperature: 25
           site: Davos_Ridge
         V11:
           name: RR_Gully_5
           units: mgCCO2/gC
-          desc: "Respiration rates over time at 5 degrees for gully-Ah samples"
+          varDesc: "Respiration rates over time at 5 degrees for gully-Ah samples"
           temperature: 5
           site: Davos_Gully
         V12:
           name: RR_Gully_15
           units: mgCCO2/gC
-          desc: "Respiration rates over time at 15 degrees for gully-Ah samples"
+          varDesc: "Respiration rates over time at 15 degrees for gully-Ah samples"
           temperature: 15
           site: Davos_Gully
         V13:
           name: RR_Gully_25
           units: mgCCO2/gC
-          desc: "Respiration rates over time at 25 degrees for gully-Ah samples"
+          varDesc: "Respiration rates over time at 25 degrees for gully-Ah samples"
           temperature: 25
           site: Davos_Gully

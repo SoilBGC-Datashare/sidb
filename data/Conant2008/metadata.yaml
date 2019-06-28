@@ -19,16 +19,16 @@ siteInfo:
   landCover: cultivated
   vegNote:
   soilTaxonomy:
-    soilOrder: # Soil order according to the classification system described below
+    soilOrder: # Soil order according to the classification system varDescribed below
     soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-    soilSeries: # Soil series according to the classification system described below
+    soilSeries: # Soil series according to the classification system varDescribed below
     classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
   permafrost:
     permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
     activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-    description: "Soil respiration rates were determined through periodic analysis of CO2 concentration of headspace gas samples using a LI-COR 6525"
+    incDesc: "Soil respiration rates were determined through periodic analysis of CO2 concentration of headspace gas samples using a LI-COR 6525"
     depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
       top: # in cm
       bottom: # in cm
@@ -60,18 +60,18 @@ variables:
         V2:
           name:  ND.CU.4
           temperature: 4
-          desc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 4 degrees"
+          varDesc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 4 degrees"
           units: mgC-CO2/gSoil
           site: "Northern Great Plains Research Laboratory, Mandan, North Dakota"
         V3:
           name:  ND.CU.15
           temperature: 15
-          desc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 15 degrees"
+          varDesc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 15 degrees"
           units: mgC-CO2/gSoil
           site: "Northern Great Plains Research Laboratory, Mandan, North Dakota"
         V4:
           name:  ND.CU.25
           temperature: 25
-          desc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 25 degrees"
+          varDesc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 25 degrees"
           units: mgC-CO2/gSoil
           site: "Northern Great Plains Research Laboratory, Mandan, North Dakota"

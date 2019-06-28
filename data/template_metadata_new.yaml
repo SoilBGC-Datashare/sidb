@@ -29,7 +29,7 @@ siteInfo:
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: # Short description of the incubation setup and main treatments
+        incDesc: # Short description of the incubation setup and main treatments
 # These fields should all be one dimensional arrays. Values for experimental variables with multiple treatment levels should be entered in the variables section, and left blank here
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, leave blank
           top:
@@ -61,7 +61,7 @@ variables: # These describe the columns of your timeSeries.csv file
           units: # Units of first variable in accompanying file. Usually "d" for days
         V2: # column 2
           name: # Name of second variable in accompanying file
-          desc: # Description of the variable
+          varDesc: # Description of the variable
           site: # Site where the incubated sample was collected
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this word by any of the listed variables in incubationInfo above (temperature, moisture, etc.) and type value or level after colon
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc

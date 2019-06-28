@@ -21,7 +21,7 @@ siteInfo:
         soilTaxonomy:
           soilOrder: Gelisol
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem: USDA
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
@@ -30,7 +30,7 @@ siteInfo:
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: "Respiration of soils from graminoid and shrub tundra in response to 2 soil moistures and 5 temperatures over 49 days"
+        incDesc: "Respiration of soils from graminoid and shrub tundra in response to 2 soil moistures and 5 temperatures over 49 days"
         vegetation:
           value:
           units:
@@ -56,13 +56,13 @@ incubationInfo:
           rockPicking: no
         gasAnalyzer: "LiCor-8100 infrared gas analyze"
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
         V1: # column 1
           name: time
           units: d
         V2: # column 2
           name: SG_40_4.5
-          desc: "Respiration rate of shallow graminoid soil at 40% field capacity and 4.5 C"
+          varDesc: "Respiration rate of shallow graminoid soil at 40% field capacity and 4.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 10
@@ -73,7 +73,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V3:
           name: SG_60_4.5
-          desc: "Respiration rate of shallow graminoid soil at 60% field capacity and 4.5 C"
+          varDesc: "Respiration rate of shallow graminoid soil at 60% field capacity and 4.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 10
@@ -84,7 +84,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V4:
           name: SG_40_8.5
-          desc: "Respiration rate of shallow graminoid soil at 40% field capacity and 8.5 C"
+          varDesc: "Respiration rate of shallow graminoid soil at 40% field capacity and 8.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 10
@@ -95,7 +95,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V5:
           name: SG_60_8.5
-          desc: "Respiration rate of shallow graminoid soil at 60% field capacity and 8.5 C"
+          varDesc: "Respiration rate of shallow graminoid soil at 60% field capacity and 8.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 10
@@ -106,7 +106,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V6:
           name: SG_40_13
-          desc: "Respiration rate of shallow graminoid soil at 40% field capacity and 13 C"
+          varDesc: "Respiration rate of shallow graminoid soil at 40% field capacity and 13 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 10
@@ -117,7 +117,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V7:
           name: SG_60_13
-          desc: "Respiration rate of shallow graminoid soil at 60% field capacity and 13 C"
+          varDesc: "Respiration rate of shallow graminoid soil at 60% field capacity and 13 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 10
@@ -128,7 +128,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V8:
           name: SG_40_17
-          desc: "Respiration rate of shallow graminoid soil at 40% field capacity and 17 C"
+          varDesc: "Respiration rate of shallow graminoid soil at 40% field capacity and 17 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 10
@@ -139,7 +139,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V9:
           name: SG_60_17
-          desc: "Respiration rate of shallow graminoid soil at 60% field capacity and 17 C"
+          varDesc: "Respiration rate of shallow graminoid soil at 60% field capacity and 17 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 10
@@ -150,7 +150,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V10:
           name: SG_40_24.5
-          desc: "Respiration rate of shallow graminoid soil at 40% field capacity and 24.5 C"
+          varDesc: "Respiration rate of shallow graminoid soil at 40% field capacity and 24.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 10
@@ -161,7 +161,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V11:
           name: SG_60_24.5
-          desc: "Respiration rate of shallow graminoid soil at 60% field capacity and 24.5 C"
+          varDesc: "Respiration rate of shallow graminoid soil at 60% field capacity and 24.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 10
@@ -172,7 +172,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V12: # column 2
           name: SS_40_4.5
-          desc: "Respiration rate of shallow shrub soil at 40% field capacity and 4.5 C"
+          varDesc: "Respiration rate of shallow shrub soil at 40% field capacity and 4.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 10
@@ -183,7 +183,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V13:
           name: SS_60_4.5
-          desc: "Respiration rate of shallow shrub soil at 60% field capacity and 4.5 C"
+          varDesc: "Respiration rate of shallow shrub soil at 60% field capacity and 4.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 10
@@ -194,7 +194,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V14:
           name: SS_40_8.5
-          desc: "Respiration rate of shallow shrub soil at 40% field capacity and 8.5 C"
+          varDesc: "Respiration rate of shallow shrub soil at 40% field capacity and 8.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 10
@@ -205,7 +205,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V15:
           name: SS_60_8.5
-          desc: "Respiration rate of shallow shrub soil at 60% field capacity and 8.5 C"
+          varDesc: "Respiration rate of shallow shrub soil at 60% field capacity and 8.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 10
@@ -216,7 +216,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V16:
           name: SS_40_13
-          desc: "Respiration rate of shallow shrub soil at 40% field capacity and 13 C"
+          varDesc: "Respiration rate of shallow shrub soil at 40% field capacity and 13 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 10
@@ -227,7 +227,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V17:
           name: SS_60_13
-          desc: "Respiration rate of shallow shrub soil at 60% field capacity and 13 C"
+          varDesc: "Respiration rate of shallow shrub soil at 60% field capacity and 13 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 10
@@ -238,7 +238,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V18:
           name: SS_40_17
-          desc: "Respiration rate of shallow shrub soil at 40% field capacity and 17 C"
+          varDesc: "Respiration rate of shallow shrub soil at 40% field capacity and 17 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 10
@@ -249,7 +249,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V19:
           name: SS_60_17
-          desc: "Respiration rate of shallow shrub soil at 60% field capacity and 17 C"
+          varDesc: "Respiration rate of shallow shrub soil at 60% field capacity and 17 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 10
@@ -260,7 +260,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V20:
           name: SS_40_24.5
-          desc: "Respiration rate of shallow shrub soil at 40% field capacity and 24.5 C"
+          varDesc: "Respiration rate of shallow shrub soil at 40% field capacity and 24.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 10
@@ -271,7 +271,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V21:
           name: SS_60_24.5
-          desc: "Respiration rate of shallow shrub soil at 60% field capacity and 24.5 C"
+          varDesc: "Respiration rate of shallow shrub soil at 60% field capacity and 24.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 10
@@ -282,7 +282,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V22: # column 2
           name: DG_40_4.5
-          desc: "Respiration rate of deep graminoid soil at 40% field capacity and 4.5 C"
+          varDesc: "Respiration rate of deep graminoid soil at 40% field capacity and 4.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 30
@@ -293,7 +293,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V23:
           name: DG_60_4.5
-          desc: "Respiration rate of deep graminoid soil at 60% field capacity and 4.5 C"
+          varDesc: "Respiration rate of deep graminoid soil at 60% field capacity and 4.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 30
@@ -304,7 +304,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V24:
           name: DG_40_8.5
-          desc: "Respiration rate of deep graminoid soil at 40% field capacity and 8.5 C"
+          varDesc: "Respiration rate of deep graminoid soil at 40% field capacity and 8.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 30
@@ -315,7 +315,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V25:
           name: DG_60_8.5
-          desc: "Respiration rate of deep graminoid soil at 60% field capacity and 8.5 C"
+          varDesc: "Respiration rate of deep graminoid soil at 60% field capacity and 8.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 30
@@ -326,7 +326,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V26:
           name: DG_40_13
-          desc: "Respiration rate of deep graminoid soil at 40% field capacity and 13 C"
+          varDesc: "Respiration rate of deep graminoid soil at 40% field capacity and 13 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 30
@@ -337,7 +337,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V27:
           name: DG_60_13
-          desc: "Respiration rate of deep graminoid soil at 60% field capacity and 13 C"
+          varDesc: "Respiration rate of deep graminoid soil at 60% field capacity and 13 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 30
@@ -348,7 +348,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V28:
           name: DG_40_17
-          desc: "Respiration rate of deep graminoid soil at 40% field capacity and 17 C"
+          varDesc: "Respiration rate of deep graminoid soil at 40% field capacity and 17 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 30
@@ -359,7 +359,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V29:
           name: DG_60_17
-          desc: "Respiration rate of deep graminoid soil at 60% field capacity and 17 C"
+          varDesc: "Respiration rate of deep graminoid soil at 60% field capacity and 17 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 30
@@ -370,7 +370,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V30:
           name: DG_40_24.5
-          desc: "Respiration rate of deep graminoid soil at 40% field capacity and 24.5 C"
+          varDesc: "Respiration rate of deep graminoid soil at 40% field capacity and 24.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 30
@@ -381,7 +381,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V31:
           name: DG_60_24.5
-          desc: "Respiration rate of deep graminoid soil at 60% field capacity and 24.5 C"
+          varDesc: "Respiration rate of deep graminoid soil at 60% field capacity and 24.5 C"
           site: Kangerlussuaq
           vegetation: graminoid
           midDepth: 30
@@ -392,7 +392,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V32: # column 2
           name: DS_40_4.5
-          desc: "Respiration rate of deep shrub soil at 40% field capacity and 4.5 C"
+          varDesc: "Respiration rate of deep shrub soil at 40% field capacity and 4.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 30
@@ -403,7 +403,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V33:
           name: DS_60_4.5
-          desc: "Respiration rate of deep shrub soil at 60% field capacity and 4.5 C"
+          varDesc: "Respiration rate of deep shrub soil at 60% field capacity and 4.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 30
@@ -414,7 +414,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V34:
           name: DS_40_8.5
-          desc: "Respiration rate of deep shrub soil at 40% field capacity and 8.5 C"
+          varDesc: "Respiration rate of deep shrub soil at 40% field capacity and 8.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 30
@@ -425,7 +425,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V35:
           name: DS_60_8.5
-          desc: "Respiration rate of deep shrub soil at 60% field capacity and 8.5 C"
+          varDesc: "Respiration rate of deep shrub soil at 60% field capacity and 8.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 30
@@ -436,7 +436,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V36:
           name: DS_40_13
-          desc: "Respiration rate of deep shrub soil at 40% field capacity and 13 C"
+          varDesc: "Respiration rate of deep shrub soil at 40% field capacity and 13 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 30
@@ -447,7 +447,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V37:
           name: DS_60_13
-          desc: "Respiration rate of deep shrub soil at 60% field capacity and 13 C"
+          varDesc: "Respiration rate of deep shrub soil at 60% field capacity and 13 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 30
@@ -458,7 +458,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V38:
           name: DS_40_17
-          desc: "Respiration rate of deep shrub soil at 40% field capacity and 17 C"
+          varDesc: "Respiration rate of deep shrub soil at 40% field capacity and 17 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 40
@@ -469,7 +469,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V39:
           name: DS_60_17
-          desc: "Respiration rate of deep shrub soil at 60% field capacity and 17 C"
+          varDesc: "Respiration rate of deep shrub soil at 60% field capacity and 17 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 30
@@ -480,7 +480,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V40:
           name: DS_40_24.5
-          desc: "Respiration rate of deep shrub soil at 40% field capacity and 24.5 C"
+          varDesc: "Respiration rate of deep shrub soil at 40% field capacity and 24.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 40
@@ -491,7 +491,7 @@ variables: # These describe the columns of your timeSeries.csv file
           statistic:
         V41:
           name: DS_60_24.5
-          desc: "Respiration rate of deep shrub soil at 60% field capacity and 24.5 C"
+          varDesc: "Respiration rate of deep shrub soil at 60% field capacity and 24.5 C"
           site: Kangerlussuaq
           vegetation: shrub
           midDepth: 30

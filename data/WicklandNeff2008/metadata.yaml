@@ -39,12 +39,12 @@ siteInfo:
           - "mature black spruce forest"
           - "mature black spruce forest"
         soilTaxonomy:
-          soilOrder: # Soil order according to the classification system described below
+          soilOrder: # Soil order according to the classification system varDescribed below
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
             - "Inceptisol cryept"
             - "Gelisol orthel"
             - "Gelisol histel"
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem: USDA # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
         permafrost:
           permafrostExist: # Yes or blank if no (if yes, permafrost must exist at the site)
@@ -57,7 +57,7 @@ siteInfo:
             - 0.4
 
 incubationInfo:
-        description: "five laboratory replicates were incubated at five different moisture contents (2, 25, 50, 75, and 100 percent saturation) and two different temperatures (10 and 20 deg) in a full factorial design for 57 days." # Short description of the incubation setup and main treatments
+        incDesc: "five laboratory replicates were incubated at five different moisture contents (2, 25, 50, 75, and 100 percent saturation) and two different temperatures (10 and 20 deg) in a full factorial design for 57 days." # Short description of the incubation setup and main treatments
         drainage:
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
           top: # in cm
@@ -83,14 +83,14 @@ incubationInfo:
           rockPicking: no # yes or no
         gasAnalyzer: Licor IR # Gas analysis equipment for CO2 measurements
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
        V1: # column 1
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
         units: d # Units of first variable in accompanying file.
 
        V2:
         name: C_WD_10_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 2 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -104,7 +104,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V3:
         name: C_WD_10_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 25 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -118,7 +118,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V4:
         name: C_WD_10_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 50 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -132,7 +132,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V5:
         name: C_WD_10_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 75 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -146,7 +146,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V6:
         name: C_WD_10_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 100 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 100 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -160,7 +160,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V7:
         name: C_WD_20_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 2 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -174,7 +174,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V8:
         name: C_WD_20_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 25 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -188,7 +188,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V9:
         name: C_WD_20_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 50 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -202,7 +202,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V10:
         name: C_WD_20_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 75 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -216,7 +216,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V11:
         name: C_WD_20_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 100 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 100 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -230,7 +230,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V12:
         name: C_MWD_10_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 2 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -244,7 +244,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V13:
         name: C_MWD_10_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 25 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -258,7 +258,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V14:
         name: C_MWD_10_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 50 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -272,7 +272,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V15:
         name: C_MWD_10_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 75 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -286,7 +286,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V16:
         name: C_MWD_10_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 100 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 100 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -300,7 +300,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V17:
         name: C_MWD_20_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 2 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -314,7 +314,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V18:
         name: C_MWD_20_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 25 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -328,7 +328,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V19:
         name: C_MWD_20_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 50 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -342,7 +342,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V20:
         name: C_MWD_20_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 75 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -356,7 +356,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V21:
         name: C_MWD_20_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 75 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -370,7 +370,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V22:
         name: C_PD_10_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 2 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -384,7 +384,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V23:
         name: C_PD_10_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 25 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -398,7 +398,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V24:
         name: C_PD_10_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 50 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -412,7 +412,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V25:
         name: C_PD_10_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 75 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -426,7 +426,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V26:
         name: C_PD_10_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 100 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 100 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -440,7 +440,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V27:
         name: C_PD_20_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 2 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -454,7 +454,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V28:
         name: C_PD_20_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 25 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -468,7 +468,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V29:
         name: C_PD_20_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 50 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -482,7 +482,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V30:
         name: C_PD_20_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 75 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
@@ -496,7 +496,7 @@ variables: # These describe the columns of your timeSeries.csv file
 
        V31:
         name: C_PD_20_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 2 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
         temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.

@@ -20,16 +20,16 @@ siteInfo:
         landCover: forest # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
         vegNote: Picea abies, Pinus sylvestris #Additional details about land cover such as species or functional type composition
         soilTaxonomy:
-          soilOrder: # Soil order according to the classification system described below
+          soilOrder: # Soil order according to the classification system varDescribed below
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
         permafrost:
           permafrostExist: # Yes or blank if no (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: "495 day aerobic incubation at 25 degrees C, 50% air humidity with weekly control for soil moisture loss. Subsamples taken every 3 months and incubated at 5, 12, 19, 26 degrees C for 24 hours, then CO2 measured." # Short description of the incubation setup and main treatments
+        incDesc: "495 day aerobic incubation at 25 degrees C, 50% air humidity with weekly control for soil moisture loss. Subsamples taken every 3 months and incubated at 5, 12, 19, 26 degrees C for 24 hours, then CO2 measured." # Short description of the incubation setup and main treatments
         vegetation:
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
           top: # in cm
@@ -55,13 +55,13 @@ incubationInfo:
           rockPicking: yes # yes or no
         gasAnalyzer: GC # Gas analysis equipment for CO2 measurements
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
        V1: # column 1
          name: time # Name of first variable in the accompanying csv data file. First variable should be time.
          units: d # Units of first variable in accompanying file.
        V2: # column 2
          name: Pine_O_26 # Name of second variable in accompanying file.
-         desc: "Respiration rate from organic layer from pine forest, incubated for 24 hours at 26 degrees C"
+         varDesc: "Respiration rate from organic layer from pine forest, incubated for 24 hours at 26 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
@@ -72,7 +72,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V3:
          name: Spruce_O_26 # Name of second variable in accompanying file.
-         desc: "Respiration rate from organic layer from spruce forest, incubated for 24 hours at 26 degrees C"
+         varDesc: "Respiration rate from organic layer from spruce forest, incubated for 24 hours at 26 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
@@ -83,7 +83,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V4:
          name: Spruce_0_15_26 # Name of second variable in accompanying file.
-         desc: "Respiration rate from 0-15 cm soil from spruce forest, incubated for 24 hours at 26 degrees C"
+         varDesc: "Respiration rate from 0-15 cm soil from spruce forest, incubated for 24 hours at 26 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 7.5
@@ -94,7 +94,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V5:
          name: Pine_0_15_26 # Name of second variable in accompanying file.
-         desc: "Respiration rate from 0-15 cm soil from pine forest, incubated for 24 hours at 26 degrees C"
+         varDesc: "Respiration rate from 0-15 cm soil from pine forest, incubated for 24 hours at 26 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 7.5
@@ -105,7 +105,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V6:
          name: Pine_15_30_26 # Name of second variable in accompanying file.
-         desc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 26 degrees C"
+         varDesc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 26 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 22.5
@@ -116,7 +116,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V7:
          name: Spruce_15_30_26 # Name of second variable in accompanying file.
-         desc: "Respiration rate from 15-30 cm soil from spruce forest, incubated for 24 hours at 26 degrees C"
+         varDesc: "Respiration rate from 15-30 cm soil from spruce forest, incubated for 24 hours at 26 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 22.5
@@ -127,7 +127,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V8:
          name: Spruce_O_05 # Name of second variable in accompanying file.
-         desc: "Respiration rate from organic layer from pine forest, incubated for 24 hours at 5 degrees C"
+         varDesc: "Respiration rate from organic layer from pine forest, incubated for 24 hours at 5 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
@@ -138,7 +138,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V9:
          name: Pine_15_30_05 # Name of second variable in accompanying file.
-         desc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 5 degrees C"
+         varDesc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 5 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 7.5
@@ -149,7 +149,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V10:
          name: Spruce_O_12 # Name of second variable in accompanying file.
-         desc: "Respiration rate from organic layer from spruce forest, incubated for 24 hours at 12 degrees C"
+         varDesc: "Respiration rate from organic layer from spruce forest, incubated for 24 hours at 12 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
@@ -160,7 +160,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V11:
          name: Pine_15_30_12 # Name of second variable in accompanying file.
-         desc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 12 degrees C"
+         varDesc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 12 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 22.5
@@ -171,7 +171,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V12:
          name: Spruce_O_19 # Name of second variable in accompanying file.
-         desc: "espiration rate from organic layer from spruce forest, incubated for 24 hours at 19 degrees C"
+         varDesc: "espiration rate from organic layer from spruce forest, incubated for 24 hours at 19 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Spruce # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 0
@@ -182,7 +182,7 @@ variables: # These describe the columns of your timeSeries.csv file
          horizon: O
        V13:
          name: Pine_15_30_19 # Name of second variable in accompanying file.
-         desc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 19 degrees C"
+         varDesc: "Respiration rate from 15-30 cm soil from pine forest, incubated for 24 hours at 19 degrees C"
          site: "FinlandKarhu" #site where the incubated sample comes from.
          forest: Pine # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
          midDepth: 22.5

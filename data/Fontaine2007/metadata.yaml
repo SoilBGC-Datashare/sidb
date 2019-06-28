@@ -21,16 +21,16 @@ siteInfo:
         landCover: rangeland/grassland # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
         vegNote: grassland for >50 years, chestnut and hornbeam forest 2000 ya #Additional details about land cover such as species or functional type composition
         soilTaxonomy:
-          soilOrder: Cambisol # Soil order according to the classification system described below
+          soilOrder: Cambisol # Soil order according to the classification system varDescribed below
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem: WRB # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
         permafrost:
           permafrostExist: # yes or blank if no (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: 160 day incubation of subsoil comparing control and soil amended with cellulose while under incubation # Short description of the incubation setup and main treatments
+        incDesc: 160 day incubation of subsoil comparing control and soil amended with cellulose while under incubation # Short description of the incubation setup and main treatments
         experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: 60 # in cm
@@ -46,7 +46,7 @@ incubationInfo:
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         cellulose:
           value:
-          units: 
+          units:
         replicates:
           number:  # Number of replicates per treatments
           type:  # Valid fields are: field or lab
@@ -59,17 +59,17 @@ incubationInfo:
           rockPicking: # yes or no
         gasAnalyzer: NaOH titration # Gas analysis equipment for measurements
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
        V1: # column 1
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
         units: d # Units of first variable in accompanying file.
        V2: # column 2
         name: cellulose # Name of second variable in accompanying file.
-        desc: Subsoil incubated with dual 13C-14C labelled cellulose for 161 days at -100 kPa water content # Description of the variable
+        varDesc: Subsoil incubated with dual 13C-14C labelled cellulose for 161 days at -100 kPa water content # description of the variable
         cellulose: cellulose_amended # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: mg soilC/kg soilC
        V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: control # Name of second variable in accompanying file.
-        desc: Subsoil incubated without dual 13C-14C labelled cellulose for 161 days at -100 kPa water content # Description of the variable
+        varDesc: Subsoil incubated without dual 13C-14C labelled cellulose for 161 days at -100 kPa water content # description of the variable
         cellulose: control # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: mg soilC/kg soilC

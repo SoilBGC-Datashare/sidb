@@ -61,9 +61,9 @@ siteInfo:
           - Pinus pinaster
           - Pinus halepensis
         soilTaxonomy:
-          soilOrder: # Soil order according to the classification system described below
+          soilOrder: # Soil order according to the classification system varDescribed below
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
             - Ferric podzol
             - Dystric cambisol
             - Cambic podzol
@@ -76,7 +76,7 @@ siteInfo:
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: "C14-labelled straw was mixed with soils collected from 7 coniferous forests located on a climatic gradient in Western Europe ranging from boreal to Mediterranean conditions. The soils were incubated in the laboratory at 4, 10, 16, 23 and 30 degrees with constant moisture over 550 days. Measurements of organic-C and14C concentrations in the straw and in the soil samples were determined using dry combustion (Carmograph 12 A carbon analyser). " # Short description of the incubation setup and main treatments
+        incDesc: "C14-labelled straw was mixed with soils collected from 7 coniferous forests located on a climatic gradient in Western Europe ranging from boreal to Mediterranean conditions. The soils were incubated in the laboratory at 4, 10, 16, 23 and 30 degrees with constant moisture over 550 days. Measurements of organic-C and14C concentrations in the straw and in the soil samples were determined using dry combustion (Carmograph 12 A carbon analyser). " # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top: # in cm
           bottom: # in cm
@@ -101,13 +101,13 @@ incubationInfo:
           rockPicking: yes # yes or no
         gasAnalyzer: NaOH titration # Gas analysis equipment for measurements
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
        V1: # column 1
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
         units: d # Units of first variable in accompanying file.
        V2:
         name: C14_Vin_30 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Vindeln, Sweden at 30 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Vindeln, Sweden at 30 degrees"
         site: Vindeln #site where the incubated sample comes from.
         temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -115,7 +115,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V3:
         name: C14_Vin_4 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Vindeln, Sweden at 4 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Vindeln, Sweden at 4 degrees"
         site: Vindeln #site where the incubated sample comes from.
         temperature: 4 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -123,7 +123,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V4:
         name: C14_Vin_10 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Vindeln, Sweden at 10 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Vindeln, Sweden at 10 degrees"
         site: Vindeln #site where the incubated sample comes from.
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -131,7 +131,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V5:
         name: C14_Vin_23 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Vindeln, Sweden at 23 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Vindeln, Sweden at 23 degrees"
         site: Vindeln #site where the incubated sample comes from.
         temperature: 23 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -139,7 +139,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V6:
         name: C14_Vin_16 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Vindeln, Sweden at 16 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Vindeln, Sweden at 16 degrees"
         site: Vindeln #site where the incubated sample comes from.
         temperature: 16 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -147,7 +147,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V7:
         name: C14_Hal_10 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Haldon, UK at 30 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Haldon, UK at 30 degrees"
         site: Haldon #site where the incubated sample comes from.
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -155,7 +155,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V8:
         name: C14_Hal_4 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Haldon, UK at 4 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Haldon, UK at 4 degrees"
         site: Haldon #site where the incubated sample comes from.
         temperature: 4 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -163,7 +163,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V9:
         name: C14_Hal_16 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Haldon, UK at 16 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Haldon, UK at 16 degrees"
         site: Haldon #site where the incubated sample comes from.
         temperature: 16 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -171,7 +171,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V10:
         name: C14_Hal_23 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Haldon, UK at 23 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Haldon, UK at 23 degrees"
         site: Haldon #site where the incubated sample comes from.
         temperature: 23 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -179,7 +179,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V11:
         name: C14_Hal_30 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Haldon, UK at 30 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Haldon, UK at 30 degrees"
         site: Haldon #site where the incubated sample comes from.
         temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -187,7 +187,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V12:
         name: C14_WalOf_4 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 4 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 4 degrees"
         site: Waldstein #site where the incubated sample comes from.
         temperature: 4 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Of
@@ -195,7 +195,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V13:
         name: C14_WalOf_10 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 10 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 10 degrees"
         site: Waldstein #site where the incubated sample comes from.
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Of
@@ -203,7 +203,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V14:
         name: C14_WalOf_30 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 30 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 30 degrees"
         site: Waldstein #site where the incubated sample comes from.
         temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Of
@@ -211,7 +211,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V15:
         name: C14_WalOf_16 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 16 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 16 degrees"
         site: Waldstein #site where the incubated sample comes from.
         temperature: 16 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Of
@@ -219,7 +219,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V16:
         name: C14_WalOf_23 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 23 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 23 degrees"
         site: Waldstein #site where the incubated sample comes from.
         temperature: 23 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Of
@@ -227,7 +227,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V17:
         name: C14_WalOh_4 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 4 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 4 degrees"
         site: Waldstein #site where the incubated sample comes from.
         temperature: 4 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -235,7 +235,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V18:
         name: C14_WalOh_10 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 10 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 10 degrees"
         site: Waldstein #site where the incubated sample comes from.
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -243,7 +243,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V19:
         name: C14_WalOh_30 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 30 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 30 degrees"
         site: Waldstein #site where the incubated sample comes from.
         temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -251,7 +251,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V20:
         name: C14_WalOh_16 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 16 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 16 degrees"
         site: Waldstein #site where the incubated sample comes from.
         temperature: 16 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -259,7 +259,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V21:
         name: C14_WalOh_23 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 23 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Waldstein, Germany at 23 degrees"
         site: Waldstein #site where the incubated sample comes from.
         temperature: 23 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -267,7 +267,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V22:
         name: C14_ThOh_4 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 4 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 4 degrees"
         site: Thezan #site where the incubated sample comes from.
         temperature: 4 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -275,7 +275,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V23:
         name: C14_ThOh_30 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 30 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 30 degrees"
         site: Thezan #site where the incubated sample comes from.
         temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -283,7 +283,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V24:
         name: C14_ThOh_23 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 23 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 23 degrees"
         site: Thezan #site where the incubated sample comes from.
         temperature: 23 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -291,7 +291,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V25:
         name: C14_ThOh_16 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 16 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 16 degrees"
         site: Thezan #site where the incubated sample comes from.
         temperature: 16 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -299,7 +299,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V26:
         name: C14_ThOh_10 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 10 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 10 degrees"
         site: Thezan #site where the incubated sample comes from.
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: Oh
@@ -307,7 +307,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 175
        V27:
         name: C14_ThA1_4 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 4 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 4 degrees"
         site: Thezan #site where the incubated sample comes from.
         temperature: 4 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -315,7 +315,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V28:
         name: C14_ThA1_10 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 10 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 10 degrees"
         site: Thezan #site where the incubated sample comes from.
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -323,7 +323,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V29:
         name: C14_ThA1_16 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 16 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 16 degrees"
         site: Thezan #site where the incubated sample comes from.
         temperature: 16 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -331,7 +331,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V30:
         name: C14_ThA1_23 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 23 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 23 degrees"
         site: Thezan #site where the incubated sample comes from.
         temperature: 23 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -339,7 +339,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V31:
         name: C14_ThA1_30 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 30 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for Thezan, France at 30 degrees"
         site: Thezan #site where the incubated sample comes from.
         temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -347,7 +347,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V32:
         name: C14_LaA1_4 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for La Clape, France at 4 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for La Clape, France at 4 degrees"
         site: La Clape #site where the incubated sample comes from.
         temperature: 4 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -355,7 +355,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V33:
         name: C14_LaA1_10 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for La Clape, France at 10 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for La Clape, France at 10 degrees"
         site: La Clape #site where the incubated sample comes from.
         temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -363,7 +363,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V34:
         name: C14_LaA1_16 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for La Clape, France at 16 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for La Clape, France at 16 degrees"
         site: La Clape #site where the incubated sample comes from.
         temperature: 16 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -371,7 +371,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V35:
         name: C14_LaA1_23 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for La Clape, France at 23 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for La Clape, France at 23 degrees"
         site: La Clape #site where the incubated sample comes from.
         temperature: 23 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1
@@ -379,7 +379,7 @@ variables: # These describe the columns of your timeSeries.csv file
         moisture: 85
        V36:
         name: C14_LaA1_30 # Name of second variable in accompanying file.
-        desc: "Percentage of initially applied C14 remaining over time of incubation and temperature for La Clape, France at 30 degrees"
+        varDesc: "Percentage of initially applied C14 remaining over time of incubation and temperature for La Clape, France at 30 degrees"
         site: La Clape #site where the incubated sample comes from.
         temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
         horizon: A1

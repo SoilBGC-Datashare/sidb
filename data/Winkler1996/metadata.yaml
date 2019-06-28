@@ -20,16 +20,16 @@ siteInfo:
         landCover: forest # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
         vegNote: mainly Pinus taeda, deciduous and coniferous #Additional details about land cover such as species or functional type composition
         soilTaxonomy:
-          soilOrder: Ultisol # Soil order according to the classification system described below
+          soilOrder: Ultisol # Soil order according to the classification system varDescribed below
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-          soilSeries: Helena # Soil series according to the classification system described below
+          soilSeries: Helena # Soil series according to the classification system varDescribed below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
         permafrost:
           permafrostExist: # yes or no (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: "Ten A-, eight E-, and ten B-horizon samples were incubated at 4, 15 and 22deg for 120 d and at 38deg for 50 d." # Short description of the incubation setup and main treatments
+        incDesc: "Ten A-, eight E-, and ten B-horizon samples were incubated at 4, 15 and 22deg for 120 d and at 38deg for 50 d." # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top:
           bottom: # in cm
@@ -56,13 +56,13 @@ incubationInfo:
           rockPicking: yes # yes or no
         gasAnalyzer: NaOH titration # Gas analysis equipment for measurements
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
        V1: # column 1
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
         units: days # Units of first variable in accompanying file.
        V2: # column 2
         name: CO2_38_A # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for A-horizon soils at 38 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for A-horizon soils at 38 degrees during the incubation."
         temperature: 38 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 0
@@ -72,7 +72,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 10
        V3:
         name: CO2_38_B # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for B-horizon soils at 38 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for B-horizon soils at 38 degrees during the incubation."
         temperature: 38 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 61
@@ -82,7 +82,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 10
        V4:
         name: CO2_38_E # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for E-horizon soils at 38 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for E-horizon soils at 38 degrees during the incubation."
         temperature: 38 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 28
@@ -92,7 +92,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 8
        V5:
         name: CO2_22_A # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for A-horizon soils at 22 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for A-horizon soils at 22 degrees during the incubation."
         temperature: 22 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 0
@@ -102,7 +102,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 10
        V6:
         name: CO2_22_B # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for B-horizon soils at 22 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for B-horizon soils at 22 degrees during the incubation."
         temperature: 22 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 61
@@ -112,7 +112,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 10
        V7:
         name: CO2_22_E # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for E-horizon soils at 22 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for E-horizon soils at 22 degrees during the incubation."
         temperature: 22 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 28
@@ -122,7 +122,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 8
        V8:
         name: CO2_15_A # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for A-horizon soils at 15 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for A-horizon soils at 15 degrees during the incubation."
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 0
@@ -132,7 +132,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 10
        V9:
         name: CO2_15_B # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for B-horizon soils at 15 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for B-horizon soils at 15 degrees during the incubation."
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 61
@@ -142,7 +142,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 10
        V10:
         name: CO2_15_E # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for E-horizon soils at 15 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for E-horizon soils at 15 degrees during the incubation."
         temperature: 15 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 28
@@ -152,7 +152,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 8
        V11:
         name: CO2_4_A # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for A-horizon soils at 4 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for A-horizon soils at 4 degrees during the incubation."
         temperature: 4 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 0
@@ -162,7 +162,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 10
        V12:
         name: CO2_4_B # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for B-horizon soils at 4 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for B-horizon soils at 4 degrees during the incubation."
         temperature: 4 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 61
@@ -172,7 +172,7 @@ variables: # These describe the columns of your timeSeries.csv file
         replicates: 10
        V13:
         name: CO2_4_E # Name of second variable in accompanying file.
-        desc: "Mean rate of CO2 evolution for E-horizon soils at 4 degrees during the incubation."
+        varDesc: "Mean rate of CO2 evolution for E-horizon soils at 4 degrees during the incubation."
         temperature: 4 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         units: micromolC-CO2/g/d # Units in which this variable is provided if not a factor
         top: 28

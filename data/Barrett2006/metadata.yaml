@@ -50,7 +50,7 @@ siteInfo:
             - Gelisol
             - Gelisol
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem:
             - USDA
             - USDA
@@ -61,7 +61,7 @@ siteInfo:
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: # Short description of the incubation setup and main treatments
+        incDesc: # Short description of the incubation setup and main treatments
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
           top: 0
           bottom: 10
@@ -86,7 +86,7 @@ incubationInfo:
           rockPicking: # yes or no
         gasAnalyzer: Li-Cor 6200
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
         V1:
           name: time
           units: d
@@ -95,166 +95,166 @@ variables: # These describe the columns of your timeSeries.csv file
           temperature: 5
           moisture: 2
           site: Lower Taylor Valley
-          desc: "soil respiration rate measured at 5 degrees and 2% water content. Location: Lower Taylor Valley"
+          varDesc: "soil respiration rate measured at 5 degrees and 2% water content. Location: Lower Taylor Valley"
           units: microgC/gSoil/d
         V3:
           name: C_5deg_2gwc_UTV
           temperature: 5
           moisture: 2
           site: Upper Taylor Valley
-          desc: "soil respiration rate measured at 5 degrees and 2% water content. Location: Upper Taylor Valley"
+          varDesc: "soil respiration rate measured at 5 degrees and 2% water content. Location: Upper Taylor Valley"
           units: microgC/gSoil/d
         V4:
           name: C_5deg_2gwc_B
           temperature: 5
           moisture: 2
           site: Beacon
-          desc: "soil respiration rate measured at 5 degrees and 2% water content. Location: Beacon"
+          varDesc: "soil respiration rate measured at 5 degrees and 2% water content. Location: Beacon"
           units: microgC/gSoil/d
         V5:
           name: C_5deg_2gwc_V
           temperature: 5
           moisture: 2
           site: Victoria
-          desc: "soil respiration rate measured at 5 degrees and 2% water content. Location: Victoria"
+          varDesc: "soil respiration rate measured at 5 degrees and 2% water content. Location: Victoria"
           units: microgC/gSoil/d
         V6:
           name: C_10deg_2gwc_LTV
           temperature: 10
           moisture: 2
           site: Lower Taylor Valley
-          desc: "soil respiration rate measured at 10 degrees and 2% water content. Location: Lower Taylor Valley"
+          varDesc: "soil respiration rate measured at 10 degrees and 2% water content. Location: Lower Taylor Valley"
           units: microgC/gSoil/d
         V7:
           name: C_10deg_2gwc_UTV
           temperature: 10
           moisture: 2
           site: Upper Taylor Valley
-          desc: "soil respiration rate measured at 10 degrees and 2% water content. Location: Upper Taylor Valley"
+          varDesc: "soil respiration rate measured at 10 degrees and 2% water content. Location: Upper Taylor Valley"
           units: microgC/gSoil/d
         V8:
           name: C_10deg_2gwc_B
           temperature: 20
           moisture: 2
           site: Beacon
-          desc: "soil respiration rate measured at 10 degrees and 2% water content. Location: Beacon"
+          varDesc: "soil respiration rate measured at 10 degrees and 2% water content. Location: Beacon"
           units: microgC/gSoil/d
         V9:
           name: C_10deg_2gwc_V
           temperature: 20
           moisture: 2
           site: Victoria
-          desc: "soil respiration rate measured at 10 degrees and 2% water content. Location: Victoria"
+          varDesc: "soil respiration rate measured at 10 degrees and 2% water content. Location: Victoria"
           units: microgC/gSoil/d
         V10:
           name: C_20deg_2gwc_LTV
           temperature: 20
           moisture: 2
           site: Lower Taylor Valley
-          desc: "soil respiration rate measured at 20 degrees and 2% water content. Location: Lower Taylor Valley"
+          varDesc: "soil respiration rate measured at 20 degrees and 2% water content. Location: Lower Taylor Valley"
           units: microgC/gSoil/d
         V11:
           name: C_20deg_2gwc_UTV
           temperature: 20
           moisture: 2
           site: Upper Taylor Valley
-          desc: "soil respiration rate measured at 20 degrees and 2% water content. Location: Upper Taylor Valley"
+          varDesc: "soil respiration rate measured at 20 degrees and 2% water content. Location: Upper Taylor Valley"
           units: microgC/gSoil/d
         V12:
           name: C_20deg_2gwc_B
           temperature: 20
           moisture: 2
           site: Beacon
-          desc: "soil respiration rate measured at 20 degrees and 2% water content. Location: Beacon"
+          varDesc: "soil respiration rate measured at 20 degrees and 2% water content. Location: Beacon"
           units: microgC/gSoil/d
         V13:
           name: C_20deg_2gwc_V
           temperature: 20
           moisture: 2
           site: Victoria
-          desc: "soil respiration rate measured at 20 degrees and 2% water content. Location: Victoria"
+          varDesc: "soil respiration rate measured at 20 degrees and 2% water content. Location: Victoria"
           units: microgC/gSoil/d
         V14:
           name: C_5deg_5gwc_LTV
           temperature: 5
           moisture: 5
           site: Lower Taylor Valley
-          desc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Lower Taylor Valley"
+          varDesc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Lower Taylor Valley"
           units: microgC/gSoil/d
         V15:
           name: C_5deg_5gwc_UTV
           temperature: 5
           moisture: 5
           site: Upper Taylor Valley
-          desc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Upper Taylor Valley"
+          varDesc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Upper Taylor Valley"
           units: microgC/gSoil/d
         V16:
           name: C_5deg_5gwc_B
           temperature: 5
           moisture: 5
           site: Beacon
-          desc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Beacon"
+          varDesc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Beacon"
           units: microgC/gSoil/d
         V17:
           name: C_5deg_5gwc_V
           temperature: 5
           moisture: 5
           site: Victoria
-          desc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Victoria"
+          varDesc: "soil respiration rate measured at 5 degrees and 5% water content. Location: Victoria"
           units: microgC/gSoil/d
         V18:
           name: C_10deg_5gwc_LTV
           temperature: 10
           moisture: 5
           site: Lower Taylor Valley
-          desc: "soil respiration rate measured at 10 degrees and 5% water content. Location: Lower Taylor Valley"
+          varDesc: "soil respiration rate measured at 10 degrees and 5% water content. Location: Lower Taylor Valley"
           units: microgC/gSoil/d
         V19:
           name: C_10deg_5gwc_UTV
           temperature: 10
           moisture: 5
           site: Upper Taylor Valley
-          desc: "soil respiration rate measured at 10 degrees and 5% water content. Location: Upper Taylor Valley"
+          varDesc: "soil respiration rate measured at 10 degrees and 5% water content. Location: Upper Taylor Valley"
           units: microgC/gSoil/d
         V20:
           name: C_10deg_5gwc_B
           temperature: 10
           moisture: 5
           site: Beacon
-          desc: "soil respiration rate measured at 10 degrees and 5% water content. Location: Beacon"
+          varDesc: "soil respiration rate measured at 10 degrees and 5% water content. Location: Beacon"
           units: microgC/gSoil/d
         V21:
           name: C_10deg_5gwc_V
           temperature: 10
           moisture: 5
           site: Victoria
-          desc: "soil respiration rate measured at 10 degrees and 5% water content. Location: Victoria"
+          varDesc: "soil respiration rate measured at 10 degrees and 5% water content. Location: Victoria"
           units: microgC/gSoil/d
         V22:
           name: C_20deg_5gwc_LTV
           temperature: 20
           moisture: 5
           site: Lower Taylor Valley
-          desc: "soil respiration rate measured at 20 degrees and 5% water content. Location: Lower Taylor Valley"
+          varDesc: "soil respiration rate measured at 20 degrees and 5% water content. Location: Lower Taylor Valley"
           units: microgC/gSoil/d
         V23:
           name: C_20deg_5gwc_UTV
           temperature: 20
           moisture: 5
           site: Upper Taylor Valley
-          desc: "soil respiration rate measured at 20 degrees and 5% water content. Location: Upper Taylor Valley"
+          varDesc: "soil respiration rate measured at 20 degrees and 5% water content. Location: Upper Taylor Valley"
           units: microgC/gSoil/d
         V24:
           name: C_20deg_5gwc_B
           temperature: 20
           moisture: 5
           site: Beacon
-          desc: "soil respiration rate measured at 20 degrees and 5% water content. Location: Beacon"
+          varDesc: "soil respiration rate measured at 20 degrees and 5% water content. Location: Beacon"
           units: microgC/gSoil/d
         V25:
           name: C_20deg_5gwc_V
           temperature: 20
           moisture: 5
           site: Victoria
-          desc: "soil respiration rate measured at 20 degrees and 5% water content. Location: Victoria"
+          varDesc: "soil respiration rate measured at 20 degrees and 5% water content. Location: Victoria"
           units: microgC/gSoil/d

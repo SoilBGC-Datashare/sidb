@@ -22,14 +22,14 @@ siteInfo:
         soilTaxonomy:
           soilOrder: Luvisol
           soilFamily: silt loam haplic Luvisol
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem: WRB
         permafrost:
           permafrostExist:
           activeLayer: # Depth of the active layer in meters
 
 incubationInfo:
-        description: "Soil was collected from 2 depth intervals: 5 to 15 cm and 95 to 105 cm. Samples of each layer were incubated at 25deg and at 35deg for 176 days."
+        incDesc: "Soil was collected from 2 depth intervals: 5 to 15 cm and 95 to 105 cm. Samples of each layer were incubated at 25deg and at 35deg for 176 days."
         experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
         depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
           top:
@@ -62,24 +62,24 @@ variables:
         V2:
           name: C_Top_25
           units: mgC-CO2/gC
-          desc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 25deg for the topsoil"
+          varDesc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 25deg for the topsoil"
           temperature: 25
           midDepth: 10
         V3:
           name: C_Top_35
           units: mgC-CO2/gC
-          desc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 35deg for the topsoil"
+          varDesc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 35deg for the topsoil"
           temperature: 35
           midDepth: 10
         V4:
           name: C_Sub_25
           units: mgC-CO2/gC
-          desc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 25deg for the subsoil"
+          varDesc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 25deg for the subsoil"
           temperature: 25
           midDepth: 100
         V5:
           name: C_Sub_35
           units: mgC-CO2/gC
-          desc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 35deg for the subsoil"
+          varDesc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 35deg for the subsoil"
           temperature: 35
           midDepth: 100

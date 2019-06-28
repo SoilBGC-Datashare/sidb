@@ -51,7 +51,7 @@ testthat::test_that("check that each table in variables list has the same number
     len <- length(unique(unlist(lapply(x$variables[-1], function(y) length(y)))))
     return(len)
   })
-  for(i in 1:length(n.fields)){
+  for(i in seq_along(n.fields)){
     if(n.fields[[i]]!=1) {cat(names(n.fields[i]),"\n")}
     expect_equal(n.fields[[i]], 1)
   }
@@ -60,7 +60,7 @@ testthat::test_that("check that each table in variables list has the same number
 testthat::test_that("ensure site names in initConditions.csv match the names in siteInfo",{
   s.names.SI<-lapply(database, function(x) unique(x$siteInfo$site))
   s.names.IC<-lapply(database, function(x) unique(x$initConditions$site))
-  for(i in 1:length(s.names.SI)){
+  for(i in seq_along(s.names.SI)){
     if(length(match(s.names.SI[[i]],s.names.IC[[i]]))!=length(s.names.SI[[i]])) {
       cat(names(s.names.SI[i]),"\n")
       }
@@ -68,3 +68,30 @@ testthat::test_that("ensure site names in initConditions.csv match the names in 
   }
 })
 
+testthat::test_that("timeseries statistic matches allowable values",{
+  stat <- c("SD","SE","none")
+  vars <- lapply(database, function(x) x$variables[-1])
+  ix <- Filter(length, lapply(vars, function(x) {
+    Filter(length, lapply(x, function(y) {
+      if(length(grep("statistic", names(y))) > 0) {
+         which(y$statistic != stat[1] & y$statistic != stat[2] & y$statistic != stat[3])
+        }
+    }))
+  }))
+  expect_equal(length(ix),0)
+})
+
+# testthat::test_that("moisture units match allowable values",{
+#   mu <- c("percentGWC", "percentFieldCapacity", "percentWaterFilledPoreSpace")
+#   incInfo <- lapply(database, "[[", "incubationInfo")
+#   for(i in seq_along(incInfo)){
+#     if(incInfo[[i]][["moisture"]]["units"] != mu[1] |
+#        incInfo[[i]][["moisture"]]["units"] != mu[2] |
+#        incInfo[[i]][["moisture"]]["units"] != mu[3]) {
+#       cat(names(incInfo[i]),"\n")
+#     }
+#     expect_equal(incInfo[[i]][["moisture"]]["units"] == mu[1] |
+#                    incInfo[[i]][["moisture"]]["units"] == mu[2] |
+#                    incInfo[[i]][["moisture"]]["units"] == mu[3])
+#   }
+# })

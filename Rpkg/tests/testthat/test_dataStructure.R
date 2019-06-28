@@ -81,17 +81,20 @@ testthat::test_that("timeseries statistic matches allowable values",{
   expect_equal(length(ix),0)
 })
 
-# testthat::test_that("moisture units match allowable values",{
-#   mu <- c("percentGWC", "percentFieldCapacity", "percentWaterFilledPoreSpace")
-#   incInfo <- lapply(database, "[[", "incubationInfo")
-#   for(i in seq_along(incInfo)){
-#     if(incInfo[[i]][["moisture"]]["units"] != mu[1] |
-#        incInfo[[i]][["moisture"]]["units"] != mu[2] |
-#        incInfo[[i]][["moisture"]]["units"] != mu[3]) {
-#       cat(names(incInfo[i]),"\n")
-#     }
-#     expect_equal(incInfo[[i]][["moisture"]]["units"] == mu[1] |
-#                    incInfo[[i]][["moisture"]]["units"] == mu[2] |
-#                    incInfo[[i]][["moisture"]]["units"] == mu[3])
-#   }
-# })
+testthat::test_that("moisture units match allowable values",{
+  mu <- c("percentGWC", "percentFieldCapacity", "percentWaterFilledPoreSpace")
+  incInfo <- lapply(database, "[[", "incubationInfo")
+  inc.null <- names(Filter(length,lapply(incInfo, function(x) which(is.null(x$moisture$units)))))
+  incInfo <- incInfo[-match(inc.null,names(incInfo))]
+  for(i in seq_along(incInfo)){
+    if(incInfo[[i]][["moisture"]]["units"] != mu[1] &
+       incInfo[[i]][["moisture"]]["units"] != mu[2] &
+       incInfo[[i]][["moisture"]]["units"] != mu[3]) {
+      cat(names(incInfo[i]),"\n")
+    }}
+  for(i in seq_along(incInfo)){
+    expect_true(incInfo[[i]][["moisture"]]["units"] == mu[1] |
+                   incInfo[[i]][["moisture"]]["units"] == mu[2] |
+                   incInfo[[i]][["moisture"]]["units"] == mu[3])
+  }
+})

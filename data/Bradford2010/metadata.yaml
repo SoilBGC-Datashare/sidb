@@ -95,7 +95,7 @@ incubationInfo:
         temperature:
         moisture:
           value: 50
-          units: percentWHC
+          units: percentFieldCapacity
         anaerobic:
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         glucose:

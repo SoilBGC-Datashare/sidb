@@ -40,8 +40,8 @@ incubationInfo:
           horizon:
         temperature:
         moisture:
-          value: 240
-          units: gWater/kgSoil
+          value: 24
+          units: percentGWC
         anaerobic:
         gasMeasured:
         replicates:

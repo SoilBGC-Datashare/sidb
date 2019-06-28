@@ -43,7 +43,7 @@ of total incubation time. All soils incubated at field capacity' # Short descrip
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 100 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
-          units: percent field capacity # Valid fields are: GWC or percent field capacity
+          units: percentFieldCapacity # Valid fields are: GWC or percent field capacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         replicates:

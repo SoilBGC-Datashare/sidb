@@ -128,7 +128,7 @@ incubationInfo:
         temperature: 30 # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 60 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
-          units: percent field capacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+          units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         replicates:

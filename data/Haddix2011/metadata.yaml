@@ -95,7 +95,7 @@ incubationInfo:
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 60
-          units: waterFilledPoreSpace
+          units: percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         replicates:

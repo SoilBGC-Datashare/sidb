@@ -1,6 +1,10 @@
 context("Template Structure")
 library(sidb)
 
+test_that("all entries from the database can be read", {
+  expect_silent(loadEntries())
+})
+
 database<-loadEntries()
 
 test_that("entry names correspond to new metadata template", {
@@ -22,6 +26,23 @@ test_that("entry names correspond to new metadata template", {
       {cat(names(database[i]),"\n")}
     expect_equal(length(match(names(template$incubationInfo),names(entry$incubationInfo))),
                  length(names(template$incubationInfo)))
+  }
+})
+
+test_that("check first column in timeSeries file is called 'time' ",{
+  for(i in 1:length(database)){
+    entry=database[[i]]
+    expect_equal(colnames(entry$timeSeries)[1], "time")
+
+  }
+})
+
+test_that("variable names in timeSeries correspond to names in metadata file",{
+  for(i in 1:length(database)){
+    entry=database[[i]]
+    tsName=as.character(colnames(entry$timeSeries))
+    varname=as.character(sapply(entry$variables, function(x){x$name}))
+    expect_equal(tsName, varname)
   }
 })
 

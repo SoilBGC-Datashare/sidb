@@ -6,7 +6,8 @@
 #' 2) vars, a list of all site, incubation and variables fields flattened into a dataframe for each entry
 #' @export
 #' @import dplyr
-#' @import plyr
+#' @import rlang
+#' @import stringr
 #' @examples
 #' db <- loadEntries(path="~/sidb/data/")
 #' sidb.flatter <- flatterSIDB(db)
@@ -41,8 +42,8 @@ flatterSIDB <- function(database) {
   # variables: make list of dataframes of variables from the 'variable' level
   #####
   vars.dfl <- lapply(database, function(x) {
-    plyr::rbind.fill(lapply(x$variables[-1], function(y) {
-      df = data.frame(t(sapply(y,c)))
+    dplyr::bind_rows(lapply(x$variables[-1], function(y) {
+      df = data.frame(t(sapply(y,c)), stringsAsFactors = F)
       return(df)
     }))
   })

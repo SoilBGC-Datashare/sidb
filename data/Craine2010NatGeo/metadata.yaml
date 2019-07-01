@@ -4,7 +4,7 @@ entryAuthor: Christina Schaedel  # First and Last name of the person who enters 
 entryCreationDate: 2019-03-06 # Date when the data is entered in this file. Format: YYYY-MM-DD
 contactName: Alain Plante # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: aplante@sas.upenn.edu # Email of the contact person
-entryNote: 'original data obtained by Alain Plante, cumulative fluxes not available in manuscript. Original data probably only available for the 20°C incubation temperature, in total 5 replicates were incubated at five different temperatures. May want to check back with Alain Plante if this interpretation is correct' # Any notes or comments related to this entry.
+entryNote: original data obtained by Alain Plante, cumulative fluxes not available in manuscript. Original data probably only available for the 20°C incubation temperature, in total 5 replicates were incubated at five different temperatures. May want to check back with Alain Plante if this interpretation is correct; 1 Jul '19 JBM converted mgC/gSoil to mgC/gSoil # Any notes or comments related to this entry.
 study: North America Gradient # Overall study description
 
 siteInfo:
@@ -234,7 +234,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V3: # column 3
           name: Cumresp_KBS # Name of second variable in accompanying file.
@@ -243,7 +243,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V4: # column 4
           name: Cumresp_WR # Name of second variable in accompanying file.
@@ -252,7 +252,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V5: # column 5
           name: Cumresp_AND # Name of second variable in accompanying file.
@@ -261,7 +261,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V6: # column 6
           name: Cumresp_ARC # Name of second variable in accompanying file.
@@ -270,7 +270,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V7: # column 7
           name: Cumresp_WB # Name of second variable in accompanying file.
@@ -279,7 +279,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V8: # column 8
           name: Cumresp_JRN # Name of second variable in accompanying file.
@@ -288,7 +288,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V9: # column 9
           name: Cumresp_SDG # Name of second variable in accompanying file.
@@ -297,7 +297,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V10: # column 10
           name: Cumresp_FCE # Name of second variable in accompanying file.
@@ -306,7 +306,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V11: # column 11
           name: Cumresp_OLY # Name of second variable in accompanying file.
@@ -315,7 +315,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V12: # column 12
           name: Cumresp_HFR # Name of second variable in accompanying file.
@@ -324,7 +324,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V13: # column 13
           name: Cumresp_BNZ # Name of second variable in accompanying file.
@@ -333,7 +333,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V14: # column 14
           name: Cumresp_SJQ # Name of second variable in accompanying file.
@@ -342,7 +342,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V15: # column 15
           name: Cumresp_LUQ # Name of second variable in accompanying file.
@@ -351,7 +351,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V16: # column 16
           name: Cumresp_GUA # Name of second variable in accompanying file.
@@ -360,7 +360,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V17: # column 17
           name: Cumresp_BES # Name of second variable in accompanying file.
@@ -369,7 +369,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V18: # column 18
           name: Cumresp_GCE # Name of second variable in accompanying file.
@@ -378,7 +378,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V19: # column 19
           name: Cumresp_SRE # Name of second variable in accompanying file.
@@ -387,7 +387,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V20: # column 20
           name: Cumresp_KNZ # Name of second variable in accompanying file.
@@ -396,7 +396,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V21: # column 21
           name: Cumresp_ITA # Name of second variable in accompanying file.
@@ -405,7 +405,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V22: # column 22
           name: Cumresp_COW # Name of second variable in accompanying file.
@@ -414,7 +414,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V23: # column 23
           name: Cumresp_NIW # Name of second variable in accompanying file.
@@ -423,7 +423,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V24: # column 24
           name: Cumresp_HB # Name of second variable in accompanying file.
@@ -432,7 +432,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V25: # column 25
           name: Cumresp_ORD # Name of second variable in accompanying file.
@@ -441,7 +441,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V26: # column 26
           name: Cumresp_SGS # Name of second variable in accompanying file.
@@ -450,7 +450,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V27: # column 27
           name: Cumresp_AP # Name of second variable in accompanying file.
@@ -459,7 +459,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V28: # column 28
           name: Cumresp_KAN # Name of second variable in accompanying file.
@@ -468,7 +468,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V29: # column 29
           name: Cumresp_JEP # Name of second variable in accompanying file.
@@ -477,5 +477,5 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
           laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: mgCO2/gSoil # Units in which this variable is provided if not a factor
+          units: mgC/gSoil # Units in which this variable is provided if not a factor
           statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).

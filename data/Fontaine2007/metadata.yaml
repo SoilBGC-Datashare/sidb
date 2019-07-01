@@ -65,11 +65,11 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         units: d # Units of first variable in accompanying file.
        V2: # column 2
         name: cellulose # Name of second variable in accompanying file.
-        varDesc: Subsoil incubated with dual 13C-14C labelled cellulose for 161 days at -100 kPa water content # description of the variable
+        varDesc: mg of soil-derived C respired; subsoil was incubated with dual 13C-14C labelled cellulose for 161 days at -100 kPa water content # description of the variable
         cellulose: cellulose_amended # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        units: mg soilC/kg soilC
+        units: mgC/gC
        V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: control # Name of second variable in accompanying file.
         varDesc: Subsoil incubated without dual 13C-14C labelled cellulose for 161 days at -100 kPa water content # description of the variable
         cellulose: control # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        units: mg soilC/kg soilC
+        units: mgC/gC

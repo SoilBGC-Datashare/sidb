@@ -61,17 +61,17 @@ variables:
           name:  ND.CU.4
           temperature: 4
           varDesc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 4 degrees"
-          units: mgC-CO2/gSoil
+          units: mgC/gSoil
           site: "Northern Great Plains Research Laboratory, Mandan, North Dakota"
         V3:
           name:  ND.CU.15
           temperature: 15
           varDesc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 15 degrees"
-          units: mgC-CO2/gSoil
+          units: mgC/gSoil
           site: "Northern Great Plains Research Laboratory, Mandan, North Dakota"
         V4:
           name:  ND.CU.25
           temperature: 25
           varDesc: "Cumulative soil respiration (mg CO_2-C/g soil) over the course of soil incubation for the cultivated (CU) soil from Mandan, North Dakota, at 25 degrees"
-          units: mgC-CO2/gSoil
+          units: mgC/gSoil
           site: "Northern Great Plains Research Laboratory, Mandan, North Dakota"

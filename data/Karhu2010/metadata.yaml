@@ -4,7 +4,7 @@ entryAuthor: Kristiina Karhu  # First and Last name of the person who enters the
 entryCreationDate: 2019-03-04 # Date when the data is entered in this file. Format: YYYY-MM-DD
 contactName: Shane Stoner # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: sstoner@bgc-jena.mpg.de # Email of the contact person
-entryNote:  # Any notes or comments related to this entry.
+entryNote:  Flux data reported as microgC/gOM/h, multiplied by 2 to estimate microgC/gC/h rate (unit conversion done 1 Jul '19 by JBM, cf. Pribyl 2010 [10.1016/j.geoderma.2010.02.003] for conversion factor) # Any notes or comments related to this entry.
 study: "Karhu 2010: Temperature sensitivity of organic matter decomposition in two boreal forest soil profile" # Overall study description
 
 
@@ -67,7 +67,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 0
          temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V3:
@@ -78,7 +78,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 0
          temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V4:
@@ -89,7 +89,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 7.5
          temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V5:
@@ -100,7 +100,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 7.5
          temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V6:
@@ -111,7 +111,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 22.5
          temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V7:
@@ -122,7 +122,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 22.5
          temperature: 26  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V8:
@@ -133,7 +133,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 0
          temperature: 5  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V9:
@@ -144,7 +144,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 7.5
          temperature: 5  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V10:
@@ -155,7 +155,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 0
          temperature: 12  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V11:
@@ -166,7 +166,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 22.5
          temperature: 12  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V12:
@@ -177,7 +177,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 0
          temperature: 19  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O
        V13:
@@ -188,6 +188,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          midDepth: 22.5
          temperature: 19  # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-         units: microgC-CO2/gOM/h # Units in which this variable is provided if not a factor
+         units: microgC/gC/h # Units in which this variable is provided if not a factor
          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
          horizon: O

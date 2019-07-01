@@ -4,7 +4,7 @@ entryAuthor: Carlos A. Sierra
 entryCreationDate: 2017-01-24
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
-entryNote: # Any notes or comments related to this entry.
+entryNote: units converted from mgC/d to mgC/gC/d # Any notes or comments related to this entry.
 study:
 
 siteInfo:
@@ -66,109 +66,109 @@ variables:
           temperature: 25
           moisture: 15
           oxygen: 20
-          units: mgC/day
+          units: mgC/gC/d
         V3:
           name: TMO_25_15_1
           varDesc: "Respiration rates"
           temperature: 25
           moisture: 15
           oxygen: 1
-          units: mgC/day
+          units: mgC/gC/d
         V4:
           name: TMO_25_30_20
           varDesc: "Respiration rates"
           temperature: 25
           moisture: 30
           oxygen: 20
-          units: mgC/day
+          units: mgC/gC/d
         V5:
           name: TMO_25_30_1
           varDesc: "Respiration rates"
           temperature: 25
           moisture: 30
           oxygen: 1
-          units: mgC/day
+          units: mgC/gC/d
         V6:
           name: TMO_25_60_20
           varDesc: "Respiration rates"
           temperature: 25
           moisture: 60
           oxygen: 20
-          units: mgC/day
+          units: mgC/gC/d
         V7:
           name: TMO_25_60_1
           varDesc: "Respiration rates"
           temperature: 25
           moisture: 60
           oxygen: 1
-          units: mgC/day
+          units: mgC/gC/d
         V8:
           name: TMO_25_90_20
           varDesc: "Respiration rates"
           temperature: 25
           moisture: 90
           oxygen: 20
-          units: mgC/day
+          units: mgC/gC/d
         V9:
           name: TMO_25_90_1
           varDesc: "Respiration rates"
           temperature: 25
           moisture: 90
           oxygen: 1
-          units: mgC/day
+          units: mgC/gC/d
         V10:
           name: TMO_35_15_20
           varDesc: "Respiration rates"
           temperature: 35
           moisture: 15
           oxygen: 20
-          units: mgC/day
+          units: mgC/gC/d
         V11:
           name: TMO_35_15_1
           varDesc: "Respiration rates"
           temperature: 35
           moisture: 15
           oxygen: 1
-          units: mgC/day
+          units: mgC/gC/d
         V12:
           name: TMO_35_30_20
           varDesc: "Respiration rates"
           temperature: 35
           moisture: 30
           oxygen: 20
-          units: mgC/day
+          units: mgC/gC/d
         V13:
           name: TMO_35_30_1
           varDesc: "Respiration rates"
           temperature: 35
           moisture: 30
           oxygen: 1
-          units: mgC/day
+          units: mgC/gC/d
         V14:
           name: TMO_35_60_20
           varDesc: "Respiration rates"
           temperature: 35
           moisture: 60
           oxygen: 20
-          units: mgC/day
+          units: mgC/gC/d
         V15:
           name: TMO_35_60_1
           varDesc: "Respiration rates"
           temperature: 35
           moisture: 60
           oxygen: 1
-          units: mgC/day
+          units: mgC/gC/d
         V16:
           name: TMO_35_90_20
           varDesc: "Respiration rates"
           temperature: 35
           moisture: 90
           oxygen: 20
-          units: mgC/day
+          units: mgC/gC/d
         V17:
           name: TMO_35_90_1
           varDesc: "Respiration rates"
           temperature: 35
           moisture: 90
           oxygen: 1
-          units: mgC/day
+          units: mgC/gC/d

@@ -124,7 +124,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 10
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V3:
           name: C_20deg_CH
@@ -133,7 +133,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 20
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V4:
           name: C_30deg_CH
@@ -142,7 +142,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 30
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V5:
           name: C_10deg_CL
@@ -151,7 +151,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 10
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V6:
           name: C_20deg_CL
@@ -160,7 +160,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 20
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V7:
           name: C_30deg_CL
@@ -169,7 +169,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 30
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V8:
           name: C_10deg_HOC
@@ -178,7 +178,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 10
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V9:
           name: C_20deg_HOC
@@ -187,7 +187,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 20
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V10:
           name: C_30deg_HOC
@@ -196,7 +196,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 30
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V11:
           name: C_10deg_HMC
@@ -205,7 +205,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 10
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V12:
           name: C_20deg_HMC
@@ -214,7 +214,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 20
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V13:
           name: C_30deg_HMC
@@ -223,7 +223,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 30
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V14:
           name: C_10deg_HOH
@@ -232,7 +232,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 10
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V15:
           name: C_20deg_HOH
@@ -241,7 +241,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 20
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V16:
           name: C_30deg_HOH
@@ -250,7 +250,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 30
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V17:
           name: C_10deg_HMH
@@ -259,7 +259,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 10
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V18:
           name: C_20deg_HMH
@@ -268,7 +268,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 20
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:
         V19:
           name: C_30deg_HMH
@@ -277,5 +277,5 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           temperature: 30
           glucose: 0.84
           gasMeasured:
-          units: mg/gSoil/d
+          units: mgC/gSoil/d
           statistic:

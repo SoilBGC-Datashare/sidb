@@ -153,7 +153,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Hainich #site where the incubated sample comes from.
         midDepth: 2.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V3:
         name: CMin_Hain_5_10 # Name of second variable in accompanying file.
@@ -161,7 +161,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Hainich #site where the incubated sample comes from.
         midDepth: 7.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V4:
         name: CMin_Hain_10_20 # Name of second variable in accompanying file.
@@ -169,7 +169,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Hainich #site where the incubated sample comes from.
         midDepth: 15
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V5:
         name: CMin_Coll_0_5 # Name of second variable in accompanying file.
@@ -177,7 +177,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Collelongo #site where the incubated sample comes from.
         midDepth: 1.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V6:
         name: CMin_Coll_5_10 # Name of second variable in accompanying file.
@@ -185,7 +185,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Collelongo #site where the incubated sample comes from.
         midDepth: 7.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V7:
         name: CMin_Coll_10_20 # Name of second variable in accompanying file.
@@ -193,7 +193,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Collelongo #site where the incubated sample comes from.
         midDepth: 15
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V8:
         name: CMin_Hess_0_5 # Name of second variable in accompanying file.
@@ -201,7 +201,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Hesse #site where the incubated sample comes from.
         midDepth: 2.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V9:
         name: CMin_Hess_5_10 # Name of second variable in accompanying file.
@@ -209,7 +209,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Hesse #site where the incubated sample comes from.
         midDepth: 7.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V10:
         name: CMin_Hess_10_20 # Name of second variable in accompanying file.
@@ -217,7 +217,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Hesse #site where the incubated sample comes from.
         midDepth: 15
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V11:
         name: CMin_Rocc_0_5 # Name of second variable in accompanying file.
@@ -225,7 +225,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Roccarespampani #site where the incubated sample comes from.
         midDepth: 2.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V12:
         name: CMin_Rocc_5_10 # Name of second variable in accompanying file.
@@ -233,7 +233,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Roccarespampani #site where the incubated sample comes from.
         midDepth: 7.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V13:
         name: CMin_Rocc_10_20 # Name of second variable in accompanying file.
@@ -241,7 +241,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Roccarespampani #site where the incubated sample comes from.
         midDepth: 15
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V14:
         name: CMin_Thar_0_5 # Name of second variable in accompanying file.
@@ -249,7 +249,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Tharandt #site where the incubated sample comes from.
         midDepth: 2.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V15:
         name: CMin_Thar_5_10 # Name of second variable in accompanying file.
@@ -257,7 +257,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Tharandt #site where the incubated sample comes from.
         midDepth: 7.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V16:
         name: CMin_Thar_10_20 # Name of second variable in accompanying file.
@@ -265,7 +265,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Tharandt #site where the incubated sample comes from.
         midDepth: 15
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V17:
         name: CMin_Harw_0_5 # Name of second variable in accompanying file.
@@ -273,7 +273,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Harwood #site where the incubated sample comes from.
         midDepth: 2.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V18:
         name: CMin_Harw_5_10 # Name of second variable in accompanying file.
@@ -281,7 +281,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Harwood #site where the incubated sample comes from.
         midDepth: 7.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V19:
         name: CMin_Harw_10_20 # Name of second variable in accompanying file.
@@ -289,7 +289,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Harwood #site where the incubated sample comes from.
         midDepth: 15
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V20:
         name: CMin_Wetz_0_5 # Name of second variable in accompanying file.
@@ -297,7 +297,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Wetztsein #site where the incubated sample comes from.
         midDepth: 2.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V21:
         name: CMin_Wetz_5_10 # Name of second variable in accompanying file.
@@ -305,7 +305,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Wetztsein #site where the incubated sample comes from.
         midDepth: 7.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V22:
         name: CMin_Wetz_10_20 # Name of second variable in accompanying file.
@@ -313,7 +313,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Wetztsein #site where the incubated sample comes from.
         midDepth: 15
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V23:
         name: CMin_Loob_0_5 # Name of second variable in accompanying file.
@@ -321,7 +321,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Loobos #site where the incubated sample comes from.
         midDepth: 2.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V24:
         name: CMin_Loob_5_10 # Name of second variable in accompanying file.
@@ -329,7 +329,7 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Loobos #site where the incubated sample comes from.
         midDepth: 7.5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V25:
         name: CMin_Loob_10_20 # Name of second variable in accompanying file.
@@ -337,5 +337,5 @@ variables: # These describe the columns of your timeSeries.csv file
         site: Loobos #site where the incubated sample comes from.
         midDepth: 15
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        units: mgC/gSoil/d # Units in which this variable is provided if not a factor
+        units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).

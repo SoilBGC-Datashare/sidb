@@ -108,7 +108,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Sioux City
         horizon: A
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V3:
         name: Cumresp_A_KBS
@@ -116,7 +116,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Kellog Biological Station
         horizon: A
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V4:
         name: Cumresp_A_MIS
@@ -124,7 +124,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Saginaw
         horizon: A
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V5:
         name: Cumresp_A_MN
@@ -132,7 +132,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Lamberton
         horizon: A
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V6:
         name: Cumresp_A_NE
@@ -140,7 +140,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Mead
         horizon: A
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V7:
         name: Cumresp_A_OH
@@ -148,7 +148,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Wauseon
         horizon: A
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V8:
         name: Cumresp_A_SK
@@ -156,7 +156,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Melfort
         horizon: A
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V9:
         name: Cumresp_C_IA
@@ -164,7 +164,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Sioux City
         horizon: C
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V10:
         name: Cumresp_C_KBS
@@ -172,7 +172,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Kellog Biological Station
         horizon: C
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V11:
         name: Cumresp_C_MIS
@@ -180,7 +180,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Saginaw
         horizon: C
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V12:
         name: Cumresp_C_MN
@@ -188,7 +188,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Lamberton
         horizon: C
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V13:
         name: Cumresp_C_NE
@@ -196,7 +196,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Mead
         horizon: C
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V14:
         name: Cumresp_C_OH
@@ -204,7 +204,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Wauseon
         horizon: C
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:
        V15:
         name: Cumresp_C_SK
@@ -212,5 +212,5 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         site: Melfort
         horizon: C
         gasMeasured:
-        units: mgC/gSoil
+        units: mgCo2/gSoil
         statistic:

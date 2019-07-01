@@ -43,7 +43,7 @@ incubationInfo:
         temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 60
-          units: mgC/gCFieldCapacity
+          units: percentFieldCapacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         replicates:
@@ -66,104 +66,104 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           name: C_AG_7deg
           varDesc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system AG/ agriculture"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 7
           landCover: AG
         V3:
           name: C_AG_14deg
           varDesc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system AG/ agriculture"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 14
           landCover: AG
         V4:
           name: C_AG_21deg
           varDesc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system AG/ agriculture"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 21
           landCover: AG
         V5:
           name: C_2HP_7deg
           varDesc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 7
           landCover: 2HP
         V6:
           name: C_2HP_14deg
           varDesc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 14
           landCover: 2HP
         V7:
           name: C_2HP_21deg
           varDesc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system 2HP/ 2-yr- old hybrid poplar plantation"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 21
           landCover: 2HP
         V8:
           name: C_9HP_7deg
           varDesc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 7
           landCover: 9HP
         V9:
           name: C_9HP_14deg
           varDesc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 14
           landCover: 9HP
         V10:
           name: C_9HP_21deg
           varDesc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system 9HP/ 9-yr-old hybrid poplar plantation"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 21
           landCover: 9HP
         V11:
           name: C_GRA_7deg
           varDesc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system GRA/ grassland"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 7
           landCover: GRA
         V12:
           name: C_GRA_14deg
           varDesc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system GRA/ grassland"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 14
           landCover: GRA
         V13:
           name: C_GRA_21deg
           varDesc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system GRA/ grassland"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 21
           landCover: GRA
         V14:
           name: C_NAT_7deg
           varDesc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system NAT/ native aspen stand"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 7
           landCover: NAT
         V15:
           name: C_NAT_14deg
           varDesc: "cumulative mineralized Carbon(%) at 14 degrees celsius. Land use system NAT/ native aspen stand"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 14
           landCover: NAT
         V16:
           name: C_NAT_21deg
           varDesc: "cumulative mineralized Carbon(%) at 21 degrees celsius. Land use system NAT/ native aspen stand"
           site: Linaria
-          units: mgC/gC
+          units: percent
           temperature: 21
           landCover: NAT

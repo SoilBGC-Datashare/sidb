@@ -4,7 +4,7 @@ entryAuthor: Mina Azizi Rad
 entryCreationDate: 2019-03-06
 contactName: Carlos Sierra
 contactEmail: csierra@bgc-jena.mpg.de
-entryNote: converted mgC/gSoil/d to mgC/gSoil/d
+entryNote:
 study: Measuring the respiration rates, δ13C of respired CO2, and microbial community composition in root-free bulk soils incubated at 4, 22 and 40°C.
 
 siteInfo:
@@ -67,7 +67,7 @@ variables:
           elevatedCO2: elevated
           temperature: 40
           gasMeasured: CO2
-          units: mgC/gSoil/d
+          units: mgCO2/gSoil/d
        V3:
           name: CO2_40_con
           varDesc: "CO2 production rate measured at 40 degrees celsius from CO2 control site" #
@@ -75,7 +75,7 @@ variables:
           elevatedCO2: control
           temperature: 40
           gasMeasured: CO2
-          units: mgC/gSoil/d
+          units: mgCO2/gSoil/d
        V4:
           name: CO2_22_elev
           varDesc: "CO2 production rate measured at 22 degrees celsius from elevated CO2 site" #
@@ -83,7 +83,7 @@ variables:
           elevatedCO2: elevated
           temperature: 22
           gasMeasured: CO2
-          units: mgC/gSoil/d
+          units: mgCO2/gSoil/d
        V5:
           name: CO2_22_con
           varDesc: "CO2 production rate measured at 22 degrees celsius from CO2 control site" #
@@ -91,7 +91,7 @@ variables:
           elevatedCO2: control
           temperature: 22
           gasMeasured: CO2
-          units: mgC/gSoil/d
+          units: mgCO2/gSoil/d
        V6:
           name: CO2_4_elev
           varDesc: "CO2 production rate measured at 4 degrees celsius from elevated CO2 site" #
@@ -99,7 +99,7 @@ variables:
           elevatedCO2: elevated
           temperature: 4
           gasMeasured: CO2
-          units: mgC/gSoil/d
+          units: mgCO2/gSoil/d
        V7:
          name: CO2_4_con
          varDesc: "CO2 production rate measured at 4 degrees celsius from CO2 control site" #
@@ -107,7 +107,7 @@ variables:
          elevatedCO2: control
          temperature: 4
          gasMeasured: CO2
-         units: mgC/gSoil/d
+         units: mgCO2/gSoil/d
        V8:
           name: C13_4_elev
           varDesc: "13CO2 production rate measured at 4 degrees celsius from elevated CO2 site" #

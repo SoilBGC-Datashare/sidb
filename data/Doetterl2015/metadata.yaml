@@ -328,431 +328,431 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         name: SDC22_TSO_1 # Name of second variable in accompanying file.
         varDesc: Site 22, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC22 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC22_TSO_2 # Name of second variable in accompanying file.
         varDesc: Site 22, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC22 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V4: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC22_TSO_3 # Name of second variable in accompanying file.
         varDesc: Site 22, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC22 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V5: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC35_SPD_1 # Name of second variable in accompanying file.
         varDesc: Site 35, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC35 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V6: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC35_SPD_2 # Name of second variable in accompanying file.
         varDesc: Site 35, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC35 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V7: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC35_SPD_3 # Name of second variable in accompanying file.
         varDesc: Site 35, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC35 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V8: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC36_SPD_1 # Name of second variable in accompanying file.
         varDesc: Site 36, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC36 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V9: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC36_SPD_2 # Name of second variable in accompanying file.
         varDesc: Site 36, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC36 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V10: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC36_SPD_3 # Name of second variable in accompanying file.
         varDesc: Site 36, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC36 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V11: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC37_SPD_1 # Name of second variable in accompanying file.
         varDesc: Site 37, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC37 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V12: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC37_SPD_2 # Name of second variable in accompanying file.
         varDesc: Site 37, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC37 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V13: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC37_SPD_3 # Name of second variable in accompanying file.
         varDesc: Site 37, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC37 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V14: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC_32_SPSO_1 # Name of second variable in accompanying file.
         varDesc: Site 32, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC32 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V15: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC_32_SPSO_2 # Name of second variable in accompanying file.
         varDesc: Site 32, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC32 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V16: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC_32_SPSO_3 # Name of second variable in accompanying file.
         varDesc: Site 32, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC32 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V17: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC10_MSA_1 # Name of second variable in accompanying file.
         varDesc: Site 10, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC10 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V18: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC10_MSA_2 # Name of second variable in accompanying file.
         varDesc: Site 10, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC10 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V19: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC10_MSA_3 # Name of second variable in accompanying file.
         varDesc: Site 10, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC10 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V20: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC19_TO_1 # Name of second variable in accompanying file.
         varDesc: Site 19, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC19 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V21: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC19_TO_2 # Name of second variable in accompanying file.
         varDesc: Site 19, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC19 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V22: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC19_TO_3 # Name of second variable in accompanying file.
         varDesc: Site 19, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC19 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V23: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC20_TO_1 # Name of second variable in accompanying file.
         varDesc: Site 20, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC20 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V24: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC20_TO_2 # Name of second variable in accompanying file.
         varDesc: Site 20, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC20 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V25: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC20_TO_3 # Name of second variable in accompanying file.
         varDesc: Site 20, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC20 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V26: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC26_TO_1 # Name of second variable in accompanying file.
         varDesc: Site 26, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC26 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V27: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC26_TO_2 # Name of second variable in accompanying file.
         varDesc: Site 26, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC26 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V28: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC26_TO_3 # Name of second variable in accompanying file.
         varDesc: Site 26, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC26 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V29: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC27_TO_1 # Name of second variable in accompanying file.
         varDesc: Site 27, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC27 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V30: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC27_TO_2 # Name of second variable in accompanying file.
         varDesc: Site 27, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC27 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V31: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC27_TO_3 # Name of second variable in accompanying file.
         varDesc: Site 27, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC27 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V32: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC28_TO_1 # Name of second variable in accompanying file.
         varDesc: Site 28, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC28 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V33: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC28_TO_2 # Name of second variable in accompanying file.
         varDesc: Site 28, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC28 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V34: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC28_TO_3 # Name of second variable in accompanying file.
         varDesc: Site 28, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC28 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V35: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC30_SPOW_1 # Name of second variable in accompanying file.
         varDesc: Site 30, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC30 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V36: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC30_SPOW_2 # Name of second variable in accompanying file.
         varDesc: Site 30, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC30 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V37: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC30_SPOW_3 # Name of second variable in accompanying file.
         varDesc: Site 30, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC30 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V38: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC31_SPO_1 # Name of second variable in accompanying file.
         varDesc: Site 31, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC31 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V39: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC31_SPO_2 # Name of second variable in accompanying file.
         varDesc: Site 31, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC31 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V40: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC31_SPO_3 # Name of second variable in accompanying file.
         varDesc: Site 31, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC31 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V41: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC8_MSA_1 # Name of second variable in accompanying file.
         varDesc: Site 8, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC8 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V42: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC8_MSA_2 # Name of second variable in accompanying file.
         varDesc: Site 8, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC8 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V43: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC8_MSA_3 # Name of second variable in accompanying file.
         varDesc: Site 8, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC8 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V44: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC15_TSO_1 # Name of second variable in accompanying file.
         varDesc: Site 15, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC15 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V45: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC15_TSO_2 # Name of second variable in accompanying file.
         varDesc: Site 15, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC15 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V46: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC15_TSO_3 # Name of second variable in accompanying file.
         varDesc: Site 15, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC15 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V47: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC16_TSO_1 # Name of second variable in accompanying file.
         varDesc: Site 16, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC16 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V48: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC16_TSO_2 # Name of second variable in accompanying file.
         varDesc: Site 16, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC16 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V49: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC16_TSO_3 # Name of second variable in accompanying file.
         varDesc: Site 16, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC16 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V50: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC4_MSA_1 # Name of second variable in accompanying file.
         varDesc: Site 4, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC4 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V51: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC4_MSA_2 # Name of second variable in accompanying file.
         varDesc: Site 4, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC4 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V52: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC4_MSA_3 # Name of second variable in accompanying file.
         varDesc: Site 4, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC4 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V53: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC6_MSA_1 # Name of second variable in accompanying file.
         varDesc: Site 6, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC6 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V54: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC6_MSA_2 # Name of second variable in accompanying file.
         varDesc: Site 6, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC6 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V55: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC6_MSA_3 # Name of second variable in accompanying file.
         varDesc: Site 6, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC6 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V56: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC7_MSA_1 # Name of second variable in accompanying file.
         varDesc: Site 7, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC7 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V57: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC7_MSA_2 # Name of second variable in accompanying file.
         varDesc: Site 7, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC7 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V58: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC7_MSA_3 # Name of second variable in accompanying file.
         varDesc: Site 7, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC7 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V59: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDA13_AM_1 # Name of second variable in accompanying file.
         varDesc: Site 13, rep 1 incuabation CO2 evolved # description of the variable
         site: SDA13 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V60: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDA13_AM_2 # Name of second variable in accompanying file.
         varDesc: Site 13, rep 2 incuabation CO2 evolved # description of the variable
         site: SDA13 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V61: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDA13_AM_3 # Name of second variable in accompanying file.
         varDesc: Site 13, rep 3 incuabation CO2 evolved # description of the variable
         site: SDA13 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V62: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDA5_AM_1 # Name of second variable in accompanying file.
         varDesc: Site 5, rep 1 incuabation CO2 evolved # description of the variable
         site: SDA5 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V63: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDA5_AM_2 # Name of second variable in accompanying file.
         varDesc: Site 5, rep 2 incuabation CO2 evolved # description of the variable
         site: SDA5 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V64: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDA5_AM_3 # Name of second variable in accompanying file.
         varDesc: Site 5, rep 3 incuabation CO2 evolved # description of the variable
         site: SDA5 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V65: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC1_MSA_1 # Name of second variable in accompanying file.
         varDesc: Site 1, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC1 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V66: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC1_MSA_2 # Name of second variable in accompanying file.
         varDesc: Site 1, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC1 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V67: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC1_MSA_3 # Name of second variable in accompanying file.
         varDesc: Site 1, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC1 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V68: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC14_TSO_1 # Name of second variable in accompanying file.
         varDesc: Site 14, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC14 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V69: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC14_TSO_2 # Name of second variable in accompanying file.
         varDesc: Site 14, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC14 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V70: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC14_TSO_3 # Name of second variable in accompanying file.
         varDesc: Site 14, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC14 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V71: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC2_MSA_1 # Name of second variable in accompanying file.
         varDesc: Site 2, rep 1 incuabation CO2 evolved # description of the variable
         site: SDC2 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V72: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC2_MSA_2 # Name of second variable in accompanying file.
         varDesc: Site 2, rep 2 incuabation CO2 evolved # description of the variable
         site: SDC2 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
        V73: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
         name: SDC2_MSA_3 # Name of second variable in accompanying file.
         varDesc: Site 2, rep 3 incuabation CO2 evolved # description of the variable
         site: SDC2 #site where the incubated sample comes from.
-        units: microgC/gC/h # Units in which this variable is provided if not a factor
+        units: microgC/gSOC/hr # Units in which this variable is provided if not a factor
         statistic: none # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)

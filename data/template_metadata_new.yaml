@@ -31,7 +31,7 @@ siteInfo:
 incubationInfo:
         incDesc: # Short description of the incubation setup and main treatments
 # These fields should all be one dimensional arrays. Values for experimental variables with multiple treatment levels should be entered in the variables section, and left blank here
-        depthInfo: # Soil depth in cm. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, leave blank
+        depthInfo: # Soil depth in cm. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, leave blank and specify in variables section
           top:
           bottom:
           midDepth:

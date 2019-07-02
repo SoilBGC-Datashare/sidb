@@ -1,1 +1,167 @@
-../../../data/Song2010/metadata.yaml
+citationKey: Song2010EJSOB
+doi: 10.1016/j.ejsobi.2010.09.003
+entryAuthor: Caitlin Pries
+entryCreationDate: 2019-03-06
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
+entryNote: # Any notes or comments related to this entry.
+
+siteInfo: 
+        study:  "Haibei Alpine Meadow Ecosystem Experimental Station, Qinghai-Tibet Plateau, China"
+        site: Haibei Alpine Meadow
+#These fields should be arrays of equal length to site array       
+        coordinates:
+          latitude: 37.533333
+          longitude: 105.25
+        country: China
+        MAT: -1.7
+        MAP: 618
+        elevation: 3240
+        landCover: tundra
+        vegNote: "dominated by perrennial sedge"
+        soilTaxonomy:
+          soilOrder: Cambisol
+          soilFamily: Gelic
+          soilSeries: # Soil series according to the classification system described below
+          classificationSystem: WRB
+#These do not have to be arrays of equal length to site array        
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array. 
+          top: 0
+          bottom: 10
+          midDepth: 5
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          horizon: # soil horizon designation
+        permafrost:
+          permafrostExist: yes
+          activeLayer: # Depth of the active layer in meters
+        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
+
+incubationInfo:
+        description: "Soil incubated at 5, 15, and 25 for 28 d. Two 2-way designs were performed (temperature x N (NH4) and temperature x C (glucose))."
+        temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+        moisture: 
+          value: 30
+          units: percentGWC
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic 
+        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
+          temperature:
+            value: 
+              - 5
+              - 15
+              - 25
+            units: Celsius
+          ammendment:
+              - Cr
+              - N1
+              - N2
+              - C1
+              - C2
+        replicates: 
+          number: 4
+          type: lab 
+        incubationTime: 28
+        preincubationTime: 0
+        samplePreparation:
+          intactCore: no
+          sieving: 2
+          rootPicking: no
+          rockPicking: no
+        gasAnalyzer: "titration of NaOH solution against 0.1 N HCl after the addition of BaC12"
+        
+variables:
+        V1:
+          name: time
+          units: d
+        V2:
+          name: CO2_Cr_5
+          units: mgC-CO2/gSoil/d 
+          desc: "Carbon mineralization rates under control treatments incubated at 5deg"
+          temperature: 5
+          ammendment: Cr
+        V3:
+          name: CO2_N1_5
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external nitrogen inputs (N1= 0.005 mgN/gSoil) incubated at 5deg"
+          temperature: 5
+          ammendment: N1
+        V4:
+          name: CO2_N2_5
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external nitrogen inputs (N2= 0.025 mgN/gSoil) incubated at 5deg"
+          temperature: 5
+          ammendment: N2
+        V5:
+          name: CO2_C1_5
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external glucose inputs (C1= 2 mgC/gSoil) incubated at 5deg"
+          temperature: 5
+          ammendment: C1
+        V6:
+          name: CO2_C2_5
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external glucose inputs (C2= 10 mgC/gSoil) incubated at 5deg"
+          temperature: 5
+          ammendment: C2
+        V7:
+          name: CO2_Cr_15
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under control treatments incubated at 15deg"
+          temperature: 15
+          ammendment: Cr
+        V8:
+          name: CO2_N1_15
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external nitrogen inputs (N1= 0.005 mgN/gSoil) incubated at 15deg"
+          temperature: 15
+          ammendment: N1
+        V9:
+          name: CO2_N2_15
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external nitrogen inputs (N2= 0.025 mgC/gSoil) incubated at 15deg"
+          temperature: 15
+          ammendment: N2
+        V10:
+          name: CO2_C1_15
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external glucose inputs (C1= 2 mgC/gSoil) incubated at 15deg"
+          temperature: 15
+          ammendment: C1
+        V11:
+          name: CO2_C2_15
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external glucose inputs (C2= 10 mgC/gSoil) incubated at 15deg"
+          temperature: 15
+          ammendment: C2
+        V12:
+          name: CO2_Cr_25
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under control treatments incubated at 25deg"
+          temperature: 25
+          ammendment: Cr
+        V13:
+          name: CO2_N1_25
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external nitrogen inputs (N1= 0.005 mgN/gSoil) incubated at 25deg"
+          temperature: 25
+          ammendment: N1
+        V14:
+          name: CO2_N2_25
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external nitrogen inputs (N2= 0.025 mgN/gSoil) incubated at 25deg"
+          temperature: 25
+          ammendment: N2
+        V15:
+          name: CO2_C1_25
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external glucose inputs (C1= 2 mgC/gSoil) incubated at 25deg"
+          temperature: 25
+          ammendment: C1
+        V16:
+          name: CO2_C2_25
+          units: mgC-CO2/gSoil/d
+          desc: "Carbon mineralization rates under external glucose inputs (C2= 10 mgC/gSoil) incubated at 25deg"
+          temperature: 25
+          ammendment: C2
+
+          

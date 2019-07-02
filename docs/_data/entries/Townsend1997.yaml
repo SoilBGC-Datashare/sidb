@@ -1,1 +1,182 @@
-../../../data/Townsend1997/metadata.yaml
+citationKey: Townsend1997  # Unique identifier in the format: LastnameYearJOURNAL (journal is abbreviated)
+doi:  10.1023/A:1017942918708  # DOI of the publication where data is published
+entryAuthor: Shane Stoner  # First and Last name of the person who enters the data in this file
+entryCreationDate: 2019-03-08 # Date when the data is entered in this file. Format: YYYY-MM-DD
+contactName: Shane Stoner # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
+contactEmail: sstoner@bgc-jena.mpg.de # Email of the contact person
+entryNote: # Any notes or comments related to this entry.
+
+siteInfo:
+        study: Soil carbon pool structure and temperature sensitivity inferred using CO2 and 13CO2 incubation fluxes from five Hawaiian soils # Overall study description
+        site: Mauna Kea # Names of individual sites, if one site, keep on this line, if multiple, use array format
+#These fields should be arrays of equal length to site array
+        coordinates:
+          latitude: 19.9  # Latitude in decimal units (check for negative that denotes southern hemisphere)
+          longitude: -155.3 # Longitude in decimal units (check for negative that denotes west)
+        country: USA # Name of country where site was conducted
+        MAT: 21 # Mean annual temperature in degrees Celsius
+        MAP: 2500 # Mean annual precipitation in mm
+        elevation: # Elevation of study site in meters above sea levels
+        landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+        vegNote: #Additional details about land cover such as species or functional type composition
+        soilTaxonomy:
+          soilOrder: Andisol # Soil order according to the classification system described below
+          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
+          soilSeries: # Soil series according to the classification system described below
+          classificationSystem: USDA # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
+#These do not have to be arrays of equal length to site array
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+          top: 0 # in cm
+          bottom: 20 # in cm
+          midDepth: 10 #average depth
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          horizon: # soil horizon designation
+        permafrost:
+          permafrostExist: no # yes or no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
+          landCover:
+            - Pasture
+            - Forest
+          elevation:
+            - 100
+            - 800
+            - 900
+            - 1500
+            - 1700`
+incubationInfo:
+        description: "eight 10g laboratory replicates were incubated at 20, 30 and 40deg for ca. 225 d." # Short description of the incubation setup and main treatments
+        temperature: # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
+        moisture:
+          value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
+          units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
+        gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
+          temperature: # Replace with name of treatment
+            value: # Numerical or factor
+              - 20
+              - 30
+              - 40
+            units: Celsius # Units of treatment value if numerical, if a %, write percent
+        replicates:
+          number: 8 # Number of replicates per treatments
+          type: lab # Valid fields are: field or lab
+        incubationTime: 225 # length of incubation in days
+        preincubationTime: # Pre-incubation time in days
+        samplePreparation:
+          intactCore: no # yes or no
+          sieving: no # no, or mesh size in mm
+          rootPicking: yes # yes or no
+          rockPicking: yes # yes or no
+        gasAnalyzer: NaOH titration # Gas analysis equipment for measurements
+
+variables: # These describe the columns of your timeSeries.csv file
+       V1: # column 1
+        name: time # Name of first variable in the accompanying csv data file. First variable should be time.
+        units: d # Units of first variable in accompanying file.
+       V2:
+        name: CO2_Pas100_20 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 20deg" # Description of the variable
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Pasture
+        elevation: 100
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V3:
+        name: CO2_Pas100_30 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 30deg" # Description of the variable
+        temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Pasture
+        elevation: 100
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V4:
+        name: CO2_Pas100_40 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 40deg" # Description of the variable
+        temperature: 40 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Pasture
+        elevation: 100
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V5:
+        name: CO2_Pas800_20 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 20deg" # Description of the variable
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Pasture
+        elevation: 800
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V6:
+        name: CO2_Pas800_30 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 30deg" # Description of the variable
+        temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Pasture
+        elevation: 800
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V7:
+        name: CO2_Pas800_40 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 40deg" # Description of the variable
+        temperature: 40 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Pasture
+        elevation: 800
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V8:
+        name: CO2_Pas1700_20 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 20deg" # Description of the variable
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Pasture
+        elevation: 1700
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V9:
+        name: CO2_Pas1700_30 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 30deg" # Description of the variable
+        temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Pasture
+        elevation: 1700
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V10:
+        name: CO2_Pas1700_40 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 40deg" # Description of the variable
+        temperature: 40 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Pasture
+        elevation: 1700
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V11:
+        name: CO2_For900_20 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 20deg" # Description of the variable
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Forest
+        elevation: 900
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V12:
+        name: CO2_For900_30 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 30deg" # Description of the variable
+        temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Forest
+        elevation: 900
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V13:
+        name: CO2_For900_40 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 40deg" # Description of the variable
+        temperature: 40 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Forest
+        elevation: 900
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V14:
+        name: CO2_For1500_20 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 20deg" # Description of the variable
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Forest
+        elevation: 1500
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V15:
+        name: CO2_For1500_30 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 30deg" # Description of the variable
+        temperature: 30 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Forest
+        elevation: 1500
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor
+       V16:
+        name: CO2_For1500_40 # Name of second variable in accompanying file.
+        desc: "Respired carbon over time in ugC/g soil/day incubated at 40deg" # Description of the variable
+        temperature: 40 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        landCover: Forest
+        elevation: 1500
+        units: microgC/gSoil/d # Units in which this variable is provided if not a factor

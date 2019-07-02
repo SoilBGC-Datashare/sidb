@@ -1,1 +1,168 @@
-../../../data/Andrews2000SBB/metadata.yaml
+citationKey: Andrews2000SBB
+doi: 10.1016/S0038-0717(99)00206-0
+entryAuthor: Mina Azizi Rad
+entryCreationDate: 2019-03-06
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
+entryNote:
+
+siteInfo:
+        study: Measuring the respiration rates, δ13C of respired CO2, and microbial community composition in root-free bulk soils incubated at 4, 22 and 40°C.
+        site: Duke Forest FACE
+        coordinates:
+          latitude: 36.6166667
+          longitude: -79.150
+        country: USA
+        MAT:
+        MAP:
+        elevation:
+        landCover: Forest
+        vegNote: loblolly pine (Pinus taeda L.)
+        soilTaxonomy:
+          soilOrder: Alfisol
+          soilFamily: Ultic Alfisols
+          soilSeries:
+          classificationSystem: USDA
+
+        depthInfo:
+          top: 0
+          bottom: 10
+          midDepth: 5
+          surfaceAtm:
+          horizon:
+        permafrost:
+          permafrostExist:
+          activeLayer:
+        experimentalTreatment:
+          elevatedCO2:
+            - control
+            - elevated
+incubationInfo:
+        description: "Soils were incubated at three different temperatures: 4, 22, and 40 degrees celsius as well as ambient and elevated CO2"
+        temperature:
+        moisture:
+          value: 240
+          units: gWater/kgSoil
+        anaerobic:
+        gasMeasured:
+          - CO2
+          - 13CO2
+        laboratoryTreatment:
+          temperature:
+            value:
+               - 4
+               - 22
+               - 40
+            units: Celsius
+        replicates:
+          number: 3
+          type: laboratory
+        incubationTime: 48
+        preincubationTime:
+        samplePreparation:
+          intactCore: Yes
+          sieving:
+          rootPicking: Yes
+          rockPicking:
+        gasAnalyzer: VG ISOGAS series 2
+
+variables:
+       V1:
+        name: time
+        units: d
+       V2:
+          name: CO2_40_elev
+          desc: "CO2 production rate measured at 40 degrees celsius from elevated CO2 site" #
+          site: Duke Forest FACE
+          elevatedCO2: elevated
+          temperature: 40
+          gasMeasured: CO2
+          units: mgCO2/gSoil/d
+       V3:
+          name: CO2_40_con
+          desc: "CO2 production rate measured at 40 degrees celsius from CO2 control site" #
+          site: Duke Forest FACE
+          elevatedCO2: control
+          temperature: 40
+          gasMeasured: CO2
+          units: mgCO2/gSoil/d
+       V4:
+          name: CO2_22_elev
+          desc: "CO2 production rate measured at 22 degrees celsius from elevated CO2 site" #
+          site: Duke Forest FACE
+          elevatedCO2: elevated
+          temperature: 22
+          gasMeasured: CO2
+          units: mgCO2/gSoil/d
+       V5:
+          name: CO2_22_con
+          desc: "CO2 production rate measured at 22 degrees celsius from CO2 control site" #
+          site: Duke Forest FACE
+          elevatedCO2: control
+          temperature: 22
+          gasMeasured: CO2
+          units: mgCO2/gSoil/d
+       V6:
+          name: CO2_4_elev
+          desc: "CO2 production rate measured at 4 degrees celsius from elevated CO2 site" #
+          site: Duke Forest FACE
+          elevatedCO2: elevated
+          temperature: 4
+          gasMeasured: CO2
+          units: mgCO2/gSoil/d
+       V7:
+         name: CO2_4_con
+         desc: "CO2 production rate measured at 4 degrees celsius from CO2 control site" #
+         site: Duke Forest FACE
+         elevatedCO2: control
+         temperature: 4
+         gasMeasured: CO2
+         units: mgCO2/gSoil/d
+       V8:
+          name: C13_4_elev
+          desc: "13CO2 production rate measured at 4 degrees celsius from elevated CO2 site" #
+          site: Duke Forest FACE
+          elevatedCO2: elevated
+          temperature: 4
+          gasMeasured: 13CO2
+          units: permille
+       V9:
+          name: C13_4_con
+          desc: "13CO2 production rate measured at 4 degrees celsius from CO2 control site" #
+          site: Duke Forest FACE
+          elevatedCO2: control
+          temperature: 4
+          gasMeasured: 13CO2
+          units: permille
+       V10:
+          name: C13_22_elev
+          desc: "13CO2 production rate measured at 22 degrees celsius from elevated CO2 site" #
+          site: Duke Forest FACE
+          elevatedCO2: elevated
+          temperature: 22
+          gasMeasured: 13CO2
+          units: permille
+       V11:
+          name: C13_22_con
+          desc: "13CO2 production rate measured at 22 degrees celsius from CO2 control site" #
+          site: Duke Forest FACE
+          elevatedCO2: control
+          temperature: 22
+          gasMeasured: 13CO2
+          units: permille
+       V12:
+          name: C13_40_elev
+          desc: "13CO2 production rate measured at 40 degrees celsius from elevated CO2 site" #
+          site: Duke Forest FACE
+          elevatedCO2: elevated
+          temperature: 40
+          gasMeasured: 13CO2
+          units: permille
+       V13:
+         name: C13_40_con
+         desc: "13CO2 production rate measured at 40 degrees celsius from CO2 control site" #
+         site: Duke Forest FACE
+         elevatedCO2: control
+         temperature: 40
+         gasMeasured: 13CO2
+         units: permille

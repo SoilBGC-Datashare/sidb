@@ -48,13 +48,13 @@ siteInfo:
           - Germany
           - Netherlands
         MAT: # Mean annual temperature in degrees Celsius
-          - 7
+          - 7.0
           - 6.4
           - 9.2
-          - 14
+          - 14.0
           - 7.5
-          - 9
-          - 6
+          - 9.0
+          - 6.0
           - 9.8
         MAP: # Mean annual precipitation in mm
           - 750

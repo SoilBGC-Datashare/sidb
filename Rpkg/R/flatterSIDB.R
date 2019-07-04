@@ -146,31 +146,31 @@ flatterSIDB <- function(database) {
       return(x)
     })
 
-  # unlist nested lists
-  siteInfo <- lapply(siteInfo, function(x) {
-    d1 <- match(names(unlist(lapply(x, function(y) which(is.list(y))))),names(x))
-    if(!length(d1)==0) {
-      ix.1d <- x[-d1]
-      ix.2d <- x[d1]
-      ix.2d <- lapply(ix.2d, function(y) {
-        y[sapply(y, is.null)] <- NA
-        return(y)
-      })
-      ix.2d <- lapply(ix.2d, function(y) {
-        if(length(y[[1]])==1 && !is.na(y[[1]])) {
-          y <- unlist(y)
-        }
-        return(y)
-      })
-      ix <- which(unlist(lapply(ix.2d, function(y) is.list(y))))
-      ix.2d.1d <- ix.2d[-ix]
-      ix.2d <- ix.2d[ix]
-      ls <- c(unlist(ix.2d, recursive=F), ix.2d.1d, ix.1d)
-    } else {
-      ls<-x
-    }
-    return(ls)
-  })
+  # # unlist nested lists
+  # siteInfo <- lapply(siteInfo, function(x) {
+  #   d1 <- match(names(unlist(lapply(x, function(y) which(is.list(y))))),names(x))
+  #   if(!length(d1)==0) {
+  #     ix.1d <- x[-d1]
+  #     ix.2d <- x[d1]
+  #     ix.2d <- lapply(ix.2d, function(y) {
+  #       y[sapply(y, is.null)] <- NA
+  #       return(y)
+  #     })
+  #     ix.2d <- lapply(ix.2d, function(y) {
+  #       if(length(y[[1]])==1 && !is.na(y[[1]])) {
+  #         y <- unlist(y)
+  #       }
+  #       return(y)
+  #     })
+  #     ix <- which(unlist(lapply(ix.2d, function(y) is.list(y))))
+  #     ix.2d.1d <- ix.2d[-ix]
+  #     ix.2d <- ix.2d[ix]
+  #     ls <- c(unlist(ix.2d, recursive=F), ix.2d.1d, ix.1d)
+  #   } else {
+  #     ls<-x
+  #   }
+  #   return(ls)
+  # })
 
   # expand fields with single value to nrow of site array
   siteInfo <- lapply(siteInfo, function(x) {

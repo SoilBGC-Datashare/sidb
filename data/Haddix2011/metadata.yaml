@@ -46,12 +46,12 @@ siteInfo:
           - 20.0
           - 25.6
         MAP: # Mean annual precipitation in mm
-          - 421
-          - 402
-          - 420
-          - 665
-          - 
-          - 2200
+          - 421.0
+          - 402.0
+          - 420.0
+          - 665.0
+          -
+          - 2200.0
         elevation: # Elevation of study site in meters above sea levels
         landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
           - rangeland/grassland
@@ -78,7 +78,6 @@ siteInfo:
             - Paleudult and Kandidult
           soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem: USDA
-#These do not have to be arrays of equal length to site array
         permafrost:
           permafrostExist:
           activeLayer: # Depth of the active layer in meters

@@ -125,19 +125,26 @@ flatterSIDB <- function(database) {
 
   # flatten soilTax, coords, permafrost
   siteInfo <- lapply(siteInfo, function(x) {
-    latitude <- data.frame(latitude=unlist(x$coordinates$latitude))
-    longitude <- data.frame(longitude=unlist(x$coordinates$longitude))
-    soilOrder <- data.frame(soilOrder=unlist(x$soilTaxonomy$soilOrder))
-    soilFamily <- data.frame(soilFamily=unlist(x$soilTaxonomy$soilFamily))
-    soilSeries <- data.frame(soilSeries=unlist(x$soilTaxonomy$soilSeries))
-    classificationSystem <- data.frame(classificationSystem=unlist(x$soilTaxonomy$classificationSystem))
-    permafrostExist <- data.frame(permafrostExist=unlist(lapply(x$permafrost$permafrostExist, function(y) ifelse(is.null(y), FALSE, y))))
-    activeLayer <- data.frame(activeLayer=unlist(x$permafrost$activeLayer))
-    ix <- which(names(x)=="coordinates" | names(x)=="soilTaxonomy" | names(x)=="permafrost")
-    x <- x[-ix]
-    x <- c(x,latitude,longitude,soilOrder,soilFamily,soilSeries,classificationSystem,permafrostExist,activeLayer)
-    return(x)
-  })
+      null.na.fx <- function(z) {
+        if(is.null(z)) {
+          NA
+        } else {
+          z
+        }
+          }
+      latitude <- data.frame(latitude=unlist(lapply(x$coordinates$latitude,null.na.fx)))
+      longitude <- data.frame(longitude=unlist(lapply(x$coordinates$longitude,null.na.fx)))
+      soilOrder <- data.frame(soilOrder=unlist(lapply(x$soilTaxonomy$soilOrder,null.na.fx)))
+      soilFamily <- data.frame(soilFamily=unlist(lapply(x$soilTaxonomy$soilFamily, null.na.fx)))
+      soilSeries <- data.frame(soilSeries=unlist(lapply(x$soilTaxonomy$soilSeries,null.na.fx)))
+      classificationSystem <- data.frame(classificationSystem=unlist(lapply(x$soilTaxonomy$classificationSystem,null.na.fx)))
+      permafrostExist <- data.frame(permafrostExist=unlist(lapply(x$permafrost$permafrostExist, function(y) ifelse(is.null(y), FALSE, y))))
+      activeLayer <- data.frame(activeLayer=unlist(x$permafrost$activeLayer))
+      ix <- which(names(x)=="coordinates" | names(x)=="soilTaxonomy" | names(x)=="permafrost")
+      x <- x[-ix]
+      x <- c(x,latitude,longitude,soilOrder,soilFamily,soilSeries,classificationSystem,permafrostExist,activeLayer)
+      return(x)
+    })
 
   # unlist nested lists
   siteInfo <- lapply(siteInfo, function(x) {

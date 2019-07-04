@@ -49,17 +49,17 @@ siteInfo:
         landCover:
           - Northern hardwoods
           - Cove hardwoods
-          -
-          -
+          - NA
+          - NA
           - Northern hardwoods
           - Northern hardwoods
         vegNote:
           - Betula alleghaniensis, Liriodendron tulipifera, Quercus rubras
           - L. tulipifera, Q. rubra, Tsuga canadensis, Carya spp
-          -
-          -
+          - NA
+          - NA
           - Quercus veluntina, Acer rubrum, Betula papyrifera, Acer pensylvanicum
-          -
+          - NA
         soilTaxonomy:
           soilOrder:
             - Inceptisol

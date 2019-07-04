@@ -50,7 +50,7 @@ siteInfo:
           - 402.0
           - 420.0
           - 665.0
-          -
+          - NA
           - 2200.0
         elevation: # Elevation of study site in meters above sea levels
         landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra

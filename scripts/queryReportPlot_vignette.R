@@ -20,6 +20,10 @@ database <- loadEntries("~/sidb/data/")
 # run "flatter" fx 
 db <- flatterSIDB(database)
 
+# join variables dataframes with initConditions
+vars.ic <- lapply(seq_along(db), function(i) left_join(dbf$vars[[i]], db[[i]][["initConditions"]]))
+names(vars.ic) <- names(db)
+
 # create df object of timeseries list
 ts.df <- do.call("rbind", db$timeseries)
 #####
@@ -27,7 +31,7 @@ ts.df <- do.call("rbind", db$timeseries)
 # 1) Filter vars.dfl to exclude SD and SE timeseries
 #####
 # add statistic column to entries missing it
-vars.dfl.mean <- lapply(db$vars, function(x) {
+vars.dfl.mean <- lapply(vars.ic, function(x) {
   if(is.null(x$statistic)) {
     x$statistic = NA
   } else {

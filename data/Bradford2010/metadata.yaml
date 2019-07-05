@@ -87,8 +87,8 @@ incubationInfo:
           value:
           units:
         depthInfo:
-          top: 0 cm
-          bottom: 10 cm
+          top: 0
+          bottom: 10
           midDepth: #average depth
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
           horizon: surface mineral horizons

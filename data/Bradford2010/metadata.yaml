@@ -99,7 +99,7 @@ incubationInfo:
         anaerobic:
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         glucose:
-          value:
+          value: 0.84
           units: mgC/gDrysoil
         replicates:
           number: 2
@@ -122,7 +122,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for CH in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
           temperature: 10
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -131,7 +130,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for CH in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
           temperature: 20
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -140,7 +138,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for CH in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_high elevation(CH)"
           temperature: 30
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -149,7 +146,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for CL in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
           temperature: 10
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -158,7 +154,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for CL in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
           temperature: 20
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -167,7 +162,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for CL in glucose addition assay"
           site: "Coweeta Long-Term Ecological Research LTER_low elevation(CL)"
           temperature: 30
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -176,7 +170,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HOC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
           temperature: 10
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -185,7 +178,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HOC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
           temperature: 20
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -194,7 +186,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HOC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Rich Horizon(HOC)"
           temperature: 30
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -203,7 +194,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HMC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
           temperature: 10
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -212,7 +202,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HMC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
           temperature: 20
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -221,7 +210,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HMC in glucose addition assay"
           site: "Harvard Forest LTER_Control_Organic Poor Horizon (HMC)"
           temperature: 30
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -230,7 +218,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HOH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
           temperature: 10
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -239,7 +226,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HOH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
           temperature: 20
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -248,7 +234,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HOH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)"
           temperature: 30
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -257,7 +242,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 10 degrees for HMH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
           temperature: 10
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -266,7 +250,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 20 degrees for HMH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
           temperature: 20
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:
@@ -275,7 +258,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           varDesc: "Soil microbial biomass across the 77 day incubation period after incubation at 30 degrees for HMH in glucose addition assay"
           site: "Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH)"
           temperature: 30
-          glucose: 0.84
           gasMeasured:
           units: mg/gSoil/d
           statistic:

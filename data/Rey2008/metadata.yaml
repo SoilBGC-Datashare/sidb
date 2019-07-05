@@ -152,6 +152,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rates for the 0–5 cm soil layer at the Hainich site" # description of the variable
         site: Hainich #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -160,6 +162,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rates for the 5–10 cm soil layer at the Hainich site" # description of the variable
         site: Hainich #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -168,6 +172,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rates for the 10–20 cm soil layer at the Hainich site" # description of the variable
         site: Hainich #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -175,7 +181,9 @@ variables: # These describe the columns of your timeSeries.csv file
         name: CMin_Coll_0_5 # Name of second variable in accompanying file.
         varDesc: "Carbon mineralization rates for the 0-5 cm soil layer at the Collelongo site" # description of the variable
         site: Collelongo #site where the incubated sample comes from.
-        midDepth: 1.5
+        midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -184,6 +192,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rates for the 5-10 cm soil layer at the Collelongo site" # description of the variable
         site: Collelongo #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -192,6 +202,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rates for the 10-20 cm soil layer at the Collelongo site" # description of the variable
         site: Collelongo #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -200,6 +212,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rates for the 0-5 cm soil layer at the Hesse site" # description of the variable
         site: Hesse #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -208,6 +222,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rates for the 5-10 cm soil layer at the Hesse site" # description of the variable
         site: Hesse #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -216,6 +232,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rates for the 10-20 cm soil layer at the Hesse site" # description of the variable
         site: Hesse #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -224,6 +242,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rates for the 0-5 cm soil layer at the Hesse site" # description of the variable
         site: Roccarespampani #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -232,6 +252,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rates for the 5-10 cm soil layer at the Hesse site" # description of the variable
         site: Roccarespampani #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -240,6 +262,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 10-20 cm soil layer at the Hesse site" # description of the variable
         site: Roccarespampani #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -248,6 +272,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 0-5 cm soil layer at the Tharandt site" # description of the variable
         site: Tharandt #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -256,6 +282,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 5-10 cm soil layer at the Tharandt site" # description of the variable
         site: Tharandt #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -264,6 +292,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 10-20 cm soil layer at the Tharandt site" # description of the variable
         site: Tharandt #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -272,6 +302,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 0-5 cm soil layer at the Harwood site" # description of the variable
         site: Harwood #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -280,6 +312,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 5-10 cm soil layer at the Harwood site" # description of the variable
         site: Harwood #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -288,6 +322,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 10-20 cm soil layer at the Harwood site" # description of the variable
         site: Harwood #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -296,6 +332,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 0-5 cm soil layer at the Wetztsein site" # description of the variable
         site: Wetztsein #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -304,6 +342,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 5-10 cm soil layer at the Wetztsein site" # description of the variable
         site: Wetztsein #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -312,6 +352,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 10-20 cm soil layer at the Wetztsein site" # description of the variable
         site: Wetztsein #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -320,6 +362,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 0-5 cm soil layer at the Loobos site" # description of the variable
         site: Loobos #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -328,6 +372,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 5-10 cm soil layer at the Loobos site" # description of the variable
         site: Loobos #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
@@ -336,6 +382,8 @@ variables: # These describe the columns of your timeSeries.csv file
         varDesc: "Carbon mineralization rate for the 10-20 cm soil layer at the Loobos site" # description of the variable
         site: Loobos #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).

@@ -98,9 +98,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 2
-        depthInfo.bottom: 10
-        depthInfo.midepth: 6
+        top: 2
+        bottom: 10
+        midepth: 6
 
        V3:
         name: C_WD_10_25 # Name of second variable in accompanying file.
@@ -112,9 +112,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 2
-        depthInfo.bottom: 10
-        depthInfo.midepth: 6
+        top: 2
+        bottom: 10
+        midepth: 6
 
        V4:
         name: C_WD_10_50 # Name of second variable in accompanying file.
@@ -126,9 +126,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 2
-        depthInfo.bottom: 10
-        depthInfo.midepth: 6
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V5:
         name: C_WD_10_75 # Name of second variable in accompanying file.
@@ -140,9 +140,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 2
-        depthInfo.bottom: 10
-        depthInfo.midepth: 6
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V6:
         name: C_WD_10_100 # Name of second variable in accompanying file.
@@ -154,9 +154,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 2
-        depthInfo.bottom: 10
-        depthInfo.midepth: 6
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V7:
         name: C_WD_20_2 # Name of second variable in accompanying file.
@@ -168,9 +168,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 2
-        depthInfo.bottom: 10
-        depthInfo.midepth: 6
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V8:
         name: C_WD_20_25 # Name of second variable in accompanying file.
@@ -182,9 +182,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 2
-        depthInfo.bottom: 10
-        depthInfo.midepth: 6
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V9:
         name: C_WD_20_50 # Name of second variable in accompanying file.
@@ -196,9 +196,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 2
-        depthInfo.bottom: 10
-        depthInfo.midepth: 6
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V10:
         name: C_WD_20_75 # Name of second variable in accompanying file.
@@ -210,9 +210,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 2
-        depthInfo.bottom: 10
-        depthInfo.midepth: 6
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V11:
         name: C_WD_20_100 # Name of second variable in accompanying file.
@@ -224,9 +224,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 2
-        depthInfo.bottom: 10
-        depthInfo.midepth: 6
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V12:
         name: C_MWD_10_2 # Name of second variable in accompanying file.
@@ -238,9 +238,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 15
-        depthInfo.midepth: 10
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V13:
         name: C_MWD_10_25 # Name of second variable in accompanying file.
@@ -252,9 +252,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 15
-        depthInfo.midepth: 10
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V14:
         name: C_MWD_10_50 # Name of second variable in accompanying file.
@@ -266,9 +266,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 15
-        depthInfo.midepth: 10
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V15:
         name: C_MWD_10_75 # Name of second variable in accompanying file.
@@ -280,9 +280,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 15
-        depthInfo.midepth: 10
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V16:
         name: C_MWD_10_100 # Name of second variable in accompanying file.
@@ -294,9 +294,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 15
-        depthInfo.midepth: 10
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V17:
         name: C_MWD_20_2 # Name of second variable in accompanying file.
@@ -308,9 +308,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 15
-        depthInfo.midepth: 10
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V18:
         name: C_MWD_20_25 # Name of second variable in accompanying file.
@@ -322,9 +322,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 15
-        depthInfo.midepth: 10
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V19:
         name: C_MWD_20_50 # Name of second variable in accompanying file.
@@ -336,9 +336,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 15
-        depthInfo.midepth: 10
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V20:
         name: C_MWD_20_75 # Name of second variable in accompanying file.
@@ -350,9 +350,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 15
-        depthInfo.midepth: 10
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V21:
         name: C_MWD_20_100 # Name of second variable in accompanying file.
@@ -364,9 +364,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 15
-        depthInfo.midepth: 10
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V22:
         name: C_PD_10_2 # Name of second variable in accompanying file.
@@ -378,9 +378,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 30
-        depthInfo.midepth: 17.5
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V23:
         name: C_PD_10_25 # Name of second variable in accompanying file.
@@ -392,9 +392,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 30
-        depthInfo.midepth: 17.5
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V24:
         name: C_PD_10_50 # Name of second variable in accompanying file.
@@ -406,9 +406,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 30
-        depthInfo.midepth: 17.5
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V25:
         name: C_PD_10_75 # Name of second variable in accompanying file.
@@ -420,9 +420,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 30
-        depthInfo.midepth: 17.5
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V26:
         name: C_PD_10_100 # Name of second variable in accompanying file.
@@ -434,9 +434,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 30
-        depthInfo.midepth: 17.5
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V27:
         name: C_PD_20_2 # Name of second variable in accompanying file.
@@ -448,9 +448,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 30
-        depthInfo.midepth: 17.5
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V28:
         name: C_PD_20_25 # Name of second variable in accompanying file.
@@ -462,9 +462,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 30
-        depthInfo.midepth: 17.5
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V29:
         name: C_PD_20_50 # Name of second variable in accompanying file.
@@ -476,9 +476,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 30
-        depthInfo.midepth: 17.5
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V30:
         name: C_PD_20_75 # Name of second variable in accompanying file.
@@ -490,9 +490,9 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 30
-        depthInfo.midepth: 17.5
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V31:
         name: C_PD_20_100 # Name of second variable in accompanying file.
@@ -504,6 +504,6 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
-        depthInfo.top: 5
-        depthInfo.bottom: 30
-        depthInfo.midepth: 17.5
+        top: 5
+        bottom: 30
+        midDepth: 17.5

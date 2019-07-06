@@ -21,8 +21,8 @@ database <- loadEntries("~/sidb/data/")
 db <- flatterSIDB(database)
 
 # join variables dataframes with initConditions
-vars.ic <- lapply(seq_along(db), function(i) left_join(dbf$vars[[i]], db[[i]][["initConditions"]]))
-names(vars.ic) <- names(db)
+vars.ic <- lapply(seq_along(db), function(i) left_join(db$vars[[i]], database[[i]][["initConditions"]]))
+names(vars.ic) <- names(database)
 
 # create df object of timeseries list
 ts.df <- do.call("rbind", db$timeseries)

@@ -68,7 +68,6 @@ variables:
           temperature: 40
           gasMeasured: CO2
           units: mgCO2/gSoil/d
-          primaryVariable:
        V3:
           name: CO2_40_con
           varDesc: "CO2 production rate measured at 40 degrees celsius from CO2 control site" #
@@ -77,7 +76,6 @@ variables:
           temperature: 40
           gasMeasured: CO2
           units: mgCO2/gSoil/d
-          primaryVariable:
        V4:
           name: CO2_22_elev
           varDesc: "CO2 production rate measured at 22 degrees celsius from elevated CO2 site" #
@@ -86,7 +84,6 @@ variables:
           temperature: 22
           gasMeasured: CO2
           units: mgCO2/gSoil/d
-          primaryVariable:
        V5:
           name: CO2_22_con
           varDesc: "CO2 production rate measured at 22 degrees celsius from CO2 control site" #
@@ -95,7 +92,6 @@ variables:
           temperature: 22
           gasMeasured: CO2
           units: mgCO2/gSoil/d
-          primaryVariable:
        V6:
           name: CO2_4_elev
           varDesc: "CO2 production rate measured at 4 degrees celsius from elevated CO2 site" #
@@ -104,7 +100,6 @@ variables:
           temperature: 4
           gasMeasured: CO2
           units: mgCO2/gSoil/d
-          primaryVariable:
        V7:
          name: CO2_4_con
          varDesc: "CO2 production rate measured at 4 degrees celsius from CO2 control site" #
@@ -113,7 +108,6 @@ variables:
          temperature: 4
          gasMeasured: CO2
          units: mgCO2/gSoil/d
-         primaryVariable:
        V8:
           name: C13_4_elev
           varDesc: "13CO2 production rate measured at 4 degrees celsius from elevated CO2 site" #
@@ -122,7 +116,6 @@ variables:
           temperature: 4
           gasMeasured: 13CO2
           units: permille
-          primaryVariable: CO2_4_elev
        V9:
           name: C13_4_con
           varDesc: "13CO2 production rate measured at 4 degrees celsius from CO2 control site" #
@@ -131,7 +124,6 @@ variables:
           temperature: 4
           gasMeasured: 13CO2
           units: permille
-          primaryVariable: CO2_4_con
        V10:
           name: C13_22_elev
           varDesc: "13CO2 production rate measured at 22 degrees celsius from elevated CO2 site" #
@@ -140,7 +132,6 @@ variables:
           temperature: 22
           gasMeasured: 13CO2
           units: permille
-          primaryVariable: CO2_22_elev
        V11:
           name: C13_22_con
           varDesc: "13CO2 production rate measured at 22 degrees celsius from CO2 control site" #
@@ -149,7 +140,6 @@ variables:
           temperature: 22
           gasMeasured: 13CO2
           units: permille
-          primaryVariable: CO2_22_con
        V12:
           name: C13_40_elev
           varDesc: "13CO2 production rate measured at 40 degrees celsius from elevated CO2 site" #
@@ -158,7 +148,6 @@ variables:
           temperature: 40
           gasMeasured: 13CO2
           units: permille
-          primaryVariable: CO2_40_elev
        V13:
          name: C13_40_con
          varDesc: "13CO2 production rate measured at 40 degrees celsius from CO2 control site" #
@@ -167,4 +156,3 @@ variables:
          temperature: 40
          gasMeasured: 13CO2
          units: permille
-         primaryVariable: CO2_40_con

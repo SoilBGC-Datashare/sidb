@@ -61,7 +61,7 @@ incubationInfo:
 variables: # These varDescribe the columns of your timeSeries.csv file
         V1:
           name: time
-          units: days
+          units: d
         V2:
           name: C_AG_7deg
           varDesc: "cumulative mineralized Carbon(%) at 7 degrees celsius. Land use system AG/ agriculture"

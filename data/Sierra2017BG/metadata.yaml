@@ -59,7 +59,7 @@ incubationInfo:
 variables:
         V1:
           name: time
-          units: days
+          units: d
         V2:
           name: TMO_25_15_20
           varDesc: "Respiration rates"

@@ -61,7 +61,7 @@ of total incubation time. All soils incubated at field capacity' # Short descrip
 variables: # These varDescribe the columns of your timeSeries.csv file
         V1: # column 1
           name: time # Name of first variable in the accompanying csv data file. First variable should be time.
-          units: days # Units of first variable in accompanying file.
+          units: d # Units of first variable in accompanying file.
         V2: # column 2
           name: control_7.5_15_mean # Name of second variable in accompanying file.
           varDesc: Field control, midDepth of 7.5, incubation temperature of 15 Celsius # description of the variable

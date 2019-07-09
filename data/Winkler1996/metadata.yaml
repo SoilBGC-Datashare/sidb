@@ -57,7 +57,7 @@ incubationInfo:
 variables: # These varDescribe the columns of your timeSeries.csv file
        V1: # column 1
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
-        units: days # Units of first variable in accompanying file.
+        units: d # Units of first variable in accompanying file.
        V2: # column 2
         name: CO2_38_A # Name of second variable in accompanying file.
         varDesc: "Mean rate of CO2 evolution for A-horizon soils at 38 degrees during the incubation."

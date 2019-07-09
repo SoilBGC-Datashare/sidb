@@ -58,7 +58,7 @@ incubationInfo:
 variables:
         V1:
           name: time
-          units: days
+          units: d
         V2:
           name: C_Top_25
           units: mgC/gC

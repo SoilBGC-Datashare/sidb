@@ -760,7 +760,7 @@ incubationInfo:
 variables:
        V1:
         name: time # Name of first variable in the accompanying csv data file. First variable is usually time.
-        units: days # Units of first variable in accompanying file.
+        units: d # Units of first variable in accompanying file.
        V2:
         name: Site01 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable

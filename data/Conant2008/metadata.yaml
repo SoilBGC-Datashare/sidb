@@ -56,7 +56,7 @@ incubationInfo:
 variables:
         V1:
           name: time
-          units: days
+          units: d
         V2:
           name:  ND.CU.4
           temperature: 4

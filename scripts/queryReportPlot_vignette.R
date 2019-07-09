@@ -4,7 +4,7 @@
 #####
 
 # install latest package and load relevant libraries
-devtools::install_github("SoilBGC-Datashare/sidb/Rpkg", ref="dev")
+devtools::install_github("SoilBGC-Datashare/sidb/Rpkg")
 library(sidb)
 library(ggplot2)
 library(plyr)
@@ -23,6 +23,9 @@ db <- flatterSIDB(database)
 # join variables dataframes with initConditions
 vars.ic <- lapply(seq_along(database), function(i) left_join(db$vars[[i]], database[[i]][["initConditions"]]))
 names(vars.ic) <- names(database)
+
+# remove NA columns from vars.ic
+vars.ic <- lapply(vars.ic, function(x) x[ ,!apply(is.na(x),2,all)])
 
 # create df object of timeseries list
 ts.df <- do.call("rbind", db$timeseries)

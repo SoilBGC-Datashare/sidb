@@ -107,7 +107,7 @@ incubationInfo:
   replicates:
          value: # Number of replicates per treatments
          type: # Valid fields are: field or lab
-  incubationTime: # length of incubation in days
+  incubationTime: 98 # length of incubation in days
   preincubationTime: # Pre-incubation time in days
   samplePreparation:
      intactCore: no

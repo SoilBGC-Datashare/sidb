@@ -748,7 +748,7 @@ incubationInfo:
         laboratoryTreatment: # List of laboratory treatments applied to the incubations.
         replicates:
           value: 1 # Number of replicates per treatments
-        incubationTime:  # days
+        incubationTime: 371 # days
         preincubationTime: 4 # Pre-incubation time in days
         samplePreparation:
           sieving: 20 # no, or mesh size in mm

@@ -5,9 +5,10 @@ entryCreationDate: 2018-04-18 # Date when the data is entered in this file. Form
 contactName: Carlos Sierra # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: csierra@bgc-jena.mpg.de # Email of the contact person
 entryNote: # Any notes or comments related to this entry.
+study:  "Temperature sensitivity of soil respiration in conifer and deciduous broadleaf forests across a European climate gradient"
+
 
 siteInfo:
-        study:  "Temperature sensitivity of soil respiration in conifer and deciduous broadleaf forests across a European climate gradient"
         site:
           - Hainich
           - Collelongo
@@ -47,13 +48,13 @@ siteInfo:
           - Germany
           - Netherlands
         MAT: # Mean annual temperature in degrees Celsius
-          - 7
+          - 7.0
           - 6.4
           - 9.2
-          - 14
+          - 14.0
           - 7.5
-          - 9
-          - 6
+          - 9.0
+          - 6.0
           - 9.8
         MAP: # Mean annual precipitation in mm
           - 750
@@ -112,42 +113,26 @@ siteInfo:
             - NA
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: WRB # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-#These do not have to be arrays of equal length to site array
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
-          top: # in cm
-            - 0
-            - 5
-            - 10
-          bottom: # in cm
-            - 5
-            - 10
-            - 20
-          midDepth: #average depth
-            - 2.5
-            - 7.5
-            - 15
           surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
           horizon: # soil horizon designation
         permafrost:
           permafrostExist: # yes or no (if yes, permafrost must exist at the site)
           activeLayer: # Depth of the active layer in meters
-        experimentalTreatment:
-          midDepth:
-            - 2.5
-            - 7.5
-            - 15
 
 incubationInfo:
-        description: "three laboratory replicates of broadleaf (a) and conifer (b) forest samples were incubated at 3 different depth levels (0-5, 5-10, 10-20 cm) for ca. 270 d." # Short description of the incubation setup and main treatments
+        incDesc: "three laboratory replicates of broadleaf (a) and conifer (b) forest samples were incubated at 3 different depth levels (0-5, 5-10, 10-20 cm) for ca. 270 d." # Short description of the incubation setup and main treatments
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top, bottom, and midDepth. If multiple depths, use an array.
+          top: # in cm
+          bottom: # in cm
+          midDepth: #average depth
         temperature: 30 # Overall temperature at which incubations were performed in Celsius. If temperature is an experimental treatment, leave blank.
         moisture:
           value: 60 # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
-          units: percent field capacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+          units: percentFieldCapacity # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
         replicates:
-          number: 3 # Number of replicates per treatments
+          value: 3 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab
         incubationTime: 270 # length of incubation in days
         preincubationTime: # Pre-incubation time in days
@@ -164,195 +149,241 @@ variables: # These describe the columns of your timeSeries.csv file
         units: d
       V2:
         name: CMin_Hain_0_5 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 0–5 cm soil layer at the Hainich site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 0–5 cm soil layer at the Hainich site" # description of the variable
         site: Hainich #site where the incubated sample comes from.
         midDepth: 2.5
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V3:
         name: CMin_Hain_5_10 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 5–10 cm soil layer at the Hainich site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 5–10 cm soil layer at the Hainich site" # description of the variable
         site: Hainich #site where the incubated sample comes from.
         midDepth: 7.5
-        laboratoryTreatment: # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V4:
         name: CMin_Hain_10_20 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 10–20 cm soil layer at the Hainich site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 10–20 cm soil layer at the Hainich site" # description of the variable
         site: Hainich #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V5:
         name: CMin_Coll_0_5 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 0-5 cm soil layer at the Collelongo site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 0-5 cm soil layer at the Collelongo site" # description of the variable
         site: Collelongo #site where the incubated sample comes from.
-        midDepth: 1.5
+        midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V6:
         name: CMin_Coll_5_10 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 5-10 cm soil layer at the Collelongo site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 5-10 cm soil layer at the Collelongo site" # description of the variable
         site: Collelongo #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V7:
         name: CMin_Coll_10_20 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 10-20 cm soil layer at the Collelongo site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 10-20 cm soil layer at the Collelongo site" # description of the variable
         site: Collelongo #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V8:
         name: CMin_Hess_0_5 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 0-5 cm soil layer at the Hesse site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 0-5 cm soil layer at the Hesse site" # description of the variable
         site: Hesse #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V9:
         name: CMin_Hess_5_10 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 5-10 cm soil layer at the Hesse site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 5-10 cm soil layer at the Hesse site" # description of the variable
         site: Hesse #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V10:
         name: CMin_Hess_10_20 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 10-20 cm soil layer at the Hesse site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 10-20 cm soil layer at the Hesse site" # description of the variable
         site: Hesse #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V11:
         name: CMin_Rocc_0_5 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 0-5 cm soil layer at the Hesse site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 0-5 cm soil layer at the Hesse site" # description of the variable
         site: Roccarespampani #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V12:
         name: CMin_Rocc_5_10 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rates for the 5-10 cm soil layer at the Hesse site" # Description of the variable
+        varDesc: "Carbon mineralization rates for the 5-10 cm soil layer at the Hesse site" # description of the variable
         site: Roccarespampani #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V13:
         name: CMin_Rocc_10_20 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 10-20 cm soil layer at the Hesse site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 10-20 cm soil layer at the Hesse site" # description of the variable
         site: Roccarespampani #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V14:
         name: CMin_Thar_0_5 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 0-5 cm soil layer at the Tharandt site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 0-5 cm soil layer at the Tharandt site" # description of the variable
         site: Tharandt #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V15:
         name: CMin_Thar_5_10 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 5-10 cm soil layer at the Tharandt site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 5-10 cm soil layer at the Tharandt site" # description of the variable
         site: Tharandt #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V16:
         name: CMin_Thar_10_20 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 10-20 cm soil layer at the Tharandt site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 10-20 cm soil layer at the Tharandt site" # description of the variable
         site: Tharandt #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V17:
         name: CMin_Harw_0_5 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 0-5 cm soil layer at the Harwood site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 0-5 cm soil layer at the Harwood site" # description of the variable
         site: Harwood #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V18:
         name: CMin_Harw_5_10 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 5-10 cm soil layer at the Harwood site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 5-10 cm soil layer at the Harwood site" # description of the variable
         site: Harwood #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V19:
         name: CMin_Harw_10_20 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 10-20 cm soil layer at the Harwood site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 10-20 cm soil layer at the Harwood site" # description of the variable
         site: Harwood #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V20:
         name: CMin_Wetz_0_5 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 0-5 cm soil layer at the Wetztsein site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 0-5 cm soil layer at the Wetztsein site" # description of the variable
         site: Wetztsein #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V21:
         name: CMin_Wetz_5_10 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 5-10 cm soil layer at the Wetztsein site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 5-10 cm soil layer at the Wetztsein site" # description of the variable
         site: Wetztsein #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V22:
         name: CMin_Wetz_10_20 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 10-20 cm soil layer at the Wetztsein site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 10-20 cm soil layer at the Wetztsein site" # description of the variable
         site: Wetztsein #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V23:
         name: CMin_Loob_0_5 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 0-5 cm soil layer at the Loobos site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 0-5 cm soil layer at the Loobos site" # description of the variable
         site: Loobos #site where the incubated sample comes from.
         midDepth: 2.5
+        top: 0
+        bottom: 5
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V24:
         name: CMin_Loob_5_10 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 5-10 cm soil layer at the Loobos site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 5-10 cm soil layer at the Loobos site" # description of the variable
         site: Loobos #site where the incubated sample comes from.
         midDepth: 7.5
+        top: 5
+        bottom: 10
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
       V25:
         name: CMin_Loob_10_20 # Name of second variable in accompanying file.
-        desc: "Carbon mineralization rate for the 10-20 cm soil layer at the Loobos site" # Description of the variable
+        varDesc: "Carbon mineralization rate for the 10-20 cm soil layer at the Loobos site" # description of the variable
         site: Loobos #site where the incubated sample comes from.
         midDepth: 15
+        top: 10
+        bottom: 20
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: mgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).

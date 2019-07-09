@@ -1,0 +1,70 @@
+citationKey: # Unique identifier in the format: LastnameYearJOURNAL (journal is abbreviated)
+doi:  # DOI of the publication where data is published
+entryAuthor: # First and Last name of the person who enters the data in this file
+entryCreationDate: # Date when the data is entered in this file. Format: YYYY-MM-DD
+contactName:  # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
+contactEmail: # Email of the contact person
+entryNote:  # Any notes or comments related to this entry. # Any notes or comments related to this entry.
+study:  # Overall study description
+
+siteInfo:
+        site: # Names of individual sites, if one site, keep on this line, if multiple, use array format
+# These fields should be arrays of equal length to site array
+        coordinates:
+          latitude: # Latitude in decimal units (check for negative that denotes southern hemisphere)
+          longitude: # Longitude in decimal units (check for negative that denotes west)
+        country: # Name of country where site was conducted
+        MAT: # Mean annual temperature in degrees Celsius
+        MAP: # Mean annual precipitation in mm
+        elevation: # Elevation of study site in meters above sea levels
+        landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+        vegNote: # Additional details about land cover such as species or functional type composition
+        soilTaxonomy:
+          soilOrder: # Soil order according to the classification system described below
+          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
+          soilSeries: # Soil series according to the classification system described below
+          classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
+        permafrost:
+          permafrostExist: # Yes or blank if no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        incDesc: # Short description of the incubation setup and main treatments
+# These fields should all be one dimensional arrays. Values for experimental variables with multiple treatment levels should be entered in the variables section, and left blank here
+        depthInfo: # Soil depth in cm. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, leave blank and specify in variables section
+          top:
+          bottom:
+          midDepth:
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          horizon: # soil horizon designation
+        temperature: # Temperature at which incubations were performed in Celsius. If temperature is an experimental treatment with multiple levels, leave blank and specify in variables section
+        moisture: # Use moisture as a template for any additional treatments performed, i.e. report treatmentName, value, and units (if applicable)
+          value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment with multiple levels, leave blank and specify in variables section
+          units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
+        gasMeasured: # Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured and specify in variables section
+        replicates:
+          value: # Number of replicates per treatment
+          type: # Valid fields are: field or lab
+        incubationTime: # length of incubation in days
+        preincubationTime: # Pre-incubation time in days
+        samplePreparation:
+          intactCore: # yes or no
+          sieving: # no, or mesh size in mm
+          rootPicking: # yes or no
+          rockPicking: # yes or no
+        gasAnalyzer: # Gas analysis equipment for CO2 measurements
+
+variables: # These describe the columns of your timeSeries.csv file
+        V1: # column 1
+          name: # Name of first variable in the accompanying csv data file. First variable should be time
+          units: # Units of first variable in accompanying file. Usually "d" for days
+        V2: # column 2
+          name: # Name of second variable in accompanying file
+          varDesc: # Description of the variable
+          site: # Site where the incubated sample was collected
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this word by any of the listed variables in incubationInfo above (temperature, moisture, etc.) and type value or level after colon
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: # Units in which this variable is provided if not a factor
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated timeseries data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data

@@ -7,8 +7,8 @@ test_that("all entries from the database can be read", {
 
 database<-loadEntries()
 
-test_that("entry names correspond to new metadata template", {
-  template=yaml::yaml.load_file(input="~/sidb/data/template_metadata_new.yaml")
+test_that("entry names correspond to metadata template", {
+  template=yaml::yaml.load_file(input="~/sidb/data/template_metadata.yaml")
   for(i in 1:length(database)){
     entry=database[[i]]
     expect_equal(names(entry)[-(12:13)],names(template))

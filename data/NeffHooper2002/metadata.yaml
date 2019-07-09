@@ -99,7 +99,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Fairbanks soils incubated at 30deg" # description of the variable
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
 
        V3:
@@ -107,7 +107,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Chandalar soils incubated at 30deg" # description of the variable
          site: Chandalar #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
 
        V4:
@@ -115,7 +115,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Toolik Lake soils incubated at 30deg" # description of the variable
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
 
        V5:
@@ -123,7 +123,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Sagwon soils incubated at 30deg" # description of the variable
          site: Sagwon #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
 
        V6:
@@ -131,7 +131,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Fairbanks soils incubated at 10deg" # description of the variable
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
 
        V7:
@@ -139,7 +139,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Chandalar soils incubated at 10deg" # description of the variable
          site: Chandalar #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
 
        V8:
@@ -147,7 +147,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Toolik Lake soils incubated at 10deg" # description of the variable
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
 
        V9:
@@ -155,7 +155,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Sagwon soils incubated at 10deg" # description of the variable
          site: Sagwon #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
 
        V10:
@@ -163,7 +163,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Fairbanks soils incubated at 10deg" # description of the variable
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
 
        V11:
@@ -171,7 +171,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Fairbanks soils incubated at 10deg" # description of the variable
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Spruce
 
        V12:
@@ -179,7 +179,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Fairbanks soils incubated at 10deg" # description of the variable
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
 
        V13:
@@ -187,7 +187,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Toolik Lake soils incubated at 10deg" # description of the variable
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: WetSedge
 
        V14:
@@ -195,5 +195,5 @@ variables: # These varDescribe the columns of your timeSeries.csv file
          varDesc: "CO2 Flux of Fairbanks soils incubated at 10deg" # description of the variable
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Shrub

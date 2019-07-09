@@ -88,34 +88,34 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         varDesc: "Dynamics of C mineralization as CO2 evolution during the incubation under 20 degrees for soil sample PP" # description of the variable
         site: PP
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        units: mgC-CO2/gC/day  # Units in which this variable is provided if not a factor
+        units: mgC/gC/day  # Units in which this variable is provided if not a factor
        V3:
         name: CO2_u20_RP # Name of second variable in accompanying file.
         varDesc: "Dynamics of C mineralization as CO2 evolution during the incubation under 20 degrees for soil sample RP" # description of the variable
         site: RP
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        units: mgC-CO2/gC/day  # Units in which this variable is provided if not a factor
+        units: mgC/gC/day  # Units in which this variable is provided if not a factor
        V4:
         name: CO2_u20_EP # Name of second variable in accompanying file.
         varDesc: "Dynamics of C mineralization as CO2 evolution during the incubation under 20 degrees for soil sample EP" # description of the variable
         site: EP
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        units: mgC-CO2/gC/day  # Units in which this variable is provided if not a factor
+        units: mgC/gC/day  # Units in which this variable is provided if not a factor
        V5:
         name: CO2_u25_PP # Name of second variable in accompanying file.
         varDesc: "Dynamics of C mineralization as CO2 evolution during the incubation under 25 degrees for soil sample PP" # description of the variable
         site: PP
         temperature: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        units: mgC-CO2/gC/day  # Units in which this variable is provided if not a factor
+        units: mgC/gC/day  # Units in which this variable is provided if not a factor
        V6:
         name: CO2_u25_RP # Name of second variable in accompanying file.
         varDesc: "Dynamics of C mineralization as CO2 evolution during the incubation under 25 degrees for soil sample RP" # description of the variable
         site: RP
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        units: mgC-CO2/gC/day  # Units in which this variable is provided if not a factor
+        units: mgC/gC/day  # Units in which this variable is provided if not a factor
        V7:
         name: CO2_u25_EP # Name of second variable in accompanying file.
         varDesc: "Dynamics of C mineralization as CO2 evolution during the incubation under 25 degrees for soil sample PP" # description of the variable
         site: EP
         temperature: 20 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-        units: mgC-CO2/gC/day  # Units in which this variable is provided if not a factor
+        units: mgC/gC/day  # Units in which this variable is provided if not a factor

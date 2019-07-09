@@ -70,7 +70,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 7.5
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V3: # Continue the structure for V2 in case of additional variables such treatments or other gases measured or standard deviation/error
           name: control_7.5_15_sd # Name of second variable in accompanying file.
@@ -80,7 +80,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 7.5
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V4:
           name: control_20_15_mean # Name of second variable in accompanying file.
@@ -90,7 +90,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 20.0
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V5:
           name: control_20_15_sd # Name of second variable in accompanying file.
@@ -100,7 +100,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 20.0
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V6:
           name: control_50_15_mean # Name of second variable in accompanying file.
@@ -110,7 +110,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 50.0
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic:
         V7:
           name: control_50_15_sd # Name of second variable in accompanying file.
@@ -120,7 +120,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 50.0
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V8:
           name: warming_7.5_15_mean # Name of second variable in accompanying file.
@@ -130,7 +130,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 7.5
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V9:
           name: warming_7.5_15_sd # Name of second variable in accompanying file.
@@ -140,7 +140,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 7.5
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V10:
           name: warming_20_15_mean # Name of second variable in accompanying file.
@@ -150,7 +150,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 20.0
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V11:
           name: warming_20_15_sd # Name of second variable in accompanying file.
@@ -160,7 +160,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 20.0
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V12:
           name: warming_50_15_mean # Name of second variable in accompanying file.
@@ -170,7 +170,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 50.0
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         V13:
           name: warming_50_15_sd # Name of second variable in accompanying file.
@@ -180,5 +180,5 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           midDepth: 50.0
           temperature: 15.0 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: microgC-CO2/gSoil/d # Units in which this variable is provided if not a factor
+          units: microgC/gSoil/d # Units in which this variable is provided if not a factor
           statistic: SD # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).

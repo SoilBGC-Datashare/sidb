@@ -100,7 +100,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         top: 2
         bottom: 10
-        midepth: 6
+        midDepth: 6
 
        V3:
         name: C_WD_10_25 # Name of second variable in accompanying file.
@@ -114,7 +114,7 @@ variables: # These varDescribe the columns of your timeSeries.csv file
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
         top: 2
         bottom: 10
-        midepth: 6
+        midDepth: 6
 
        V4:
         name: C_WD_10_50 # Name of second variable in accompanying file.

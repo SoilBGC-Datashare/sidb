@@ -47,7 +47,7 @@ of total incubation time. All soils incubated at field capacity' # Short descrip
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         replicates:
-          number: 6 # Number of replicates per treatments
+          value: 6 # Number of replicates per treatments
           type: field # Valid fields are: field or lab
         incubationTime: 365 # length of incubation in days
         preincubationTime: # Pre-incubation time in days

@@ -87,7 +87,7 @@ incubationInfo:
           value: 0.26
           units: g13CWheatStraw/200gSoil
         replicates:
-          number: 4
+          value: 4
           type: lab
         incubationTime: 544
         preincubationTime: 1

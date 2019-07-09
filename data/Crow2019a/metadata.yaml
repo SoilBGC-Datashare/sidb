@@ -747,7 +747,7 @@ incubationInfo:
         gasMeasured:
         laboratoryTreatment: # List of laboratory treatments applied to the incubations.
         replicates:
-          number: 1 # Number of replicates per treatments
+          value: 1 # Number of replicates per treatments
         incubationTime:  # days
         preincubationTime: 4 # Pre-incubation time in days
         samplePreparation:

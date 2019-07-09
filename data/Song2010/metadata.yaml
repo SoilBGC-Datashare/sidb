@@ -44,7 +44,7 @@ incubationInfo:
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         amendment:
         replicates:
-          number: 4
+          value: 4
           type: lab
         incubationTime: 28
         preincubationTime: 0

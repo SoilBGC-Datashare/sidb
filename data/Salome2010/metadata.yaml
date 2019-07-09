@@ -45,7 +45,7 @@ incubationInfo:
           value:
           units: percent
         replicates:
-          number: 3
+          value: 3
           type: field
         incubationTime: 51
         preincubationTime: 0

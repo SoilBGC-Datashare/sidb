@@ -44,7 +44,7 @@ incubationInfo:
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: # Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured and specify in variables section
         replicates:
-          number: # Number of replicates per treatments
+          value: # Number of replicates per treatment
           type: # Valid fields are: field or lab
         incubationTime: # length of incubation in days
         preincubationTime: # Pre-incubation time in days

@@ -102,7 +102,7 @@ incubationInfo:
           value: 0.84
           units: mgC/gDrysoil
         replicates:
-          number: 2
+          value: 2
           type: lab
         incubationTime: 77
         preincubationTime: # Pre-incubation time in days

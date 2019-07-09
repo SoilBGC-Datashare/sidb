@@ -45,7 +45,7 @@ incubationInfo:
     value:
     units: percent
   replicates:
-    number: 4 # Number of replicates per treatments
+    value: 4 # Number of replicates per treatments
     type: lab # Valid fields are: field or lab
   incubationTime: 35
   preincubationTime: # Pre-incubation time in days

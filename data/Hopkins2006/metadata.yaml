@@ -43,9 +43,9 @@ incubationInfo:
           units: percentGWC
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        ammendment:
+        amendment:
         replicates:
-          number: 5
+          value: 5
           type: field
         incubationTime: 48
         preincubationTime: 42
@@ -65,82 +65,82 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           units: mgDetritusC/gSoil
           varDesc: "Cumulative detritus-derived CO2-C production by the Garwood Valley delta soil amended with 0.64 mgC/gSoil detritus  relative to the unamended controls"
           soil: "delta soil"
-          ammendment: detritus
+          amendment: detritus
         V3:
           name: CO2C_DeMin_DuS
           units: mgDetritusC/gSoil
           varDesc: "Cumulative detritus-derived CO2-C production by the Garwood Valley dune soil amended with 0.64 mgC/gSoil detritus relative to the unamended controls"
           soil: "dune soil"
-          ammendment: detritus
+          amendment: detritus
         V4:
           name: CO2C_DeMin_HS
           units: mgDetritusC/gSoil
           varDesc: "Cumulative detritus-derived CO2-C production by the Garwood Valley hillslope soil amended with 0.64 mgC/gSoil detritus relative to the unamended controls"
           soil: "hillslope soil"
-          ammendment: detritus
+          amendment: detritus
         V5:
           name: CO2C_DeMin_PS
           units: mgDetritusC/gSoil
           varDesc: "Cumulative detritus-derived CO2-C production by the Garwood Valley polygon soil amended with 0.64 mgC/gSoil detritus relative to the unamended controls"
           soil: "polygon soil"
-          ammendment: detritus
+          amendment: detritus
         V6:
           name: CO2C_DeMin_LowMS
           units: mgDetritusC/gSoil
           varDesc: "Cumulative detritus-derived CO2-C production by the Garwood Valley lower moraine soil amended with 0.64 mgC/gSoil detritus relative to the unamended controls"
           soil: "lower moraine soil"
-          ammendment: detritus
+          amendment: detritus
         V7:
           name: CO2C_DeMin_LMS
           units: mgDetritusC/gSoil
           varDesc: "Cumulative detritus-derived CO2-C production by the Garwood Valley lake margin soil amended with 0.64 mgC/gSoil detritus relative to the unamended controls"
           soil: "lake margin soil"
-          ammendment: detritus
+          amendment: detritus
         V8:
           name: CO2C_HS_glu
           units: mgC/gSoil
           varDesc: "Cumulative CO2-C production by the Garwood Valley hillslope soil amended with 10 mg glucose (0.64 mg C/gSoil)"
           soil: "hillslope soil"
-          ammendment: glucose
+          amendment: glucose
         V9:
           name: CO2C_HS_NH4Cl
           units: mgC/gSoil
           varDesc: "Cumulative CO2-C production by the Garwood Valley hillslope soil amended with 10 mg NH4Cl"
           soil: "hillslope soil"
-          ammendment: NH4Cl
+          amendment: NH4Cl
         V10:
           name: CO2C_HS_una
           units: mgC/gSoil
           varDesc: "Cumulative CO2-C production by the unamended Garwood Valley hillslope soil"
           soil: "hillslope soil"
-          ammendment: unamended
+          amendment: unamended
         V11:
           name: CO2C_HS_gly
           units: mgC/gSoil
           varDesc: "Cumulative CO2-C production by the Garwood Valley hillslope soil amended with 10 mg glycine (0.64 mg C/gSoil)"
           soil: "hillslope soil"
-          ammendment: glycine
+          amendment: glycine
         V12:
           name: CO2C_LMS_glu
           units: mgC/gSoil
           varDesc: "Cumulative CO2-C production by the Garwood Valley lake margin soil amended with 10 mg glucose (0.64 mg C/gSoil)"
           soil: "lake margin soil"
-          ammendment: glucose
+          amendment: glucose
         V13:
           name: CO2C_LMS_gly
           units: mgC/gSoil
           varDesc: "Cumulative CO2-C production by the Garwood Valley lake margin soil amended with 10 mg glycine (0.64 mg C/gSoil)"
           soil: "lake margin soil"
-          ammendment: glycine
+          amendment: glycine
         V14:
           name: CO2C_LMS_NH4Cl
           units: mgC/gSoil
           varDesc: "Cumulative CO2-C production by the Garwood Valley lake margin soil amended with 10 mg NH4Cl"
           soil: "lake margin soil"
-          ammendment: NH4Cl
+          amendment: NH4Cl
         V15:
           name: CO2C_LMS_una
           units: mgC/gSoil
           varDesc: "Cumulative CO2-C production by the unamended Garwood Valley lake margin soil"
           soil: "lake margin soil"
-          ammendment: unamended
+          amendment: unamended

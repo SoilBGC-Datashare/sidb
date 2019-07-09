@@ -45,7 +45,7 @@ incubationInfo:
         anaerobic:
         gasMeasured:
         replicates:
-          number: 3
+          value: 3
           type: laboratory
         incubationTime: 48
         preincubationTime:

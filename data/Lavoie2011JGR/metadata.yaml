@@ -178,7 +178,7 @@ variables:
        V13:
         name: BFUM_15
         varDesc: "Cumulative respiration unburned mineral boreal forest 15 degrees"
-        units: "mg CO$_2$ g^{-1} soil"
+        units: mgCO2/gSoil
         site: unburned mineral boreal forest
         burn: unburned
         acidic:

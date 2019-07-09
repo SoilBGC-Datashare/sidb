@@ -47,6 +47,15 @@ test_that("check that timeseries time variable matches allowable units",{
   }
 })
 
+test_that("check that flux rate units match allowable time units",{
+  for(i in 1:length(database)){
+    vars.ls <- database[[1]][["variables"]][-1]
+    flx.u <- lapply(vars.ls, function(x) x$units)
+    flx.u <- Filter(Negate(is.na),lapply(flx.u, function(x) unlist(strsplit(x, split="/"))[3]))
+    expect_true(unique(flx.u) %in% c("d","h",NA))
+  }
+})
+
 test_that("variable names in timeSeries correspond to names in metadata file",{
   for(i in 1:length(database)){
     entry=database[[i]]

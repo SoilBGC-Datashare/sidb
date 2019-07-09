@@ -104,6 +104,17 @@ flatterSIDB <- function(database) {
   # remove NA columns in incInfo elements
   incInfo <- lapply(incInfo, function(x) x[ ,!apply(is.na(x),2,all)])
 
+  # Remove depthInfo. prefix from depth fields
+  incInfo <- lapply(incInfo, function(x) {
+    nms <- colnames(x)
+    ix <- grep("depthInfo.", nms)
+    nms[ix] <- lapply(seq_along(nms[ix]), function(i) {
+      substring(nms[ix][i], first=stringr::str_locate(nms[ix][i], "depthInfo.")[2]+1, last=nchar(nms[ix][i]))
+    })
+    colnames(x) <- nms
+    return(x)
+  })
+
   # Join each element of incInfo with corresponding vars.dfl element
   for(i in seq_along(vars.dfl)) {
     vars.dfl[[i]] <- cbind(vars.dfl[[i]], incInfo[[i]])
@@ -113,7 +124,9 @@ flatterSIDB <- function(database) {
   vars.dfl <- lapply(vars.dfl, function(x) {
     nms <- colnames(x)
     ix <- grep(".value", nms)
-    nms[ix] <- substring(nms[ix], first=1,last=stringr::str_locate(nms[ix], ".value")[1]-1)
+    nms[ix] <- lapply(seq_along(nms[ix]), function(i) {
+      substring(nms[ix][i], first=1,last=stringr::str_locate(nms[ix][i], ".value")[1]-1)
+    })
     colnames(x) <- nms
     return(x)
   })

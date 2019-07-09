@@ -37,6 +37,16 @@ test_that("check first column in timeSeries file is called 'time' ",{
   }
 })
 
+test_that("check that timeseries time variable matches allowable units",{
+  for(i in 1:length(database)){
+    v1.unit<-database[[i]][["variables"]][[1]]["units"]
+    if(length(which(v1.unit == "d" | v1.unit == "h"))==0) {
+      cat(names(database)[i],"\n")
+    }
+    expect_true(v1.unit == "d" | v1.unit == "h")
+  }
+})
+
 test_that("variable names in timeSeries correspond to names in metadata file",{
   for(i in 1:length(database)){
     entry=database[[i]]

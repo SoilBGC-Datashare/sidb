@@ -765,389 +765,389 @@ variables:
         name: Site01 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 1_Organic Cropland Mollisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V3: # Continue the structure for V2 in case of additional variables.
         name: Site02 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 2_Organic Cropland_Mollisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V4:
         name: Site03 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 3_Organic Cropland_Mollisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V5: # Continue the structure for V2 in case of additional variables.
         name: Site04 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 4_Conventional Cropland_Mollisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V6:
         name: Site05 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 5_Conventional Cropland_Mollisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V7: # Continue the structure for V2 in case of additional variables.
         name: Site06 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 6_Conventional Cropland_Mollisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V8:
         name: Site07 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 7_Unmanaged Previous Intensive Ag Land_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V9: # Continue the structure for V2 in case of additional variables.
         name: Site08 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 8_Unmanaged Previous Intensive Ag Land_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V10:
         name: Site09 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 9_Unmanaged Previous Intensive Ag Land_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V11: # Continue the structure for V2 in case of additional variables.
         name: Site10 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 10_Organic Cropland_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V12:
         name: Site11 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 11_Organic Cropland_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V13: # Continue the structure for V2 in case of additional variables.
         name: Site12 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 12_Organic Cropland_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V14:
         name: Site13 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 13_Conventional Cropland_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V15: # Continue the structure for V2 in case of additional variables.
         name: Site14 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 14_Conventional Cropland_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V16:
         name: Site15 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 15_Conventional Cropland_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V17: # Continue the structure for V2 in case of additional variables.
         name: Site16 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 16_Unmanaged Previous Intensive Ag Land_Mollisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V18:
         name: Site17 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 17_Unmanaged Previous Intensive Ag Land_Mollisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V19: # Continue the structure for V2 in case of additional variables.
         name: Site18 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 18_Unmanaged Previous Intensive Ag Land_Mollisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V20:
         name: Site19 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 19_Unmanaged Previous Intensive Ag Land_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V21: # Continue the structure for V2 in case of additional variables.
         name: Site20 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 20_Unmanaged Previous Intensive Ag Land_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V22:
         name: Site21 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 21_Unmanaged Previous Intensive Ag Land_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V23: # Continue the structure for V2 in case of additional variables.
         name: Site22 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 22_Conventional Cropland_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V24:
         name: Site23 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 23_Conventional Cropland_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V25: # Continue the structure for V2 in case of additional variables.
         name: Site24 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 24_Conventional Cropland_Oxisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V26:
         name: Site25 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 25_Organic Cropland_Vertisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V27: # Continue the structure for V2 in case of additional variables.
         name: Site26 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 26_Organic Cropland_Vertisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V28:
         name: Site27 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 27_Organic Cropland_Vertisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V29: # Continue the structure for V2 in case of additional variables.
         name: Site28 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 28_Conventional Cropland_Vertisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V30:
         name: Site29 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 29_Conventional Cropland_Vertisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V31: # Continue the structure for V2 in case of additional variables.
         name: Site30 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 30_Conventional Cropland_Vertisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V32:
         name: Site31 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 31_Unmanaged Previous Intensive Ag Land_Vertisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V33: # Continue the structure for V2 in case of additional variables.
         name: Site32 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 32_Unmanaged Previous Intensive Ag Land_Vertisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V34:
         name: Site33 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 33_Unmanaged Previous Intensive Ag Land_Vertisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V35: # Continue the structure for V2 in case of additional variables.
         name: Site34 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 34_Conventional Cropland_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V36:
         name: Site35 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 35_Conventional Cropland_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V37: # Continue the structure for V2 in case of additional variables.
         name: Site36 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 36_Conventional Cropland_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V38:
         name: Site37 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 37_Conventional Cropland_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V39: # Continue the structure for V2 in case of additional variables.
         name: Site38 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 38_Conventional Cropland_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V40:
         name: Site39 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 39_Conventional Cropland_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V41: # Continue the structure for V2 in case of additional variables.
         name: Site40 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 40_Pasture_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V42:
         name: Site41 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 41_Pasture_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V43: # Continue the structure for V2 in case of additional variables.
         name: Site42 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 42_Pasture_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V44:
         name: Site43 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 43_Unmanaged Previous Intensive Ag Land_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V45: # Continue the structure for V2 in case of additional variables.
         name: Site44 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 44_Unmanaged Previous Intensive Ag Land_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V46: # Continue the structure for V2 in case of additional variables.
         name: Site45 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 45_Unmanaged Previous Intensive Ag Land_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V47: # Continue the structure for V2 in case of additional variables.
          name: Site46 # Name of second variable in accompanying file.
          varDesc: "CO2 production rate " # description of the variable
          site: 46_Protected Non-native Forest_Andisol
-         units: microgC/gSoil/Day # Units in which this variable is provided
+         units: microgC/gSoil/d # Units in which this variable is provided
        V48:
         name: Site47 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 47_Protected Non-native Forest_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V49: # Continue the structure for V2 in case of additional variables.
         name: Site48 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 48_Protected Non-native Forest_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V50:
         name: Site49 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 49_Pasture_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V51: # Continue the structure for V2 in case of additional variables.
         name: Site50 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 50_Pasture_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V52:
         name: Site51 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 51_Pasture_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V53: # Continue the structure for V2 in case of additional variables.
         name: Site52 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 52_Protected Native Forest_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V54: # Continue the structure for V2 in case of additional variables.
         name: Site53 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 53_Protected Native Forest_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V55: # Continue the structure for V2 in case of additional variables.
          name: Site54 # Name of second variable in accompanying file.
          varDesc: "CO2 production rate " # description of the variable
          site: 54_Protected Native Forest_Inceptisol
-         units: microgC/gSoil/Day # Units in which this variable is provided
+         units: microgC/gSoil/d # Units in which this variable is provided
        V56:
         name: Site55 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 55_Pasture_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V57: # Continue the structure for V2 in case of additional variables.
         name: Site56 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 56_Pasture_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V58:
         name: Site57 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 57_Pasture_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V59: # Continue the structure for V2 in case of additional variables.
         name: Site58 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 58_Protected Non-native Forest_Ultisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V60:
         name: Site59 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 59_Protected Non-native Forest_Ultisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V61: # Continue the structure for V2 in case of additional variables.
         name: Site60 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 60_Protected Non-native Forest_Ultisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V62: # Continue the structure for V2 in case of additional variables.
         name: Site61 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 61_Pasture_Ultisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V63: # Continue the structure for V2 in case of additional variables.
          name: Site62 # Name of second variable in accompanying file.
          varDesc: "CO2 production rate " # description of the variable
          site: 62_Pasture_Ultisol
-         units: microgC/gSoil/Day # Units in which this variable is provided
+         units: microgC/gSoil/d # Units in which this variable is provided
        V64:
         name: Site63 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 63_Pasture_Ultisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V65: # Continue the structure for V2 in case of additional variables.
         name: Site64 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 64_Organic Cropland_Ultisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V66:
         name: Site65 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 65_Organic Cropland_Ultisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V67: # Continue the structure for V2 in case of additional variables.
         name: Site66 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 66_Organic Cropland_Ultisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V68:
         name: Site67 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 67_Conventional Cropland_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V69: # Continue the structure for V2 in case of additional variables.
         name: Site68 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 68_Conventional Cropland_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V70: # Continue the structure for V2 in case of additional variables.
         name: Site69 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 69_Conventional Cropland_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V71: # Continue the structure for V2 in case of additional variables.
          name: Site70 # Name of second variable in accompanying file.
          varDesc: "CO2 production rate " # description of the variable
          site: 70_Protected Non-native Forest_Andisol
-         units: microgC/gSoil/Day # Units in which this variable is provided
+         units: microgC/gSoil/d # Units in which this variable is provided
        V72:
         name: Site71 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 71_Protected Non-native Forest_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V73: # Continue the structure for V2 in case of additional variables.
         name: Site72 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 72_Protected Non-native Forest_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V74:
         name: Site73 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 73_Pasture_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V75: # Continue the structure for V2 in case of additional variables.
         name: Site74 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 74_Pasture_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V76:
         name: Site75 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 75_Pasture_Andisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V77: # Continue the structure for V2 in case of additional variables.
         name: Site76 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 76_Protected Native Forest_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V78: # Continue the structure for V2 in case of additional variables.
         name: Site77 # Name of second variable in accompanying file.
         varDesc: "CO2 production rate " # description of the variable
         site: 77_Protected Native Forest_Inceptisol
-        units: microgC/gSoil/Day # Units in which this variable is provided
+        units: microgC/gSoil/d # Units in which this variable is provided
        V79: # Continue the structure for V2 in case of additional variables.
          name: Site78 # Name of second variable in accompanying file.
          varDesc: "CO2 production rate " # description of the variable
          site: 78_Protected Native Forest_Inceptisol
-         units: microgC/gSoil/Day # Units in which this variable is provided
+         units: microgC/gSoil/d # Units in which this variable is provided

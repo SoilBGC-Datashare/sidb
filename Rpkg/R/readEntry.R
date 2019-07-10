@@ -9,7 +9,7 @@
 #' Andrews2000SBB=readEntry(entryName="Andrews2000SBB")
 readEntry <- function(path="~/sidb/data/", entryName) {
 
-    entry=yaml::yaml.load_file(input=paste(path,entryName,"/metadata.yaml",sep=""),handlers=list("float#fix"=function(x) as.character(x)))
+    entry=yaml::yaml.load_file(input=paste(path,entryName,"/metadata.yaml",sep="")) #,handlers=list("float#fix"=function(x) as.character(x)))
     ts_data_csv=read.csv(file=paste(path,entryName,"/timeSeries.csv",sep=""))
     entry[["timeSeries"]]<-ts_data_csv
     init=read.csv(file=paste(path,entryName,"/initConditions.csv",sep=""))

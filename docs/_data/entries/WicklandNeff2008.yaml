@@ -5,9 +5,10 @@ entryCreationDate: 2019-03-06 # Date when the data is entered in this file. Form
 contactName: Shane Stoner # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail: Shane Stoner # Email of the contact person
 entryNote: # Any notes or comments related to this entry.
+study: "Decomposition of soil organic matter from boreal black spruce forest: environmental and chemical controls" # Overall study description
+
 
 siteInfo:
-        study: "Decomposition of soil organic matter from boreal black spruce forest: environmental and chemical controls" # Overall study description
         site: # Names of individual sites, if one site, keep on this line, if multiple, use array format
           - wellDrainedCentralAlaska
           - modWellDrainedCentralAlaska
@@ -38,69 +39,40 @@ siteInfo:
           - "mature black spruce forest"
           - "mature black spruce forest"
         soilTaxonomy:
-          soilOrder: # Soil order according to the classification system described below
+          soilOrder: # Soil order according to the classification system varDescribed below
           soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
             - "Inceptisol cryept"
             - "Gelisol orthel"
             - "Gelisol histel"
-          soilSeries: # Soil series according to the classification system described below
+          soilSeries: # Soil series according to the classification system varDescribed below
           classificationSystem: USDA # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
-#These do not have to be arrays of equal length to site array
-        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
-          top: # in cm
-            - 2
-            - 5
-            - 5
-          bottom: # in cm
-            - 10
-            - 15
-            - 30
-          midDepth: #average depth
-            - 6
-            - 10
-            - 17.5
-          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
-          horizon: Of # soil horizon designation
         permafrost:
-          permafrostExist: # Yes or No (if yes, permafrost must exist at the site)
-            - no
+          permafrostExist: # Yes or blank if no (if yes, permafrost must exist at the site)
+            -
             - yes
             - yes
           activeLayer:
             - NA # Depth of the active layer in meters
             - NA
             - 0.4
-        experimentalTreatment: # List of experimental treatments applied at the site level, midDepths if multiple depths incubated, or locations/profiles within sites
-          drainage:
-            - wellDrained
-            - modWellDrained
-            - poorlyDrained
 
 incubationInfo:
-        description: "five laboratory replicates were incubated at five different moisture contents (2, 25, 50, 75, and 100 percent saturation) and two different temperatures (10 and 20 deg) in a full factorial design for 57 days." # Short description of the incubation setup and main treatments
+        incDesc: "five laboratory replicates were incubated at five different moisture contents (2, 25, 50, 75, and 100 percent saturation) and two different temperatures (10 and 20 deg) in a full factorial design for 57 days." # Short description of the incubation setup and main treatments
+        drainage:
+        depthInfo: # Soil depth. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, use an array.
+          top: # in cm
+          bottom: # in cm
+          midDepth: #average depth
+          surfaceAtm: yes # blank if zero is organic/mineral interface, yes if surface is atmospheric interfacelaboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, etc.)
+          horizon: Of # soil horizon designation
         temperature:
         moisture:
           value:  # Overall moisture at which incubations were performed. If moisture is an experimental treatment, leave blank.
-          units: # Valid fields are: percentGWC or percentFieldCapacity
+          units: percentFieldCapacity # Valid fields are: percentGWC or percentFieldCapacity
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: #  Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-        laboratoryTreatment: # List of laboratory treatments applied to the incubations (e.g., temperature, moisture, amendments, etc.)
-          temperature: # Replace with name of treatment
-            value:
-              - 10
-              - 20 # Numerical or factor
-            units: # Units of treatment value if numerical, if a %, write percent
-              - Celsius
-          moisture: # Replace with name of treatment
-            value: # Numerical or factor
-            - 2
-            - 25
-            - 50
-            - 75
-            - 100
-            units: percentFieldCapacity # Units of treatment value if numerical, if a %, write percent
         replicates:
-          number: 2 # Number of replicates per treatments
+          value: 2 # Number of replicates per treatments
           type: lab # Valid fields are: field or lab
         incubationTime: 57 # length of incubation in days
         preincubationTime: # Pre-incubation time in days
@@ -111,397 +83,427 @@ incubationInfo:
           rockPicking: no # yes or no
         gasAnalyzer: Licor IR # Gas analysis equipment for CO2 measurements
 
-variables: # These describe the columns of your timeSeries.csv file
+variables: # These varDescribe the columns of your timeSeries.csv file
        V1: # column 1
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
         units: d # Units of first variable in accompanying file.
 
        V2:
         name: C_WD_10_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 2 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V3:
         name: C_WD_10_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 25 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V4:
         name: C_WD_10_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 50 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V5:
         name: C_WD_10_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 75 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V6:
         name: C_WD_10_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 100 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Well Drained soil at a moisture content of 100 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 100 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 100 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V7:
         name: C_WD_20_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 2 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V8:
         name: C_WD_20_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 25 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V9:
         name: C_WD_20_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 50 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V10:
         name: C_WD_20_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 75 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V11:
         name: C_WD_20_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 100 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Well Drained soil at a moisture content of 100 percent"
         site: wellDrainedCentralAlaska
         drainage: wellDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 100 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 100 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 2
+        bottom: 10
+        midDepth: 6
 
        V12:
         name: C_MWD_10_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 2 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V13:
         name: C_MWD_10_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 25 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V14:
         name: C_MWD_10_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 50 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V15:
         name: C_MWD_10_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 75 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V16:
         name: C_MWD_10_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 100 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Moderately Well Drained soil at a moisture content of 100 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 100 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 100 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V17:
         name: C_MWD_20_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 2 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V18:
         name: C_MWD_20_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 25 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V19:
         name: C_MWD_20_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 50 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V20:
         name: C_MWD_20_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 75 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V21:
         name: C_MWD_20_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Moderately Well Drained soil at a moisture content of 75 percent"
         site: modWellDrainedCentralAlaska
         drainage: modWellDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 15
+        midDepth: 10
 
        V22:
         name: C_PD_10_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 2 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V23:
         name: C_PD_10_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 25 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V24:
         name: C_PD_10_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 50 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V25:
         name: C_PD_10_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 75 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V26:
         name: C_PD_10_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 100 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 10deg of Poorly Drained soil at a moisture content of 100 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
-        temperature:
-          value: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 100 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 10 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 100 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V27:
         name: C_PD_20_2 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 2 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 2 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V28:
         name: C_PD_20_25 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 25 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 25 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 25 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V29:
         name: C_PD_20_50 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 50 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 50 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 50 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V30:
         name: C_PD_20_75 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 75 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 75 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 75 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 30
+        midDepth: 17.5
 
        V31:
         name: C_PD_20_100 # Name of second variable in accompanying file.
-        desc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 2 percent"
+        varDesc: "Percent of initial soil C mineralized during incubation at 20deg of Poorly Drained soil at a moisture content of 2 percent"
         site: poorlyDrainedFairbanksAlaska
         drainage: poorlyDrained
-        temperature:
-          value: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
-        moisture:
-          value: 100 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
+        temperature: 20 # 'experimentalTreatment' here is a place holder. Replace this phrase by any of the listed variables or sites in environmentalTreatment above.
+        moisture: 100 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
         gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
         units: percentC #percent of initial C mineralized
         statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep).
+        top: 5
+        bottom: 30
+        midDepth: 17.5

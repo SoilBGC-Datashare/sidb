@@ -92,121 +92,108 @@ incubationInfo:
 variables: # These varDescribe the columns of your timeSeries.csv file
        V1: # column 1
         name: time # Name of first variable in the accompanying csv data file. First variable should be time.
-        units: days # Units of first variable in accompanying file.
+        units: d # Units of first variable in accompanying file.
 
        V2:
          name: CO2_Fair_30 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Fairbanks soils incubated at 30deg" # description of the variable
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
-         midDepth: 5
 
        V3:
          name: CO2_Chan_30 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Chandalar soils incubated at 30deg" # description of the variable
          site: Chandalar #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
-         midDepth: 5
 
        V4:
          name: CO2_Too_30 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Toolik Lake soils incubated at 30deg" # description of the variable
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
-         midDepth: 5
 
        V5:
          name: CO2_Sag_30 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Sagwon soils incubated at 30deg" # description of the variable
          site: Sagwon #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
-         midDepth: 5
 
        V6:
          name: CO2_Fair_10 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Fairbanks soils incubated at 10deg" # description of the variable
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
-         midDepth: 5
 
        V7:
          name: CO2_Chan_10 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Chandalar soils incubated at 10deg" # description of the variable
          site: Chandalar #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
-         midDepth: 5
 
        V8:
          name: CO2_Too_10 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Toolik Lake soils incubated at 10deg" # description of the variable
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
-         midDepth: 5
 
        V9:
          name: CO2_Sag_10 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Sagwon soils incubated at 10deg" # description of the variable
          site: Sagwon #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
-         midDepth: 5
 
        V10:
          name: CO2_FairTuss_30 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Fairbanks soils incubated at 10deg" # description of the variable
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
-         midDepth: 5
 
        V11:
          name: CO2_FairSpru_30 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Fairbanks soils incubated at 10deg" # description of the variable
          site: Fairbanks #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Spruce
-         midDepth: 5
 
        V12:
          name: CO2_TooTuss_30 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Fairbanks soils incubated at 10deg" # description of the variable
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Tussock
-         midDepth: 5
 
        V13:
          name: CO2_TooWet_30 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Toolik Lake soils incubated at 10deg" # description of the variable
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 30 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: WetSedge
-         midDepth: 5
 
        V14:
          name: CO2_TooShru_30 # Name of second variable in accompanying file.
          varDesc: "CO2 Flux of Fairbanks soils incubated at 10deg" # description of the variable
          site: ToolikLake #site where the incubated sample comes from.
          temperature: 10 # 'laboratoryTreatment' here is a place holder. Replace this word by any of the listed variables in laboratoryTreatment above and type value or level after colon.
-         units: mgC-CO2/gSoilC/d
+         units: mgC/gSoilC/d
          vegetation: Shrub
-         midDepth: 5

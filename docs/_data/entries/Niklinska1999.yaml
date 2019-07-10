@@ -107,7 +107,7 @@ incubationInfo:
   replicates:
          value: # Number of replicates per treatments
          type: # Valid fields are: field or lab
-  incubationTime: # length of incubation in days
+  incubationTime: 98 # length of incubation in days
   preincubationTime: # Pre-incubation time in days
   samplePreparation:
      intactCore: no
@@ -206,7 +206,7 @@ variables:
           site: "Brandstorp, southern Sweden"
         V16:
           name: CO2_BrandSS_25
-          units: "Soil respiration rate (mMols CO2 / d)"
+          units: "mmolCO2/d"
           varDesc: "Dynamics of the respiration rates of humus samples originating from Brandstorp, southern Sweden, incubated at 25 degrees"
           temperature: 25
           site: "Brandstorp, southern Sweden"

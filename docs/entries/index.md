@@ -3,7 +3,7 @@ layout: post
 title: Entries
 ---
  
-The links below provide an overview of each entry in the database
+The list below provides an overview of all current entries in the database
 
 
 {% for entry in site.data.entries %}
@@ -11,8 +11,7 @@ The links below provide an overview of each entry in the database
   <h2>
       {{ ent.citationKey }} 
   </h2>
-  * doi: {{ent.doi}}
-  * Study site: {{ ent.siteInfo.site }}
-  * Country: {{ ent.siteInfo.country }}
+  * doi: <https://doi.org/{{ent.doi}}>
+  * Study: {{ ent.study }}
 {% endfor %}
  

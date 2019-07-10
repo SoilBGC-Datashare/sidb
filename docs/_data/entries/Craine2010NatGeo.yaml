@@ -226,7 +226,7 @@ incubationInfo:
 variables: # These varDescribe the columns of your timeSeries.csv file
         V1: # column 1
           name: time # Name of first variable in the accompanying csv data file. First variable should be time.
-          units: day # Units of first variable in accompanying file.
+          units: d # Units of first variable in accompanying file.
         V2: # column 2
           name: Cumresp_CDR # Name of second variable in accompanying file.
           varDesc: cumulative respiration at CDR # description of the variable

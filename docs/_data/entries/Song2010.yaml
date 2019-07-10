@@ -61,91 +61,91 @@ variables:
           units: d
         V2:
           name: CO2_Cr_5
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under control treatments incubated at 5deg"
           temperature: 5
           amendment: Cr
         V3:
           name: CO2_N1_5
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external nitrogen inputs (N1= 0.005 mgN/gSoil) incubated at 5deg"
           temperature: 5
           amendment: N1
         V4:
           name: CO2_N2_5
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external nitrogen inputs (N2= 0.025 mgN/gSoil) incubated at 5deg"
           temperature: 5
           amendment: N2
         V5:
           name: CO2_C1_5
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external glucose inputs (C1= 2 mgC/gSoil) incubated at 5deg"
           temperature: 5
           amendment: C1
         V6:
           name: CO2_C2_5
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external glucose inputs (C2= 10 mgC/gSoil) incubated at 5deg"
           temperature: 5
           amendment: C2
         V7:
           name: CO2_Cr_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under control treatments incubated at 15deg"
           temperature: 15
           amendment: Cr
         V8:
           name: CO2_N1_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external nitrogen inputs (N1= 0.005 mgN/gSoil) incubated at 15deg"
           temperature: 15
           amendment: N1
         V9:
           name: CO2_N2_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external nitrogen inputs (N2= 0.025 mgC/gSoil) incubated at 15deg"
           temperature: 15
           amendment: N2
         V10:
           name: CO2_C1_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external glucose inputs (C1= 2 mgC/gSoil) incubated at 15deg"
           temperature: 15
           amendment: C1
         V11:
           name: CO2_C2_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external glucose inputs (C2= 10 mgC/gSoil) incubated at 15deg"
           temperature: 15
           amendment: C2
         V12:
           name: CO2_Cr_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under control treatments incubated at 25deg"
           temperature: 25
           amendment: Cr
         V13:
           name: CO2_N1_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external nitrogen inputs (N1= 0.005 mgN/gSoil) incubated at 25deg"
           temperature: 25
           amendment: N1
         V14:
           name: CO2_N2_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external nitrogen inputs (N2= 0.025 mgN/gSoil) incubated at 25deg"
           temperature: 25
           amendment: N2
         V15:
           name: CO2_C1_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external glucose inputs (C1= 2 mgC/gSoil) incubated at 25deg"
           temperature: 25
           amendment: C1
         V16:
           name: CO2_C2_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Carbon mineralization rates under external glucose inputs (C2= 10 mgC/gSoil) incubated at 25deg"
           temperature: 25
           amendment: C2

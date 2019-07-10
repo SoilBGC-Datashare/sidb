@@ -115,252 +115,252 @@ variables: # These varDescribe the columns of your timeSeries.csv file
           units: d
         V2:
           name: C_SasNG_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for Saskatchewan, native grassland"
           temperature: 15
           vegetation: native grassland
           site: Indian Head
         V3:
           name: C_SasNG_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for Saskatchewan, native grassland"
           temperature: 25
           vegetation: native grassland
           site: Indian Head
         V4:
           name: C_SasNG_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Saskatchewan, native grassland"
           temperature: 35
           vegetation: native grassland
           site: Indian Head
         V5:
           name: C_SasCul_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for Saskatchewan, cultivated"
           temperature: 15
           vegetation: cultivated
           site: Indian Head
         V6:
           name: C_SasCul_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for Saskatchewan, cultivated"
           temperature: 25
           vegetation: cultivated
           site: Indian Head
         V7:
           name: C_SasCul_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Saskatchewan, cultivated"
           temperature: 35
           vegetation: cultivated
           site: Indian Head
         V8:
           name: C_NDakNG_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for North Dakota, native grassland"
           temperature: 15
           vegetation: native grassland
           site: Mandan
         V9:
           name: C_NDakNG_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for North Dakota, native grassland"
           temperature: 25
           vegetation: native grassland
           site: Mandan
         V10:
           name: C_NDakNG_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for North Dakota, native grassland"
           temperature: 35
           vegetation: native grassland
           site: Mandan
         V11:
           name: C_NDakCul_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for North Dakota, cultivated"
           temperature: 15
           vegetation: cultivated
           site: Mandan
         V12:
           name: C_NDakCul_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for North Dakota, cultivated"
           temperature: 25
           vegetation: cultivated
           site: Mandan
         V13:
           name: C_NDakCul_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for North Dakota, cultivated"
           temperature: 35
           vegetation: cultivated
           site: Mandan
         V14:
           name: C_ColoNG_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Colorado, native grassland"
           temperature: 15
           vegetation: native grassland
           site: Akron
         V15:
           name: C_ColoNG_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for Colorado, native grassland"
           temperature: 25
           vegetation: native grassland
           site: Akron
         V16:
           name: C_ColoNG_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Colorado, native grassland"
           temperature: 35
           vegetation: native grassland
           site: Akron
         V17:
           name: C_ColoCul_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for Colorado, cultivated"
           temperature: 15
           vegetation: cultivated
           site: Akron
         V18:
           name: C_ColoCul_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for Colorado, cultivated"
           temperature: 25
           vegetation: cultivated
           site: Akron
         V19:
           name: C_ColoCul_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Colorado, cultivated"
           temperature: 35
           vegetation: cultivated
           site: Akron
         V20:
           name: C_TexNG_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for Texas, native grassland"
           temperature: 15
           vegetation: native grassland
           site: Vernon
         V21:
           name: C_TexNG_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for Texas, native grassland"
           temperature: 25
           vegetation: native grassland
           site: Vernon
         V22:
           name: C_TexNG_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Texas, native grassland"
           temperature: 35
           vegetation: native grassland
           site: Vernon
         V23:
           name: C_TexCul_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for Texas, cultivated"
           temperature: 15
           vegetation: cultivated
           site: Vernon
         V24:
           name: C_TexCul_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for Texas, cultivated"
           temperature: 25
           vegetation: cultivated
           site: Vernon
         V25:
           name: C_TexCul_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Texas, cultivated"
           temperature: 35
           vegetation: cultivated
           site: Vernon
         V26:
           name: C_CostaNF_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for Costa Rica, native forest"
           temperature: 15
           vegetation: native forest
           site: Alajuela
         V27:
           name: C_CostaNF_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for Costa Rica, native forest"
           temperature: 25
           vegetation: native forest
           site: Alajuela
         V28:
           name: C_CostaNF_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Costa Rica, native forest"
           temperature: 35
           vegetation: native forest
           site: Alajuela
         V29:
           name: C_CostaPas_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for Costa Rica, Pasture"
           temperature: 15
           vegetation: Pasture
           site: Alajuela
         V30:
           name: C_CostaPas_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for Costa Rica, Pasture"
           temperature: 25
           vegetation: Pasture
           site: Alajuela
         V31:
           name: C_CostaPas_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Costa Rica, Pasture"
           temperature: 35
           vegetation: Pasture
           site: Alajuela
         V32:
           name: C_BrazilNF_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for Brazil, native forest"
           temperature: 15
           vegetation: native forest
           site: Rondonia
         V33:
           name: C_BrazilNF_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for Brazil, native forest"
           temperature: 25
           vegetation: native forest
           site: Rondonia
         V34:
           name: C_BrazilNF_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Brazil, native forest"
           temperature: 35
           vegetation: native forest
           site: Rondonia
         V35:
           name: C_BrazilPas_15
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 15 degrees for Brazil, Pasture"
           temperature: 15
           vegetation: Pasture
           site: Rondonia
         V36:
           name: C_BrazilPas_25
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 25 degrees for Brazil, Pasture"
           temperature: 15
           vegetation: Pasture
           site: Rondonia
         V37:
           name: C_BrazilPas_35
-          units: mgC-CO2/gSoil/d
+          units: mgC/gSoil/d
           varDesc: "Decomposition rates over time at 35 degrees for Brazil, Pasture"
           temperature: 35
           vegetation: Pasture

@@ -58,28 +58,28 @@ incubationInfo:
 variables:
         V1:
           name: time
-          units: days
+          units: d
         V2:
           name: C_Top_25
-          units: mgC-CO2/gC
+          units: mgC/gC
           varDesc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 25deg for the topsoil"
           temperature: 25
           midDepth: 10
         V3:
           name: C_Top_35
-          units: mgC-CO2/gC
+          units: mgC/gC
           varDesc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 35deg for the topsoil"
           temperature: 35
           midDepth: 10
         V4:
           name: C_Sub_25
-          units: mgC-CO2/gC
+          units: mgC/gC
           varDesc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 25deg for the subsoil"
           temperature: 25
           midDepth: 100
         V5:
           name: C_Sub_35
-          units: mgC-CO2/gC
+          units: mgC/gC
           varDesc: "Cumulative respiration of soil organic matter derived CO2-C per gram total soil organic C at 35deg for the subsoil"
           temperature: 35
           midDepth: 100

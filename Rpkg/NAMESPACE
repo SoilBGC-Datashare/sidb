@@ -2,7 +2,7 @@
 
 export(carbon)
 export(coordinates)
-export(flatterSIDB)
+export(flatterSIDb)
 export(incubationTime)
 export(isCumulative)
 export(laboratoryTreatment)

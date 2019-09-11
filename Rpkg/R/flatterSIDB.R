@@ -1,6 +1,6 @@
-#' Flattens sidb database object for easier querying
+#' Flattens SIDb database object for easier querying
 #'
-#' @param database A database with the sidb structure
+#' @param database A database with the SIDb structure
 #' @return R list with two elements, linked by shared column "ID":\cr
 #' 1) \emph{timeseries}, a list of unique timeseries, each a 2-column dataframe (time, response)\cr
 #' 2) \emph{vars}, a list of all site, incubation and variables fields flattened into a dataframe for each entry
@@ -11,7 +11,7 @@
 #' @examples
 #' db <- loadEntries(path="~/sidb/data/")
 #' sidb.flatter <- flatterSIDB(db)
-flatterSIDB <- function(database) {
+flatterSIDb <- function(database) {
 
   # timeseries: make list with each unique timeseries as its own 2-col dataframe (time, response)
   #####

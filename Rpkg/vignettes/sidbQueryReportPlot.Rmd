@@ -1,0 +1,114 @@
+---
+title: "sidbQueryReportPlot"
+author: "J. Beem-Miller"
+date: "28 June 2019"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{sidbQueryReportPlot}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+**_Delete/comment the "eval = FALSE" line of this first code chunk or the script won't run!_**
+```{r setup}
+knitr::opts_chunk$set(
+  eval = FALSE,
+  collapse = TRUE,
+  comment = "#>"
+  )
+```
+
+
+# A simple workflow for querying, generating reports, and plotting data with SIDb
+In this vignette we will: 1) build SIDb and flatten the data structure, 2&3) show how to filter and subset the timeseries observations based on user criteria (e.g. exclude standard deviation/standard error timeseries, and only show incubations conducted between 10 and 20 degrees C), and 4) make a few example plots. 
+
+## Install latest version of SIDb and load relevant libraries
+```{r libraries}
+devtools::install_github("SoilBGC-Datashare/sidb/Rpkg")
+library(sidb)
+library(ggplot2)
+library(plyr)
+library(dplyr)
+```
+
+## 1. Prepare data
+```{r prep}
+# load data
+database <- loadEntries("~/sidb/data/")
+
+# run "flatter" fx 
+db <- flatterSIDB(database)
+
+# join variables dataframes with initConditions
+vars.ic <- lapply(seq_along(database), function(i) left_join(db$vars[[i]], database[[i]][["initConditions"]]))
+names(vars.ic) <- names(database)
+
+# remove NA columns from vars.ic
+vars.ic <- lapply(vars.ic, function(x) x[ ,!apply(is.na(x),2,all)])
+
+# create df object of timeseries list
+ts.df <- do.call("rbind", db$timeseries)
+```
+
+## 2. Filter *vars.dfl* to exclude SD and SE timeseries
+```{r filter}
+# add statistic column to entries missing it
+vars.dfl.mean <- lapply(vars.ic, function(x) {
+  if(is.null(x$statistic)) {
+    x$statistic = NA
+  } else {
+    x$statistic = x$statistic
+  }
+  return(x)
+})
+vars.dfl.mean <- lapply(vars.dfl.mean, function(x) {
+  x = x[which(x$statistic == "none" | is.na(x$statistic)),]
+  return(x)
+})
+```
+
+## 3. Extract all timeseries with temperature between 10 and 20 degrees
+```{r subset, warning=FALSE}
+# list variables in vars.dfl by calling 'names' on each element of list and filtering to unique values
+sort(unique(unlist(lapply(vars.dfl.mean, function(x) names(x)))))
+
+# first extract indices of studies with timeseries that match conditions
+ix.ls <- lapply(vars.dfl.mean, function(x) which(x$temperature >= 10 & x$temperature <= 20))
+
+# then subset list with list of indices and convert to dataframe
+t.10.20.df <- plyr::rbind.fill(lapply(seq_along(vars.dfl.mean), function(i) vars.dfl.mean[[i]][ix.ls[[i]],]))
+
+# join your subset of the variables dataframes with the corresponding timeseries
+t.10.20.df <- dplyr::left_join(t.10.20.df, ts.df, by="ID")
+```
+
+## 4. Make some plots
+### a) plot first 300 days, with latitude as color
+```{r plot1}
+ggplot(t.10.20.df, aes(time, response, color=abs(latitude))) +
+  geom_path() +
+  scale_x_continuous(limits=c(0,300)) +
+  theme_bw() +
+  theme(panel.grid = element_blank())
+```
+
+### b) plot sites >60N, with moisture as color, first 100 days of incubation
+```{r plot2}
+# first filter based on moisture units, then plot
+filter(t.10.20.df, latitude >= 60) %>% filter(moisture.units == "percentFieldCapacity") %>%
+  ggplot(., aes(time, response, color=moisture)) +
+  geom_path() +
+  scale_x_continuous(limits=c(0,100)) +
+  theme_bw() +
+  theme(panel.grid = element_blank())
+```
+
+### c) plot first 30 days, with moisture as color
+```{r plot3}
+ggplot(t.10.20.df, aes(time, response, color=moisture)) +
+  geom_path() +
+  scale_x_continuous(limits=c(0,30)) +
+  scale_y_continuous(limits=c(0,1.3e+05)) +
+  scale_color_continuous(limits=c(0,100)) +
+  theme_bw() +
+  theme(panel.grid = element_blank())
+```

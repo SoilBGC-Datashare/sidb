@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/64746862.svg)](https://zenodo.org/badge/latestdoi/64746862)
+
 # Soil Incubation Database
 
 ## Introduction

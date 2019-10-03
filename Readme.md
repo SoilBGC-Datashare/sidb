@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/SoilBGC-Datashare/sidb.svg?branch=master)](https://travis-ci.org/SoilBGC-Datashare/sidb)
 # Soil Incubation Database
 
 ## Introduction

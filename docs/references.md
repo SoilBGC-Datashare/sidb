@@ -22,7 +22,7 @@ Entries in SIDB are from the following publications:
 *  Hopkins, D. W., Sparrow, A. D., Elberling, B., Gregorich, E. G., Novis, P. M., Greenfield, L. G., & Tilston, E. L. (2006). Carbon, nitrogen and temperature controls on microbial activity in soils from an Antarctic dry valley. Soil Biology and Biochemistry, 38(10), 3130–3140. doi:10.1016/j.soilbio.2006.01.012
 *  Karhu, K., Fritze, H., Tuomi, M., Vanhala, P., Spetz, P., Kitunen, V., & Liski, J. (2010). Temperature sensitivity of organic matter decomposition in two boreal forest soil profiles. Soil Biology and Biochemistry, 42(1), 72–82. doi:10.1016/j.soilbio.2009.10.002
 *  Lavoie, M., Mack, M. C., & Schuur, E. A. G. (2011). Effects of elevated nitrogen and temperature on carbon and nitrogen dynamics in Alaskan arctic and boreal soils. Journal of Geophysical Research, 116(G3). doi:10.1029/2010jg001629
-*  NULL
+*  Neff, J. C., & Hooper, D. U. (2002). Vegetation and climate controls on potential CO2, DOC and DON production in northern latitude soils. Global Change Biology, 8(9), 872–884. doi:10.1046/j.1365-2486.2002.00517.x
 *  Niklińska, M., Maryański, M., & Laskowski, R. (1999). Biogeochemistry, 44(3), 239–257. doi:10.1023/a:1006049204600
 *  Reichstein, M., Bednorz, F., Broll, G., & Kätterer, T. (2000). Temperature dependence of carbon mineralisation: conclusions from a long-term incubation of subalpine soil samples. Soil Biology and Biochemistry, 32(7), 947–958. doi:10.1016/s0038-0717(00)00002-x
 *  Rey, A., Pegoraro, E., & Jarvis, P. G. (2008). Carbon mineralization rates at different soil depths across a network of European forest sites (FORCAST). European Journal of Soil Science, 59(6), 1049–1062. doi:10.1111/j.1365-2389.2008.01065.x

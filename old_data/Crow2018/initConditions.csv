@@ -1,4 +1,0 @@
-site,experimentalTreatment_1,carbonMean,carbonSD,carbonSE,carbonUnits,nitrogenMean,nitrogenSD,nitrogenSE,nitrogenUnits,bulkDensityMean,bulkDensitySD,bulkDensitySE,replicates,pH,redox,percentClay,percentSand,percentSilt,microbialBiomass,microbialBiomassUnits
-Waimanalo,grassland,1.90,0.21,,percent,0.19,0.02,,percent,,,,,,,,,,,
-Waimanalo,cultivated,1.98,0.14,,percent,0.20,0.01,,percent,,,,,,,,,,,
-Waimanalo,bare,1.65,0.07,,percent,0.17,0.00,,percent,,,,,,,,,,,

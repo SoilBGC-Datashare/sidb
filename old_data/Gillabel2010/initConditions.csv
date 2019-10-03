@@ -1,4 +1,0 @@
-site,midDepth,carbonMean,carbonSD,carbonSE,carbonUnits,nitrogenMean,nitrogenSD,nitrogenSE,nitrogenUnits,bulkDensityMean,bulkDensitySD,bulkDensitySE,replicates,pH,redox,percentClay,percentSand,percentSilt,microbialBiomass,microbialBiomassUnits
-"""Termunck, Leuven, Belgium""",10,0.92,,,percent,0.09,,,percent,,,,,,,10,13.2,76.8,,
-"""Termunck, Leuven, Belgium""",100,0.16,,,percent,0.02,,,percent,,,,,,,14.8,10.4,74.8,,
-

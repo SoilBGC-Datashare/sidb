@@ -1,7 +1,0 @@
-site;experimentalTreatment_1;experimentalTreatment_2;experimentalTreatment_3;carbonMean;carbonSD;carbonSE;carbonUnits;nitrogenMean;nitrogenSD;nitrogenSE;nitrogenUnits;bulkDensityMean;bulkDensitySD;bulkDensitySE;replicates;pH;redox;percentClay;percentSand;percentSilt;microbialBiomass;microbialBiomassUnits
-Coweeta Long-Term Ecological Research LTER_high elevation(CH);temperature;glucose;;9.9;;;percentC;0.7;;;percentN;;;;;;;;;;;
-Coweeta Long-Term Ecological Research LTER_low elevation(CL);temperature;glucose;;5.5;;;percentC;0.3;;;percentN;;;;;;;;;;;
-Harvard Forest LTER_Control_Organic Rich Horizon(HOC);temperature;glucose;;17.2;;;percentC;0.8;;;percentN;;;;;;;;;;;
-Harvard Forest LTER_Control_Organic Poor Horizon (HMC);temperature;glucose;;16.8;;;percentC;0.8;;;percentN;;;;;;;;;;;
-"Harvard Forest LTER_HeatedPlot_Organic Rich Horizon (HOH)""";temperature;glucose;;5.5;;;percentC;0.3;;;percentN;;;;;;;;;;;
-Harvard Forest LTER_HeatedPlot_Organic Poor Horizon (HMH);temperature;glucose;;5.3;;;percentC;0.3;;;percentN;;;;;;;;;;;

@@ -1,7 +1,0 @@
-site,carbonMean,carbonSD,carbonSE,carbonUnits,nitrogenMean,nitrogenSD,nitrogenSE,nitrogenUnits,bulkDensityMean,bulkDensitySD,bulkDensitySE,replicates,pH,redox,percentClay,percentSand,percentSilt,microbialBiomass,microbialBiomassUnits
-delta soil,0.54,0.14,,mgC/gSoil,11.2,7.1,,microgN/gSoil,,,,,8.46,,,,,,
-dune soil,0.43,0.43,,mgC/gSoil,4.9,0.9,,microgN/gSoil,,,,,8.48,,,,,,
-hillslope soil,1.38,0.3,,mgC/gSoil,58.6,0.3,,microgN/gSoil,,,,,8.36,,,,,,
-polygon soil,1.63,0.61,,mgC/gSoil,114,48,,microgN/gSoil,,,,,8.42,,,,,,
-lower moraine soil,0.94,0.19,,mgC/gSoil,66.6,21.1,,microgN/gSoil,,,,,8.56,,,,,,
-lake margin soil,29.89,25.99,,mgC/gSoil,3259,2807,,microgN/gSoil,,,,,7.54,,,,,,

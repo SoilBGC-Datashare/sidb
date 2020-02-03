@@ -6,7 +6,6 @@
 #' @return R list with an FME model object, a SoilR model object, and the AIC value
 #' @export
 #' @import FME
-#' @import SoilR
 #' @examples
 #' db=loadEntries(path="~/sidb/data/")
 #' incubation=db[["Crow2019a"]]
@@ -21,9 +20,9 @@ threeppFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.5, 0.5))
   tt=seq(from=0, to=tail(complete[,1],1), length.out = 500)
 
   Func=function(pars){
-    mod=ThreepParallelModel(t=tt,ks=pars[1:3], C0=initialCarbon*c(pars[4], pars[5], 1-sum(pars[4:5])), In=0, gam1=0, gam2=0)
-#    Rt=getAccumulatedRelease(mod)
-    Rt=getReleaseFlux(mod)
+    mod=SoilR::ThreepParallelModel(t=tt,ks=pars[1:3], C0=initialCarbon*c(pars[4], pars[5], 1-sum(pars[4:5])), In=0, gam1=0, gam2=0)
+#    Rt=SoilR::getAccumulatedRelease(mod)
+    Rt=SoilR::getReleaseFlux(mod)
     return(data.frame(time=tt, Rt=rowSums(Rt)))
   }
 
@@ -39,6 +38,6 @@ threeppFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.5, 0.5))
   lines(bestMod)
   AIC=(2*length(Fit$par))-2*log(Fit$ms)
   print(paste("AIC = ",AIC))
-  SoilRmodel=ThreepParallelModel(t=tt,ks=Fit$par[1:3], C0=initialCarbon*c(Fit$par[4], Fit$par[5], 1-sum(Fit$par[4:5])), In=0, gam1=0, gam2=0)
+  SoilRmodel=SoilR::ThreepParallelModel(t=tt,ks=Fit$par[1:3], C0=initialCarbon*c(Fit$par[4], Fit$par[5], 1-sum(Fit$par[4:5])), In=0, gam1=0, gam2=0)
   return(list(FMEmodel=Fit, SoilRmodel=SoilRmodel, AIC=AIC))
 }

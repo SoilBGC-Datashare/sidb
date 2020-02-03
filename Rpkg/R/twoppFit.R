@@ -6,7 +6,6 @@
 #' @return R list with an FME model object, a SoilR model object, and the AIC value
 #' @export
 #' @import FME
-#' @import SoilR
 #' @examples
 #' db=loadEntries(path="~/sidb/data/")
 #' incubation=db[["Crow2019a"]]
@@ -21,9 +20,9 @@ twoppFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5)){
   tt=seq(from=0, to=tail(complete[,1],1), length.out = 500)
 
   Func=function(pars){
-    mod=TwopParallelModel(t=tt,ks=pars[1:2], C0=initialCarbon*c(pars[3], 1-pars[3]), In=0, gam=0)
-#    Rt=getAccumulatedRelease(mod)
-    Rt=getReleaseFlux(mod)
+    mod=SoilR::TwopParallelModel(t=tt,ks=pars[1:2], C0=initialCarbon*c(pars[3], 1-pars[3]), In=0, gam=0)
+#    Rt=SoilR::getAccumulatedRelease(mod)
+    Rt=SoilR::getReleaseFlux(mod)
     return(data.frame(time=tt, Rt=rowSums(Rt)))
   }
 
@@ -39,6 +38,6 @@ twoppFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5)){
   lines(bestMod)
   AIC=(2*length(Fit$par))-2*log(Fit$ms)
   print(paste("AIC = ",AIC))
-  SoilRmodel=TwopParallelModel(t=tt,ks=Fit$par[1:2], C0=initialCarbon*c(Fit$par[3], 1-Fit$par[3]), In=0, gam=0)
+  SoilRmodel=SoilR::TwopParallelModel(t=tt,ks=Fit$par[1:2], C0=initialCarbon*c(Fit$par[3], 1-Fit$par[3]), In=0, gam=0)
   return(list(FMEmodel=Fit, SoilRmodel=SoilRmodel, AIC=AIC))
 }

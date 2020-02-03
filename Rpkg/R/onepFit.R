@@ -5,7 +5,6 @@
 #' @return R list with an FME model object, a SoilR model object, and the AIC value
 #' @export
 #' @import FME
-#' @import SoilR
 #' @import graphics
 #' @importFrom utils tail
 #' @importFrom stats complete.cases
@@ -20,8 +19,8 @@ onepFit=function(timeSeries, initialCarbon){
   tt=seq(from=0, to=tail(complete[,1],1), length.out = 500)
 
   Func=function(pars){
-    mod=OnepModel(t=tt,k=pars[1], C0=initialCarbon, In=0)
-    Rt=getAccumulatedRelease(mod)
+    mod=SoilR::OnepModel(t=tt,k=pars[1], C0=initialCarbon, In=0)
+    Rt=SoilR::getAccumulatedRelease(mod)
     return(data.frame(time=tt, Rt=Rt))
   }
 
@@ -37,6 +36,6 @@ onepFit=function(timeSeries, initialCarbon){
   lines(bestMod)
   AIC=2-2*log(Fit$ms)
   print(paste("AIC = ",AIC))
-  SoilRmodel=OnepModel(t=tt,k=Fit$par[1], C0=initialCarbon, In=0)
+  SoilRmodel=SoilR::OnepModel(t=tt,k=Fit$par[1], C0=initialCarbon, In=0)
   return(list(FMEmodel=Fit, SoilRmodel=SoilRmodel, AIC=AIC))
 }

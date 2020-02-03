@@ -6,7 +6,6 @@
 #' @return R list with an FME model object, a SoilR model object, and the AIC value
 #' @export
 #' @import FME
-#' @import SoilR
 #' @import graphics
 #' @importFrom stats complete.cases
 #' @examples
@@ -23,9 +22,9 @@ twopfFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.5, 0.3)){
   tt=seq(from=0, to=tail(complete[,1],1), length.out = 500)
 
   Func=function(pars){
-    mod=TwopFeedbackModel(t=tt,ks=pars[1:2], a21=pars[1]*pars[3], a12=pars[2]*pars[4],C0=initialCarbon*c(pars[5], 1-pars[5]), In=0)
-#    Rt=getAccumulatedRelease(mod)
-    Rt=getReleaseFlux(mod)
+    mod=SoilR::TwopFeedbackModel(t=tt,ks=pars[1:2], a21=pars[1]*pars[3], a12=pars[2]*pars[4],C0=initialCarbon*c(pars[5], 1-pars[5]), In=0)
+#    Rt=SoilR::getAccumulatedRelease(mod)
+    Rt=SoilR::getReleaseFlux(mod)
     return(data.frame(time=tt, Rt=rowSums(Rt)))
   }
 
@@ -41,7 +40,7 @@ twopfFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.5, 0.3)){
   lines(bestMod)
   AIC=(2*length(Fit$par))-2*log(Fit$ms)
   print(paste("AIC = ",AIC))
-  SoilRmodel=TwopFeedbackModel(t=tt,ks=Fit$par[1:2], a21=Fit$par[1]*Fit$par[3], a12=Fit$par[2]*Fit$par[4],
+  SoilRmodel=SoilR::TwopFeedbackModel(t=tt,ks=Fit$par[1:2], a21=Fit$par[1]*Fit$par[3], a12=Fit$par[2]*Fit$par[4],
                                C0=initialCarbon*c(Fit$par[5], 1-Fit$par[5]), In=0)
   return(list(FMEmodel=Fit, SoilRmodel=SoilRmodel, AIC=AIC))
 }

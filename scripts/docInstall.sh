@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm *tar.gz
 Rscript pkgDocumentation.R
-R CMD install ../Rpkg/
+R CMD build ../Rpkg/
+R CMD install *tar.gz
 

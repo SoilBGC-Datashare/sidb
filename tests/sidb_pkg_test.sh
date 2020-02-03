@@ -1,3 +1,5 @@
+#!/bin/bash
+
 rm *tar.gz
 rm -r sidb.Rcheck
 R CMD build ../Rpkg/

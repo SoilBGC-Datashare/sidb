@@ -31,7 +31,7 @@ threeppFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.5, 0.5))
     return(modCost(model=output, obs=complete))
   }
 
-  Fit=modFit(f=costFunc, p=inipars, method="Marq", lower=rep(0,5), upper=c(Inf, Inf, Inf, 1, 1))
+  Fit=modFit(f=costFunc, p=inipars, method="Marq", lower=rep(0,5), upper=c(3, 3, 3, 1, 1))
   bestMod=Func(pars=Fit$par)
   print(paste(c("k1=", "k2=", "k3=","proportion of C0 in pool 1=", "Proportion of C0 in pool 2="),Fit$par[1:4]))
   plot(complete, ylim=c(0,1.2*max(complete[,2])))

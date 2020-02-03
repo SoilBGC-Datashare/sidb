@@ -10,7 +10,7 @@
 #' @import stringr
 #' @examples
 #' db <- loadEntries(path="~/sidb/data/")
-#' sidb.flatter <- flatterSIDB(db)
+#' sidb.flatter <- flatterSIDb(db)
 flatterSIDb <- function(database) {
 
   # timeseries: make list with each unique timeseries as its own 2-col dataframe (time, response)

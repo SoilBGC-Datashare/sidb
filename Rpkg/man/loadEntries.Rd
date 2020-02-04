@@ -4,10 +4,10 @@
 \alias{loadEntries}
 \title{Load entries of the sidb}
 \usage{
-loadEntries(path = "~/sidb/data/")
+loadEntries(path)
 }
 \arguments{
-\item{path}{character string with the path where isdb is stored}
+\item{path}{character string with the path where sidb is stored}
 }
 \value{
 R list with all entries
@@ -16,5 +16,7 @@ R list with all entries
 Load entries of the sidb
 }
 \examples{
-sidb=loadEntries()
+\dontrun{
+sidb=loadEntries(path="~/sidb/data/")  # Assuming you downloaded the sidb repository in your home directory
+}
 }

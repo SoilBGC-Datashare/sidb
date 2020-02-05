@@ -18,6 +18,5 @@ R list with two elements, linked by shared column "ID":\cr
 Flattens SIDb database object for easier querying
 }
 \examples{
-db <- loadEntries(path="~/sidb/data/")
-sidb.flatter <- flatterSIDb(db)
+sidb.flatter <- flatterSIDb(sidb)
 }

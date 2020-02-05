@@ -5,7 +5,7 @@ Authors@R: person("Carlos", "Sierra", email = "csierra@bgc-jena.mpg.de", role = 
 Author: Carlos Sierra [aut, cre]
 Maintainer: Carlos Sierra <csierra@bgc-jena.mpg.de>
 Description: A set of functions to load and analyze the soil incubation database.
-Depends: R (>= 3.4.0)
+Depends: R (>= 3.6.0)
 License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true

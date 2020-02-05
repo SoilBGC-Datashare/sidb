@@ -18,7 +18,8 @@ A data.frame with the latitude and longitude of sites from the database
 Reports what fields are missing from an entry in relation to a template
 }
 \examples{
-database=loadEntries()
+\dontrun{
 template=yaml::yaml.load_file(input="~/sidb/data/template_metadata.yaml")
-missingFields(entry=database[[1]], template = template)
+missingFields(entry=sidb[[1]], template = template)
+}
 }

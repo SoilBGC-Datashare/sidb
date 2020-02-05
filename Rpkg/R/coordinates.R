@@ -4,7 +4,6 @@
 #' @return A data.frame with the longitude and latitude of sites from the database
 #' @export
 #' @examples
-#' sidb=loadEntries(path="~/sidb/data/")
 #' coor=coordinates(database=sidb)
 coordinates <- function(database) {
   long=lapply(database, FUN=function(x){x$siteInfo$coordinates$longitude})

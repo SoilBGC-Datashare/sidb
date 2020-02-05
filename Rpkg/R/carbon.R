@@ -4,7 +4,6 @@
 #' @return A data.frame with the carbon content and the units of the soil samples from the database
 #' @export
 #' @examples
-#' sidb=loadEntries(path="~/sidb/data/")
 #' C=carbon(database=sidb)
 carbon= function(database){
   mean=lapply(database, FUN=function(x){x$initConditions$carbonMean})

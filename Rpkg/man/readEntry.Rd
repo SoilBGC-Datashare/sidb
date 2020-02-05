@@ -4,7 +4,7 @@
 \alias{readEntry}
 \title{Read single entry of the sidb}
 \usage{
-readEntry(path = "~/sidb/data/", entryName)
+readEntry(path, entryName)
 }
 \arguments{
 \item{path}{character string with the path where isdb is stored}
@@ -18,5 +18,7 @@ R list with the entry
 Read single entry of the sidb
 }
 \examples{
-Andrews2000SBB=readEntry(entryName="Andrews2000SBB")
+\dontrun{
+Andrews2000SBB=readEntry(path="~/sidb/data/", entryName="Andrews2000SBB")
+}
 }

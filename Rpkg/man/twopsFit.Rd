@@ -20,8 +20,7 @@ R list with an FME model object, a SoilR model object, and the AIC value
 Fits a two pool model with series structure to a time-series
 }
 \examples{
-db=loadEntries(path="~/sidb/data/")
-incubation=db[["Crow2019a"]]
+incubation=sidb[["Crow2019a"]]
 b=twopsFit(timeSeries = incubation$timeSeries[,c(1,79)],
 initialCarbon=incubation$initConditions[78,"carbonMean"]*10000,
 inipars=c(0.005, 0.00001, 0.1, 0.01))

@@ -5,9 +5,10 @@
 #' @return A data.frame with the latitude and longitude of sites from the database
 #' @export
 #' @examples
-#' database=loadEntries()
+#' \dontrun{
 #' template=yaml::yaml.load_file(input="~/sidb/data/template_metadata.yaml")
-#' missingFields(entry=database[[1]], template = template)
+#' missingFields(entry=sidb[[1]], template = template)
+#' }
 
 missingFields=function(entry, template){
   l1=names(template) %in% names(entry)[-(11:12)]

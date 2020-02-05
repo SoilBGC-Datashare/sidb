@@ -1,6 +1,6 @@
 library(testthat)
 library(sidb)
 
-path_to_data="../data/"
+path_to_data="~/sidb/data/"
 test_dir("testthat")
 

@@ -18,6 +18,5 @@ A vector with all values of the treatment from the database
 Creates an aggregated vector with a specific laboratory treatment
 }
 \examples{
-sidb=loadEntries(path="~/sidb/data/")
 temperature=laboratoryTreatment(database=sidb, treatment="temperature")
 }

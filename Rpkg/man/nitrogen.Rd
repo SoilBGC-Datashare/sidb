@@ -16,6 +16,5 @@ A data.frame with the nitrogen content and the units of the soil samples from th
 Creates a data frame with the nitrogen content in soil samples
 }
 \examples{
-sidb=loadEntries(path="~/sidb/data/")
 N=nitrogen(database=sidb)
 }

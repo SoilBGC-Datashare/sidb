@@ -1,5 +1,4 @@
 context("Template Structure")
-library(sidb)
 
 test_that("all entries from the database can be read", {
   expect_silent(loadEntries(path=path_to_data))

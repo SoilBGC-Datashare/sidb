@@ -2,13 +2,13 @@ context("Template Structure")
 library(sidb)
 
 test_that("all entries from the database can be read", {
-  expect_silent(loadEntries())
+  expect_silent(loadEntries(path=path_to_data))
 })
 
-database<-loadEntries()
+database<-loadEntries(path=path_to_data)
 
 test_that("entry names correspond to metadata template", {
-  template=yaml::yaml.load_file(input="~/sidb/data/template_metadata.yaml")
+  template=yaml::yaml.load_file(input=paste(path_to_data, "template_metadata.yaml", sep=""))
   for(i in 1:length(database)){
     entry=database[[i]]
     expect_equal(names(entry)[-(12:13)],names(template))

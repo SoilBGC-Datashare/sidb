@@ -20,8 +20,10 @@ R list with an FME model object, a SoilR model object, and the AIC value
 Fits a three pool model with parallel structure to a time-series
 }
 \examples{
+\donttest{
 incubation=sidb[["Crow2019a"]]
 a=threeppFit(timeSeries = incubation$timeSeries[,c(1,79)],
 initialCarbon=incubation$initConditions[78,"carbonMean"]*10000,
 inipars = c(0.05, 0.01, 0.001, 0.1, 0.1))
+}
 }

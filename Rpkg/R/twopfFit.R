@@ -9,10 +9,12 @@
 #' @import graphics
 #' @importFrom stats complete.cases
 #' @examples
+#' \donttest{
 #' incubation=sidb[["Crow2019a"]]
 #' b=twopfFit(timeSeries = incubation$timeSeries[,c(1,79)],
 #' initialCarbon=incubation$initConditions[78,"carbonMean"]*10000,
 #' inipars=c(0.005, 0.00001, 0.1, 0.01, 0.01))
+#' }
 twopfFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.5, 0.3)){
 #  complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=cumsum(timeSeries[complete.cases(timeSeries),2]))
   complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=timeSeries[complete.cases(timeSeries),2])

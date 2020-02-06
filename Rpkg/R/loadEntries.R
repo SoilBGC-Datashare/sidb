@@ -5,7 +5,8 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' sidb=loadEntries(path="~/sidb/data/")  # Assuming you downloaded the sidb repository in your home directory
+#' sidb=loadEntries(path="~/sidb/data/")  # Assuming you downloaded 
+#'                     # the sidb repository in your home directory
 #' }
 loadEntries <- function(path) {
   entryNames=list.dirs(path, full.names=FALSE, recursive=FALSE)

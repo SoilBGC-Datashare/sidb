@@ -7,7 +7,7 @@ cache: packages
 before_install:
   - cd Rpkg/
 
-r_check_args: 
-  - --no-tests
-  - --no-examples
+#r_check_args: 
+#  - --no-tests
+#  - --no-examples
 

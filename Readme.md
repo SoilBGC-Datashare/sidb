@@ -18,7 +18,7 @@ This folder contains an R package that can load entries from the database. To in
 
 ```R
 install.packages("devtools")
-devtools::install_github('SoilBGC-Datashare/sidb/Rpkg')
+devtools::install_github('SoilBGC-Datashare/sidb/Rpkg', build_vignettes = TRUE)
 ```
 
 ### Scripts

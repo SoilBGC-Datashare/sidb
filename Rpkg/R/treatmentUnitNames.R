@@ -1,6 +1,7 @@
 #' Returns names of units associated with specified treatment
 #'
 #' @param database a list with the SIDb structure
+#' @param treatment character vector of the treatment of interest. Must be in quotes.
 #' @return list of unique treatment names
 #' @export
 #' @examples

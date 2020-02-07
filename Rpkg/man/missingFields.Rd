@@ -18,8 +18,7 @@ Reports which fields are missing from an entry in relation to a template
 Prints one or more messages to the console if required data are missing
 }
 \examples{
-\dontrun{
-template=yaml::yaml.load_file(input="~/sidb/data/template_metadata.yaml")
+template=yaml::yaml.load_file(input=system.file("extdata",
+ "template_metadata.yaml", package = "sidb"))
 missingFields(entry=sidb[[1]], template = template)
-}
 }

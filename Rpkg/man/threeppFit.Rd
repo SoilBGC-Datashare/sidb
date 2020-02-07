@@ -2,12 +2,12 @@
 % Please edit documentation in R/threeppFit.R
 \name{threeppFit}
 \alias{threeppFit}
-\title{Fits a three pool model with parallel structure to a time-series}
+\title{Fits a three pool model with parallel structure to a time series}
 \usage{
 threeppFit(timeSeries, initialCarbon, inipars = c(1, 0.5, 0.5, 0.5, 0.5))
 }
 \arguments{
-\item{timeSeries}{A time series of respiration values over time}
+\item{timeSeries}{A time series of respiration values}
 
 \item{initialCarbon}{The initial amount of carbon in units that correspond to the time series data}
 
@@ -17,7 +17,7 @@ threeppFit(timeSeries, initialCarbon, inipars = c(1, 0.5, 0.5, 0.5, 0.5))
 R list with an FME model object, a SoilR model object, and the AIC value
 }
 \description{
-Fits a three pool model with parallel structure to a time-series
+Fits a three pool model with parallel structure to a time series
 }
 \examples{
 \donttest{

@@ -16,8 +16,8 @@ R list with all entries with the SIDb structure
 Load SIDb entries
 }
 \examples{
-\dontrun{
-sidb=loadEntries(path="~/sidb/data/")  # Assuming you downloaded
-                    # the sidb repository in your home directory
-}
+# Two entries are included as examples in the sidb R package
+# The path should be changed to a local directory where you store sidb entries
+sidbEx <- loadEntries(path = paste0(system.file("extdata", "sidbEntries",
+ package = "sidb"), "/"))
 }

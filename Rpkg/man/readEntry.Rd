@@ -18,7 +18,6 @@ R list of the entry with the SIDb structure
 Load a single SIDb entry from entry files
 }
 \examples{
-\dontrun{
-Andrews2000SBB=readEntry(path="~/sidb/data/", entryName="Andrews2000SBB")
-}
+Sierra2017BG <- readEntry(path = paste0(system.file("extdata", "sidbEntries",
+ package = "sidb"), "/"), entryName="Sierra2017BG")
 }

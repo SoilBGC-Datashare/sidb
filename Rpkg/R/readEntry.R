@@ -6,7 +6,8 @@
 #' @export
 #' @import yaml
 #' @examples
-#' Sierra2017BG <- readEntry(path=system.file("extdata", "sidbEntries", package = "sidb"), entryName="Sierra2017BG")
+#' Sierra2017BG <- readEntry(path = paste0(system.file("extdata", "sidbEntries",
+#'  package = "sidb"), "/"), entryName="Sierra2017BG")
 
 readEntry <- function(path, entryName) {
 

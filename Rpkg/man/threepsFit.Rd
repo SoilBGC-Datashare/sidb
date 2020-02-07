@@ -2,13 +2,13 @@
 % Please edit documentation in R/threepsFit.R
 \name{threepsFit}
 \alias{threepsFit}
-\title{Fits a three pool model with series structure to a time-series}
+\title{Fits a three pool model with series structure to a time series}
 \usage{
 threepsFit(timeSeries, initialCarbon, inipars = c(1, 0.5, 0.5, 0.5, 0.5,
   0.5, 0.5))
 }
 \arguments{
-\item{timeSeries}{A time series of respiration values over time}
+\item{timeSeries}{A time series of respiration values}
 
 \item{initialCarbon}{The initial amount of carbon in units that correspond to the time series data}
 
@@ -18,7 +18,7 @@ threepsFit(timeSeries, initialCarbon, inipars = c(1, 0.5, 0.5, 0.5, 0.5,
 R list with an FME model object, a SoilR model object, and the AIC value
 }
 \description{
-Fits a three pool model with series structure to a time-series
+Fits a three pool model with series structure to a time series
 }
 \examples{
 \donttest{

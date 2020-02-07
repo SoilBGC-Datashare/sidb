@@ -7,7 +7,7 @@
 #' @return list of treatment levels for specified treatment
 #' @details Recommended to run the functions \link[sidb]{treatmentNames} and
 #'  \link[sidb]{treatmentUnitNames} first to view possible options for the
-#'  "treatment" and "units" parameters. 
+#'  "treatment" and "units" parameters.
 #' @export
 #' @examples
 #' # return temperature levels from all entries
@@ -40,7 +40,7 @@ treatmentLevels <- function(database, treatment, units=NA) {
 
   # first filter database for units if needed
   if(is.na(units)) {
-    return(sort(unique(c(varTreatLevels(sidb, treatment), incInfoTreatLevels(sidb, treatment)))))
+    return(sort(unique(c(varTreatLevels(database, treatment), incInfoTreatLevels(database, treatment)))))
   } else {
     # filter database by units before running varTreatLevels
     correctUnits <- names(Filter(function(z) is.list(z),

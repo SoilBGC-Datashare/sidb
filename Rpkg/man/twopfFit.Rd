@@ -2,12 +2,12 @@
 % Please edit documentation in R/twopfFit.R
 \name{twopfFit}
 \alias{twopfFit}
-\title{Fits a two pool model with feedback structure to a time-series}
+\title{Fits a two pool model with feedback structure to a time series}
 \usage{
 twopfFit(timeSeries, initialCarbon, inipars = c(1, 0.5, 0.5, 0.5, 0.3))
 }
 \arguments{
-\item{timeSeries}{A time series of respiration values over time}
+\item{timeSeries}{A time series of respiration values}
 
 \item{initialCarbon}{The initial amount of carbon in units that correspond to the time series data}
 
@@ -17,7 +17,7 @@ twopfFit(timeSeries, initialCarbon, inipars = c(1, 0.5, 0.5, 0.5, 0.3))
 R list with an FME model object, a SoilR model object, and the AIC value
 }
 \description{
-Fits a two pool model with feedback structure to a time-series
+Fits a two pool model with feedback structure to a time series
 }
 \examples{
 \donttest{

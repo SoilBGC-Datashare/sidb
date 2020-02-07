@@ -6,7 +6,8 @@
 #' @examples
 #' # Two entries are included as examples in the sidb R package
 #' # The path should be changed to a local directory where you store sidb entries
-#' sidbEx <- loadEntries(path = system.file("extdata", "sidbEntries", package = "sidb"))
+#' sidbEx <- loadEntries(path = paste0(system.file("extdata", "sidbEntries",
+#'  package = "sidb"), "/"))
 
 loadEntries <- function(path) {
   entryNames=list.dirs(path, full.names=FALSE, recursive=FALSE)

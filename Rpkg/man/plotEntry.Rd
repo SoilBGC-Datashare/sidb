@@ -16,5 +16,5 @@ A plot
 Plot individual entries in SIDb
 }
 \examples{
-plotEntry(entry=sidb[["Andrews2000SBB"]])
+plotEntry(entry=sidb[["Arevalo2012"]])
 }

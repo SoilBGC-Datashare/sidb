@@ -1,8 +1,8 @@
-#' Read single entry of the sidb
+#' Load a single SIDb entry from entry files
 #'
-#' @param path character string with the path where isdb is stored
+#' @param path character string with the path where SIDb entry files are stored
 #' @param entryName character string with the name of the entry in the database
-#' @return R list with the entry
+#' @return R list of the entry with the SIDb structure
 #' @export
 #' @import yaml
 #' @examples

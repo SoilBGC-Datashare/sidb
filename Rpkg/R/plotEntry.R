@@ -1,4 +1,4 @@
-#' Plot individual entries of the soil incubation database
+#' Plot individual entries in SIDb
 #'
 #' @param entry character string with the name of the entry to be plotted
 #' @return A plot

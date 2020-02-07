@@ -1,7 +1,7 @@
-#' Creates a data frame with the nitrogen content in soil samples
+#' Creates a data frame with the nitrogen content of soil samples
 #'
-#' @param database A list with the sidb
-#' @return A data.frame with the nitrogen content and the units of the soil samples from the database
+#' @param database A list with the SIDb structure
+#' @return A data frame with the nitrogen content and the units of the soil samples from the database
 #' @export
 #' @examples
 #' N=nitrogen(database=sidb)

@@ -1,6 +1,6 @@
 #' Test whether a time series of CO2 release is cumulative
 #'
-#' @param x A data.frame with only two columns, first column for time and second column for CO2 release. Test is performed on the second column.
+#' @param x A data frame with only two columns, first column for time and second column for CO2 release. Test is performed on the second column.
 #' @return logical
 #' @export
 #' @importFrom utils head read.csv

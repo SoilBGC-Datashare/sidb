@@ -67,4 +67,4 @@ variables: # These describe the columns of your timeSeries.csv file
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: # Units in which this variable is provided if not a factor
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
-          primaryVariableName: # Links variable with associated timeseries data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data
+          primaryVariableName: # Links variable with associated timeseries data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables

@@ -1,8 +1,8 @@
-#' Reports what fields are missing from an entry in relation to a template
+#' Reports which fields are missing from an entry in relation to a template
 #'
-#' @param entry An entry from the sidb database
-#' @param template A template of sidb created from a yaml file
-#' @return A data.frame with the latitude and longitude of sites from the database
+#' @param entry An entry from the SIDb database
+#' @param template A SIDb template in yaml format
+#' @details Prints one or more messages to the console if required data are missing
 #' @export
 #' @examples
 #' \dontrun{

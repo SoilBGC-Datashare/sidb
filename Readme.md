@@ -13,7 +13,7 @@ of CO<sub>2</sub> release.
 ## Structure
 
 ### Data
-This folder contains both data and metadata. For each incubation study there is a [`yaml`](http://yaml.org/) file with metada and a time series data file in `.csv` format. A list of the studies currently in SIDb ("studies_list.csv"), as well as a guide for entering new data ("Readme.md"), an annotated blank template file ("template_metadata.yaml"), and a blank "initConditions.csv" file are also located in this folder.
+This folder contains all the data currently in SIDb. For each incubation study there is a [`yaml`](http://yaml.org/) file with metada and a time series data file in `.csv` format. A list of the studies currently in SIDb ("studies_list.csv"), as well as a guide for entering new data ("Readme.md"), an annotated blank template file ("template_metadata.yaml"), and a blank "initConditions.csv" file are also located in this folder. The data are stored in software agnostic formats (.yaml, .csv) to facilitate data access with your preferred workflow. A pre-compiled version of the database (v1) can be obtained by installing the R package. See the next section for more information.
 
 ### Rpkg
 This folder contains an R package for loading entries from the database as well as tools for data manipulation, querying the database, and generating reports. To install, open R and run:
@@ -24,10 +24,10 @@ devtools::install_github('SoilBGC-Datashare/sidb/Rpkg', build_vignettes = TRUE)
 ```
 
 ### Scripts
-This folder contains R code and other scripts necessary to visualize and analyze the data.
+This folder contains R code and other scripts useful for visualizing and analyzing the data.
 
 ### docs
-Website of the project
+Files for generating the [SIDb website]https://soilbgc-datashare.github.io/sidb/.
 
 ### Out
 This folder contains specific reports of the database generated from scripts in the Scripts folder

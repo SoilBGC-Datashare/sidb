@@ -1,8 +1,10 @@
 Package: sidb
 Title: Soil Incubation Database SIDb
 Version: 0.0.2
-Authors@R: person("Carlos", "Sierra", email = "csierra@bgc-jena.mpg.de", role = c("aut", "cre"))
-Author: Carlos Sierra [aut, cre]
+Authors@R: c(person("Carlos", "Sierra", email = "csierra@bgc-jena.mpg.de", role = c("aut", "cre")),
+             person("Jeffrey", "Beem-Miller", email = "jbeem@bgc-jena.mpg.de", role = c("aut")))
+Author: Carlos Sierra [aut, cre],
+        Jeffrey Beem-Miller [aut]
 Maintainer: Carlos Sierra <csierra@bgc-jena.mpg.de>
 Description: A set of functions to load and analyze the soil incubation database.
 Depends: R (>= 3.6.0)

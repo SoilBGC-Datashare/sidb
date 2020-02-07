@@ -31,7 +31,7 @@ Website of the project
 This folder contains specific reports of the database generated from scripts in the Scripts folder
 
 ### Demo
-This folder contains R markdown files with reproducible code to demonstrate specific data analyses. (Currently out of date). For current examples and tutorials for loading SIDb data in R and working with the data see [vignettes](Rpkg/vignettes/).
+This folder contains R markdown files with reproducible code to demonstrate specific data analyses. (Currently out of date). For current examples and tutorials showing how to load SIDb data in R and work with it see: [vignettes](Rpkg/vignettes/).
 
 ### Tests
 This folder contains tests to guarantee the integrity of the database. Make sure that you can run all tests without errors before contributing to the database.

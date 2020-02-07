@@ -38,7 +38,7 @@ This folder contains tests to guarantee the integrity of the database. Make sure
 
 ## Contribute
 This database is public and everybody is welcome to use it for scientific research. Users are also
-encouraged to contribute their own data and scripts to the dataset. To contribute please send a pull request.
+encouraged to contribute their own data and scripts to the dataset. To contribute please send a pull request. Pull requests will only be accepted if code or data submitted pass our code and data validation tests. Information on how to run these tests yourself can be found here: [QAQC Readme](tests/Readme.md).  
 
 ## How to cite 
 Schädel, C., Beem-Miller, J., Aziz Rad, M., Crow, S. E., Hicks Pries, C., Ernakovich, J., Hoyt, A. M., Plante, A., Stoner, S., Treat, C. C., and Sierra, C. A.: Decomposability of soil organic matter over time: The Soil Incubation Database (SIDb, version 1.0) and guidance for incubation procedures, Earth Syst. Sci. Data Discuss., https://doi.org/10.5194/essd-2019-184, in review, 2019. 

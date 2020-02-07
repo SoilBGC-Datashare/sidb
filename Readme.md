@@ -5,8 +5,8 @@
 
 ## Introduction
 This repository contains all the SIDb data files and source code.
-The database contains information on soil incubation experiments, with emphasis on time series
-of CO<sub>2</sub> release over incubation time.
+The database contains information on laboratory soil incubation experiments, with emphasis on time series
+of CO<sub>2</sub> release.
 
 *Scroll down to learn how to work with SIDb data, contribute new data, properly cite the database, and get to know the inner workings of SIDb...*
 

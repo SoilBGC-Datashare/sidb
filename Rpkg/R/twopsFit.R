@@ -1,6 +1,6 @@
-#' Fits a two pool model with series structure to a time-series
+#' Fits a two pool model with series structure to a time series
 #'
-#' @param timeSeries A time series of respiration values over time
+#' @param timeSeries A time series of respiration values
 #' @param initialCarbon The initial amount of carbon in units that correspond to the time series data
 #' @param inipars vector of parameter values for the initial search of the optimization algorithm
 #' @return R list with an FME model object, a SoilR model object, and the AIC value

@@ -6,9 +6,8 @@
 #' @export
 #' @import yaml
 #' @examples
-#' \dontrun{
-#' Andrews2000SBB=readEntry(path="~/sidb/data/", entryName="Andrews2000SBB")
-#' }
+#' Sierra2017BG <- readEntry(path=system.file("extdata", "sidbEntries", package = "sidb"), entryName="Sierra2017BG")
+
 readEntry <- function(path, entryName) {
 
     entry=yaml::yaml.load_file(input=paste(path,entryName,"/metadata.yaml",sep="")) #,handlers=list("float#fix"=function(x) as.character(x)))

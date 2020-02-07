@@ -7,10 +7,10 @@
 incubationTime(database)
 }
 \arguments{
-\item{database}{A list with the sidb}
+\item{database}{A list with the SIDb structure}
 }
 \value{
-A data.frame of incubation times and their units
+A data frame of incubation times and their units
 }
 \description{
 Returns the incubation time of the entries in the database

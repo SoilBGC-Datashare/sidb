@@ -2,7 +2,7 @@
 % Please edit documentation in R/plotEntry.R
 \name{plotEntry}
 \alias{plotEntry}
-\title{Plot individual entries of the soil incubation database}
+\title{Plot individual entries in SIDb}
 \usage{
 plotEntry(entry)
 }
@@ -13,7 +13,7 @@ plotEntry(entry)
 A plot
 }
 \description{
-Plot individual entries of the soil incubation database
+Plot individual entries in SIDb
 }
 \examples{
 plotEntry(entry=sidb[["Andrews2000SBB"]])

@@ -2,20 +2,20 @@
 % Please edit documentation in R/missingFields.R
 \name{missingFields}
 \alias{missingFields}
-\title{Reports what fields are missing from an entry in relation to a template}
+\title{Reports which fields are missing from an entry in relation to a template}
 \usage{
 missingFields(entry, template)
 }
 \arguments{
-\item{entry}{An entry from the sidb database}
+\item{entry}{An entry from the SIDb database}
 
-\item{template}{A template of sidb created from a yaml file}
-}
-\value{
-A data.frame with the latitude and longitude of sites from the database
+\item{template}{A SIDb template in yaml format}
 }
 \description{
-Reports what fields are missing from an entry in relation to a template
+Reports which fields are missing from an entry in relation to a template
+}
+\details{
+Prints one or more messages to the console if required data are missing
 }
 \examples{
 \dontrun{

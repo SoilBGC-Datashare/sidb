@@ -2,22 +2,22 @@
 % Please edit documentation in R/loadEntries.R
 \name{loadEntries}
 \alias{loadEntries}
-\title{Load entries of the sidb}
+\title{Load SIDb entries}
 \usage{
 loadEntries(path)
 }
 \arguments{
-\item{path}{character string with the path where sidb is stored}
+\item{path}{character string with the path where SIDb entries are stored}
 }
 \value{
-R list with all entries
+R list with all entries with the SIDb structure
 }
 \description{
-Load entries of the sidb
+Load SIDb entries
 }
 \examples{
 \dontrun{
-sidb=loadEntries(path="~/sidb/data/")  # Assuming you downloaded 
+sidb=loadEntries(path="~/sidb/data/")  # Assuming you downloaded
                     # the sidb repository in your home directory
 }
 }

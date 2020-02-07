@@ -11,8 +11,8 @@ flatterSIDb(database)
 }
 \value{
 R list with two elements, linked by shared column "ID":\cr
-1) \emph{timeseries}, a list of unique timeseries, each a 2-column dataframe (time, response)\cr
-2) \emph{vars}, a list of all site, incubation and variables fields flattened into a dataframe for each entry
+1) \emph{timeseries}, a list of unique timeseries, each a 2-column data frame (time, response)\cr
+2) \emph{vars}, a list of all site, incubation and variables fields flattened into a data frame for each entry
 }
 \description{
 Flattens SIDb database object for easier querying

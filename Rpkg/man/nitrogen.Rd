@@ -2,18 +2,18 @@
 % Please edit documentation in R/nitrogen.R
 \name{nitrogen}
 \alias{nitrogen}
-\title{Creates a data frame with the nitrogen content in soil samples}
+\title{Creates a data frame with the nitrogen content of soil samples}
 \usage{
 nitrogen(database)
 }
 \arguments{
-\item{database}{A list with the sidb}
+\item{database}{A list with the SIDb structure}
 }
 \value{
-A data.frame with the nitrogen content and the units of the soil samples from the database
+A data frame with the nitrogen content and the units of the soil samples from the database
 }
 \description{
-Creates a data frame with the nitrogen content in soil samples
+Creates a data frame with the nitrogen content of soil samples
 }
 \examples{
 N=nitrogen(database=sidb)

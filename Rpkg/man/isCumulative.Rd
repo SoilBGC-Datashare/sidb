@@ -7,7 +7,7 @@
 isCumulative(x)
 }
 \arguments{
-\item{x}{A data.frame with only two columns, first column for time and second column for CO2 release. Test is performed on the second column.}
+\item{x}{A data frame with only two columns, first column for time and second column for CO2 release. Test is performed on the second column.}
 }
 \value{
 logical

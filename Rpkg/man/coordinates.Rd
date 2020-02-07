@@ -7,10 +7,10 @@
 coordinates(database)
 }
 \arguments{
-\item{database}{A list with the sidb}
+\item{database}{A list with the SIDb structure}
 }
 \value{
-A data.frame with the longitude and latitude of sites from the database
+A data frame with the longitude and latitude of sites from the database
 }
 \description{
 Creates a data frame with the coordinates of the sites

@@ -7,10 +7,10 @@
 carbon(database)
 }
 \arguments{
-\item{database}{A list with the sidb}
+\item{database}{A list with the SIDb structure}
 }
 \value{
-A data.frame with the carbon content and the units of the soil samples from the database
+A data frame with the carbon content and the units of the soil samples from the database
 }
 \description{
 Creates a data frame with the carbon content in soil samples

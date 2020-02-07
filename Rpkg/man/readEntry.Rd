@@ -2,20 +2,20 @@
 % Please edit documentation in R/readEntry.R
 \name{readEntry}
 \alias{readEntry}
-\title{Read single entry of the sidb}
+\title{Load a single SIDb entry from entry files}
 \usage{
 readEntry(path, entryName)
 }
 \arguments{
-\item{path}{character string with the path where isdb is stored}
+\item{path}{character string with the path where SIDb entry files are stored}
 
 \item{entryName}{character string with the name of the entry in the database}
 }
 \value{
-R list with the entry
+R list of the entry with the SIDb structure
 }
 \description{
-Read single entry of the sidb
+Load a single SIDb entry from entry files
 }
 \examples{
 \dontrun{

@@ -7,12 +7,12 @@
 laboratoryTreatment(database, treatment)
 }
 \arguments{
-\item{database}{A list with the sidb}
+\item{database}{A list with the SIDb structure}
 
-\item{treatment}{A character vector with the treatment to be extracted}
+\item{treatment}{A character vector with the name of the treatment to be extracted}
 }
 \value{
-A vector with all values of the treatment from the database
+A vector with all values of the specified treatment from the database
 }
 \description{
 Creates an aggregated vector with a specific laboratory treatment

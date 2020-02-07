@@ -4,7 +4,7 @@
 #' @return A plot
 #' @export
 #' @examples
-#' plotEntry(entry=sidb[["Andrews2000SBB"]])
+#' plotEntry(entry=sidb[["Arevalo2012"]])
 plotEntry=function(entry){
   x=entry$timeSeries$time
   n=ncol(entry$timeSeries)

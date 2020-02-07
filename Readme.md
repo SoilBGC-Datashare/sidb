@@ -1,17 +1,17 @@
 [![DOI](https://zenodo.org/badge/64746862.svg)](https://zenodo.org/badge/latestdoi/64746862)
 [![Build Status](https://travis-ci.org/SoilBGC-Datashare/sidb.svg?branch=master)](https://travis-ci.org/SoilBGC-Datashare/sidb)
 
-# Soil Incubation Database
+# Soil Incubation Database (SIDb)
 
 ## Introduction
-This repository contains all data files and source code of the Soil Incubation Database.
+This repository contains all the SIDb data files and source code.
 The database contains information on soil incubation experiments, with emphasis on time series
 of CO<sub>2</sub> release over incubation time.
 
 ## Structure
 
 ### Data
-This folder contains both data and metadata. For each incubation study there is a [`yaml`](http://yaml.org/) file with metada and a time series data file in `.csv` format. A list of the studies currently in SIDB ("studies_list.csv"), as well as a guide for entering new data ("Readme.md"), an annotated blank template file ("template_metadata.yaml"), and a blank "initConditions.csv" file are also located in this folder.
+This folder contains both data and metadata. For each incubation study there is a [`yaml`](http://yaml.org/) file with metada and a time series data file in `.csv` format. A list of the studies currently in SIDb ("studies_list.csv"), as well as a guide for entering new data ("Readme.md"), an annotated blank template file ("template_metadata.yaml"), and a blank "initConditions.csv" file are also located in this folder.
 
 ### Rpkg
 This folder contains an R package for loading entries from the database as well as tools for data manipulation, querying the database, and generating reports. To install, open R and run:
@@ -31,7 +31,7 @@ Website of the project
 This folder contains specific reports of the database generated from scripts in the Scripts folder
 
 ### Demo
-This folder contains R markdown files with reproducible code to demonstrate specific data analyses.
+This folder contains R markdown files with reproducible code to demonstrate specific data analyses. (Currently out of date). For current examples and tutorials for loading SIDb data in R and working with the data see [vignettes](Rpkg/vignettes/).
 
 ### Tests
 This folder contains tests to guarantee the integrity of the database. Make sure that you can run all tests without errors before contributing to the database.

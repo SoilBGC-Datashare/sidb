@@ -29,7 +29,7 @@ devtools::install_github('SoilBGC-Datashare/sidb/Rpkg', build_vignettes = TRUE)
 This folder contains R code and other scripts useful for visualizing and analyzing the data.
 
 ### docs
-Files for generating the [SIDb website]https://soilbgc-datashare.github.io/sidb/.
+Files for generating the [SIDb website](https://soilbgc-datashare.github.io/sidb/).
 
 ### Out
 This folder contains specific reports of the database generated from scripts in the Scripts folder

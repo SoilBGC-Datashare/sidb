@@ -11,7 +11,7 @@ of CO<sub>2</sub> release over incubation time.
 ## Structure
 
 ### Data
-This folder contains both data and metadata. For each incubation study there is a [`yaml`](http://yaml.org/) file with metada and a time series data file in `.csv` format. A guide for entering new data into SIDb is also located in this folder ("Readme.md"), as well as an annotated blank template file ("template_metadata.yaml"), a blank "initConditions.csv" file, and a list of the studies currently in SIDB ("studies_list.csv").
+This folder contains both data and metadata. For each incubation study there is a [`yaml`](http://yaml.org/) file with metada and a time series data file in `.csv` format. A list of the studies currently in SIDB ("studies_list.csv"), a guide for entering new data ("Readme.md"), an annotated blank template file ("template_metadata.yaml"), and a blank "initConditions.csv" file are also located in this folder.
 
 ### Rpkg
 This folder contains an R package for loading entries from the database as well as tools for data manipulation, querying the database, and generating reports. To install, open R and run:

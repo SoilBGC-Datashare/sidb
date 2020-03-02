@@ -111,4 +111,4 @@ The number of variables `V1`, `V2`, etc. in this field must correspond to the nu
 The `timeSeries.csv` file for each entry in the database contains the time series of incubation data in a comma separated values format. The first column of the data file must contain the times at which CO<sub>2</sub> measurements were made. Subsequent columns contain the respiration (or associated) measurements. Note that in order to link the correct time series data to the correct `variable` it is essential that the `name` subfields of the `variables` field match the column names of the associated `timeSeries.csv` file exactly.
 
 ## Initial conditions
-Additional data on the site conditions where the soil samples were collected can be given in the `initConditions.csv` file.
+Additional data on the site or soil conditions where the soil samples were collected can be given in the `initConditions.csv` file.

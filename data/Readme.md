@@ -60,12 +60,10 @@ incubationInfo:
           surfaceAtm: # blank if zero is organic/mineral interface, yes if zero is atmospheric interface
           horizon: # soil horizon designation
         temperature: # Temperature at which incubations were performed in Celsius. If temperature is an experimental treatment with multiple levels leave blank and specify in variables section
+        # Use 'moisture' as a template for any additional treatments imposed. For example, if amendments were added for a priming experiment, the treatmentName 'moisture' would be replaced with 'amendment', 'value' could be set to 'glucose' (or whatever amendment was added), and 'units' could be set to 'mgC/g soilC'.
         moisture: # Moisture conditions at which incubations were performed.
           value: # If moisture is an experimental treatment with multiple levels leave blank and specify in variables section
           units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
-        treatmentName: # This is a placeholder for any additional treatments performed, and follows the same pattern as 'moisture', above.
-          value: # specify value for treatment, e.g. `glucose` for priming experiment. If treatment has multiple levels leave blank and specify in variables section
-          units: # specify units for treatment value, e.g. 'mgC/g soilC' for glucose
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: # Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured and specify in variables section
         replicates:
@@ -85,9 +83,9 @@ The `incubationInfo` field has a subfield with a description `desc` on how the i
 
 Critical experimental conditions such as temperature and moisture are reported here, as are any additional treatments imposed, e.g. amendments for priming experiments, anaerobic conditions (`anaerobic`), etc. Other key subfields of the `incubationInfo` field include `samplePreparation` and `preincubationTime` for documenting handling of the samples prior to the main incubation experiment, and the `depthInfo` subfield for reporting the sampling depth from which soils were collected.
 
-The `treatmentName` subfield is a placeholder for any additional incubation treatments imposed. Replace `treatmentName` with the name of the treatment (in camel case), specify the value of the treatment imposed under the `value` subfield, and enter the units corresponding to the treatment value under `units`.
+Use the `moisture` subfield as a template for any additional incubation treatments imposed. Replace `moisture` with the name of the treatment (in camelCase if multiple words), specify the value of the treatment imposed under the `value` subfield, and enter the units corresponding to the treatment value under `units`. For example, if a priming experiment was conducted with added amendments, `moisture` could be replaced by `amendment`, and the specific amendment would be listed in the `value` field (e.g. glucose, cellulose, etc.), while the units of the amendment would be specified under `units`, e.g. mg amendment C/g soilC.
 
-If any of the incubation treatments imposed have multiple levels, e.g. different temperatures, moisture levels, etc., the treatment levels (e.g. moisture `value`s) need to be specified explicitly in the `variables` field (described below) in order for the treatments to be linked to the correct data in the time series file (timeSeries.csv). Note that additional treatments, e.g. amendments, etc., with multiple treatment levels should still be listed (replacing the `treatmentName` placeholder) and `units` specified, but the `value` field will be left blank.
+If any of the incubation treatments imposed have multiple levels, e.g. different temperatures, moisture levels, amendments, etc., the treatment levels (e.g. `value`s) need to be specified explicitly in the `variables` field (described below) in order for the treatments to be linked to the correct data in the time series file (`timeSeries.csv`). Note that the main subheading for additional treatments with multiple treatment levels should still be listed (e.g. list `amendment` if multiple amendments were added) and the treatment `units` specified, but as with multiple `moisture` levels, the `value` field will be left blank.
 
 The last field that must be added is the `variables`. This field contains, in order of appearance, the variables in the `timeSeries.csv` file.
 

@@ -38,12 +38,10 @@ incubationInfo:
           surfaceAtm: # blank if zero is organic/mineral interface, yes if zero is atmospheric interface
           horizon: # soil horizon designation
         temperature: # Temperature at which incubations were performed in Celsius. If temperature is an experimental treatment with multiple levels leave blank and specify in variables section
+        # Use 'moisture' as a template for any additional treatments imposed. For example, if amendments were added for a priming experiment, the treatmentName 'moisture' would be replaced with 'amendment', 'value' could be set to 'glucose' (or whatever amendment was added), and 'units' could be set to 'mgC/g soilC'.
         moisture: # Moisture conditions at which incubations were performed.
           value: # If moisture is an experimental treatment with multiple levels leave blank and specify in variables section
           units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
-        treatmentName: # This is a placeholder for any additional treatments performed, and follows the same pattern as 'moisture', above.
-          value: # specify value for treatment, e.g. `glucose` for priming experiment. If treatment has multiple levels leave blank and specify in variables section
-          units: # specify units for treatment value, e.g. 'mgC/g soilC' for glucose
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: # Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured and specify in variables section
         replicates:

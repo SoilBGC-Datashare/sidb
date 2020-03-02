@@ -1,10 +1,10 @@
-citationKey: # Unique identifier in the format: LastnameYearJOURNAL (journal is abbreviated)
+citationKey: # Unique identifier in the format: LastnameYearJOURNAL (journal may be abbreviated)
 doi:  # DOI of the publication where data is published
-entryAuthor: # First and Last name of the person who enters the data in this file
-entryCreationDate: # Date when the data is entered in this file. Format: YYYY-MM-DD
-contactName:  # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
+entryAuthor: # First and last name of the person who entered the data in this file
+entryCreationDate: # Date when the data was entered in this file. Format: YYYY-MM-DD
+contactName:  # First and last name of contact person (may be the principal investigator supervising the entryAuthor)
 contactEmail: # Email of the contact person
-entryNote:  # Any notes or comments related to this entry. # Any notes or comments related to this entry.
+entryNote: # Any notes or comments related to this entry.
 study:  # Overall study description
 
 siteInfo:
@@ -12,16 +12,16 @@ siteInfo:
 # These fields should be arrays of equal length to site array
         coordinates:
           latitude: # Latitude in decimal units (check for negative that denotes southern hemisphere)
-          longitude: # Longitude in decimal units (check for negative that denotes west)
+          longitude: # Longitude in decimal units (check for negative that denotes western hemisphere)
         country: # Name of country where site was conducted
         MAT: # Mean annual temperature in degrees Celsius
         MAP: # Mean annual precipitation in mm
-        elevation: # Elevation of study site in meters above sea levels
+        elevation: # Elevation of study site in meters above sea level
         landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
         vegNote: # Additional details about land cover such as species or functional type composition
         soilTaxonomy:
           soilOrder: # Soil order according to the classification system described below
-          soilFamily: # Soil family description (e.g., Eutric of Eutric Cambisol)
+          soilFamily: # Soil family description (ex. 'Eutric' for a Eutric Cambisol)
           soilSeries: # Soil series according to the classification system described below
           classificationSystem: # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
         permafrost:
@@ -30,17 +30,20 @@ siteInfo:
 
 incubationInfo:
         incDesc: # Short description of the incubation setup and main treatments
-# These fields should all be one dimensional arrays. Values for experimental variables with multiple treatment levels should be entered in the variables section, and left blank here
-        depthInfo: # Soil depth in cm. If only one depth listed instead of range, enter as top and bottom, 0 is organic/mineral interface. If organic layer, enter 0 as top and bottom. If multiple depths, leave blank and specify in variables section
+# These fields should all be one dimensional arrays. Values for experimental variables with multiple treatment levels should be entered in the variables section and left blank here
+        depthInfo: # Soil depth in cm. If only one depth listed instead of range, enter as midDepth. By default 0 is defined as organic/mineral interface. If reported otherwise enter "yes" under the surfaceAtm field. If multiple depths analyzed leave blank and specify depths in variables section.
           top:
           bottom:
           midDepth:
-          surfaceAtm: # blank if zero is organic/mineral interface, yes if surface is atmospheric interface
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if zero is atmospheric interface
           horizon: # soil horizon designation
-        temperature: # Temperature at which incubations were performed in Celsius. If temperature is an experimental treatment with multiple levels, leave blank and specify in variables section
-        moisture: # Use moisture as a template for any additional treatments performed, i.e. report treatmentName, value, and units (if applicable)
-          value: # Overall moisture at which incubations were performed. If moisture is an experimental treatment with multiple levels, leave blank and specify in variables section
+        temperature: # Temperature at which incubations were performed in Celsius. If temperature is an experimental treatment with multiple levels leave blank and specify in variables section
+        moisture: # Moisture conditions at which incubations were performed.
+          value: # If moisture is an experimental treatment with multiple levels leave blank and specify in variables section
           units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+        treatmentName: # This is a placeholder for any additional treatments performed, and follows the same pattern as 'moisture', above.
+          value: # specify value for treatment, e.g. `glucose` for priming experiment. If treatment has multiple levels leave blank and specify in variables section
+          units: # specify units for treatment value, e.g. 'mgC/g soilC' for glucose
         anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
         gasMeasured: # Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured and specify in variables section
         replicates:
@@ -53,18 +56,18 @@ incubationInfo:
           sieving: # no, or mesh size in mm
           rootPicking: # yes or no
           rockPicking: # yes or no
-        gasAnalyzer: # Gas analysis equipment for CO2 measurements
+        gasAnalyzer: # Gas analysis equipment used
 
 variables: # These describe the columns of your timeSeries.csv file
         V1: # column 1
-          name: # Name of first variable in the accompanying csv data file. First variable should be time
-          units: # Units of first variable in accompanying file. Usually "d" for days
+          name: # Name of first variable in the accompanying timeSeries.csv data file. The first variable must always be time.
+          units: # Time units used in accompanying file. Usually "d" for days
         V2: # column 2
           name: # Name of second variable in accompanying file
           varDesc: # Description of the variable
           site: # Site where the incubated sample was collected
-          experimentalTreatment: # 'experimentalTreatment' here is a place holder. Replace this word by any of the listed variables in incubationInfo above (temperature, moisture, etc.) and type value or level after colon
+          experimentalTreatment: # 'experimentalTreatment' here is a place holder for treatments with multiple levels. Replace this word by any of the listed variables in incubationInfo above (temperature, moisture, etc.) and type treatment value (level) after colon. Note that units should be specified in the incubationInfo field above.
           gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
-          units: # Units in which this variable is provided if not a factor
+          units: # Units for 'gasMeasured' field
           statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
-          primaryVariableName: # Links variable with associated timeseries data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables

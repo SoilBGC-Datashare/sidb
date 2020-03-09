@@ -1,5 +1,5 @@
 # SIDb R Package
-This package is an inteface to read and process data from the Soil Incubation Database SIDb. 
+This package is an interface to read and process data from the Soil Incubation Database SIDb. 
 The package can be installed directly from CRAN as
 ```R
 install.packages("sidb")

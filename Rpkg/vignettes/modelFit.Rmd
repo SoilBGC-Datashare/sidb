@@ -55,8 +55,8 @@ legend("topright", c("Total","Fast", "Intermediate", "Slow"), lty=1, col=c(1,4:2
 par(mfrow=c(1,1))
 ```
 
-Thre three-pool series model shows the better fit to the data according to the sum squared residual and the mean squared error statistics.
-However, according to the Akaike information criterion (AIC), the two-pool model with parallel structure is the most parsimoniuos model (lowest AIC), which is a compromise between number of parameters to fit and goodnes of fit. 
+The three-pool series model shows the better fit to the data according to the sum squared residual and the mean squared error statistics.
+However, according to the Akaike information criterion (AIC), the two-pool model with parallel structure is the most parsimoniouos model (lowest AIC), which is a compromise between number of parameters to fit and goodness of fit. 
 
 The table below shows a summary statistics from the parameter optimization procedure. npar: number of optimized parameters, SSR: sum of squared residuals, MSR: mean sum of squared residuals, AIC: Akaike information criterion. 
 
@@ -66,6 +66,6 @@ row.names(statistics)<-modelNames
 knitr::kable(statistics)
 ```
 
-SIDB offers the opportunity to perform parameter identification analyses for a large number of incubations, and to identify the effects of environmnetal variables on soil decomposition.
+SIDB offers the opportunity to perform parameter identification analyses for a large number of incubations, and to identify the effects of environmental variables on soil decomposition.
 
 

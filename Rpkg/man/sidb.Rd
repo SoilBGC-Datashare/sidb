@@ -17,6 +17,6 @@
 sidb
 }
 \description{
-A dataset containing the time series of respired carbon from incubation experiments and associeted metadata
+A dataset containing the time series of respired carbon from incubation experiments and associated metadata
 }
 \keyword{datasets}

@@ -7,10 +7,12 @@
 #' @export
 #' @import FME
 #' @examples
+#' \donttest{
 #' incubation=sidb[["Crow2019a"]]
 #' a=twoppFit(timeSeries = incubation$timeSeries[,c(1,79)],
 #' initialCarbon=incubation$initConditions[78,"carbonMean"]*10000,
 #' inipars=c(0.01, 0.001, 0.1))
+#' }
 twoppFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5)){
 #  complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=cumsum(timeSeries[complete.cases(timeSeries),2]))
   complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=timeSeries[complete.cases(timeSeries),2])

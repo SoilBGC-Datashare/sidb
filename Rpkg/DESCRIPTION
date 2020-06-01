@@ -8,7 +8,7 @@ Author: Carlos Sierra [aut, cre],
 Maintainer: Carlos Sierra <csierra@bgc-jena.mpg.de>
 Description: A set of functions to load and analyze the soil incubation database, which is a database of time series of soil incubation. The package can read the raw data and metadata, and load entries in the R environment. 
 Depends: R (>= 3.6.0)
-License: GPL (>=2)
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: yaml, FME, SoilR, dplyr, stringr, rlang

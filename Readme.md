@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/64746862.svg)](https://zenodo.org/badge/latestdoi/64746862)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3871263.svg)](https://doi.org/10.5281/zenodo.3871263)
 [![Build Status](https://travis-ci.org/SoilBGC-Datashare/sidb.svg?branch=master)](https://travis-ci.org/SoilBGC-Datashare/sidb)
 
 # Soil Incubation Database (SIDb)

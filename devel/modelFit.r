@@ -44,7 +44,7 @@ str(incubation)
 
 head(incubation$timeSeries, 2)
 
-str(incubation$initConditions)
+summary(incubation$initConditions)
 
 
 ## M1=twoppFit(timeSeries = incubation$timeSeries[,c(1,79)], initialCarbon=incubation$initConditions[78,"carbonMean"]*10000, inipars=c(0.01, 0.001, 0.1))

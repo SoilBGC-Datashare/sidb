@@ -44,7 +44,7 @@ incubation <- csvAll[["Crow2019a"]]
 incubation$initConditions[1,1]
 
 condf <- function(x){
-    mod <- tryCatch(twoppFit(timeSeries = incubation$timeSeries[,c(1,79)],
+    mod <- tryCatch(twoppFit(timeSeries = incubation$timeSeries[,c(1,5)],
                     initialCarbon=incubation$initConditions[x,"carbonMean"]*10000,
                     inipars=c(0.01, 0.001, 0.1))$AIC, error = function(e) NA)
     nm <- incubation$initConditions[x,1]
@@ -54,7 +54,7 @@ condf <- function(x){
 tmp <- Map(function(x)
            tryCatch(condf(x), error = function(e) NA), 1:nrow(incubation$initConditions))
 aics <- do.call('rbind', tmp)
-
+aics
 
 
 

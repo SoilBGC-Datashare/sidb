@@ -38,21 +38,52 @@ csvAll <- Map(function(x)
     csvImp(x), pathentry) 
 names(csvAll) <- entryNames
 
-
 incubation <- csvAll[["Crow2019a"]]
 
-incubation$initConditions[1,1]
+rfit <- function(y){
+condf <- function(x){
+    mod <- tryCatch(twoppFit(timeSeries = incubation$timeSeries[,c(1,y)],
+                    initialCarbon=incubation$initConditions[x,"carbonMean"]*10000,
+                    inipars=c(0.01, 0.001, 0.1))$AIC, error = function(e) NA)
+    nm <- incubation$initConditions[x,1]
+    dtf <- data.frame(cond = nm, AIC = mod)
+    return(dtf)}
+tmp <- Map(function(x)
+    tryCatch(condf(x), error = function(e) NA),
+    1:nrow(incubation$initConditions))
+aics <- do.call('rbind', tmp)
+return(aics)}
+
+bs <- Map(function(y)
+          rfit(y), 2:ncol(incubation$timeSeries))
+
+
+nmst <- c('cond',paste0(names(incubation$timeSeries)[-1L],'_AIC'))
+
+system.time(
+mrg <- Reduce(function(...)merge(..., by = 'cond'), bs)
+)
+
+
+head(mrg,3)
+
+
+
+bsb <- do.call('cbind', bs)
+head(bsb)
+
+length(bs)
 
 condf <- function(x){
     mod <- tryCatch(twoppFit(timeSeries = incubation$timeSeries[,c(1,5)],
                     initialCarbon=incubation$initConditions[x,"carbonMean"]*10000,
                     inipars=c(0.01, 0.001, 0.1))$AIC, error = function(e) NA)
     nm <- incubation$initConditions[x,1]
-## return(c(nm,mod))
     dtf <- data.frame(cond = nm, AIC = mod)
     return(dtf)}
 tmp <- Map(function(x)
-           tryCatch(condf(x), error = function(e) NA), 1:nrow(incubation$initConditions))
+    tryCatch(condf(x), error = function(e) NA),
+    1:nrow(incubation$initConditions))
 aics <- do.call('rbind', tmp)
 aics
 

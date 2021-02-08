@@ -64,15 +64,20 @@ system.time(
 mrg <- Reduce(function(...)merge(..., by = 'cond'), bs)
 )
 
-
+colnames(mrg) <- nmst
 head(mrg,3)
 
+write.csv(mrg, 'Crow2019a_AIC.csv')
+
+getwd()
 
 
-bsb <- do.call('cbind', bs)
-head(bsb)
 
-length(bs)
+
+
+
+
+
 
 condf <- function(x){
     mod <- tryCatch(twoppFit(timeSeries = incubation$timeSeries[,c(1,5)],

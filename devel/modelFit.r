@@ -54,6 +54,10 @@ tmp <- Map(function(x)
 aics <- do.call('rbind', tmp)
 return(aics)}
 
+## mean-transit time
+## transit-time function
+
+
 bs <- Map(function(y)
           rfit(y), 2:ncol(incubation$timeSeries))
 
@@ -102,7 +106,10 @@ x <- incubation
 do.call('twoppFit', list(timeSeries = x$timeSeries[,c(1,ncol(incubation$timeSeries))],
                          initialCarbon=x$initConditions[78,"carbonMean"]*10000, inipars=c(0.01, 0.001, 0.1)))
 
+?SoilR
 
+
+oneppFit
 M1=twoppFit(timeSeries = incubation$timeSeries[,c(1,79)], initialCarbon=incubation$initConditions[78,"carbonMean"]*10000, inipars=c(0.01, 0.001, 0.1))
 M2=twopsFit(timeSeries = incubation$timeSeries[,c(1,79)], initialCarbon=incubation$initConditions[78,"carbonMean"]*10000, inipars=c(0.05, 0.00001, 0.1, 0.01))
 M4=threeppFit(timeSeries = incubation$timeSeries[,c(1,79)], initialCarbon=incubation$initConditions[78,"carbonMean"]*10000, inipars = c(0.05, 0.01, 0.001, 0.1, 0.1))

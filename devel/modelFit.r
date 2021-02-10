@@ -54,10 +54,8 @@ tmp <- Map(function(x)
 aics <- do.call('rbind', tmp)
 return(aics)}
 
-
 bs <- Map(function(y)
           rfit(y), 2:ncol(incubation$timeSeries))
-
 
 nmst <- c('cond',paste0(names(incubation$timeSeries)[-1L],'_AIC'))
 
@@ -65,12 +63,10 @@ system.time(
 mrg <- Reduce(function(...)merge(..., by = 'cond'), bs)
 )
 
-colnames(mrg) <- nmst
-head(mrg,3)
-
-write.csv(mrg, 'Crow2019a_AIC.csv')
-
-getwd()
+## colnames(mrg) <- nmst
+## head(mrg,3)
+## write.csv(mrg, 'Crow2019a_AIC.csv')
+## getwd()
 
 
 

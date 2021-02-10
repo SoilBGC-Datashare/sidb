@@ -69,7 +69,6 @@ mrg <- Reduce(function(...)merge(..., by = 'cond'), bs)
 ## getwd()
 
 
-
 ## notes to work on:
 ## mean-transit time
 ## transit-time function

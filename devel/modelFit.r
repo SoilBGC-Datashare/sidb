@@ -54,9 +54,6 @@ tmp <- Map(function(x)
 aics <- do.call('rbind', tmp)
 return(aics)}
 
-## mean-transit time
-## transit-time function
-
 
 bs <- Map(function(y)
           rfit(y), 2:ncol(incubation$timeSeries))
@@ -77,39 +74,13 @@ getwd()
 
 
 
+## notes to work on:
+## mean-transit time
+## transit-time function
+## oneppFit
 
+## this example ends here <------------------------------------------------------------------
 
-
-
-
-
-condf <- function(x){
-    mod <- tryCatch(twoppFit(timeSeries = incubation$timeSeries[,c(1,5)],
-                    initialCarbon=incubation$initConditions[x,"carbonMean"]*10000,
-                    inipars=c(0.01, 0.001, 0.1))$AIC, error = function(e) NA)
-    nm <- incubation$initConditions[x,1]
-    dtf <- data.frame(cond = nm, AIC = mod)
-    return(dtf)}
-tmp <- Map(function(x)
-    tryCatch(condf(x), error = function(e) NA),
-    1:nrow(incubation$initConditions))
-aics <- do.call('rbind', tmp)
-aics
-
-
-
-tmp <- apply(1:nrow(incubation$initConditions), 1, function(x)tryCatch(condf(x), error = function(e)NULL))
-
-str(csvAll[[2]])
-
-x <- incubation
-do.call('twoppFit', list(timeSeries = x$timeSeries[,c(1,ncol(incubation$timeSeries))],
-                         initialCarbon=x$initConditions[78,"carbonMean"]*10000, inipars=c(0.01, 0.001, 0.1)))
-
-?SoilR
-
-
-oneppFit
 M1=twoppFit(timeSeries = incubation$timeSeries[,c(1,79)], initialCarbon=incubation$initConditions[78,"carbonMean"]*10000, inipars=c(0.01, 0.001, 0.1))
 M2=twopsFit(timeSeries = incubation$timeSeries[,c(1,79)], initialCarbon=incubation$initConditions[78,"carbonMean"]*10000, inipars=c(0.05, 0.00001, 0.1, 0.01))
 M4=threeppFit(timeSeries = incubation$timeSeries[,c(1,79)], initialCarbon=incubation$initConditions[78,"carbonMean"]*10000, inipars = c(0.05, 0.01, 0.001, 0.1, 0.1))

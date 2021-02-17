@@ -20,10 +20,37 @@ library(sidb)
 ## ```{r, include=FALSE}
 ## db=loadEntries(path="~/sidb/data/")
 
-path. <- "/home/wilar/Documents/sidb/data"
-## db=loadEntries(path=path.)
+require('yaml')
+
+path <- "/home/wilar/Documents/sidb/data/"
+load_entries <- loadEntries(path)
+
+db <- load_entries[["Crow2019a"]]
+names(db)
+
+rfit <- function(y, model, inipars.){
+    condf <- function(x, model, inipars){
+        inp <- list(timeSeries = db$'timeSeries'[,c(1,y)],
+                    initialCarbon = db$'initConditions'[x,"carbonMean"]*1E4,
+                    ## inipars = c(0.01, 0.001, 0.1))
+                    inipars = inipars.)
+        ## mod <- tryCatch(do.call('twoppFit', inp),
+        mod <- tryCatch(do.call(model, inp),
+                        error = function(e) return(NA))
+        return(mod)}
+    ic <- Map(function(x)
+        condf(x, model, inipars.), 
+        1:nrow(db$'initConditions'))
+    names(ic) <- db$'initConditions'$'site'
+    return(ic)}
+
+bs <- Map(function(y)
+          rfit(y, model = 'twoppFit', inipars = c(0.01, 0.001, 0.1)), 1)
 
 
+
+
+## <------------------
 entryNames=list.dirs(path., full.names=FALSE, recursive=FALSE)
 pathentry <- paste(path., entryNames, sep = '/')
 

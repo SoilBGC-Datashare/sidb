@@ -13,17 +13,18 @@ path <- "/home/wilar/Documents/sidb/data/"
 load_entries <- loadEntries(path)
 db <- load_entries[["Crow2019a"]]
 
-st <- modelEntry(db, ts.nr = 2:3, mc.cores = 5)
-str(st)
+st <- modelEntry(db, ts.nr = 2:3)
+
+names(st)
 
 
-modelEntry <- function(entry,
+modelEntry <- function(db,
                        ts.nr = 2,
                        model = 'twoppFit',
-                       inipars = c(0.01, 0.001, 0.1),
-                       mc.cores = round(detectCores()*0.5,0)){
-    db <- entry
-    rfit <- function(y, model, inipars.){
+                       inipars = c(0.01, 0.001, 0.1)){
+                       ## mc.cores = round(detectCores()*0.5,0)){
+    ## db <- entry
+    rfit <- function(y, model, inipars){
 ## rfit <- function(y, model, inipars, mc.cores){
     condf <- function(x, model, inipars){
         inp <- list(timeSeries = db$'timeSeries'[,c(1,y)],
@@ -33,21 +34,21 @@ modelEntry <- function(entry,
                         error = function(e) return(NA))
         return(mod)}
     ic <- Map(function(x)
-          condf(x,model, inipars.), 1:nrow(db$'initConditions'))
+          condf(x, model, inipars), 1:nrow(db$'initConditions'))
     ## ic <- parallel::mcmapply(FUN = function(x)
     ##     condf(x, model, inipars),
     ##     x = 1:nrow(db$'initConditions'), SIMPLIFY = FALSE,
     ##     mc.cores = mc.cores)
     names(ic) <- db$'initConditions'$'site'
     return(ic)}
-bs <- parallel::mcmapply(FUN = function(y)
-    ## rfit(y, model = model,inipars = inipars,mc.cores = mc.cores),
-    rfit(y, model = model,inipars = inipars),
-    y = ts.nr, SIMPLIFY = FALSE,
-    mc.cores = mc.cores)
+## bs <- parallel::mcmapply(FUN = function(y)
+##     ## rfit(y, model = model,inipars = inipars,mc.cores = mc.cores),
+##     rfit(y, model = model,inipars = inipars),
+##     y = ts.nr, SIMPLIFY = FALSE,
+##     mc.cores = mc.cores)
+bs <- Map(function(y)
+     rfit(y, model = model,inipars = inipars), ts.nr)
 names(bs) <- ts.nr
-## bs <- Map(function(y)
-##      rfit(y, model = model,inipars = inipars, mc.cores = mc.cores), ts.nr)
 return(bs)}
 
 

@@ -15,7 +15,7 @@ db <- load_entries[["Crow2019a"]]
 
 st <- modelEntry(db, ts.nr = 2:3)
 
-names(st)
+str(st)
 
 
 modelEntry <- function(db,

@@ -4,49 +4,66 @@
 ## date: "6/19/2019"
 ## output: word_document
 ## ---
-
-## ```{r setup, include=FALSE}
-## knitr::opts_chunk$set(echo = TRUE)
 library(SoilR)
 library(sidb)
-## ```
-
-## Fitting time series data to pool models
-## SIDB can be easily integrated with other R packages for further analyses. For instance, it is possible to integrate soil pool modeling from the SoilR package (Sierra et al. 2012) with parameter optimization from the FME package (Soetaert and Petzoldt 2010). We illustrate this functionality with a simple example.
-
-## The entry `Crow2019a` in the database contains a large number of long-term incubations. We selected data from an incubation performed with soil from a native forest in Hawaii, and fitted a set of first order models with two or three pools. Following the procedure described in Sierra et al. (2015), we optimized two- and three-pool models with parallel, series, and feedback connections among them. 
-
-
-## ```{r, include=FALSE}
-## db=loadEntries(path="~/sidb/data/")
-
 require('yaml')
+require('parallel')
 
 path <- "/home/wilar/Documents/sidb/data/"
 load_entries <- loadEntries(path)
-
 db <- load_entries[["Crow2019a"]]
-names(db)
 
-rfit <- function(y, model, inipars.){
+st <- modelEntry(db, ts.nr = 2:3, mc.cores = 5)
+str(st)
+
+
+modelEntry <- function(entry,
+                       ts.nr = 2,
+                       model = 'twoppFit',
+                       inipars = c(0.01, 0.001, 0.1),
+                       mc.cores = round(detectCores()*0.5,0)){
+    db <- entry
+    rfit <- function(y, model, inipars.){
+## rfit <- function(y, model, inipars, mc.cores){
     condf <- function(x, model, inipars){
         inp <- list(timeSeries = db$'timeSeries'[,c(1,y)],
                     initialCarbon = db$'initConditions'[x,"carbonMean"]*1E4,
-                    ## inipars = c(0.01, 0.001, 0.1))
-                    inipars = inipars.)
-        ## mod <- tryCatch(do.call('twoppFit', inp),
+                    inipars = inipars)
         mod <- tryCatch(do.call(model, inp),
                         error = function(e) return(NA))
         return(mod)}
     ic <- Map(function(x)
-        condf(x, model, inipars.), 
-        1:nrow(db$'initConditions'))
+          condf(x,model, inipars.), 1:nrow(db$'initConditions'))
+    ## ic <- parallel::mcmapply(FUN = function(x)
+    ##     condf(x, model, inipars),
+    ##     x = 1:nrow(db$'initConditions'), SIMPLIFY = FALSE,
+    ##     mc.cores = mc.cores)
     names(ic) <- db$'initConditions'$'site'
     return(ic)}
+bs <- parallel::mcmapply(FUN = function(y)
+    ## rfit(y, model = model,inipars = inipars,mc.cores = mc.cores),
+    rfit(y, model = model,inipars = inipars),
+    y = ts.nr, SIMPLIFY = FALSE,
+    mc.cores = mc.cores)
+names(bs) <- ts.nr
+## bs <- Map(function(y)
+##      rfit(y, model = model,inipars = inipars, mc.cores = mc.cores), ts.nr)
+return(bs)}
+
+
+
 
 bs <- Map(function(y)
-          rfit(y, model = 'twoppFit', inipars = c(0.01, 0.001, 0.1)), 1)
+    rfit(y, model = 'twoppFit',
+         inipars = c(0.01, 0.001, 0.1), mc.cores = 8), 2:3)
 
+
+
+
+bs <- Map(function(y)
+          rfit(y, model = 'threeppFit', inipars = c(0.05, 0.01, 0.001, 0.1, 0.1)), 2)
+
+M2=twopsFit(timeSeries = incubation$timeSeries[,c(1,79)], initialCarbon=incubation$initConditions[78,"carbonMean"]*10000, inipars=c(0.05, 0.00001, 0.1, 0.01))
 
 
 
@@ -80,6 +97,11 @@ tmp <- Map(function(x)
     1:nrow(incubation$initConditions))
 aics <- do.call('rbind', tmp)
 return(aics)}
+
+bs <- Map(function(y)
+          rfit(y), 1)
+
+
 
 bs <- Map(function(y)
           rfit(y), 2:ncol(incubation$timeSeries))

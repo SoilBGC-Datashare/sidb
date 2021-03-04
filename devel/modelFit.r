@@ -13,10 +13,66 @@ path <- "/home/wilar/Documents/sidb/data/"
 load_entries <- loadEntries(path)
 db <- load_entries[["Crow2019a"]]
 
+
+tms <- as.list(db$'timeSeries')
+tmc <- as.list(db$'initConditions'[,"carbonMean"]*1E4)
+
+
+split()db$'timeSeries'[2:ncol(db$'timeSeries')]
+
+
+
+init <- function(x){
+    list(initialCarbon = db$'initConditions'[x,"carbonMean"]*1E4)}
+lsini <- Map(function(x)
+             init(x), 1:nrow(db$'initConditions'))
+
+
+
+
+fn. <- function(x){
+    twoppFit(db$'timeSeries'[,1:x], db$'initConditions'[1,"carbonMean"]*1E4, inipars = c(0.01, 0.001, 0.1)) 
+}
+cr <- tryCatch(apply(db$'timeSeries'[,2:5], 1, function(x)fn.(x)),
+               error = function(e)return(NA))
+
+
+twoppFit(db$'timeSeries'[,1:2], db$'initConditions'[1,"carbonMean"]*1E4, inipars = c(0.01, 0.001, 0.1))
+
+fn <- do.call('twoppFit')
+
+
+## modelEntry <- function(db,
+##                        ts.nr = 2,
+##                        model = 'twoppFit',
+##                        inipars = c(0.01, 0.001, 0.1),#{
+##                        mc.cores = round(detectCores()*0.5,0)){
+## rfit <- function(y, model = model, inipars = inipars, mc.cores = mc.cores){
+##     condf <- function(x, model, inipars){
+##         inp <- list(timeSeries = db$'timeSeries'[,c(1,y)],
+##                     initialCarbon = db$'initConditions'[x,"carbonMean"]*1E4,
+##                     inipars = inipars)
+##         mod <- tryCatch(do.call(model, inp),
+##                         error = function(e) return(NA))
+##         return(mod)}
+##         fn_to_iter <- function(y){
+##             lst2 <- list(y, model = model, inipars = inipars)
+##             return(lst2)
+## }
+##         args <- Map(function(m)
+##             fn_to_iter(m), 1:nrow(db$'initConditions'))
+##         marg <- list(FUN = function(x)
+##             do.call('condf', x),
+##             x = args, SIMPLIFY = FALSE,
+##             mc.cores = mc.cores)
+## ic <- do.call('mcmapply', marg)
+##     names(ic) <- db$'initConditions'$'site'
+##     return(ic)}
+## bs <- Map(function(b)
+##      rfit(b, model = model,inipars = inipars, mc.cores = mc.cores), b = ts.nr)
+## names(bs) <- ts.nr
+## return(bs)}
 st <- modelEntry(db, ts.nr = 2:3)
-
-str(st)
-
 
 modelEntry <- function(db,
                        ts.nr = 2,
@@ -50,21 +106,7 @@ bs <- Map(function(y)
      rfit(y, model = model,inipars = inipars), ts.nr)
 names(bs) <- ts.nr
 return(bs)}
-
-
-
-
-bs <- Map(function(y)
-    rfit(y, model = 'twoppFit',
-         inipars = c(0.01, 0.001, 0.1), mc.cores = 8), 2:3)
-
-
-
-
-bs <- Map(function(y)
-          rfit(y, model = 'threeppFit', inipars = c(0.05, 0.01, 0.001, 0.1, 0.1)), 2)
-
-M2=twopsFit(timeSeries = incubation$timeSeries[,c(1,79)], initialCarbon=incubation$initConditions[78,"carbonMean"]*10000, inipars=c(0.05, 0.00001, 0.1, 0.01))
+st <- modelEntry(db, ts.nr = 2:3)
 
 
 

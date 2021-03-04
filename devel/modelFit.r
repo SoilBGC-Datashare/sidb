@@ -14,6 +14,43 @@ load_entries <- loadEntries(path)
 db <- load_entries[["Crow2019a"]]
 
 
+modelEntry <- function(db,
+                       ts.nr = 2,
+                       model = 'twoppFit',
+                       inipars = c(0.01, 0.001, 0.1)){
+                       ## mc.cores = round(detectCores()*0.5,0)){
+    ## db <- entry
+    rfit <- function(y, model, inipars){
+## rfit <- function(y, model, inipars, mc.cores){
+    condf <- function(x, model, inipars){
+        inp <- list(timeSeries = db$'timeSeries'[,c(1,y)],
+                    initialCarbon = db$'initConditions'[x,"carbonMean"]*1E4,
+                    inipars = inipars)
+        mod <- tryCatch(do.call(model, inp),
+                        error = function(e) return(NA))
+        return(mod)}
+    ic <- Map(function(x)
+          condf(x, model, inipars), 1:nrow(db$'initConditions'))
+    ## ic <- parallel::mcmapply(FUN = function(x)
+    ##     condf(x, model, inipars),
+    ##     x = 1:nrow(db$'initConditions'), SIMPLIFY = FALSE,
+    ##     mc.cores = mc.cores)
+    names(ic) <- db$'initConditions'$'site'
+    return(ic)}
+## bs <- parallel::mcmapply(FUN = function(y)
+##     ## rfit(y, model = model,inipars = inipars,mc.cores = mc.cores),
+##     rfit(y, model = model,inipars = inipars),
+##     y = ts.nr, SIMPLIFY = FALSE,
+##     mc.cores = mc.cores)
+bs <- Map(function(y)
+     rfit(y, model = model,inipars = inipars), ts.nr)
+names(bs) <- ts.nr
+    return(bs)}
+
+st <- modelEntry(db, model = 'two'ts.nr = 2:nrow(db$'timeSeries'), inipars = c())
+
+head(db$'initConditions')
+
 tms <- as.list(db$'timeSeries')
 tmc <- as.list(db$'initConditions'[,"carbonMean"]*1E4)
 
@@ -27,6 +64,8 @@ init <- function(x){
 lsini <- Map(function(x)
              init(x), 1:nrow(db$'initConditions'))
 
+
+head(db$'initConditions')
 
 
 
@@ -42,36 +81,36 @@ twoppFit(db$'timeSeries'[,1:2], db$'initConditions'[1,"carbonMean"]*1E4, inipars
 fn <- do.call('twoppFit')
 
 
-## modelEntry <- function(db,
-##                        ts.nr = 2,
-##                        model = 'twoppFit',
-##                        inipars = c(0.01, 0.001, 0.1),#{
-##                        mc.cores = round(detectCores()*0.5,0)){
-## rfit <- function(y, model = model, inipars = inipars, mc.cores = mc.cores){
-##     condf <- function(x, model, inipars){
-##         inp <- list(timeSeries = db$'timeSeries'[,c(1,y)],
-##                     initialCarbon = db$'initConditions'[x,"carbonMean"]*1E4,
-##                     inipars = inipars)
-##         mod <- tryCatch(do.call(model, inp),
-##                         error = function(e) return(NA))
-##         return(mod)}
-##         fn_to_iter <- function(y){
-##             lst2 <- list(y, model = model, inipars = inipars)
-##             return(lst2)
-## }
-##         args <- Map(function(m)
-##             fn_to_iter(m), 1:nrow(db$'initConditions'))
-##         marg <- list(FUN = function(x)
-##             do.call('condf', x),
-##             x = args, SIMPLIFY = FALSE,
-##             mc.cores = mc.cores)
-## ic <- do.call('mcmapply', marg)
-##     names(ic) <- db$'initConditions'$'site'
-##     return(ic)}
-## bs <- Map(function(b)
-##      rfit(b, model = model,inipars = inipars, mc.cores = mc.cores), b = ts.nr)
-## names(bs) <- ts.nr
-## return(bs)}
+modelEntry <- function(db,
+                       ts.nr = 2,
+                       model = 'twoppFit',
+                       inipars = c(0.01, 0.001, 0.1),#{
+                       mc.cores = round(detectCores()*0.5,0)){
+rfit <- function(y, model = model, inipars = inipars, mc.cores = mc.cores){
+    condf <- function(x, model, inipars){
+        inp <- list(timeSeries = db$'timeSeries'[,c(1,y)],
+                    initialCarbon = db$'initConditions'[x,"carbonMean"]*1E4,
+                    inipars = inipars)
+        mod <- tryCatch(do.call(model, inp),
+                        error = function(e) return(NA))
+        return(mod)}
+        fn_to_iter <- function(y){
+            lst2 <- list(y, model = model, inipars = inipars)
+            return(lst2)
+}
+        args <- Map(function(m)
+            fn_to_iter(m), 1:nrow(db$'initConditions'))
+        marg <- list(FUN = function(x)
+            do.call('condf', x),
+            x = args, SIMPLIFY = FALSE,
+            mc.cores = mc.cores)
+ic <- do.call('mcmapply', marg)
+    names(ic) <- db$'initConditions'$'site'
+    return(ic)}
+bs <- Map(function(b)
+     rfit(b, model = model,inipars = inipars, mc.cores = mc.cores), b = ts.nr)
+names(bs) <- ts.nr
+return(bs)}
 st <- modelEntry(db, ts.nr = 2:3)
 
 modelEntry <- function(db,

@@ -14,6 +14,55 @@ load_entries <- loadEntries(path)
 db <- load_entries[["Crow2019a"]]
 
 
+tmp <- multi_fit(db, model = 'twopsFit',tsnr = 2:10, inipars=c(0.05, 0.00001, 0.1, 0.01))
+
+multi_fit <- function(db, model = 'twoppFit', inicond = 1, tsnr = 2:3, inipars = c(0.01, 0.001, 0.1)){
+    condf <- function(y, model, inicond, inipars){
+        inp <- list(timeSeries = db$'timeSeries'[,c(1,y)],
+                    initialCarbon = db$'initConditions'[inicond,"carbonMean"]*1E4,
+                    inipars = inipars)
+        mod <- tryCatch(do.call(model, inp),
+                        error = function(e) return(NA))
+        return(mod)}
+    if(is.null(tsnr))
+        tsnr <- 2:ncol(db$'timeSeries')
+    ic <- Map(function(x)
+        condf(x, model, inicond, inipars), tsnr)
+    names(ic) <- tsnr
+    return(ic)}
+
+
+
+condf <- function(y, model = 'twoppFit', inicond = 1, inipars = c(0.01, 0.001, 0.1)){
+    inp <- list(timeSeries = db$'timeSeries'[,c(1,y)],
+                initialCarbon = db$'initConditions'[inicond,"carbonMean"]*1E4,
+                inipars = inipars)
+    mod <- tryCatch(do.call(model, inp),
+                    error = function(e) return(NA))
+    return(mod)}
+ic <- Map(function(x)
+    condf(x), 1:3)
+
+ic <- parallel::mcmapply(FUN = function(x)
+        condf(x, model, inipars),
+        x = 1:nrow(db$'initConditions'), SIMPLIFY = FALSE,
+        mc.cores = mc.cores)
+  
+
+ic <- Map(function(x)
+    condf(x), 1:nrow(db$'timeSeries'))
+
+fn_to_iter <- function(y){
+    lst2 <- list(y, model = model, inipars = inipars)
+    return(lst2)
+}
+        args <- Map(function(m)
+            fn_to_iter(m), 1:nrow(db$'initConditions'))
+        marg <- list(FUN = function(x)
+            do.call('condf', x),
+
+
+
 modelEntry <- function(db,
                        ts.nr = 2,
                        model = 'twoppFit',
@@ -74,6 +123,16 @@ fn. <- function(x){
 }
 cr <- tryCatch(apply(db$'timeSeries'[,2:5], 1, function(x)fn.(x)),
                error = function(e)return(NA))
+
+fn_to_iter <- function(y){
+    lst2 <- list(y, model = model, inipars = inipars)
+    return(lst2)
+}
+args <- Map(function(m)
+    fn_to_iter(m), 1:nrow(db$'initConditions'))
+marg <- list(FUN = function(x)
+    do.call('condf', x),
+
 
 
 twoppFit(db$'timeSeries'[,1:2], db$'initConditions'[1,"carbonMean"]*1E4, inipars = c(0.01, 0.001, 0.1))

@@ -1,4 +1,4 @@
-multiSibdFit <- structure(function #Multiple Sidb-model fitting 
+multiSidbFit <- structure(function #Multiple Sidb-model fitting 
 ### This function processes data bases from \code{\link{load_entries}}
 ### to recursivelly fit models in \code{\link{sidb}}
 (

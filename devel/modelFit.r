@@ -1,24 +1,19 @@
 ## ---
-## title: "Fitting of multiple data to models"
+## title: "Fitting of multiple time series using 'multiSidbFit'"
 ## author: " "
-## date: "6/19/2019"
+## date: "03/15/2021"
 ## output: word_document
 ## ---
-
 packs <- c('SoilR', 'sidb', 'yaml', 'parallel','R.utils')
 sapply(packs, require, character.only = TRUE) ## be sure all the outputs are TRUE
-
 source.R <- '/home/wilar/Documents/sidb/scripts/multiSidbFit'
 sourceDirectory(source.R, modifiedOnly = TRUE, verbose = TRUE)
 
 ## Data entry example 
-path <- "/home/wilar/Documents/sidb/data/"
+path <- "/home/wilar/Documents/sidb/data/" ## set a correct file path
 load_entries <- loadEntries(path)
 db <- load_entries[["Crow2019a"]]
 
-
-dts <- c('timeSeries','initConditions','carbonMean')
-all(dts[1:2]%in%names(db))
 
 twopsFit_model <- multiSibdFit(db,
                        model = 'twopsFit',

@@ -14,6 +14,9 @@ path <- "/home/wilar/Documents/sidb/data/" ## set a correct file path
 load_entries <- loadEntries(path)
 db <- load_entries[["Crow2019a"]]
 
+
+## check '~/Documents/sidb/manuscript/modelFit.Rmd'
+
 MultiFit <- function(db,...){
     Map(function(db, ...)
         multiSidbFit(db, ...),

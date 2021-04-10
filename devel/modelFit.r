@@ -14,6 +14,29 @@ path <- "/home/wilar/Documents/sidb/data/" ## set a correct file path
 load_entries <- loadEntries(path)
 db <- load_entries[["Crow2019a"]]
 
+MultiFit <- function(db,...){
+    Map(function(db, ...)
+        multiSidbFit(db, ...),
+        MoreArgs = list(db = db), ...)
+    }
+
+
+tmp <- MultiFit(db, model = list('twoppFit',
+                                 'twopsFit',
+                                 'twopfFit',
+                                 'threeppFit',
+                                 'threepsFit'),
+                inipars = list(c(0.01, 0.001, 0.1),
+                               c(0.05, 0.00001, 0.1, 0.01),
+                               c(0.005, 0.00001, 0.1, 0.01, 0.01),
+                               c(0.05, 0.01, 0.001, 0.1, 0.1),
+                               c(0.05, 0.01, 0.001, 0.1, 0.1),
+                               c(0.9,0.01, 0.000001, 0.01, 0.01, 0.01, 0.1)),
+                ts.col = list(10:12))
+
+
+names(tmp)
+
 
 twopsFit_model <- multiSidbFit(db,
                        model = 'twopsFit',

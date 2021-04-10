@@ -20,7 +20,6 @@ MultiFit <- function(db,...){
         MoreArgs = list(db = db), ...)
     }
 
-
 tmp <- MultiFit(db, model = list('twoppFit',
                                  'twopsFit',
                                  'twopfFit',
@@ -29,7 +28,6 @@ tmp <- MultiFit(db, model = list('twoppFit',
                 inipars = list(c(0.01, 0.001, 0.1),
                                c(0.05, 0.00001, 0.1, 0.01),
                                c(0.005, 0.00001, 0.1, 0.01, 0.01),
-                               c(0.05, 0.01, 0.001, 0.1, 0.1),
                                c(0.05, 0.01, 0.001, 0.1, 0.1),
                                c(0.9,0.01, 0.000001, 0.01, 0.01, 0.01, 0.1)),
                 ts.col = list(10:12))

@@ -13,7 +13,7 @@ of CO<sub>2</sub> release.
 ## Structure
 
 ### Data
-This folder contains all the data currently in SIDb. For each incubation study there is a [`yaml`](http://yaml.org/) file with metada and a time series data file in `.csv` format. A list of the studies currently in SIDb ([studies_list.csv](sidb/data/template_metadata.yaml)), as well as a guide for entering new data ([Readme.md](sidb/data/Readme.md)), an annotated blank template file ([template_metadata.yaml](sidb/data/template_metadata.yaml)), and a blank [initConditions.csv](sidb/data/initConditions.csv) file are also located in this folder. 
+This folder contains all the data currently in SIDb. For each incubation study there is a [`yaml`](http://yaml.org/) file with metada and a time series data file in `.csv` format. A list of the studies currently in SIDb ([studies_list.csv](/data/template_metadata.yaml)), as well as a guide for entering new data ([Readme.md](/data/Readme.md)), an annotated blank template file ([template_metadata.yaml](/data/template_metadata.yaml)), and a blank [initConditions.csv](/data/initConditions.csv) file are also located in this folder. 
 
 The data are stored in software agnostic formats (.yaml, .csv) to facilitate data access via your preferred workflow. A pre-compiled version of the database (v1) can be obtained by installing the R package. See the next section (Rpkg) for more information.
 
@@ -35,7 +35,7 @@ Files for generating the [SIDb website](https://soilbgc-datashare.github.io/sidb
 This folder contains specific reports of the database generated from scripts in the Scripts folder
 
 ### Demo
-This folder contains R markdown files with reproducible code to demonstrate specific data analyses. (Currently out of date). For current examples and tutorials showing how to load SIDb data in R and work with it see: [vignettes](Rpkg/vignettes/).
+This folder contains R markdown files with reproducible code to demonstrate specific data analyses. (Currently out of date). For current examples and tutorials showing how to load SIDb data in R and work with it see: [vignettes](/Rpkg/vignettes/).
 
 ### Tests
 This folder contains tests to guarantee the integrity of the database. Make sure that you can run all tests without errors before contributing to the database.

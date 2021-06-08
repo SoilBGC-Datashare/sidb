@@ -1,0 +1,501 @@
+---
+title: "Testing multi models to data "
+output: 
+  pdf_document:
+    latex_engine: xelatex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(sidb)
+library(SoilR)
+rm(list=ls())
+```
+
+## Testing multi models to the dataset of SidB database
+
+Here we test three different two-pool model to each individual datasets. 
+
+
+```{r sidb database, results='hide'}
+db=loadEntries(path="~/sidb/data/")
+db_flat=flatterSIDb(db)
+```
+
+```{r inipairs}
+twopp_inipars= c(0.01, 0.001, 0.1)
+twops_inipars= c(0.005, 0.00001, 0.1, 0.01)
+twopf_inipars= c(0.005, 0.00001, 0.1, 0.01, 0.01)
+```
+
+# Dataset `r db[[1]]$citationKey`
+The initial corbon is missing
+ 
+
+# Dataset `r db[[2]]$citationKey`
+In this dataset the CO2 respiraton has been reported as cumulative. 
+mean initial carbon  
+
+<!---
+```{r,  results='hide'}
+#ds2=db[[2]]
+
+```
+
+```{r}
+# Fit the two parallel pool model
+#Mod1_2=twoppFit(timeSeries = ds2$timeSeries[, c(1,2)],
+#                initialCarbon =ds2$initConditions[2,"carbonMean"]*10000, 
+#                inipars =c(0.01, 0.001, 0.1))
+#                
+# Fit two feedback poolmodel                
+#Mod2_2=twopfFit(timeSeries = ds2$timeSeries[, c(1,2)], initialCarbon = ds2$initConditions[2, "carbonMean"]*10000, 
+#                inipars = c(0.005, 1e-5, 0.1, 0.01, 0.01))
+#Mod3_2=twopsFit(timeSeries = ds2$timeSeries[ , c(1,2)], initialCarbon = ds2$initConditions[2, "carbonMean"]*1e4, 
+#                inipars = c(0.005, 1e-5, 0.1, 0.01))
+```
+---> 
+\newpage
+
+# Dataset `r db[[3]]$citationKey` 
+```{r, results='hide'}
+ds3 <- db[[3]]
+str(ds3$timeSeries)
+
+```
+
+
+```{r, results='hide'}
+iniC_LTV <- ds3$initConditions[1, "carbonMean"]
+iniC_UTV <- ds3$initConditions[2, "carbonMean"]
+iniC_B <- ds3$initConditions[3, "carbonMean"]
+iniC_V <- ds3$initConditions[4, "carbonMean"]
+
+unitC=ds3$initConditions[3, "carbonUnits"]
+
+#Mod1_3 <- twoppFit(timeSeries = ds3$timeSeries[, c(1,2)], initialCarbon = ds3$initConditions)
+```
+
+## V2: Dataset `r db[[3]]$citationKey`, Variable `r db[[3]]$variables$V2$name `, site `r ds3$variables$V2$site`
+The initial amount of carbon is `r iniC_LTV` `r unitC`
+```{r V2 LTV}
+# Variable1
+Mod1_32=twoppFit(timeSeries = ds3$timeSeries[, c(1,2)], initialCarbon = iniC_LTV*1e5, inipars =twopp_inipars)
+#Mod2_32=twopsFit(timeSeries = ds3$timeSeries[, c(1,2)], initialCarbon = iniC_LTV*1e5, inipars = twops_inipars)
+Mod3_32=twopfFit(timeSeries = ds3$timeSeries[, c(1,2)], initialCarbon = iniC_LTV*1e5, inipars = twopf_inipars)
+```
+
+```{r}
+days32=Mod1_32$SoilRmodel@times
+Mlist32=list(Mod1_32, Mod3_32)
+Rs32=sapply(Mlist32, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames32=c("Two-pool parallel", "Two-pool feedback")
+Rt32=lapply(Mlist32, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(1,2))
+for(i in c(1,2)){
+  matplot(days32, Rt32[[i]], type="l", lty = 1, ylab = ds3$variables$V2$units, xlab="Day", 
+          main=modelNames32[i])
+  points(ds3$timeSeries[, c(1,2)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+ds3$variables$V2
+```
+
+## V3: Dataset `r db[[3]]$citationKey`, Variable `r ds3$variables$V3$name`, site `r ds3$variables$V3$site`
+```{r V3 Upper Taylor Valley UTV}
+Mod1_33=twoppFit(timeSeries = ds3$timeSeries[,c(1,3)], initialCarbon = iniC_UTV*1e5, inipars = twopp_inipars)
+Mod2_33=twopsFit(timeSeries = ds3$timeSeries[, c(1,3)], initialCarbon = iniC_UTV*1e5, inipars = twops_inipars)
+#Mod3_33=twopfFit(timeSeries = ds3$timeSeries[, c(1,3)], initialCarbon = iniC_UTV*1e5, inipars = twopf_inipars)
+# DLSODA-  Warning..Internal T (=R1) and H (=R2) are
+#       such that in the machine, T + H = T on the next step  
+#      (H = step size). Solver will continue anyway.
+# In above message, R1 = 0, R2 = 0
+#  
+# DINTDY-  T (=R1) illegal      
+# In above message, R1 = 0.224449
+#  
+#       T not in interval TCUR - HU (= R1) to TCUR (=R2)      
+# In above message, R1 = 0, R2 = 0
+#  
+# DINTDY-  T (=R1) illegal      
+# In above message, R1 = 0.448898
+#  
+#       T not in interval TCUR - HU (= R1) to TCUR (=R2)      
+# In above message, R1 = 0, R2 = 0
+#  
+# DLSODA-  Trouble in DINTDY.  ITASK = I1, TOUT = R1
+# In above message, I1 = 1
+#  
+# In above message, R1 = 0.448898
+```
+
+
+```{r}
+days33=Mod1_33$SoilRmodel@times
+Mlist33=list(Mod1_33, Mod2_33)
+Rs33=sapply(Mlist33, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames33=c("Two-pool parallel", "Two-pool series")
+Rt33=lapply(Mlist33, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(1,2))
+for(i in c(1,2)){
+  matplot(days33, Rt33[[i]], type="l", lty = 1, ylab=ds3$variables$V3$units, xlab = "Day", 
+          main=modelNames33[i])
+  points(ds3$timeSeries[, c(1,2)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+```
+
+## V4: Dataset `r db[[3]]$citationKey`, Variable `r ds3$variables$V4$name`, site `r ds3$variables$V4$site`
+```{r V4 Beacon}
+Mod1_34=twoppFit(timeSeries = ds3$timeSeries[,c(1,4)], initialCarbon = iniC_B*1e5, inipars = twopp_inipars)
+#Mod2_34=twopsFit(timeSeries = ds3$timeSeries[, c(1,4)], initialCarbon = iniC_B*1e5, inipars = twops_inipars)
+#Mod3_34=twopfFit(timeSeries = ds3$timeSeries[, c(1,4)], initialCarbon = iniC_B*1e5, inipars = twopf_inipars)
+```
+
+
+
+## V5: Dataset `r db[[3]]$citationKey`, Variable `r ds3$variables$V5$name`, site `r ds3$variables$V5$site`
+```{r V5 Victoria}
+
+Mod1_35=twoppFit(timeSeries = ds3$timeSeries[,c(1,4)], initialCarbon = iniC_B*1e5, inipars = twopp_inipars)
+#Mod2_35=twopsFit(timeSeries = ds3$timeSeries[, c(1,4)], initialCarbon = iniC_B*1e5, inipars = twops_inipars)
+#Mod3_35=twopfFit(timeSeries = ds3$timeSeries[, c(1,4)], initialCarbon = iniC_B*1e5, inipars = twopf_inipars)
+```
+
+
+\newpage
+
+# Dataset `r db[[4]]$citationKey` 
+
+This is the results of a depth-warming experiment with two levels of Control and warming. The dataset has 9 column of time, three depth on each warming and control. The variables V3, V5, V7, V9, V11 and V15 are the sd. 
+```{r, results='hide'}
+ds4 <- db[[4]]
+str(ds4$timeSeries)
+isCumulative(data.frame(ds4$timeSeries$time,  ds4$timeSeries$control_7.5_15_mean) )
+ds4$initConditions
+
+```
+
+```{r iniC dataset 4}
+iniC_C7.5=ds4$initConditions[1, "carbonMean"]
+iniC_C20=ds4$initConditions[2,"carbonMean"]
+iniC_C50=ds4$initConditions[3,"carbonMean"]
+iniC_W7.5=ds4$initConditions[4, "carbonMean"]
+iniC_W20=ds4$initConditions[5, "carbonMean"]
+iniC_W50=ds4$initConditions[6, "carbonMean"]
+```
+
+
+## V1: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V2$name`, site `r ds4$variables$V2$temperature`, depth `r ds4$variables$V2$midDepth`  
+```{r}
+Mod1_42=twoppFit(timeSeries = ds4$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e5 , inipars = twopp_inipars)
+Mod2_42=twopfFit(timeSeries = ds4$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e5 , inipars = twopf_inipars)
+Mod3_42=twopsFit(timeSeries = ds4$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e5 , inipars = twops_inipars)
+```
+
+## V4: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V4$name`, site `r ds4$variables$V4$temperature`, depth `r ds4$variables$V4$midDepth` 
+```{r}
+Mod1_44=twoppFit(timeSeries = ds4$timeSeries[, c(1,4)], initialCarbon =iniC_C20*1e5 , inipars = twopp_inipars)
+Mod2_44=twopfFit(timeSeries = ds4$timeSeries[, c(1,4)], initialCarbon =iniC_C20*1e5 , inipars = twopf_inipars)
+Mod3_44=twopsFit(timeSeries = ds4$timeSeries[, c(1,4)], initialCarbon =iniC_C20*1e5 , inipars = twops_inipars)
+```
+
+## V6: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V6$name`, site `r ds4$variables$V6$temperature`, depth `r ds4$variables$V6$midDepth` 
+```{r}
+Mod1_46=twoppFit(timeSeries = ds4$timeSeries[, c(1,6)], initialCarbon =iniC_C50*1e5 , inipars = twopp_inipars)
+#Mod2_46=twopfFit(timeSeries = ds4$timeSeries[, c(1,6)], initialCarbon =iniC_C50*1e5 , inipars = twopf_inipars)
+Mod3_46=twopsFit(timeSeries = ds4$timeSeries[, c(1,6)], initialCarbon =iniC_C50*1e5 , inipars = twops_inipars)
+```
+
+
+## V8: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V8$name`, site `r ds4$variables$V8$temperature`, depth `r ds4$variables$V8$midDepth` 
+```{r}
+Mod1_48=twoppFit(timeSeries = ds4$timeSeries[, c(1,8)], initialCarbon =iniC_C7.5*1e5 , inipars = twopp_inipars)
+Mod2_48=twopfFit(timeSeries = ds4$timeSeries[, c(1,8)], initialCarbon =iniC_C7.5*1e5 , inipars = twopf_inipars)
+Mod3_48=twopsFit(timeSeries = ds4$timeSeries[, c(1,8)], initialCarbon =iniC_C7.5*1e5 , inipars = twops_inipars)
+```
+
+## V10: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V10$name`, site `r ds4$variables$V10$temperature`, depth `r ds4$variables$V10$midDepth` 
+```{r}
+Mod1_410=twoppFit(timeSeries = ds4$timeSeries[, c(1,10)], initialCarbon =iniC_C20*1e5 , inipars = twopp_inipars)
+Mod2_410=twopfFit(timeSeries = ds4$timeSeries[, c(1,10)], initialCarbon =iniC_C20*1e5 , inipars = twopf_inipars)
+#Mod3_410=twopsFit(timeSeries = ds4$timeSeries[, c(1,10)], initialCarbon =iniC_C20*1e5 , inipars = twops_inipars)
+```
+## V12: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V12$name`, site `r ds4$variables$V12$temperature`, depth `r ds4$variables$V12$midDepth` 
+```{r}
+Mod1_412=twoppFit(timeSeries = ds4$timeSeries[, c(1,12)], initialCarbon =iniC_C50*1e5 , inipars = twopp_inipars)
+#Mod2_412=twopfFit(timeSeries = ds4$timeSeries[, c(1,12)], initialCarbon =iniC_C50*1e5 , inipars = twopf_inipars)
+Mod3_412=twopsFit(timeSeries = ds4$timeSeries[, c(1,12)], initialCarbon =iniC_C50*1e5 , inipars = twops_inipars)
+```
+
+
+\newpage
+
+# Dataset `r db[[5]]$citationKey` 
+
+This data set is cummulative
+```{r, results='hide'}
+ds5 <- db[[5]]
+str(ds5$timeSeries)
+isCumulative(data.frame(ds5$timeSeries$time,  ds5$timeSeries$C_30deg_CL) )
+
+```
+
+\newpage
+
+# Dataset `r db[[6]]$citationKey` 
+
+A dataset with 41 variables of `r db_flat$vars$BradleyCook2016[1, "incDesc"] ` in three levels of depth (10, 30, 40)
+
+
+```{r, results='hide'}
+ds6 <- db[[6]]
+str(ds6$timeSeries)
+isCumulative(data.frame(ds6$timeSeries$time,  ds6$timeSeries$SG_40_4.5) )
+  
+```
+
+```{r, results= 'hide'}
+db[[6]]$citationKey
+ds6$initConditions
+isCumulative(data.frame(ds6$timeSeries$time, ds6$timeSeries$SG_40_4.5) )
+```
+
+```{r, results='hide'}
+iniC_G10=ds6$initConditions[1, "carbonMean"]
+iniC_G30=ds6$initConditions[2, "carbonMean"]
+iniC_S10=ds6$initConditions[3, "carbonMean"]
+iniC_S30=ds6$initConditions[4, "carbonMean"]
+```
+
+## V2: Dataset `r db[[6]]$citationKey`, variable `r ds6$variables$V2$name`, site `r ds6$variables$V2$temperature`, depth `r ds6$variables$V2$midDepth` 
+
+Time series is too short for two-pool feedback model and two-pool series model 
+```{r}
+Mod1_62=twoppFit(timeSeries = ds6$timeSeries[, c(1,2)], initialCarbon =iniC_G10*1e5 , inipars = twopp_inipars)
+#Mod2_62=twopfFit(timeSeries = ds6$timeSeries[, c(1,2)], initialCarbon =iniC_G10*1e5 , inipars = twopf_inipars)
+Mod3_62=twopsFit(timeSeries = ds6$timeSeries[, c(1,2)], initialCarbon =iniC_G10*1e5 , inipars = twops_inipars)
+```
+## V3: Dataset `r db[[6]]$citationKey`, variable `r ds6$variables$V3$name`, site `r ds6$variables$V3$temperature`, depth `r ds6$variables$V3$midDepth` 
+```{r}
+Mod1_63=twoppFit(timeSeries = ds6$timeSeries[, c(1,3)], initialCarbon =iniC_G10*1e5 , inipars = twopp_inipars)
+#Mod2_63=twopfFit(timeSeries = ds6$timeSeries[, c(1,3)], initialCarbon =iniC_G10*1e5 , inipars = twopf_inipars)
+Mod3_63=twopsFit(timeSeries = ds6$timeSeries[, c(1,3)], initialCarbon =iniC_G10*1e5 , inipars = twops_inipars)
+```
+
+\newpage
+
+# Dataset `r db[[7]]$citationKey` 
+
+A dataset with 41 variables of `r db_flat$vars$Conant2008[1, "incDesc"] ` in three levels of temperature (4, 15, 25)
+The dataset is cumulative
+
+```{r, results='hide'}
+ds7 <- db[[7]]
+str(ds7$timeSeries)
+isCumulative(data.frame(ds7$timeSeries$time,  ds7$timeSeries$ND.CU.4) )
+```
+
+\newpage
+
+# Dataset `r db[[8]]$citationKey` 
+
+A dataset with 29 variables of `r db_flat$vars$Craine2010NatGeo[1, "incDesc"] ` 
+
+It is not clear if the dataset is cummulative or not
+
+```{r, results='hide'}
+ds8 <- db[[8]]
+str(ds8$timeSeries)
+isCumulative(data.frame(ds8$timeSeries$time,  ds8$timeSeries$Cumresp_WR) )
+```
+
+```{r}
+ds8$initConditions[1, "carbonMean"]
+iniC_CDR=ds8$initConditions[1, "meanCorbon"]
+iniC_KBS=ds8$initConditions[2, "meanCarbon"]
+```
+
+## V2: Dataset `r db[[8]]$citationKey`, variable `r ds8$variables$V2$name`, site `r ds8$variables$V2$temperature`
+```{r}
+Mod1_82=twoppFit(timeSeries = ds8$timeSeries[, c(1,2)], initialCarbon =ds8$initConditions[1, "carbonMean"]*1e5 , inipars = twopp_inipars)
+Mod2_82=twopfFit(timeSeries = ds8$timeSeries[, c(1,2)], initialCarbon =ds8$initConditions[1, "carbonMean"]*1e5 , inipars = twopf_inipars)
+Mod3_82=twopsFit(timeSeries = ds8$timeSeries[, c(1,2)], initialCarbon =ds8$initConditions[1, "carbonMean"]*1e5 , inipars = twops_inipars)
+```
+
+
+## V3: Dataset `r db[[8]]$citationKey`, variable `r ds8$variables$V3$name`, site `r ds8$variables$V3$temperature`
+```{r}
+Mod1_83=twoppFit(timeSeries = ds8$timeSeries[, c(1,3)], initialCarbon =ds8$initConditions[2, "carbonMean"]*1e5 , inipars = twopp_inipars)
+#Mod2_83=twopfFit(timeSeries = ds8$timeSeries[, c(1,3)], initialCarbon =ds8$initConditions[2, "carbonMean"]*1e5 , inipars = twopf_inipars)
+Mod3_83=twopsFit(timeSeries = ds8$timeSeries[, c(1,3)], initialCarbon =ds8$initConditions[2, "carbonMean"]*1e5 , inipars = twops_inipars)
+```
+
+
+## V4: Dataset `r db[[8]]$citationKey`, variable `r ds8$variables$V4$name`, site `r ds8$variables$V4$temperature`
+```{r}
+Mod1_84=twoppFit(timeSeries = ds8$timeSeries[, c(1,4)], initialCarbon =ds8$initConditions[3, "carbonMean"]*1e5 , inipars = twopp_inipars)
+Mod2_84=twopfFit(timeSeries = ds8$timeSeries[, c(1,4)], initialCarbon =ds8$initConditions[3, "carbonMean"]*1e5 , inipars = twopf_inipars)
+Mod3_84=twopsFit(timeSeries = ds8$timeSeries[, c(1,4)], initialCarbon =ds8$initConditions[3, "carbonMean"]*1e5 , inipars = twops_inipars)
+```
+
+
+## V5: Dataset `r db[[8]]$citationKey`, variable `r ds8$variables$V5$name`, site `r ds8$variables$V5$temperature`
+```{r}
+Mod1_85=twoppFit(timeSeries = ds8$timeSeries[, c(1,5)], initialCarbon =ds8$initConditions[4, "carbonMean"]*1e5 , inipars = twopp_inipars)
+Mod2_85=twopfFit(timeSeries = ds8$timeSeries[, c(1,5)], initialCarbon =ds8$initConditions[4, "carbonMean"]*1e5 , inipars = twopf_inipars)
+Mod3_85=twopsFit(timeSeries = ds8$timeSeries[, c(1,5)], initialCarbon =ds8$initConditions[4, "carbonMean"]*1e5 , inipars = twops_inipars)
+```
+
+## V6: Dataset `r db[[8]]$citationKey`, variable `r ds8$variables$V6$name`, site `r ds8$variables$V6$temperature`
+```{r}
+Mod1_86=twoppFit(timeSeries = ds8$timeSeries[, c(1,6)], initialCarbon =ds8$initConditions[5, "carbonMean"]*1e5 , inipars = twopp_inipars)
+Mod2_86=twopfFit(timeSeries = ds8$timeSeries[, c(1,6)], initialCarbon =ds8$initConditions[5, "carbonMean"]*1e5 , inipars = twopf_inipars)
+Mod3_86=twopsFit(timeSeries = ds8$timeSeries[, c(1,6)], initialCarbon =ds8$initConditions[5, "carbonMean"]*1e5 , inipars = twops_inipars)
+```
+
+
+
+\newpage
+
+# Dataset `r db[[9]]$citationKey` 
+
+A dataset with 79 variables of `r db_flat$vars$Crow2019a[1, "incDesc"] ` 
+
+
+```{r, results='hide'}
+ds9 <- db[[9]]
+str(ds9$timeSeries)
+isCumulative(data.frame(ds9$timeSeries$time,  ds9$timeSeries$Site01) )
+```
+
+## V2: Dataset `r db[[9]]$citationKey`, variable `r ds9$variables$V2$name`, site `r ds9$variables$V2$site`
+```{r}
+Mod1_92=twoppFit(timeSeries = ds9$timeSeries[, c(1,2)], initialCarbon =ds9$initConditions[1, "carbonMean"]*1e5 , inipars = twopp_inipars)
+#Mod2_92=twopfFit(timeSeries = ds9$timeSeries[, c(1,2)], initialCarbon =ds9$initConditions[1, "carbonMean"]*1e5 , inipars = twopf_inipars)
+Mod3_92=twopsFit(timeSeries = ds9$timeSeries[, c(1,2)], initialCarbon =ds9$initConditions[1, "carbonMean"]*1e5 , inipars = twops_inipars)
+```
+
+## V3: Dataset `r db[[9]]$citationKey`, variable `r ds9$variables$V3$name`, site `r ds9$variables$V3$site`
+```{r}
+Mod1_93=twoppFit(timeSeries = ds9$timeSeries[, c(1,3)], initialCarbon =ds9$initConditions[2, "carbonMean"]*1e5 , inipars = twopp_inipars)
+Mod2_93=twopfFit(timeSeries = ds9$timeSeries[, c(1,3)], initialCarbon =ds9$initConditions[2, "carbonMean"]*1e5 , inipars = twopf_inipars)
+Mod3_93=twopsFit(timeSeries = ds9$timeSeries[, c(1,3)], initialCarbon =ds9$initConditions[2, "carbonMean"]*1e5 , inipars = twops_inipars)
+```
+
+
+## V4: Dataset `r db[[9]]$citationKey`, variable `r ds9$variables$V4$name`, site `r ds9$variables$V4$site`
+```{r}
+Mod1_94=twoppFit(timeSeries = ds9$timeSeries[, c(1,4)], initialCarbon =ds9$initConditions[3, "carbonMean"]*1e5 , inipars = twopp_inipars)
+#Mod2_94=twopfFit(timeSeries = ds9$timeSeries[, c(1,4)], initialCarbon =ds9$initConditions[3, "carbonMean"]*1e5 , inipars = twopf_inipars)
+Mod3_94=twopsFit(timeSeries = ds9$timeSeries[, c(1,4)], initialCarbon =ds9$initConditions[3, "carbonMean"]*1e5 , inipars = twops_inipars)
+```
+
+
+\newpage
+
+# Dataset `r db[[10]]$citationKey` 
+
+A dataset with 28 variables of `r db_flat$vars$Crow2019b[1, "incDesc"] ` , with 3 levels of temperature (16, 21, 26)
+in 9 different sites
+
+This dataset is cumulative. 
+```{r, results='hide'}
+ds10 <- db[[10]]
+str(ds10$timeSeries)
+isCumulative(data.frame(ds10$timeSeries$time,  ds10$timeSeries$SPE800_16C) )
+```
+
+
+## V2: Dataset `r db[[10]]$citationKey`, variable `r ds10$variables$V2$name`, site `r ds10$variables$V2$site`, temperature `r ds10$variabels$V2$temperature`
+
+```{r}
+Mod1_102=twoppFit(timeSeries = ds10$timeSeries[, c(1,2)], initialCarbon =ds10$initConditions[1, "carbonMean"]*1e5 , inipars = twopp_inipars)
+#Mod2_102=twopfFit(timeSeries = ds10$timeSeries[, c(1,2)], initialCarbon =ds10$initConditions[1, "carbonMean"]*1e5 , inipars = twopf_inipars)
+#Mod3_102=twopsFit(timeSeries = ds10$timeSeries[, c(1,2)], initialCarbon =ds10$initConditions[1, "carbonMean"]*1e5 , inipars = twops_inipars)
+```
+
+
+
+\newpage
+
+# Dataset `r db[[11]]$citationKey` 
+
+A dataset with 36 variables of `r db_flat$vars$Dalias2001b[1, "incDesc"] ` , `r db[[11]]$incubationInfo$incDesc` 
+
+** not a soil respiration data base** (Percentage of initially applied C14 remaining over time of incubation)
+```{r, results='hide'}
+ds11 <- db[[11]]
+str(ds11$timeSeries)
+isCumulative(data.frame(ds11$timeSeries$time,  ds11$timeSeries$C14_Vin_30) )
+```
+
+
+```{r, results='hide'}
+iniC_Vin=ds11$initConditions[1, "carbonMean"]
+iniC_Hal=ds11$initConditions[2, "carbonMean"]
+iniC_WalOf=ds11$initConditions[3, "carbonMean"]
+iniC_WalOh=ds11$initConditions[4, "carbonMean"]
+iniC_ThOh=ds11$initConditions[5, "carbonMean"]
+iniC_ThA1=ds11$initConditions[6, "carbonMean"]
+iniC_LaA1=ds11$initConditions[7, "carbonMean"]
+```
+
+
+## V2: Dataset `r db[[11]]$citationKey`, variable `r ds11$variables$V2$name`, site `r ds11$variables$V2$site`, temperature `r ds11$variabels$V2$temperature`
+```{r}
+Mod1_112=twoppFit(timeSeries = ds11$timeSeries[, c(1,2)], initialCarbon =iniC_Vin*1e5 , inipars = twopp_inipars)
+Mod2_112=twopfFit(timeSeries = ds11$timeSeries[, c(1,2)], initialCarbon =iniC_Vin*1e5, inipars = twopf_inipars)
+Mod3_112=twopsFit(timeSeries = ds11$timeSeries[, c(1,2)], initialCarbon =iniC_Vin*1e5, inipars = twops_inipars)
+```
+
+
+\newpage
+
+# Dataset `r db[[12]]$citationKey` 
+
+A dataset with 73 variables of `r db_flat$vars$Doetterl2015[1, "incDesc"] ` , 24 sites with 3 replicate per each site. 
+
+
+```{r, results='hide'}
+ds12 <- db[[12]]
+str(ds12$timeSeries)
+isCumulative(data.frame(ds12$timeSeries$time,  ds12$timeSeries$SDC22_TSO_1) )
+plot(ds12$timeSeries$time, ds12$timeSeries$SDC22_TSO_1)
+```
+
+
+## V2: Dataset `r db[[12]]$citationKey`, variable `r ds12$variables$V2$name`, site `r ds12$variables$V2$site` replicate 1
+```{r}
+plot(ds12$timeSeries$time, ds12$timeSeries$SDC22_TSO_1)
+
+#Mod1_122=twoppFit(timeSeries = ds12$timeSeries[, c(1,2)], initialCarbon =ds12$initConditions[1, "carbonMean"]*1e5 , inipars = twopp_inipars)
+#Mod2_122=twopfFit(timeSeries = ds12$timeSeries[, c(1,2)], initialCarbon =ds12$initConditions[1, "carbonMean"]*1e5, inipars = twopf_inipars)
+#Mod3_122=twopsFit(timeSeries = ds12$timeSeries[, c(1,2)], initialCarbon =ds12$initConditions[1, "carbonMean"]*1e5, inipars = twops_inipars)
+```
+
+
+
+
+## V5: Dataset `r db[[12]]$citationKey`, variable `r ds12$variables$V5$name`, site `r ds12$variables$V5$site` replicate 1
+```{r}
+# Mod1_125=twoppFit(timeSeries = ds12$timeSeries[, c(1,5)], initialCarbon =ds12$initConditions[2, "carbonMean"]*1e5 , inipars = twopp_inipars)
+# Mod2_125=twopfFit(timeSeries = ds12$timeSeries[, c(1,5)], initialCarbon =ds12$initConditions[2, "carbonMean"]*1e5, inipars = twopf_inipars)
+# Mod3_125=twopsFit(timeSeries = ds12$timeSeries[, c(1,5)], initialCarbon =ds12$initConditions[2, "carbonMean"]*1e5, inipars = twops_inipars)
+```
+

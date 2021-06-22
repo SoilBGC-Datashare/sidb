@@ -1,0 +1,700 @@
+---
+title: "Fitting models to time series data Crow2019a"
+author: "Mina Azizi-Rad"
+date: " "
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+packs <- c('SoilR', 'sidb', 'R.utils')
+sapply(packs, require, character.only=TRUE)
+rm(list=ls())
+
+```
+
+
+
+
+```{r sidb database, results='hide'}
+db=loadEntries(path="~/sidb/data/")
+db_flat=flatterSIDb(db)
+```
+
+
+# Dataset `r db[[9]]$citationKey` 
+
+<!-- "Crow2019a" -->
+
+A dataset with 37 variables of `r db_flat$vars$Haddix2011SSSJA[1, "incDesc"] ` 6 different sites each two levels of vegetation (Native grassland and cultivated). and three levels of temperature (15, 25, 35)
+
+```{r, results='hide'}
+ds9 <- db[[9]]
+ds9$variables$V2$units
+str(ds9$timeSeries)
+isCumulative(data.frame(ds9$timeSeries$time,  ds9$timeSeries$Site01) )
+plotEntry(db[[9]])
+```
+
+
+
+```{r}
+FitModel_ds9 <- function(db, ts.col, ic.col, 
+                          inipars= list(c(0.01, 0.001, 0.1),
+                                        c(5e-03, 1e-05, 0.1, 0.01, 0.01), 
+                                        c(5e-03, 1e-05, 0.1, 0.01))){
+  mod1 <- twoppFit(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, 
+                     inipars = inipars[[1]])
+  mod2 <- twopfFit(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, 
+                   inipars = inipars[[2]])
+  mod3 <- twopsFit(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, 
+                   inipars = inipars[[3]])
+  
+  days= mod1$SoilRmodel@times
+  Mlist=list(mod1, mod2, mod3)
+  modelNames=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+  Rt=lapply(Mlist, function(x){getReleaseFlux(x$SoilRmodel)})
+  
+  par(mfrow=c(2,2))
+  for (i in c(1:3)){
+    matplot(days, Rt[[i]], type="l", lty=1, ylab=db$variables$V2$units, xlab="Day", 
+    main=modelNames[i])
+    points(db$timeSeries[, c(1,ts.col)], pch=19, cex=0.5)}
+  par(mfrow=c(1,1))
+  
+  aic=sapply(Mlist, function(x){AIC=x$AIC})
+  k1=sapply(Mlist, function(x){x$FMEmodel$par[1]})
+  k2=sapply(Mlist, function(x){x$FMEmodel$par[2]})
+
+  pC0= c(mod1$FMEmodel$par[3], mod2$FMEmodel$par[5], mod3$FMEmodel$par[4])
+  a21=c(NA, mod2$FMEmodel$par[3], mod3$FMEmodel$par[3])
+  a12=c(NA, mod2$FMEmodel$par[4], NA)
+  tbldb <- data.frame(model=modelNames, AIC=aic, k1=k1, k2=k2, "Proportion of C0 in pool 1"=pC0, a21=a21, a12=a12)
+  knitr::kable(tbldb)
+}
+
+```
+
+```{r, results='hide'}
+identical(as.character(ds9$initConditions[2, 'site']), as.character(ds9$variables$V3$site))
+```
+
+# Variable `r ds9$variables$V2$name`: 
+`r ds9$variables$V2$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 2, ic.col = 1)
+```
+
+
+# Variable `r ds9$variables$V3$name`: 
+`r ds9$variables$V3$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 3, ic.col = 2)
+```
+
+
+# Variable `r ds9$variables$V4$name`: 
+`r ds9$variables$V4$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 4, ic.col = 3)
+```
+
+
+# Variable `r ds9$variables$V5$name`: 
+`r ds9$variables$V5$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 5, ic.col = 4)
+```
+
+
+# Variable `r ds9$variables$V6$name`: 
+`r ds9$variables$V6$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 6, ic.col = 5)
+```
+
+
+
+```{r, results='hide'}
+identical(as.character(ds9$initConditions[6, 'site']), as.character(ds9$variables$V7$site))
+```
+
+# Variable `r ds9$variables$V7$name`: 
+`r ds9$variables$V7$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 7, ic.col = 6)
+```
+
+# Variable `r ds9$variables$V8$name`: 
+`r ds9$variables$V8$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 8, ic.col = 7)
+```
+
+# Variable `r ds9$variables$V9$name`: 
+`r ds9$variables$V9$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 9, ic.col = 8)
+```
+
+# Variable `r ds9$variables$V10$name`: 
+`r ds9$variables$V10$varDesc` 
+
+```{r}
+#FitModel_ds9(db = ds9, ts.col = 10, ic.col = 9)
+```
+
+# Variable `r ds9$variables$V11$name`: 
+`r ds9$variables$V11$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 11, ic.col = 10)
+```
+
+
+# Variable `r ds9$variables$V12$name`: 
+`r ds9$variables$V12$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 12, ic.col = 11)
+```
+
+
+# Variable `r ds9$variables$V13$name`: 
+`r ds9$variables$V13$varDesc` 
+
+```{r}
+#FitModel_ds9(db = ds9, ts.col = 13, ic.col = 12)
+```
+
+
+# Variable `r ds9$variables$V14$name`: 
+`r ds9$variables$V14$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 14, ic.col = 13)
+```
+
+
+# Variable `r ds9$variables$V15$name`: 
+`r ds9$variables$V15$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 15, ic.col = 14)
+```
+
+
+# Variable `r ds9$variables$V16$name`: 
+`r ds9$variables$V16$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 16, ic.col = 15)
+```
+
+
+# Variable `r ds9$variables$V17$name`: 
+`r ds9$variables$V17$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 17, ic.col = 16)
+```
+
+
+# Variable `r ds9$variables$V18$name`: 
+`r ds9$variables$V18$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 18, ic.col = 17)
+```
+
+
+# Variable `r ds9$variables$V19$name`: 
+`r ds9$variables$V19$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 19, ic.col = 18)
+```
+
+
+# Variable `r ds9$variables$V20$name`: 
+`r ds9$variables$V20$varDesc` 
+
+```{r}
+#FitModel_ds9(db = ds9, ts.col = 20, ic.col = 19)
+```
+
+
+# Variable `r ds9$variables$V21$name`: 
+`r ds9$variables$V21$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 21, ic.col = 20)
+```
+
+
+# Variable `r ds9$variables$V22$name`: 
+`r ds9$variables$V22$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 22, ic.col = 21)
+```
+
+
+# Variable `r ds9$variables$V23$name`: 
+`r ds9$variables$V23$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 23, ic.col = 22)
+```
+
+
+# Variable `r ds9$variables$V24$name`: 
+`r ds9$variables$V24$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 24, ic.col = 23)
+```
+
+
+# Variable `r ds9$variables$V25$name`: 
+`r ds9$variables$V25$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 25, ic.col = 24)
+```
+
+
+# Variable `r ds9$variables$V26$name`: 
+`r ds9$variables$V26$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 26, ic.col = 25)
+```
+
+
+# Variable `r ds9$variables$V27$name`: 
+`r ds9$variables$V27$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 27, ic.col = 26)
+```
+
+
+# Variable `r ds9$variables$V28$name`: 
+`r ds9$variables$V28$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 28, ic.col = 27)
+```
+
+
+
+# Variable `r ds9$variables$V29$name`: 
+`r ds9$variables$V29$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 29, ic.col = 28)
+```
+
+
+# Variable `r ds9$variables$V30$name`: 
+`r ds9$variables$V30$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 30, ic.col = 29)
+```
+
+
+# Variable `r ds9$variables$V31$name`: 
+`r ds9$variables$V31$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 31, ic.col = 30)
+```
+
+
+# Variable `r ds9$variables$V32$name`: 
+`r ds9$variables$V32$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 32, ic.col = 31)
+```
+
+
+# Variable `r ds9$variables$V33$name`: 
+`r ds9$variables$V33$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 33, ic.col = 31)
+```
+
+
+# Variable `r ds9$variables$V34$name`: 
+`r ds9$variables$V34$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 34, ic.col = 33)
+```
+
+
+# Variable `r ds9$variables$V35$name`: 
+`r ds9$variables$V35$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 35, ic.col = 34)
+```
+
+
+# Variable `r ds9$variables$V36$name`: 
+`r ds9$variables$V36$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 36, ic.col = 35)
+```
+
+
+
+# Variable `r ds9$variables$V37$name`: 
+`r ds9$variables$V37$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 37, ic.col = 36)
+```
+
+
+# Variable `r ds9$variables$V38$name`: 
+`r ds9$variables$V38$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 38, ic.col = 37)
+```
+
+
+# Variable `r ds9$variables$V39$name`: 
+`r ds9$variables$V39$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 39, ic.col = 38)
+```
+
+
+# Variable `r ds9$variables$V40$name`: 
+`r ds9$variables$V40$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 40, ic.col = 39)
+```
+
+
+# Variable `r ds9$variables$V41$name`: 
+`r ds9$variables$V41$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 41, ic.col = 40)
+```
+
+
+# Variable `r ds9$variables$V42$name`: 
+`r ds9$variables$V42$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 42, ic.col = 41)
+```
+
+
+# Variable `r ds9$variables$V43$name`: 
+`r ds9$variables$V43$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 43, ic.col = 42)
+```
+
+
+# Variable `r ds9$variables$V44$name`: 
+`r ds9$variables$V44$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 44, ic.col = 43)
+```
+
+
+# Variable `r ds9$variables$V45$name`: 
+`r ds9$variables$V45$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 45, ic.col = 44)
+```
+
+
+# Variable `r ds9$variables$V46$name`: 
+`r ds9$variables$V46$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 46, ic.col = 45)
+```
+
+
+# Variable `r ds9$variables$V47$name`: 
+`r ds9$variables$V47$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 47, ic.col = 46)
+```
+
+
+# Variable `r ds9$variables$V48$name`: 
+`r ds9$variables$V48$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 48, ic.col = 47)
+```
+
+
+
+# Variable `r ds9$variables$V49$name`: 
+`r ds9$variables$V49$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 49, ic.col = 48)
+```
+
+
+# Variable `r ds9$variables$V50$name`: 
+`r ds9$variables$V50$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 50, ic.col = 49)
+```
+
+# Variable `r ds9$variables$V51$name`: 
+`r ds9$variables$V51$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 51, ic.col = 50)
+```
+
+# Variable `r ds9$variables$V52$name`: 
+`r ds9$variables$V52$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 52, ic.col = 51)
+```
+
+# Variable `r ds9$variables$V53$name`: 
+`r ds9$variables$V53$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 53, ic.col = 52)
+```
+
+# Variable `r ds9$variables$V54$name`: 
+`r ds9$variables$V54$varDesc` 
+
+```{r}
+#FitModel_ds9(db = ds9, ts.col = 54, ic.col = 53)
+```
+
+# Variable `r ds9$variables$V55$name`: 
+`r ds9$variables$V55$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 55, ic.col = 54)
+```
+
+# Variable `r ds9$variables$V56$name`: 
+`r ds9$variables$V56$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 56, ic.col = 55)
+```
+
+# Variable `r ds9$variables$V57$name`: 
+`r ds9$variables$V57$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 57, ic.col = 56)
+```
+
+# Variable `r ds9$variables$V58$name`: 
+`r ds9$variables$V58$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 58, ic.col = 57)
+```
+
+# Variable `r ds9$variables$V59$name`: 
+`r ds9$variables$V59$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 59, ic.col = 58)
+```
+
+
+# Variable `r ds9$variables$V60$name`: 
+`r ds9$variables$V60$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 60, ic.col = 59)
+```
+
+
+
+# Variable `r ds9$variables$V61$name`: 
+`r ds9$variables$V61$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 61, ic.col = 60)
+```
+
+# Variable `r ds9$variables$V62$name`: 
+`r ds9$variables$V62$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 62, ic.col = 61)
+```
+
+# Variable `r ds9$variables$V63$name`: 
+`r ds9$variables$V63$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 63, ic.col = 62)
+```
+
+# Variable `r ds9$variables$V63$name`: 
+`r ds9$variables$V63$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 63, ic.col = 62)
+```
+
+
+# Variable `r ds9$variables$V64$name`: 
+`r ds9$variables$V64$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 64, ic.col = 63)
+```
+
+# Variable `r ds9$variables$V65$name`: 
+`r ds9$variables$V65$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 65, ic.col = 64)
+```
+
+
+# Variable `r ds9$variables$V66$name`: 
+`r ds9$variables$V66$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 66, ic.col = 65)
+```
+
+# Variable `r ds9$variables$V67$name`: 
+`r ds9$variables$V67$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 67, ic.col = 66)
+```
+
+# Variable `r ds9$variables$V68$name`: 
+`r ds9$variables$V68$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 68, ic.col = 67)
+```
+
+# Variable `r ds9$variables$V69$name`: 
+`r ds9$variables$V69$varDesc` 
+
+```{r}
+#FitModel_ds9(db = ds9, ts.col = 69, ic.col = 68)
+```
+
+
+# Variable `r ds9$variables$V70$name`: 
+`r ds9$variables$V70$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 70, ic.col = 69)
+```
+
+
+# Variable `r ds9$variables$V71$name`: 
+`r ds9$variables$V71$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 71, ic.col = 70)
+```
+
+
+# Variable `r ds9$variables$V72$name`: 
+`r ds9$variables$V72$varDesc` 
+
+```{r}
+#FitModel_ds9(db = ds9, ts.col = 72, ic.col = 71)
+```
+
+
+# Variable `r ds9$variables$V73$name`: 
+`r ds9$variables$V73$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 73, ic.col = 72)
+```
+
+
+# Variable `r ds9$variables$V74$name`: 
+`r ds9$variables$V74$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 74, ic.col = 73)
+```
+
+
+# Variable `r ds9$variables$V75$name`: 
+`r ds9$variables$V75$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 75, ic.col = 74)
+```
+
+
+# Variable `r ds9$variables$V76$name`: 
+`r ds9$variables$V76$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 76, ic.col = 75)
+```
+
+
+# Variable `r ds9$variables$V77$name`: 
+`r ds9$variables$V77$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 77, ic.col = 76)
+```
+
+
+# Variable `r ds9$variables$V78$name`: 
+`r ds9$variables$V78$varDesc` 
+
+```{r}
+FitModel_ds9(db = ds9, ts.col = 78, ic.col = 77)
+```
+
+
+
+
+
+
+
+

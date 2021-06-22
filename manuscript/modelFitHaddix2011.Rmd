@@ -1,0 +1,340 @@
+---
+title: "Fitting models on Haddix2011SSSJA"
+author: "Mina Azizi-Rad"
+date: "6/21/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+packs <- c('SoilR', 'sidb', 'R.utils')
+sapply(packs, require, character.only=TRUE)
+rm(list=ls())
+
+```
+
+
+
+
+```{r sidb database, results='hide'}
+db=loadEntries(path="~/sidb/data/")
+db_flat=flatterSIDb(db)
+```
+
+
+# Dataset `r db[[15]]$citationKey` 
+
+<!-- "Haddix2011SSSJA" -->
+
+A dataset with 37 variables of `r db_flat$vars$Haddix2011SSSJA[1, "incDesc"] ` 6 different sites each two levels of vegetation (Native grassland and cultivated). and three levels of temperature (15, 25, 35)
+
+```{r, results='hide'}
+ds15 <- db[[15]]
+str(ds15$timeSeries)
+isCumulative(data.frame(ds15$timeSeries$time,  ds15$timeSeries$C_SasNG_15) )
+plotEntry(db[[15]])
+```
+
+
+
+```{r}
+FitModel_ds15 <- function(db, ts.col, ic.col, 
+                          inipars= list(c(0.01, 0.001, 0.1),
+                                        c(5e-03, 1e-05, 0.1, 0.01, 0.01), 
+                                        c(5e-03, 1e-05, 0.1, 0.01))){
+  mod1 <- twoppFit(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, 
+                     inipars = inipars[[1]])
+  mod2 <- twopfFit(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, 
+                   inipars = inipars[[2]])
+  mod3 <- twopsFit(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, 
+                   inipars = inipars[[3]])
+  
+  days= mod1$SoilRmodel@times
+  Mlist=list(mod1, mod2, mod3)
+  modelNames=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+  Rt=lapply(Mlist, function(x){getReleaseFlux(x$SoilRmodel)})
+  
+  par(mfrow=c(2,2))
+  for (i in c(1:3)){
+    matplot(days, Rt[[i]], type="l", lty=1, ylab=db$variables$V2$units, xlab="Day", 
+    main=modelNames[i])
+    points(db$timeSeries[, c(1,ts.col)], pch=19, cex=0.5)}
+  par(mfrow=c(1,1))
+  
+  aic=sapply(Mlist, function(x){AIC=x$AIC})
+  k1=sapply(Mlist, function(x){x$FMEmodel$par[1]})
+  k2=sapply(Mlist, function(x){x$FMEmodel$par[2]})
+
+  pC0= c(mod1$FMEmodel$par[3], mod2$FMEmodel$par[5], mod3$FMEmodel$par[4])
+  a21=c(NA, mod2$FMEmodel$par[3], mod3$FMEmodel$par[3])
+  a12=c(NA, mod2$FMEmodel$par[4], NA)
+  tbldb <- data.frame(model=modelNames, AIC=aic, k1=k1, k2=k2, "Proportion of C0 in pool 1"=pC0, a21=a21, a12=a12)
+  knitr::kable(tbldb)
+}
+
+```
+
+```{r, results='hide'}
+identical(as.character(ds15$initConditions[1, 'vegetation']) , as.character(ds15$variables$V2$vegetation) )
+identical(as.character(ds15$initConditions[1, 'site']), as.character(ds15$variables$V2$site))
+
+```
+
+# Variable `r ds15$variables$V2$name`: 
+`r ds15$variables$V2$varDesc` 
+
+```{r}
+FitModel_ds15(db = ds15, ts.col = 2, ic.col = 1)
+```
+
+
+# Variable `r ds15$variables$V3$name`: 
+`r ds15$variables$V3$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 3, ic.col = 1)
+```
+
+
+# Variable `r ds15$variables$V4$name`: 
+`r ds15$variables$V4$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 4, ic.col = 1)
+```
+
+
+# Variable `r ds15$variables$V5$name`: 
+`r ds15$variables$V5$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 5, ic.col = 2, inipars = list(c(0.01, 0.001, 0.1),
+                                                                c(5e-03, 1e-05, 0.1, 0.01, 0.01), 
+                                                                c(0.001, 1e-5, 0.01, 0.01)))
+```
+
+
+# Variable `r ds15$variables$V6$name`: 
+`r ds15$variables$V6$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 6, ic.col = 2)
+```
+
+
+# Variable `r ds15$variables$V7$name`: 
+`r ds15$variables$V7$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 7, ic.col = 2)
+```
+
+
+# Variable `r ds15$variables$V8$name`: 
+`r ds15$variables$V8$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 8, ic.col = 3)
+```
+
+
+# Variable `r ds15$variables$V9$name`: 
+`r ds15$variables$V9$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 9, ic.col = 3)
+```
+
+
+# Variable `r ds15$variables$V10$name`: 
+`r ds15$variables$V10$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 10, ic.col = 3)
+```
+
+
+# Variable `r ds15$variables$V11$name`: 
+`r ds15$variables$V11$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 11, ic.col = 4)
+```
+
+
+# Variable `r ds15$variables$V12$name`: 
+`r ds15$variables$V12$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 12, ic.col = 4)
+```
+
+
+# Variable `r ds15$variables$V13$name`: 
+`r ds15$variables$V13$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 13, ic.col = 4)
+```
+
+
+# Variable `r ds15$variables$V14$name`: 
+`r ds15$variables$V14$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 14, ic.col = 5)
+```
+
+
+# Variable `r ds15$variables$V15$name`: 
+`r ds15$variables$V15$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 15, ic.col = 5)
+```
+
+
+# Variable `r ds15$variables$V16$name`: 
+`r ds15$variables$V16$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 16, ic.col = 5)
+```
+
+
+# Variable `r ds15$variables$V17$name`: 
+`r ds15$variables$V17$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 17, ic.col = 6)
+```
+
+
+# Variable `r ds15$variables$V18$name`: 
+`r ds15$variables$V18$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 18, ic.col = 6)
+```
+
+
+# Variable `r ds15$variables$V19$name`: 
+`r ds15$variables$V19$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 19, ic.col = 6)
+```
+
+
+# Variable `r ds15$variables$V20$name`: 
+`r ds15$variables$V20$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 20, ic.col = 7)
+```
+
+
+# Variable `r ds15$variables$V21$name`: 
+`r ds15$variables$V21$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 21, ic.col = 7)
+```
+
+
+# Variable `r ds15$variables$V22$name`: 
+`r ds15$variables$V22$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 22, ic.col = 7)
+```
+
+
+# Variable `r ds15$variables$V23$name`: 
+`r ds15$variables$V23$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 23, ic.col = 8)
+```
+
+
+# Variable `r ds15$variables$V24$name`: 
+`r ds15$variables$V24$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 24, ic.col = 8)
+```
+
+
+# Variable `r ds15$variables$V25$name`: 
+`r ds15$variables$V25$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 25, ic.col = 8)
+```
+
+
+# Variable `r ds15$variables$V26$name`: 
+`r ds15$variables$V26$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 26, ic.col = 9)
+```
+
+
+# Variable `r ds15$variables$V27$name`: 
+`r ds15$variables$V27$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 27, ic.col = 9)
+```
+
+
+# Variable `r ds15$variables$V28$name`: 
+`r ds15$variables$V28$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 28, ic.col = 9)
+```
+
+
+# Variable `r ds15$variables$V29$name`: 
+`r ds15$variables$V29$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 29, ic.col = 10, inipars = list(c(0.01, 0.001, 0.1),
+                                                                c(5e-03, 1e-05, 0.1, 0.01, 0.01), 
+                                                                c(0.001, 1e-5, 0.01, 0.01)))
+```
+
+
+# Variable `r ds15$variables$V30$name`: 
+`r ds15$variables$V30$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 30, ic.col = 10,inipars = list(c(0.01, 0.001, 0.1),
+                                                                c(1e-03, 1e-05, 0.1, 0.01, 0.01), 
+                                                                c(0.001, 1e-5, 0.01, 0.01)))
+```
+
+
+# Variable `r ds15$variables$V31$name`: 
+`r ds15$variables$V31$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 31, ic.col = 10)
+```
+
+
+# Variable `r ds15$variables$V32$name`: 
+`r ds15$variables$V32$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 32, ic.col = 11)
+```
+
+
+# Variable `r ds15$variables$V33$name`: 
+`r ds15$variables$V33$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 33, ic.col = 11)
+```
+
+
+# Variable `r ds15$variables$V34$name`: 
+`r ds15$variables$V34$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 34, ic.col = 11)
+```
+
+
+# Variable `r ds15$variables$V35$name`: 
+`r ds15$variables$V35$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 35, ic.col = 12)
+```
+
+
+# Variable `r ds15$variables$V36$name`: 
+`r ds15$variables$V36$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 36, ic.col = 12)
+```
+
+
+# Variable `r ds15$variables$V37$name`: 
+`r ds15$variables$V37$varDesc` 
+```{r}
+FitModel_ds15(db = ds15, ts.col = 37, ic.col = 12)
+```
+

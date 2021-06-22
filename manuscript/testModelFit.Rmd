@@ -7,166 +7,54 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-library(sidb)
-library(SoilR)
+packs <- c('SoilR', 'sidb', 'R.utils')
+sapply(packs, require, character.only=TRUE)
 rm(list=ls())
 ```
 
 ## Testing multi models to the dataset of SidB database
 
 Here we test three different two-pool model to each individual datasets. 
-
+As a start we test each time series separately to asses the available information. 
 
 ```{r sidb database, results='hide'}
 db=loadEntries(path="~/sidb/data/")
 db_flat=flatterSIDb(db)
 ```
 
+
 ```{r inipairs}
+# The initial parameter for each model structure, First we test the model using these inipar sets, but we change them if they didn't work. 
 twopp_inipars= c(0.01, 0.001, 0.1)
 twops_inipars= c(0.005, 0.00001, 0.1, 0.01)
 twopf_inipars= c(0.005, 0.00001, 0.1, 0.01, 0.01)
 ```
-
-# Dataset `r db[[1]]$citationKey`
-The initial corbon is missing
- 
-
-\newpage
-
-# Dataset `r db[[3]]$citationKey` 
-```{r, results='hide'}
-ds3 <- db[[3]]
-str(ds3$timeSeries)
-plotEntry(ds3)
-```
-
-
-```{r, results='hide'}
-iniC_LTV <- ds3$initConditions[1, "carbonMean"]
-iniC_UTV <- ds3$initConditions[2, "carbonMean"]
-iniC_B <- ds3$initConditions[3, "carbonMean"]
-iniC_V <- ds3$initConditions[4, "carbonMean"]
-
-unitC=ds3$initConditions[3, "carbonUnits"]
-
-#Mod1_3 <- twoppFit(timeSeries = ds3$timeSeries[, c(1,2)], initialCarbon = ds3$initConditions)
-```
-
-## V2: Dataset `r db[[3]]$citationKey`, Variable `r db[[3]]$variables$V2$name `, site `r ds3$variables$V2$site`
-The initial amount of carbon is `r iniC_LTV` `r unitC`
-```{r V2 LTV}
-# Variable1
-Mod1_32=twoppFit(timeSeries = ds3$timeSeries[, c(1,2)], initialCarbon = iniC_LTV*1e5, inipars =twopp_inipars)
-#Mod2_32=twopsFit(timeSeries = ds3$timeSeries[, c(1,2)], initialCarbon = iniC_LTV*1e5, inipars = twops_inipars)
-Mod3_32=twopfFit(timeSeries = ds3$timeSeries[, c(1,2)], initialCarbon = iniC_LTV*1e5, inipars = twopf_inipars)
-```
-
-```{r}
-days32=Mod1_32$SoilRmodel@times
-Mlist32=list(Mod1_32, Mod3_32)
-Rs32=sapply(Mlist32, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
-```
-
-```{r}
-modelNames32=c("Two-pool parallel", "Two-pool feedback")
-Rt32=lapply(Mlist32, function(x){getReleaseFlux(x$SoilRmodel)})
-```
-
-
-```{r}
-par(mfrow=c(1,2))
-for(i in c(1,2)){
-  matplot(days32, Rt32[[i]], type="l", lty = 1, ylab = ds3$variables$V2$units, xlab="Day", 
-          main=modelNames32[i])
-  points(ds3$timeSeries[, c(1,2)], pch=19, cex=0.5)
-}
-par(mfrow=c(1,1))
-
-ds3$variables$V2
-```
-
-## V3: Dataset `r db[[3]]$citationKey`, Variable `r ds3$variables$V3$name`, site `r ds3$variables$V3$site`
-```{r V3 Upper Taylor Valley UTV}
-Mod1_33=twoppFit(timeSeries = ds3$timeSeries[,c(1,3)], initialCarbon = iniC_UTV*1e5, inipars = twopp_inipars)
-Mod2_33=twopsFit(timeSeries = ds3$timeSeries[, c(1,3)], initialCarbon = iniC_UTV*1e5, inipars = twops_inipars)
-#Mod3_33=twopfFit(timeSeries = ds3$timeSeries[, c(1,3)], initialCarbon = iniC_UTV*1e5, inipars = twopf_inipars)
-# DLSODA-  Warning..Internal T (=R1) and H (=R2) are
-#       such that in the machine, T + H = T on the next step  
-#      (H = step size). Solver will continue anyway.
-# In above message, R1 = 0, R2 = 0
-#  
-# DINTDY-  T (=R1) illegal      
-# In above message, R1 = 0.224449
-#  
-#       T not in interval TCUR - HU (= R1) to TCUR (=R2)      
-# In above message, R1 = 0, R2 = 0
-#  
-# DINTDY-  T (=R1) illegal      
-# In above message, R1 = 0.448898
-#  
-#       T not in interval TCUR - HU (= R1) to TCUR (=R2)      
-# In above message, R1 = 0, R2 = 0
-#  
-# DLSODA-  Trouble in DINTDY.  ITASK = I1, TOUT = R1
-# In above message, I1 = 1
-#  
-# In above message, R1 = 0.448898
-```
-
-
-```{r}
-days33=Mod1_33$SoilRmodel@times
-Mlist33=list(Mod1_33, Mod2_33)
-Rs33=sapply(Mlist33, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
-```
-
-```{r}
-modelNames33=c("Two-pool parallel", "Two-pool series")
-Rt33=lapply(Mlist33, function(x){getReleaseFlux(x$SoilRmodel)})
-```
-
-
-```{r}
-par(mfrow=c(1,2))
-for(i in c(1,2)){
-  matplot(days33, Rt33[[i]], type="l", lty = 1, ylab=ds3$variables$V3$units, xlab = "Day", 
-          main=modelNames33[i])
-  points(ds3$timeSeries[, c(1,2)], pch=19, cex=0.5)
-}
-par(mfrow=c(1,1))
-```
-
-## V4: Dataset `r db[[3]]$citationKey`, Variable `r ds3$variables$V4$name`, site `r ds3$variables$V4$site`
-```{r V4 Beacon}
-Mod1_34=twoppFit(timeSeries = ds3$timeSeries[,c(1,4)], initialCarbon = iniC_B*1e5, inipars = twopp_inipars)
-#Mod2_34=twopsFit(timeSeries = ds3$timeSeries[, c(1,4)], initialCarbon = iniC_B*1e5, inipars = twops_inipars)
-#Mod3_34=twopfFit(timeSeries = ds3$timeSeries[, c(1,4)], initialCarbon = iniC_B*1e5, inipars = twopf_inipars)
-```
-
-
-
-## V5: Dataset `r db[[3]]$citationKey`, Variable `r ds3$variables$V5$name`, site `r ds3$variables$V5$site`
-```{r V5 Victoria}
-
-Mod1_35=twoppFit(timeSeries = ds3$timeSeries[,c(1,4)], initialCarbon = iniC_B*1e5, inipars = twopp_inipars)
-#Mod2_35=twopsFit(timeSeries = ds3$timeSeries[, c(1,4)], initialCarbon = iniC_B*1e5, inipars = twops_inipars)
-#Mod3_35=twopfFit(timeSeries = ds3$timeSeries[, c(1,4)], initialCarbon = iniC_B*1e5, inipars = twopf_inipars)
-```
-
+-
 
 \newpage
 
 # Dataset `r db[[4]]$citationKey` 
 
 This is the results of a depth-warming experiment with two levels of Control and warming. The dataset has 9 column of time, three depth on each warming and control. The variables V3, V5, V7, V9, V11 and V15 are the sd. 
+
+initial carbon unit is `r db[[4]]$initConditions[1, "carbonUnits"]`
 ```{r, results='hide'}
+db[[4]]$citationKey #Bracho2016SBB
 ds4 <- db[[4]]
 str(ds4$timeSeries)
 isCumulative(data.frame(ds4$timeSeries$time,  ds4$timeSeries$control_7.5_15_mean) )
-ds4$initConditions
+ds4$initConditions$carbonUnits
+ds4$variables$V2$units
 plotEntry(db[[4]])
 ```
+```{r}
+# source.R <- file.path('~/sidb/scripts/multiSidbFit')
+# sourceDirectory(source.R, modifiedOnly=TRUE, verbose=TRUE)
+# tmp <- multiSidbFit(db = ds4, model = c('twoppFit', 'twopsFit', 'twopfFit'), 
+#                     inipars = list(c(twopp_inipars, twops_inipars, twopf_inipars)), 
+#                     ic.col = list(3), ts.col = list(NULL))
+```
+
 
 ```{r iniC dataset 4}
 iniC_C7.5=ds4$initConditions[1, "carbonMean"]
@@ -180,44 +68,242 @@ iniC_W50=ds4$initConditions[6, "carbonMean"]
 
 ## V1: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V2$name`, site `r ds4$variables$V2$temperature`, depth `r ds4$variables$V2$midDepth`  
 ```{r}
-Mod1_42=twoppFit(timeSeries = ds4$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e5 , inipars = twopp_inipars)
-Mod2_42=twopfFit(timeSeries = ds4$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e5 , inipars = twopf_inipars)
-Mod3_42=twopsFit(timeSeries = ds4$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e5 , inipars = twops_inipars)
+Mod1_42=twoppFit(timeSeries = ds4$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e4 , inipars = twopp_inipars)
+Mod2_42=twopfFit(timeSeries = ds4$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e4 , inipars = twopf_inipars)
+Mod3_42=twopsFit(timeSeries = ds4$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e4 , inipars = twops_inipars)
 ```
+
+
+```{r}
+days42=Mod1_42$SoilRmodel@times
+Mlist42=list(Mod1_42, Mod2_42, Mod3_42)
+
+Rs42=sapply(Mlist42, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames42=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+Rt42=lapply(Mlist42, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(2,2))
+for(i in c(1:3)){
+  matplot(days42, Rt42[[i]], type="l", lty = 1, ylab = ds4$variables$V2$units, xlab="Day", 
+          main=modelNames42[i])
+  points(ds4$timeSeries[, c(1,2)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+```
+```{r}
+aic <- sapply(Mlist42, function(x){x$AIC})
+tbldb4 <- data.frame(model=modelNames42, AIC=aic)
+knitr::kable(tbldb4)
+```
+
 
 ## V4: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V4$name`, site `r ds4$variables$V4$temperature`, depth `r ds4$variables$V4$midDepth` 
 ```{r}
-Mod1_44=twoppFit(timeSeries = ds4$timeSeries[, c(1,4)], initialCarbon =iniC_C20*1e5 , inipars = twopp_inipars)
-Mod2_44=twopfFit(timeSeries = ds4$timeSeries[, c(1,4)], initialCarbon =iniC_C20*1e5 , inipars = twopf_inipars)
-Mod3_44=twopsFit(timeSeries = ds4$timeSeries[, c(1,4)], initialCarbon =iniC_C20*1e5 , inipars = twops_inipars)
+#iniC unit is % and the fluxs are in microg/gSoil/day percent*1e4
+
+Mod1_44=twoppFit(timeSeries = ds4$timeSeries[, c(1,4)], initialCarbon =iniC_C20*1e4 ,  
+                 inipars =twopp_inipars ) #0.010 0.001 0.100
+Mod2_44=twopfFit(timeSeries = ds4$timeSeries[, c(1,4)], initialCarbon =iniC_C20*1e4 , inipars = twopf_inipars)
+Mod3_44=twopsFit(timeSeries = ds4$timeSeries[, c(1,4)], initialCarbon =iniC_C20*1e4 , inipars = twops_inipars)
 ```
+
+
+```{r}
+days44=Mod1_44$SoilRmodel@times
+Mlist44=list(Mod1_44, Mod2_44, Mod3_44)
+
+Rs44=sapply(Mlist44, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames44=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+Rt44=lapply(Mlist44, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(2,2))
+for(i in c(1:3)){
+  matplot(days44, Rt44[[i]], type="l", lty = 1, ylab = ds4$variables$V4$units, xlab="Day", 
+          main=modelNames44[i])
+  points(ds4$timeSeries[, c(1,4)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+```
+```{r}
+aic <- sapply(Mlist44, function(x){x$AIC})
+tbldb44 <- data.frame(model=modelNames44, AIC=aic)
+knitr::kable(tbldb44, digits = 2)
+```
+
+
+
+
 
 ## V6: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V6$name`, site `r ds4$variables$V6$temperature`, depth `r ds4$variables$V6$midDepth` 
 ```{r}
-Mod1_46=twoppFit(timeSeries = ds4$timeSeries[, c(1,6)], initialCarbon =iniC_C50*1e5 , inipars = twopp_inipars)
-#Mod2_46=twopfFit(timeSeries = ds4$timeSeries[, c(1,6)], initialCarbon =iniC_C50*1e5 , inipars = twopf_inipars)
-Mod3_46=twopsFit(timeSeries = ds4$timeSeries[, c(1,6)], initialCarbon =iniC_C50*1e5 , inipars = twops_inipars)
+Mod1_46=twoppFit(timeSeries = ds4$timeSeries[, c(1,6)], initialCarbon =iniC_C50*1e4 , inipars = twopp_inipars)
+
+Mod2_46=twopfFit(timeSeries = ds4$timeSeries[, c(1,6)], initialCarbon =iniC_C50*1e4 , 
+                 inipars =twopf_inipars) # c(0.5, 0.00001, 0.1, 0.01, 0.01) #
+Mod3_46=twopsFit(timeSeries = ds4$timeSeries[, c(1,6)], initialCarbon =iniC_C50*1e4 , inipars = twops_inipars)
 ```
+
+
+```{r}
+days46=Mod1_46$SoilRmodel@times
+Mlist46=list(Mod1_46, Mod2_46, Mod3_46)
+
+Rs46=sapply(Mlist46, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames46=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+Rt46=lapply(Mlist46, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(2,2))
+for(i in c(1:3)){
+  matplot(days46, Rt46[[i]], type="l", lty = 1, ylab = ds4$variables$V6$units, xlab="Day", 
+          main=modelNames46[i])
+  points(ds4$timeSeries[, c(1,6)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+```
+```{r}
+aic <- sapply(Mlist46, function(x){x$AIC})
+tbldb46 <- data.frame(model=modelNames46, AIC=aic)
+knitr::kable(tbldb46, digits = 2)
+```
+
 
 
 ## V8: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V8$name`, site `r ds4$variables$V8$temperature`, depth `r ds4$variables$V8$midDepth` 
 ```{r}
-Mod1_48=twoppFit(timeSeries = ds4$timeSeries[, c(1,8)], initialCarbon =iniC_C7.5*1e5 , inipars = twopp_inipars)
-Mod2_48=twopfFit(timeSeries = ds4$timeSeries[, c(1,8)], initialCarbon =iniC_C7.5*1e5 , inipars = twopf_inipars)
-Mod3_48=twopsFit(timeSeries = ds4$timeSeries[, c(1,8)], initialCarbon =iniC_C7.5*1e5 , inipars = twops_inipars)
+Mod1_48=twoppFit(timeSeries = ds4$timeSeries[, c(1,8)], initialCarbon =iniC_C7.5*1e4 , inipars = twopp_inipars)
+Mod2_48=twopfFit(timeSeries = ds4$timeSeries[, c(1,8)], initialCarbon =iniC_C7.5*1e4 , inipars = twopf_inipars)
+Mod3_48=twopsFit(timeSeries = ds4$timeSeries[, c(1,8)], initialCarbon =iniC_C7.5*1e4 , inipars = twops_inipars)
 ```
+
+
+
+```{r}
+days48=Mod1_48$SoilRmodel@times
+Mlist48=list(Mod1_48, Mod2_48, Mod3_48)
+
+Rs48=sapply(Mlist48, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames48=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+Rt48=lapply(Mlist48, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(2,2))
+for(i in c(1:3)){
+  matplot(days48, Rt48[[i]], type="l", lty = 1, ylab = ds4$variables$V8$units, xlab="Day", 
+          main=modelNames48[i])
+  points(ds4$timeSeries[, c(1,8)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+```
+```{r}
+aic <- sapply(Mlist48, function(x){x$AIC})
+tbldb48 <- data.frame(model=modelNames48, AIC=aic)
+knitr::kable(tbldb48, digits = 2)
+```
+
 
 ## V10: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V10$name`, site `r ds4$variables$V10$temperature`, depth `r ds4$variables$V10$midDepth` 
 ```{r}
-Mod1_410=twoppFit(timeSeries = ds4$timeSeries[, c(1,10)], initialCarbon =iniC_C20*1e5 , inipars = twopp_inipars)
-Mod2_410=twopfFit(timeSeries = ds4$timeSeries[, c(1,10)], initialCarbon =iniC_C20*1e5 , inipars = twopf_inipars)
-#Mod3_410=twopsFit(timeSeries = ds4$timeSeries[, c(1,10)], initialCarbon =iniC_C20*1e5 , inipars = twops_inipars)
+Mod1_410=twoppFit(timeSeries = ds4$timeSeries[, c(1,10)], initialCarbon =iniC_C20*1e4 , inipars = twopp_inipars)
+Mod2_410=twopfFit(timeSeries = ds4$timeSeries[, c(1,10)], initialCarbon =iniC_C20*1e4 , inipars = twopf_inipars)
+Mod3_410=twopsFit(timeSeries = ds4$timeSeries[, c(1,10)], initialCarbon =iniC_C20*1e4 , 
+                  inipars = twops_inipars) #c(0.05, 1e-5, 0.1, 0.01 ))  #
 ```
+
+
+```{r}
+days410=Mod1_410$SoilRmodel@times
+Mlist410=list(Mod1_410, Mod2_410, Mod3_410)
+
+Rs410=sapply(Mlist410, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames410=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+Rt410=lapply(Mlist410, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(2,2))
+for(i in c(1:3)){
+  matplot(days410, Rt410[[i]], type="l", lty = 1, ylab = ds4$variables$V10$units, xlab="Day", 
+          main=modelNames410[i])
+  points(ds4$timeSeries[, c(1,10)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+```
+```{r}
+aic <- sapply(Mlist410, function(x){x$AIC})
+tbldb410 <- data.frame(model=modelNames410, AIC=aic)
+knitr::kable(tbldb410, digits = 2)
+```
+
+
 ## V12: Dataset `r db[[4]]$citationKey`, variable `r ds4$variables$V12$name`, site `r ds4$variables$V12$temperature`, depth `r ds4$variables$V12$midDepth` 
 ```{r}
-Mod1_412=twoppFit(timeSeries = ds4$timeSeries[, c(1,12)], initialCarbon =iniC_C50*1e5 , inipars = twopp_inipars)
-#Mod2_412=twopfFit(timeSeries = ds4$timeSeries[, c(1,12)], initialCarbon =iniC_C50*1e5 , inipars = twopf_inipars)
-Mod3_412=twopsFit(timeSeries = ds4$timeSeries[, c(1,12)], initialCarbon =iniC_C50*1e5 , inipars = twops_inipars)
+Mod1_412=twoppFit(timeSeries = ds4$timeSeries[, c(1,12)], initialCarbon =iniC_C50*1e4 , inipars = twopp_inipars) #c(0.1, 0.01, 0.1)) #
+Mod2_412=twopfFit(timeSeries = ds4$timeSeries[, c(1,12)], initialCarbon =iniC_C50*1e4 , 
+                  inipars = twopf_inipars) #c(0.05, 1e-5, 0.1, 0.01, 0.01)) #
+Mod3_412=twopsFit(timeSeries = ds4$timeSeries[, c(1,12)], initialCarbon =iniC_C50*1e4 , inipars = twops_inipars)#c(0.05, 1e-5, 0.1, 0.01  )) 
+
+```
+
+
+```{r}
+days412=Mod1_412$SoilRmodel@times
+Mlist412=list(Mod1_412, Mod2_412, Mod3_412)
+
+Rs412=sapply(Mlist412, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames412=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+Rt412=lapply(Mlist412, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(2,2))
+for(i in c(1:3)){
+  matplot(days412, Rt412[[i]], type="l", lty = 1, ylab = ds4$variables$V12$units, xlab="Day", 
+          main=modelNames412[i])
+  points(ds4$timeSeries[, c(1,12)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+```
+```{r}
+aic <- sapply(Mlist412, function(x){x$AIC})
+tbldb412 <- data.frame(model=modelNames412, AIC=aic)
+knitr::kable(tbldb412, digits = 2)
 ```
 
 <!---
@@ -269,10 +355,12 @@ Mod3_63=twopsFit(timeSeries = ds6$timeSeries[, c(1,3)], initialCarbon =iniC_G10*
 
 # Dataset `r db[[9]]$citationKey` 
 
+<!--- "Crow2019a" --->
 A dataset with 79 variables of `r db_flat$vars$Crow2019a[1, "incDesc"] ` 
 
 ```{r, results='hide'}
 ds9 <- db[[9]]
+ds9$variables$V2$units
 str(ds9$timeSeries)
 isCumulative(data.frame(ds9$timeSeries$time,  ds9$timeSeries$Site01) )
 plotEntry(db[[9]])
@@ -280,24 +368,24 @@ plotEntry(db[[9]])
 
 ## V2: Dataset `r db[[9]]$citationKey`, variable `r ds9$variables$V2$name`, site `r ds9$variables$V2$site`
 ```{r}
-Mod1_92=twoppFit(timeSeries = ds9$timeSeries[, c(1,2)], initialCarbon =ds9$initConditions[1, "carbonMean"]*1e5 , inipars = twopp_inipars)
-#Mod2_92=twopfFit(timeSeries = ds9$timeSeries[, c(1,2)], initialCarbon =ds9$initConditions[1, "carbonMean"]*1e5 , inipars = twopf_inipars)
-Mod3_92=twopsFit(timeSeries = ds9$timeSeries[, c(1,2)], initialCarbon =ds9$initConditions[1, "carbonMean"]*1e5 , inipars = twops_inipars)
+Mod1_92=twoppFit(timeSeries = ds9$timeSeries[, c(1,2)], initialCarbon =ds9$initConditions[1, "carbonMean"]*1e4 , inipars = twopp_inipars)
+Mod2_92=twopfFit(timeSeries = ds9$timeSeries[, c(1,2)], initialCarbon =ds9$initConditions[1, "carbonMean"]*1e4 , inipars = twopf_inipars)
+Mod3_92=twopsFit(timeSeries = ds9$timeSeries[, c(1,2)], initialCarbon =ds9$initConditions[1, "carbonMean"]*1e4 , inipars = twops_inipars)
 ```
 
 ## V3: Dataset `r db[[9]]$citationKey`, variable `r ds9$variables$V3$name`, site `r ds9$variables$V3$site`
 ```{r}
-Mod1_93=twoppFit(timeSeries = ds9$timeSeries[, c(1,3)], initialCarbon =ds9$initConditions[2, "carbonMean"]*1e5 , inipars = twopp_inipars)
-Mod2_93=twopfFit(timeSeries = ds9$timeSeries[, c(1,3)], initialCarbon =ds9$initConditions[2, "carbonMean"]*1e5 , inipars = twopf_inipars)
-Mod3_93=twopsFit(timeSeries = ds9$timeSeries[, c(1,3)], initialCarbon =ds9$initConditions[2, "carbonMean"]*1e5 , inipars = twops_inipars)
+Mod1_93=twoppFit(timeSeries = ds9$timeSeries[, c(1,3)], initialCarbon =ds9$initConditions[2, "carbonMean"]*1e4 , inipars = twopp_inipars)
+Mod2_93=twopfFit(timeSeries = ds9$timeSeries[, c(1,3)], initialCarbon =ds9$initConditions[2, "carbonMean"]*1e4 , inipars = twopf_inipars)
+Mod3_93=twopsFit(timeSeries = ds9$timeSeries[, c(1,3)], initialCarbon =ds9$initConditions[2, "carbonMean"]*1e4 , inipars = twops_inipars)
 ```
 
 
 ## V4: Dataset `r db[[9]]$citationKey`, variable `r ds9$variables$V4$name`, site `r ds9$variables$V4$site`
 ```{r}
-Mod1_94=twoppFit(timeSeries = ds9$timeSeries[, c(1,4)], initialCarbon =ds9$initConditions[3, "carbonMean"]*1e5 , inipars = twopp_inipars)
-#Mod2_94=twopfFit(timeSeries = ds9$timeSeries[, c(1,4)], initialCarbon =ds9$initConditions[3, "carbonMean"]*1e5 , inipars = twopf_inipars)
-Mod3_94=twopsFit(timeSeries = ds9$timeSeries[, c(1,4)], initialCarbon =ds9$initConditions[3, "carbonMean"]*1e5 , inipars = twops_inipars)
+Mod1_94=twoppFit(timeSeries = ds9$timeSeries[, c(1,4)], initialCarbon =ds9$initConditions[3, "carbonMean"]*1e4 , inipars = twopp_inipars)
+Mod2_94=twopfFit(timeSeries = ds9$timeSeries[, c(1,4)], initialCarbon =ds9$initConditions[3, "carbonMean"]*1e4 , inipars = twopf_inipars)
+Mod3_94=twopsFit(timeSeries = ds9$timeSeries[, c(1,4)], initialCarbon =ds9$initConditions[3, "carbonMean"]*1e4 , inipars = twops_inipars)
 ```
 
 
@@ -365,23 +453,18 @@ plot(ds12$timeSeries$time, ds12$timeSeries$SDC22_TSO_1)
 ```
 
 
-
-
-## V5: Dataset `r db[[12]]$citationKey`, variable `r ds12$variables$V5$name`, site `r ds12$variables$V5$site` replicate 1
-```{r}
-# Mod1_125=twoppFit(timeSeries = ds12$timeSeries[, c(1,5)], initialCarbon =ds12$initConditions[2, "carbonMean"]*1e5 , inipars = twopp_inipars)
-# Mod2_125=twopfFit(timeSeries = ds12$timeSeries[, c(1,5)], initialCarbon =ds12$initConditions[2, "carbonMean"]*1e5, inipars = twopf_inipars)
-# Mod3_125=twopsFit(timeSeries = ds12$timeSeries[, c(1,5)], initialCarbon =ds12$initConditions[2, "carbonMean"]*1e5, inipars = twops_inipars)
-```
 ---> 
 
 \newpage
 
 # Dataset `r db[[15]]$citationKey` 
 
-A dataset with 37 variables of `r db_flat$vars$Haddix2011SSSJA[1, "incDesc"] ` 6 different sites each two levels of vegetation (Native grassland and cultivated). and three levels of temperature (15, 25, 35) 
+<!-- "Haddix2011SSSJA" -->
+
+A dataset with 37 variables of `r db_flat$vars$Haddix2011SSSJA[1, "incDesc"] ` 6 different sites each two levels of vegetation (Native grassland and cultivated). and three levels of temperature (15, 25, 35)
 
 ```{r, results='hide'}
+db[[15]]$citationKey
 ds15 <- db[[15]]
 str(ds15$timeSeries)
 isCumulative(data.frame(ds15$timeSeries$time,  ds15$timeSeries$C_SasNG_15) )
@@ -391,34 +474,132 @@ plotEntry(db[[15]])
 
 
 ```{r iniC Haddix2011SSSJA}
+# the iniC units are g/kg and the fluxes are reported as mg/gSoil/d. There is no need of converting
+# g
 iniC_SasNG=ds15$initConditions[1, "carbonMean"] # carbon unit g/kg V2, V3, V4
 iniC_SasCul=ds15$initConditions[2, "carbonMean"] #V5, V6, V7
-
 iniC_BrzPas=ds15$initConditions[12, "carbonMean"]
 ```
+Units of initial carbon is `r ds15$initConditions[1, 'carbonUnits']` and the fluxes reported as `r ds15$variables$V2$units` 
 
 ## V2: Dataset `r db[[15]]$citationKey`, variable `r ds15$variables$V2$name`, site `r ds15$variables$V2$site` , Vegetation `r ds15$variables$V2$vegetation`,temperature `r ds15$variables$V2$temperature`
 ```{r}
-Mod1_152=twoppFit(timeSeries = ds15$timeSeries[, c(1,2)], initialCarbon =iniC_SasNG*1e5 , inipars = twopp_inipars)
-Mod2_152=twopfFit(timeSeries = ds15$timeSeries[, c(1,2)], initialCarbon =iniC_SasNG*1e5, inipars = twopf_inipars)
-#Mod3_152=twopsFit(timeSeries = ds15$timeSeries[, c(1,2)], initialCarbon =iniC_SasNG*1e5, inipars = twops_inipars)
+c0= iniC_SasNG*c(0.01, 1-0.01)
+ds15$variables$V2$units
+ds15$initConditions[1, 'carbonUnits']
+Mod1_152=twoppFit(timeSeries = ds15$timeSeries[,c(1,2)], initialCarbon = iniC_SasNG*1e4, inipars = twopp_inipars ) #c(0.1, 0.1, 0.1)
+Mod2_152=twopfFit(timeSeries = ds15$timeSeries[, c(1,2)], initialCarbon =iniC_SasNG*1e4, inipars =twopf_inipars) 
+Mod3_152=twopsFit(timeSeries = ds15$timeSeries[, c(1,2)], initialCarbon =iniC_SasNG*1e4, inipars = c(0.001, 1e-5, 0.15, 0.01))
 ```
+
+
+```{r}
+days152=Mod1_152$SoilRmodel@times
+Mlist152=list(Mod1_152, Mod2_152, Mod3_152)
+
+Rs152=sapply(Mlist152, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames152=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+Rt152=lapply(Mlist152, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(2,2))
+for(i in c(1:3)){
+  matplot(days152, Rt152[[i]], type="l", lty = 1, ylab = ds15$variables$V2$units, xlab="Day", 
+          main=modelNames152[i])
+  points(ds15$timeSeries[, c(1,2)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+```
+
+```{r}
+aic <- sapply(Mlist152, function(x){x$AIC})
+tbldb152 <- data.frame(model=modelNames152, AIC=aic)
+knitr::kable(tbldb152, digits = 2)
+```
+
 
 ## V3: Dataset `r db[[15]]$citationKey`, variable `r ds15$variables$V3$name`, site `r ds15$variables$V3$site` , Vegetation `r ds15$variables$V3$vegetation`,temperature `r ds15$variables$V3$temperature`
 
 ```{r}
-Mod1_153=twoppFit(timeSeries = ds15$timeSeries[, c(1,3)], initialCarbon =iniC_SasNG*1e5 , inipars = twopp_inipars)
-Mod2_153=twopfFit(timeSeries = ds15$timeSeries[, c(1,3)], initialCarbon =iniC_SasNG*1e5, inipars = twopf_inipars)
-Mod3_153=twopsFit(timeSeries = ds15$timeSeries[, c(1,3)], initialCarbon =iniC_SasNG*1e5, inipars = twops_inipars)
+Mod1_153=twoppFit(timeSeries = ds15$timeSeries[, c(1,3)], initialCarbon =iniC_SasNG*1e5 , inipars = c(0.05, 0.0005, 0.1))
+Mod2_153=twopfFit(timeSeries = ds15$timeSeries[, c(1,3)], initialCarbon =iniC_SasNG*1e5, inipars = c(0.05, 5e-5, 0.1, 0.01, 0.01))
+Mod3_153=twopsFit(timeSeries = ds15$timeSeries[, c(1,3)], initialCarbon =iniC_SasNG*1e5, inipars = c(0.065, 1e-5, 0.01, 0.01))
 ```
+
+
+```{r}
+days153=Mod1_153$SoilRmodel@times
+Mlist153=list(Mod1_153, Mod2_153, Mod3_153)
+
+Rs153=sapply(Mlist153, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames153=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+Rt153=lapply(Mlist153, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(2,2))
+for(i in c(1:3)){
+  matplot(days153, Rt153[[i]], type="l", lty = 1, ylab = ds15$variables$V3$units, xlab="Day", 
+          main=modelNames153[i])
+  points(ds15$timeSeries[, c(1,3)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+```
+```{r}
+aic <- sapply(Mlist153, function(x){x$AIC})
+tbldb153 <- data.frame(model=modelNames153, AIC=aic)
+knitr::kable(tbldb153, digits = 2)
+```
+
 
 ## V4: Dataset `r db[[15]]$citationKey`, variable `r ds15$variables$V4$name`, site `r ds15$variables$V4$site` , Vegetation `r ds15$variables$V4$vegetation`,temperature `r ds15$variables$V4$temperature`
 
 ```{r}
 Mod1_154=twoppFit(timeSeries = ds15$timeSeries[, c(1,4)], initialCarbon =iniC_SasNG*1e5 , inipars = twopp_inipars)
-#Mod2_154=twopfFit(timeSeries = ds15$timeSeries[, c(1,4)], initialCarbon =iniC_SasNG*1e5, inipars = twopf_inipars)
-Mod3_154=twopsFit(timeSeries = ds15$timeSeries[, c(1,4)], initialCarbon =iniC_SasNG*1e5, inipars = twops_inipars)
+Mod2_154=twopfFit(timeSeries = ds15$timeSeries[, c(1,4)], initialCarbon =iniC_SasNG*1e5, inipars = c(0.05, 5e-5, 0.1, 0.01, 0.01))
+Mod3_154=twopsFit(timeSeries = ds15$timeSeries[, c(1,4)], initialCarbon =iniC_SasNG*1e5, inipars = c(0.001, 1e-5, 0.1, 0.01))
 ```
+
+```{r}
+days154=Mod1_154$SoilRmodel@times
+Mlist154=list(Mod1_154, Mod2_154, Mod3_154)
+
+Rs154=sapply(Mlist154, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames154=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+Rt154=lapply(Mlist154, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(2,2))
+for(i in c(1:3)){
+  matplot(days154, Rt154[[i]], type="l", lty = 1, ylab = ds15$variables$V4$units, xlab="Day", 
+          main=modelNames154[i])
+  points(ds15$timeSeries[, c(1,4)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+```
+```{r}
+aic <- sapply(Mlist154, function(x){x$AIC})
+tbldb154 <- data.frame(model=modelNames154, AIC=aic)
+knitr::kable(tbldb154, digits = 2)
+```
+
 
 
 ## V5: Dataset `r db[[15]]$citationKey`, variable `r ds15$variables$V5$name`, site `r ds15$variables$V5$site` , Vegetation `r ds15$variables$V5$vegetation`,temperature `r ds15$variables$V5$temperature`
@@ -426,15 +607,47 @@ Mod3_154=twopsFit(timeSeries = ds15$timeSeries[, c(1,4)], initialCarbon =iniC_Sa
 ```{r}
 Mod1_155=twoppFit(timeSeries = ds15$timeSeries[, c(1,5)], initialCarbon =iniC_SasCul*1e5 , inipars = twopp_inipars)
 Mod2_155=twopfFit(timeSeries = ds15$timeSeries[, c(1,5)], initialCarbon =iniC_SasCul*1e5, inipars = twopf_inipars)
-Mod3_155=twopsFit(timeSeries = ds15$timeSeries[, c(1,5)], initialCarbon =iniC_SasCul*1e5, inipars = twops_inipars)
+Mod3_155=twopsFit(timeSeries = ds15$timeSeries[, c(1,5)], initialCarbon =iniC_SasCul*1e5, inipars = c(0.001, 1e-5, 0.01, 0.01))
 ```
+
+
+```{r}
+days155=Mod1_155$SoilRmodel@times
+Mlist155=list(Mod1_155, Mod2_155, Mod3_155)
+
+Rs155=sapply(Mlist155, function(x){rowSums(getReleaseFlux(x$SoilRmodel))})
+```
+
+```{r}
+modelNames155=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+Rt155=lapply(Mlist155, function(x){getReleaseFlux(x$SoilRmodel)})
+```
+
+
+```{r}
+par(mfrow=c(2,2))
+for(i in c(1:3)){
+  matplot(days155, Rt155[[i]], type="l", lty = 1, ylab = ds15$variables$V5$units, xlab="Day", 
+          main=modelNames155[i])
+  points(ds15$timeSeries[, c(1,5)], pch=19, cex=0.5)
+}
+par(mfrow=c(1,1))
+
+```
+```{r}
+aic <- sapply(Mlist155, function(x){x$AIC})
+tbldb155 <- data.frame(model=modelNames155, AIC=aic)
+knitr::kable(tbldb155, digits = 2)
+```
+
+
 
 
 ## V6: Dataset `r db[[15]]$citationKey`, variable `r ds15$variables$V6$name`, site `r ds15$variables$V6$site` , Vegetation `r ds15$variables$V6$vegetation`,temperature `r ds15$variables$V6$temperature`
 
 ```{r}
 Mod1_156=twoppFit(timeSeries = ds15$timeSeries[, c(1,6)], initialCarbon =iniC_SasCul*1e5 , inipars = twopp_inipars)
-#Mod2_156=twopfFit(timeSeries = ds15$timeSeries[, c(1,6)], initialCarbon =iniC_SasCul*1e5, inipars = twopf_inipars)
+Mod2_156=twopfFit(timeSeries = ds15$timeSeries[, c(1,6)], initialCarbon =iniC_SasCul*1e5, inipars = twopf_inipars)
 Mod3_156=twopsFit(timeSeries = ds15$timeSeries[, c(1,6)], initialCarbon =iniC_SasCul*1e5, inipars = twops_inipars)
 ```
 
@@ -453,7 +666,7 @@ Mod3_1537=twopsFit(timeSeries = ds15$timeSeries[, c(1,37)], initialCarbon =iniC_
 \newpage
 # Dataset `r db[[19]]$citationKey` 
 
-A dataset with 14 variables of `r db_flat$vars$NeffHooper2002[1, "incDesc"] ` 6 different soil types
+A dataset with 14 variables and 6 different soil types of `r db_flat$vars$NeffHooper2002[1, "incDesc"] `. 
 
 ```{r, results='hide'}
 db[[19]]$citationKey

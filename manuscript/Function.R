@@ -1,39 +1,3 @@
-TwopModel_SidB <-  function(
-  db, model='twoppFit', ts.col=2:3, ic.col=1, inipars=c(0.01, 0.001, 0.1)){
-  dts <- c('timeSeries', 'initConditions', 'carbonMean')
-  dt_needed <- all(dts[1:2] %in% names(db))
-  if(!dt_needed)
-      stop(paste0("Missing data: be sure the objects '", 
-                  paste(dts[1:2], collapse = "' and '"), 
-                  "' are includedin 'db'"))
-  
-  condf <- function(y, model , ic.col, inipars){
-    inp <- list(timeSeries=db[[dts[1L]]][ , c(1,y)], 
-                initialCarbon= db[[dts[2L]]][ic.col, dts[3L]]*1e4, 
-                inipars=inipars)
-    mod <- tryCatch(do.call(model, inp), 
-                    error = function(e) return(NA))
-    return(mod)}
-  
-  if(is.null(ts.col))
-    ts.col=2:ncol(db[[dts[1L]]])
-  ic <- Map(function(x)
-        condf(x, model, ic.col, inipars), ts.col)
-  #db_plot <- plotEntry(db)
-  names(ic) <- ts.col
-  return(ic)
-  
-  days=mod[[]]
-}
-
-
-
-# 
-# MultiFit <- function(db,...){
-#   Map(function(db, ...)
-#     multiSidbFit(db, ...),
-#     MoreArgs = list(db = db), ...)
-# }
 
 myMod <- TwopModel_SidB(db = ds15, model = 'twoppFit', ts.col = 2, ic.col = 1, 
                inipars = twopp_inipars)

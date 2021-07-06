@@ -27,7 +27,7 @@ onepFitFlux=function(timeSeries, initialCarbon){
     output=Func(pars)
     return(modCost(model=output, obs=complete))
   }
-  inipars=c(-1*initialCarbon/complete[1,2])
+  inipars=(complete[1,2]/initialCarbon)
   Fit=modFit(f=costFunc, p=inipars, method="Marq", lower= -Inf, upper=0)
   bestMod=Func(pars=Fit$par)
   print(paste("Best fit parameter: ",Fit$par))

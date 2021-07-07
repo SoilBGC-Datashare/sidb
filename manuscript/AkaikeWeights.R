@@ -1,5 +1,7 @@
-packs <- c('SoilR', 'sidb', 'R.utils')
+packs <- c('SoilR', 'sidb', 'R.utils', 'FME')
 sapply(packs, require, character.only=TRUE)
+devtools::install_github('SoilBGC-Datashare/sidb/Rpkg', build_vignettes = TRUE, force=TRUE)
+
 rm(list=ls())
 
 db=loadEntries(path="~/sidb/data/")
@@ -11,6 +13,10 @@ twopf_inipars= c(0.005, 0.00001, 0.1, 0.01, 0.01)
 
 iniC_C7.5=db[[4]]$initConditions[1, "carbonMean"]
 
+source.R <- file.path('sidb/Rpkg/R/onepFitFlux.R')
+sourceDirectory(source.R, modifiedOnly = TRUE, verbose = TRUE)
+
+
 Mod0_42=onepFitFlux(timeSeries = db[[4]]$timeSeries[, c(1,2)], initialCarbon = iniC_C7.5*1e4)
 Mod1_42=twoppFit(timeSeries = db[[4]]$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e4 , inipars = twopp_inipars)
 Mod2_42=twopfFit(timeSeries = db[[4]]$timeSeries[, c(1,2)], initialCarbon =iniC_C7.5*1e4 , inipars = twopf_inipars)
@@ -18,9 +24,23 @@ Mod3_42=twopsFit(timeSeries = db[[4]]$timeSeries[, c(1,2)], initialCarbon =iniC_
 
 ##########transitTime########
 a=Mod1_42$SoilRmodel@mat@map()
-TT= transitTime(A = a, u =c(gam, 1-gam), q = 0.5, a = 0)
+gam=Mod1_42$FMEmodel$par[3]
 
-Mod0_42$SoilRmodel@mat@map()
+gam=0.7
+tt1= transitTime(A = a, u =c(gam, 1-gam), q = 0.5, a = 0)
+
+a2=Mod2_42$SoilRmodel@mat@map()
+tt2=transitTime(A = a2, u = c(1, 0), q=0.5, a=0)
+
+a3=Mod3_42$SoilRmodel@mat@map()
+tt3=transitTime(A=a3, u=c(1, 0), q=0.5, a=0)
+
+tt1$meanTransitTime
+tt2$meanTransitTime
+tt3$meanTransitTime
+
+
+
 
 ds=db[[4]]$timeSeries[, c(1,2)]
 kk=-1*iniC_C7.5/ds[1,2]

@@ -25,10 +25,12 @@ onepFitFlux=function(timeSeries, initialCarbon){
   
   costFunc=function(pars){
     output=Func(pars)
-    return(modCost(model=output, obs=complete))
+    return(FME::modCost(model=output, obs=complete))
   }
-  inipars=c(-1*initialCarbon/complete[1,2])
-  Fit=modFit(f=costFunc, p=inipars, method="Marq", lower= -Inf, upper=0)
+  
+  inipars=(complete[1,2]/initialCarbon)
+  
+  Fit=FME::modFit(f=costFunc, p=inipars, method="Marq", lower= -Inf, upper=Inf)
   bestMod=Func(pars=Fit$par)
   print(paste("Best fit parameter: ",Fit$par))
   plot(complete, ylim=c(0,1.2*max(complete[,2])))

@@ -14,7 +14,7 @@
 onepFitFlux=function(timeSeries, initialCarbon){
   complete=data.frame(time=timeSeries[complete.cases(timeSeries),1],Rt=timeSeries[complete.cases(timeSeries),2])
   n=nrow(complete)
-  if(n < 3) stop("Time series is too short. No degrees of freedom")
+  if(n < 6) stop("Time series is too short. No degrees of freedom")
   tt=seq(from=0, to=tail(complete[,1],1), length.out = 500)
   
   Func=function(pars){
@@ -27,10 +27,10 @@ onepFitFlux=function(timeSeries, initialCarbon){
     output=Func(pars)
     return(FME::modCost(model=output, obs=complete))
   }
-  
-  inipars=(complete[1,2]/initialCarbon)
-  
-  Fit=FME::modFit(f=costFunc, p=inipars, method="Marq", lower= -Inf, upper=Inf)
+  if(is.na(complete[1,2])){inipars=(complete[2,2]/initialCarbon)}
+      else
+         inipars=(complete[1,2]/initialCarbon)
+  Fit=modFit(f=costFunc, p=inipars, method="Marq", lower= -Inf, upper=0)
   bestMod=Func(pars=Fit$par)
   print(paste("Best fit parameter: ",Fit$par))
   plot(complete, ylim=c(0,1.2*max(complete[,2])))

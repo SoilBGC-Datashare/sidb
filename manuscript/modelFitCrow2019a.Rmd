@@ -6,8 +6,8 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-packs <- c('SoilR', 'sidb', 'R.utils')
+knitr::opts_chunk$set(echo = FALSE, error = TRUE)
+packs <- c('SoilR', 'sidb', 'R.utils', 'dplyr')
 sapply(packs, require, character.only=TRUE)
 rm(list=ls())
 
@@ -39,10 +39,11 @@ plotEntry(db[[9]])
 
 
 ```{r}
-FitModel_ds9 <- function(db, ts.col, ic.col, 
+FitModel<- function(db, ts.col, ic.col, 
                           inipars= list(c(0.01, 0.001, 0.1),
                                         c(5e-03, 1e-05, 0.1, 0.01, 0.01), 
                                         c(5e-03, 1e-05, 0.1, 0.01))){
+  mod0 <- onepFitFlux(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4)
   mod1 <- twoppFit(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, 
                      inipars = inipars[[1]])
   mod2 <- twopfFit(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, 
@@ -51,26 +52,64 @@ FitModel_ds9 <- function(db, ts.col, ic.col,
                    inipars = inipars[[3]])
   
   days= mod1$SoilRmodel@times
-  Mlist=list(mod1, mod2, mod3)
-  modelNames=c("Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
+  Mlist=list(mod0, mod1, mod2, mod3)
+  modelNames=c("One-pool","Two-pool parallel" ,"Two-pool feedback", "Two-pool series")
   Rt=lapply(Mlist, function(x){getReleaseFlux(x$SoilRmodel)})
   
   par(mfrow=c(2,2))
-  for (i in c(1:3)){
+  for (i in c(1:4)){
     matplot(days, Rt[[i]], type="l", lty=1, ylab=db$variables$V2$units, xlab="Day", 
     main=modelNames[i])
     points(db$timeSeries[, c(1,ts.col)], pch=19, cex=0.5)}
   par(mfrow=c(1,1))
   
-  aic=sapply(Mlist, function(x){AIC=x$AIC})
+  #Calculating the AIC 
+  AIC=sapply(Mlist, function(x){AIC=x$AIC})
+  K=sapply(Mlist, function(x){length(x$FMEmodel$par)})
+  n=nrow(db$timeSeries[, c(1,ts.col)])
+    
+  AICc=list(NULL)
+  for(i in 1:length(Mlist)){
+    AICc[[i]]=AIC[[i]]+( (2*K[[i]]*(K[[i]]+1))/(n-K[[i]]-1))
+  }
+  AICmin=min(unlist(AICc))
+  
+  delta_i=list(NULL)
+  for(i in 1:length(AICc)){
+    delta_i[[i]]=AICc[[i]]-AICmin
+  }
+  
+  wi=list(NULL)
+  for(i in 1:length(delta_i)){
+    wi[[i]]=exp(-0.5 * delta_i[[i]])/(exp(-0.5* delta_i[[1]]) + exp(-0.5*delta_i[[2]]) + exp(-0.5*delta_i[[3]]) )
+  }
+  # Transit time based on each model
+  a1=mod1$SoilRmodel@mat@map() ;gam=mod1$SoilRmodel@initialValues #vector of initial values in each pool
+  tt1= transitTime(A = a1, u =gam, q = 0.5, a = 0)
+
+  a2=mod2$SoilRmodel@mat@map()
+  tt2=transitTime(A = a2, u =c(1, 0), q = 0.5, a = 0) #The value in vector u can be c(1,0) or c(iniC, 0), the results is always the same
+
+  a3=mod3$SoilRmodel@mat@map()
+  tt3=transitTime(A = a3, u =c(1, 0), q = 0.5, a = 0)
+  
+  TT=c(NA, tt1$meanTransitTime, tt2$meanTransitTime, tt3$meanTransitTime)
+  q05=c(NA, tt1$quantiles, tt2$quantiles, tt3$quantiles)
+  
+  # Model parameters to be collected in the table
   k1=sapply(Mlist, function(x){x$FMEmodel$par[1]})
   k2=sapply(Mlist, function(x){x$FMEmodel$par[2]})
 
-  pC0= c(mod1$FMEmodel$par[3], mod2$FMEmodel$par[5], mod3$FMEmodel$par[4])
-  a21=c(NA, mod2$FMEmodel$par[3], mod3$FMEmodel$par[3])
-  a12=c(NA, mod2$FMEmodel$par[4], NA)
-  tbldb <- data.frame(model=modelNames, AIC=aic, k1=k1, k2=k2, "Proportion of C0 in pool 1"=pC0, a21=a21, a12=a12)
-  knitr::kable(tbldb)
+  pC0= c(NA, mod1$FMEmodel$par[3], mod2$FMEmodel$par[5], mod3$FMEmodel$par[4])
+  a21=c(NA, NA, mod2$FMEmodel$par[3], mod3$FMEmodel$par[3])
+  a12=c(NA, NA, mod2$FMEmodel$par[4], NA)
+  
+  tbldb <- data.frame(model=modelNames, AIC=AIC, k1=k1, k2=k2, C0Inp1=pC0, a21=a21, a12=a12, AICc= unlist(AICc), wi=unlist(wi), MeanTrT=TT, q05=q05 )
+  
+  #knitr::kable(tbldb)
+  #Collect all the results in a table
+  tbldb %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+    knitr::kable(.)
 }
 
 ```
@@ -83,7 +122,7 @@ identical(as.character(ds9$initConditions[2, 'site']), as.character(ds9$variable
 `r ds9$variables$V2$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 2, ic.col = 1)
+FitModel(db = ds9, ts.col = 2, ic.col = 1)
 ```
 
 
@@ -91,7 +130,7 @@ FitModel_ds9(db = ds9, ts.col = 2, ic.col = 1)
 `r ds9$variables$V3$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 3, ic.col = 2)
+FitModel(db = ds9, ts.col = 3, ic.col = 2)
 ```
 
 
@@ -99,7 +138,7 @@ FitModel_ds9(db = ds9, ts.col = 3, ic.col = 2)
 `r ds9$variables$V4$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 4, ic.col = 3)
+FitModel(db = ds9, ts.col = 4, ic.col = 3)
 ```
 
 
@@ -107,7 +146,7 @@ FitModel_ds9(db = ds9, ts.col = 4, ic.col = 3)
 `r ds9$variables$V5$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 5, ic.col = 4)
+FitModel(db = ds9, ts.col = 5, ic.col = 4)
 ```
 
 
@@ -115,7 +154,7 @@ FitModel_ds9(db = ds9, ts.col = 5, ic.col = 4)
 `r ds9$variables$V6$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 6, ic.col = 5)
+FitModel(db = ds9, ts.col = 6, ic.col = 5)
 ```
 
 
@@ -128,35 +167,35 @@ identical(as.character(ds9$initConditions[6, 'site']), as.character(ds9$variable
 `r ds9$variables$V7$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 7, ic.col = 6)
+FitModel(db = ds9, ts.col = 7, ic.col = 6)
 ```
 
 # Variable `r ds9$variables$V8$name`: 
 `r ds9$variables$V8$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 8, ic.col = 7)
+FitModel(db = ds9, ts.col = 8, ic.col = 7)
 ```
 
 # Variable `r ds9$variables$V9$name`: 
 `r ds9$variables$V9$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 9, ic.col = 8)
+FitModel(db = ds9, ts.col = 9, ic.col = 8)
 ```
 
 # Variable `r ds9$variables$V10$name`: 
 `r ds9$variables$V10$varDesc` 
 
 ```{r}
-#FitModel_ds9(db = ds9, ts.col = 10, ic.col = 9)
+#FitModel(db = ds9, ts.col = 10, ic.col = 9)
 ```
 
 # Variable `r ds9$variables$V11$name`: 
 `r ds9$variables$V11$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 11, ic.col = 10)
+FitModel(db = ds9, ts.col = 11, ic.col = 10)
 ```
 
 
@@ -164,7 +203,7 @@ FitModel_ds9(db = ds9, ts.col = 11, ic.col = 10)
 `r ds9$variables$V12$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 12, ic.col = 11)
+FitModel(db = ds9, ts.col = 12, ic.col = 11)
 ```
 
 
@@ -172,7 +211,7 @@ FitModel_ds9(db = ds9, ts.col = 12, ic.col = 11)
 `r ds9$variables$V13$varDesc` 
 
 ```{r}
-#FitModel_ds9(db = ds9, ts.col = 13, ic.col = 12)
+#FitModel(db = ds9, ts.col = 13, ic.col = 12)
 ```
 
 
@@ -180,7 +219,7 @@ FitModel_ds9(db = ds9, ts.col = 12, ic.col = 11)
 `r ds9$variables$V14$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 14, ic.col = 13)
+FitModel(db = ds9, ts.col = 14, ic.col = 13)
 ```
 
 
@@ -188,7 +227,7 @@ FitModel_ds9(db = ds9, ts.col = 14, ic.col = 13)
 `r ds9$variables$V15$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 15, ic.col = 14)
+FitModel(db = ds9, ts.col = 15, ic.col = 14)
 ```
 
 
@@ -196,7 +235,7 @@ FitModel_ds9(db = ds9, ts.col = 15, ic.col = 14)
 `r ds9$variables$V16$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 16, ic.col = 15)
+FitModel(db = ds9, ts.col = 16, ic.col = 15)
 ```
 
 
@@ -204,7 +243,7 @@ FitModel_ds9(db = ds9, ts.col = 16, ic.col = 15)
 `r ds9$variables$V17$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 17, ic.col = 16)
+FitModel(db = ds9, ts.col = 17, ic.col = 16)
 ```
 
 
@@ -212,7 +251,7 @@ FitModel_ds9(db = ds9, ts.col = 17, ic.col = 16)
 `r ds9$variables$V18$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 18, ic.col = 17)
+FitModel(db = ds9, ts.col = 18, ic.col = 17)
 ```
 
 
@@ -220,7 +259,7 @@ FitModel_ds9(db = ds9, ts.col = 18, ic.col = 17)
 `r ds9$variables$V19$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 19, ic.col = 18)
+FitModel(db = ds9, ts.col = 19, ic.col = 18)
 ```
 
 
@@ -228,7 +267,7 @@ FitModel_ds9(db = ds9, ts.col = 19, ic.col = 18)
 `r ds9$variables$V20$varDesc` 
 
 ```{r}
-#FitModel_ds9(db = ds9, ts.col = 20, ic.col = 19)
+#FitModel(db = ds9, ts.col = 20, ic.col = 19)
 ```
 
 
@@ -236,7 +275,7 @@ FitModel_ds9(db = ds9, ts.col = 19, ic.col = 18)
 `r ds9$variables$V21$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 21, ic.col = 20)
+FitModel(db = ds9, ts.col = 21, ic.col = 20)
 ```
 
 
@@ -244,7 +283,7 @@ FitModel_ds9(db = ds9, ts.col = 21, ic.col = 20)
 `r ds9$variables$V22$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 22, ic.col = 21)
+FitModel(db = ds9, ts.col = 22, ic.col = 21)
 ```
 
 
@@ -252,7 +291,7 @@ FitModel_ds9(db = ds9, ts.col = 22, ic.col = 21)
 `r ds9$variables$V23$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 23, ic.col = 22)
+FitModel(db = ds9, ts.col = 23, ic.col = 22)
 ```
 
 
@@ -260,7 +299,7 @@ FitModel_ds9(db = ds9, ts.col = 23, ic.col = 22)
 `r ds9$variables$V24$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 24, ic.col = 23)
+FitModel(db = ds9, ts.col = 24, ic.col = 23)
 ```
 
 
@@ -268,7 +307,7 @@ FitModel_ds9(db = ds9, ts.col = 24, ic.col = 23)
 `r ds9$variables$V25$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 25, ic.col = 24)
+FitModel(db = ds9, ts.col = 25, ic.col = 24)
 ```
 
 
@@ -276,7 +315,7 @@ FitModel_ds9(db = ds9, ts.col = 25, ic.col = 24)
 `r ds9$variables$V26$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 26, ic.col = 25)
+FitModel(db = ds9, ts.col = 26, ic.col = 25)
 ```
 
 
@@ -284,7 +323,7 @@ FitModel_ds9(db = ds9, ts.col = 26, ic.col = 25)
 `r ds9$variables$V27$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 27, ic.col = 26)
+FitModel(db = ds9, ts.col = 27, ic.col = 26)
 ```
 
 
@@ -292,7 +331,7 @@ FitModel_ds9(db = ds9, ts.col = 27, ic.col = 26)
 `r ds9$variables$V28$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 28, ic.col = 27)
+FitModel(db = ds9, ts.col = 28, ic.col = 27)
 ```
 
 
@@ -301,7 +340,7 @@ FitModel_ds9(db = ds9, ts.col = 28, ic.col = 27)
 `r ds9$variables$V29$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 29, ic.col = 28)
+FitModel(db = ds9, ts.col = 29, ic.col = 28)
 ```
 
 
@@ -309,7 +348,7 @@ FitModel_ds9(db = ds9, ts.col = 29, ic.col = 28)
 `r ds9$variables$V30$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 30, ic.col = 29)
+FitModel(db = ds9, ts.col = 30, ic.col = 29)
 ```
 
 
@@ -317,7 +356,7 @@ FitModel_ds9(db = ds9, ts.col = 30, ic.col = 29)
 `r ds9$variables$V31$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 31, ic.col = 30)
+FitModel(db = ds9, ts.col = 31, ic.col = 30)
 ```
 
 
@@ -325,7 +364,7 @@ FitModel_ds9(db = ds9, ts.col = 31, ic.col = 30)
 `r ds9$variables$V32$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 32, ic.col = 31)
+FitModel(db = ds9, ts.col = 32, ic.col = 31)
 ```
 
 
@@ -333,7 +372,7 @@ FitModel_ds9(db = ds9, ts.col = 32, ic.col = 31)
 `r ds9$variables$V33$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 33, ic.col = 31)
+FitModel(db = ds9, ts.col = 33, ic.col = 31)
 ```
 
 
@@ -341,7 +380,7 @@ FitModel_ds9(db = ds9, ts.col = 33, ic.col = 31)
 `r ds9$variables$V34$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 34, ic.col = 33)
+FitModel(db = ds9, ts.col = 34, ic.col = 33)
 ```
 
 
@@ -349,7 +388,7 @@ FitModel_ds9(db = ds9, ts.col = 34, ic.col = 33)
 `r ds9$variables$V35$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 35, ic.col = 34)
+FitModel(db = ds9, ts.col = 35, ic.col = 34)
 ```
 
 
@@ -357,7 +396,7 @@ FitModel_ds9(db = ds9, ts.col = 35, ic.col = 34)
 `r ds9$variables$V36$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 36, ic.col = 35)
+FitModel(db = ds9, ts.col = 36, ic.col = 35)
 ```
 
 
@@ -366,7 +405,7 @@ FitModel_ds9(db = ds9, ts.col = 36, ic.col = 35)
 `r ds9$variables$V37$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 37, ic.col = 36)
+FitModel(db = ds9, ts.col = 37, ic.col = 36)
 ```
 
 
@@ -374,7 +413,7 @@ FitModel_ds9(db = ds9, ts.col = 37, ic.col = 36)
 `r ds9$variables$V38$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 38, ic.col = 37)
+FitModel(db = ds9, ts.col = 38, ic.col = 37)
 ```
 
 
@@ -382,7 +421,7 @@ FitModel_ds9(db = ds9, ts.col = 38, ic.col = 37)
 `r ds9$variables$V39$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 39, ic.col = 38)
+FitModel(db = ds9, ts.col = 39, ic.col = 38)
 ```
 
 
@@ -390,7 +429,7 @@ FitModel_ds9(db = ds9, ts.col = 39, ic.col = 38)
 `r ds9$variables$V40$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 40, ic.col = 39)
+FitModel(db = ds9, ts.col = 40, ic.col = 39)
 ```
 
 
@@ -398,7 +437,7 @@ FitModel_ds9(db = ds9, ts.col = 40, ic.col = 39)
 `r ds9$variables$V41$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 41, ic.col = 40)
+FitModel(db = ds9, ts.col = 41, ic.col = 40)
 ```
 
 
@@ -406,7 +445,7 @@ FitModel_ds9(db = ds9, ts.col = 41, ic.col = 40)
 `r ds9$variables$V42$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 42, ic.col = 41)
+FitModel(db = ds9, ts.col = 42, ic.col = 41)
 ```
 
 
@@ -414,7 +453,7 @@ FitModel_ds9(db = ds9, ts.col = 42, ic.col = 41)
 `r ds9$variables$V43$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 43, ic.col = 42)
+FitModel(db = ds9, ts.col = 43, ic.col = 42)
 ```
 
 
@@ -422,7 +461,7 @@ FitModel_ds9(db = ds9, ts.col = 43, ic.col = 42)
 `r ds9$variables$V44$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 44, ic.col = 43)
+FitModel(db = ds9, ts.col = 44, ic.col = 43)
 ```
 
 
@@ -430,7 +469,7 @@ FitModel_ds9(db = ds9, ts.col = 44, ic.col = 43)
 `r ds9$variables$V45$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 45, ic.col = 44)
+FitModel(db = ds9, ts.col = 45, ic.col = 44)
 ```
 
 
@@ -438,7 +477,7 @@ FitModel_ds9(db = ds9, ts.col = 45, ic.col = 44)
 `r ds9$variables$V46$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 46, ic.col = 45)
+FitModel(db = ds9, ts.col = 46, ic.col = 45)
 ```
 
 
@@ -446,7 +485,7 @@ FitModel_ds9(db = ds9, ts.col = 46, ic.col = 45)
 `r ds9$variables$V47$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 47, ic.col = 46)
+FitModel(db = ds9, ts.col = 47, ic.col = 46)
 ```
 
 
@@ -454,7 +493,7 @@ FitModel_ds9(db = ds9, ts.col = 47, ic.col = 46)
 `r ds9$variables$V48$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 48, ic.col = 47)
+FitModel(db = ds9, ts.col = 48, ic.col = 47)
 ```
 
 
@@ -463,7 +502,7 @@ FitModel_ds9(db = ds9, ts.col = 48, ic.col = 47)
 `r ds9$variables$V49$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 49, ic.col = 48)
+FitModel(db = ds9, ts.col = 49, ic.col = 48)
 ```
 
 
@@ -471,70 +510,70 @@ FitModel_ds9(db = ds9, ts.col = 49, ic.col = 48)
 `r ds9$variables$V50$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 50, ic.col = 49)
+FitModel(db = ds9, ts.col = 50, ic.col = 49)
 ```
 
 # Variable `r ds9$variables$V51$name`: 
 `r ds9$variables$V51$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 51, ic.col = 50)
+FitModel(db = ds9, ts.col = 51, ic.col = 50)
 ```
 
 # Variable `r ds9$variables$V52$name`: 
 `r ds9$variables$V52$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 52, ic.col = 51)
+FitModel(db = ds9, ts.col = 52, ic.col = 51)
 ```
 
 # Variable `r ds9$variables$V53$name`: 
 `r ds9$variables$V53$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 53, ic.col = 52)
+FitModel(db = ds9, ts.col = 53, ic.col = 52)
 ```
 
 # Variable `r ds9$variables$V54$name`: 
 `r ds9$variables$V54$varDesc` 
 
 ```{r}
-#FitModel_ds9(db = ds9, ts.col = 54, ic.col = 53)
+#FitModel(db = ds9, ts.col = 54, ic.col = 53)
 ```
 
 # Variable `r ds9$variables$V55$name`: 
 `r ds9$variables$V55$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 55, ic.col = 54)
+FitModel(db = ds9, ts.col = 55, ic.col = 54)
 ```
 
 # Variable `r ds9$variables$V56$name`: 
 `r ds9$variables$V56$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 56, ic.col = 55)
+FitModel(db = ds9, ts.col = 56, ic.col = 55)
 ```
 
 # Variable `r ds9$variables$V57$name`: 
 `r ds9$variables$V57$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 57, ic.col = 56)
+FitModel(db = ds9, ts.col = 57, ic.col = 56)
 ```
 
 # Variable `r ds9$variables$V58$name`: 
 `r ds9$variables$V58$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 58, ic.col = 57)
+FitModel(db = ds9, ts.col = 58, ic.col = 57)
 ```
 
 # Variable `r ds9$variables$V59$name`: 
 `r ds9$variables$V59$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 59, ic.col = 58)
+FitModel(db = ds9, ts.col = 59, ic.col = 58)
 ```
 
 
@@ -542,7 +581,7 @@ FitModel_ds9(db = ds9, ts.col = 59, ic.col = 58)
 `r ds9$variables$V60$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 60, ic.col = 59)
+FitModel(db = ds9, ts.col = 60, ic.col = 59)
 ```
 
 
@@ -551,28 +590,28 @@ FitModel_ds9(db = ds9, ts.col = 60, ic.col = 59)
 `r ds9$variables$V61$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 61, ic.col = 60)
+FitModel(db = ds9, ts.col = 61, ic.col = 60)
 ```
 
 # Variable `r ds9$variables$V62$name`: 
 `r ds9$variables$V62$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 62, ic.col = 61)
+FitModel(db = ds9, ts.col = 62, ic.col = 61)
 ```
 
 # Variable `r ds9$variables$V63$name`: 
 `r ds9$variables$V63$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 63, ic.col = 62)
+FitModel(db = ds9, ts.col = 63, ic.col = 62)
 ```
 
 # Variable `r ds9$variables$V63$name`: 
 `r ds9$variables$V63$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 63, ic.col = 62)
+FitModel(db = ds9, ts.col = 63, ic.col = 62)
 ```
 
 
@@ -580,14 +619,14 @@ FitModel_ds9(db = ds9, ts.col = 63, ic.col = 62)
 `r ds9$variables$V64$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 64, ic.col = 63)
+FitModel(db = ds9, ts.col = 64, ic.col = 63)
 ```
 
 # Variable `r ds9$variables$V65$name`: 
 `r ds9$variables$V65$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 65, ic.col = 64)
+FitModel(db = ds9, ts.col = 65, ic.col = 64)
 ```
 
 
@@ -595,28 +634,28 @@ FitModel_ds9(db = ds9, ts.col = 65, ic.col = 64)
 `r ds9$variables$V66$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 66, ic.col = 65)
+FitModel(db = ds9, ts.col = 66, ic.col = 65)
 ```
 
 # Variable `r ds9$variables$V67$name`: 
 `r ds9$variables$V67$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 67, ic.col = 66)
+FitModel(db = ds9, ts.col = 67, ic.col = 66)
 ```
 
 # Variable `r ds9$variables$V68$name`: 
 `r ds9$variables$V68$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 68, ic.col = 67)
+FitModel(db = ds9, ts.col = 68, ic.col = 67)
 ```
 
 # Variable `r ds9$variables$V69$name`: 
 `r ds9$variables$V69$varDesc` 
 
 ```{r}
-#FitModel_ds9(db = ds9, ts.col = 69, ic.col = 68)
+#FitModel(db = ds9, ts.col = 69, ic.col = 68)
 ```
 
 
@@ -624,7 +663,7 @@ FitModel_ds9(db = ds9, ts.col = 68, ic.col = 67)
 `r ds9$variables$V70$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 70, ic.col = 69)
+FitModel(db = ds9, ts.col = 70, ic.col = 69)
 ```
 
 
@@ -632,7 +671,7 @@ FitModel_ds9(db = ds9, ts.col = 70, ic.col = 69)
 `r ds9$variables$V71$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 71, ic.col = 70)
+FitModel(db = ds9, ts.col = 71, ic.col = 70)
 ```
 
 
@@ -640,7 +679,7 @@ FitModel_ds9(db = ds9, ts.col = 71, ic.col = 70)
 `r ds9$variables$V72$varDesc` 
 
 ```{r}
-#FitModel_ds9(db = ds9, ts.col = 72, ic.col = 71)
+#FitModel(db = ds9, ts.col = 72, ic.col = 71)
 ```
 
 
@@ -648,7 +687,7 @@ FitModel_ds9(db = ds9, ts.col = 71, ic.col = 70)
 `r ds9$variables$V73$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 73, ic.col = 72)
+FitModel(db = ds9, ts.col = 73, ic.col = 72)
 ```
 
 
@@ -656,7 +695,7 @@ FitModel_ds9(db = ds9, ts.col = 73, ic.col = 72)
 `r ds9$variables$V74$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 74, ic.col = 73)
+FitModel(db = ds9, ts.col = 74, ic.col = 73)
 ```
 
 
@@ -664,7 +703,7 @@ FitModel_ds9(db = ds9, ts.col = 74, ic.col = 73)
 `r ds9$variables$V75$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 75, ic.col = 74)
+FitModel(db = ds9, ts.col = 75, ic.col = 74)
 ```
 
 
@@ -672,7 +711,7 @@ FitModel_ds9(db = ds9, ts.col = 75, ic.col = 74)
 `r ds9$variables$V76$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 76, ic.col = 75)
+FitModel(db = ds9, ts.col = 76, ic.col = 75)
 ```
 
 
@@ -680,7 +719,7 @@ FitModel_ds9(db = ds9, ts.col = 76, ic.col = 75)
 `r ds9$variables$V77$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 77, ic.col = 76)
+FitModel(db = ds9, ts.col = 77, ic.col = 76)
 ```
 
 
@@ -688,7 +727,7 @@ FitModel_ds9(db = ds9, ts.col = 77, ic.col = 76)
 `r ds9$variables$V78$varDesc` 
 
 ```{r}
-FitModel_ds9(db = ds9, ts.col = 78, ic.col = 77)
+FitModel(db = ds9, ts.col = 78, ic.col = 77)
 ```
 
 

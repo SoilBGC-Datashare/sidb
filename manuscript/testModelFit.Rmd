@@ -7,7 +7,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-packs <- c('SoilR', 'sidb', 'R.utils')
+packs <- c('SoilR', 'sidb', 'R.utils', 'dplyr')
 sapply(packs, require, character.only=TRUE)
 rm(list=ls())
 ```

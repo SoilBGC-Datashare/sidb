@@ -82,13 +82,13 @@ FitModel <- function(db, ts.col, ic.col,
     wi[[i]]=exp(-0.5 * delta_i[[i]])/(exp(-0.5* delta_i[[1]]) + exp(-0.5*delta_i[[2]]) + exp(-0.5*delta_i[[3]]) )
   }
   # Transit time based on each model
-  a1=mod1$SoilRmodel@mat@map() ;gam=0.7
-  tt1= transitTime(A = a1, u =c(gam, 1-gam), q = 0.5, a = 0)
+  a1=mod1$SoilRmodel@mat@map() ;gam=mod1$SoilRmodel@initialValues #vector of initial values in each pool
+  tt1= transitTime(A = a1, u =gam, q = 0.5, a = 0)
 
   a2=mod2$SoilRmodel@mat@map()
   tt2=transitTime(A = a2, u =c(1, 0), q = 0.5, a = 0)
 
-  a3=mod2$SoilRmodel@mat@map()
+  a3=mod3$SoilRmodel@mat@map()
   tt3=transitTime(A = a3, u =c(1, 0), q = 0.5, a = 0)
   
   TT=c(NA, tt1$meanTransitTime, tt2$meanTransitTime, tt3$meanTransitTime)

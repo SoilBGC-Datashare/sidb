@@ -17,7 +17,7 @@ rm(list=ls())
 
 ```{r sidb database, results='hide'}
 db=loadEntries(path="~/sidb/data/")
-#db_flat=flatterSIDb(db)
+db_flat=flatterSIDb(db)
 ```
 
 
@@ -105,6 +105,7 @@ This is the results of a depth-warming experiment with two levels of Control and
 
 initial carbon unit is `r db[[4]]$initConditions[1, "carbonUnits"]`
 
+Variable 2: `r db[[4]]$variables$V2$varDesc`
 ```{r}
 FitModel(db = db[[4]], ts.col = 2, ic.col = 1, UnitConverter = 1e4,
          inipars= list(c(0.01, 0.001, 0.1),
@@ -112,6 +113,7 @@ FitModel(db = db[[4]], ts.col = 2, ic.col = 1, UnitConverter = 1e4,
                        c(0.005, 1e-05, 0.1, 0.01)))
 ```
 
+Variable 4: `r db[[4]]$variables$V4$varDesc`
 ```{r}
 FitModel(db = db[[4]], ts.col = 4, ic.col = 2, UnitConverter = 1e4,
          inipars= list(c(0.01, 0.001, 0.1),
@@ -119,10 +121,7 @@ FitModel(db = db[[4]], ts.col = 4, ic.col = 2, UnitConverter = 1e4,
                        c(0.005, 1e-05, 0.1, 0.01)))
 ```
 
-```{r}
-```
-
-
+Variable 6: `r db[[4]]$variables$V6$varDesc`
 ```{r}
 db[[4]]$variables$V6$fieldWarming ;db[[4]]$variables$V6$midDepth;
 FitModel(db = db[[4]], ts.col = 6, ic.col = 3, UnitConverter = 1e4,
@@ -130,6 +129,8 @@ FitModel(db = db[[4]], ts.col = 6, ic.col = 3, UnitConverter = 1e4,
                        c(0.01, 0.00001, 0.1, 0.01, 0.01),
                        c(0.005, 1e-05, 0.1, 0.01)))
 ```
+
+Variable 8: `r db[[4]]$variables$V8$varDesc`
 ```{r}
 FitModel(db = db[[4]], ts.col = 8, ic.col = 4, UnitConverter = 1e4,
          inipars= list(c(0.01, 0.001, 0.1),
@@ -137,6 +138,7 @@ FitModel(db = db[[4]], ts.col = 8, ic.col = 4, UnitConverter = 1e4,
                        c(0.005, 1e-05, 0.1, 0.01)))
 ```
 
+Variable 10: `r db[[4]]$variables$V10$varDesc`
 ```{r}
 FitModel(db = db[[4]], ts.col = 10, ic.col = 5, UnitConverter = 1e4,
          inipars= list(c(0.01, 0.001, 0.1),
@@ -144,6 +146,7 @@ FitModel(db = db[[4]], ts.col = 10, ic.col = 5, UnitConverter = 1e4,
                        c(0.005, 1e-05, 0.1, 0.01)))
 ```
 
+Variable 12: `r db[[4]]$variables$V12$varDesc`
 ```{r}
 FitModel(db = db[[4]], ts.col = 12, ic.col = 6, UnitConverter = 1e4,
          inipars= list(c(0.01, 0.001, 0.1),
@@ -162,7 +165,7 @@ identical(as.character(db[[19]]$initConditions[2, 'site']), as.character(db[[19]
 identical(as.character(db[[19]]$initConditions[2, 'vegetation']), as.character(db[[19]]$variables$V2$vegetation))
 
 ```
-
+Variable 2: `r db[[19]]$variables$V2$varDesc`
 ```{r}
 FitModel(db = db[[19]], ts.col = 2, ic.col = 2, UnitConverter = 10,
          inipars =list(c(0.01, 0.001, 0.1),
@@ -175,7 +178,7 @@ identical(as.character(db[[19]]$initConditions[3, 'site']), as.character(db[[19]
 identical(as.character(db[[19]]$initConditions[3, 'vegetation']), as.character(db[[19]]$variables$V3$vegetation))
 
 ```
-
+Variable 3: `r db[[19]]$variables$V3$varDesc`
 ```{r}
 FitModel(db = db[[19]], ts.col = 3, ic.col = 3, UnitConverter = 10,
          inipars =list(c(0.01, 0.001, 0.1),
@@ -190,6 +193,7 @@ identical(as.character(db[[19]]$initConditions[4, 'vegetation']), as.character(d
 
 ```
 
+Variable 4: `r db[[19]]$variables$V4$varDesc`
 ```{r}
 FitModel(db = db[[19]], ts.col = 4, ic.col = 4, UnitConverter = 10,
          inipars =list(c(0.01, 0.001, 0.1),
@@ -199,14 +203,322 @@ FitModel(db = db[[19]], ts.col = 4, ic.col = 4, UnitConverter = 10,
 
 
 ```{r, results='hide'}
-identical(as.character(db[[19]]$initConditions[5, 'site']), as.character(db[[19]]$variables$V5$site))
-identical(as.character(db[[19]]$initConditions[5, 'vegetation']), as.character(db[[19]]$variables$V5$vegetation))
+identical(as.character(db[[19]]$initConditions[7, 'site']), as.character(db[[19]]$variables$V5$site))
+identical(as.character(db[[19]]$initConditions[7, 'vegetation']), as.character(db[[19]]$variables$V5$vegetation))
 
 ```
 
+Variable 5: `r db[[19]]$variables$V5$varDesc`
 ```{r}
-FitModel(db = db[[19]], ts.col = 3, ic.col = 3, UnitConverter = 10,
+FitModel(db = db[[19]], ts.col = 5, ic.col = 7, UnitConverter = 10,
          inipars =list(c(0.01, 0.001, 0.1),
                        c(0.01, 0.00001, 0.1, 0.01, 0.01),
                        c(0.01, 1e-05, 0.1, 0.01)) )
+```
+
+
+```{r, results='hide'}
+identical(as.character(db[[19]]$initConditions[2, 'site']), as.character(db[[19]]$variables$V6$site))
+identical(as.character(db[[19]]$initConditions[2, 'vegetation']), as.character(db[[19]]$variables$V6$vegetation))
+
+```
+
+Variable 6: `r db[[19]]$variables$V6$varDesc`
+```{r}
+FitModel(db = db[[19]], ts.col = 6, ic.col = 2, UnitConverter = 10,
+         inipars =list(c(0.01, 0.001, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 1e-05, 0.1, 0.01)) )
+```
+
+
+```{r, results='hide'}
+identical(as.character(db[[19]]$initConditions[3, 'site']), as.character(db[[19]]$variables$V7$site))
+identical(as.character(db[[19]]$initConditions[3, 'vegetation']), as.character(db[[19]]$variables$V7$vegetation))
+
+```
+
+Variable 7: `r db[[19]]$variables$V7$varDesc`
+```{r}
+FitModel(db = db[[19]], ts.col = 7, ic.col = 3, UnitConverter = 10,
+         inipars =list(c(0.01, 0.001, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 1e-05, 0.1, 0.01)) )
+```
+
+
+```{r, results='hide'}
+identical(as.character(db[[19]]$initConditions[4, 'site']), as.character(db[[19]]$variables$V8$site))
+identical(as.character(db[[19]]$initConditions[4, 'vegetation']), as.character(db[[19]]$variables$V8$vegetation))
+
+```
+Variable 8: `r db[[19]]$variables$V8$varDesc`
+```{r}
+FitModel(db = db[[19]], ts.col = 8, ic.col = 4, UnitConverter = 10,
+         inipars =list(c(0.01, 0.001, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 1e-05, 0.1, 0.01)) )
+```
+
+
+```{r, results='hide'}
+identical(as.character(db[[19]]$initConditions[7, 'site']), as.character(db[[19]]$variables$V9$site))
+identical(as.character(db[[19]]$initConditions[7, 'vegetation']), as.character(db[[19]]$variables$V9$vegetation))
+
+```
+
+Variable 9: `r db[[19]]$variables$V9$varDesc`
+```{r}
+FitModel(db = db[[19]], ts.col = 9, ic.col = 7, UnitConverter = 10,
+         inipars =list(c(0.01, 0.001, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 1e-05, 0.1, 0.01)) )
+```
+
+
+```{r, results='hide'}
+identical(as.character(db[[19]]$initConditions[2, 'site']), as.character(db[[19]]$variables$V10$site))
+identical(as.character(db[[19]]$initConditions[2, 'vegetation']), as.character(db[[19]]$variables$V10$vegetation))
+
+```
+
+Variable 10: `r db[[19]]$variables$V10$varDesc`
+```{r}
+FitModel(db = db[[19]], ts.col = 10, ic.col = 2, UnitConverter = 10,
+         inipars =list(c(0.01, 0.001, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 1e-05, 0.1, 0.01)) )
+```
+
+
+```{r, results='hide'}
+identical(as.character(db[[19]]$initConditions[1, 'site']), as.character(db[[19]]$variables$V11$site))
+identical(as.character(db[[19]]$initConditions[1, 'vegetation']), as.character(db[[19]]$variables$V11$vegetation))
+
+```
+
+Variable 11: `r db[[19]]$variables$V11$varDesc`
+```{r}
+FitModel(db = db[[19]], ts.col = 11, ic.col = 1, UnitConverter = 10,
+         inipars =list(c(0.01, 0.001, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 1e-05, 0.1, 0.01)) )
+```
+
+
+```{r, results='hide'}
+identical(as.character(db[[19]]$initConditions[4, 'site']), as.character(db[[19]]$variables$V12$site))
+identical(as.character(db[[19]]$initConditions[4, 'vegetation']), as.character(db[[19]]$variables$V12$vegetation))
+
+```
+
+Variable 12: `r db[[19]]$variables$V12$varDesc`
+```{r}
+FitModel(db = db[[19]], ts.col = 12, ic.col = 4, UnitConverter = 10,
+         inipars =list(c(0.01, 0.001, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 1e-05, 0.1, 0.01)) )
+```
+
+
+
+```{r, results='hide'}
+identical(as.character(db[[19]]$initConditions[6, 'site']), as.character(db[[19]]$variables$V13$site))
+identical(as.character(db[[19]]$initConditions[6, 'vegetation']), as.character(db[[19]]$variables$V13$vegetation))
+
+```
+
+Variable 13: `r db[[19]]$variables$V13$varDesc`
+```{r}
+FitModel(db = db[[19]], ts.col = 13, ic.col = 6, UnitConverter = 10,
+         inipars =list(c(0.01, 0.001, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 1e-05, 0.1, 0.01)) )
+```
+
+
+
+```{r, results='hide'}
+identical(as.character(db[[19]]$initConditions[5, 'site']), as.character(db[[19]]$variables$V14$site))
+identical(as.character(db[[19]]$initConditions[5, 'vegetation']), as.character(db[[19]]$variables$V14$vegetation))
+
+```
+
+Variable 14: `r db[[19]]$variables$V14$varDesc`
+```{r}
+FitModel(db = db[[19]], ts.col = 14, ic.col = 5, UnitConverter = 10,
+         inipars =list(c(0.01, 0.001, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 1e-05, 0.1, 0.01)) )
+```
+
+\newpage
+
+# Dataset `r db[[30]]$citationKey` 
+
+Measuring mean rate of $CO_2$ evolution for A , E and B horizons at 38, 22, 15 and 4 $^\circ C$
+
+initial carbon unit is `r db[[30]]$initConditions[1, "carbonUnits"]` and the fluxs are reported as `r db[[30]]$variables$V2$unit`
+
+
+Variable 2: `r db[[30]]$variables$V2$varDesc`
+```{r}
+db[[30]]$variables$V2$midDepth
+FitModel(db = db[[30]], ts.col = 2, ic.col = 1, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[30]]$variables$V3$midDepth
+FitModel(db = db[[30]], ts.col = 3, ic.col = 3, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[30]]$variables$V4$midDepth
+FitModel(db = db[[30]], ts.col = 4, ic.col = 2, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[30]]$variables$V5$midDepth
+FitModel(db = db[[30]], ts.col = 5, ic.col = 1, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[30]]$variables$V6$midDepth
+FitModel(db = db[[30]], ts.col = 6, ic.col = 3, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[30]]$variables$V7$midDepth
+FitModel(db = db[[30]], ts.col = 7, ic.col = 2, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+```{r}
+db[[30]]$variables$V8$midDepth
+FitModel(db = db[[30]], ts.col = 8, ic.col = 1, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[30]]$variables$V9$midDepth
+FitModel(db = db[[30]], ts.col = 9, ic.col = 3, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[30]]$variables$V10$midDepth
+FitModel(db = db[[30]], ts.col = 10, ic.col = 2, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[30]]$variables$V11$midDepth
+FitModel(db = db[[30]], ts.col = 11, ic.col = 1, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[30]]$variables$V12$midDepth
+FitModel(db = db[[30]], ts.col = 12, ic.col = 3, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[30]]$variables$V13$midDepth
+FitModel(db = db[[30]], ts.col = 13, ic.col = 2, UnitConverter = 1e4 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+```{r}
+db[[31]]$citationKey
+
+```
+
+
+```{r}
+db[[31]]$variables$V2$site
+FitModel(db = db[[31]], ts.col = 2, ic.col = 1, UnitConverter = 10 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+
+```{r}
+db[[31]]$variables$V3$site
+FitModel(db = db[[31]], ts.col = 3, ic.col = 2, UnitConverter = 10 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+```{r}
+db[[31]]$variables$V4$site
+FitModel(db = db[[31]], ts.col = 4, ic.col = 3, UnitConverter = 10 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+```{r}
+db[[31]]$variables$V5$site
+FitModel(db = db[[31]], ts.col = 5, ic.col = 1, UnitConverter = 10 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+```{r}
+db[[31]]$variables$V6$site
+FitModel(db = db[[31]], ts.col = 6, ic.col = 2, UnitConverter = 10 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
+```
+
+```{r}
+db[[31]]$variables$V7$site
+FitModel(db = db[[31]], ts.col = 7, ic.col = 3, UnitConverter = 10 , 
+         inipars= list(c(0.05, 0.005, 0.1),
+                       c(0.01, 0.00001, 0.1, 0.01, 0.01),
+                       c(0.01, 0.00001, 0.1, 0.01)))
 ```

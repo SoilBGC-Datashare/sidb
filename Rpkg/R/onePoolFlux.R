@@ -29,7 +29,7 @@ onePoolFlux=function(timeSeries, initialCarbon, inipars){
     return(FME::modCost(model=output, obs=complete))
   }
   
-  Fit=modFit(f=costFunc, p=inipars, method="Marq", lower= -Inf, upper=0)
+  Fit=modFit(f=costFunc, p=inipars, method="Marq", lower= -Inf, upper=10)
   bestMod=Func(pars=Fit$par)
   print(paste("Best fit parameter: ",Fit$par))
   plot(complete, ylim=c(0,1.2*max(complete[,2])))

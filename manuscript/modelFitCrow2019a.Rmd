@@ -43,7 +43,7 @@ FitModel<- function(db, ts.col, ic.col,
                           inipars= list(c(0.01, 0.001, 0.1),
                                         c(5e-03, 1e-05, 0.1, 0.01, 0.01), 
                                         c(5e-03, 1e-05, 0.1, 0.01))){
-  mod0 <- onepFitFlux(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4)
+  mod0 <- onePoolFlux(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, inipars = -0.1)
   mod1 <- twoppFit(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, 
                      inipars = inipars[[1]])
   mod2 <- twopfFit(timeSeries = db$timeSeries[, c(1,ts.col)], initialCarbon = db$initConditions[ic.col, 'carbonMean']*1e4, 

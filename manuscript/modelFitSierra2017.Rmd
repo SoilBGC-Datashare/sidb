@@ -107,7 +107,7 @@ A dataset with 17 variables of `r db_flat$vars$Sierra2017BG[1,"incDesc"] `, two 
 gas measurement units in mgC/day and the initial carbon has been measured as mgC/mgSoil
 
 ```{r}
-FitModel(db = db[[24]], ts.col = 2, ic.col = 1, UnitConverter = 1e3, 
+FitModel(db = db[[24]], ts.col = 2, ic.col = 1, UnitConverter = 10, 
          inipars= list(c(0.05, 0.005, 0.1),
                        c(0.05, 0.00005, 0.1, 0.01, 0.01),
                        c(0.05, 0.00005, 0.1, 0.01)) )

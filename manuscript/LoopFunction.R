@@ -1,5 +1,5 @@
 modelLoop <- function(db, ts.col, ic.col, unitConverter,
-                      inipars=list(oneP=0.01,
+                      inipars=list(oneP=0.5,
                                    parallel=c(0.01, 0.001, 0.1), 
                                    series=c(0.005, 0.00001, 0.1, 0.01), 
                                    feedback=c(0.005, 0.00001, 0.1, 0.01, 0.01))){

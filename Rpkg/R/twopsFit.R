@@ -37,7 +37,7 @@ twopsFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.3)){
   Fit=modFit(f=costFunc, p=inipars, method="Marq", lower=rep(0,4), upper=c(Inf, Inf, 1,1))
   bestMod=Func(pars=Fit$par)
   print(paste(c("k1=", "k2=", "a21=", "Proportion of C0 in pool 1="),Fit$par))
-  plot(complete, ylim=c(0,1.2*max(complete[,2])))
+  plot(complete, ylim=c(0,1.2*max(complete[,2])), main="two pool_ Series structure")
   lines(bestMod)
   AIC=(2*length(Fit$par))-2*log(Fit$ms)
   print(paste("AIC = ",AIC))

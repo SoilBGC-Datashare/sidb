@@ -1,18 +1,22 @@
 modelLoop <- function(db, ts.col, ic.col, unitConverter,
                       inipars=list(oneP=0.5,
                                    parallel=c(0.01, 0.001, 0.1), 
-                                   series=c(0.005, 0.00001, 0.1, 0.01), 
-                                   feedback=c(0.005, 0.00001, 0.1, 0.01, 0.01))){
+                                   series=c(0.05, 0.0001, 0.01, 0.1), 
+                                   feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01))){
   # Models
+  print("One pool model")
   M0=onePoolFlux(timeSeries = db$timeSeries[,c(1,ts.col)], 
                  initialCarbon=db$initConditions[ic.col,"carbonMean"]*unitConverter, 
                  inipars= inipars[["oneP"]])
+  print("Two pool model-parallel structure")
   M1=twoppFit(timeSeries = db$timeSeries[,c(1,ts.col)], 
               initialCarbon=db$initConditions[ic.col,"carbonMean"]*unitConverter, 
               inipars= inipars[["parallel"]])
+  print("Two pool model-Series structure")
   M2=twopsFit(timeSeries = db$timeSeries[,c(1,ts.col)], 
               initialCarbon=db$initConditions[ic.col,"carbonMean"]*unitConverter, 
               inipars= inipars[["series"]])
+  print("Two pool model-feedback structure")
   M3=twopfFit(timeSeries = db$timeSeries[,c(1,ts.col)], 
               initialCarbon=db$initConditions[ic.col,"carbonMean"]*unitConverter, 
               inipars= inipars[["feedback"]])
@@ -87,38 +91,51 @@ modelLoop <- function(db, ts.col, ic.col, unitConverter,
   a21=c(NA, NA, M2$FMEmodel$par[3], M3$FMEmodel$par[3])
   a12=c(NA, NA ,NA , M2$FMEmodel$par[4])
   
+  SSR=sapply(Mlist, function(x){x$FMEmodel$ssr}) 
+  MSR=sapply(Mlist, function(x){x$FMEmodel$ms})
+  
   tbldb <- data.frame(model=modelNames, AIC=AIC, k1=k1, k2=k2, 
                       C0Inp1=pC0, a21=a21, a12=a12, AICc= unlist(AICc), 
-                      wi=unlist(wi), MeanTrT=TT, q05=q05 )
+                      wi=unlist(wi), MeanTrT=TT, q05=q05, SSR=SSR, MSR=MSR )
   
   tbldb=tbldb %>% 
     mutate_if(is.numeric, funs(signif(., 3)))
   
-  data=list("one-pool"= M0, 
-            "two-pool Parallel"= M1, 
-            "two-pool Series"= M2, 
-            "two-pool Feedback"= M3, 
-            "AIC"= AIC, 
-            "k1"= k1, 
-            "k2"= k2, 
-            "C0 in pools"= pC0, 
-            "a21"= a21, 
-            "a12"= a12, 
-            "AICc"= unlist(AICc), 
-            "Wighted AIC"= unlist(wi), 
-            "TransitTime"= TT, 
-            "quantile5"= q05)
+  data=list("one-pool"= M0,
+            "two-pool Parallel"= M1,
+            "two-pool Series"= M2,
+            "two-pool Feedback"= M3,
+            "AIC"= AIC,
+            "k1"= k1,
+            "k2"= k2,
+            "C0 in pools"= pC0,
+            "a21"= a21,
+            "a12"= a12,
+            "AICc"= unlist(AICc),
+            "Wighted AIC"= unlist(wi),
+            "TransitTime"= TT,
+            "quantile5"= q05,
+            "Sum of squared residuals"= SSR,
+            "Mean squared residulas"=MSR)
+
+  entryName= paste(db$citationKey, "_", ts.col, sep="")
+  assign(entryName, data)
   
   rDatafile=gsub(" ", "", paste("~/sidb/manuscript/man2data/",
                                 db$citationKey,
                                 "_",ts.col) )
   
-  save(data, file = paste0(rDatafile, '.RData') )
+  save(list=entryName, file = paste0(rDatafile, '.RData') )
 }
+
+V2=modelLoop(db = db[[9]], ts.col = 2, ic.col = 1, unitConverter = 1e3)
+load("~/sidb/manuscript/man2data/Crow2019a_2.RData")
+
+V3=modelLoop(db = db[[9]], ts.col = 3, ic.col = 2, unitConverter = 1e3, 
+             inipars=list(oneP=0.05,
+                          parallel=c(0.01, 0.001, 0.1), 
+                          series=c(0.05, 0.0001, 0.01, 0.1), 
+                          feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01)))
+V4=modelLoop(db = db[[9]], ts.col = 4, ic.col = 3, unitConverter = 1e3)
+
 vars=db[[9]]$variables[-1]
-
-V2=modelLoop(db = db[[9]], ts.col = 2, ic.col = 1, unitConverter = 1e4)
-V3=modelLoop(db = db[[9]], ts.col = 3, ic.col = 2, unitConverter = 1e4)
-V4=modelLoop(db = db[[9]], ts.col = 4, ic.col = 3, unitConverter = 1e4)
-
-

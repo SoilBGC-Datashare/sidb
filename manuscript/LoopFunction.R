@@ -118,6 +118,8 @@ modelLoop <- function(db, ts.col, ic.col, unitConverter,
             "Sum of squared residuals"= SSR,
             "Mean squared residulas"=MSR)
 
+  
+  # Saving the summary statistic of each timeSeries 
   entryName= paste(db$citationKey, "_", ts.col, sep="")
   assign(entryName, data)
   
@@ -138,4 +140,6 @@ V3=modelLoop(db = db[[9]], ts.col = 3, ic.col = 2, unitConverter = 1e3,
                           feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01)))
 V4=modelLoop(db = db[[9]], ts.col = 4, ic.col = 3, unitConverter = 1e3)
 
-vars=db[[9]]$variables[-1]
+
+
+

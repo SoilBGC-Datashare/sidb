@@ -1,3 +1,10 @@
+packs <- c('SoilR', 'sidb', 'R.utils', 'dplyr')
+sapply(packs, require, character.only=TRUE)
+rm(list=ls())
+############
+db=loadEntries(path="~/sidb/data/")
+db_flat=flatterSIDb(db)
+##################
 modelLoop <- function(db, ts.col, ic.col, unitConverter,
                       inipars=list(oneP=0.5,
                                    parallel=c(0.01, 0.001, 0.1), 
@@ -119,27 +126,132 @@ modelLoop <- function(db, ts.col, ic.col, unitConverter,
             "Mean squared residulas"=MSR)
 
   
-  # Saving the summary statistic of each timeSeries 
+  # Saving the summary statistic of each timeSeries as "entryName_VariableNumber.RData" 
   entryName= paste(db$citationKey, "_", ts.col, sep="")
   assign(entryName, data)
   
-  rDatafile=gsub(" ", "", paste("~/sidb/manuscript/man2data/",
-                                db$citationKey,
-                                "_",ts.col) )
+  rDatafile=paste("~/sidb/manuscript/man2data/", db$citationKey,"_",ts.col, sep = "")
   
   save(list=entryName, file = paste0(rDatafile, '.RData') )
 }
 
-V2=modelLoop(db = db[[9]], ts.col = 2, ic.col = 1, unitConverter = 1e3)
-load("~/sidb/manuscript/man2data/Crow2019a_2.RData")
+#Analysing each timeSerie of the entry Crow2019a. A file of the results will be saved in the folrder "~/sidb/manuscript/man2data/". I changed the inipars values whenever there was an error.  
 
-V3=modelLoop(db = db[[9]], ts.col = 3, ic.col = 2, unitConverter = 1e3, 
-             inipars=list(oneP=0.05,
+# inipars=list(oneP=0.5,
+#              parallel=c(0.01, 0.001, 0.1), 
+#              series=c(0.05, 0.0001, 0.01, 0.1), 
+#              feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01))
+
+V2=modelLoop(db = db[[9]], ts.col = 2, ic.col = 1, unitConverter = 1e3)
+
+V3=modelLoop(db = db[[9]], ts.col = 3, ic.col = 2, unitConverter = 1e3) #, 
+#load("~/sidb/manuscript/man2data/Crow2019a_3.RData")             
+V4=modelLoop(db = db[[9]], ts.col = 4, ic.col = 3, unitConverter = 1e3, 
+             inipars=list(oneP=0.5,
                           parallel=c(0.01, 0.001, 0.1), 
                           series=c(0.05, 0.0001, 0.01, 0.1), 
+                          feedback=c(0.05, 0.0001, 0.1, 0.01, 0.1))) 
+
+V5=modelLoop(db = db[[9]], ts.col = 5, ic.col = 4, unitConverter = 1e3)
+
+V6=modelLoop(db = db[[9]], ts.col = 6, ic.col = 5, unitConverter = 1e3, 
+             inipars=list(oneP=0.5,
+                          parallel=c(0.01, 0.001, 0.1), 
+                          series=c(0.05, 0.0001, 0.01, 0.1), 
+                          feedback=c(0.05, 0.0001, 0.1, 0.01, 0.1)))
+
+V7=modelLoop(db = db[[9]], ts.col = 7, ic.col = 6, unitConverter = 1e3, 
+             inipars=list(oneP=0.5,
+                          parallel=c(0.01, 0.001, 0.1), 
+                          series=c(0.05, 0.0001, 0.01, 0.1), 
+                          feedback=c(0.05, 0.0001, 0.1, 0.01, 0.1)))
+
+V8=modelLoop(db = db[[9]], ts.col = 8, ic.col = 7, unitConverter = 1e3, 
+             inipars=list(oneP=0.5,
+                          parallel=c(0.01, 0.001, 0.1), 
+                          series=c(0.01, 0.0001, 0.01, 0.1), 
+                          feedback=c(0.01, 0.0001, 0.1, 0.01, 0.1)))
+
+V9=modelLoop(db = db[[9]], ts.col = 9, ic.col = 8, unitConverter = 1e3, 
+             inipars=list(oneP=0.5,
+                          parallel=c(0.01, 0.001, 0.1), 
+                          series=c(0.01, 0.0001, 0.01, 0.1), 
                           feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01)))
-V4=modelLoop(db = db[[9]], ts.col = 4, ic.col = 3, unitConverter = 1e3)
 
+V10=modelLoop(db = db[[9]], ts.col = 10, ic.col = 9, unitConverter = 1e3, 
+              inipars=list(oneP=0.5,
+                          parallel=c(0.01, 0.001, 0.1), 
+                          series=c(0.05, 0.0001, 0.01, 0.1), 
+                          feedback=c(0.01, 0.001, 0.1, 0.01, 0.01)))
+# The models get fitted but the folowing error prevents the data to be saved
+# Error in solve.default(A) : 
+#   system is computationally singular: reciprocal condition number = 1.37957e-17
 
+V11=modelLoop(db = db[[9]], ts.col = 11, ic.col = 10, unitConverter = 1e3, 
+              inipars=list(oneP=0.5,
+                           parallel=c(0.01, 0.001, 0.1), 
+                           series=c(0.01, 0.0001, 0.01, 0.1), 
+                           feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01)))
 
+V12=modelLoop(db = db[[9]], ts.col = 12, ic.col = 11, unitConverter = 1e3)
+
+V13=modelLoop(db = db[[9]], ts.col = 13, ic.col = 12, unitConverter = 1e3, 
+              inipars=list(oneP=0.5,
+                           parallel=c(0.01, 0.001, 0.1),
+                           series=c(0.05, 0.0005, 0.01, 0.1),
+                           feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01)) )
+
+V14=modelLoop(db = db[[9]], ts.col = 14, ic.col = 13, unitConverter = 1e3 )
+
+V15=modelLoop(db = db[[9]], ts.col = 15, ic.col = 14, unitConverter = 1e3 )
+
+V16=modelLoop(db = db[[9]], ts.col = 16, ic.col = 15, unitConverter = 1e3 )
+
+V17=modelLoop(db = db[[9]], ts.col = 17, ic.col = 16, unitConverter = 1e3, 
+              inipars=list(oneP=0.5,
+                           parallel=c(0.01, 0.001, 0.1),
+                           series=c(0.01, 0.0001, 0.05, 0.1),
+                           feedback=c(0.05, 0.0005, 0.1, 0.01, 0.01)))
+
+V18=modelLoop(db = db[[9]], ts.col = 18, ic.col = 17, unitConverter = 1e3 )
+
+V19=modelLoop(db = db[[9]], ts.col = 19, ic.col = 18, unitConverter = 1e3,
+              inipars=list(oneP=0.5,
+                           parallel=c(0.01, 0.001, 0.1),
+                           series=c(0.01, 0.0001, 0.05, 0.1),
+                           feedback=c(0.05, 0.0001, 0.1, 0.01, 0.1)))
+
+V20=modelLoop(db = db[[9]], ts.col = 20, ic.col = 19, unitConverter = 1e3 )
+
+V21=modelLoop(db = db[[9]], ts.col = 21, ic.col = 20, unitConverter = 1e3,
+              inipars=list(oneP=0.5,
+                           parallel=c(0.01, 0.001, 0.1),
+                           series=c(0.01, 0.0001, 0.01, 0.1),
+                           feedback=c(0.01, 0.0001, 0.1, 0.01, 0.01)) )
+
+V22=modelLoop(db = db[[9]], ts.col = 22, ic.col = 11, unitConverter = 1e3, 
+              inipars=list(oneP=0.5,
+                           parallel=c(0.01, 0.001, 0.1),
+                           series=c(0.05, 0.0001, 0.01, 0.1),
+                           feedback=c(0.01, 0.0001, 0.1, 0.01, 0.01)) )
+
+V23=modelLoop(db = db[[9]], ts.col = 23, ic.col = 22, unitConverter = 1e3 )
+
+V24=modelLoop(db = db[[9]], ts.col = 24, ic.col = 23, unitConverter = 1e3 )
+
+V25=modelLoop(db = db[[9]], ts.col = 25, ic.col = 24, unitConverter = 1e3 )
+
+V26=modelLoop(db = db[[9]], ts.col = 26, ic.col = 25, unitConverter = 1e3 )
+
+V27=modelLoop(db = db[[9]], ts.col = 27, ic.col = 26, unitConverter = 1e3 )
+
+V28=modelLoop(db = db[[9]], ts.col = 28, ic.col = 27, unitConverter = 1e3 )
+
+V29=modelLoop(db = db[[9]], ts.col = 29, ic.col = 28, unitConverter = 1e3, 
+              inipars=list(oneP=0.5,
+                           parallel=c(0.01, 0.001, 0.1),
+                           series=c(0.05, 0.0001, 0.01, 0.1),
+                           feedback=c(0.01, 0.0001, 0.1, 0.01, 0.1)) )
+
+V30=modelLoop(db = db[[9]], ts.col = 30, ic.col = 29, unitConverter = 1e3 )
 

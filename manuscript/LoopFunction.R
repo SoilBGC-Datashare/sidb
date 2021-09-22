@@ -255,3 +255,27 @@ V29=modelLoop(db = db[[9]], ts.col = 29, ic.col = 28, unitConverter = 1e3,
 
 V30=modelLoop(db = db[[9]], ts.col = 30, ic.col = 29, unitConverter = 1e3 )
 
+
+# file=list.files(path = "~/sidb/manuscript/man2data/", 
+#                 full.names = FALSE, recursive = FALSE)
+# list.sidb <- lapply(file, FUN = load, path="~/sidb/manuscript/man2data/")
+# loadRData <- function(path){
+#   RDataNames=list.files(path, full.names = FALSE, recursive = FALSE)
+#   
+#   dataList=lapply(RDataNames, FUN = load)
+#   names(dataList) <- RDataNames
+#   
+#   return(dataList)
+# }
+# 
+# loadRData("~/sidb/manuscript/man2data/")
+treatmentLevels(database = db, treatment = "moisture")
+treatmentLevels(sidb, "moisture", "percentFieldCapacity")
+
+# data= list.files(path = "~/sidb/manuscript/man2data/", full.names = TRUE, recursive = FALSE)
+# dataAll=lapply(data, FUN = load)
+# load("~/sidb/manuscript/man2data/Crow2019a_11.RData")
+# 
+# data=list.dirs(path = "~/sidb/manuscript/man2data/", full.names = FALSE, recursive = FALSE)
+
+

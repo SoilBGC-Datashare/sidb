@@ -37,7 +37,7 @@ threepsFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.5, 0.5, 
   print(paste(c("k1=", "k2=", "k3=","alpha21", "alpha32","proportion of C0 in pool 1=", "Proportion of C0 in pool 2="),Fit$par))
   plot(complete, ylim=c(0,1.2*max(complete[,2])))
   lines(bestMod)
-  AIC=(2*length(Fit$par))-2*log(Fit$ms)
+  AIC=(2*length(Fit$par))+2*log(Fit$ms)
   print(paste("AIC = ",AIC))
   SoilRmodel=SoilR::ThreepSeriesModel(t=tt,ks=Fit$par[1:3], a21=Fit$par[1]*Fit$par[4], a32=Fit$par[2]*Fit$par[5], C0=initialCarbon*c(Fit$par[6], Fit$par[7], 1-sum(Fit$par[6:7])), In=0)
   return(list(FMEmodel=Fit, SoilRmodel=SoilRmodel, AIC=AIC))

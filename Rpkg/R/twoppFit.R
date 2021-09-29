@@ -37,7 +37,7 @@ twoppFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5)){
   print(paste(c("k1=", "k2=", "proportion of C0 in pool 1="),Fit$par))
   plot(complete, ylim=c(0,1.2*max(complete[,2])), main="two pool_parallel structure")
   lines(bestMod)
-  AIC=(2*length(Fit$par))-2*log(Fit$ms)
+  AIC=(2*length(Fit$par))+2*log(Fit$ms)
   print(paste("AIC = ",AIC))
   SoilRmodel=SoilR::TwopParallelModel(t=tt,ks=Fit$par[1:2], C0=initialCarbon*c(Fit$par[3], 1-Fit$par[3]), In=0, gam=0)
   return(list(FMEmodel=Fit, SoilRmodel=SoilRmodel, AIC=AIC))

@@ -39,7 +39,7 @@ twopfFit=function(timeSeries, initialCarbon, inipars=c(1, 0.5, 0.5, 0.5, 0.3)){
   print(paste(c("k1=", "k2=", "a21=", "a12=", "Proportion of C0 in pool 1="),Fit$par))
   plot(complete, ylim=c(0,1.2*max(complete[,2])), main="two pool_feedback structure")
   lines(bestMod)
-  AIC=(2*length(Fit$par))-2*log(Fit$ms)
+  AIC=(2*length(Fit$par))+2*log(Fit$ms)
   print(paste("AIC = ",AIC))
   SoilRmodel=SoilR::TwopFeedbackModel(t=tt,ks=Fit$par[1:2], a21=Fit$par[1]*Fit$par[3], a12=Fit$par[2]*Fit$par[4],
                                C0=initialCarbon*c(Fit$par[5], 1-Fit$par[5]), In=0)

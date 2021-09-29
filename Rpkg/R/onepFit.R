@@ -33,7 +33,7 @@ onepFit=function(timeSeries, initialCarbon){
   print(paste("Best fit parameter: ",Fit$par))
   plot(complete, ylim=c(0,1.2*max(complete[,2])))
   lines(bestMod)
-  AIC=2-2*log(Fit$ms)
+  AIC=2+2*log(Fit$ms)
   print(paste("AIC = ",AIC))
   SoilRmodel=SoilR::OnepModel(t=tt,k=Fit$par[1], C0=initialCarbon, In=0)
   return(list(FMEmodel=Fit, SoilRmodel=SoilRmodel, AIC=AIC))

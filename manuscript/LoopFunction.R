@@ -254,4 +254,150 @@ V29=modelFitTS(db = db[[9]], ts.col = 29, ic.col = 28, unitConverter = 1e3,
                            feedback=c(0.01, 0.0001, 0.1, 0.01, 0.1)) )
 
 V30=modelFitTS(db = db[[9]], ts.col = 30, ic.col = 29, unitConverter = 1e3 )
+V31=modelFitTS(db = db[[9]], ts.col = 31, ic.col = 30, unitConverter = 1e3 )
+V32=modelFitTS(db = db[[9]], ts.col = 32, ic.col = 31, unitConverter = 1e3 )
+V33=modelFitTS(db = db[[9]], ts.col = 33, ic.col = 32, unitConverter = 1e3 )
+V34=modelFitTS(db = db[[9]], ts.col = 34, ic.col = 33, unitConverter = 1e3 )
+V35=modelFitTS(db = db[[9]], ts.col = 35, ic.col = 34, unitConverter = 1e3 )
+V36=modelFitTS(db = db[[9]], ts.col = 36, ic.col = 35, unitConverter = 1e3,
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.01, 0.0001, 0.01, 0.1),
+                            feedback=c(0.01, 0.0001, 0.1, 0.01, 0.1)))
+##
+V37=modelFitTS(db = db[[9]], ts.col = 37, ic.col = 36, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.05, 0.0001, 0.01, 0.1),
+                            feedback=c(0.01, 0.0001, 0.1, 0.01, 0.1)) )
+
+V38=modelFitTS(db = db[[9]], ts.col = 38, ic.col = 37, unitConverter = 1e3 )
+V39=modelFitTS(db = db[[9]], ts.col = 39, ic.col = 38, unitConverter = 1e3 )
+V40=modelFitTS(db = db[[9]], ts.col = 40, ic.col = 39, unitConverter = 1e3 )
+V41=modelFitTS(db = db[[9]], ts.col = 41, ic.col = 40, unitConverter = 1e3 )
+V42=modelFitTS(db = db[[9]], ts.col = 42, ic.col = 41, unitConverter = 1e3 )
+V43=modelFitTS(db = db[[9]], ts.col = 43, ic.col = 42, unitConverter = 1e3 )
+V44=modelFitTS(db = db[[9]], ts.col = 44, ic.col = 43, unitConverter = 1e3 )
+V45=modelFitTS(db = db[[9]], ts.col = 45, ic.col = 44, unitConverter = 1e3 )
+V46=modelFitTS(db = db[[9]], ts.col = 46, ic.col = 45, unitConverter = 1e3 )
+V47=modelFitTS(db = db[[9]], ts.col = 47, ic.col = 46, unitConverter = 1e3 )
+V48=modelFitTS(db = db[[9]], ts.col = 48, ic.col = 47, unitConverter = 1e3 )
+V49=modelFitTS(db = db[[9]], ts.col = 49, ic.col = 48, unitConverter = 1e3 )
+V50=modelFitTS(db = db[[9]], ts.col = 50, ic.col = 49, unitConverter = 1e3 )
+V51=modelFitTS(db = db[[9]], ts.col = 51, ic.col = 50, unitConverter = 1e3 )
+V52=modelFitTS(db = db[[9]], ts.col = 52, ic.col = 51, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.01, 0.0001, 0.01, 0.1),
+                            feedback=c(0.01, 0.0005, 0.1, 0.01, 0.1)))
+V53=modelFitTS(db = db[[9]], ts.col = 53, ic.col = 52, unitConverter = 1e3 , 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.05, 0.0001, 0.01, 0.1),
+                            feedback=c(0.01, 0.0005, 0.1, 0.01, 0.1)))
+V54=modelFitTS(db = db[[9]], ts.col = 54, ic.col = 53, unitConverter = 1e3 )
+V55=modelFitTS(db = db[[9]], ts.col = 55, ic.col = 54, unitConverter = 1e3 )
+V56=modelFitTS(db = db[[9]], ts.col = 56, ic.col = 55, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.05, 0.0001, 0.01, 0.1),
+                            feedback=c(0.01, 0.0005, 0.1, 0.01, 0.1)) )
+
+V57=modelFitTS(db = db[[9]], ts.col = 57, ic.col = 56, unitConverter = 1e3 )
+V58=modelFitTS(db = db[[9]], ts.col = 58, ic.col = 57, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.05, 0.0001, 0.01, 0.1),
+                            feedback=c(0.01, 0.0005, 0.1, 0.01, 0.1)) )
+V59=modelFitTS(db = db[[9]], ts.col = 59, ic.col = 58, unitConverter = 1e3 )
+V60=modelFitTS(db = db[[9]], ts.col = 60, ic.col = 59, unitConverter = 1e3 )
+V61=modelFitTS(db = db[[9]], ts.col = 61, ic.col = 59, unitConverter = 1e3 )
+V62=modelFitTS(db = db[[9]], ts.col = 62, ic.col = 61, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.05, 0.0001, 0.01, 0.1),
+                            feedback=c(0.01, 0.0005, 0.1, 0.01, 0.1)) )
+V63=modelFitTS(db = db[[9]], ts.col = 63, ic.col = 62, unitConverter = 1e3 )
+V64=modelFitTS(db = db[[9]], ts.col = 64, ic.col = 63, unitConverter = 1e3 )
+V65=modelFitTS(db = db[[9]], ts.col = 65, ic.col = 64, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.05, 0.0001, 0.01, 0.1),
+                            feedback=c(0.01, 0.0005, 0.1, 0.01, 0.1))  )
+V66=modelFitTS(db = db[[9]], ts.col = 66, ic.col = 65, unitConverter = 1e3 , 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.05, 0.0001, 0.01, 0.1),
+                            feedback=c(0.05, 0.0005, 0.1, 0.01, 0.1)))
+V67=modelFitTS(db = db[[9]], ts.col = 67, ic.col = 66, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.05, 0.0001, 0.01, 0.1),
+                            feedback=c(0.01, 0.0005, 0.1, 0.01, 0.1)) )
+
+##
+V68=modelFitTS(db = db[[9]], ts.col = 68, ic.col = 67, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.01, 0.001, 0.1),
+                            series=c(0.01, 0.0005, 0.01, 0.1),
+                            feedback=c(0.01, 0.0001, 0.1, 0.01, 0.1))  )
+V69=modelFitTS(db = db[[9]], ts.col = 69, ic.col = 68, unitConverter = 1e3 )
+V70=modelFitTS(db = db[[9]], ts.col = 70, ic.col = 69, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.05, 0.001, 0.1),
+                            series=c(0.5, 0.0001, 0.01, 0.1),
+                            feedback=c(0.01, 0.0005, 0.1, 0.01, 0.1)) )
+V71=modelFitTS(db = db[[9]], ts.col = 71, ic.col = 70, unitConverter = 1e3)
+V72=modelFitTS(db = db[[9]], ts.col = 72, ic.col = 71, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.05, 0.001, 0.1),
+                            series=c(0.01, 0.0005, 0.01, 0.1),
+                            feedback=c(0.01, 0.0005, 0.1, 0.01, 0.1)))
+V73=modelFitTS(db = db[[9]], ts.col = 73, ic.col = 72, unitConverter = 1e3)
+V74=modelFitTS(db = db[[9]], ts.col = 74, ic.col = 73, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.05, 0.001, 0.1),
+                            series=c(0.01, 0.0005, 0.01, 0.1),
+                            feedback=c(0.05, 0.0001, 0.1, 0.01, 0.1)))
+V75=modelFitTS(db = db[[9]], ts.col = 75, ic.col = 74, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.1, 0.005, 0.1),
+                            series=c(0.01, 0.005, 0.01, 0.1),
+                            feedback=c(0.01, 0.005, 0.01, 0.01, 0.1)))
+##
+V76=modelFitTS(db = db[[9]], ts.col = 76, ic.col = 75, unitConverter = 1e3 , 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.5, 0.001, 0.1),
+                            series=c(0.01, 0.0005, 0.01, 0.1),
+                            feedback=c(0.05, 0.0001, 0.1, 0.01, 0.1)))
+V77=modelFitTS(db = db[[9]], ts.col = 77, ic.col = 76, unitConverter = 1e3)
+V78=modelFitTS(db = db[[9]], ts.col = 78, ic.col = 77, unitConverter = 1e3, 
+               inipars=list(oneP=0.5,
+                            parallel=c(0.05, 0.001, 0.1),
+                            series=c(0.01, 0.0005, 0.01, 0.1),
+                            feedback=c(0.01, 0.0005, 0.1, 0.01, 0.1)))
+V79=modelFitTS(db = db[[9]], ts.col = 79, ic.col = 78, unitConverter = 1e3)
+############# End of Crow2019a ###################
+#
+#
+############ Start with Sierra2017BG ############
+Sierra_V2=modelFitTS(db = db[[24]], ts.col = 2, ic.col = 1, unitConverter = 10, 
+                     inipars=list(oneP=0.5,
+                                  parallel=c(0.1, 0.005, 0.1),
+                                  series=c(0.1, 0.005, 0.01, 0.05),
+                                  feedback=c(0.1, 0.005, 0.1, 0.01, 0.5)))
+Sierra_V3=modelFitTS(db = db[[24]], ts.col = 3, ic.col = 1, unitConverter = 10, 
+                     inipars=list(oneP=0.5,
+                                  parallel=c(0.1, 0.001, 0.1), 
+                                  series=c(0.1, 0.005, 0.05, 0.1), 
+                                  feedback=c(0.1, 0.005, 0.1, 0.01, 0.01)))
+Sierra_V4=modelFitTS(db = db[[24]], ts.col = 4, ic.col = 1, unitConverter = 10)
+
+# inipars=list(oneP=0.5,
+#              parallel=c(0.01, 0.001, 0.1), 
+#              series=c(0.05, 0.0001, 0.01, 0.1), 
+#              feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01))
+# inipars= list(c(0.05, 0.005, 0.1),
+#               c(0.05, 0.00005, 0.1, 0.01, 0.01),
+#               c(0.05, 0.00005, 0.1, 0.01))
 

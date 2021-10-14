@@ -3,6 +3,7 @@ modelFitTS_Markdown <- function(db, ts.col, ic.col, unitConverter,
                                     parallel=c(0.01, 0.001, 0.1), 
                                     series=c(0.05, 0.0001, 0.01, 0.1), 
                                     feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01))){
+  options(knitr.kable.NA = "", scipen = -2) 
   print(paste0(db$citationKey , '; variable: ', colnames(db$timeSeries[ts.col]) ) )
   
   par(mfrow=c(2,2))
@@ -33,8 +34,10 @@ modelFitTS_Markdown <- function(db, ts.col, ic.col, unitConverter,
   # Plot all models together_ model prediction in lines, observed flux in points
   par(mfrow=c(2,2))
   for (i in c(1:4)){
-    matplot(days, Rt[[i]], type="l", lty=1, ylab=db$variables$V2$units, xlab="Day", 
-            main=modelNames[i])
+    matplot(days, Rt[[i]], type="l", lty=1, 
+            ylim=c(0, 1.2*max(db$timeSeries[, ts.col] , na.rm = TRUE)),
+            main=modelNames[i],
+            xlab="Day",ylab=db$variables$V2$units)
     points(db$timeSeries[, c(1,ts.col)], pch=19, cex=0.5)}
   par(mfrow=c(1,1))
   
@@ -112,17 +115,24 @@ modelFitTS_Markdown <- function(db, ts.col, ic.col, unitConverter,
   SSR=sapply(Mlist, function(x){x$FMEmodel$ssr}) 
   MSR=sapply(Mlist, function(x){x$FMEmodel$ms})
    
-  table_1= data.frame(model=modelNames, k1=k1, k2=k2, 
-                      C0Inp1=pC0, a21=a21, a12=a12)
-  print(
-  table_1 %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
-    knitr::kable(.) )
-  
-  table_2= data.frame(model=modelNames, AIC=AIC, BIC=BIC, 
+  table= data.frame(Model=modelNames, k1=k1, k2=k2, 
+                      C0Inp1=pC0, a21=a21, a12=a12, 
+                      AIC=AIC, BIC=BIC, 
                       AICn=AICn, AICc= unlist(AICc), 
-                      wi=unlist(wi), MeanTrT=TT, q05=q05, SSR=SSR, MSR=MSR )
+                      wi=unlist(wi), MeanTrT=TT, q05=q05, 
+                      SSR=SSR, MSR=MSR) #%>% 
+    #dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3))))
+  
   print(
-    table_2 %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
-      knitr::kable(.) )
+  #table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+    knitr::kable(table[c(1,2,3,4,5,6,14, 15)], #digits = 4, 
+                 #format.args = list(scientific = TRUE), 
+                 "simple") )
+  
+  print(
+    #table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+      knitr::kable(table[c(1,7,8,9, 10,11,12,13)], #digits = 4, 
+                   #format.args = list(scientific = TRUE), 
+                   "simple") )
   
 }

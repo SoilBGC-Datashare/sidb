@@ -12,4 +12,4 @@ tests/sidb.Rcheck
 
 # Files
 tests/*tar.gz
-
+*.RData

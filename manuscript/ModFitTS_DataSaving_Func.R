@@ -30,8 +30,10 @@ modelFitTS <- function(db, ts.col, ic.col, unitConverter,
   # Plot all models together_ model prediction in lines, observed flux in points
   par(mfrow=c(2,2))
   for (i in c(1:4)){
-    matplot(days, Rt[[i]], type="l", lty=1, ylab=db$variables$V2$units, xlab="Day", 
-            main=modelNames[i])
+    matplot(days, Rt[[i]], type="l", lty=1, 
+            ylim=c(0, 1.2*max(db$timeSeries[, ts.col] , na.rm = TRUE)),
+            main=modelNames[i],
+            xlab="Day",ylab=db$variables$V2$units)
     points(db$timeSeries[, c(1,ts.col)], pch=19, cex=0.5)}
   par(mfrow=c(1,1))
   

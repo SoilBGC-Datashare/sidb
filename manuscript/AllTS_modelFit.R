@@ -48,8 +48,8 @@ Brach0_V12=modelFitTS(db = db[[4]], ts.col = 12, ic.col = 6, unitConverter = 100
 
 ###### Dataset "Crow2019a" ######
 #Analysing each timeSerie of the entry Crow2019a. A file of the results will be saved in the folrder "~/sidb/manuscript/man2data/". I changed the inipars values whenever there was an error.  
-
-
+# db[[9]]$initConditions[1, 'carbonUnits']
+# db[[9]]$timeSeries[, c(2:79)]= db[[9]]$timeSeries[, c(2:70)]*1e-3
 
 Crow_V2=modelFitTS(db = db[[9]], ts.col = 2, ic.col = 1, unitConverter = 1e3)
 

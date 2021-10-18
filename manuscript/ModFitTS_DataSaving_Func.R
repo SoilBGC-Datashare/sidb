@@ -42,6 +42,17 @@ modelFitTS <- function(db, ts.col, ic.col, unitConverter,
   K=sapply(Mlist, function(x){length(x$FMEmodel$par)})
   n=nrow(db$timeSeries[ , c(1, ts.col)])
   
+  # Calculating BIC
+  BIC=sapply(Mlist, function(x){
+    (2*log(x$FMEmodel$ms))+(length(x$FMEmodel$par)*log(n))
+  })
+  
+  # Calculating AIC by implementing data size
+  AICn=sapply(Mlist, function(x){
+    (n*log(x$FMEmodel$ms))+(2*length(x$FMEmode$par))
+  })
+  
+  # AICc
   AICc=list=NULL
   for (i in 1:length(Mlist)){
     AICc[[i]]= AIC[[i]] + ( (2*K[[i]]* (K[[i]]+1)) / (n-K[[i]]-1))
@@ -108,6 +119,8 @@ modelFitTS <- function(db, ts.col, ic.col, unitConverter,
             "two-pool Series"= M2,
             "two-pool Feedback"= M3,
             "AIC"= AIC,
+            "AICn"=AICn,
+            "BIC"=BIC,
             "k1"= k1,
             "k2"= k2,
             "C0 in pools"= pC0,
@@ -125,7 +138,7 @@ modelFitTS <- function(db, ts.col, ic.col, unitConverter,
   entryName= paste(db$citationKey, "_", ts.col, sep="")
   assign(entryName, data)
   
-  rDatafile=paste("~/sidb/manuscript/man2data/", db$citationKey,"_",ts.col, sep = "")
+  rDatafile=paste("~/sidb/manuscript/RDataFiles/", db$citationKey,"_",ts.col, sep = "")
   
   save(list=entryName, file = paste0(rDatafile, '.RData') )
 }

@@ -1,9 +1,15 @@
-rm(list=ls())
-library(sidb)
-library(tidyverse)
-# packs <- c('SoilR', 'sidb', 'R.utils', 'dplyr')
-# sapply(packs, require, character.only=TRUE)
+####### packages and plot themes########
 
+rm(list=ls())
+packs <- c('sidb', 'tidyverse', 'patchwork')
+sapply(packs, require, character.only=TRUE)
+
+theme_set(theme_bw(base_line_size = 0) )#+
+            # theme(axis.text=element_text(size=14),
+            #       axis.title=element_text(size=18), #,face="bold"
+            #       legend.text=element_text(size=14),
+            #       strip.text = element_text(size=14)) )
+##############################################
 # load the database of sidb
 db=loadEntries(path="~/sidb/data/")
 
@@ -103,8 +109,25 @@ MTT$TimeSeries <- row.names(MTT)
 df_MTT <- pivot_longer(data = MTT, cols= c(oneP, twoPP, twoSP, twoFP), 
                       names_to = "Model", values_to = "MTT")
 
-SidB_DF <- left_join(SidB_DF, df_MTT, by=c("TimeSeries", "Model"))
-##### plots
+###### Mean transit time #####
+SSR=lapply(myList, function(x){x$`Sum of squared residuals`})
+SSR=as.data.frame(do.call(rbind, SSR))
+names(SSR) <- c("oneP", "twoPP", "twoSP", "twoFP")
+SSR$TimeSeries <- row.names(SSR)
+df_SSR <- pivot_longer(data = SSR, cols= c(oneP, twoPP, twoSP, twoFP), 
+                       names_to = "Model", values_to = "SSR")
+
+
+
+
+SidB_DF <- left_join(SidB_DF, df_SSR, by=c("TimeSeries", "Model"))
+
+
+
+write.table(SidB_DF, file = "~/SOIL-R/Theses/Mina/sidb/SidB_ModFit.csv",
+            row.names=FALSE, 
+            na="NA",col.names=TRUE, sep=",")
+##### plots #########
 
 p1 <- ggplot(SidB_DF, aes(Model, AIC))+
   geom_boxplot()
@@ -115,8 +138,23 @@ p3 <- ggplot(SidB_DF, aes(Model, AICc))+
 p4 <- ggplot(SidB_DF, aes(Model, BIC))+
   geom_boxplot()
 
-library(patchwork)
+
 (p1 + p2) / (p3 + p4)
+
+##########
+## Looking at some more data
+SidB_DF %>% 
+  #filter(!MTT>1e3) %>% 
+  ggplot(aes(Model, MTT))+
+  geom_boxplot()
+
+SidB_DF %>% 
+  ggplot(aes(Model, wi))+
+  geom_boxplot()+
+  ylab("Weighted AIC")
+
+RayV10 <- myList$Rey2008EJSS_9.RData
+RayV10$`Sum of squared residuals`
 
 
 # 
@@ -130,4 +168,6 @@ library(patchwork)
 # points(aic$twoSP, pch=22, col="green")
 # points(aic$oneP, pch=23, col="blue")
 
+####
+# What is next: looking at the selected model for each time serie and find out which model has been selected. and also if a model has been selected, how often this is the case. ==> the frequency in percentage. 
 

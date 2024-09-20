@@ -1,0 +1,1165 @@
+citationKey: WellsCrow2022PANGAEA # Unique identifier in the format: LastnameYearJOURNAL (journal may be abbreviated)
+doi:  10.1594/PANGAEA.943118 # DOI of the publication where data is published
+entryAuthor: Megan Gonsalves # First and last name of the person who entered the data in this file
+entryCreationDate: 2024-07-18 # Date when the data was entered in this file. Format: YYYY-MM-DD
+contactName: Susan Crow # First and last name of contact person (may be the principal investigator supervising the entryAuthor)
+contactEmail: crows@hawaii.edu # Email of the contact person
+entryNote: # Any notes or comments related to this entry.
+study: "Tropical agricultural soil carbon dynamics and related physicochemical properties." # Overall study description
+
+siteInfo:
+        site: # Names of individual sites, if one site, keep on this line, if multiple, use array format
+          - Alae_AcA
+          - Alae_AcB
+          - Ewa_EaA
+          - Ewa_EcB
+          - Haliimaile_HhB
+          - Hamakuapoko_HlB
+          - Jaucas_JaC
+          - Keahua_KnB
+          - Molokai_MuA
+          - Molokai_MuB
+          - Paia_PcB_1
+          - Paia_PcB_2
+          - Pulehu_PpA
+          - Pulehu_PrA
+          - Pulehu_PsA
+          - Pulehu_PtA
+          - Waiakoa_WeB
+          - Waiakoa_WfB
+          - Waiakoa_WgB
+          - Waiakoa_WlD2
+# These fields should be arrays of equal length to site array
+        coordinates:
+          latitude: # Latitude in decimal units (check for negative that denotes southern hemisphere)
+            - 20.827650
+            - 20.809270
+            - 20.892750
+            - 20.826550
+            - 20.870050
+            - 20.888150
+            - 20.846533
+            - 20.843850
+            - 20.897230
+            - 20.875467
+            - 20.916183
+            - 20.907283
+            - 20.816790
+            - 20.821383
+            - 20.851583
+            - 20.822233
+            - 20.842780
+            - 20.846750
+            - 20.784683
+            - 20.795250
+          longitude: # Longitude in decimal units (check for negative that denotes western hemisphere)
+            - -156.410700
+            - -156.452700
+            - -156.420467
+            - -156.457067
+            - -156.353117
+            - -156.328550
+            - -156.475517
+            - -156.376825
+            - -156.417690
+            - -156.379700
+            - -156.344550
+            - -156.361600
+            - -156.472450
+            - -156.489417
+            - -156.472833
+            - -156.505600
+            - -156.425000
+            - -156.440540
+            - -156.404050
+            - -156.407070
+        country: USA# Name of country where site was conducted
+        MAT: # Mean annual temperature in degrees Celsius
+            - 24.356
+            - 24.969
+            - 24.983
+            - 24.924
+            - 23.279
+            - 22.894
+            - 24.848
+            - 23.81
+            - 24.985
+            - 24.27
+            - 24.238
+            - 24.357
+            - 25.08
+            - 24.956
+            - 24.861
+            - 24.72
+            - 23.217
+            - 24.738
+            - 23.86
+            - 23.963
+        MAP: # Mean annual precipitation in mm
+            - 414.213
+            - 305.608
+            - 468.85
+            - 335.868
+            - 1112.531
+            - 1492.86
+            - 394.842
+            - 642.575
+            - 474.262
+            - 686.557
+            - 1193.525
+            - 987.247
+            - 316.537
+            - 346.818
+            - 407.024
+            - 432.859
+            - 420.709
+            - 399.167
+            - 333.563
+            - 345.866
+        elevation: # Elevation of study site in meters above sea level
+        landCover: # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+        vegNote: # Additional details about land cover such as species or functional type composition
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+        soilTaxonomy:
+          soilOrder: # Soil order according to the classification system described below
+          - Andisol
+          - Andisol
+          - Mollisol
+          - Mollisol
+          - Inceptisol
+          - Ultisol
+          - Entisol
+          - Aridisol
+          - Oxisol
+          - Oxisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          soilFamily: # Soil family description (ex. 'Eutric' for a Eutric Cambisol)
+          - Sandy or sandy-skeletal, mixed, isohyperthermic Ustic
+          - Sandy or sandy-skeletal, mixed, isohyperthermic Ustic
+          - Fine, kaolinitic, isohyperthermic Aridic
+          - Fine, kaolinitic, isohyperthermic Aridic
+          - Very-fine, parasesquic, isothermic Oxic
+          - Fine, mixed, semiactive, isohyperthermic Andic
+          - Carbonatic, isohyperthermic Typic
+          - Fine, kaolinitic, isohyperthermic Ustic
+          - Very-fine, kaolinitic, isohyperthermic Typic
+          - Very-fine, kaolinitic, isohyperthermic Typic
+          - Very-fine, parasesquic, isohyperthermic Torroxic
+          - Very-fine, parasesquic, isohyperthermic Torroxic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          soilSeries: # Soil series according to the classification system described below
+          - Alae
+          - Alae
+          - Ewa
+          - Ewa
+          - Haliimaile
+          - Hamakuapoko
+          - Jaucas
+          - Keahua
+          - Molokai
+          - Molokai
+          - Paia
+          - Paia
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          classificationSystem: USDA # Name of classification system used. Valid fields are: USDA, FAO, and WRB.
+        permafrost:
+          permafrostExist: # Yes or blank if no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        incDesc: # Short description of the incubation setup and main treatments
+          "The equivalent of 50 dry grams of soil were incubated for 90 days at 25 °C in 500 mL septa capped cell culture bottles after moisture adjustment to -15 kPa moisture content using soil pressure plates.
+          Evolved gases were sampled using 10 mL syringes, stored in evacuated 3 mL Exetainers and analyzed by gas chromatography. 
+          After sampling, headspace was purged, caps resealed, intitial concentration taken, then returned to controlled environment chambers."
+# These fields should all be one dimensional arrays. Values for experimental variables with multiple treatment levels should be entered in the variables section and left blank here
+        depthInfo: # Soil depth in cm. If only one depth listed instead of range, enter as midDepth. By default 0 is defined as organic/mineral interface. If reported otherwise enter "yes" under the surfaceAtm field. If multiple depths analyzed leave blank and specify depths in variables section.
+          top:
+          bottom:
+          midDepth:
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if zero is atmospheric interface
+          horizon: # soil horizon designation
+        temperature: 25 # Temperature at which incubations were performed in Celsius. If temperature is an experimental treatment with multiple levels leave blank and specify in variables section
+        # Use 'moisture' as a template for any additional treatments imposed. For example, if amendments were added for a priming experiment, the treatmentName 'moisture' would be replaced with 'amendment', 'value' could be set to 'glucose' (or whatever amendment was added), and 'units' could be set to 'mgC/g soilC'.
+        moisture:  # Moisture conditions at which incubations were performed.
+          value:  # If moisture is an experimental treatment with multiple levels leave blank and specify in variables section
+          units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
+        gasMeasured: # Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured and specify in variables section
+        replicates:
+          value: # Number of replicates per treatment
+          type: # Valid fields are: field or lab
+        incubationTime: 90 # length of incubation in days
+        preincubationTime: # Pre-incubation time in days
+        samplePreparation:
+          intactCore: # yes or no
+          sieving: 2 # no, or mesh size in mm
+          rootPicking: yes # yes or no
+          rockPicking: yes # yes or no
+        gasAnalyzer: Shimadzu, GC-2010 Green House Gas analyzer, Kyoto, Japan # Gas analysis equipment used
+
+variables: # These describe the columns of your timeSeries.csv file
+        V1: # column 1
+          name: time # Name of first variable in the accompanying timeSeries.csv data file. The first variable must always be time.
+          units: d # Time units used in accompanying file. Usually "d" for days
+        V2: # column 2
+          name: CL20F298 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Ewa_EcB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 33
+          	bottom: 72
+          	midDepth: 52.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V3: # column 3
+          name: CL20F081 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WlD2 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 10
+          	midDepth: 5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V4: # column 4
+          name: CL20F034 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Hamakuapoko_HlB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 8
+          	bottom: 18
+          	midDepth: 13
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V5: # column 5
+          name: CL20F101 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WgB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 75
+          	bottom: 100
+          	midDepth: 87.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V6: # column 6
+          name: CL20F020 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Paia_PcB_2 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 27
+          	bottom: 100
+          	midDepth: 63.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V7: # column 7
+          name: CL20F135 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Ewa_EaA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 10
+          	bottom: 35
+          	midDepth: 22.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V8: # column 8
+          name: CL20F252 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Jaucas_JaC # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 50
+          	bottom: 100
+          	midDepth: 75
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V9: # column 9
+          name: CL20F150 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Molokai_MuA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 5
+          	bottom: 25
+          	midDepth: 15
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V10: # column 10
+          name: CL20F314 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Alae_AcB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 30
+          	bottom: 100
+          	midDepth: 65
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V11: # column 11
+          name: CL20F018 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Paia_PcB_2 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 13
+          	bottom: 27
+          	midDepth: 20
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V12: # column 12
+          name: CL20F168 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WfB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 16
+          	midDepth: 8
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V13: # column 13
+          name: CL20F134 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Ewa_EaA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 10
+          	midDepth: 5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V14: # column 14
+          name: CL20F136 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Ewa_EaA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 35
+          	bottom: 100
+          	midDepth: 67.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V15: # column 15
+          name: CL20F312 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Alae_AcB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 15
+          	midDepth: 7.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V16: # column 16
+          name: CL20F186 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PsA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 24
+          	bottom: 40
+          	midDepth: 32
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V17: # column 17
+          name: CL20F100 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WgB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 27
+          	bottom: 75
+          	midDepth: 51
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V18: # column 18
+          name: CL20F120 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Molokai_MuB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 33
+          	bottom: 80
+          	midDepth: 56.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V19: # column 19
+          name: CL20F051 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Keahua_KnB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 27
+          	bottom: 39
+          	midDepth: 33
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V20: # column 20
+          name: CL20F049 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Keahua_KnB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 9
+          	midDepth: 4.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V21: # column 21
+          name: CL20F206 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PtA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 8
+          	bottom: 25
+          	midDepth: 16.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V22: # column 22
+          name: CL20F001 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Paia_PcB_1 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 10
+          	midDepth: 5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V23: # column 23
+          name: CL20F035 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Hamakuapoko_HlB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 18
+          	bottom: 40
+          	midDepth: 29
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V24: # column 24
+          name: CL20F097 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WgB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 5
+          	midDepth: 2.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V25: # column 25
+          name: CL20F282 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PpA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 24
+          	bottom: 80
+          	midDepth: 52
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V26: # column 26
+          name: CL20F099 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WgB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 16
+          	bottom: 27
+          	midDepth: 21.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V27: # column 27
+          name: CL20F068 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Haliimaile_HhB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 70
+          	bottom: 100
+          	midDepth: 85
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V28: # column 28
+          name: CL20F152 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Molokai_MuA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 50
+          	bottom: 100
+          	midDepth: 75
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V29: # column 29 
+          name: CL20F185 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PsA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 12
+          	bottom: 24
+          	midDepth: 18
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V30: # column 30
+          name: CL20F118 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Molokai_MuB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 7
+          	midDepth: 3.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V31: # column 31
+          name: CL20F296 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Ewa_EcB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 10
+          	midDepth: 5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V32: # column 32
+          name: CL20F170 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WfB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 30
+          	bottom: 60
+          	midDepth: 45
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V33: # column 33
+          name: CL20F098 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WgB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 5
+          	bottom: 16
+          	midDepth: 10.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V34: # column 34
+          name: CL20F237 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WeB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 28
+          	bottom: 100
+          	midDepth: 64
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V35: # column 35
+          name: CL20F003 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Paia_PcB_1 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 30
+          	bottom: 50
+          	midDepth: 40
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V36: # column 36
+          name: CL20F281 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PpA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 10
+          	bottom: 24
+          	midDepth: 17
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V37: # column 37
+          name: CL20F236 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WeB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 10
+          	bottom: 28
+          	midDepth: 19
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V38: # column 38
+          name: CL20F004 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Paia_PcB_1 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 50
+          	bottom: 100
+          	midDepth: 75
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V39: # column 39
+          name: CL20F017 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Paia_PcB_2 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 50
+          	bottom: 100
+          	midDepth: 75
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables 
+        V40: # column 40
+          name: CL20F187 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PsA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 40
+          	bottom: 70 
+          	midDepth: 55
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V41: # column 41
+          name: CL20F169 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WfB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 16
+          	bottom: 30
+          	midDepth: 23
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V42: # column 42
+          name: CL20F082 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WlD2 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 10
+          	bottom: 26
+          	midDepth: 18
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V43: # column 43
+          name: CL20F066 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Haliimaile_HhB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 7
+          	bottom: 25
+          	midDepth: 16
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V44: # column 44
+          name: CL20F151 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Molokai_MuA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 25
+          	bottom: 50
+          	midDepth: 37.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V45: # column 45
+          name: CL20F283 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PpA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 80
+          	bottom: 100
+          	midDepth: 90
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V46: # column 46
+          name: CL20F220 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Alae_AcA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 8
+          	midDepth: 4
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V47: # column 47
+          name: CL20F280 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PpA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 10
+          	midDepth: 5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V48: # column 48
+          name: CL20F266 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PrA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 15
+          	bottom: 30
+          	midDepth: 22.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V49: # column 49
+          name: CL20F119 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Molokai_MuB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 7
+          	bottom: 33
+          	midDepth: 20
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V50: # column 50
+          name: CL20F207 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PtA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 25
+          	bottom: 100
+          	midDepth: 62.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V51: # column 51
+          name: CL20F067 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Haliimaile_HhB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 25
+          	bottom: 75
+          	midDepth: 50
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V52: # column 52
+          name: CL20F313 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Alae_AcB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 15
+          	bottom: 30
+          	midDepth: 22.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V53: # column 53
+          name: CL20F251 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Jaucas_JaC # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 15
+          	bottom: 50
+          	midDepth: 32.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V54: # column 54
+          name: CL20F250 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Jaucas_JaC # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 15
+          	midDepth: 7.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V55: # column 55
+          name: CL20F299 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Ewa_EcB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 72
+          	bottom: 100
+          	midDepth: 86
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V56: # column 56
+          name: CL20F065 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Haliimaile_HhB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 7
+          	midDepth: 3.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V57: # column 57
+          name: CL20F188 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PsA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 70
+          	bottom: 100
+          	midDepth: 85
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V58: # column 58
+          name: CL20F084 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WlD2 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 50
+          	bottom: 100
+          	midDepth: 75
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V59: # column 59
+          name: CL20F050 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Keahua_KnB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 9
+          	bottom: 27
+          	midDepth: 18
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V60: # column 60
+          name: CL20F083 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WlD2 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 26
+          	bottom: 50
+          	midDepth: 38
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V61: # column 61 
+          name: CL20F184 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PsA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 12
+          	midDepth: 6
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V62: # column 62
+          name: CL20F267 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PrA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 30
+          	bottom: 75
+          	midDepth: 52.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V63: # column 63
+          name: CL20F222 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Alae_AcA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 29
+          	bottom: 100
+          	midDepth: 64.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V64: # column 64
+          name: CL20F297 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Ewa_EcB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 10
+          	bottom: 33
+          	midDepth: 21.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V65: # column 65
+          name: CL20F033 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Hamakuapoko_HlB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 8
+          	midDepth: 4
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V66: # column 66
+          name: CL20F265 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PrA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 15
+          	midDepth: 7.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V67: # column 67
+          name: CL20F052 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Keahua_KnB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 39
+          	bottom: 60
+          	midDepth: 49.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V68: # column 68 
+          name: CL20F221 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Alae_AcA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 8
+          	bottom: 29
+          	midDepth: 18.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V69: # column 69
+          name: CL20F002 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Paia_PcB_1 # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 10
+          	bottom: 30
+          	midDepth: 20
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V70: # column 70
+          name: CL20F171 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WfB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 60
+          	bottom: 80
+          	midDepth: 70
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V71: # column 71
+          name: CL20F235 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Waiakoa_WeB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 10
+          	midDepth: 5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V72: # column 72
+          name: CL20F121 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Molokai_MuB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 80
+          	bottom: 100
+          	midDepth: 90
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V73: # column 73
+          name: CL20F036 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Hamakuapoko_HlB # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 40
+          	bottom: 100
+          	midDepth: 70
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V74: # column 74
+          name: CL20F149 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Molokai_MuA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 5
+          	midDepth: 2.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V75: # column 75
+          name: CL20F205 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PtA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 0
+          	bottom: 8
+          	midDepth: 4
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
+        V76: # column 76
+          name: CL20F268 # Name of second variable in accompanying file
+          varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)# Description of the variable
+          site: Pulehu_PrA # Site where the incubated sample was collected
+          depthInfo: # Soil depth in cm. 
+          	top: 75
+          	bottom: 100
+          	midDepth: 87.5
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil) # Units for 'gasMeasured' field
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables

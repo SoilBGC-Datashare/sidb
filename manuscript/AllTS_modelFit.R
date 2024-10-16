@@ -8,7 +8,7 @@ rm(list = ls())
 source(file = "/Users/mina/sidb/manuscript/ModFitTS_DataSaving_Func.R")
 
 ###### Upload the database ######
-db=loadEntries(path="~/sidb/data/")
+db=loadEntries(path="C:/Users/asarq/Documents/GitHub/sidb/data/")
 #db_flat=flatterSIDb(db)
 ###############
 

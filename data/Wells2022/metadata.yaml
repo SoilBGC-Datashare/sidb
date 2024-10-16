@@ -231,7 +231,7 @@ siteInfo:
 incubationInfo:
         incDesc:   # Short description of the incubation setup and main treatments
           "The equivalent of 50 dry grams of soil were incubated for 90 days at 25 °C in 500 mL septa capped cell culture bottles after moisture adjustment to -15 kPa moisture content using soil pressure plates.
-          Evolved gases were sampled using 10 mL syringes, stored in evacuated 3 mL Exetainers and analyzed by gas chromatography. 
+          Evolved gases were sampled using 10 mL syringes, stored in evacuated 3 mL Exetainers and analyzed by gas chromatography.
           After sampling, headspace was purged, caps resealed, intitial concentration taken, then returned to controlled environment chambers."
   # These fields should all be one dimensional arrays. Values for experimental variables with multiple treatment levels should be entered in the variables section and left blank here
         depthInfo:   # Soil depth in cm. If only one depth listed instead of range, enter as midDepth. By default 0 is defined as organic/mineral interface. If reported otherwise enter "yes" under the surfaceAtm field. If multiple depths analyzed leave blank and specify depths in variables section.
@@ -267,9 +267,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F298   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Description of the variable
           site: Ewa_EcB   # Site where the incubated sample was collected
+          midDepth: 52.5
           top: 33
           bottom: 72
-          midDepth: 52.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -278,9 +278,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F081   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WlD2   # Site where the incubated sample was collected
-         	midDepth: 5
-         	top: 0
-         	bottom: 10   
+          midDepth: 5
+          top: 0
+          bottom: 10
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -289,19 +289,20 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F034   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Hamakuapoko_HlB   # Site where the incubated sample was collected
-        	top: 8
-        	bottom: 18
-        	midDepth: 13
-          gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          top: 8
+          bottom: 18
+          midDepth: 13
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
           primaryVariableName:   # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
         V5:   # column 5
           name: CL20F101   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WgB   # Site where the incubated sample was collected          	top: 75
-        	bottom: 100
-        	midDepth: 87.5
+          site: Waiakoa_WgB   # Site where the incubated sample was collected          	
+          top: 75
+          bottom: 100
+          midDepth: 87.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -310,9 +311,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F020   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Paia_PcB_2   # Site where the incubated sample was collected
-        	top: 27
-        	bottom: 100
-        	midDepth: 63.5
+          top: 27
+          bottom: 100
+          midDepth: 63.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -321,9 +322,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F135   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Ewa_EaA   # Site where the incubated sample was collected
-        	top: 10
-        	bottom: 35
-        	midDepth: 22.5
+          top: 10
+          bottom: 35
+          midDepth: 22.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -332,9 +333,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F252   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Jaucas_JaC   # Site where the incubated sample was collected
-        	top: 50
-        	bottom: 100
-        	midDepth: 75
+          top: 50
+          bottom: 100
+          midDepth: 75
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -343,9 +344,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F150   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Molokai_MuA   # Site where the incubated sample was collected
-        	top: 5
-        	bottom: 25
-        	midDepth: 15
+          top: 5
+          bottom: 25
+          midDepth: 15
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -354,9 +355,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F314   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Alae_AcB   # Site where the incubated sample was collected
-        	top: 30
-        	bottom: 100
-        	midDepth: 65
+          top: 30
+          bottom: 100
+          midDepth: 6
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -365,9 +366,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F018   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Paia_PcB_2   # Site where the incubated sample was collected
-        	top: 13
-        	bottom: 27
-        	midDepth: 20
+          top: 13
+          bottom: 27
+          midDepth: 20
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -376,9 +377,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F168   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WfB   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 16
-        	midDepth: 8
+          top: 0
+          bottom: 16
+          midDepth: 8
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -387,9 +388,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F134   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Ewa_EaA   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 10
-        	midDepth: 5
+          top: 0
+          bottom: 10
+          midDepth: 5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -398,9 +399,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F136   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Ewa_EaA   # Site where the incubated sample was collected
-        	top: 35
-        	bottom: 100
-        	midDepth: 67.5
+          top: 35
+          bottom: 100
+          midDepth: 67.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -409,9 +410,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F312   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Alae_AcB   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 15
-        	midDepth: 7.5
+          top: 0
+          bottom: 15
+          midDepth: 7.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -420,9 +421,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F186   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PsA   # Site where the incubated sample was collected
-        	top: 24
-        	bottom: 40
-        	midDepth: 32
+          top: 24
+          bottom: 40
+          midDepth: 32
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -431,9 +432,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F100   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WgB   # Site where the incubated sample was collected
-        	top: 27
-        	bottom: 75
-        	midDepth: 51
+          top: 27
+          bottom: 75
+          midDepth: 51
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -442,9 +443,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F120   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Molokai_MuB   # Site where the incubated sample was collected
-        	top: 33
-        	bottom: 80
-        	midDepth: 56.5
+          top: 33
+          bottom: 80
+          midDepth: 56.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -453,10 +454,10 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F051   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Keahua_KnB   # Site where the incubated sample was collected
-        	top: 27
-        	bottom: 39
-        	midDepth: 33
-          gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          top: 27
+          bottom: 39
+          midDepth: 33
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
           primaryVariableName:   # Leave blank if there are no associated variables
@@ -464,9 +465,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F049   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Keahua_KnB   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 9
-        	midDepth: 4.5
+          top: 0
+          bottom: 9
+          midDepth: 4.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -475,9 +476,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F206   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PtA   # Site where the incubated sample was collected
-        	top: 8
-        	bottom: 25
-        	midDepth: 16.5
+          top: 8
+          bottom: 25
+          midDepth: 16.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -486,9 +487,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F001   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Paia_PcB_1   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 10
-        	midDepth: 5
+          top: 0
+          bottom: 10
+          midDepth: 5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -497,20 +498,20 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F035   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Hamakuapoko_HlB   # Site where the incubated sample was collected
-        	top: 18
-        	bottom: 40
-        	midDepth: 29
-          gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          top: 18
+          bottom: 40
+          midDepth: 29
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
-          statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
-          primaryVariableName:   # Leave blank if there are no associated variables
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Leave blank if there are no associated variables
         V24:   # column 24
           name: CL20F097   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WgB   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 5
-        	midDepth: 2.5
+          top: 0
+          bottom: 5
+          midDepth: 2.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -519,9 +520,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F282   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PpA   # Site where the incubated sample was collected
-        	top: 24
-        	bottom: 80
-        	midDepth: 52
+          top: 24
+          bottom: 80
+          midDepth: 52
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -530,9 +531,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F099   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WgB   # Site where the incubated sample was collected
-        	top: 16
-        	bottom: 27
-        	midDepth: 21.5
+          top: 16
+          bottom: 27
+          midDepth: 21.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -541,9 +542,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F068   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Haliimaile_HhB   # Site where the incubated sample was collected
-        	top: 70
-        	bottom: 100
-        	midDepth: 85
+          top: 70
+          bottom: 100
+          midDepth: 85
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -552,20 +553,20 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F152   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Molokai_MuA   # Site where the incubated sample was collected
-        	top: 50
-        	bottom: 100
-        	midDepth: 75
+          top: 50
+          bottom: 100
+          midDepth: 75
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
           primaryVariableName:   # Leave blank if there are no associated variables
-        V29:   # column 29 
+        V29:   # column 29
           name: CL20F185   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PsA   # Site where the incubated sample was collected
-        	top: 12
-        	bottom: 24
-        	midDepth: 18
+          top: 12
+          bottom: 24
+          midDepth: 18
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -574,9 +575,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F118   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Molokai_MuB   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 7
-        	midDepth: 3.5
+          top: 0
+          bottom: 7
+          midDepth: 3.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -585,9 +586,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F296   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Ewa_EcB   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 10
-        	midDepth: 5
+          top: 0
+          bottom: 10
+          midDepth: 5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -596,9 +597,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F170   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WfB   # Site where the incubated sample was collected
-        	top: 30
-        	bottom: 60
-        	midDepth: 45
+          top: 30
+          bottom: 60
+          midDepth: 45
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -607,9 +608,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F098   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WgB   # Site where the incubated sample was collected
-        	top: 5
-        	bottom: 16
-        	midDepth: 10.5
+          top: 5
+          bottom: 16
+          midDepth: 10.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -618,9 +619,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F237   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WeB   # Site where the incubated sample was collected
-        	top: 28
-        	bottom: 100
-        	midDepth: 64
+          top: 28
+          bottom: 100
+          midDepth: 64
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -629,9 +630,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F003   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Paia_PcB_1   # Site where the incubated sample was collected
-        	top: 30
-        	bottom: 50
-        	midDepth: 40
+          top: 30
+          bottom: 50
+          midDepth: 40
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -640,9 +641,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F281   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PpA   # Site where the incubated sample was collected
-        	top: 10
-        	bottom: 24
-        	midDepth: 17
+          top: 10
+          bottom: 24
+          midDepth: 17
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -651,9 +652,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F236   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WeB   # Site where the incubated sample was collected
-        	top: 10
-        	bottom: 28
-        	midDepth: 19
+          top: 10
+          bottom: 28
+          midDepth: 19
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -662,9 +663,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F004   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Paia_PcB_1   # Site where the incubated sample was collected
-        	top: 50
-        	bottom: 100
-        	midDepth: 75
+          top: 50
+          bottom: 100
+          midDepth: 75
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -673,20 +674,20 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F017   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Paia_PcB_2   # Site where the incubated sample was collected
-        	top: 50
-        	bottom: 100
-        	midDepth: 75
+          top: 50
+          bottom: 100
+          midDepth: 75
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
-          primaryVariableName:   # Leave blank if there are no associated variables 
+          primaryVariableName:   # Leave blank if there are no associated variables
         V40:   # column 40
           name: CL20F187   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PsA   # Site where the incubated sample was collected
-        	top: 40
-        	bottom: 70 
-        	midDepth: 55
+          top: 40
+          bottom: 70
+          midDepth: 55
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -695,9 +696,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F169   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WfB   # Site where the incubated sample was collected
-        	top: 16
-        	bottom: 30
-        	midDepth: 23
+          top: 16
+          bottom: 30
+          midDepth: 23
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -706,9 +707,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F082   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WlD2   # Site where the incubated sample was collected
-        	top: 10
-        	bottom: 26
-        	midDepth: 18
+          top: 10
+          bottom: 26
+          midDepth: 18
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -717,9 +718,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F066   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Haliimaile_HhB   # Site where the incubated sample was collected
-        	top: 7
-        	bottom: 25
-        	midDepth: 16
+          top: 7
+          bottom: 25
+          midDepth: 16
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -728,9 +729,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F151   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Molokai_MuA   # Site where the incubated sample was collected
-        	top: 25
-        	bottom: 50
-        	midDepth: 37.5
+          top: 25
+          bottom: 50
+          midDepth: 37.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -739,9 +740,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F283   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PpA   # Site where the incubated sample was collected
-        	top: 80
-        	bottom: 100
-        	midDepth: 90
+          top: 80
+          bottom: 100
+          midDepth: 90
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -750,9 +751,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F220   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Alae_AcA   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 8
-        	midDepth: 4
+          top: 0
+          bottom: 8
+          midDepth: 4
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -761,9 +762,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F280   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PpA   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 10
-        	midDepth: 5
+          top: 0
+          bottom: 10
+          midDepth: 5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -772,9 +773,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F266   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PrA   # Site where the incubated sample was collected
-        	top: 15
-        	bottom: 30
-        	midDepth: 22.5
+          top: 15
+          bottom: 30
+          midDepth: 22.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -783,9 +784,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F119   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Molokai_MuB   # Site where the incubated sample was collected
-        	top: 7
-        	bottom: 33
-        	midDepth: 20
+          top: 7
+          bottom: 33
+          midDepth: 20
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -794,9 +795,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F207   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PtA   # Site where the incubated sample was collected
-        	top: 25
-        	bottom: 100
-        	midDepth: 62.5
+          top: 25
+          bottom: 100
+          midDepth: 62.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -805,9 +806,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F067   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Haliimaile_HhB   # Site where the incubated sample was collected
-        	top: 25
-        	bottom: 75
-        	midDepth: 50
+          top: 25
+          bottom: 75
+          midDepth: 50
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -816,9 +817,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F313   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Alae_AcB   # Site where the incubated sample was collected
-        	top: 15
-        	bottom: 30
-        	midDepth: 22.5
+          top: 15
+          bottom: 30
+          midDepth: 22.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -827,9 +828,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F251   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Jaucas_JaC   # Site where the incubated sample was collected
-        	top: 15
-        	bottom: 50
-        	midDepth: 32.5
+          top: 15
+          bottom: 50
+          midDepth: 32.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -838,9 +839,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F250   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Jaucas_JaC   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 15
-        	midDepth: 7.5
+          top: 0
+          bottom: 15
+          midDepth: 7.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -849,9 +850,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F299   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Ewa_EcB   # Site where the incubated sample was collected
-        	top: 72
-        	bottom: 100
-        	midDepth: 86
+          top: 72
+          bottom: 100
+          midDepth: 86
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -860,9 +861,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F065   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Haliimaile_HhB   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 7
-        	midDepth: 3.5
+          top: 0
+          bottom: 7
+          midDepth: 3.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -871,9 +872,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F188   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PsA   # Site where the incubated sample was collected
-        	top: 70
-        	bottom: 100
-        	midDepth: 85
+          top: 70
+          bottom: 100
+          midDepth: 85
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -882,9 +883,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F084   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WlD2   # Site where the incubated sample was collected
-        	top: 50
-        	bottom: 100
-        	midDepth: 75
+          top: 50
+          bottom: 100
+          midDepth: 75
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -893,9 +894,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F050   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Keahua_KnB   # Site where the incubated sample was collected
-        	top: 9
-        	bottom: 27
-        	midDepth: 18
+          top: 9
+          bottom: 27
+          midDepth: 18
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -904,20 +905,20 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F083   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WlD2   # Site where the incubated sample was collected
-        	top: 26
-        	bottom: 50
-        	midDepth: 38
+          top: 26
+          bottom: 50
+          midDepth: 38
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
           primaryVariableName:   # Leave blank if there are no associated variables
-        V61:   # column 61 
+        V61:   # column 61
           name: CL20F184   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PsA   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 12
-        	midDepth: 6
+          top: 0
+          bottom: 12
+          midDepth: 6
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -926,9 +927,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F267   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PrA   # Site where the incubated sample was collected
-        	top: 30
-        	bottom: 75
-        	midDepth: 52.5
+          top: 30
+          bottom: 75
+          midDepth: 52.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -937,9 +938,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F222   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Alae_AcA   # Site where the incubated sample was collected
-        	top: 29
-        	bottom: 100
-        	midDepth: 64.5
+          top: 29
+          bottom: 100
+          midDepth: 64.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -948,9 +949,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F297   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Ewa_EcB   # Site where the incubated sample was collected
-        	top: 10
-        	bottom: 33
-        	midDepth: 21.5
+          top: 10
+          bottom: 33
+          midDepth: 21.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -959,9 +960,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F033   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Hamakuapoko_HlB   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 8
-        	midDepth: 4
+          top: 0
+          bottom: 8
+          midDepth: 4
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -970,9 +971,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F265   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PrA   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 15
-        	midDepth: 7.5
+          top: 0
+          bottom: 15
+          midDepth: 7.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -981,20 +982,20 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F052   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Keahua_KnB   # Site where the incubated sample was collected
-        	top: 39
-        	bottom: 60
-        	midDepth: 49.5
+          top: 39
+          bottom: 60
+          midDepth: 49.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
           primaryVariableName:   # Leave blank if there are no associated variables
-        V68:   # column 68 
+        V68:   # column 68
           name: CL20F221   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Alae_AcA   # Site where the incubated sample was collected
-        	top: 8
-        	bottom: 29
-        	midDepth: 18.5
+          top: 8
+          bottom: 29
+          midDepth: 18.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -1003,9 +1004,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F002   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Paia_PcB_1   # Site where the incubated sample was collected
-        	top: 10
-        	bottom: 30
-        	midDepth: 20
+          top: 10
+          bottom: 30
+          midDepth: 20
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -1014,9 +1015,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F171   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WfB   # Site where the incubated sample was collected
-        	top: 60
-        	bottom: 80
-        	midDepth: 70
+          top: 60
+          bottom: 80
+          midDepth: 70
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -1025,9 +1026,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F235   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Waiakoa_WeB   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 10
-        	midDepth: 5
+          top: 0
+          bottom: 10
+          midDepth: 5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -1036,9 +1037,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F121   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Molokai_MuB   # Site where the incubated sample was collected
-        	top: 80
-        	bottom: 100
-        	midDepth: 90
+          top: 80
+          bottom: 100
+          midDepth: 90
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -1047,9 +1048,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F036   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Hamakuapoko_HlB   # Site where the incubated sample was collected
-        	top: 40
-        	bottom: 100
-        	midDepth: 70
+          top: 40
+          bottom: 100
+          midDepth: 70
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -1058,9 +1059,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F149   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Molokai_MuA   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 5
-        	midDepth: 2.5
+          top: 0
+          bottom: 5
+          midDepth: 2.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -1069,9 +1070,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F205   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PtA   # Site where the incubated sample was collected
-        	top: 0
-        	bottom: 8
-        	midDepth: 4
+          top: 0
+          bottom: 8
+          midDepth: 4
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -1080,9 +1081,9 @@ variables:   # These describe the columns of your timeSeries.csv file
           name: CL20F268   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
           site: Pulehu_PrA   # Site where the incubated sample was collected
-        	top: 75
-        	bottom: 100
-        	midDepth: 87.5
+          top: 75
+          bottom: 100
+          midDepth: 87.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)

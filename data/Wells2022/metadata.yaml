@@ -1,4 +1,4 @@
-citationKey: WellsCrow2022PANGAEA   # Unique identifier in the format: LastnameYearJOURNAL (journal may be abbreviated)
+citationKey: Wells2022   # Unique identifier in the format: LastnameYearJOURNAL (journal may be abbreviated)
 doi:  10.1594/PANGAEA.943118   # DOI of the publication where data is published
 entryAuthor: Megan Gonsalves   # First and last name of the person who entered the data in this file
 entryCreationDate: 2024-07-18   # Date when the data was entered in this file. Format: YYYY-MM-DD
@@ -299,7 +299,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V5:   # column 5
           name: CL20F101   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WgB   # Site where the incubated sample was collected          	
+          site: Waiakoa_WgB   # Site where the incubated sample was collected
           top: 75
           bottom: 100
           midDepth: 87.5

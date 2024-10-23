@@ -1,8 +1,8 @@
 modelFitTS_Markdown <- function(db, ts.col, ic.col, unitConverter,
-                       inipars=list(oneP=0.5,
-                                    parallel=c(0.01, 0.001, 0.1), 
-                                    series=c(0.05, 0.0001, 0.01, 0.1), 
-                                    feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01))){
+                                inipars=list(oneP=0.5,
+                                             parallel=c(0.01, 0.001, 0.1), 
+                                             series=c(0.05, 0.0001, 0.01, 0.1), 
+                                             feedback=c(0.05, 0.0001, 0.1, 0.01, 0.01))){
   options(knitr.kable.NA = "", scipen = -2) 
   print(paste0(db$citationKey , '; variable: ', colnames(db$timeSeries[ts.col]) ) )
   
@@ -47,7 +47,7 @@ modelFitTS_Markdown <- function(db, ts.col, ic.col, unitConverter,
   K=sapply(Mlist, function(x){length(x$FMEmodel$par)})
   n=nrow(db$timeSeries[ , c(1, ts.col)])
   
-  # The formula for the Bayesian information criterion (BIC) is similar to the formula for AIC, but with a different penalty for the number of parameters. With AIC the penalty is 2k, whereas with BIC the penalty is ln(n) k.
+  # The formula for the Bayesian information criterion (BIC) is similar to the formula for AIC, but with a different penalty for the number of parameters. With AIC the penalty is 2k, whereas with BIC the penalty is ln(n)???k.
   
   #BIC=(n*log(Fit$ms))+ length(Fit$par)*log(n) 
   # BIC
@@ -114,25 +114,25 @@ modelFitTS_Markdown <- function(db, ts.col, ic.col, unitConverter,
   
   SSR=sapply(Mlist, function(x){x$FMEmodel$ssr}) 
   MSR=sapply(Mlist, function(x){x$FMEmodel$ms})
-   
+  
   table= data.frame(Model=modelNames, k1=k1, k2=k2, 
-                      C0Inp1=pC0, a21=a21, a12=a12, 
-                      AIC=AIC, BIC=BIC, 
-                      AICn=AICn, AICc= unlist(AICc), 
-                      wi=unlist(wi), MeanTrT=TT, q05=q05, 
-                      SSR=SSR, MSR=MSR) #%>% 
-    #dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3))))
+                    C0Inp1=pC0, a21=a21, a12=a12, 
+                    AIC=AIC, BIC=BIC, 
+                    AICn=AICn, AICc= unlist(AICc), 
+                    wi=unlist(wi), MeanTrT=TT, q05=q05, 
+                    SSR=SSR, MSR=MSR) #%>% 
+  #dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3))))
   
   print(
-  #table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
+    #table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
     knitr::kable(table[c(1,2,3,4,5,6,14, 15)], #digits = 4, 
                  #format.args = list(scientific = TRUE), 
                  "simple") )
   
   print(
     #table %>% dplyr::mutate_if(is.numeric, funs(as.character(signif(., 3)))) %>%
-      knitr::kable(table[c(1,7,8,9, 10,11,12,13)], #digits = 4, 
-                   #format.args = list(scientific = TRUE), 
-                   "simple") )
+    knitr::kable(table[c(1,7,8,9, 10,11,12,13)], #digits = 4, 
+                 #format.args = list(scientific = TRUE), 
+                 "simple") )
   
 }

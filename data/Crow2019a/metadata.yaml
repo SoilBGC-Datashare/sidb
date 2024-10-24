@@ -1,10 +1,10 @@
 citationKey: Crow2019a  # Unique identifier in the format: LastnameYearJOURNAL
-doi:   # DOI of the publication where data is published
+doi:  10.3389/fenvs.2022.991262
 entryAuthor: Susan Crow # First and Last name of the person who enters the data in this file
 entryCreationDate:  2019-04-16 # Date when the data is entered in this file. Format: YYYY-MM-DD
 contactName:  Susan Crow # First and last name of contact person, who might be the principal investigador supervising the entryAuthor
 contactEmail:  crows@hawii.edu # Email of the contact person
-entryNote: This study is ongoing and not yet published, also incubations continue to run  # Any notes or comments related to this entry.
+entryNote: this study is related to the publication in the DOI and to Hubanks' thesis
 study:  Soil health, Hawaii
 
 siteInfo:

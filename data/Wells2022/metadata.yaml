@@ -357,7 +357,7 @@ variables:   # These describe the columns of your timeSeries.csv file
           site: Alae_AcB   # Site where the incubated sample was collected
           top: 30
           bottom: 100
-          midDepth: 6
+          midDepth: 65
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)

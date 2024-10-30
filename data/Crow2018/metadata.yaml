@@ -1,0 +1,420 @@
+citationKey: Crow2018
+doi: 10.2134/jeq2017.07.0280 and 10.3389/fenvs.2018.00018
+entryAuthor: Agustin Sarquis
+entryCreationDate: 2024-10-29
+contactName: Carlos Sierra
+contactEmail: csierra@bgc-jena.mpg.de
+entryNote:
+study: Waimanalo Bioenergy
+
+siteInfo:
+        site:
+          - Waimanalo grassland
+          - Waimanalo bare 2010
+          - Waimanalo bare 2011
+          - Waimanalo bare 2012
+          - Waimanalo planted 2010
+          - Waimanalo planted 2011
+          - Waimanalo planted 2012
+# These fields should be arrays of equal length to site array
+        coordinates:
+          latitude:
+            - 21.336389
+            - 21.336389
+            - 21.336389
+            - 21.336389
+            - 21.336389
+            - 21.336389
+            - 21.336389
+          longitude:
+            - -157.712778
+            - -157.712778
+            - -157.712778
+            - -157.712778
+            - -157.712778
+            - -157.712778
+            - -157.712778
+        country: USA
+        MAT:
+          - 24.6
+          - 24.6
+          - 24.6
+          - 24.6
+          - 24.6
+          - 24.6
+          - 24.6
+        MAP:
+          - 938
+          - 938
+          - 938
+          - 938
+          - 938
+          - 938
+          - 938
+        elevation:
+          - 19
+          - 19
+          - 19
+          - 19
+          - 19
+          - 19
+          - 19
+        landCover:
+          - grassland
+          - bare
+          - bare
+          - bare
+          - cultivated
+          - cultivated
+          - cultivated
+        vegNote:
+          - undisturbed, unfertilized and not irrigated grassland
+          - bare unplanted plots
+          - bare unplanted plots
+          - bare unplanted plots
+          - four of napier grass cultivars, Bana, Purple, Merkeron, and napier hybrid
+          - four of napier grass cultivars, Bana, Purple, Merkeron, and napier hybrid
+          - four of napier grass cultivars, Bana, Purple, Merkeron, and napier hybrid
+        soilTaxonomy:
+          soilOrder:
+            - Mollisol
+            - Mollisol
+            - Mollisol
+            - Mollisol
+            - Mollisol
+            - Mollisol
+            - Mollisol
+          soilFamily: # Soil family description (ex. 'Eutric' for a Eutric Cambisol)
+          soilSeries:
+            - Waialua
+            - Waialua
+            - Waialua
+            - Waialua
+            - Waialua
+            - Waialua
+            - Waialua
+          classificationSystem: USDA
+        permafrost:
+          permafrostExist: # Yes or blank if no (if yes, permafrost must exist at the site)
+          activeLayer: # Depth of the active layer in meters
+
+incubationInfo:
+        incDesc: "Carbon dioxide efflux was determined during a 191-d incubation of soil from each plot in a controlled environment set at 21 and 26°C"
+# These fields should all be one dimensional arrays. Values for experimental variables with multiple treatment levels should be entered in the variables section and left blank here
+        depthInfo: # Soil depth in cm. If only one depth listed instead of range, enter as midDepth. By default 0 is defined as organic/mineral interface. If reported otherwise enter "yes" under the surfaceAtm field. If multiple depths analyzed leave blank and specify depths in variables section.
+          top: 0
+          bottom: 15
+          midDepth: 7.5
+          surfaceAtm: # blank if zero is organic/mineral interface, yes if zero is atmospheric interface
+          horizon: # soil horizon designation
+        temperature: # Temperature at which incubations were performed in Celsius. If temperature is an experimental treatment with multiple levels leave blank and specify in variables section
+        # Use 'moisture' as a template for any additional treatments imposed. For example, if amendments were added for a priming experiment, the treatmentName 'moisture' would be replaced with 'amendment', 'value' could be set to 'glucose' (or whatever amendment was added), and 'units' could be set to 'mgC/g soilC'.
+        moisture: # Moisture conditions at which incubations were performed.
+          value: # If moisture is an experimental treatment with multiple levels leave blank and specify in variables section
+          units: # Valid fields are: percentGWC, percentFieldCapacity, percentWaterFilledPoreSpace
+        anaerobic: # Yes if headspace flushed with N2 or He, blank if aerobic
+        gasMeasured: # Blank if CO2, Other valid entries are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc. Leave blank if multiple gases measured and specify in variables section
+        replicates:
+          value: 4
+          type: field
+        incubationTime: 191
+        preincubationTime: # Pre-incubation time in days
+        samplePreparation:
+          intactCore: no
+          sieving: 2
+          rootPicking: yes
+          rockPicking: # yes or no
+        gasAnalyzer: Clarus 580 Gas Chromatograph (PerkinElmer)
+
+variables: # These describe the columns of your timeSeries.csv file
+        V1: # column 1
+          name: time
+          units: d
+        V2:
+          name: t21fallow10
+          varDesc: soil from unmanaged grassland used as baseline conditions incubated at 21 °C in 2010
+          site: Waimanalo grassland
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V3:
+          name: t21bare10
+          varDesc: soil from unplanted bare plots incubated at 21 °C in 2010
+          site: Waimanalo bare 2010
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V4:
+          name: t21bare11
+          varDesc: soil from unplanted bare plots incubated at 21 °C in 2011
+          site: Waimanalo bare 2011
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V5:
+          name: t21bare12
+          varDesc: soil from unplanted bare plots incubated at 21 °C in 2012
+          site: Waimanalo bare 2012
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V6:
+          name: t2125410
+          varDesc: soil from plot planted with Pennisetum purpureum 254 variety incubated at 21 °C in 2010
+          site: Waimanalo planted 2010
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V7:
+          name: t21local10
+          varDesc: soil from plot planted with Pennisetum purpureum local variety incubated at 21 °C in 2010
+          site: Waimanalo planted 2010
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V8:
+          name: t21purple10
+          varDesc: soil from plot planted with Pennisetum purpureum purple variety incubated at 21 °C in 2010
+          site: Waimanalo planted 2010
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V9:
+          name: t21pxd10
+          varDesc: soil from plot planted with Pennisetum purpureum (pearl millet × dwarf napiergrass cross hybrid) incubated at 21 °C in 2010
+          site: Waimanalo planted 2010
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V10:
+          name: t2125411
+          varDesc: soil from plot planted with Pennisetum purpureum 254 variety incubated at 21 °C in 2011
+          site: Waimanalo planted 2011
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V11:
+          name: t21local11
+          varDesc: soil from plot planted with Pennisetum purpureum local variety incubated at 21 °C in 2011
+          site: Waimanalo planted 2011
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units:  mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V12:
+          name: t21purple11
+          varDesc: soil from plot planted with Pennisetum purpureum purple variety incubated at 21 °C in 2011
+          site: Waimanalo planted 2011
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V13:
+          name: t21pxd11
+          varDesc: soil from plot planted with Pennisetum purpureum (pearl millet × dwarf napiergrass cross hybrid) incubated at 21 °C in 2011
+          site: Waimanalo planted 2011
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V14:
+          name: t2125412
+          varDesc: soil from plot planted with Pennisetum purpureum 254 variety incubated at 21 °C in 2012
+          site: Waimanalo planted 2012
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V15:
+          name: t21local12
+          varDesc: soil from plot planted with Pennisetum purpureum local variety incubated at 21 °C in 2012
+          site: Waimanalo planted 2012
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V16:
+          name: t21purple12
+          varDesc: soil from plot planted with Pennisetum purpureum purple variety incubated at 21 °C in 2012
+          site: Waimanalo planted 2012
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V17:
+          name: t21pxd12
+          varDesc: soil from plot planted with Pennisetum purpureum (pearl millet × dwarf napiergrass cross hybrid) incubated at 21 °C in 2012
+          site: Waimanalo planted 2012
+          temperature: 21
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V18:
+          name: t26fallow10
+          varDesc: soil from unmanaged grassland used as baseline conditions incubated at 26 °C in 2010
+          site: Waimanalo grassland
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V19:
+          name: t26bare10
+          varDesc: soil from unplanted bare plots incubated at 26 °C in 2010
+          site: Waimanalo bare 2010
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V20:
+          name: t26bare11
+          varDesc: soil from unplanted bare plots incubated at 26 °C in 2011
+          site: Waimanalo bare 2011
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V21:
+          name: t26bare12
+          varDesc: soil from unplanted bare plots incubated at 26 °C in 2012
+          site: Waimanalo bare 2012
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V22:
+          name: t2625410
+          varDesc: soil from plot planted with Pennisetum purpureum 254 variety incubated at 26 °C in 2010
+          site: Waimanalo planted 2010
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V23:
+          name: t26local10
+          varDesc: soil from plot planted with Pennisetum purpureum local variety incubated at 26 °C in 2010
+          site: Waimanalo planted 2010
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V24:
+          name: t26purple10
+          varDesc: soil from plot planted with Pennisetum purpureum purple variety incubated at 26 °C in 2010
+          site: Waimanalo planted 2010
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V25:
+          name: t26pxd10
+          varDesc: soil from plot planted with Pennisetum purpureum (pearl millet × dwarf napiergrass cross hybrid) incubated at 26 °C in 2010
+          site: Waimanalo planted 2010
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V26:
+          name: t2625411
+          varDesc: soil from plot planted with Pennisetum purpureum 254 variety incubated at 26 °C in 2011
+          site: Waimanalo planted 2011
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V27:
+          name: t26local11
+          varDesc: soil from plot planted with Pennisetum purpureum local variety incubated at 26 °C in 2011
+          site: Waimanalo planted 2011
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V28:
+          name: t26purple11
+          varDesc: soil from plot planted with Pennisetum purpureum purple variety incubated at 26 °C in 2011
+          site: Waimanalo planted 2011
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V29:
+          name: t26pxd11
+          varDesc: soil from plot planted with Pennisetum purpureum (pearl millet × dwarf napiergrass cross hybrid) incubated at 26 °C in 2011
+          site: Waimanalo planted 2011
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V30:
+          name: t2625412
+          varDesc: soil from plot planted with Pennisetum purpureum 254 variety incubated at 26 °C in 2012
+          site: Waimanalo planted 2012
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V31:
+          name: t26local12
+          varDesc: soil from plot planted with Pennisetum purpureum local variety incubated at 26 °C in 2012
+          site: Waimanalo planted 2012
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V32:
+          name: t26purple12
+          varDesc: soil from plot planted with Pennisetum purpureum purple variety incubated at 26 °C in 2012
+          site: Waimanalo planted 2012
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables
+        V33:
+          name: t26pxd12
+          varDesc: soil from plot planted with Pennisetum purpureum (pearl millet × dwarf napiergrass cross hybrid) incubated at 26 °C in 2012
+          site: Waimanalo planted 2012
+          temperature: 26
+          gasMeasured: # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
+          units: mgC / g soil
+          statistic: # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
+          primaryVariableName: # Links variable with associated time series data collected on the same sample e.g. SD data or 13C-CO2 data associated with mean CO2 data. Leave blank if there are no associated variables

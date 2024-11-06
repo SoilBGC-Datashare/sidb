@@ -1,4 +1,4 @@
-citationKey: Richardson2020MSthesis # Unique identifier in the format: LastnameYearJOURNAL (journal is abbreviated)
+citationKey: Richardson2020 # Unique identifier in the format: LastnameYearJOURNAL (journal is abbreviated)
 doi:  http://hdl.handle.net/10125/69027 # DOI of the publication where data is published
 entryAuthor: Megan Gonsalves # First and Last name of the person who enters the data in this file
 entryCreationDate: 2024-10-25 # Date when the data is entered in this file. Format: YYYY-MM-DD

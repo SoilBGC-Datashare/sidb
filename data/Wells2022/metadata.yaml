@@ -9,115 +9,445 @@ study: "Tropical agricultural soil carbon dynamics and related physicochemical p
 
 siteInfo:
         site:   # Names of individual sites, if one site, keep on this line, if multiple, use array format
-          - Alae_AcA
-          - Alae_AcB
-          - Ewa_EaA
-          - Ewa_EcB
-          - Haliimaile_HhB
-          - Hamakuapoko_HlB
-          - Jaucas_JaC
-          - Keahua_KnB
-          - Molokai_MuA
-          - Molokai_MuB
-          - Paia_PcB_1
-          - Paia_PcB_2
-          - Pulehu_PpA
-          - Pulehu_PrA
-          - Pulehu_PsA
-          - Pulehu_PtA
-          - Waiakoa_WeB
-          - Waiakoa_WfB
-          - Waiakoa_WgB
-          - Waiakoa_WlD2
+          - Alae_AcA8
+          - Alae_AcA29
+          - Alae_AcA100
+          - Alae_AcB15
+          - Alae_AcB30
+          - Alae_AcB100
+          - Ewa_EaA10
+          - Ewa_EaA35
+          - Ewa_EaA100
+          - Ewa_EcB10
+          - Ewa_EcB33
+          - Ewa_EcB72
+          - Ewa_EcB100
+          - Haliimaile_HhB7
+          - Haliimaile_HhB25
+          - Haliimaile_HhB75
+          - Haliimaile_HhB100
+          - Hamakuapoko_HlB8
+          - Hamakuapoko_HlB18
+          - Hamakuapoko_HlB40
+          - Hamakuapoko_HlB100
+          - Jaucas_JaC15
+          - Jaucas_JaC50
+          - Jaucas_JaC100
+          - Keahua_KnB9
+          - Keahua_KnB27
+          - Keahua_KnB39
+          - Keahua_KnB60
+          - Molokai_MuA5
+          - Molokai_MuA25
+          - Molokai_MuA50
+          - Molokai_MuA100
+          - Molokai_MuB7
+          - Molokai_MuB33
+          - Molokai_MuB80
+          - Molokai_MuB100
+          - Paia_PcB_110
+          - Paia_PcB_130
+          - Paia_PcB_150
+          - Paia_PcB_1100
+          - Paia_PcB_213
+          - Paia_PcB_227
+          - Paia_PcB_2100
+          - Pulehu_PpA10
+          - Pulehu_PpA24
+          - Pulehu_PpA80
+          - Pulehu_PpA100
+          - Pulehu_PrA15
+          - Pulehu_PrA30
+          - Pulehu_PrA75
+          - Pulehu_PrA100
+          - Pulehu_PsA12
+          - Pulehu_PsA24
+          - Pulehu_PsA40
+          - Pulehu_PsA70
+          - Pulehu_PsA100
+          - Pulehu_PtA8
+          - Pulehu_PtA25
+          - Pulehu_PtA100
+          - Waiakoa_WeB10
+          - Waiakoa_WeB28
+          - Waiakoa_WeB100
+          - Waiakoa_WfB16
+          - Waiakoa_WfB30
+          - Waiakoa_WfB60
+          - Waiakoa_WfB80
+          - Waiakoa_WgB5
+          - Waiakoa_WgB16
+          - Waiakoa_WgB27
+          - Waiakoa_WgB75
+          - Waiakoa_WgB100
+          - Waiakoa_WlD210
+          - Waiakoa_WlD226
+          - Waiakoa_WlD250
+          - Waiakoa_WlD2100
   # These fields should be arrays of equal length to site array
         coordinates:
           latitude:   # Latitude in decimal units (check for negative that denotes southern hemisphere)
             - 20.827650
+            - 20.827650
+            - 20.827650
+            - 20.809270
+            - 20.809270
             - 20.809270
             - 20.892750
+            - 20.892750
+            - 20.892750
+            - 20.826550
+            - 20.826550
+            - 20.826550
             - 20.826550
             - 20.870050
+            - 20.870050
+            - 20.870050
+            - 20.870050
+            - 20.888150
+            - 20.888150
+            - 20.888150
             - 20.888150
             - 20.846533
+            - 20.846533
+            - 20.846533
+            - 20.843850
+            - 20.843850
+            - 20.843850
             - 20.843850
             - 20.897230
+            - 20.897230
+            - 20.897230
+            - 20.897230
+            - 20.875467
+            - 20.875467
+            - 20.875467
             - 20.875467
             - 20.916183
+            - 20.916183
+            - 20.916183
+            - 20.916183
+            - 20.907283
+            - 20.907283
             - 20.907283
             - 20.816790
+            - 20.816790
+            - 20.816790
+            - 20.816790
+            - 20.821383
+            - 20.821383
+            - 20.821383
             - 20.821383
             - 20.851583
+            - 20.851583
+            - 20.851583
+            - 20.851583
+            - 20.851583
+            - 20.822233
+            - 20.822233
             - 20.822233
             - 20.842780
+            - 20.842780
+            - 20.842780
+            - 20.846750
+            - 20.846750
+            - 20.846750
             - 20.846750
             - 20.784683
+            - 20.784683
+            - 20.784683
+            - 20.784683
+            - 20.784683
+            - 20.795250
+            - 20.795250
+            - 20.795250
             - 20.795250
           longitude:   # Longitude in decimal units (check for negative that denotes western hemisphere)
             - -156.410700
+            - -156.410700
+            - -156.410700
+            - -156.452700
+            - -156.452700
             - -156.452700
             - -156.420467
+            - -156.420467
+            - -156.420467
+            - -156.457067
+            - -156.457067
+            - -156.457067
             - -156.457067
             - -156.353117
+            - -156.353117
+            - -156.353117
+            - -156.353117
+            - -156.328550
+            - -156.328550
+            - -156.328550
             - -156.328550
             - -156.475517
+            - -156.475517
+            - -156.475517
+            - -156.376825
+            - -156.376825
+            - -156.376825
             - -156.376825
             - -156.417690
+            - -156.417690
+            - -156.417690
+            - -156.417690
+            - -156.379700
+            - -156.379700
+            - -156.379700
             - -156.379700
             - -156.344550
+            - -156.344550
+            - -156.344550
+            - -156.344550
+            - -156.361600
+            - -156.361600
             - -156.361600
             - -156.472450
+            - -156.472450
+            - -156.472450
+            - -156.472450
+            - -156.489417
+            - -156.489417
+            - -156.489417
             - -156.489417
             - -156.472833
+            - -156.472833
+            - -156.472833
+            - -156.472833
+            - -156.472833
+            - -156.505600
+            - -156.505600
             - -156.505600
             - -156.425000
+            - -156.425000
+            - -156.425000
+            - -156.440540
+            - -156.440540
+            - -156.440540
             - -156.440540
             - -156.404050
+            - -156.404050
+            - -156.404050
+            - -156.404050
+            - -156.404050
+            - -156.407070
+            - -156.407070
+            - -156.407070
             - -156.407070
         country: USA   # Name of country where site was conducted
         MAT:   # Mean annual temperature in degrees Celsius
             - 24.356
+            - 24.356
+            - 24.356
+            - 24.969
+            - 24.969
             - 24.969
             - 24.983
+            - 24.983
+            - 24.983
+            - 24.924
+            - 24.924
+            - 24.924
             - 24.924
             - 23.279
+            - 23.279
+            - 23.279
+            - 23.279
+            - 22.894
+            - 22.894
+            - 22.894
             - 22.894
             - 24.848
+            - 24.848
+            - 24.848
+            - 23.81
+            - 23.81
+            - 23.81
             - 23.81
             - 24.985
+            - 24.985
+            - 24.985
+            - 24.985
+            - 24.27
+            - 24.27
+            - 24.27
             - 24.27
             - 24.238
+            - 24.238
+            - 24.238
+            - 24.238
+            - 24.357
+            - 24.357
             - 24.357
             - 25.08
+            - 25.08
+            - 25.08
+            - 25.08
+            - 24.956
+            - 24.956
+            - 24.956
             - 24.956
             - 24.861
+            - 24.861
+            - 24.861
+            - 24.861
+            - 24.861
+            - 24.72
+            - 24.72
             - 24.72
             - 23.217
+            - 23.217
+            - 23.217
+            - 24.738
+            - 24.738
+            - 24.738
             - 24.738
             - 23.86
+            - 23.86
+            - 23.86
+            - 23.86
+            - 23.86
+            - 23.963
+            - 23.963
+            - 23.963
             - 23.963
         MAP:   # Mean annual precipitation in mm
             - 414.213
+            - 414.213
+            - 414.213
+            - 305.608
+            - 305.608
             - 305.608
             - 468.85
+            - 468.85
+            - 468.85
+            - 335.868
+            - 335.868
+            - 335.868
             - 335.868
             - 1112.531
+            - 1112.531
+            - 1112.531
+            - 1112.531
+            - 1492.86
+            - 1492.86
+            - 1492.86
             - 1492.86
             - 394.842
+            - 394.842
+            - 394.842
+            - 642.575
+            - 642.575
+            - 642.575
             - 642.575
             - 474.262
+            - 474.262
+            - 474.262
+            - 474.262
+            - 686.557
+            - 686.557
+            - 686.557
             - 686.557
             - 1193.525
+            - 1193.525
+            - 1193.525
+            - 1193.525
+            - 987.247
+            - 987.247
             - 987.247
             - 316.537
+            - 316.537
+            - 316.537
+            - 316.537
+            - 346.818
+            - 346.818
+            - 346.818
             - 346.818
             - 407.024
+            - 407.024
+            - 407.024
+            - 407.024
+            - 407.024
+            - 432.859
+            - 432.859
             - 432.859
             - 420.709
+            - 420.709
+            - 420.709
+            - 399.167
+            - 399.167
+            - 399.167
             - 399.167
             - 333.563
+            - 333.563
+            - 333.563
+            - 333.563
+            - 333.563
+            - 345.866
+            - 345.866
+            - 345.866
             - 345.866
         elevation:   # Elevation of study site in meters above sea level
         landCover:   # Land cover of the site. Valid fields are: bare, cultivated, forest, rangeland/grassland, shrubland, urban, wetland, tundra
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
+          - cultivated
           - cultivated
           - cultivated
           - cultivated
@@ -159,18 +489,128 @@ siteInfo:
           - conventional sugarcane production
           - conventional sugarcane production
           - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
+          - conventional sugarcane production
         soilTaxonomy:
           soilOrder:   # Soil order according to the classification system described below
           - Andisol
           - Andisol
+          - Andisol
+          - Andisol
+          - Andisol
+          - Andisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
           - Mollisol
           - Mollisol
           - Inceptisol
+          - Inceptisol
+          - Inceptisol
+          - Inceptisol
+          - Ultisol
+          - Ultisol
+          - Ultisol
           - Ultisol
           - Entisol
+          - Entisol
+          - Entisol
+          - Aridisol
+          - Aridisol
+          - Aridisol
           - Aridisol
           - Oxisol
           - Oxisol
+          - Oxisol
+          - Oxisol
+          - Oxisol
+          - Oxisol
+          - Oxisol
+          - Oxisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
+          - Mollisol
           - Mollisol
           - Mollisol
           - Mollisol
@@ -184,20 +624,75 @@ siteInfo:
           soilFamily:   # Soil family description (ex. 'Eutric' for a Eutric Cambisol)
           - Sandy or sandy-skeletal, mixed, isohyperthermic Ustic
           - Sandy or sandy-skeletal, mixed, isohyperthermic Ustic
+          - Sandy or sandy-skeletal, mixed, isohyperthermic Ustic
+          - Sandy or sandy-skeletal, mixed, isohyperthermic Ustic
+          - Sandy or sandy-skeletal, mixed, isohyperthermic Ustic
+          - Sandy or sandy-skeletal, mixed, isohyperthermic Ustic
+          - Fine, kaolinitic, isohyperthermic Aridic
+          - Fine, kaolinitic, isohyperthermic Aridic
+          - Fine, kaolinitic, isohyperthermic Aridic
+          - Fine, kaolinitic, isohyperthermic Aridic
+          - Fine, kaolinitic, isohyperthermic Aridic
           - Fine, kaolinitic, isohyperthermic Aridic
           - Fine, kaolinitic, isohyperthermic Aridic
           - Very-fine, parasesquic, isothermic Oxic
+          - Very-fine, parasesquic, isothermic Oxic
+          - Very-fine, parasesquic, isothermic Oxic
+          - Very-fine, parasesquic, isothermic Oxic
+          - Fine, mixed, semiactive, isohyperthermic Andic
+          - Fine, mixed, semiactive, isohyperthermic Andic
+          - Fine, mixed, semiactive, isohyperthermic Andic
           - Fine, mixed, semiactive, isohyperthermic Andic
           - Carbonatic, isohyperthermic Typic
+          - Carbonatic, isohyperthermic Typic
+          - Carbonatic, isohyperthermic Typic
+          - Fine, kaolinitic, isohyperthermic Ustic
+          - Fine, kaolinitic, isohyperthermic Ustic
+          - Fine, kaolinitic, isohyperthermic Ustic
           - Fine, kaolinitic, isohyperthermic Ustic
           - Very-fine, kaolinitic, isohyperthermic Typic
           - Very-fine, kaolinitic, isohyperthermic Typic
+          - Very-fine, kaolinitic, isohyperthermic Typic
+          - Very-fine, kaolinitic, isohyperthermic Typic
+          - Very-fine, kaolinitic, isohyperthermic Typic
+          - Very-fine, kaolinitic, isohyperthermic Typic
+          - Very-fine, kaolinitic, isohyperthermic Typic
+          - Very-fine, kaolinitic, isohyperthermic Typic
           - Very-fine, parasesquic, isohyperthermic Torroxic
           - Very-fine, parasesquic, isohyperthermic Torroxic
+          - Very-fine, parasesquic, isohyperthermic Torroxic
+          - Very-fine, parasesquic, isohyperthermic Torroxic
+          - Very-fine, parasesquic, isohyperthermic Torroxic
+          - Very-fine, parasesquic, isohyperthermic Torroxic
+          - Very-fine, parasesquic, isohyperthermic Torroxic
           - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
           - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
           - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
           - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine-loamy, mixed, semiactive, isohyperthermic Cumulic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
+          - Fine, kaolinitic, isohyperthermic Torroxic
           - Fine, kaolinitic, isohyperthermic Torroxic
           - Fine, kaolinitic, isohyperthermic Torroxic
           - Fine, kaolinitic, isohyperthermic Torroxic
@@ -205,20 +700,75 @@ siteInfo:
           soilSeries:   # Soil series according to the classification system described below
           - Alae
           - Alae
+          - Alae
+          - Alae
+          - Alae
+          - Alae
+          - Ewa
+          - Ewa
+          - Ewa
+          - Ewa
+          - Ewa
           - Ewa
           - Ewa
           - Haliimaile
+          - Haliimaile
+          - Haliimaile
+          - Haliimaile
+          - Hamakuapoko
+          - Hamakuapoko
+          - Hamakuapoko
           - Hamakuapoko
           - Jaucas
+          - Jaucas
+          - Jaucas
+          - Keahua
+          - Keahua
+          - Keahua
           - Keahua
           - Molokai
           - Molokai
+          - Molokai
+          - Molokai
+          - Molokai
+          - Molokai
+          - Molokai
+          - Molokai
           - Paia
           - Paia
+          - Paia
+          - Paia
+          - Paia
+          - Paia
+          - Paia
           - Pulehu
           - Pulehu
           - Pulehu
           - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Pulehu
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
+          - Waiakoa
           - Waiakoa
           - Waiakoa
           - Waiakoa
@@ -266,7 +816,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V2:   # column 2
           name: CL20F298   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Description of the variable
-          site: Ewa_EcB   # Site where the incubated sample was collected
+          site: Ewa_EcB72   # Site where the incubated sample was collected
           midDepth: 52.5
           top: 33
           bottom: 72
@@ -277,7 +827,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V3:   # column 3
           name: CL20F081   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WlD2   # Site where the incubated sample was collected
+          site: Waiakoa_WlD210   # Site where the incubated sample was collected
           midDepth: 5
           top: 0
           bottom: 10
@@ -288,7 +838,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V4:   # column 4
           name: CL20F034   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Hamakuapoko_HlB   # Site where the incubated sample was collected
+          site: Hamakuapoko_HlB18   # Site where the incubated sample was collected
           top: 8
           bottom: 18
           midDepth: 13
@@ -299,7 +849,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V5:   # column 5
           name: CL20F101   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WgB   # Site where the incubated sample was collected
+          site: Waiakoa_WgB100   # Site where the incubated sample was collected
           top: 75
           bottom: 100
           midDepth: 87.5
@@ -310,7 +860,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V6:   # column 6
           name: CL20F020   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Paia_PcB_2   # Site where the incubated sample was collected
+          site: Paia_PcB_2100   # Site where the incubated sample was collected
           top: 27
           bottom: 100
           midDepth: 63.5
@@ -321,7 +871,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V7:   # column 7
           name: CL20F135   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Ewa_EaA   # Site where the incubated sample was collected
+          site: Ewa_EaA35   # Site where the incubated sample was collected
           top: 10
           bottom: 35
           midDepth: 22.5
@@ -332,7 +882,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V8:   # column 8
           name: CL20F252   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Jaucas_JaC   # Site where the incubated sample was collected
+          site: Jaucas_JaC100   # Site where the incubated sample was collected
           top: 50
           bottom: 100
           midDepth: 75
@@ -343,7 +893,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V9:   # column 9
           name: CL20F150   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Molokai_MuA   # Site where the incubated sample was collected
+          site: Molokai_MuA25   # Site where the incubated sample was collected
           top: 5
           bottom: 25
           midDepth: 15
@@ -354,7 +904,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V10:   # column 10
           name: CL20F314   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Alae_AcB   # Site where the incubated sample was collected
+          site: Alae_AcB100   # Site where the incubated sample was collected
           top: 30
           bottom: 100
           midDepth: 65
@@ -365,7 +915,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V11:   # column 11
           name: CL20F018   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Paia_PcB_2   # Site where the incubated sample was collected
+          site: Paia_PcB_227   # Site where the incubated sample was collected
           top: 13
           bottom: 27
           midDepth: 20
@@ -376,7 +926,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V12:   # column 12
           name: CL20F168   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WfB   # Site where the incubated sample was collected
+          site: Waiakoa_WfB16   # Site where the incubated sample was collected
           top: 0
           bottom: 16
           midDepth: 8
@@ -387,7 +937,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V13:   # column 13
           name: CL20F134   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Ewa_EaA   # Site where the incubated sample was collected
+          site: Ewa_EaA10   # Site where the incubated sample was collected
           top: 0
           bottom: 10
           midDepth: 5
@@ -398,7 +948,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V14:   # column 14
           name: CL20F136   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Ewa_EaA   # Site where the incubated sample was collected
+          site: Ewa_EaA100   # Site where the incubated sample was collected
           top: 35
           bottom: 100
           midDepth: 67.5
@@ -409,7 +959,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V15:   # column 15
           name: CL20F312   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Alae_AcB   # Site where the incubated sample was collected
+          site: Alae_AcB15   # Site where the incubated sample was collected
           top: 0
           bottom: 15
           midDepth: 7.5
@@ -420,7 +970,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V16:   # column 16
           name: CL20F186   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PsA   # Site where the incubated sample was collected
+          site: Pulehu_PsA40   # Site where the incubated sample was collected
           top: 24
           bottom: 40
           midDepth: 32
@@ -431,7 +981,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V17:   # column 17
           name: CL20F100   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WgB   # Site where the incubated sample was collected
+          site: Waiakoa_WgB75   # Site where the incubated sample was collected
           top: 27
           bottom: 75
           midDepth: 51
@@ -442,7 +992,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V18:   # column 18
           name: CL20F120   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Molokai_MuB   # Site where the incubated sample was collected
+          site: Molokai_MuB80   # Site where the incubated sample was collected
           top: 33
           bottom: 80
           midDepth: 56.5
@@ -453,7 +1003,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V19:   # column 19
           name: CL20F051   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Keahua_KnB   # Site where the incubated sample was collected
+          site: Keahua_KnB39   # Site where the incubated sample was collected
           top: 27
           bottom: 39
           midDepth: 33
@@ -464,7 +1014,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V20:   # column 20
           name: CL20F049   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Keahua_KnB   # Site where the incubated sample was collected
+          site: Keahua_KnB9   # Site where the incubated sample was collected
           top: 0
           bottom: 9
           midDepth: 4.5
@@ -475,7 +1025,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V21:   # column 21
           name: CL20F206   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PtA   # Site where the incubated sample was collected
+          site: Pulehu_PtA25   # Site where the incubated sample was collected
           top: 8
           bottom: 25
           midDepth: 16.5
@@ -486,7 +1036,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V22:   # column 22
           name: CL20F001   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Paia_PcB_1   # Site where the incubated sample was collected
+          site: Paia_PcB_110   # Site where the incubated sample was collected
           top: 0
           bottom: 10
           midDepth: 5
@@ -497,7 +1047,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V23:   # column 23
           name: CL20F035   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Hamakuapoko_HlB   # Site where the incubated sample was collected
+          site: Hamakuapoko_HlB40   # Site where the incubated sample was collected
           top: 18
           bottom: 40
           midDepth: 29
@@ -508,7 +1058,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V24:   # column 24
           name: CL20F097   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WgB   # Site where the incubated sample was collected
+          site: Waiakoa_WgB5   # Site where the incubated sample was collected
           top: 0
           bottom: 5
           midDepth: 2.5
@@ -519,7 +1069,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V25:   # column 25
           name: CL20F282   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PpA   # Site where the incubated sample was collected
+          site: Pulehu_PpA80   # Site where the incubated sample was collected
           top: 24
           bottom: 80
           midDepth: 52
@@ -530,7 +1080,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V26:   # column 26
           name: CL20F099   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WgB   # Site where the incubated sample was collected
+          site: Waiakoa_WgB27   # Site where the incubated sample was collected
           top: 16
           bottom: 27
           midDepth: 21.5
@@ -541,7 +1091,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V27:   # column 27
           name: CL20F068   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Haliimaile_HhB   # Site where the incubated sample was collected
+          site: Haliimaile_HhB100   # Site where the incubated sample was collected
           top: 70
           bottom: 100
           midDepth: 85
@@ -552,7 +1102,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V28:   # column 28
           name: CL20F152   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Molokai_MuA   # Site where the incubated sample was collected
+          site: Molokai_MuA100   # Site where the incubated sample was collected
           top: 50
           bottom: 100
           midDepth: 75
@@ -563,7 +1113,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V29:   # column 29
           name: CL20F185   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PsA   # Site where the incubated sample was collected
+          site: Pulehu_PsA24   # Site where the incubated sample was collected
           top: 12
           bottom: 24
           midDepth: 18
@@ -574,7 +1124,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V30:   # column 30
           name: CL20F118   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Molokai_MuB   # Site where the incubated sample was collected
+          site: Molokai_MuB7   # Site where the incubated sample was collected
           top: 0
           bottom: 7
           midDepth: 3.5
@@ -585,7 +1135,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V31:   # column 31
           name: CL20F296   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Ewa_EcB   # Site where the incubated sample was collected
+          site: Ewa_EcB10   # Site where the incubated sample was collected
           top: 0
           bottom: 10
           midDepth: 5
@@ -596,7 +1146,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V32:   # column 32
           name: CL20F170   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WfB   # Site where the incubated sample was collected
+          site: Waiakoa_WfB60   # Site where the incubated sample was collected
           top: 30
           bottom: 60
           midDepth: 45
@@ -607,7 +1157,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V33:   # column 33
           name: CL20F098   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WgB   # Site where the incubated sample was collected
+          site: Waiakoa_WgB16   # Site where the incubated sample was collected
           top: 5
           bottom: 16
           midDepth: 10.5
@@ -618,7 +1168,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V34:   # column 34
           name: CL20F237   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WeB   # Site where the incubated sample was collected
+          site: Waiakoa_WeB100   # Site where the incubated sample was collected
           top: 28
           bottom: 100
           midDepth: 64
@@ -629,7 +1179,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V35:   # column 35
           name: CL20F003   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Paia_PcB_1   # Site where the incubated sample was collected
+          site: Paia_PcB_150   # Site where the incubated sample was collected
           top: 30
           bottom: 50
           midDepth: 40
@@ -640,7 +1190,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V36:   # column 36
           name: CL20F281   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PpA   # Site where the incubated sample was collected
+          site: Pulehu_PpA24   # Site where the incubated sample was collected
           top: 10
           bottom: 24
           midDepth: 17
@@ -651,7 +1201,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V37:   # column 37
           name: CL20F236   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WeB   # Site where the incubated sample was collected
+          site: Waiakoa_WeB28   # Site where the incubated sample was collected
           top: 10
           bottom: 28
           midDepth: 19
@@ -662,7 +1212,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V38:   # column 38
           name: CL20F004   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Paia_PcB_1   # Site where the incubated sample was collected
+          site: Paia_PcB_1100   # Site where the incubated sample was collected
           top: 50
           bottom: 100
           midDepth: 75
@@ -673,10 +1223,10 @@ variables:   # These describe the columns of your timeSeries.csv file
         V39:   # column 39
           name: CL20F017   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Paia_PcB_2   # Site where the incubated sample was collected
-          top: 50
-          bottom: 100
-          midDepth: 75
+          site: Paia_PcB_213   # Site where the incubated sample was collected
+          top: 0
+          bottom: 13
+          midDepth: 6.5
           gasMeasured:   # Blank if CO2, Other valid fields are: CH4, N2O, 13CO2, 14CO2, 13CH4, etc
           units: mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)   # Units for 'gasMeasured' field
           statistic:   # Leave blank if mean values. Other valid fields include: SD, SE, and none (if a single rep)
@@ -684,7 +1234,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V40:   # column 40
           name: CL20F187   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PsA   # Site where the incubated sample was collected
+          site: Pulehu_PsA70   # Site where the incubated sample was collected
           top: 40
           bottom: 70
           midDepth: 55
@@ -695,7 +1245,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V41:   # column 41
           name: CL20F169   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WfB   # Site where the incubated sample was collected
+          site: Waiakoa_WfB30   # Site where the incubated sample was collected
           top: 16
           bottom: 30
           midDepth: 23
@@ -706,7 +1256,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V42:   # column 42
           name: CL20F082   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WlD2   # Site where the incubated sample was collected
+          site: Waiakoa_WlD226   # Site where the incubated sample was collected
           top: 10
           bottom: 26
           midDepth: 18
@@ -717,7 +1267,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V43:   # column 43
           name: CL20F066   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Haliimaile_HhB   # Site where the incubated sample was collected
+          site: Haliimaile_HhB25   # Site where the incubated sample was collected
           top: 7
           bottom: 25
           midDepth: 16
@@ -728,7 +1278,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V44:   # column 44
           name: CL20F151   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Molokai_MuA   # Site where the incubated sample was collected
+          site: Molokai_MuA50   # Site where the incubated sample was collected
           top: 25
           bottom: 50
           midDepth: 37.5
@@ -739,7 +1289,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V45:   # column 45
           name: CL20F283   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PpA   # Site where the incubated sample was collected
+          site: Pulehu_PpA100   # Site where the incubated sample was collected
           top: 80
           bottom: 100
           midDepth: 90
@@ -750,7 +1300,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V46:   # column 46
           name: CL20F220   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Alae_AcA   # Site where the incubated sample was collected
+          site: Alae_AcA8   # Site where the incubated sample was collected
           top: 0
           bottom: 8
           midDepth: 4
@@ -761,7 +1311,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V47:   # column 47
           name: CL20F280   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PpA   # Site where the incubated sample was collected
+          site: Pulehu_PpA10   # Site where the incubated sample was collected
           top: 0
           bottom: 10
           midDepth: 5
@@ -772,7 +1322,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V48:   # column 48
           name: CL20F266   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PrA   # Site where the incubated sample was collected
+          site: Pulehu_PrA30   # Site where the incubated sample was collected
           top: 15
           bottom: 30
           midDepth: 22.5
@@ -783,7 +1333,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V49:   # column 49
           name: CL20F119   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Molokai_MuB   # Site where the incubated sample was collected
+          site: Molokai_MuB33   # Site where the incubated sample was collected
           top: 7
           bottom: 33
           midDepth: 20
@@ -794,7 +1344,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V50:   # column 50
           name: CL20F207   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PtA   # Site where the incubated sample was collected
+          site: Pulehu_PtA100   # Site where the incubated sample was collected
           top: 25
           bottom: 100
           midDepth: 62.5
@@ -805,7 +1355,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V51:   # column 51
           name: CL20F067   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Haliimaile_HhB   # Site where the incubated sample was collected
+          site: Haliimaile_HhB75   # Site where the incubated sample was collected
           top: 25
           bottom: 75
           midDepth: 50
@@ -816,7 +1366,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V52:   # column 52
           name: CL20F313   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Alae_AcB   # Site where the incubated sample was collected
+          site: Alae_AcB30   # Site where the incubated sample was collected
           top: 15
           bottom: 30
           midDepth: 22.5
@@ -827,7 +1377,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V53:   # column 53
           name: CL20F251   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Jaucas_JaC   # Site where the incubated sample was collected
+          site: Jaucas_JaC50   # Site where the incubated sample was collected
           top: 15
           bottom: 50
           midDepth: 32.5
@@ -838,7 +1388,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V54:   # column 54
           name: CL20F250   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Jaucas_JaC   # Site where the incubated sample was collected
+          site: Jaucas_JaC15   # Site where the incubated sample was collected
           top: 0
           bottom: 15
           midDepth: 7.5
@@ -849,7 +1399,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V55:   # column 55
           name: CL20F299   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Ewa_EcB   # Site where the incubated sample was collected
+          site: Ewa_EcB100   # Site where the incubated sample was collected
           top: 72
           bottom: 100
           midDepth: 86
@@ -860,7 +1410,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V56:   # column 56
           name: CL20F065   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Haliimaile_HhB   # Site where the incubated sample was collected
+          site: Haliimaile_HhB7   # Site where the incubated sample was collected
           top: 0
           bottom: 7
           midDepth: 3.5
@@ -871,7 +1421,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V57:   # column 57
           name: CL20F188   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PsA   # Site where the incubated sample was collected
+          site: Pulehu_PsA100   # Site where the incubated sample was collected
           top: 70
           bottom: 100
           midDepth: 85
@@ -882,7 +1432,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V58:   # column 58
           name: CL20F084   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WlD2   # Site where the incubated sample was collected
+          site: Waiakoa_WlD2100   # Site where the incubated sample was collected
           top: 50
           bottom: 100
           midDepth: 75
@@ -893,7 +1443,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V59:   # column 59
           name: CL20F050   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Keahua_KnB   # Site where the incubated sample was collected
+          site: Keahua_KnB27   # Site where the incubated sample was collected
           top: 9
           bottom: 27
           midDepth: 18
@@ -904,7 +1454,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V60:   # column 60
           name: CL20F083   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WlD2   # Site where the incubated sample was collected
+          site: Waiakoa_WlD250   # Site where the incubated sample was collected
           top: 26
           bottom: 50
           midDepth: 38
@@ -915,7 +1465,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V61:   # column 61
           name: CL20F184   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PsA   # Site where the incubated sample was collected
+          site: Pulehu_PsA12   # Site where the incubated sample was collected
           top: 0
           bottom: 12
           midDepth: 6
@@ -926,7 +1476,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V62:   # column 62
           name: CL20F267   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PrA   # Site where the incubated sample was collected
+          site: Pulehu_PrA75   # Site where the incubated sample was collected
           top: 30
           bottom: 75
           midDepth: 52.5
@@ -937,7 +1487,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V63:   # column 63
           name: CL20F222   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Alae_AcA   # Site where the incubated sample was collected
+          site: Alae_AcA100   # Site where the incubated sample was collected
           top: 29
           bottom: 100
           midDepth: 64.5
@@ -948,7 +1498,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V64:   # column 64
           name: CL20F297   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Ewa_EcB   # Site where the incubated sample was collected
+          site: Ewa_EcB33   # Site where the incubated sample was collected
           top: 10
           bottom: 33
           midDepth: 21.5
@@ -959,7 +1509,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V65:   # column 65
           name: CL20F033   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Hamakuapoko_HlB   # Site where the incubated sample was collected
+          site: Hamakuapoko_HlB8   # Site where the incubated sample was collected
           top: 0
           bottom: 8
           midDepth: 4
@@ -970,7 +1520,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V66:   # column 66
           name: CL20F265   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PrA   # Site where the incubated sample was collected
+          site: Pulehu_PrA15   # Site where the incubated sample was collected
           top: 0
           bottom: 15
           midDepth: 7.5
@@ -981,7 +1531,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V67:   # column 67
           name: CL20F052   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Keahua_KnB   # Site where the incubated sample was collected
+          site: Keahua_KnB60   # Site where the incubated sample was collected
           top: 39
           bottom: 60
           midDepth: 49.5
@@ -992,7 +1542,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V68:   # column 68
           name: CL20F221   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Alae_AcA   # Site where the incubated sample was collected
+          site: Alae_AcA29   # Site where the incubated sample was collected
           top: 8
           bottom: 29
           midDepth: 18.5
@@ -1003,7 +1553,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V69:   # column 69
           name: CL20F002   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Paia_PcB_1   # Site where the incubated sample was collected
+          site: Paia_PcB_130   # Site where the incubated sample was collected
           top: 10
           bottom: 30
           midDepth: 20
@@ -1014,7 +1564,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V70:   # column 70
           name: CL20F171   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WfB   # Site where the incubated sample was collected
+          site: Waiakoa_WfB80   # Site where the incubated sample was collected
           top: 60
           bottom: 80
           midDepth: 70
@@ -1025,7 +1575,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V71:   # column 71
           name: CL20F235   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Waiakoa_WeB   # Site where the incubated sample was collected
+          site: Waiakoa_WeB10   # Site where the incubated sample was collected
           top: 0
           bottom: 10
           midDepth: 5
@@ -1036,7 +1586,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V72:   # column 72
           name: CL20F121   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Molokai_MuB   # Site where the incubated sample was collected
+          site: Molokai_MuB100   # Site where the incubated sample was collected
           top: 80
           bottom: 100
           midDepth: 90
@@ -1047,7 +1597,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V73:   # column 73
           name: CL20F036   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Hamakuapoko_HlB   # Site where the incubated sample was collected
+          site: Hamakuapoko_HlB100   # Site where the incubated sample was collected
           top: 40
           bottom: 100
           midDepth: 70
@@ -1058,7 +1608,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V74:   # column 74
           name: CL20F149   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Molokai_MuA   # Site where the incubated sample was collected
+          site: Molokai_MuA5   # Site where the incubated sample was collected
           top: 0
           bottom: 5
           midDepth: 2.5
@@ -1069,7 +1619,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V75:   # column 75
           name: CL20F205   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PtA   # Site where the incubated sample was collected
+          site: Pulehu_PtA8   # Site where the incubated sample was collected
           top: 0
           bottom: 8
           midDepth: 4
@@ -1080,7 +1630,7 @@ variables:   # These describe the columns of your timeSeries.csv file
         V76:   # column 76
           name: CL20F268   # Name of second variable in accompanying file
           varDesc: Carbon dioxide efflux, in mass CO2 carbon per soil mass [µg/g] (CO2-C efflux/soil)  # Description of the variable
-          site: Pulehu_PrA   # Site where the incubated sample was collected
+          site: Pulehu_PrA100   # Site where the incubated sample was collected
           top: 75
           bottom: 100
           midDepth: 87.5

@@ -1,4 +1,4 @@
-site,experimentalTreatment_1,carbonMean,carbonSD,carbonSE,carbonUnits,nitrogenMean,nitrogenSD,nitrogenSE,nitrogenUnits,bulkDensityMean,bulkDensitySD,bulkDensitySE,replicates,pH,redox,percentClay,percentSand,percentSilt,microbialBiomass,microbialBiomassUnits
+site,temperature,carbonMean,carbonSD,carbonSE,carbonUnits,nitrogenMean,nitrogenSD,nitrogenSE,nitrogenUnits,bulkDensityMean,bulkDensitySD,bulkDensitySE,replicates,pH,redox,percentClay,percentSand,percentSilt,microbialBiomass,microbialBiomassUnits
 SPE800,16,11.61,,0.25,percent,,,,0.21,,,,3,4.1,,,,,,
 SPE800,21,11.61,,0.25,percent,,,,0.21,,,,3,4.1,,,,,,
 SPE800,26,11.61,,0.25,percent,,,,0.21,,,,3,4.1,,,,,,

@@ -18,7 +18,7 @@ twopMMFit=function(timeSeries, initialCarbon, inipars=c(0.001, 0.005, 1, 0.5, 0.
   tt=seq(from=0, to=tail(complete[,1],1), length.out = 500)
 
   Func=function(pars){
-    mod=SoilR::TwopMMmodel(t=tt,ks=pars[1], kb=pars[2], Km=pars[3], r=pars[4], Af=3, ival=initialCarbon*c(pars[5], 1-pars[5]), ADD=0)
+    mod=SoilR::TwopMMmodel(t=tt,ks=pars[1], kb=pars[2], Km=pars[3], r=pars[4], Af=1, ival=initialCarbon*c(pars[5], 1-pars[5]), ADD=0)
 #    Rt=SoilR::getAccumulatedRelease(mod)
     Rt=SoilR::getReleaseFlux(mod)
     return(data.frame(time=tt, Rt=rowSums(Rt)))
